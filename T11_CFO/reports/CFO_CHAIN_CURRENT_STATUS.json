@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-09-14T15:16:45.833842+00:00",
-  "stage": "FFT005_REVIEWED_READY_TO_DISPATCH",
+  "updated_utc": "2026-09-14T15:18:31.209310+00:00",
+  "stage": "FFT005_DISPATCHED",
   "rotator_functional_acceptance": "PASS_LIMITED_SCOPE",
   "verified_complex_samples": 20480,
   "formal_T11_T12_T13_PASS": false,
@@ -15,7 +15,7 @@
   "coordinate_expected_native_results": 373,
   "next_job": "CFO-FFT005",
   "next_job_scope": "New FFT256 integer arithmetic primitive and protocol verification; no earlier native test repetition",
-  "next_job_delivered": false,
+  "next_job_delivered": true,
   "next_job_document": "docs/FFT256_NATIVE_JOB_005.md",
   "matlab_allowed_for_this_job": false,
   "estimator": "PHASE_PATH_PASS_FFT256_ARITHMETIC_READY_QUALITY_AND_MODES_PENDING",
@@ -38,5 +38,6 @@
   "fft256_reference_published_cases": 19,
   "fft256_native_acceptance": "NOT_RUN",
   "quality_gate": "NOT_IMPLEMENTED",
-  "final_mode_merge": "NOT_IMPLEMENTED"
+  "final_mode_merge": "NOT_IMPLEMENTED",
+  "next_job_preparation_commit": "96ce9a0"
 }
