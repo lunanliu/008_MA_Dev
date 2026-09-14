@@ -1,0 +1,24 @@
+{
+  "status": "LINK010_SAVED_EVIDENCE_VECTORS_READY",
+  "cases": 4,
+  "modes": [
+    1,
+    2,
+    0,
+    3
+  ],
+  "real_front009_windows": 74,
+  "real_front009_z_matches_backend_reference": true,
+  "error_cases": 10,
+  "source_hashes": {
+    "sim/vectors/backend74_cases.json": "86FD2EFD18692389CA8052CB61D76271098F8CB90FBE178879883E2434B6F105",
+    "sim/vectors/front2048_cases.json": "D6375503A8D59D5D500DE51BB4E2F7C849FB71CFEF78892E871A5F927AFC5665",
+    "work/CFO_FRONT009/attempt_20260914T183142105831Z_luna/front2048_actual.txt": "45CD205D2077535E147329E23C3AB48FB3718A5DB01CE8E9C94A596A8076BD97",
+    "reports/FRONT009_REVIEW_20260914/INDEPENDENT_REVIEW.json": "96AA054209812E5E167B2E240A5E4BAE7489CAD9411EC0DA38CF90D81D10873A",
+    "reports/BACKEND006R1_REVIEW_20260914/INDEPENDENT_REVIEW.json": "A26DE40CF37505200F18001335AEF9320141047A97CF862BBEE076706FF9458F",
+    "tools/backend74_reference.py": "93049FFD870B097611A1213633C162ECBBF222A17206CA0D25D0890A466E150E"
+  },
+  "no_matlab_fft_or_native_recomputed": true,
+  "nominal_source_interval_fast_cycles": 15448,
+  "qualification": "Only packet vectors and frozen expected results prepared; no native link test yet"
+}

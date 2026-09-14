@@ -1,0 +1,776 @@
+{
+  "utc": "2026-09-14T22:53:58.286498+00:00",
+  "self_check": {
+    "schema": "link010_admission_self_check_v1",
+    "checks": {
+      "known_editor_not_counted_as_compute": true,
+      "editor_child_private_memory_included": true,
+      "hold_denied": true,
+      "other_owner_denied": true,
+      "wrong_luna_denied": true,
+      "reused_t10_pid_denied": true,
+      "unknown_compute_denied": true,
+      "unresolved_gui_denied": true,
+      "unstable_inventory_denied": true,
+      "recommendation_is_warning_only": true,
+      "severe_memory_pressure_denied": true,
+      "windows_path_aliases_equal": true,
+      "wrong_absolute_executable_denied": true,
+      "post_ignores_slot_and_gui_editor_changes": true,
+      "post_protects_t10_identity": true,
+      "post_allows_user_to_close_known_gui": true,
+      "post_detects_visible_pair_native_residue": true,
+      "post_allows_identified_new_external_work": true,
+      "post_default_pass": true
+    },
+    "all_checks": true,
+    "native_started": false,
+    "live_process_or_gui_queries": false,
+    "filesystem_writes": false
+  },
+  "preflight": {
+    "schema": "link010_resource_admission_v1",
+    "stage": "create",
+    "recorded_utc": "2026-09-14T22:53:58.160+00:00",
+    "native_started": false,
+    "external_processes_modified": false,
+    "reuse_for_next_stage_forbidden": true,
+    "not_an_atomic_resource_lock": true,
+    "checks": {
+      "manager_identity": true,
+      "manager_grants_t11_owner": false,
+      "manager_grants_this_astra": false,
+      "manager_grants_this_luna": false,
+      "grant_id_present": true,
+      "status_granted_and_not_hold": true,
+      "global_limit_is_two": true,
+      "pair_limit_is_one": true,
+      "supported_stage": true,
+      "inventory_stable": true,
+      "manager_slot_unchanged_during_probe": true,
+      "protected_t10_identity_34768": true,
+      "protected_t10_identity_28856": true,
+      "gui_absent_or_exact_identity": true,
+      "gui_absent_or_editor_only_verified": true,
+      "no_unapproved_native_compute_or_ambiguous_gui": true,
+      "matlab_at_most_one_process_group": true,
+      "selected_process_identity_and_memory_complete": true,
+      "physical_memory_readable": true,
+      "no_current_severe_physical_memory_pressure": true
+    },
+    "all_checks": false,
+    "blocking_checks": [
+      "manager_grants_t11_owner",
+      "manager_grants_this_astra",
+      "manager_grants_this_luna"
+    ],
+    "protected_t10": [
+      {
+        "pid": 34768,
+        "expected_name": "vivado.exe",
+        "expected_creation": 134338317352384478,
+        "expected_executable": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+        "matches": true,
+        "actual": {
+          "pid": 34768,
+          "parent_pid": 40656,
+          "image_name": "vivado.exe",
+          "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+          "private_usage_bytes": 470593536,
+          "working_set_bytes": 170078208,
+          "pagefile_usage_bytes": 470593536,
+          "cpu_time_100ns": 287187500,
+          "creation_filetime_100ns": 134338317352384478
+        }
+      },
+      {
+        "pid": 28856,
+        "expected_name": "xsimk.exe",
+        "expected_creation": 134338327375072737,
+        "expected_executable": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+        "matches": true,
+        "actual": {
+          "pid": 28856,
+          "parent_pid": 34768,
+          "image_name": "xsimk.exe",
+          "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+          "private_usage_bytes": 1080037376,
+          "working_set_bytes": 429547520,
+          "pagefile_usage_bytes": 1080037376,
+          "cpu_time_100ns": 672313437500,
+          "creation_filetime_100ns": 134338327375072737
+        }
+      }
+    ],
+    "unexpected_native_compute": [],
+    "matlab": {
+      "processes": [],
+      "main_group_count": 0,
+      "limit": 1,
+      "planned_matlab_groups": 0
+    },
+    "compute_groups": {
+      "t10_reserved": 1,
+      "gui_editor": 0,
+      "t11_existing": 0,
+      "t11_planned": 1,
+      "expected_after_admission": 2,
+      "global_limit": 2,
+      "pair_limit": 1
+    },
+    "memory": {
+      "available_physical_bytes": 16255729664,
+      "total_physical_bytes": 33737908224,
+      "available_physical_gib": 15.139328,
+      "memory_load_percent": 51,
+      "selected_process_private_bytes": 5163425792,
+      "gui_and_editor_children_private_bytes": 3606245376,
+      "recommended_available_physical_gib": 6,
+      "planned_t11_peak_expected_gib": [
+        1.5,
+        3
+      ],
+      "planned_t11_peak_warning_gib": 4,
+      "available_after_planned_4gib_bytes": 11960762368,
+      "note": "Private bytes are commit, not physical use; current GUI/T10 memory is already reflected in available physical and is not subtracted again."
+    },
+    "incomplete_process_queries": [],
+    "warnings": [],
+    "grant": {
+      "path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\sync_frontend\\resource_slot.json",
+      "sha256": "03F03D24406FE072A84E1C5A1900D0582A6B5DC67B5E302715D613E01C221CFF",
+      "grant_id": "SYNC_FRONTEND_DCP_CLOSEOUT_20260914_REV02",
+      "slot": {
+        "schema_version": 1,
+        "manager_thread_id": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+        "global_vivado_main_limit": 2,
+        "per_pair_limit": 1,
+        "reserved_t10": "EXISTING_RUN_UNINTERRUPTED",
+        "rule": "Do not stop any already-running admitted native stage; T11 acknowledges no active stage and yields new launches. Only manager changes owner.",
+        "authorization": "docs/operations/SYNC_FRONTEND_CLIP_AUTHORIZATION_20260914_ZH.md",
+        "t11_yield_receipt": "D:\\008_MA_Dev\\T11_CFO\\reports\\operations\\SHARED_SLOT_YIELD_20260914T1927Z.json",
+        "t11_yield_sha256": "1B221FFCF1D940161CC3FAFEE60CC6C1E6C64E70228F314AB84FA4A382CC17CB",
+        "user_gui_observation": {
+          "verified_utc": "2026-09-14T21:00:54.8940554Z",
+          "pid": 14300,
+          "creation_local": "2026-09-14T22:43:39.165474+02:00",
+          "title": "I16_AddSub - [D:/008_MA_Dev/I16_AddSub_CLIP/vivado/I16_AddSub/I16_AddSub.xpr] - Vivado 2021.1",
+          "project": "D:/008_MA_Dev/I16_AddSub_CLIP/vivado/I16_AddSub/I16_AddSub.xpr",
+          "observed_children": "Sigasi VHDL editor Java18096 only",
+          "native_compute_run_observed": false,
+          "same_xpr_as_sync_frontend": false,
+          "user_process_must_not_be_modified": true,
+          "gui_private_gib": 0.9703,
+          "system_available_gib": 10.06
+        },
+        "main_job_count_definition": "Count active Vivado synthesis/implementation/simulation process groups, not every vivado.exe process. An editor-only GUI is excluded from compute slots but all its memory and editor child processes count in resource admission.",
+        "latest_return_receipt": "reports/operations/sync_frontend/SF003_RESOURCE_RETURN_20260914T2215Z.json",
+        "release_rule": "After this one check and complete native exit, manager returns shared slot to T11 without waiting for static frontend packaging. A failure only permits minimal execution repair within frozen meaning, not new science or core rebuild.",
+        "authorized_job": "SF003_DCP_RELEASE_CHECK",
+        "expected_minutes": [
+          3,
+          8
+        ],
+        "priority": "SYNC_FRONTEND_DCP_CLOSEOUT_THEN_RETURN_T11",
+        "updated_utc": "2026-09-14T22:21:58.9986097Z",
+        "memory_estimate_gib": 3,
+        "runtime_protection_minutes": 15,
+        "shared_slot_owner": "SYNC_FRONTEND",
+        "granted_astra": "01a0a162-c115-7af1-89be-49726f987f84",
+        "script_sha256": "70C6C9438DDECD090FEA63733A64289DC610649AF4309657AD42B4B23E8E9497",
+        "previous_grant": {
+          "owner": "T11_T13",
+          "grant_id": "T11_SHARED_VIVADO_AFTER_SF003_20260914T2215Z",
+          "ended_utc": "2026-09-14T22:21:58.9986097Z",
+          "reason": "No T11 native stage began; original Luna idle verified and full native inventory clear. Short frontend DCP delivery check has priority; T11 continues design."
+        },
+        "stage_admission_note": "One frozen OOC EDF+43EDN to DCP, reopen saved DCP, pure-wiring VHDL shell and DCP insertion, ordinary Tcl clock inheritance check. No core RTL/IP synthesis, no simulation, no place/route. New output directory. Source/hash/total-resource check immediately before launch. T11 design may continue; no T11 native launch until explicit return.",
+        "manifest_sha256": "0E05D55F048BD41AEB6BB1A678000AB68C7CED9AD6B1F2DE44F7464B9320193A",
+        "granted_luna": "01a0a161-e434-7142-8927-1f5314daafd5",
+        "shared_slot_status": "GRANTED_DCP_RELEASE_CHECK_ONLY",
+        "grant_id": "SYNC_FRONTEND_DCP_CLOSEOUT_20260914_REV02",
+        "authorized_job_path": "D:/008_MA_Dev/Sync_Frontend/docs/SF003_DCP_RELEASE_CHECK_ZH.md",
+        "available_gib_at_grant": 15.22
+      },
+      "read_error": null
+    },
+    "native_identities": [
+      {
+        "pid": 14300,
+        "parent_pid": 11240,
+        "image_name": "vivado.exe",
+        "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+        "private_usage_bytes": 1041182720,
+        "working_set_bytes": 514445312,
+        "pagefile_usage_bytes": 1041182720,
+        "cpu_time_100ns": 2630312500,
+        "creation_filetime_100ns": 134338922191654740
+      },
+      {
+        "pid": 28856,
+        "parent_pid": 34768,
+        "image_name": "xsimk.exe",
+        "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+        "private_usage_bytes": 1080037376,
+        "working_set_bytes": 429547520,
+        "pagefile_usage_bytes": 1080037376,
+        "cpu_time_100ns": 672313437500,
+        "creation_filetime_100ns": 134338327375072737
+      },
+      {
+        "pid": 34768,
+        "parent_pid": 40656,
+        "image_name": "vivado.exe",
+        "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+        "private_usage_bytes": 470593536,
+        "working_set_bytes": 170078208,
+        "pagefile_usage_bytes": 470593536,
+        "cpu_time_100ns": 287187500,
+        "creation_filetime_100ns": 134338317352384478
+      }
+    ],
+    "selected_processes": [
+      {
+        "pid": 14300,
+        "parent_pid": 11240,
+        "image_name": "vivado.exe",
+        "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+        "private_usage_bytes": 1041182720,
+        "working_set_bytes": 514445312,
+        "pagefile_usage_bytes": 1041182720,
+        "cpu_time_100ns": 2630312500,
+        "creation_filetime_100ns": 134338922191654740
+      },
+      {
+        "pid": 18096,
+        "parent_pid": 14300,
+        "image_name": "java.exe",
+        "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\tps\\win64\\jre11.0.2\\bin\\java.exe",
+        "private_usage_bytes": 2558529536,
+        "working_set_bytes": 24432640,
+        "pagefile_usage_bytes": 2558529536,
+        "cpu_time_100ns": 1792343750,
+        "creation_filetime_100ns": 134338925890451953,
+        "command_line": "C:\\NIFPGA\\programs\\Vivado2021_1\\tps\\win64\\jre11.0.2\\bin\\java -classpath C:/NIFPGA/programs/Vivado2021_1/lib/sigasi/* -Xmx5G com.sigasi.lsp.server.BootstrappedLspServer --enable-deadmans-trigger --data-location=C:\\Users\\lunan\\AppData\\Roaming\\Xilinx\\Vivado\\2021.1\\sigasi-cache\\cache-1789418988771",
+        "admission_role": "SIGASI_EDITOR"
+      },
+      {
+        "pid": 28856,
+        "parent_pid": 34768,
+        "image_name": "xsimk.exe",
+        "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+        "private_usage_bytes": 1080037376,
+        "working_set_bytes": 429547520,
+        "pagefile_usage_bytes": 1080037376,
+        "cpu_time_100ns": 672313437500,
+        "creation_filetime_100ns": 134338327375072737
+      },
+      {
+        "pid": 34768,
+        "parent_pid": 40656,
+        "image_name": "vivado.exe",
+        "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+        "private_usage_bytes": 470593536,
+        "working_set_bytes": 170078208,
+        "pagefile_usage_bytes": 470593536,
+        "cpu_time_100ns": 287187500,
+        "creation_filetime_100ns": 134338317352384478
+      },
+      {
+        "pid": 34804,
+        "parent_pid": 28856,
+        "image_name": "conhost.exe",
+        "image_path": "C:\\Windows\\System32\\conhost.exe",
+        "private_usage_bytes": 6549504,
+        "working_set_bytes": 6557696,
+        "pagefile_usage_bytes": 6549504,
+        "cpu_time_100ns": 156250,
+        "creation_filetime_100ns": 134338327375231815
+      },
+      {
+        "pid": 39376,
+        "parent_pid": 18096,
+        "image_name": "conhost.exe",
+        "image_path": "C:\\Windows\\System32\\conhost.exe",
+        "private_usage_bytes": 6533120,
+        "working_set_bytes": 6721536,
+        "pagefile_usage_bytes": 6533120,
+        "cpu_time_100ns": 156250,
+        "creation_filetime_100ns": 134338925890581011,
+        "command_line": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4",
+        "admission_role": "SIGASI_EDITOR_CONSOLE"
+      }
+    ],
+    "gui": {
+      "tree_pids": [
+        14300,
+        18096,
+        39376
+      ],
+      "children": [
+        {
+          "pid": 18096,
+          "parent_pid": 14300,
+          "image_name": "java.exe",
+          "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\tps\\win64\\jre11.0.2\\bin\\java.exe",
+          "private_usage_bytes": 2558529536,
+          "working_set_bytes": 24432640,
+          "pagefile_usage_bytes": 2558529536,
+          "cpu_time_100ns": 1792343750,
+          "creation_filetime_100ns": 134338925890451953,
+          "command_line": "C:\\NIFPGA\\programs\\Vivado2021_1\\tps\\win64\\jre11.0.2\\bin\\java -classpath C:/NIFPGA/programs/Vivado2021_1/lib/sigasi/* -Xmx5G com.sigasi.lsp.server.BootstrappedLspServer --enable-deadmans-trigger --data-location=C:\\Users\\lunan\\AppData\\Roaming\\Xilinx\\Vivado\\2021.1\\sigasi-cache\\cache-1789418988771",
+          "admission_role": "SIGASI_EDITOR"
+        },
+        {
+          "pid": 39376,
+          "parent_pid": 18096,
+          "image_name": "conhost.exe",
+          "image_path": "C:\\Windows\\System32\\conhost.exe",
+          "private_usage_bytes": 6533120,
+          "working_set_bytes": 6721536,
+          "pagefile_usage_bytes": 6533120,
+          "cpu_time_100ns": 156250,
+          "creation_filetime_100ns": 134338925890581011,
+          "command_line": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4",
+          "admission_role": "SIGASI_EDITOR_CONSOLE"
+        }
+      ],
+      "editor_only_confirmed": true,
+      "log_evidence": [
+        {
+          "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.log",
+          "bytes": 1443,
+          "sha256": "89F99CB710E9CFED72B552D2DB03757D9C95A265A73222813FD69368B048AB3F",
+          "mtime_ns": 1789419086242667600
+        },
+        {
+          "path": "D:\\008_MA_Dev\\I16_AddSub_CLIP\\vivado\\I16_AddSub\\I16_AddSub.runs\\synth_1\\runme.log",
+          "bytes": 15962,
+          "sha256": "CA4118136B941B97CBC7DF9AAF942928073D7D0093CA1369ED486BC50362B2E6",
+          "mtime_ns": 1789419132588261300
+        },
+        {
+          "path": "D:\\008_MA_Dev\\I16_AddSub_CLIP\\vivado\\I16_AddSub\\I16_AddSub.runs\\synth_1\\.vivado.begin.rst",
+          "bytes": 215,
+          "sha256": "B322AFFCAABAA6D3800BA040D3764C20A6129959B245599A0B4088FCC76A06DB",
+          "mtime_ns": 1789419094130047700
+        },
+        {
+          "path": "D:\\008_MA_Dev\\I16_AddSub_CLIP\\vivado\\I16_AddSub\\I16_AddSub.runs\\synth_1\\.vivado.end.rst",
+          "bytes": 0,
+          "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "mtime_ns": 1789419133633920500
+        }
+      ],
+      "completed_runs": [
+        {
+          "name": "synth_1",
+          "pid": 30708,
+          "log": "D:\\008_MA_Dev\\I16_AddSub_CLIP\\vivado\\I16_AddSub\\I16_AddSub.runs\\synth_1\\runme.log",
+          "launched_local": "Mon Sep 14 22:51:26 2026",
+          "exit_local": "Mon Sep 14 22:52:12 2026"
+        }
+      ],
+      "unresolved_activity": [],
+      "cpu_is_not_compute_classifier": true,
+      "window_titles": [
+        "I16_AddSub - [D:/008_MA_Dev/I16_AddSub_CLIP/vivado/I16_AddSub/I16_AddSub.xpr] - Vivado 2021.1",
+        "theAwtToolkitWindow",
+        "MSCTFIME UI",
+        "Default IME"
+      ],
+      "state": "EDITOR_ONLY_FRESHLY_VERIFIED"
+    },
+    "probe_finished_utc": "2026-09-14T22:53:58.234+00:00",
+    "guard_sha256": {
+      "cfo_phase74_guard_v1.py": "B35F872630D2995B5EEB5257666188D3506C864FC4004294423078AE0CFE9583",
+      "cfo_native_guard_v3.py": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034"
+    }
+  },
+  "post_check": {
+    "schema": "link010_post_resource_integrity_v1",
+    "external_integrity_checks": {
+      "post_probe_completed": true,
+      "post_inventory_stable": true,
+      "protected_t10_unchanged_34768": true,
+      "protected_t10_unchanged_28856": true,
+      "gui_if_present_keeps_known_identity": true,
+      "no_visible_t11_native_residue": true,
+      "no_unclassified_native_process": true,
+      "native_identity_queries_complete": true
+    },
+    "all_external_checks": true,
+    "all_checks": true,
+    "blocking_checks": [],
+    "visible_t11_native_residue": [],
+    "unclassified_native_processes": [],
+    "new_identified_external_native": [],
+    "slot_owner_budget_and_gui_editor_state_ignored_after_stage": true,
+    "own_full_tree_zero_requires_wrapper_job_census": true,
+    "recorded_utc": "2026-09-14T22:53:58.234+00:00",
+    "probe_finished_utc": "2026-09-14T22:53:58.286+00:00",
+    "native_started": false,
+    "external_processes_modified": false,
+    "current_snapshot": {
+      "schema": "link010_resource_admission_v1",
+      "stage": "post",
+      "recorded_utc": "2026-09-14T22:53:58.234+00:00",
+      "native_started": false,
+      "external_processes_modified": false,
+      "reuse_for_next_stage_forbidden": true,
+      "not_an_atomic_resource_lock": true,
+      "checks": {
+        "manager_identity": true,
+        "manager_grants_t11_owner": false,
+        "manager_grants_this_astra": false,
+        "manager_grants_this_luna": false,
+        "grant_id_present": true,
+        "status_granted_and_not_hold": true,
+        "global_limit_is_two": true,
+        "pair_limit_is_one": true,
+        "supported_stage": false,
+        "inventory_stable": true,
+        "manager_slot_unchanged_during_probe": true,
+        "protected_t10_identity_34768": true,
+        "protected_t10_identity_28856": true,
+        "gui_absent_or_exact_identity": true,
+        "gui_absent_or_editor_only_verified": true,
+        "no_unapproved_native_compute_or_ambiguous_gui": true,
+        "matlab_at_most_one_process_group": true,
+        "selected_process_identity_and_memory_complete": true,
+        "physical_memory_readable": true,
+        "no_current_severe_physical_memory_pressure": true
+      },
+      "all_checks": false,
+      "blocking_checks": [
+        "manager_grants_t11_owner",
+        "manager_grants_this_astra",
+        "manager_grants_this_luna",
+        "supported_stage"
+      ],
+      "protected_t10": [
+        {
+          "pid": 34768,
+          "expected_name": "vivado.exe",
+          "expected_creation": 134338317352384478,
+          "expected_executable": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+          "matches": true,
+          "actual": {
+            "pid": 34768,
+            "parent_pid": 40656,
+            "image_name": "vivado.exe",
+            "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+            "private_usage_bytes": 470593536,
+            "working_set_bytes": 170078208,
+            "pagefile_usage_bytes": 470593536,
+            "cpu_time_100ns": 287187500,
+            "creation_filetime_100ns": 134338317352384478
+          }
+        },
+        {
+          "pid": 28856,
+          "expected_name": "xsimk.exe",
+          "expected_creation": 134338327375072737,
+          "expected_executable": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+          "matches": true,
+          "actual": {
+            "pid": 28856,
+            "parent_pid": 34768,
+            "image_name": "xsimk.exe",
+            "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+            "private_usage_bytes": 1080037376,
+            "working_set_bytes": 429547520,
+            "pagefile_usage_bytes": 1080037376,
+            "cpu_time_100ns": 672313906250,
+            "creation_filetime_100ns": 134338327375072737
+          }
+        }
+      ],
+      "unexpected_native_compute": [],
+      "matlab": {
+        "processes": [],
+        "main_group_count": 0,
+        "limit": 1,
+        "planned_matlab_groups": 0
+      },
+      "compute_groups": {
+        "t10_reserved": 1,
+        "gui_editor": 0,
+        "t11_existing": 0,
+        "t11_planned": 1,
+        "expected_after_admission": 2,
+        "global_limit": 2,
+        "pair_limit": 1
+      },
+      "memory": {
+        "available_physical_bytes": 16253407232,
+        "total_physical_bytes": 33737908224,
+        "available_physical_gib": 15.137165,
+        "memory_load_percent": 51,
+        "selected_process_private_bytes": 5163425792,
+        "gui_and_editor_children_private_bytes": 3606245376,
+        "recommended_available_physical_gib": 6,
+        "planned_t11_peak_expected_gib": [
+          1.5,
+          3
+        ],
+        "planned_t11_peak_warning_gib": 4,
+        "available_after_planned_4gib_bytes": 11958439936,
+        "note": "Private bytes are commit, not physical use; current GUI/T10 memory is already reflected in available physical and is not subtracted again."
+      },
+      "incomplete_process_queries": [],
+      "warnings": [],
+      "grant": {
+        "path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\sync_frontend\\resource_slot.json",
+        "sha256": "03F03D24406FE072A84E1C5A1900D0582A6B5DC67B5E302715D613E01C221CFF",
+        "grant_id": "SYNC_FRONTEND_DCP_CLOSEOUT_20260914_REV02",
+        "slot": {
+          "schema_version": 1,
+          "manager_thread_id": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+          "global_vivado_main_limit": 2,
+          "per_pair_limit": 1,
+          "reserved_t10": "EXISTING_RUN_UNINTERRUPTED",
+          "rule": "Do not stop any already-running admitted native stage; T11 acknowledges no active stage and yields new launches. Only manager changes owner.",
+          "authorization": "docs/operations/SYNC_FRONTEND_CLIP_AUTHORIZATION_20260914_ZH.md",
+          "t11_yield_receipt": "D:\\008_MA_Dev\\T11_CFO\\reports\\operations\\SHARED_SLOT_YIELD_20260914T1927Z.json",
+          "t11_yield_sha256": "1B221FFCF1D940161CC3FAFEE60CC6C1E6C64E70228F314AB84FA4A382CC17CB",
+          "user_gui_observation": {
+            "verified_utc": "2026-09-14T21:00:54.8940554Z",
+            "pid": 14300,
+            "creation_local": "2026-09-14T22:43:39.165474+02:00",
+            "title": "I16_AddSub - [D:/008_MA_Dev/I16_AddSub_CLIP/vivado/I16_AddSub/I16_AddSub.xpr] - Vivado 2021.1",
+            "project": "D:/008_MA_Dev/I16_AddSub_CLIP/vivado/I16_AddSub/I16_AddSub.xpr",
+            "observed_children": "Sigasi VHDL editor Java18096 only",
+            "native_compute_run_observed": false,
+            "same_xpr_as_sync_frontend": false,
+            "user_process_must_not_be_modified": true,
+            "gui_private_gib": 0.9703,
+            "system_available_gib": 10.06
+          },
+          "main_job_count_definition": "Count active Vivado synthesis/implementation/simulation process groups, not every vivado.exe process. An editor-only GUI is excluded from compute slots but all its memory and editor child processes count in resource admission.",
+          "latest_return_receipt": "reports/operations/sync_frontend/SF003_RESOURCE_RETURN_20260914T2215Z.json",
+          "release_rule": "After this one check and complete native exit, manager returns shared slot to T11 without waiting for static frontend packaging. A failure only permits minimal execution repair within frozen meaning, not new science or core rebuild.",
+          "authorized_job": "SF003_DCP_RELEASE_CHECK",
+          "expected_minutes": [
+            3,
+            8
+          ],
+          "priority": "SYNC_FRONTEND_DCP_CLOSEOUT_THEN_RETURN_T11",
+          "updated_utc": "2026-09-14T22:21:58.9986097Z",
+          "memory_estimate_gib": 3,
+          "runtime_protection_minutes": 15,
+          "shared_slot_owner": "SYNC_FRONTEND",
+          "granted_astra": "01a0a162-c115-7af1-89be-49726f987f84",
+          "script_sha256": "70C6C9438DDECD090FEA63733A64289DC610649AF4309657AD42B4B23E8E9497",
+          "previous_grant": {
+            "owner": "T11_T13",
+            "grant_id": "T11_SHARED_VIVADO_AFTER_SF003_20260914T2215Z",
+            "ended_utc": "2026-09-14T22:21:58.9986097Z",
+            "reason": "No T11 native stage began; original Luna idle verified and full native inventory clear. Short frontend DCP delivery check has priority; T11 continues design."
+          },
+          "stage_admission_note": "One frozen OOC EDF+43EDN to DCP, reopen saved DCP, pure-wiring VHDL shell and DCP insertion, ordinary Tcl clock inheritance check. No core RTL/IP synthesis, no simulation, no place/route. New output directory. Source/hash/total-resource check immediately before launch. T11 design may continue; no T11 native launch until explicit return.",
+          "manifest_sha256": "0E05D55F048BD41AEB6BB1A678000AB68C7CED9AD6B1F2DE44F7464B9320193A",
+          "granted_luna": "01a0a161-e434-7142-8927-1f5314daafd5",
+          "shared_slot_status": "GRANTED_DCP_RELEASE_CHECK_ONLY",
+          "grant_id": "SYNC_FRONTEND_DCP_CLOSEOUT_20260914_REV02",
+          "authorized_job_path": "D:/008_MA_Dev/Sync_Frontend/docs/SF003_DCP_RELEASE_CHECK_ZH.md",
+          "available_gib_at_grant": 15.22
+        },
+        "read_error": null
+      },
+      "native_identities": [
+        {
+          "pid": 14300,
+          "parent_pid": 11240,
+          "image_name": "vivado.exe",
+          "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+          "private_usage_bytes": 1041182720,
+          "working_set_bytes": 514445312,
+          "pagefile_usage_bytes": 1041182720,
+          "cpu_time_100ns": 2630312500,
+          "creation_filetime_100ns": 134338922191654740
+        },
+        {
+          "pid": 28856,
+          "parent_pid": 34768,
+          "image_name": "xsimk.exe",
+          "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+          "private_usage_bytes": 1080037376,
+          "working_set_bytes": 429547520,
+          "pagefile_usage_bytes": 1080037376,
+          "cpu_time_100ns": 672313906250,
+          "creation_filetime_100ns": 134338327375072737
+        },
+        {
+          "pid": 34768,
+          "parent_pid": 40656,
+          "image_name": "vivado.exe",
+          "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+          "private_usage_bytes": 470593536,
+          "working_set_bytes": 170078208,
+          "pagefile_usage_bytes": 470593536,
+          "cpu_time_100ns": 287187500,
+          "creation_filetime_100ns": 134338317352384478
+        }
+      ],
+      "selected_processes": [
+        {
+          "pid": 14300,
+          "parent_pid": 11240,
+          "image_name": "vivado.exe",
+          "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+          "private_usage_bytes": 1041182720,
+          "working_set_bytes": 514445312,
+          "pagefile_usage_bytes": 1041182720,
+          "cpu_time_100ns": 2630312500,
+          "creation_filetime_100ns": 134338922191654740
+        },
+        {
+          "pid": 18096,
+          "parent_pid": 14300,
+          "image_name": "java.exe",
+          "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\tps\\win64\\jre11.0.2\\bin\\java.exe",
+          "private_usage_bytes": 2558529536,
+          "working_set_bytes": 24432640,
+          "pagefile_usage_bytes": 2558529536,
+          "cpu_time_100ns": 1792343750,
+          "creation_filetime_100ns": 134338925890451953,
+          "command_line": "C:\\NIFPGA\\programs\\Vivado2021_1\\tps\\win64\\jre11.0.2\\bin\\java -classpath C:/NIFPGA/programs/Vivado2021_1/lib/sigasi/* -Xmx5G com.sigasi.lsp.server.BootstrappedLspServer --enable-deadmans-trigger --data-location=C:\\Users\\lunan\\AppData\\Roaming\\Xilinx\\Vivado\\2021.1\\sigasi-cache\\cache-1789418988771",
+          "admission_role": "SIGASI_EDITOR"
+        },
+        {
+          "pid": 28856,
+          "parent_pid": 34768,
+          "image_name": "xsimk.exe",
+          "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+          "private_usage_bytes": 1080037376,
+          "working_set_bytes": 429547520,
+          "pagefile_usage_bytes": 1080037376,
+          "cpu_time_100ns": 672313906250,
+          "creation_filetime_100ns": 134338327375072737
+        },
+        {
+          "pid": 34768,
+          "parent_pid": 40656,
+          "image_name": "vivado.exe",
+          "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+          "private_usage_bytes": 470593536,
+          "working_set_bytes": 170078208,
+          "pagefile_usage_bytes": 470593536,
+          "cpu_time_100ns": 287187500,
+          "creation_filetime_100ns": 134338317352384478
+        },
+        {
+          "pid": 34804,
+          "parent_pid": 28856,
+          "image_name": "conhost.exe",
+          "image_path": "C:\\Windows\\System32\\conhost.exe",
+          "private_usage_bytes": 6549504,
+          "working_set_bytes": 6557696,
+          "pagefile_usage_bytes": 6549504,
+          "cpu_time_100ns": 156250,
+          "creation_filetime_100ns": 134338327375231815
+        },
+        {
+          "pid": 39376,
+          "parent_pid": 18096,
+          "image_name": "conhost.exe",
+          "image_path": "C:\\Windows\\System32\\conhost.exe",
+          "private_usage_bytes": 6533120,
+          "working_set_bytes": 6721536,
+          "pagefile_usage_bytes": 6533120,
+          "cpu_time_100ns": 156250,
+          "creation_filetime_100ns": 134338925890581011,
+          "command_line": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4",
+          "admission_role": "SIGASI_EDITOR_CONSOLE"
+        }
+      ],
+      "gui": {
+        "tree_pids": [
+          14300,
+          18096,
+          39376
+        ],
+        "children": [
+          {
+            "pid": 18096,
+            "parent_pid": 14300,
+            "image_name": "java.exe",
+            "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\tps\\win64\\jre11.0.2\\bin\\java.exe",
+            "private_usage_bytes": 2558529536,
+            "working_set_bytes": 24432640,
+            "pagefile_usage_bytes": 2558529536,
+            "cpu_time_100ns": 1792343750,
+            "creation_filetime_100ns": 134338925890451953,
+            "command_line": "C:\\NIFPGA\\programs\\Vivado2021_1\\tps\\win64\\jre11.0.2\\bin\\java -classpath C:/NIFPGA/programs/Vivado2021_1/lib/sigasi/* -Xmx5G com.sigasi.lsp.server.BootstrappedLspServer --enable-deadmans-trigger --data-location=C:\\Users\\lunan\\AppData\\Roaming\\Xilinx\\Vivado\\2021.1\\sigasi-cache\\cache-1789418988771",
+            "admission_role": "SIGASI_EDITOR"
+          },
+          {
+            "pid": 39376,
+            "parent_pid": 18096,
+            "image_name": "conhost.exe",
+            "image_path": "C:\\Windows\\System32\\conhost.exe",
+            "private_usage_bytes": 6533120,
+            "working_set_bytes": 6721536,
+            "pagefile_usage_bytes": 6533120,
+            "cpu_time_100ns": 156250,
+            "creation_filetime_100ns": 134338925890581011,
+            "command_line": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4",
+            "admission_role": "SIGASI_EDITOR_CONSOLE"
+          }
+        ],
+        "editor_only_confirmed": true,
+        "log_evidence": [
+          {
+            "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.log",
+            "bytes": 1443,
+            "sha256": "89F99CB710E9CFED72B552D2DB03757D9C95A265A73222813FD69368B048AB3F",
+            "mtime_ns": 1789419086242667600
+          },
+          {
+            "path": "D:\\008_MA_Dev\\I16_AddSub_CLIP\\vivado\\I16_AddSub\\I16_AddSub.runs\\synth_1\\runme.log",
+            "bytes": 15962,
+            "sha256": "CA4118136B941B97CBC7DF9AAF942928073D7D0093CA1369ED486BC50362B2E6",
+            "mtime_ns": 1789419132588261300
+          },
+          {
+            "path": "D:\\008_MA_Dev\\I16_AddSub_CLIP\\vivado\\I16_AddSub\\I16_AddSub.runs\\synth_1\\.vivado.begin.rst",
+            "bytes": 215,
+            "sha256": "B322AFFCAABAA6D3800BA040D3764C20A6129959B245599A0B4088FCC76A06DB",
+            "mtime_ns": 1789419094130047700
+          },
+          {
+            "path": "D:\\008_MA_Dev\\I16_AddSub_CLIP\\vivado\\I16_AddSub\\I16_AddSub.runs\\synth_1\\.vivado.end.rst",
+            "bytes": 0,
+            "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+            "mtime_ns": 1789419133633920500
+          }
+        ],
+        "completed_runs": [
+          {
+            "name": "synth_1",
+            "pid": 30708,
+            "log": "D:\\008_MA_Dev\\I16_AddSub_CLIP\\vivado\\I16_AddSub\\I16_AddSub.runs\\synth_1\\runme.log",
+            "launched_local": "Mon Sep 14 22:51:26 2026",
+            "exit_local": "Mon Sep 14 22:52:12 2026"
+          }
+        ],
+        "unresolved_activity": [],
+        "cpu_is_not_compute_classifier": true,
+        "window_titles": [
+          "I16_AddSub - [D:/008_MA_Dev/I16_AddSub_CLIP/vivado/I16_AddSub/I16_AddSub.xpr] - Vivado 2021.1",
+          "theAwtToolkitWindow",
+          "MSCTFIME UI",
+          "Default IME"
+        ],
+        "state": "EDITOR_ONLY_FRESHLY_VERIFIED"
+      },
+      "probe_finished_utc": "2026-09-14T22:53:58.286+00:00",
+      "guard_sha256": {
+        "cfo_phase74_guard_v1.py": "B35F872630D2995B5EEB5257666188D3506C864FC4004294423078AE0CFE9583",
+        "cfo_native_guard_v3.py": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034"
+      }
+    }
+  },
+  "native_started": false
+}

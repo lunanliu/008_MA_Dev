@@ -1,0 +1,56 @@
+{
+  "schema": "link010_astra_admission_ready_v1",
+  "utc": "2026-09-14T22:54:36.938367+00:00",
+  "status": "REVIEWED_FROZEN_WAITING_SHARED_SLOT",
+  "astra": "01a076f1-ad1b-7d33-a29c-4ea34ae84d01",
+  "luna": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+  "job": "CFO-LINK010",
+  "scope": "Fresh project create and one atomic z CDC/backend behavioral simulation; no previous native stages or MATLAB repeated",
+  "source_lock_sha256": "C9975BEE22B81FDE0AE670DB4644C3DDE0206C111307A904AA08A5E77D80BCA5",
+  "controller_sha256": "9C34DD60865CBBCE90B1443AF8A6934AB830371598D8ADA6DAB9B297EB39CB9B",
+  "static_review_sha256": "1AFBDA82AA29D99445AB8A0B7345FC674DDD1D5F7E6542DE28892D6E199F7EEE",
+  "resource_snapshot_sha256": "2B6AEEDE8C991645EB60D53FCE0442EF3A3F19E9071AD1C1C21602573EAAA2A4",
+  "controller_self_check": {
+    "status": "PASS",
+    "lock": true,
+    "vector_verify": true,
+    "x64_job": true,
+    "xpr_absent": true,
+    "native_started": false
+  },
+  "frozen_members": 39,
+  "project_members": 19,
+  "vendor_dependencies": 3,
+  "actual_tool_identity_and_resource_checks": "PASS except manager slot owner/astra/luna still SYNC_FRONTEND",
+  "dispatch_sent": false,
+  "native_started": false,
+  "launch_only_after_fresh_manager_regrant": true,
+  "command": [
+    "C:/Python314/python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "D:/008_MA_Dev/T11_CFO/tools/cfo_link010_guard_v1.py"
+  ],
+  "expected_seconds": {
+    "create": [
+      10,
+      30
+    ],
+    "simulate": [
+      30,
+      180
+    ]
+  },
+  "hard_seconds": {
+    "create": 120,
+    "simulate": 600
+  },
+  "planned_peak_gib": [
+    1.5,
+    3
+  ],
+  "warning_gib": 4,
+  "no_formal_T11_T12_T13_PASS": true
+}

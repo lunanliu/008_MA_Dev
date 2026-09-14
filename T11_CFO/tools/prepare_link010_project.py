@@ -1,0 +1,13 @@
+from pathlib import Path
+R=Path('D:/008_MA_Dev/T11_CFO')
+s=(R/'vivado/backend74_project.tcl').read_text()
+s=s.replace('Independent 74-point estimator backend integration','Atomic observation CDC and unchanged 74-point estimator backend integration').replace('CFO_BACKEND74','CFO_LINK010').replace('cfo_estimate74_backend_tb','cfo_estimator_link_tb').replace('backend74_actual','link010_actual').replace('cfo_backend74.xdc','cfo_link010.xdc')
+s=s.replace('set rtl_files [list cfo_estimate74_backend.sv cfo_fft74_quality.sv','set rtl_files [list cfo_estimator_link.sv cfo_estimate74_backend.sv cfo_fft74_quality_v2.sv')
+s=s.replace('top cfo_estimate74_backend ','top cfo_estimator_link ').replace('ne "cfo_estimate74_backend"','ne "cfo_estimator_link"')
+s=s.replace('set_property target_simulator XSim [current_project]','set_property target_simulator XSim [current_project]\n set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]')
+s=s.replace('[file join $root sim vectors backend74_config.svh] [file join $root sim vectors backend74_div_config.svh]','[file join $root sim vectors link010_config.svh]')
+s=s.replace('foreach suffix {z normal fft result quality phase div_input div_output}','foreach suffix {input read result error_input error_read error_result}').replace('backend74_${suffix}.mem','link010_${suffix}.mem')
+s=s.replace('xelab_jobs [get_property xsim.elaborate.mt_level [get_filesets sim_1]]','xelab_jobs [get_property xsim.elaborate.mt_level [get_filesets sim_1]] xpm_libraries [lsort [get_property XPM_LIBRARIES [current_project]]]')
+(R/'vivado/link010_project.tcl').write_text(s)
+(R/'constraints/cfo_link010.xdc').write_text('# Functional two-clock model; physical CDC and timing are separate gates.\ncreate_clock -name clk_fast -period 2.000 [get_ports clk_fast]\ncreate_clock -name clk_slow -period 6.667 [get_ports clk_slow]\n# No blanket asynchronous false paths: preserve vendor XPM constraint intent.\n')
+p=R/'sim/tb/cfo_estimator_link_tb.sv';s=p.read_text().replace('if(output_held && m_valid && result_word!==held_result)','if(output_held && !m_ready && !m_valid)$fatal(1,"Result withdrawn under backpressure");\n    if(output_held && m_valid && result_word!==held_result)');p.write_text(s)

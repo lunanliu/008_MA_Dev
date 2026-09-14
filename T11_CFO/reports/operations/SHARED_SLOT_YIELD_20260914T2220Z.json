@@ -1,0 +1,52 @@
+{
+  "utc": "2026-09-14T22:20:45.947719+00:00",
+  "status": "NO_T11_NATIVE_STARTED_AFTER_REGRANT_YIELD_AT_EMPTY_STAGE",
+  "no_new_job_dispatched_to_luna": true,
+  "next_job_under_static_design": "LINK010 Z-observation transport and backend interface; not frozen or dispatched",
+  "native_processes": [
+    {
+      "pid": 14300,
+      "parent_pid": 11240,
+      "image_name": "vivado.exe",
+      "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+      "private_usage_bytes": 1041121280,
+      "working_set_bytes": 606359552,
+      "pagefile_usage_bytes": 1041121280,
+      "cpu_time_100ns": 2316562500,
+      "creation_filetime_100ns": 134338922191654740
+    },
+    {
+      "pid": 28856,
+      "parent_pid": 34768,
+      "image_name": "xsimk.exe",
+      "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+      "private_usage_bytes": 1070436352,
+      "working_set_bytes": 429572096,
+      "pagefile_usage_bytes": 1070436352,
+      "cpu_time_100ns": 652416875000,
+      "creation_filetime_100ns": 134338327375072737
+    },
+    {
+      "pid": 34768,
+      "parent_pid": 40656,
+      "image_name": "vivado.exe",
+      "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+      "private_usage_bytes": 470593536,
+      "working_set_bytes": 170074112,
+      "pagefile_usage_bytes": 470593536,
+      "cpu_time_100ns": 285156250,
+      "creation_filetime_100ns": 134338317352384478
+    }
+  ],
+  "editor_only_gui_pid": 14300,
+  "gui_direct_descendants_observed": [
+    18096
+  ],
+  "t10_reserved_pids": [
+    34768,
+    28856
+  ],
+  "last_cfo_job_zero_evidence": "reports/operations/SHARED_SLOT_YIELD_20260914T1927Z.json",
+  "resource_slot_not_modified_by_t11": true,
+  "permission": "Manager may transfer empty shared stage for frontend DCP/VHDL link check; T11 static design continues; no new native before regrant"
+}
