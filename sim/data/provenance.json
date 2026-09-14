@@ -1,0 +1,55 @@
+{
+  "frame_id": 6001,
+  "generation": 1,
+  "true_sfo_ppm": -150,
+  "coarse_cfo_hz": 100000,
+  "fine_start": 0,
+  "channel": "noiseless_single_path",
+  "nominal_samples": 1336320,
+  "records": [
+    {
+      "kind": "raw",
+      "source": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED002_rev02\\attempt_20260908T211456489Z_luna\\results\\case_001\\raw_input.mat",
+      "source_sha256": "3A185EE92A7CA721AA654BFAD5B0824FECFCC729885A4B87122429FD5A1FAE4E",
+      "dataset": "raw",
+      "complex_samples": 1336860,
+      "beats": 334215,
+      "file": "fixtures/raw.mem",
+      "sha256": "8EE64DC2C60497176D98FB68D4259E805AB0122D2933A4059F25BE3A80AE33DA",
+      "first": "e9e21b89e51021b9fe4b04feffa40de7",
+      "last": "17670f0d09c6ff10e5f3fe10fa1bf8c8"
+    },
+    {
+      "kind": "r1",
+      "source": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED002_rev02\\attempt_20260908T211456489Z_luna\\results\\case_001\\first_resampled.mat",
+      "source_sha256": "B3FA71D6DB59DDAEFE980531761F15D44C9EF439BFF03D2639020CD2D3E36F75",
+      "dataset": "y1",
+      "complex_samples": 1336392,
+      "beats": 334098,
+      "file": "fixtures/r1.mem",
+      "sha256": "9A10E8A668C72645DB11ECABE2F95B19FE297939A2161B5A225B886AED0708E5",
+      "first": "ef4a0be9ec2806700466010f15f1144d",
+      "last": "0675fc79ec0bfdd30185fe23faf6fa1b"
+    },
+    {
+      "kind": "r2",
+      "source": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED002_rev02\\attempt_20260908T211456489Z_luna\\results\\case_001\\second_z2.mat",
+      "source_sha256": "60EB55AA1229F0CF88037723B8380C1E049D6A4DC24E65BAB7441D64806729A9",
+      "dataset": "y2",
+      "complex_samples": 1336320,
+      "beats": 334080,
+      "file": "fixtures/r2.mem",
+      "sha256": "EE1B6AB0FE36EFC43CA6F293B1C3F42797CE3483C9C6CA387B226D0088E18894",
+      "first": "0f00e8fb187703ad162306030117fdca",
+      "last": "1163f2aaf826011cfbc4e51c18aff6cf"
+    }
+  ],
+  "first_expected_ppm_q18": -39303835,
+  "first_expected_step_q28": 268395209,
+  "second_expected_ppm_q18": -12945,
+  "second_expected_step_q28": 268435443,
+  "reference_only_estimates_never_driven_into_DUT": true,
+  "upstream_boundary": "T04/T05 saved records, real T06 -> E1 -> T09 -> E2 in this test",
+  "matlab_executed": false,
+  "new_waveforms": 0
+}

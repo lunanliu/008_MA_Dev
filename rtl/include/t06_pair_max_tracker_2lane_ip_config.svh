@@ -1,0 +1,1 @@
+`define T06_PAIR_MAX_CROSS_LATENCY 4
