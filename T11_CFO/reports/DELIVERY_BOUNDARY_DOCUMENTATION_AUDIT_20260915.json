@@ -1,0 +1,64 @@
+{
+  "schema": "t11_delivery_boundary_documentation_audit_v1",
+  "utc": "2026-09-14T23:18:12.900339+00:00",
+  "instruction_source": "manager01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7 conveyed direct user requirement2026-09-15",
+  "changed_documents": [
+    "README_ZH.md",
+    "docs/DELIVERY_BOUNDARY_20260915_ZH.md"
+  ],
+  "document_sha256": "4CC56DEC34DD8B7FC64D32CE55EEC5D177C2D0A88CFFAAC918F461AEBF978FF2",
+  "verified_existing_core_project_entries": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_SYNC\\CFO_SYNC.xpr",
+      "sha256": "8EE3459986419C34B42B4261A0E38B2D5C670B47E25E33D80B46074CD4EE8063",
+      "core_top": "cfo_rotate4",
+      "part": "xcvu11p-flgb2104-2-e"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_COORD\\CFO_COORD.xpr",
+      "sha256": "7605D752B0BB2C0B7BE2841D823E5C0AC3C25EA15D848239E3200AFBC40239A4",
+      "core_top": "cfo_coordinate_control",
+      "part": "xcvu11p-flgb2104-2-e"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_PHASE74\\CFO_PHASE74.xpr",
+      "sha256": "F4EA4EF3D0E7A71B89E55770EB4BE368329CCEC6800253CB1234A353741054AD",
+      "core_top": "cfo_phase74_core",
+      "part": "xcvu11p-flgb2104-2-e"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FFT256\\CFO_FFT256.xpr",
+      "sha256": "7B7D3D662BEE64FF17261E71DC45BA35D37BD2A415CB87E67D048EA4DF0B9369",
+      "core_top": "cfo_fft256_core",
+      "part": "xcvu11p-flgb2104-2-e"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_BACKEND74\\CFO_BACKEND74.xpr",
+      "sha256": "2186F6C5DA625ACEDE61283DB2451C52E55E3551C097FD8EBEF1CA2EAD221D5E",
+      "core_top": "cfo_estimate74_backend",
+      "part": "xcvu11p-flgb2104-2-e"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FFT2048\\CFO_FFT2048.xpr",
+      "sha256": "A3F09EFA805BE554092E32D0E42CA23BBF131D01AC0DD6DF671B936F2D891647",
+      "core_top": "cfo_fft2048_core",
+      "part": "xcvu11p-flgb2104-2-e"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.xpr",
+      "sha256": "67C3342838F691CD1BCA2499B2049315C323DB80A37DA6B224A1097A88CB4329",
+      "core_top": "cfo_front2048_window",
+      "part": "xcvu11p-flgb2104-2-e"
+    }
+  ],
+  "link010_frozen_hashes_checked": 42,
+  "link010_mismatch": [],
+  "link010_controller_unchanged": true,
+  "native_started": false,
+  "xpr_or_rtl_or_tb_modified": false,
+  "xml_generated_or_modified": false,
+  "wrapper_written_or_synthesized": false,
+  "labview_project_created": false,
+  "luna_woken_or_redispatched": false,
+  "scope": "Document final delivery policy and existing stage-core GUI entries only. Final full-chain delivery remains pending."
+}
