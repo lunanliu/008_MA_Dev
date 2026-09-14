@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  -i "../../../../../../sim/vectors" --include "../../../../../../sim/vectors" \
+"../../../../../../rtl/cfo_divide_rne64.sv" \
+"../../../../../../rtl/cfo_phase74_core.sv" \
+"../../../../../../sim/tb/cfo_phase74_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

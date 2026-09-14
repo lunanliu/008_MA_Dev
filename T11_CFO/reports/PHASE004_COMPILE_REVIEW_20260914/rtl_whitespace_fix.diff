@@ -1,0 +1,17 @@
+--- rtl/cfo_phase74_core.sv
++++ rtl/cfo_phase74_core_v2.sv
+@@ -42,11 +42,11 @@
+  wire signed [40:0] y_wide=y[39]?($signed({y[39],y})+$signed({shifted_x[39],shifted_x})):($signed({y[39],y})-$signed({shifted_x[39],shifted_x}));
+  wire x_clip=x_wide>41'sd549755813887 || x_wide< -41'sd549755813888;
+  wire y_clip=y_wide>41'sd549755813887 || y_wide< -41'sd549755813888;
+- wire signed [39:0] x_next=x_wide>41'sd549755813887?40'sh7fffffffff:(x_wide< -41'sd549755813888?40'sh8000000000:x_wide[39:0]);
+- wire signed [39:0] y_next=y_wide>41'sd549755813887?40'sh7fffffffff:(y_wide< -41'sd549755813888?40'sh8000000000:y_wide[39:0]);
++ wire signed [39:0] x_next=x_wide>41'sd549755813887 ? 40'sh7fffffffff:(x_wide< -41'sd549755813888 ? 40'sh8000000000:x_wide[39:0]);
++ wire signed [39:0] y_next=y_wide>41'sd549755813887 ? 40'sh7fffffffff:(y_wide< -41'sd549755813888 ? 40'sh8000000000:y_wide[39:0]);
+  wire signed [31:0] angle_next=y[39]?angle-atan_rom[iteration]:angle+atan_rom[iteration];
+  wire signed [32:0] difference=$signed({angle[31],angle})-$signed({previous_angle[31],previous_angle});
+- wire signed [39:0] offset_next=observation==0?40'sd0:(difference>33'sd1073741824?unwrap_offset-40'sd2147483648:(difference< -33'sd1073741824?unwrap_offset+40'sd2147483648:unwrap_offset));
++ wire signed [39:0] offset_next=observation==0 ? 40'sd0:(difference>33'sd1073741824 ? unwrap_offset-40'sd2147483648:(difference< -33'sd1073741824 ? unwrap_offset+40'sd2147483648:unwrap_offset));
+  wire signed [39:0] unwrapped_next=$signed({{8{angle[31]}},angle})+offset_next;
+  wire signed [8:0] weight=($signed({2'b0,observation})<<<1)-9'sd73;
+  wire signed [48:0] dot_term=unwrapped_next*weight;

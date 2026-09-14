@@ -1,0 +1,11 @@
+# PHASE004 编译失败复核与最小修复
+
+事件 PHASE004_COMPILE_REVIEW_CD391FC1，由总管家补接，与原Luna的同一失败合并为此一份复核。
+
+结论：xvlog在原cfo_phase74_core.sv第45、46、49行解析数字常量与紧随其后的问号时失败，随后的offset_next未声明为连带错误。本轮原生15.3447203秒以exit1退出，没有phase74_actual数据或数学PASS，不能归类为算法精度失败。成功create检查点已复用；完整Job最终归零，退出时一个短暂OpenProcess竞态未持续。原始完成/清单、xvlog、编译源列表和失败后XPR均已校验并保留。
+
+修复另存rtl/cfo_phase74_core_v2.sv，仅在上述三行的七个问号周围增加空白。去除空白后v1/v2全文一致，所有数字常量、位宽、运算符、分支顺序不变。旧RTL和PHASE004_SOURCE_LOCK.json不改；原始文件指纹见INDEPENDENT_REVIEW.json，逐行差异见rtl_whitespace_fix.diff。该修订尚待原生编译验证，不提前报PASS。
+
+新入口vivado/phase74_fix01.tcl只打开已创建CFO_PHASE74工程，确认12个原实际成员，再仅将旧core替换为v2。保存/重开更新后的XPR，核对12个新成员后执行原定短仿真；不create_project、不运行任何旧成功计算。每次尝试保留更新前/后XPR和实际源集，允许失败后复用本修复已完成的源更新检查点。硬件和仿真top、器件、线程、向量及验收门槛不变。
+
+tools/verify_phase74_fix01.py只把原检查器的源锁名换成PHASE004R1_SOURCE_LOCK.json；数值和协议检查正文不变。新源锁必须显式包含v2及新入口，不能更新旧锁来掩盖换源。后续仍由原配对Luna在单Vivado预算内执行；MATLAB、综合、T10及此前已通过模块均不触碰。
