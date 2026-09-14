@@ -1,0 +1,131 @@
+{
+  "utc": "2026-09-14T19:28:14.134477+00:00",
+  "status": "T11_YIELDED_NO_ACTIVE_NATIVE_STAGE",
+  "manager_thread": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "astra_thread": "01a076f1-ad1b-7d33-a29c-4ea34ae84d01",
+  "luna_thread": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+  "no_new_vivado_stage_directive_sent_to_original_luna": true,
+  "no_future_launch_authorized_until_manager_slot_grant": true,
+  "slot_readonly_snapshot": {
+    "schema_version": 1,
+    "manager_thread_id": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+    "updated_utc": "2026-09-14T19:25:27.3222563Z",
+    "global_vivado_main_limit": 2,
+    "per_pair_limit": 1,
+    "reserved_t10": "EXISTING_RUN_UNINTERRUPTED",
+    "shared_slot_owner": "TRANSITION_PENDING_T11_ACK",
+    "shared_slot_status": "NO_NEW_SHARED_SLOT_LAUNCH",
+    "priority": "SYNC_FRONTEND",
+    "rule": "Do not stop any already-running admitted native stage; T11 acknowledges no active stage and yields new launches. Only manager changes owner.",
+    "authorization": "docs/operations/SYNC_FRONTEND_CLIP_AUTHORIZATION_20260914_ZH.md"
+  },
+  "slot_sha256": "A9B675D692C74EED5EF8FD1AF17F1787C06EB17764B514B6AFA3409217D94F64",
+  "last_attempt": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna",
+  "last_attempt_status": "PASS",
+  "completed_utc": "2026-09-14T18:33:08.044Z",
+  "completion_sha256": "BD1461E85026874FC198B5007DE59237FA2E315EF68DB384048130A5B7E804EB",
+  "manifest_sha256": "05C61B6CC5C8A884C5D1A9C08BFAAFD272969F8DD738027088ABD88268F99B9B",
+  "closed_job_census": {
+    "create": {
+      "pids": [],
+      "assigned_processes": 0,
+      "listed_processes": 0,
+      "active_processes": 0,
+      "pid_stride_bytes": 8,
+      "pid_width_bits": 64,
+      "active_accounting": {
+        "api_available": true,
+        "active_processes": 0,
+        "total_processes": 7,
+        "total_terminated_processes": 0,
+        "total_page_fault_count": 567470
+      },
+      "pid_list": {
+        "ids": [],
+        "assigned_processes": 0,
+        "listed_processes": 0,
+        "capacity": 256,
+        "issues": [],
+        "stride_bytes": 8,
+        "api_available": true,
+        "success": true,
+        "query_bytes": 8,
+        "buffer_bytes": 2056
+      },
+      "pid_cross_check": {
+        "active_accounting": 0,
+        "pid_list_count": 0,
+        "decoded_count": 0,
+        "match": true
+      },
+      "issues": [],
+      "query_errors": [],
+      "query_error": null,
+      "empty_verified": true
+    },
+    "simulate": {
+      "pids": [],
+      "assigned_processes": 0,
+      "listed_processes": 0,
+      "active_processes": 0,
+      "pid_stride_bytes": 8,
+      "pid_width_bits": 64,
+      "active_accounting": {
+        "api_available": true,
+        "active_processes": 0,
+        "total_processes": 40,
+        "total_terminated_processes": 0,
+        "total_page_fault_count": 1120380
+      },
+      "pid_list": {
+        "ids": [],
+        "assigned_processes": 0,
+        "listed_processes": 0,
+        "capacity": 256,
+        "issues": [],
+        "stride_bytes": 8,
+        "api_available": true,
+        "success": true,
+        "query_bytes": 8,
+        "buffer_bytes": 2056
+      },
+      "pid_cross_check": {
+        "active_accounting": 0,
+        "pid_list_count": 0,
+        "decoded_count": 0,
+        "match": true
+      },
+      "issues": [],
+      "query_errors": [],
+      "query_error": null,
+      "empty_verified": true
+    }
+  },
+  "native_processes_now": [
+    {
+      "pid": 28856,
+      "parent_pid": 34768,
+      "image_name": "xsimk.exe",
+      "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+      "private_usage_bytes": 1039749120,
+      "working_set_bytes": 351002624,
+      "pagefile_usage_bytes": 1039749120,
+      "cpu_time_100ns": 549067187500,
+      "creation_filetime_100ns": 134338327375072737
+    },
+    {
+      "pid": 34768,
+      "parent_pid": 40656,
+      "image_name": "vivado.exe",
+      "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+      "private_usage_bytes": 470593536,
+      "working_set_bytes": 170471424,
+      "pagefile_usage_bytes": 470593536,
+      "cpu_time_100ns": 276250000,
+      "creation_filetime_100ns": 134338317352384478
+    }
+  ],
+  "only_original_t10_native_identities_present": true,
+  "result_numeric_independent_review": "PENDING_THIS_TURN",
+  "slot_file_not_modified_by_t11": true
+}

@@ -1,0 +1,758 @@
+{
+  "schema": "cfo_front009_execution_freeze_v1",
+  "job_id": "CFO-FRONT009",
+  "recorded_utc": "2026-09-14T18:31:47.304Z",
+  "root": "D:\\008_MA_Dev\\T11_CFO",
+  "attempt": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna",
+  "controller": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_front2048_guard_v1.py",
+    "info": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_front2048_guard_v1.py",
+      "exists": true,
+      "bytes": 19137,
+      "sha256": "9F3430079FBE5DEE3436C87B6E5BB7221FD03778458B10271B79A06B8195ADC9"
+    },
+    "guard_v3": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_native_guard_v3.py",
+      "info": {
+        "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_native_guard_v3.py",
+        "exists": true,
+        "bytes": 36155,
+        "sha256": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034"
+      }
+    },
+    "stage_guard": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_guard_v1.py",
+      "info": {
+        "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_guard_v1.py",
+        "exists": true,
+        "bytes": 24596,
+        "sha256": "B35F872630D2995B5EEB5257666188D3506C864FC4004294423078AE0CFE9583"
+      }
+    },
+    "phase004r1_wrapper": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_fix01_guard_v1.py",
+      "info": {
+        "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_fix01_guard_v1.py",
+        "exists": true,
+        "bytes": 15173,
+        "sha256": "8C37F4D02B586CCAC61782FA8EB099A744CED42CB23614E2DB79815F94F117A3"
+      }
+    }
+  },
+  "source_lock": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT009_SOURCE_LOCK.json",
+    "expected_sha256": "09A6A7F5AD994934B9CA30137139A7639A16638DB966AB3498AEDA9CF9765393",
+    "actual": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT009_SOURCE_LOCK.json",
+      "exists": true,
+      "bytes": 7055,
+      "sha256": "09A6A7F5AD994934B9CA30137139A7639A16638DB966AB3498AEDA9CF9765393"
+    },
+    "members": [
+      {
+        "relative_path": "rtl/cfo_front2048_window.sv",
+        "expected_bytes": 6043,
+        "expected_sha256": "8472C3B80D6E188654C31B52CC5B1553C654102C6B83EFECF5A606EA45198165",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_front2048_window.sv",
+          "exists": true,
+          "bytes": 6043,
+          "sha256": "8472C3B80D6E188654C31B52CC5B1553C654102C6B83EFECF5A606EA45198165"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "rtl/cfo_fft2048_core.sv",
+        "expected_bytes": 9177,
+        "expected_sha256": "67B402A1025E53A9691E94A1720968955186C2DACF4C00CE8409CC28532702DB",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_fft2048_core.sv",
+          "exists": true,
+          "bytes": 9177,
+          "sha256": "67B402A1025E53A9691E94A1720968955186C2DACF4C00CE8409CC28532702DB"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "ip/fft2048_twiddle.mem",
+        "expected_bytes": 11264,
+        "expected_sha256": "9A1C8A4363F3B0E7513B8A52CA70B6462A09A3BDFA2A232159D781C57816A276",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\ip\\fft2048_twiddle.mem",
+          "exists": true,
+          "bytes": 11264,
+          "sha256": "9A1C8A4363F3B0E7513B8A52CA70B6462A09A3BDFA2A232159D781C57816A276"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "ip/front2048_coefficient_index.mem",
+        "expected_bytes": 182040,
+        "expected_sha256": "D058ACDAE6CDD2628304FCD73F5579E2C62833BF00D16D0291187B39201D78D4",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\ip\\front2048_coefficient_index.mem",
+          "exists": true,
+          "bytes": 182040,
+          "sha256": "D058ACDAE6CDD2628304FCD73F5579E2C62833BF00D16D0291187B39201D78D4"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "ip/front2048_coefficient_table.mem",
+        "expected_bytes": 88,
+        "expected_sha256": "CA93FF648C57459891ED7489D38C5F312A2D6969F6F4901130903D16F6403387",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\ip\\front2048_coefficient_table.mem",
+          "exists": true,
+          "bytes": 88,
+          "sha256": "CA93FF648C57459891ED7489D38C5F312A2D6969F6F4901130903D16F6403387"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "constraints/cfo_front2048.xdc",
+        "expected_bytes": 57,
+        "expected_sha256": "91438FF6943D94AC324649DD0C5C15D1CE3C5C7233E175835B96B6D3CED0104C",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\constraints\\cfo_front2048.xdc",
+          "exists": true,
+          "bytes": 57,
+          "sha256": "91438FF6943D94AC324649DD0C5C15D1CE3C5C7233E175835B96B6D3CED0104C"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "sim/tb/cfo_front2048_tb.sv",
+        "expected_bytes": 8624,
+        "expected_sha256": "54810039590ED9081C6D304F4192360FAD47CD7891E0FB526D633E482C066D95",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\tb\\cfo_front2048_tb.sv",
+          "exists": true,
+          "bytes": 8624,
+          "sha256": "54810039590ED9081C6D304F4192360FAD47CD7891E0FB526D633E482C066D95"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "sim/vectors/front2048_config.svh",
+        "expected_bytes": 38,
+        "expected_sha256": "82CFEB7B0F7F32BF1C20C300B16CC0FFC34807FE779C4D0448A4CD4D8507AB1B",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\front2048_config.svh",
+          "exists": true,
+          "bytes": 38,
+          "sha256": "82CFEB7B0F7F32BF1C20C300B16CC0FFC34807FE779C4D0448A4CD4D8507AB1B"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "sim/vectors/front2048_input.mem",
+        "expected_bytes": 2764800,
+        "expected_sha256": "BA715DEF45EF884423344A89825315F9D50C54B3946778AF6EE1607318618DAE",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\front2048_input.mem",
+          "exists": true,
+          "bytes": 2764800,
+          "sha256": "BA715DEF45EF884423344A89825315F9D50C54B3946778AF6EE1607318618DAE"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "sim/vectors/front2048_pilot.mem",
+        "expected_bytes": 2804400,
+        "expected_sha256": "F09D1C58CB77DBA1610A855B512EB55F8F279FEDFEC5DB206184F06C1460ACCE",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\front2048_pilot.mem",
+          "exists": true,
+          "bytes": 2804400,
+          "sha256": "F09D1C58CB77DBA1610A855B512EB55F8F279FEDFEC5DB206184F06C1460ACCE"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "sim/vectors/front2048_result.mem",
+        "expected_bytes": 4230,
+        "expected_sha256": "22760D31B33BE113E2972C2342A3F051E840F7559ECDA924567A7CF1D8048A28",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\front2048_result.mem",
+          "exists": true,
+          "bytes": 4230,
+          "sha256": "22760D31B33BE113E2972C2342A3F051E840F7559ECDA924567A7CF1D8048A28"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "sim/vectors/front2048_metadata.mem",
+        "expected_bytes": 1800,
+        "expected_sha256": "3EB5B3C12E896F5CC0E4A984FC7BE5E66A113384D6C0134FE4E6223E92CF806C",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\front2048_metadata.mem",
+          "exists": true,
+          "bytes": 1800,
+          "sha256": "3EB5B3C12E896F5CC0E4A984FC7BE5E66A113384D6C0134FE4E6223E92CF806C"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "vivado/run_threads.tcl",
+        "expected_bytes": 471,
+        "expected_sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\run_threads.tcl",
+          "exists": true,
+          "bytes": 471,
+          "sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "tools/front2048_reference.py",
+        "expected_bytes": 4849,
+        "expected_sha256": "2332EADC8B3851969B817D5BE5C624216203384D161FAEECC3927EC2DA9457FE",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\front2048_reference.py",
+          "exists": true,
+          "bytes": 4849,
+          "sha256": "2332EADC8B3851969B817D5BE5C624216203384D161FAEECC3927EC2DA9457FE"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "tools/verify_front2048.py",
+        "expected_bytes": 5638,
+        "expected_sha256": "95A2651303FEC033B2362C80322BCEE72971EC3B1CF856FCE8AA23EFEF517A70",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_front2048.py",
+          "exists": true,
+          "bytes": 5638,
+          "sha256": "95A2651303FEC033B2362C80322BCEE72971EC3B1CF856FCE8AA23EFEF517A70"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "tools/freeze_front009_sources.py",
+        "expected_bytes": 2729,
+        "expected_sha256": "4DB3F7EF16B140B91E56648FFD9AFC015A8ED7F0083F9739BAEAFDE03F17F829",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\freeze_front009_sources.py",
+          "exists": true,
+          "bytes": 2729,
+          "sha256": "4DB3F7EF16B140B91E56648FFD9AFC015A8ED7F0083F9739BAEAFDE03F17F829"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "tools/fft2048_reference.py",
+        "expected_bytes": 6430,
+        "expected_sha256": "57613E521802AEBFB876AA0B3527C43D870CD98EEE2AFA2B85A4D2769072602D",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\fft2048_reference.py",
+          "exists": true,
+          "bytes": 6430,
+          "sha256": "57613E521802AEBFB876AA0B3527C43D870CD98EEE2AFA2B85A4D2769072602D"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "tools/cfo_native_guard_v3.py",
+        "expected_bytes": 36155,
+        "expected_sha256": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_native_guard_v3.py",
+          "exists": true,
+          "bytes": 36155,
+          "sha256": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "tools/cfo_phase74_guard_v1.py",
+        "expected_bytes": 24596,
+        "expected_sha256": "B35F872630D2995B5EEB5257666188D3506C864FC4004294423078AE0CFE9583",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_guard_v1.py",
+          "exists": true,
+          "bytes": 24596,
+          "sha256": "B35F872630D2995B5EEB5257666188D3506C864FC4004294423078AE0CFE9583"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "tools/cfo_phase74_fix01_guard_v1.py",
+        "expected_bytes": 15173,
+        "expected_sha256": "8C37F4D02B586CCAC61782FA8EB099A744CED42CB23614E2DB79815F94F117A3",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_fix01_guard_v1.py",
+          "exists": true,
+          "bytes": 15173,
+          "sha256": "8C37F4D02B586CCAC61782FA8EB099A744CED42CB23614E2DB79815F94F117A3"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "vivado/front2048_project.tcl",
+        "expected_bytes": 3676,
+        "expected_sha256": "305D959CD87A029CD9BE8CFC31EA692CE658120A8BD48D19FCC5985A08AFA2FB",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\front2048_project.tcl",
+          "exists": true,
+          "bytes": 3676,
+          "sha256": "305D959CD87A029CD9BE8CFC31EA692CE658120A8BD48D19FCC5985A08AFA2FB"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "vivado/configure_parallel_jobs.tcl",
+        "expected_bytes": 4994,
+        "expected_sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\configure_parallel_jobs.tcl",
+          "exists": true,
+          "bytes": 4994,
+          "sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "docs/FRONT2048_CONTRACT_V1_ZH.md",
+        "expected_bytes": 3608,
+        "expected_sha256": "958C251097B592B36E8F5B735D4FB4F5ED8CC4C5DD04380D521783DC7FE88955",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT2048_CONTRACT_V1_ZH.md",
+          "exists": true,
+          "bytes": 3608,
+          "sha256": "958C251097B592B36E8F5B735D4FB4F5ED8CC4C5DD04380D521783DC7FE88955"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "docs/FRONT2048_NATIVE_JOB_009.md",
+        "expected_bytes": 4134,
+        "expected_sha256": "5C10EAC9C911BE33AF46B211CDA0C3063699CE4E3F8214E0718D321013732506",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT2048_NATIVE_JOB_009.md",
+          "exists": true,
+          "bytes": 4134,
+          "sha256": "5C10EAC9C911BE33AF46B211CDA0C3063699CE4E3F8214E0718D321013732506"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "docs/CFO_MAIN_CONTRACT.json",
+        "expected_bytes": 3621,
+        "expected_sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\CFO_MAIN_CONTRACT.json",
+          "exists": true,
+          "bytes": 3621,
+          "sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "docs/FFT008_SOURCE_LOCK.json",
+        "expected_bytes": 6820,
+        "expected_sha256": "F8B73FF909CED64E87C0EBF6ACD8B7F659C3B4D16A3F4C44B80B08CA3E37333C",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\FFT008_SOURCE_LOCK.json",
+          "exists": true,
+          "bytes": 6820,
+          "sha256": "F8B73FF909CED64E87C0EBF6ACD8B7F659C3B4D16A3F4C44B80B08CA3E37333C"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "sim/vectors/front2048_cases.json",
+        "expected_bytes": 6747493,
+        "expected_sha256": "D6375503A8D59D5D500DE51BB4E2F7C849FB71CFEF78892E871A5F927AFC5665",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\front2048_cases.json",
+          "exists": true,
+          "bytes": 6747493,
+          "sha256": "D6375503A8D59D5D500DE51BB4E2F7C849FB71CFEF78892E871A5F927AFC5665"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "matlab/bittrue/cfo_chain_arithmetic.m",
+        "expected_bytes": 9686,
+        "expected_sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\matlab\\bittrue\\cfo_chain_arithmetic.m",
+          "exists": true,
+          "bytes": 9686,
+          "sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "reports/FRONT2048_VECTOR_CHECK.json",
+        "expected_bytes": 2122,
+        "expected_sha256": "7C81990DAD27ECA3E39617FB0BE719DFFE2B789256172FE712AB4750A096810B",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\FRONT2048_VECTOR_CHECK.json",
+          "exists": true,
+          "bytes": 2122,
+          "sha256": "7C81990DAD27ECA3E39617FB0BE719DFFE2B789256172FE712AB4750A096810B"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "reports/FFT008_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+        "expected_bytes": 1841,
+        "expected_sha256": "58B8D6ED07D8514902486ACE3EF098630C4CB27D776C67C1C43CFA3720C94EA1",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\FFT008_REVIEW_20260914\\INDEPENDENT_REVIEW.json",
+          "exists": true,
+          "bytes": 1841,
+          "sha256": "58B8D6ED07D8514902486ACE3EF098630C4CB27D776C67C1C43CFA3720C94EA1"
+        },
+        "matches": true
+      },
+      {
+        "relative_path": "reports/FFT008_REVIEW_20260914/README_ZH.md",
+        "expected_bytes": 952,
+        "expected_sha256": "E71304B99479364DFDBDDD9A282AAE6E48ED10877862FD0B3EEA2AE9C21F6EB2",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\FFT008_REVIEW_20260914\\README_ZH.md",
+          "exists": true,
+          "bytes": 952,
+          "sha256": "E71304B99479364DFDBDDD9A282AAE6E48ED10877862FD0B3EEA2AE9C21F6EB2"
+        },
+        "matches": true
+      }
+    ],
+    "member_count": 31,
+    "all_members_match": true,
+    "project_members": [
+      {
+        "fileset": "sources_1",
+        "path": "rtl/cfo_front2048_window.sv"
+      },
+      {
+        "fileset": "sources_1",
+        "path": "rtl/cfo_fft2048_core.sv"
+      },
+      {
+        "fileset": "sources_1",
+        "path": "ip/fft2048_twiddle.mem"
+      },
+      {
+        "fileset": "sources_1",
+        "path": "ip/front2048_coefficient_index.mem"
+      },
+      {
+        "fileset": "sources_1",
+        "path": "ip/front2048_coefficient_table.mem"
+      },
+      {
+        "fileset": "constrs_1",
+        "path": "constraints/cfo_front2048.xdc"
+      },
+      {
+        "fileset": "sim_1",
+        "path": "sim/tb/cfo_front2048_tb.sv"
+      },
+      {
+        "fileset": "sim_1",
+        "path": "sim/vectors/front2048_config.svh"
+      },
+      {
+        "fileset": "sim_1",
+        "path": "sim/vectors/front2048_input.mem"
+      },
+      {
+        "fileset": "sim_1",
+        "path": "sim/vectors/front2048_pilot.mem"
+      },
+      {
+        "fileset": "sim_1",
+        "path": "sim/vectors/front2048_result.mem"
+      },
+      {
+        "fileset": "sim_1",
+        "path": "sim/vectors/front2048_metadata.mem"
+      },
+      {
+        "fileset": "utils_1",
+        "path": "vivado/run_threads.tcl"
+      }
+    ]
+  },
+  "frozen_project": {
+    "part": "xcvu11p-flgb2104-2-e",
+    "hardware_top": "cfo_front2048_window",
+    "simulation_top": "cfo_front2048_tb",
+    "new_xpr": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.xpr",
+    "new_xpr_preexisting": false,
+    "old_project_fingerprints": {
+      "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_SYNC\\CFO_SYNC.xpr": {
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_SYNC\\CFO_SYNC.xpr",
+        "exists": true,
+        "bytes": 15061,
+        "sha256": "8EE3459986419C34B42B4261A0E38B2D5C670B47E25E33D80B46074CD4EE8063"
+      },
+      "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_COORD\\CFO_COORD.xpr": {
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_COORD\\CFO_COORD.xpr",
+        "exists": true,
+        "bytes": 13706,
+        "sha256": "7605D752B0BB2C0B7BE2841D823E5C0AC3C25EA15D848239E3200AFBC40239A4"
+      },
+      "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_PHASE74\\CFO_PHASE74.xpr": {
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_PHASE74\\CFO_PHASE74.xpr",
+        "exists": true,
+        "bytes": 14795,
+        "sha256": "F4EA4EF3D0E7A71B89E55770EB4BE368329CCEC6800253CB1234A353741054AD"
+      },
+      "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FFT2048\\CFO_FFT2048.xpr": {
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FFT2048\\CFO_FFT2048.xpr",
+        "exists": true,
+        "bytes": 14537,
+        "sha256": "A3F09EFA805BE554092E32D0E42CA23BBF131D01AC0DD6DF671B936F2D891647"
+      },
+      "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_BACKEND74\\CFO_BACKEND74.xpr": {
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_BACKEND74\\CFO_BACKEND74.xpr",
+        "exists": true,
+        "bytes": 17041,
+        "sha256": "2186F6C5DA625ACEDE61283DB2451C52E55E3551C097FD8EBEF1CA2EAD221D5E"
+      }
+    }
+  },
+  "dependencies": {
+    "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT2048_NATIVE_JOB_009.md": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT2048_NATIVE_JOB_009.md",
+      "exists": true,
+      "bytes": 4134,
+      "sha256": "5C10EAC9C911BE33AF46B211CDA0C3063699CE4E3F8214E0718D321013732506"
+    },
+    "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT2048_CONTRACT_V1_ZH.md": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT2048_CONTRACT_V1_ZH.md",
+      "exists": true,
+      "bytes": 3608,
+      "sha256": "958C251097B592B36E8F5B735D4FB4F5ED8CC4C5DD04380D521783DC7FE88955"
+    },
+    "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_front2048.py": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_front2048.py",
+      "exists": true,
+      "bytes": 5638,
+      "sha256": "95A2651303FEC033B2362C80322BCEE72971EC3B1CF856FCE8AA23EFEF517A70"
+    },
+    "D:\\008_MA_Dev\\T11_CFO\\vivado\\front2048_project.tcl": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\front2048_project.tcl",
+      "exists": true,
+      "bytes": 3676,
+      "sha256": "305D959CD87A029CD9BE8CFC31EA692CE658120A8BD48D19FCC5985A08AFA2FB"
+    },
+    "D:\\008_MA_Dev\\T11_CFO\\vivado\\run_threads.tcl": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\run_threads.tcl",
+      "exists": true,
+      "bytes": 471,
+      "sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E"
+    },
+    "D:\\008_MA_Dev\\T11_CFO\\vivado\\configure_parallel_jobs.tcl": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\configure_parallel_jobs.tcl",
+      "exists": true,
+      "bytes": 4994,
+      "sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3"
+    },
+    "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT009_SOURCE_LOCK.json": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT009_SOURCE_LOCK.json",
+      "exists": true,
+      "bytes": 7055,
+      "sha256": "09A6A7F5AD994934B9CA30137139A7639A16638DB966AB3498AEDA9CF9765393"
+    },
+    "D:\\008_MA_Dev\\T11_CFO\\reports\\FFT008_REVIEW_20260914\\INDEPENDENT_REVIEW.json": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\FFT008_REVIEW_20260914\\INDEPENDENT_REVIEW.json",
+      "exists": true,
+      "bytes": 1841,
+      "sha256": "58B8D6ED07D8514902486ACE3EF098630C4CB27D776C67C1C43CFA3720C94EA1"
+    },
+    "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_SYNC\\CFO_SYNC.xpr": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_SYNC\\CFO_SYNC.xpr",
+      "exists": true,
+      "bytes": 15061,
+      "sha256": "8EE3459986419C34B42B4261A0E38B2D5C670B47E25E33D80B46074CD4EE8063"
+    },
+    "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_COORD\\CFO_COORD.xpr": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_COORD\\CFO_COORD.xpr",
+      "exists": true,
+      "bytes": 13706,
+      "sha256": "7605D752B0BB2C0B7BE2841D823E5C0AC3C25EA15D848239E3200AFBC40239A4"
+    },
+    "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_PHASE74\\CFO_PHASE74.xpr": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_PHASE74\\CFO_PHASE74.xpr",
+      "exists": true,
+      "bytes": 14795,
+      "sha256": "F4EA4EF3D0E7A71B89E55770EB4BE368329CCEC6800253CB1234A353741054AD"
+    }
+  },
+  "tools": {
+    "python": "C:\\Python314\\python.exe",
+    "python_version": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+    "vivado": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+    "vivado_version_declared": "2021.1"
+  },
+  "preflight_verification": {
+    "fft": {
+      "argv": [
+        "C:\\Python314\\python.exe",
+        "-I",
+        "-B",
+        "-X",
+        "utf8",
+        "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_front2048.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"FRONT2048_SOURCE_ORACLE_PASS\", \"frozen_files\": 31, \"reference_identities\": 10, \"unique_cases\": 90, \"coefficient_entries_exact\": 60680, \"native_checked\": false}\n",
+      "stderr": ""
+    }
+  },
+  "preexisting_native_processes": {
+    "all_native_processes": [
+      {
+        "pid": 28856,
+        "parent_pid": 34768,
+        "image_name": "xsimk.exe",
+        "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+        "private_usage_bytes": 1032007680,
+        "working_set_bytes": 492408832,
+        "pagefile_usage_bytes": 1032007680,
+        "cpu_time_100ns": 515236562500,
+        "creation_filetime_100ns": 134338327375072737
+      },
+      {
+        "pid": 34768,
+        "parent_pid": 40656,
+        "image_name": "vivado.exe",
+        "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+        "private_usage_bytes": 470593536,
+        "working_set_bytes": 171167744,
+        "pagefile_usage_bytes": 470593536,
+        "cpu_time_100ns": 273437500,
+        "creation_filetime_100ns": 134338317352384478
+      }
+    ],
+    "protected": [
+      {
+        "pid": 28856,
+        "parent_pid": 34768,
+        "image_name": "xsimk.exe",
+        "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+        "private_usage_bytes": 1032007680,
+        "working_set_bytes": 492408832,
+        "pagefile_usage_bytes": 1032007680,
+        "cpu_time_100ns": 515236562500,
+        "creation_filetime_100ns": 134338327375072737
+      },
+      {
+        "pid": 34768,
+        "parent_pid": 40656,
+        "image_name": "vivado.exe",
+        "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+        "private_usage_bytes": 470593536,
+        "working_set_bytes": 171167744,
+        "pagefile_usage_bytes": 470593536,
+        "cpu_time_100ns": 273437500,
+        "creation_filetime_100ns": 134338317352384478
+      }
+    ],
+    "protected_pids": [
+      28856,
+      34768
+    ],
+    "non_reserved_native_processes": []
+  },
+  "startup_memory": {
+    "available_physical_bytes": 14542348288,
+    "total_physical_bytes": 33737908224,
+    "available_physical_gib": 13.543617,
+    "memory_load_percent": 56
+  },
+  "resources": {
+    "t10_reserved_pids": {
+      "34768": "vivado.exe",
+      "28856": "xsimk.exe"
+    },
+    "max_concurrent_cfo_vivado": 1,
+    "matlab_slots": 0,
+    "planned_peak_gib_warning": 4,
+    "expected_peak_gib_range": [
+      1.5,
+      3.0
+    ],
+    "free_recommendation_gib": 6,
+    "hard_memory_available_gib": 0.25,
+    "sustained_memory_available_gib": 0.5,
+    "sustained_memory_seconds": 30,
+    "native_stages_serial": true,
+    "xelab_jobs": 16,
+    "general_maxThreads": 8,
+    "synth_maxThreads": 8,
+    "create_jobs_ceiling": 16
+  },
+  "commands": {
+    "create": [
+      "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+      "-mode",
+      "batch",
+      "-source",
+      "D:/008_MA_Dev/T11_CFO/vivado/front2048_project.tcl",
+      "-log",
+      "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create.log",
+      "-journal",
+      "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create.jou",
+      "-tclargs",
+      "create",
+      "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna"
+    ],
+    "simulate": [
+      "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+      "-mode",
+      "batch",
+      "-source",
+      "D:/008_MA_Dev/T11_CFO/vivado/front2048_project.tcl",
+      "-log",
+      "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate.log",
+      "-journal",
+      "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate.jou",
+      "-tclargs",
+      "simulate",
+      "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna"
+    ]
+  },
+  "hard_timeouts_seconds": {
+    "create": 120,
+    "simulate": 600,
+    "post_trigger_zero_grace": 5
+  },
+  "scope_guards": {
+    "no_t10_operation": true,
+    "no_matlab": true,
+    "no_old_runner": true,
+    "no_old_stage_repeat": true,
+    "no_rotator_repeat": true,
+    "no_coordinate_repeat": true,
+    "no_phase74_repeat": true,
+    "no_synthesis": true,
+    "no_implementation": true,
+    "no_fft_quality_or_modes": true,
+    "pilot_multiply_sum_included": true,
+    "no_fullframe_or_cdc": true,
+    "no_auto_restart": true,
+    "no_native_started_before_freeze": true
+  },
+  "checks": {
+    "source_lock_hash": true,
+    "all_locked_files_match": true,
+    "fft_xpr_absent_before_create": true,
+    "old_projects_present": true,
+    "review_present": true,
+    "preflight_verify_exit_0": true,
+    "protected_process_creation_identities_valid": true,
+    "t10_vivado_present": true,
+    "t10_xsim_present": true,
+    "no_other_vivado_or_xsim_process": true,
+    "free_memory_recommendation": true
+  }
+}

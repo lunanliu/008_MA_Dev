@@ -1,0 +1,314 @@
+{
+  "schema": "cfo_front009_artifact_manifest_v1",
+  "generated_utc": "2026-09-14T18:33:08.048Z",
+  "attempt": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna",
+  "completion_sha256": "BD1461E85026874FC198B5007DE59237FA2E315EF68DB384048130A5B7E804EB",
+  "artifacts": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\ATTEMPT_COMPLETION.json",
+      "exists": true,
+      "bytes": 61953,
+      "sha256": "BD1461E85026874FC198B5007DE59237FA2E315EF68DB384048130A5B7E804EB"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\CFO_FRONT2048_after_create.xpr",
+      "exists": true,
+      "bytes": 15126,
+      "sha256": "4F01FE041F29CDECF3B7C03E83070A8972A7D76A46405DA39DA862CF56EF735D"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\CFO_FRONT2048_final.xpr",
+      "exists": true,
+      "bytes": 15056,
+      "sha256": "67C3342838F691CD1BCA2499B2049315C323DB80A37DA6B224A1097A88CB4329"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\cfo_front2048_guard_v1_frozen.py",
+      "exists": true,
+      "bytes": 19137,
+      "sha256": "9F3430079FBE5DEE3436C87B6E5BB7221FD03778458B10271B79A06B8195ADC9"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\controller_events.jsonl",
+      "exists": true,
+      "bytes": 2886,
+      "sha256": "15C4D96D27D869415160763B6F5D723C107F87A54215F2B7642352BA263CA034"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create.jou",
+      "exists": true,
+      "bytes": 999,
+      "sha256": "3EEF9077E5E23BBB987EEB4E1ADB05DE5353B04A76ADB0679CBB353B39BA9809"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create.log",
+      "exists": true,
+      "bytes": 10230,
+      "sha256": "7A6B22E9158A5286BD178E10F8BC57A13F48D2D6A071C933E55069715946FA28"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create.samples.jsonl",
+      "exists": true,
+      "bytes": 27034,
+      "sha256": "BB8522A48A9372875266416296A84009EAD2906C26A44C6B18054C8F5CD36747"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create.stderr.log",
+      "exists": true,
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create.stdout.log",
+      "exists": true,
+      "bytes": 9779,
+      "sha256": "266A2081EF31B4E632892209287A1778B2B2F59A3D89E9BCD8875DF03076FD9F"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create_actual_sources.csv",
+      "exists": true,
+      "bytes": 807,
+      "sha256": "0B3CD88380EC1FE6619CADCB8EA57CE2190D79713248C8160850BB785C68839C"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create_project_identity.txt",
+      "exists": true,
+      "bytes": 195,
+      "sha256": "FB1D238D4C3B3A4ED77D373A28BD7AF8C533B72B4031DE38F0BFD3FFD4BB021F"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create_source_check.json",
+      "exists": true,
+      "bytes": 1488,
+      "sha256": "8B7D09554D406AE3EE68D74B94AAF8E25D8941E739E657EBA7814DFDCA52D379"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\create_verify.json",
+      "exists": true,
+      "bytes": 721,
+      "sha256": "9DB666ED72E37C1C7DDD6CD89AC36D743DA31E7BB26E1586DF18937D4D222439"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\EXECUTION_FREEZE.json",
+      "exists": true,
+      "bytes": 28604,
+      "sha256": "12AA6102EEE64DFD70D5EAD30EC48F4D8CB1C2BFC27E4058D63EF32499EAD50E"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\FINAL_XPR_AUDIT.json",
+      "exists": true,
+      "bytes": 1035,
+      "sha256": "1B8A41513774E56F8764334C7CEC764690CD34EA6659D316AB3D142404467561"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\front2048_actual.txt",
+      "exists": true,
+      "bytes": 4082137,
+      "sha256": "45CD205D2077535E147329E23C3AB48FB3718A5DB01CE8E9C94A596A8076BD97"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\native_compile.log",
+      "exists": true,
+      "bytes": 752,
+      "sha256": "899FF15055B7AB84D17D27C91B8661A2C4D93FA11C1E4675C0BB162F4D218196"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\native_xelab.log",
+      "exists": true,
+      "bytes": 882,
+      "sha256": "CE690F4E0542E7FDE5CD9D73E7DA58E1C42DE26476632B8CAD2783C972387B45"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\native_xsim.log",
+      "exists": true,
+      "bytes": 33590,
+      "sha256": "CF3B2603B16BD28C27F112EED1E3EE118EF82ABDF5E7E016532E098369E0D7A5"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\native_xvlog.log",
+      "exists": true,
+      "bytes": 752,
+      "sha256": "899FF15055B7AB84D17D27C91B8661A2C4D93FA11C1E4675C0BB162F4D218196"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\PRE_SIMULATE_RESOURCE_CHECK.json",
+      "exists": true,
+      "bytes": 2198,
+      "sha256": "A3486026126474C27051DC8CAA7782BE78C5B9DE84DBE5DD63A2D5205FDB6B37"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\report_clock.json",
+      "exists": true,
+      "bytes": 266,
+      "sha256": "972359B419675755249300B400B6C15C297CB4580B2013E23153FD3B7828676F"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate.jou",
+      "exists": true,
+      "bytes": 1037,
+      "sha256": "D9F51E81DAA98BF590761B6379E19EC7EE0F12240E1FC58BD3881DE62BB50F8F"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate.log",
+      "exists": true,
+      "bytes": 50147,
+      "sha256": "C70D78811CA75F9AA9256A634C7096CDEFD0F272D4B603EBF6223A455018020E"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate.samples.jsonl",
+      "exists": true,
+      "bytes": 143828,
+      "sha256": "7C2BF441DC9C6FA877B7FD997347D89499A206B2B822A9E3F2233A945C2E24CE"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate.stderr.log",
+      "exists": true,
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate.stdout.log",
+      "exists": true,
+      "bytes": 50071,
+      "sha256": "38239037EDD3EB4856C8FC4CC8DF9F12255AA30E157C256F72D72AD30D69A775"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate_actual_sources.csv",
+      "exists": true,
+      "bytes": 807,
+      "sha256": "0B3CD88380EC1FE6619CADCB8EA57CE2190D79713248C8160850BB785C68839C"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate_project_identity.txt",
+      "exists": true,
+      "bytes": 195,
+      "sha256": "FB1D238D4C3B3A4ED77D373A28BD7AF8C533B72B4031DE38F0BFD3FFD4BB021F"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate_source_check.json",
+      "exists": true,
+      "bytes": 2719,
+      "sha256": "56E2B2F6BDF2DD40A66BA093897E102291F7A7CEE8D475E48E367A000386878E"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONT009\\attempt_20260914T183142105831Z_luna\\simulate_verify.json",
+      "exists": true,
+      "bytes": 1380,
+      "sha256": "BC1257589C5BA5F06CACDA99309583B236E7207811AF80D096721A0B67636971"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.ip_user_files\\README.txt",
+      "exists": true,
+      "bytes": 130,
+      "sha256": "FE9E48B0B3FCFF2E6267F4BC6BDEF859FA1201C41AC49C473B9E414120B0A8C4"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\cfo_front2048_tb_behav.wdb",
+      "exists": true,
+      "bytes": 49607185,
+      "sha256": "FDFC2F18F3BDD89561D39F66EAE4A1D20D618EE90C2E117BF62051164B1D63AF"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\cfo_front2048_tb_vlog.prj",
+      "exists": true,
+      "bytes": 398,
+      "sha256": "B89A104AEC5C1833A35FA77619EC7801F19316D2F298A71B9C3AD087630F8000"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\compile.log",
+      "exists": true,
+      "bytes": 752,
+      "sha256": "899FF15055B7AB84D17D27C91B8661A2C4D93FA11C1E4675C0BB162F4D218196"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\elaborate.log",
+      "exists": true,
+      "bytes": 882,
+      "sha256": "CE690F4E0542E7FDE5CD9D73E7DA58E1C42DE26476632B8CAD2783C972387B45"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\front2048_actual.txt",
+      "exists": true,
+      "bytes": 4082137,
+      "sha256": "45CD205D2077535E147329E23C3AB48FB3718A5DB01CE8E9C94A596A8076BD97"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\simulate.log",
+      "exists": true,
+      "bytes": 33590,
+      "sha256": "CF3B2603B16BD28C27F112EED1E3EE118EF82ABDF5E7E016532E098369E0D7A5"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\webtalk.jou",
+      "exists": true,
+      "bytes": 966,
+      "sha256": "F8A1A40B4EB5BAC72BDAB752FE090B7F599DA399DEF026A0AC870E97180D0516"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\webtalk.log",
+      "exists": true,
+      "bytes": 1035,
+      "sha256": "AE42F68A3C33663BF260717470B564A0250E436A117C89D9D3D84609A2197B73"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\webtalk_37316.backup.jou",
+      "exists": true,
+      "bytes": 967,
+      "sha256": "C17E9F2976540CFAAA37E706E6C4061E0CDCC06228CD9CFC2F5048D1369A34B5"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\webtalk_37316.backup.log",
+      "exists": true,
+      "bytes": 1036,
+      "sha256": "7CAF3FBE783F08738CB81B6BDAF2DB588C07D0F9C62D43224AC610B5A2E31AE9"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\xelab.pb",
+      "exists": true,
+      "bytes": 1780,
+      "sha256": "3A6CD9FA98B18EA5EDF4471465D14AA4B601AE29626BF7264E539E21F873CB38"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\xsim.dir\\cfo_front2048_tb_behav\\Compile_Options.txt",
+      "exists": true,
+      "bytes": 276,
+      "sha256": "5E0AB6A63FF38B1C5D6D24B20AC2E3ACCBDF3D3DE167E6B3E12651797EDD898F"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\xsim.dir\\cfo_front2048_tb_behav\\TempBreakPointFile.txt",
+      "exists": true,
+      "bytes": 29,
+      "sha256": "89BD34AB9B7056058EC7ACC5470F6EC95F1EF47B9AEB329D53E24D38B9607451"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\xsim.dir\\cfo_front2048_tb_behav\\xsimcrash.log",
+      "exists": true,
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\xsim.dir\\cfo_front2048_tb_behav\\xsimkernel.log",
+      "exists": true,
+      "bytes": 346,
+      "sha256": "A4E50E281ABFB4FCD1D49716AF3EC7EA97554D74DBAC8A94C4A40D156A658AD4"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\xvlog.log",
+      "exists": true,
+      "bytes": 752,
+      "sha256": "899FF15055B7AB84D17D27C91B8661A2C4D93FA11C1E4675C0BB162F4D218196"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.sim\\sim_1\\behav\\xsim\\xvlog.pb",
+      "exists": true,
+      "bytes": 1336,
+      "sha256": "592E5579E89E17054E61F0B9FBF4B5C3D3C7ED25DAB564EBBDD6E87CE2920B18"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_FRONT2048\\CFO_FRONT2048.xpr",
+      "exists": true,
+      "bytes": 15056,
+      "sha256": "67C3342838F691CD1BCA2499B2049315C323DB80A37DA6B224A1097A88CB4329"
+    }
+  ]
+}

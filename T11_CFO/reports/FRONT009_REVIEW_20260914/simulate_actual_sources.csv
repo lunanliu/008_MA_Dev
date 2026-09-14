@@ -1,0 +1,14 @@
+fileset,path
+sources_1,D:/008_MA_Dev/T11_CFO/ip/fft2048_twiddle.mem
+sources_1,D:/008_MA_Dev/T11_CFO/ip/front2048_coefficient_index.mem
+sources_1,D:/008_MA_Dev/T11_CFO/ip/front2048_coefficient_table.mem
+sources_1,D:/008_MA_Dev/T11_CFO/rtl/cfo_fft2048_core.sv
+sources_1,D:/008_MA_Dev/T11_CFO/rtl/cfo_front2048_window.sv
+constrs_1,D:/008_MA_Dev/T11_CFO/constraints/cfo_front2048.xdc
+sim_1,D:/008_MA_Dev/T11_CFO/sim/tb/cfo_front2048_tb.sv
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/front2048_config.svh
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/front2048_input.mem
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/front2048_metadata.mem
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/front2048_pilot.mem
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/front2048_result.mem
+utils_1,D:/008_MA_Dev/T11_CFO/vivado/run_threads.tcl

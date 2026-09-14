@@ -1,0 +1,6 @@
+part=xcvu11p-flgb2104-2-e
+hardware_top=cfo_front2048_window
+simulation_top=cfo_front2048_tb
+project=D:/008_MA_Dev/T11_CFO/vivado/CFO_FRONT2048/CFO_FRONT2048.xpr
+vivado=2021.1
+xelab_jobs=16

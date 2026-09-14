@@ -1,0 +1,52 @@
+{
+  "status": "PASS_FRONT2048_WINDOW_FFT_PILOT_SUM_ONLY",
+  "utc": "2026-09-14T19:30:17.305341+00:00",
+  "artifacts_hashchecked": 51,
+  "locked_files_verified": 31,
+  "reference_source_hashes_verified": 10,
+  "actual_project_members_each_stage": 13,
+  "completion_sha256": "BD1461E85026874FC198B5007DE59237FA2E315EF68DB384048130A5B7E804EB",
+  "manifest_sha256": "05C61B6CC5C8A884C5D1A9C08BFAAFD272969F8DD738027088ABD88268F99B9B",
+  "rows": {
+    "P": 82026,
+    "Z": 98,
+    "D": 8,
+    "E": 7
+  },
+  "unique_windows": 90,
+  "complete_transactions": 98,
+  "discarded_transactions": 8,
+  "protocol_errors": 7,
+  "output_stalls": 250,
+  "max_tail_cycles": 13398,
+  "max_total_cycles": 17505,
+  "max_adjusted_service_cycles": 15448,
+  "all_74_coefficient_rows_verified": true,
+  "resources": {
+    "create": {
+      "elapsed_seconds": 13.3792401,
+      "peak_job_private_commit_bytes": 1202458624,
+      "minimum_available_physical_bytes": 13543923712,
+      "job_zero_confirmed": true
+    },
+    "simulate": {
+      "elapsed_seconds": 58.2171582,
+      "peak_job_private_commit_bytes": 1199845376,
+      "minimum_available_physical_bytes": 13671698432,
+      "job_zero_confirmed": true
+    }
+  },
+  "controller_frozen_bytes_preserved": true,
+  "t10_identities_unchanged": true,
+  "review_method": "Compare saved actual records to frozen published-anchored expected records; no FFT/MATLAB/native recomputation",
+  "slot_status": "T11_YIELDED; no new native launch until explicit manager grant",
+  "unqualified_scopes": [
+    "whole-frame contiguous waveform",
+    "CDC",
+    "estimator backend integration",
+    "CFO frame buffers and two-pass rotation",
+    "synthesis resources",
+    "500 MHz physical timing",
+    "full T11/T12/T13 PASS"
+  ]
+}
