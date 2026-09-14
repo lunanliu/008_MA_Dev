@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-09-13T01:00:46.601779+00:00",
+  "large_waveforms_retained_at_verified_original_paths": true,
+  "records": [
+    {
+      "batch": "RCFO003",
+      "attempt_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\execution\\T11-RCFO003\\attempt_20260913T001556746Z_luna",
+      "result_manifest_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\execution\\T11-RCFO003\\attempt_20260913T001556746Z_luna\\result_manifest.json",
+      "result_manifest_sha256": "09BE46F881E586F5E42BE212E3D32C54BBA541A357A1FCB922273BC3BDCD2072",
+      "source_manifest_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\model_dispatch\\RCFO003\\package\\manifest.json",
+      "source_manifest_sha256": "23D25FEBC314938E9387A92000096B95E177F50F947B0E66495CFE75108B5A6A",
+      "independent_review_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\review\\RCFO003_20260913\\INDEPENDENT_REVIEW.json",
+      "independent_review_sha256": "A9C49D7ACF5F102E5DB79365571509D11ECA0F710DAF5CFB4CC9206570FD8F43",
+      "successful_command_record": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\execution\\T11-RCFO003\\attempt_20260913T001556746Z_luna\\launch_record.json"
+    },
+    {
+      "batch": "RCFO004",
+      "attempt_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\execution\\T11-RCFO004\\attempt_20260913T004332727Z_luna",
+      "result_manifest_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\execution\\T11-RCFO004\\attempt_20260913T004332727Z_luna\\result_manifest.json",
+      "result_manifest_sha256": "52CD4951A53DC24A3797D6012CCFAFC6D1105F9A32CC0409434DACB098D3FDEE",
+      "source_manifest_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\model_dispatch\\RCFO004\\package\\manifest.json",
+      "source_manifest_sha256": "2BC9F21A1473B7A8A59C9F73349A9F5ED286FB48C0B543AA5CCFDED7B71EEF21",
+      "independent_review_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\review\\RCFO004_20260913\\INDEPENDENT_REVIEW.json",
+      "independent_review_sha256": "8C10E61AFA9A3E70FB4B3DF204595BD230437EAE51ABA7B52DB5EAFFCFFA89AF",
+      "successful_command_record": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\execution\\T11-RCFO004\\attempt_20260913T004332727Z_luna\\launch_record.json"
+    }
+  ],
+  "independent_review_scripts": [
+    "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\review\\review_rcfo003.py",
+    "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\review\\review_rcfo004.py"
+  ]
+}

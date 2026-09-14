@@ -1,0 +1,87 @@
+{
+  "samples_per_case": 5120,
+  "cases": [
+    {
+      "case_id": 0,
+      "samples": 5120,
+      "beats": 1280,
+      "phase0": 0,
+      "step": 1288490,
+      "source": "sim\\reference\\rcfo004\\results\\case_001\\input_i16.bin",
+      "saturation_components": 0,
+      "ties": {
+        "positive_even": 0,
+        "positive_odd": 0,
+        "negative_even": 0,
+        "negative_odd": 0
+      },
+      "files": [
+        "sim\\vectors\\rot_case0_input.mem",
+        "sim\\vectors\\rot_case0_expected.mem",
+        "sim\\vectors\\rot_case0_sat.mem"
+      ]
+    },
+    {
+      "case_id": 1,
+      "samples": 5120,
+      "beats": 1280,
+      "phase0": 0,
+      "step": -1288490,
+      "source": "sim\\reference\\rcfo004\\results\\case_003\\input_i16.bin",
+      "saturation_components": 0,
+      "ties": {
+        "positive_even": 0,
+        "positive_odd": 0,
+        "negative_even": 0,
+        "negative_odd": 1
+      },
+      "files": [
+        "sim\\vectors\\rot_case1_input.mem",
+        "sim\\vectors\\rot_case1_expected.mem",
+        "sim\\vectors\\rot_case1_sat.mem"
+      ]
+    },
+    {
+      "case_id": 2,
+      "samples": 5120,
+      "beats": 1280,
+      "phase0": 536870912,
+      "step": 16777216,
+      "source": "deterministic full-scale quadrants, no MATLAB",
+      "saturation_components": 5040,
+      "ties": {
+        "positive_even": 0,
+        "positive_odd": 0,
+        "negative_even": 0,
+        "negative_odd": 0
+      },
+      "files": [
+        "sim\\vectors\\rot_case2_input.mem",
+        "sim\\vectors\\rot_case2_expected.mem",
+        "sim\\vectors\\rot_case2_sat.mem"
+      ]
+    },
+    {
+      "case_id": 3,
+      "samples": 5120,
+      "beats": 1280,
+      "phase0": 2097152,
+      "step": 4194304,
+      "source": "deterministic signed RNE tie excitation, no MATLAB",
+      "saturation_components": 0,
+      "ties": {
+        "positive_even": 1400,
+        "positive_odd": 1400,
+        "negative_even": 1400,
+        "negative_odd": 1400
+      },
+      "files": [
+        "sim\\vectors\\rot_case3_input.mem",
+        "sim\\vectors\\rot_case3_expected.mem",
+        "sim\\vectors\\rot_case3_sat.mem"
+      ]
+    }
+  ],
+  "algorithm": "Exact integer phase32/address10/C16F14 ordinary complex multiply/RNE/sat; case3 includes phase-address half ties and modulo wrap",
+  "phase_correction_controller_tested": false
+}

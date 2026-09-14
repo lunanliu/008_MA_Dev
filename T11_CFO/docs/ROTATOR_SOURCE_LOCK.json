@@ -1,0 +1,274 @@
+{
+  "schema": "CFO_ROTATOR_SOURCE_LOCK_v1",
+  "job": "CFO-NATIVE001",
+  "part": "xcvu11p-flgb2104-2-e",
+  "hardware_top": "cfo_rotate4",
+  "simulation_top": "cfo_rotate4_tb",
+  "project_files": [
+    {
+      "fileset": "sources_1",
+      "path": "rtl/cfo_rotate4.sv"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "ip/cfo_rot_lut.mem"
+    },
+    {
+      "fileset": "constrs_1",
+      "path": "constraints/cfo_rotate4.xdc"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/tb/cfo_rotate4_tb.sv"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rotator_configs.svh"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case0_input.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case0_expected.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case0_sat.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case1_input.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case1_expected.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case1_sat.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case2_input.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case2_expected.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case2_sat.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case3_input.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case3_expected.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/rot_case3_sat.mem"
+    }
+  ],
+  "files": [
+    {
+      "path": "README_ZH.md",
+      "bytes": 2816,
+      "sha256": "754AE82B6E49E102EE3A6F4DF372A9DABE36A7C0CC84F85FB5B35E0B02728B38"
+    },
+    {
+      "path": "constraints/cfo_rotate4.xdc",
+      "bytes": 62,
+      "sha256": "03561EFC202A3AF104D0D41A5BB9BDECF424BABA61BDBA5740D629A91A414DE2"
+    },
+    {
+      "path": "docs/ALGORITHM_BASELINE_ZH.md",
+      "bytes": 12294,
+      "sha256": "F1BCC5530C4AB7D727B78CE9CA19F15A492C5E96E0E594E39A0B5ADC86C04C11"
+    },
+    {
+      "path": "docs/ARCHITECTURE_AND_MEMORY_ZH.md",
+      "bytes": 6503,
+      "sha256": "4A0C8BE3534FA87B358280A677F49ABE1E3180504F1C2875DAB7BAC6BE4FA6B5"
+    },
+    {
+      "path": "docs/CFO_MAIN_CONTRACT.json",
+      "bytes": 3621,
+      "sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_GATES_ZH.md",
+      "bytes": 2140,
+      "sha256": "7E7D88301A9C3016B8D1DB3453E3B76E4F8D752F2BD611189D4B4CFDAC372A2C"
+    },
+    {
+      "path": "docs/MIGRATION_SOURCES.json",
+      "bytes": 328347,
+      "sha256": "5085289580EA2BA5D810FB433BEF6F348718C7B1A6F739D308F21218E4A9C945"
+    },
+    {
+      "path": "docs/ROTATOR_NATIVE_JOB_001.md",
+      "bytes": 6509,
+      "sha256": "2FCA5D82AE37441E680B0E60B793641AF35CC483C05704AD6693D959662BB56C"
+    },
+    {
+      "path": "ip/cfo_rot_lut.mem",
+      "bytes": 10240,
+      "sha256": "72B5CD0673EF0011CCEBF8CB4CD89F5406360330E5DE8BD0FD62B706CF6FC5FE"
+    },
+    {
+      "path": "matlab/bittrue/cfo_chain_arithmetic.m",
+      "bytes": 9686,
+      "sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80"
+    },
+    {
+      "path": "matlab/bittrue/cfo_chain_bittrue.m",
+      "bytes": 863,
+      "sha256": "88E5A29504B6A7C136DB2EB3AC3922C54A0649D93F2C8BBF5258BD70564293E6"
+    },
+    {
+      "path": "matlab/golden/cfo_chain_golden.m",
+      "bytes": 1781,
+      "sha256": "887188E22F1D8E13B231785C7CD8FD6599A4F0CE19A75BDB9D7B63F5E80D88AE"
+    },
+    {
+      "path": "matlab/setup_cfo_project.m",
+      "bytes": 322,
+      "sha256": "B20B72E6E566C3C76653D4CC5C50C87D895ECD0AD7201AAA67F21922EAB1E72E"
+    },
+    {
+      "path": "matlab/waveform/cfo_chain_score.m",
+      "bytes": 2046,
+      "sha256": "15B67538C6975C14115141797AA9FAFAFEAF3350FC37B6A1B5D51556B300BA86"
+    },
+    {
+      "path": "matlab/waveform/payload_pilot_cells.csv",
+      "bytes": 4120567,
+      "sha256": "04E3ED790A0EC8B2980D7D7880874CE786072693E8DC4C60A4A1A71F3AC63B6E"
+    },
+    {
+      "path": "rtl/cfo_rotate4.sv",
+      "bytes": 4264,
+      "sha256": "77CC206F82BCBB0B09583334E14EF7C35FC5ACED1562DF383B91E80F5AABF916"
+    },
+    {
+      "path": "sim/tb/cfo_rotate4_tb.sv",
+      "bytes": 7483,
+      "sha256": "8039F3CBA917F46DC401BA089CCD6647F3CA690804E8E01A01FB11649BB8E605"
+    },
+    {
+      "path": "sim/vectors/ROTATOR_VECTOR_MANIFEST.json",
+      "bytes": 2437,
+      "sha256": "5F1C5E7EC475683ED4FD2C15541563D6228C6D6702BE0FD2D3EC9D98D00DC38F"
+    },
+    {
+      "path": "sim/vectors/rot_case0_expected.mem",
+      "bytes": 43520,
+      "sha256": "7D486D8A1804764EDED5E4FA47868F5FC5307F240812B2977AF7886B67BB4720"
+    },
+    {
+      "path": "sim/vectors/rot_case0_input.mem",
+      "bytes": 43520,
+      "sha256": "EA3C16D170CF4F0B35342F0D7659ED9826B32B829BD7D1016E000EA05BF7FE8C"
+    },
+    {
+      "path": "sim/vectors/rot_case0_sat.mem",
+      "bytes": 5120,
+      "sha256": "C41BBA2D5627AE09B18254227DA313D4005D6B6AA45D2CE39D2E4FEB0A7312F5"
+    },
+    {
+      "path": "sim/vectors/rot_case1_expected.mem",
+      "bytes": 43520,
+      "sha256": "D622D2D7654E752E6F04F590CCD13AB5563C23447E35D9288D0408900C6E0DE1"
+    },
+    {
+      "path": "sim/vectors/rot_case1_input.mem",
+      "bytes": 43520,
+      "sha256": "E54FF22B8C2F65497055B29A9EAC323B1A71194B293BED18A4C3A6995564D7C2"
+    },
+    {
+      "path": "sim/vectors/rot_case1_sat.mem",
+      "bytes": 5120,
+      "sha256": "C41BBA2D5627AE09B18254227DA313D4005D6B6AA45D2CE39D2E4FEB0A7312F5"
+    },
+    {
+      "path": "sim/vectors/rot_case2_expected.mem",
+      "bytes": 43520,
+      "sha256": "C48D0BEFE7170F6DF1E7D193120A8D5CC389EC9AF6F6C6533DA9BCC118EAEA98"
+    },
+    {
+      "path": "sim/vectors/rot_case2_input.mem",
+      "bytes": 43520,
+      "sha256": "F3383DB7EB1862729A5286610356BC57ABDEBD0A84F638C311C30ED3A8EFFC40"
+    },
+    {
+      "path": "sim/vectors/rot_case2_sat.mem",
+      "bytes": 5120,
+      "sha256": "585BF6B386C5EC758BC001CD18CC6CEB489AE12AE949B58F02FCBAF2871D9FE2"
+    },
+    {
+      "path": "sim/vectors/rot_case3_expected.mem",
+      "bytes": 43520,
+      "sha256": "C9219DC28A8D6E76016432648CDEB669F372C2935B193278ABFC03CE6DFB8662"
+    },
+    {
+      "path": "sim/vectors/rot_case3_input.mem",
+      "bytes": 43520,
+      "sha256": "D8B4615897C3955CA5B662F79ECED33CB8C87A5ABD11928458257F06E0449A36"
+    },
+    {
+      "path": "sim/vectors/rot_case3_sat.mem",
+      "bytes": 5120,
+      "sha256": "C41BBA2D5627AE09B18254227DA313D4005D6B6AA45D2CE39D2E4FEB0A7312F5"
+    },
+    {
+      "path": "sim/vectors/rotator_configs.svh",
+      "bytes": 280,
+      "sha256": "379AA7C280FC636F9C3385D2823E65ABB56C7DFE8A3464106E48C20FD6A35973"
+    },
+    {
+      "path": "tools/freeze_rotator_vectors.py",
+      "bytes": 3201,
+      "sha256": "BE3E52FBA43E6A22A0698694F46D861E0D8FBBA21534EA835212FED98DB0CF15"
+    },
+    {
+      "path": "tools/verify_rotator.py",
+      "bytes": 4020,
+      "sha256": "8A76878DBC04AFA73A3F87EB53C036BA1332D3429931A577755FF8129FBEB377"
+    },
+    {
+      "path": "vivado/cancel_probe.tcl",
+      "bytes": 460,
+      "sha256": "686FA3B0A16446F48EBFF1602B82C21D4290DE2577815BE4E26F342634C0CD91"
+    },
+    {
+      "path": "vivado/configure_parallel_jobs.tcl",
+      "bytes": 4994,
+      "sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3"
+    },
+    {
+      "path": "vivado/create_project.tcl",
+      "bytes": 1626,
+      "sha256": "5EDEC08ED4B17409B6381863438D207485798C766030F1517263B462DF3121D4"
+    },
+    {
+      "path": "vivado/export_sources.tcl",
+      "bytes": 890,
+      "sha256": "52AC308CC9C6246EC7FAB10D9D2783F26C7D33567915C9024CD2FDAC83B1AFFF"
+    },
+    {
+      "path": "vivado/run_rotator.tcl",
+      "bytes": 1083,
+      "sha256": "28CE523CDDA724B821637296CE18950ED124987AE530FB98524FA2584763CCA7"
+    },
+    {
+      "path": "vivado/run_threads.tcl",
+      "bytes": 471,
+      "sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E"
+    }
+  ]
+}

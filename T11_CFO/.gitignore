@@ -1,0 +1,10 @@
+/work/
+/sim/reference/
+/vivado/CFO_SYNC/*
+!/vivado/CFO_SYNC/CFO_SYNC.xpr
+/reports/rotator_native/
+*.jou
+*.log
+*.wdb
+*.pb
+.Xil/

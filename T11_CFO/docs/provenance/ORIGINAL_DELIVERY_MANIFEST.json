@@ -1,0 +1,121 @@
+{
+  "schema": "CFO_ALGORITHM_DELIVERY_v1",
+  "created_utc": "2026-09-13T01:05:38.461177+00:00",
+  "files": [
+    {
+      "path": "CFO_MAIN_CONTRACT.json",
+      "bytes": 3621,
+      "sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E"
+    },
+    {
+      "path": "DELIVERY_STATUS.json",
+      "bytes": 1702,
+      "sha256": "E4DBE8C243DD0919D3CB158DB89536E655B8395AACD41CE839B74F7D09220FF4"
+    },
+    {
+      "path": "evidence/nominal_groups.csv",
+      "bytes": 2289,
+      "sha256": "6EB08ED7FD12AAEF6CB3708DD52655B038C65994CBE72B2729326961D18CD3D5"
+    },
+    {
+      "path": "evidence/RCFO003_COMPLETE.json",
+      "bytes": 410,
+      "sha256": "0D8D74C95D96CD2E9A2438E67E150A7447C725758FD748ABC8A9CF2E7487016F"
+    },
+    {
+      "path": "evidence/RCFO003_INDEPENDENT_REVIEW.json",
+      "bytes": 6836,
+      "sha256": "A9C49D7ACF5F102E5DB79365571509D11ECA0F710DAF5CFB4CC9206570FD8F43"
+    },
+    {
+      "path": "evidence/RCFO003_JOB.json",
+      "bytes": 3183,
+      "sha256": "FB3996BB461FCA8EE0D97E378248C21584A0E1FB4226BCD41B62975822E662D9"
+    },
+    {
+      "path": "evidence/RCFO003_launch_record.json",
+      "bytes": 20399,
+      "sha256": "8BBFDFAE54A275B60430E0859CACF3DBDDC6A9B0FE5F9E2526A0DED822342DE2"
+    },
+    {
+      "path": "evidence/RCFO003_result_manifest.json",
+      "bytes": 18643,
+      "sha256": "09BE46F881E586F5E42BE212E3D32C54BBA541A357A1FCB922273BC3BDCD2072"
+    },
+    {
+      "path": "evidence/RCFO004_COMPLETE.json",
+      "bytes": 410,
+      "sha256": "75603130376A9107D7486AC63465D97D39BCDE12CDFE4FD661DA7DBC9CE1E1F5"
+    },
+    {
+      "path": "evidence/RCFO004_INDEPENDENT_REVIEW.json",
+      "bytes": 10489,
+      "sha256": "8C10E61AFA9A3E70FB4B3DF204595BD230437EAE51ABA7B52DB5EAFFCFFA89AF"
+    },
+    {
+      "path": "evidence/RCFO004_JOB.json",
+      "bytes": 3222,
+      "sha256": "4D20F5B7334D107BA4B389D9565E53D8259B1D96819E84C6EF65694CF62E9CBB"
+    },
+    {
+      "path": "evidence/RCFO004_launch_record.json",
+      "bytes": 21786,
+      "sha256": "0BF35B99C09B6AE40E36AB6091EF432838F347CC2C8F1CDF7612E12D90656878"
+    },
+    {
+      "path": "evidence/RCFO004_result_manifest.json",
+      "bytes": 106352,
+      "sha256": "52CD4951A53DC24A3797D6012CCFAFC6D1105F9A32CC0409434DACB098D3FDEE"
+    },
+    {
+      "path": "evidence/T00_RESOURCE_RESERVE.md",
+      "bytes": 3801,
+      "sha256": "F7B7086E0CFF7AB8981496B78C4C8CEA3EDAA770F5CDBABF8DD487900E8201AD"
+    },
+    {
+      "path": "evidence/T10_SYNTH013_utilization.rpt",
+      "bytes": 16171,
+      "sha256": "08B0A8F5868C7DB6383CF9507C0013F936E614E744952F3275C69EE966C805CF"
+    },
+    {
+      "path": "EVIDENCE_INDEX.json",
+      "bytes": 2664,
+      "sha256": "B8E95E5953DD2DEC96E31E8F4EBA5C4D41E61E0C767CB31DFEDAC0AA6CE0551F"
+    },
+    {
+      "path": "matlab/cfo_chain_arithmetic.m",
+      "bytes": 9686,
+      "sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80"
+    },
+    {
+      "path": "matlab/cfo_chain_bittrue.m",
+      "bytes": 863,
+      "sha256": "88E5A29504B6A7C136DB2EB3AC3922C54A0649D93F2C8BBF5258BD70564293E6"
+    },
+    {
+      "path": "matlab/cfo_chain_golden.m",
+      "bytes": 1781,
+      "sha256": "887188E22F1D8E13B231785C7CD8FD6599A4F0CE19A75BDB9D7B63F5E80D88AE"
+    },
+    {
+      "path": "matlab/cfo_chain_score.m",
+      "bytes": 2046,
+      "sha256": "15B67538C6975C14115141797AA9FAFAFEAF3350FC37B6A1B5D51556B300BA86"
+    },
+    {
+      "path": "matlab/payload_pilot_cells.csv",
+      "bytes": 4120567,
+      "sha256": "04E3ED790A0EC8B2980D7D7880874CE786072693E8DC4C60A4A1A71F3AC63B6E"
+    },
+    {
+      "path": "README_ZH.md",
+      "bytes": 12294,
+      "sha256": "F1BCC5530C4AB7D727B78CE9CA19F15A492C5E96E0E594E39A0B5ADC86C04C11"
+    },
+    {
+      "path": "RTL_RESOURCE_BUDGET.json",
+      "bytes": 1626,
+      "sha256": "B83F7D38D6C6648CE59477FDBCDCCE1139532C92FFA9420E671072D3E529004D"
+    }
+  ]
+}

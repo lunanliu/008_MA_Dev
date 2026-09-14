@@ -1,0 +1,33 @@
+{
+  "status": "CONDITIONAL_RTL_DESIGN_MEMORY_APPEND_REJECTED",
+  "sample_bytes": 4,
+  "logical_two_frame_bytes": 10690560,
+  "logical_two_frame_MiB": 10.1953125,
+  "uram_geometry_assumption": "4096x72bit physical blocks,128bit beats need2parallel slices",
+  "frame_beats": 334080,
+  "physical_uram_blocks_per_frame": 164,
+  "additional_two_frame_uram_blocks": 328,
+  "current_T10_synth_uram": 552,
+  "combined_uram": 880,
+  "project_hard_uram": 672,
+  "combined_uram_percent": 91.66666666666666,
+  "over_hard_uram_blocks": 208,
+  "project_hard_BRAM36_equivalent": 1411,
+  "current_T10_BRAM36_equivalent": 218.5,
+  "remaining_combined_ideal_memory_bytes": 9918720.0,
+  "required_two_frame_bytes": 10690560,
+  "BRAM_URAM_mixing_without_reuse_sufficient": false,
+  "rom_ports": "4addresses per cycle per rotator; with2readports duplicate each logical packed ROM twice",
+  "main_ROM_logical_bits_per_rotator": 32768,
+  "high_ROM_logical_bits_per_rotator": 147456,
+  "main_ROM_bits_two_rotators_two_copies": 131072,
+  "high_ROM_bits_two_rotators_two_copies": 589824,
+  "parallel_real_products_two_rotators": 32,
+  "actual_DSP_LUT_BRAM_usage_unmeasured": true,
+  "required_resolution": "Prove reuse of existing frame storage or separately provisioned external memory and service schedule; cannot simply append2URAMbanks",
+  "sources": [
+    "reports/t10/design/T10_BASE001/package_rev02/evidence/T00_RTL_ONLY_SCOPE_AND_RESOURCE_RESERVE.md",
+    "reports/t10/execution/T10_SYNTH013/attempt_20260912T203451948Z_luna/results/synthesis/utilization.rpt"
+  ],
+  "ideal_memory_shortfall_bytes": 771840.0
+}
