@@ -1,0 +1,45 @@
+{
+  "schema": "cfo_stage_entry_data_documentation_v1",
+  "utc": "2026-09-14T23:21:42.033239+00:00",
+  "source": "manager delivery clarification2026-09-15",
+  "documents": [
+    "docs/CFO_STAGE_ENTRY_DATA_20260915_ZH.md",
+    "docs/DELIVERY_BOUNDARY_20260915_ZH.md"
+  ],
+  "document_hashes": {
+    "docs/CFO_STAGE_ENTRY_DATA_20260915_ZH.md": "A58AFA7AC4293AB3CDCA581A797BA85FBF2159BC6D791C6858B3CD09D80F8B68",
+    "docs/DELIVERY_BOUNDARY_20260915_ZH.md": "CF0E5A389C15354EF70891A82F236AB91F5823B582D7C32055E50C6FC15F0308"
+  },
+  "referenced_tb_and_vector_files_present": 24,
+  "references": [
+    "sim/tb/cfo_rotate4_tb.sv",
+    "sim/tb/cfo_estimator_link_tb.sv",
+    "sim/vectors/rotator_configs.svh",
+    "sim/vectors/ROTATOR_VECTOR_MANIFEST.json",
+    "sim/vectors/link010_config.svh",
+    "sim/vectors/link010_cases.json",
+    "sim/vectors/rot_case0_input.mem",
+    "sim/vectors/rot_case0_expected.mem",
+    "sim/vectors/rot_case0_sat.mem",
+    "sim/vectors/rot_case1_input.mem",
+    "sim/vectors/rot_case1_expected.mem",
+    "sim/vectors/rot_case1_sat.mem",
+    "sim/vectors/rot_case2_input.mem",
+    "sim/vectors/rot_case2_expected.mem",
+    "sim/vectors/rot_case2_sat.mem",
+    "sim/vectors/rot_case3_input.mem",
+    "sim/vectors/rot_case3_expected.mem",
+    "sim/vectors/rot_case3_sat.mem",
+    "sim/vectors/link010_input.mem",
+    "sim/vectors/link010_read.mem",
+    "sim/vectors/link010_result.mem",
+    "sim/vectors/link010_error_input.mem",
+    "sim/vectors/link010_error_read.mem",
+    "sim/vectors/link010_error_result.mem"
+  ],
+  "link010_frozen_hashes_unchanged": 42,
+  "native_run_or_rerun": false,
+  "rtl_tb_xpr_or_lock_modified": false,
+  "luna_messaged": false,
+  "full_cfo_chain_claimed": false
+}
