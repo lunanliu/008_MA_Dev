@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_divide_rne64.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cfo_divide_rne64
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_divide_rne64wide.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cfo_divide_rne64wide
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_estimate74_backend.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cfo_estimate74_backend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_fft256_core.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cfo_fft256_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_fft74_quality.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cfo_fft74_quality
+ERROR: [VRFC 10-292] all identifiers need to have initial value [D:/008_MA_Dev/T11_CFO/rtl/cfo_fft74_quality.sv:74]
+ERROR: [VRFC 10-2865] module 'cfo_fft74_quality' ignored due to previous errors [D:/008_MA_Dev/T11_CFO/rtl/cfo_fft74_quality.sv:3]

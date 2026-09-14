@@ -1,0 +1,32 @@
+{
+  "schema": "backend006_compile_review_v1",
+  "utc": "2026-09-14T16:18:01.935984+00:00",
+  "status": "COMPILE_FAILURE_CONFIRMED_FIX_READY_NO_NUMERIC_RESULT",
+  "attempt": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_BACKEND006\\attempt_20260914T161238733030Z_luna",
+  "completion_sha256": "CACA6C5D3C64643848C65F5A0A422A3286A5E2D9379D3CCC3ACB302AC6964318",
+  "manifest_sha256": "170E701301344FEBB2348DD536E2E11ED383BFA3377BCF8FFD7DA936D9F7BF49",
+  "artifacts_checked": 34,
+  "source_oracle_check": {
+    "status": "BACKEND74_SOURCE_AND_ORACLE_PASS",
+    "frozen_files": 41,
+    "published_source_identities": 79,
+    "cases": 28,
+    "published_cases": 19,
+    "native_checked": false,
+    "actual_project_members": 21,
+    "project_identity": "PASS"
+  },
+  "create_native_seconds": 13.1274384,
+  "failed_compile_seconds": 15.2096171,
+  "final_job_empty_both_queries": true,
+  "controller_frozen_bytes_preserved": true,
+  "first_error": "VRFC 10-292 mixed initialized and uninitialized wire declaration at quality line74",
+  "old_quality_sha256": "38AAE8B4C6DD7FC8BD5B57F1512192A3AE4C726DC74C14485C8EBD2716956430",
+  "new_quality_sha256": "84B39001F074DFB2C08951221A5E801A02457EE7826C7813229F2478068EE3AF",
+  "only_exact_declaration_split": true,
+  "algorithm_width_constants_vectors_tb_unchanged": true,
+  "existing_xpr_sha256": "9653AF12054CC39EBCF697515A7D56C277C9E0FCF0DB21CCC8A4CB7160A75E04",
+  "next_step": "reuse existing project, replace only quality source by v2, save/reopen and retry compile plus previously not-run simulation",
+  "no_original_stage_reexecution_by_reviewer": true,
+  "formal_pass": false
+}

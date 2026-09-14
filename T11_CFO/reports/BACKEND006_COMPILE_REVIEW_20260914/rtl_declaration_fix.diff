@@ -1,0 +1,12 @@
+--- cfo_fft74_quality.sv
++++ cfo_fft74_quality_v2.sv
+@@ -71,7 +71,8 @@
+  wire signed [63:0] signed_bin=peak_bin[7] ? $signed({56'd0,peak_bin})-64'sd256 : $signed({56'd0,peak_bin});
+  wire signed [63:0] fractional_bin=(signed_bin<<<16)+$signed({{32{delta_q16[31]}},delta_q16});
+  wire signed [63:0] frequency_numerator=fractional_bin*64'sd500000000;
+- wire div_s_valid=!clear && (state==D_START || state==F_START),div_s_ready,div_m_valid,div_error;
++ wire div_s_valid=!clear && (state==D_START || state==F_START);
++ wire div_s_ready,div_m_valid,div_error;
+  wire div_m_ready=!clear && (state==D_WAIT || state==F_WAIT);wire signed [63:0] quotient;
+  cfo_divide_rne64wide divider(.clk(clk),.rst(rst),.abort_sync(abort_sync),.s_valid(div_s_valid),.s_ready(div_s_ready),
+   .s_numerator((state==D_START) ? delta_numerator : frequency_numerator),.s_denominator((state==D_START) ? $unsigned(delta_denominator) : 64'd4587520),
