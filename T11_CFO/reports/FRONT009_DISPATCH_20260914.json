@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-14T18:31:32.889847+00:00",
+  "job": "CFO-FRONT009",
+  "status": "DISPATCHED_TO_ORIGINAL_T11_LUNA",
+  "astra_thread": "01a076f1-ad1b-7d33-a29c-4ea34ae84d01",
+  "luna_thread": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+  "preparation_commit": "8a052f3",
+  "source_lock_sha256": "09A6A7F5AD994934B9CA30137139A7639A16638DB966AB3498AEDA9CF9765393",
+  "controller_sha256": "9F3430079FBE5DEE3436C87B6E5BB7221FD03778458B10271B79A06B8195ADC9",
+  "native_start_not_yet_confirmed": true,
+  "accepted_prerequisite": "FFT008 independent primitive review PASS: 26 complete, 6 drops, 7 protocol errors, adjusted15441 cycles",
+  "scope": "Window FFT+lossless coefficient lookup+pilot multiply+sum; 90 unique cases, all74 coefficient rows. No whole-frame waveform/CDC/backend/synthesis/physical qualification.",
+  "resource": "0 MATLAB; one T11 Vivado; create/simulate serial; T10 protected"
+}
