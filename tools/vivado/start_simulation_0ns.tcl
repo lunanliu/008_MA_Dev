@@ -10,6 +10,7 @@ foreach ip [get_ips] {
     if {[get_property IS_LOCKED $ip]} {error "IP still locked: $ip; complete native retarget/config review first"}
 }
 set_property xsim.simulate.runtime 0ns [get_filesets sim_1]
+source [file join $root tools vivado configure_parallel_jobs.tcl]
 launch_simulation -simset sim_1 -mode behavioral -step compile
 launch_simulation -simset sim_1 -mode behavioral -step elaborate
 file mkdir $simdir

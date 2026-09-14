@@ -14,6 +14,7 @@ proc read_list {path} {
 if {[file exists $projectfile]} {
     open_project $projectfile
     if {[get_property PART [current_project]] ne $target} {error "Existing project target mismatch"}
+    source [file join $root tools vivado configure_parallel_jobs.tcl]
     puts "Opened existing T10_SFO; no simulation started."
     return
 }
@@ -45,10 +46,11 @@ foreach n {raw.mem r1.mem r2.mem delay.mem delta.mem} {add_files -fileset sim_1 
 set_property top t10_two_pass_system [get_filesets sources_1]
 set_property top t10_full023_tb [get_filesets sim_1]
 set_property xsim.elaborate.debug_level typical [get_filesets sim_1]
-set_property xsim.elaborate.mt_level 2 [get_filesets sim_1]
+set_property xsim.elaborate.mt_level 16 [get_filesets sim_1]
 set_property xsim.simulate.log_all_signals false [get_filesets sim_1]
 set_property xsim.simulate.runtime 0ns [get_filesets sim_1]
 add_files -fileset constrs_1 -norecurse [list [file join $root constraints t10_root_clocks.xdc]]
 update_compile_order -fileset sim_1
+source [file join $root tools vivado configure_parallel_jobs.tcl]
 puts "PROJECT_CREATED: $projectfile"
 puts "Canonical IP: ip/config. No output generation, synthesis, implementation or simulation started."

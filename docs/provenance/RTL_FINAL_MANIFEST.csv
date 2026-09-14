@@ -130,8 +130,8 @@ reports/t10/design/T10_FULL023_RUN001/package/check_prefix.py,tools/analysis/che
 ,rtl/vendor/xpm/README_ZH.md,,D067EEB78CE05A5FF32CFE3AA867738E8D98EB3072A4C9C2DD105B23116D71CB,new migration file; not native-validated
 ,ip/README_ZH.md,,8DE7AF854FC7592FB444DB24ADC81FCCD9805FD549BCC9F594DBDCD864EB521F,Reviewed standalone canonical-source project/document update; original copy snapshot preserved
 ,constraints/t10_root_clocks.xdc,,2E2C1FF7016504A9D2FEB9A9B28B6D5E055062F36609D0FE97B02B9F1F30C05F,new migration file; not native-validated
-,tools/vivado/create_project.tcl,,56EF56D884EFECEAC58AA70E4E70020E22EC1DB935DB568D3749BCF2BA41EDD7,Reviewed standalone canonical-source project/document update; original copy snapshot preserved
-,tools/vivado/start_simulation_0ns.tcl,,BD7DBB1F6BFE079D1C6CD5EA07EEEF262CABADD5EA271FC993B4BC1647B66F50,new migration file; not native-validated
+,tools/vivado/create_project.tcl,,9FFB4C51123C4CA619B1C2995EE76DEBF8EED2F953B5FCEB8FDB677FBD42230A,User-authorized 2026-09-14: apply 16 xelab sub-compilation jobs and load explicit 16-job run launcher; no RTL/algorithm change. Prior fingerprint retained in Git history.
+,tools/vivado/start_simulation_0ns.tcl,,23A758230E59E894C19D0FDC0555B2A8ECBE2E0670671F8C58EEF7FE5E683E68,User-authorized 2026-09-14: apply 16 xelab sub-compilation jobs and load explicit 16-job run launcher; no RTL/algorithm change. Prior fingerprint retained in Git history.
 ,tools/vivado/setup_waves.tcl,,9FF84B8CF9F16C22299035E3816A56D0E8764B74CF49666AC155E515C85D75D0,new migration file; not native-validated
 reports/t10/design/T10_FULL023/package/validate_full023.py,tools/analysis/validate_gui.py,3EC7AE028E452C16F30E1A8B88FD4B5ED4216F3BCB22CC5940393C0C972E0BC3,B832EBBD9A0BD2305A679F01D68965C9BD4D47F610F47DF87A524A9216C546C2,"Reviewed GUI path, exact source membership and full-core FIFO checks; see migration_diff.patch and offline test evidence"
 reports/t10/design/T10_FULL023/package/report_evm.py,tools/analysis/report_evm_gui.py,7D3D0F8B55BAD97430E8E51859CBB258B47C155C6735847EA6DAD566D92907F4,3D4EF26440B4A391662429E5EF9C80E5C4AD17CF281C2CEEE1FE0CD9361A2462,Path adaptation only; identical numeric gates and EVM definition; offline NumPy required
@@ -141,3 +141,4 @@ reports/t10/design/T10_FULL023/package/report_evm.py,tools/analysis/report_evm_g
 ,ip/expected_user_config.tcl,,96DE062EE2B381C3C432143F6B5BF16FB1667EF6B1C915F65A9D9BBF50C02F02,Reviewed new migration input; native project identity or full-core checker binding
 ,tools/analysis/evidence/expected_fifo_bindings.json,,E8863F5B61D2293FAEDC00C3BD017BF402A63DEF02266DB008352586CAC93142,Reviewed new migration input; native project identity or full-core checker binding
 ,vivado/T10_SFO/T10_SFO.xpr,,F55401D6F49B95911F2B602DE0AC568A53727F4DCE875FE77FAA8DC5710DA346,Reviewed new migration input; native project identity or full-core checker binding
+,tools/vivado/configure_parallel_jobs.tcl,,B1A97C3475DE5717C8EF2C1D221DA1836E16AF5A1E90A28CE5C58E6B2A9E68DE,User-authorized 2026-09-14: no-run configuration entry; launch_runs -jobs 16 and xelab mt_level 16.
