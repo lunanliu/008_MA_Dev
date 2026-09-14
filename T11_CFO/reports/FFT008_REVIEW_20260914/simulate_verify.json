@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-I",
+    "-B",
+    "-X",
+    "utf8",
+    "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_fft2048.py",
+    "--actual",
+    "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FFT008\\attempt_20260914T180706273761Z_luna\\fft2048_actual.txt",
+    "--sources",
+    "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FFT008\\attempt_20260914T180706273761Z_luna\\simulate_actual_sources.csv",
+    "--identity",
+    "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FFT008\\attempt_20260914T180706273761Z_luna\\simulate_project_identity.txt"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"status\": \"FFT2048_NUMERIC_PASS_LIMITED_SCOPE\", \"frozen_files\": 31, \"reference_identities\": 8, \"unique_cases\": 20, \"native_checked\": true, \"actual_project_members\": 11, \"project_identity\": \"PASS\", \"rows\": {\"B\": 318196, \"O\": 53274, \"F\": 26, \"D\": 6, \"E\": 7}, \"complete_transactions\": 26, \"discarded_transactions\": 6, \"protocol_errors\": 7, \"output_stall_cycles\": 210, \"max_tail_cycles\": 11344, \"max_total_cycles\": 17507, \"max_adjusted_service_cycles\": 15441, \"full_frame_tested\": false, \"clock500_timing_qualified\": false, \"pilot_multiply_sum_integrated\": false, \"formal_T11_T12_T13_PASS\": false}\n",
+  "stderr": ""
+}

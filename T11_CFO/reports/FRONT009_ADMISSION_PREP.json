@@ -1,0 +1,68 @@
+{
+  "utc": "2026-09-14T18:27:51.864786+00:00",
+  "native_started": false,
+  "resource": {
+    "available_physical_bytes": 17043963904,
+    "total_physical_bytes": 33737908224,
+    "available_physical_gib": 15.873428,
+    "memory_load_percent": 49
+  },
+  "processes": {
+    "all_native_processes": [
+      {
+        "pid": 28856,
+        "parent_pid": 34768,
+        "image_name": "xsimk.exe",
+        "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+        "private_usage_bytes": 1031741440,
+        "working_set_bytes": 491798528,
+        "pagefile_usage_bytes": 1031741440,
+        "cpu_time_100ns": 512889062500,
+        "creation_filetime_100ns": 134338327375072737
+      },
+      {
+        "pid": 34768,
+        "parent_pid": 40656,
+        "image_name": "vivado.exe",
+        "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+        "private_usage_bytes": 470593536,
+        "working_set_bytes": 171167744,
+        "pagefile_usage_bytes": 470593536,
+        "cpu_time_100ns": 273281250,
+        "creation_filetime_100ns": 134338317352384478
+      }
+    ],
+    "protected": [
+      {
+        "pid": 28856,
+        "parent_pid": 34768,
+        "image_name": "xsimk.exe",
+        "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+        "private_usage_bytes": 1031741440,
+        "working_set_bytes": 491798528,
+        "pagefile_usage_bytes": 1031741440,
+        "cpu_time_100ns": 512889062500,
+        "creation_filetime_100ns": 134338327375072737
+      },
+      {
+        "pid": 34768,
+        "parent_pid": 40656,
+        "image_name": "vivado.exe",
+        "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+        "private_usage_bytes": 470593536,
+        "working_set_bytes": 171167744,
+        "pagefile_usage_bytes": 470593536,
+        "cpu_time_100ns": 273281250,
+        "creation_filetime_100ns": 134338317352384478
+      }
+    ],
+    "protected_pids": [
+      28856,
+      34768
+    ],
+    "non_reserved_native_processes": []
+  },
+  "protected_identities_valid_and_second_vivado_slot_free": true,
+  "source_lock_sha256": "09A6A7F5AD994934B9CA30137139A7639A16638DB966AB3498AEDA9CF9765393",
+  "controller_sha256": "9F3430079FBE5DEE3436C87B6E5BB7221FD03778458B10271B79A06B8195ADC9"
+}

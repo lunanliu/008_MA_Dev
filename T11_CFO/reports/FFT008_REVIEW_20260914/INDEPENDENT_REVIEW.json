@@ -1,0 +1,59 @@
+{
+  "status": "PASS_FFT2048_PRIMITIVE_ONLY",
+  "utc": "2026-09-14T18:14:08.990184+00:00",
+  "artifacts_hashchecked": 51,
+  "completion_sha256": "7409759A6976BE266C3802724C5E51E4E1E009D61A2AD4EC2E29B6A82D83371A",
+  "manifest_sha256": "0FDB4B465653A16FE27FC60389EC3C0DF3DAF1AF0E6E0A66044B58557F80970A",
+  "independent_numeric_verification": {
+    "status": "FFT2048_NUMERIC_PASS_LIMITED_SCOPE",
+    "frozen_files": 31,
+    "reference_identities": 8,
+    "unique_cases": 20,
+    "native_checked": true,
+    "actual_project_members": 11,
+    "project_identity": "PASS",
+    "rows": {
+      "B": 318196,
+      "O": 53274,
+      "F": 26,
+      "D": 6,
+      "E": 7
+    },
+    "complete_transactions": 26,
+    "discarded_transactions": 6,
+    "protocol_errors": 7,
+    "output_stall_cycles": 210,
+    "max_tail_cycles": 11344,
+    "max_total_cycles": 17507,
+    "max_adjusted_service_cycles": 15441,
+    "full_frame_tested": false,
+    "clock500_timing_qualified": false,
+    "pilot_multiply_sum_integrated": false,
+    "formal_T11_T12_T13_PASS": false
+  },
+  "resources": {
+    "create": {
+      "elapsed_seconds": 13.2290081,
+      "peak_job_private_commit_bytes": 1198022656,
+      "minimum_available_physical_bytes": 16134541312,
+      "job_zero_confirmed": true
+    },
+    "simulate": {
+      "elapsed_seconds": 36.0789213,
+      "peak_job_private_commit_bytes": 1197891584,
+      "minimum_available_physical_bytes": 16194785280,
+      "job_zero_confirmed": true
+    }
+  },
+  "t10_executable_and_creation_identities_unchanged": true,
+  "controller_frozen_bytes_preserved": true,
+  "scopes_not_qualified": [
+    "clock500 physical timing",
+    "synthesis resources",
+    "pilot multiply/sum",
+    "74-window front end",
+    "CDC",
+    "full-frame",
+    "T11/T12/T13 formal PASS"
+  ]
+}

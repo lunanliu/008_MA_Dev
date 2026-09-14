@@ -1,0 +1,224 @@
+{
+  "schema": "front009_source_lock_v1",
+  "utc": "2026-09-14T18:27:17.807425+00:00",
+  "root": "D:\\008_MA_Dev\\T11_CFO",
+  "part": "xcvu11p-flgb2104-2-e",
+  "hardware_top": "cfo_front2048_window",
+  "simulation_top": "cfo_front2048_tb",
+  "project_members": [
+    {
+      "fileset": "sources_1",
+      "path": "rtl/cfo_front2048_window.sv"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "rtl/cfo_fft2048_core.sv"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "ip/fft2048_twiddle.mem"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "ip/front2048_coefficient_index.mem"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "ip/front2048_coefficient_table.mem"
+    },
+    {
+      "fileset": "constrs_1",
+      "path": "constraints/cfo_front2048.xdc"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/tb/cfo_front2048_tb.sv"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/front2048_config.svh"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/front2048_input.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/front2048_pilot.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/front2048_result.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/front2048_metadata.mem"
+    },
+    {
+      "fileset": "utils_1",
+      "path": "vivado/run_threads.tcl"
+    }
+  ],
+  "files": [
+    {
+      "path": "rtl/cfo_front2048_window.sv",
+      "bytes": 6043,
+      "sha256": "8472C3B80D6E188654C31B52CC5B1553C654102C6B83EFECF5A606EA45198165"
+    },
+    {
+      "path": "rtl/cfo_fft2048_core.sv",
+      "bytes": 9177,
+      "sha256": "67B402A1025E53A9691E94A1720968955186C2DACF4C00CE8409CC28532702DB"
+    },
+    {
+      "path": "ip/fft2048_twiddle.mem",
+      "bytes": 11264,
+      "sha256": "9A1C8A4363F3B0E7513B8A52CA70B6462A09A3BDFA2A232159D781C57816A276"
+    },
+    {
+      "path": "ip/front2048_coefficient_index.mem",
+      "bytes": 182040,
+      "sha256": "D058ACDAE6CDD2628304FCD73F5579E2C62833BF00D16D0291187B39201D78D4"
+    },
+    {
+      "path": "ip/front2048_coefficient_table.mem",
+      "bytes": 88,
+      "sha256": "CA93FF648C57459891ED7489D38C5F312A2D6969F6F4901130903D16F6403387"
+    },
+    {
+      "path": "constraints/cfo_front2048.xdc",
+      "bytes": 57,
+      "sha256": "91438FF6943D94AC324649DD0C5C15D1CE3C5C7233E175835B96B6D3CED0104C"
+    },
+    {
+      "path": "sim/tb/cfo_front2048_tb.sv",
+      "bytes": 8624,
+      "sha256": "54810039590ED9081C6D304F4192360FAD47CD7891E0FB526D633E482C066D95"
+    },
+    {
+      "path": "sim/vectors/front2048_config.svh",
+      "bytes": 38,
+      "sha256": "82CFEB7B0F7F32BF1C20C300B16CC0FFC34807FE779C4D0448A4CD4D8507AB1B"
+    },
+    {
+      "path": "sim/vectors/front2048_input.mem",
+      "bytes": 2764800,
+      "sha256": "BA715DEF45EF884423344A89825315F9D50C54B3946778AF6EE1607318618DAE"
+    },
+    {
+      "path": "sim/vectors/front2048_pilot.mem",
+      "bytes": 2804400,
+      "sha256": "F09D1C58CB77DBA1610A855B512EB55F8F279FEDFEC5DB206184F06C1460ACCE"
+    },
+    {
+      "path": "sim/vectors/front2048_result.mem",
+      "bytes": 4230,
+      "sha256": "22760D31B33BE113E2972C2342A3F051E840F7559ECDA924567A7CF1D8048A28"
+    },
+    {
+      "path": "sim/vectors/front2048_metadata.mem",
+      "bytes": 1800,
+      "sha256": "3EB5B3C12E896F5CC0E4A984FC7BE5E66A113384D6C0134FE4E6223E92CF806C"
+    },
+    {
+      "path": "vivado/run_threads.tcl",
+      "bytes": 471,
+      "sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E"
+    },
+    {
+      "path": "tools/front2048_reference.py",
+      "bytes": 4849,
+      "sha256": "2332EADC8B3851969B817D5BE5C624216203384D161FAEECC3927EC2DA9457FE"
+    },
+    {
+      "path": "tools/verify_front2048.py",
+      "bytes": 5638,
+      "sha256": "95A2651303FEC033B2362C80322BCEE72971EC3B1CF856FCE8AA23EFEF517A70"
+    },
+    {
+      "path": "tools/freeze_front009_sources.py",
+      "bytes": 2729,
+      "sha256": "4DB3F7EF16B140B91E56648FFD9AFC015A8ED7F0083F9739BAEAFDE03F17F829"
+    },
+    {
+      "path": "tools/fft2048_reference.py",
+      "bytes": 6430,
+      "sha256": "57613E521802AEBFB876AA0B3527C43D870CD98EEE2AFA2B85A4D2769072602D"
+    },
+    {
+      "path": "tools/cfo_native_guard_v3.py",
+      "bytes": 36155,
+      "sha256": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034"
+    },
+    {
+      "path": "tools/cfo_phase74_guard_v1.py",
+      "bytes": 24596,
+      "sha256": "B35F872630D2995B5EEB5257666188D3506C864FC4004294423078AE0CFE9583"
+    },
+    {
+      "path": "tools/cfo_phase74_fix01_guard_v1.py",
+      "bytes": 15173,
+      "sha256": "8C37F4D02B586CCAC61782FA8EB099A744CED42CB23614E2DB79815F94F117A3"
+    },
+    {
+      "path": "vivado/front2048_project.tcl",
+      "bytes": 3676,
+      "sha256": "305D959CD87A029CD9BE8CFC31EA692CE658120A8BD48D19FCC5985A08AFA2FB"
+    },
+    {
+      "path": "vivado/configure_parallel_jobs.tcl",
+      "bytes": 4994,
+      "sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3"
+    },
+    {
+      "path": "docs/FRONT2048_CONTRACT_V1_ZH.md",
+      "bytes": 3608,
+      "sha256": "958C251097B592B36E8F5B735D4FB4F5ED8CC4C5DD04380D521783DC7FE88955"
+    },
+    {
+      "path": "docs/FRONT2048_NATIVE_JOB_009.md",
+      "bytes": 4134,
+      "sha256": "5C10EAC9C911BE33AF46B211CDA0C3063699CE4E3F8214E0718D321013732506"
+    },
+    {
+      "path": "docs/CFO_MAIN_CONTRACT.json",
+      "bytes": 3621,
+      "sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E"
+    },
+    {
+      "path": "docs/FFT008_SOURCE_LOCK.json",
+      "bytes": 6820,
+      "sha256": "F8B73FF909CED64E87C0EBF6ACD8B7F659C3B4D16A3F4C44B80B08CA3E37333C"
+    },
+    {
+      "path": "sim/vectors/front2048_cases.json",
+      "bytes": 6747493,
+      "sha256": "D6375503A8D59D5D500DE51BB4E2F7C849FB71CFEF78892E871A5F927AFC5665"
+    },
+    {
+      "path": "matlab/bittrue/cfo_chain_arithmetic.m",
+      "bytes": 9686,
+      "sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80"
+    },
+    {
+      "path": "reports/FRONT2048_VECTOR_CHECK.json",
+      "bytes": 2122,
+      "sha256": "7C81990DAD27ECA3E39617FB0BE719DFFE2B789256172FE712AB4750A096810B"
+    },
+    {
+      "path": "reports/FFT008_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+      "bytes": 1841,
+      "sha256": "58B8D6ED07D8514902486ACE3EF098630C4CB27D776C67C1C43CFA3720C94EA1"
+    },
+    {
+      "path": "reports/FFT008_REVIEW_20260914/README_ZH.md",
+      "bytes": 952,
+      "sha256": "E71304B99479364DFDBDDD9A282AAE6E48ED10877862FD0B3EEA2AE9C21F6EB2"
+    }
+  ],
+  "native_stages": [
+    "create",
+    "simulate"
+  ],
+  "scope": "Integrated window FFT2048, exact coefficient lookup, pilot multiply and z sum; 74-row coverage. No whole-frame waveform, CDC, backend integration, synthesis or clock500 physical qualification."
+}

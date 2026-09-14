@@ -1,0 +1,12 @@
+fileset,path
+sources_1,D:/008_MA_Dev/T11_CFO/ip/fft2048_twiddle.mem
+sources_1,D:/008_MA_Dev/T11_CFO/rtl/cfo_fft2048_core.sv
+constrs_1,D:/008_MA_Dev/T11_CFO/constraints/cfo_fft2048.xdc
+sim_1,D:/008_MA_Dev/T11_CFO/sim/tb/cfo_fft2048_tb.sv
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/fft2048_butterfly.mem
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/fft2048_config.svh
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/fft2048_input.mem
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/fft2048_output.mem
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/fft2048_saturation.mem
+sim_1,D:/008_MA_Dev/T11_CFO/sim/vectors/fft2048_window.mem
+utils_1,D:/008_MA_Dev/T11_CFO/vivado/run_threads.tcl
