@@ -26,7 +26,7 @@ CLIP XML与LabVIEW CLIP配置由用户亲自在LabVIEW创建。Agent立即停止
 | 2048点FFT | [CFO_FFT2048.xpr](D:/008_MA_Dev/T11_CFO/vivado/CFO_FFT2048/CFO_FFT2048.xpr) | cfo_fft2048_core | reports/FFT008_REVIEW_20260914 |
 | 2048点窗口/导频前端 | [CFO_FRONT2048.xpr](D:/008_MA_Dev/T11_CFO/vivado/CFO_FRONT2048/CFO_FRONT2048.xpr) | cfo_front2048_window | reports/FRONT009_REVIEW_20260914 |
 
-LINK010已派原Luna执行创建及行为仿真，工程位置为vivado/CFO_LINK010/CFO_LINK010.xpr，冻结核心top=cfo_estimator_link，simtop=cfo_estimator_link_tb。当前交付表不将它列为已验收版本；收到实际结果并独立复核后再更新。不得为迎合交付目录重建、修改或复制正在使用的工程来替代冻结实验。
+LINK010已派原Luna执行创建及行为仿真，工程位置为vivado/CFO_LINK010/CFO_LINK010.xpr，冻结核心top=cfo_estimator_link，simtop=cfo_estimator_link_tb。实际结果已独立复核：数值/协议通过，但FIFO复位契约与XPM诊断尚未闭合，当前交付表不将它列为已验收版本。不得为迎合交付目录重建、修改或复制正在使用的工程来替代冻结实验。
 
 最终完整CFO核心top及匹配VHDL Wrapper尚未交付。上述分阶段XPR不能冒充最终整链；最终入口须绑定完成整链验证的真实核心版本，并保留相应约束、IP、TB和功能证据。
 

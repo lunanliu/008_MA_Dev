@@ -1,0 +1,178 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Sep 15 01:07:05 2026
+# Process ID: 39680
+# Current directory: D:/008_MA_Dev/T11_CFO
+# Command line: vivado.exe -mode batch -source D:\008_MA_Dev\T11_CFO\vivado\link010_project.tcl -log D:\008_MA_Dev\T11_CFO\work\CFO_LINK010\attempt_20260914T230702970885Z_luna\create.log -journal D:\008_MA_Dev\T11_CFO\work\CFO_LINK010\attempt_20260914T230702970885Z_luna\create.jou -tclargs create D:\008_MA_Dev\T11_CFO\work\CFO_LINK010\attempt_20260914T230702970885Z_luna
+# Log file: D:/008_MA_Dev/T11_CFO/work/CFO_LINK010/attempt_20260914T230702970885Z_luna/create.log
+# Journal file: D:\008_MA_Dev\T11_CFO\work\CFO_LINK010\attempt_20260914T230702970885Z_luna\create.jou
+#-----------------------------------------------------------
+source {D:\008_MA_Dev\T11_CFO\vivado\link010_project.tcl}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# if {$argc != 2} {error "Usage: -tclargs create|simulate <attempt-directory>"}
+# set action [lindex $argv 0]
+# set evidence [file normalize [lindex $argv 1]]
+# if {![file isdirectory $evidence]} {error "Evidence directory must already exist"}
+# if {$action ni {create simulate}} {error "Unknown action"}
+# set project_dir [file join $root vivado CFO_LINK010]
+# set xpr [file join $project_dir CFO_LINK010.xpr]
+# if {$action eq "create"} {
+#  if {[file exists $xpr]} {error "Preserve existing CFO_LINK010; review before recreation"}
+#  create_project CFO_LINK010 $project_dir -part xcvu11p-flgb2104-2-e
+#  set_property target_language Verilog [current_project]
+#  set_property simulator_language Mixed [current_project]
+#  set_property target_simulator XSim [current_project]
+#  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+#  set rtl_files [list cfo_estimator_link.sv cfo_estimate74_backend.sv cfo_fft74_quality_v2.sv cfo_divide_rne64wide.sv cfo_fft256_core.sv cfo_phase74_core_v2.sv cfo_divide_rne64.sv]
+#  foreach name $rtl_files {add_files -norecurse [file join $root rtl $name]}
+#  add_files -norecurse [list [file join $root ip fft256_twiddle.mem] [file join $root ip phase74_atan_q31.mem]]
+#  set_property top cfo_estimator_link [get_filesets sources_1]
+#  add_files -fileset constrs_1 -norecurse [file join $root constraints cfo_link010.xdc]
+#  set simfiles [list [file join $root sim tb cfo_estimator_link_tb.sv] [file join $root sim vectors link010_config.svh]]
+#  foreach suffix {input read result error_input error_read error_result} {lappend simfiles [file join $root sim vectors link010_${suffix}.mem]}
+#  add_files -fileset sim_1 -norecurse $simfiles
+#  add_files -fileset utils_1 -norecurse [file join $root vivado run_threads.tcl]
+#  set_property top cfo_estimator_link_tb [get_filesets sim_1]
+#  set_property include_dirs [list [file join $root sim vectors]] [get_filesets sim_1]
+# } else {open_project $xpr}
+# if {[get_property PART [current_project]] ne "xcvu11p-flgb2104-2-e"} {error "Wrong part"}
+# if {[get_property TOP [get_filesets sources_1]] ne "cfo_estimator_link" || [get_property TOP [get_filesets sim_1]] ne "cfo_estimator_link_tb"} {error "Wrong tops"}
+# source [file join $root vivado configure_parallel_jobs.tcl]
+## if {[llength [get_projects -quiet]] != 1} {
+##     error "Open the intended CFO project before applying its parallel-job policy."
+## }
+## if {[get_property PART [current_project]] ne "xcvu11p-flgb2104-2-e"} {
+##     error "Expected the CFO FLGB project."
+## }
+## namespace eval ::cfo_performance {}
+## if {![info exists ::cfo_performance::elab_jobs]} {set ::cfo_performance::elab_jobs 16}
+## proc cfo_set_elaboration_jobs {jobs} {
+##     if {![string is integer -strict $jobs] || $jobs < 1 || $jobs > 16} {
+##         error "Admitted elaboration jobs must be an integer from 1 to 16."
+##     }
+##     set_property xsim.elaborate.mt_level $jobs [get_filesets sim_1]
+##     if {[get_property xsim.elaborate.mt_level [get_filesets sim_1]] != $jobs} {
+##         error "Elaboration jobs readback mismatch"
+##     }
+##     set ::cfo_performance::elab_jobs $jobs
+##     puts "CFO_XELAB_JOBS actual=$jobs ceiling=16"
+## }
+## cfo_set_elaboration_jobs $::cfo_performance::elab_jobs
+CFO_XELAB_JOBS actual=16 ceiling=16
+## set ::cfo_performance::hook [file normalize [file join [file dirname [info script]] run_threads.tcl]]
+## source $::cfo_performance::hook
+### set_param general.maxThreads 8
+### set_param synth.maxThreads 8
+### if {[get_param general.maxThreads] != 8 || [get_param synth.maxThreads] != 8} {
+###     error "Vivado did not accept the requested thread limits."
+### }
+### puts "CFO_THREAD_LIMITS pid=[pid] cwd=[pwd] general=[get_param general.maxThreads] synth=[get_param synth.maxThreads]"
+CFO_THREAD_LIMITS pid=39680 cwd=D:/008_MA_Dev/T11_CFO general=8 synth=8
+## proc cfo_install_thread_hooks {} {
+##     set hook $::cfo_performance::hook
+##     set assignments {}
+##     foreach run [get_runs -quiet] {
+##         foreach property [list_property $run] {
+##             if {![regexp {^STEPS\..+\.TCL\.PRE$} $property]} {continue}
+##             set previous [get_property $property $run]
+##             if {$previous ne "" && [file normalize $previous] ne $hook} {
+##                 # A matching basename is not proof of ownership. Only relocate
+##                 # an existing byte-identical hook; otherwise preserve and stop.
+##                 set same_content 0
+##                 if {[file isfile $previous]} {
+##                     set old_handle [open $previous rb]
+##                     set old_content [read $old_handle]
+##                     close $old_handle
+##                     set new_handle [open $hook rb]
+##                     set new_content [read $new_handle]
+##                     close $new_handle
+##                     set same_content [expr {$old_content eq $new_content}]
+##                 }
+##                 if {!$same_content} {
+##                     error "Existing user hook preserved: $run $property = $previous. Review chaining before launch."
+##                 }
+##             }
+##             lappend assignments [list $run $property]
+##         }
+##     }
+##     # Preflight all slots before writing any; never overwrite an unrelated user hook.
+##     foreach assignment $assignments {
+##         lassign $assignment run property
+##         set_property $property $hook $run
+##         if {[file normalize [get_property $property $run]] ne $hook} {
+##             error "Run hook readback mismatch: $run $property"
+##         }
+##     }
+##     puts "CFO_RUN_HOOKS installed=[llength $assignments] hook=$hook"
+## }
+## proc cfo_prepare_build {} {
+##     # Define missing OOC runs only for IPs already configured to produce a checkpoint.
+##     # Do not turn OOC on, force regeneration, or launch computation here.
+##     foreach ip [get_ips -quiet] {
+##         set name [get_property NAME $ip]
+##         if {[llength [get_runs -quiet ${name}_synth_1]]} {continue}
+##         set xci [get_files -quiet -all [get_property IP_FILE $ip]]
+##         if {[llength $xci] != 1} {error "Cannot resolve canonical XCI for $name"}
+##         if {[get_property GENERATE_SYNTH_CHECKPOINT $xci]} {create_ip_run $ip}
+##     }
+##     source $::cfo_performance::hook
+##     cfo_install_thread_hooks
+## }
+## proc cfo_launch_runs {run_names args} {
+##     if {[llength $run_names] == 0} {error "Specify the intended run names."}
+##     set jobs 16
+##     foreach argument $args {
+##         if {$argument in {-j -jo -job} || [string match -jobs=* $argument]} {
+##             error "Use the full -jobs option followed by its integer value."
+##         }
+##     }
+##     set index [lsearch -exact $args -jobs]
+##     if {$index >= 0} {
+##         set jobs [lindex $args [expr {$index + 1}]]
+##         set args [lreplace $args $index [expr {$index + 1}]]
+##         if {[lsearch -exact $args -jobs] >= 0} {error "Duplicate -jobs option"}
+##     }
+##     if {![string is integer -strict $jobs] || $jobs < 1 || $jobs > 16} {
+##         error "Admitted jobs must be an integer from 1 to 16."
+##     }
+##     cfo_prepare_build
+##     puts "CFO build launch: actual_jobs=$jobs ceiling=16; runs=$run_names; resource decision belongs in run admission."
+##     launch_runs {*}$run_names -jobs $jobs {*}$args
+## }
+## cfo_install_thread_hooks
+CFO_RUN_HOOKS installed=10 hook=D:/008_MA_Dev/T11_CFO/vivado/run_threads.tcl
+## puts "CFO performance policy applied: requested general/synth limits=8; xelab jobs=$::cfo_performance::elab_jobs; build jobs ceiling=16. No run started."
+CFO performance policy applied: requested general/synth limits=8; xelab jobs=16; build jobs ceiling=16. No run started.
+# update_compile_order -fileset sources_1
+# update_compile_order -fileset sim_1
+# set h [open [file join $evidence ${action}_actual_sources.csv] w]
+# puts $h "fileset,path"
+# foreach fs {sources_1 constrs_1 sim_1 utils_1} {
+#  foreach f [lsort [get_files -of_objects [get_filesets $fs]]] {puts $h "$fs,[file normalize $f]"}
+# }
+# close $h
+# set h [open [file join $evidence ${action}_project_identity.txt] w]
+# foreach {name value} [list part [get_property PART [current_project]] hardware_top [get_property TOP [get_filesets sources_1]] simulation_top [get_property TOP [get_filesets sim_1]] project $xpr vivado [version -short] xelab_jobs [get_property xsim.elaborate.mt_level [get_filesets sim_1]] xpm_libraries [lsort [get_property XPM_LIBRARIES [current_project]]]] {puts $h "$name=$value"}
+# close $h
+# puts "CFO_LINK010_READY action=$action pid=[pid]"
+CFO_LINK010_READY action=create pid=39680
+# flush stdout
+# if {$action eq "simulate"} {
+#  set simdir [file join $project_dir CFO_LINK010.sim sim_1 behav xsim]
+#  file mkdir $simdir
+#  file copy -force [file join $root ip fft256_twiddle.mem] $simdir
+#  file copy -force [file join $root ip phase74_atan_q31.mem] $simdir
+#  foreach suffix {input read result error_input error_read error_result} {file copy -force [file join $root sim vectors link010_${suffix}.mem] $simdir}
+#  set_property xsim.simulate.runtime 0ns [get_filesets sim_1]
+#  launch_simulation
+#  run all
+#  close_sim
+#  file copy [file join $simdir link010_actual.txt] [file join $evidence link010_actual.txt]
+# }
+# close_project
+# puts "CFO_LINK010_NATIVE_DONE action=$action"
+CFO_LINK010_NATIVE_DONE action=create
+# exit 0
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 01:07:15 2026...

@@ -1,0 +1,79 @@
+Time resolution is 1 ps
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse 
+
+will be reported.
+Time: 1 ps  Iteration: 0  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1545_125  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1551
+
+Time: 1 ns Started: 1 ns Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1587
+Error: [SLEEP_CHECK S-6] 'sleep' is deasserted at 1000, but wr_en must be low for 0 wr_clk cycles after 1000
+Time: 1 ns  Iteration: 2  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1590
+
+Time: 3750 ps Started: 3750 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1592
+Error: [SLEEP_CHECK S-7] 'sleep' is deasserted at 3750, but rd_en must be low for 0 rd_clk cycles after 3750
+Time: 3750 ps  Iteration: 4  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1595
+
+Time: 130404 ps Started: 123738 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 130404.
+Time: 130404 ps  Iteration: 1  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 277056 ps Started: 270390 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 277056.
+Time: 277056 ps  Iteration: 1  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2466317094 ps Started: 2466310428 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2466317094.
+Time: 2466317094 ps  Iteration: 1  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2525664492 ps Started: 2525657826 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2525664492.
+Time: 2525664492 ps  Iteration: 1  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2585958462 ps Started: 2585951796 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2585958462.
+Time: 2585958462 ps  Iteration: 2  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2586051786 ps Started: 2586045120 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2586051786.
+Time: 2586051786 ps  Iteration: 2  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2636193438 ps Started: 2636186772 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2636193438.
+Time: 2636193438 ps  Iteration: 2  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2636286762 ps Started: 2636280096 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2636286762.
+Time: 2636286762 ps  Iteration: 1  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2744889234 ps Started: 2744882568 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2744889234.
+Time: 2744889234 ps  Iteration: 2  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2744982558 ps Started: 2744975892 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2744982558.
+Time: 2744982558 ps  Iteration: 1  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2853571698 ps Started: 2853565032 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2853571698.
+Time: 2853571698 ps  Iteration: 2  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2853665022 ps Started: 2853658356 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2853665022.
+Time: 2853665022 ps  Iteration: 1  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2969840070 ps Started: 2969833404 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2969840070.
+Time: 2969840070 ps  Iteration: 2  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 2969933394 ps Started: 2969926728 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 2969933394.
+Time: 2969933394 ps  Iteration: 1  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 3075962790 ps Started: 3075956124 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 3075962790.
+Time: 3075962790 ps  Iteration: 2  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+
+Time: 3076056114 ps Started: 3076049448 ps Scope: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line:1579
+Error: [EMPTY_CHECK S-4] Reset is applied, but empty flag is not 1 or transitioning to 1 at 3076056114.
+Time: 3076056114 ps  Iteration: 2  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst//cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv Line: 1582
+CFO_LINK010_PASS unique=4 completed=22 protocol_errors=10 max_tail=6792 max_total=1150366 source_stalls=99481 full_runs=21 reset_discards=4 abort_discards=4
+$finish called at time : 3702378 ns : File "D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_tb.sv" Line 174

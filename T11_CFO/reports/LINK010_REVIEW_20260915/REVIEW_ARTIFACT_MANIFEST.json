@@ -1,0 +1,93 @@
+{
+  "schema": "link010_review_archive_v1",
+  "utc": "2026-09-14T23:32:07.894668+00:00",
+  "files": [
+    {
+      "path": "CFO_LINK010_after_create.xpr",
+      "bytes": 16840,
+      "sha256": "3B8E4BB9224A565E814FBE7DDABA7535E5FBD3C8EA8B490EC3F87DCFEB479EF1"
+    },
+    {
+      "path": "CFO_LINK010_after_simulate.xpr",
+      "bytes": 16770,
+      "sha256": "81FCAE67AC40425C9123053D6F0F90397D54296062310C8888DAA62D64F5CEF5"
+    },
+    {
+      "path": "create_native.log",
+      "bytes": 10484,
+      "sha256": "7515A4B5388D04B9EDEBDEDF4DDB0B7FAB40C27DF3AA7E799AE3E7A6DC2AAC33"
+    },
+    {
+      "path": "create_result.json",
+      "bytes": 29686,
+      "sha256": "77030632F68446A66058AAD5982D1C079732185B8D7E482575EA7D14878E3CF0"
+    },
+    {
+      "path": "INDEPENDENT_REVIEW.json",
+      "bytes": 20894,
+      "sha256": "B2D0BBCDA77AED131BC4ACA41E305CC544B5A02BC21D31647FAB54B71AD010DB"
+    },
+    {
+      "path": "installed_xpm.rlx",
+      "bytes": 939,
+      "sha256": "A55BBA254A230408FC544ECCD4EBA88E4DA2097A05A6844D77F9A2897AB2DE44"
+    },
+    {
+      "path": "link010_actual.txt",
+      "bytes": 236410,
+      "sha256": "6A4F53030432D788FD8C22E01DBEA7B3F89A90F03D0E9D0C79A06201901915C1"
+    },
+    {
+      "path": "native_compile.log",
+      "bytes": 1680,
+      "sha256": "2A720BDC7A098C336FCF4D533D0D81119C4D3B26B054AA05AF0E21DCA318FC21"
+    },
+    {
+      "path": "native_elaborate.log",
+      "bytes": 2011,
+      "sha256": "FFFAAAD383D0FE99A21A050DC41D4313FD4FE402AD2BE485F327798183107F04"
+    },
+    {
+      "path": "native_simulate.log",
+      "bytes": 13222,
+      "sha256": "2F09AF234DBA7B1FE83680D1226C8645005C13D0A2622049EF05313BCD5C5D75"
+    },
+    {
+      "path": "ORIGINAL_ATTEMPT_ARTIFACT_MANIFEST.json",
+      "bytes": 14182,
+      "sha256": "91FB795968AE9AC9575055A1F041B98F0F053D9DEB1FB118E3BA979BD38CDE16"
+    },
+    {
+      "path": "ORIGINAL_ATTEMPT_COMPLETION.json",
+      "bytes": 40980,
+      "sha256": "A2BE7078087733E511FE981B60EADAD2188A7EBFEF1AB98879AD4F89DA9231C6"
+    },
+    {
+      "path": "POST_NATIVE_EXTERNAL_INTEGRITY.json",
+      "bytes": 17004,
+      "sha256": "F85C685EE50B4D6978E484A87AD66B7AC18A4428518681E9D7523986EDE83741"
+    },
+    {
+      "path": "README_ZH.md",
+      "bytes": 3372,
+      "sha256": "2E204CB394282348B20598A906CB6D0145FA125445344BE159410CDCB9E8F452"
+    },
+    {
+      "path": "simulate_result.json",
+      "bytes": 34074,
+      "sha256": "0E8CB150E482983C376B9780D233E08EBE1032844E6444FA4F319F388615A45D"
+    },
+    {
+      "path": "XPM_ASSERTION_STATIC_REVIEW.json",
+      "bytes": 16604,
+      "sha256": "D32163804E4E31BEDCF74FA1432AB064C48E66EAA2DAFE1B0307F5CEA4AEB69B"
+    },
+    {
+      "path": "xsim.ini",
+      "bytes": 28369,
+      "sha256": "A102AA98FD38558D175A6E6314796C64E8BBD4659347D2760AB7E6E2AF68F225"
+    }
+  ],
+  "status": "NUMERIC_PROTOCOL_PASS_RESET_CONTRACT_BLOCKED",
+  "no_new_native": true
+}

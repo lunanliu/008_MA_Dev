@@ -1,0 +1,471 @@
+{
+  "schema": "link010_independent_review_v1",
+  "utc": "2026-09-14T23:29:38.113843+00:00",
+  "status": "NUMERIC_PROTOCOL_PASS_RESET_CONTRACT_BLOCKED",
+  "original_gate_status": "BLOCKED_AFTER_SIMULATE",
+  "full_stage_pass": false,
+  "formal_T11_T12_T13_PASS": false,
+  "create_manifest_audit": {
+    "artifacts": 16,
+    "mismatches": [
+      {
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010\\CFO_LINK010.xpr",
+        "expected": "3B8E4BB9224A565E814FBE7DDABA7535E5FBD3C8EA8B490EC3F87DCFEB479EF1",
+        "actual": "81FCAE67AC40425C9123053D6F0F90397D54296062310C8888DAA62D64F5CEF5"
+      }
+    ],
+    "completion_sha256": "CD076C5A2FDC82E8AF72E48D589E1FC2D1E5E280F2D008450444BFE021069BB5",
+    "manifest_sha256": "0E0909073D7C4023510C83548B77BB3FC371F7BE5E90D5A6C24D5EF6CE160FFF",
+    "mutable_project_reference_resolved_by_saved_create_snapshot": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T230702970885Z_luna\\CFO_LINK010_create.xpr",
+      "sha256": "3B8E4BB9224A565E814FBE7DDABA7535E5FBD3C8EA8B490EC3F87DCFEB479EF1",
+      "explanation": "Original manifest references a live XPR later saved by the authorized simulate stage. The archived create snapshot retains the exact original hash; original manifest is not rewritten."
+    }
+  },
+  "simulate_manifest_audit": {
+    "artifacts": 52,
+    "mismatches": [],
+    "completion_sha256": "A2BE7078087733E511FE981B60EADAD2188A7EBFEF1AB98879AD4F89DA9231C6",
+    "manifest_sha256": "91FB795968AE9AC9575055A1F041B98F0F053D9DEB1FB118E3BA979BD38CDE16"
+  },
+  "create": {
+    "seconds": 12.4242274,
+    "ready_pid": 39680,
+    "ready_pid_present_in_saved_samples": 11,
+    "post_ready_stable_observations": 0,
+    "peak_job_private_commit_bytes": 1204445184,
+    "max_sampled_job_private_bytes": 1180397568,
+    "min_available_physical_bytes": 15586631680,
+    "native_exit": 0,
+    "terminated_by_controller": false,
+    "job_pid_empty_and_accounting_zero": true,
+    "verify": {
+      "status": "LINK010_SOURCE_VECTOR_PASS",
+      "frozen_files": 39,
+      "vendor_dependencies": 3,
+      "cases": 4,
+      "real_front009_windows": 74,
+      "protocol_error_vectors": 10,
+      "native_checked": false,
+      "no_fft_or_estimator_recomputation": true,
+      "actual_project_members": 19,
+      "project_identity": "PASS"
+    }
+  },
+  "simulate": {
+    "seconds": 44.77844,
+    "ready_pid": 33192,
+    "ready_pid_present_in_saved_samples": 41,
+    "post_ready_stable_observations": 237,
+    "peak_job_private_commit_bytes": 1198522368,
+    "max_sampled_job_private_bytes": 1176883200,
+    "min_available_physical_bytes": 15525609472,
+    "native_exit": 0,
+    "terminated_by_controller": false,
+    "job_pid_empty_and_accounting_zero": true,
+    "verify": {
+      "status": "LINK010_NUMERIC_PASS_LIMITED_SCOPE",
+      "frozen_files": 39,
+      "vendor_dependencies": 3,
+      "cases": 4,
+      "real_front009_windows": 74,
+      "protocol_error_vectors": 10,
+      "native_checked": true,
+      "no_fft_or_estimator_recomputation": true,
+      "actual_project_members": 19,
+      "project_identity": "PASS",
+      "rows": {
+        "W": 2056,
+        "R": 2022,
+        "F": 22,
+        "E": 10,
+        "D": 8,
+        "H": 32
+      },
+      "max_tail_slow_cycles": 6792,
+      "max_total_fast_cycles": 1150366,
+      "source_backpressure_cycles": 99481,
+      "burst_full_runs": 21,
+      "complete_frames": 22,
+      "discarded_frames": 8,
+      "protocol_errors": 10,
+      "modes": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "whole_frame_waveform_tested": false,
+      "physical_cdc_qualified": false,
+      "synthesis_or_timing_qualified": false,
+      "formal_T11_T12_T13_PASS": false
+    }
+  },
+  "independent_saved_trace_verify": {
+    "status": "LINK010_NUMERIC_PASS_LIMITED_SCOPE",
+    "frozen_files": 39,
+    "vendor_dependencies": 3,
+    "cases": 4,
+    "real_front009_windows": 74,
+    "protocol_error_vectors": 10,
+    "native_checked": true,
+    "no_fft_or_estimator_recomputation": true,
+    "actual_project_members": 19,
+    "project_identity": "PASS",
+    "rows": {
+      "W": 2056,
+      "R": 2022,
+      "F": 22,
+      "E": 10,
+      "D": 8,
+      "H": 32
+    },
+    "max_tail_slow_cycles": 6792,
+    "max_total_fast_cycles": 1150366,
+    "source_backpressure_cycles": 99481,
+    "burst_full_runs": 21,
+    "complete_frames": 22,
+    "discarded_frames": 8,
+    "protocol_errors": 10,
+    "modes": [
+      1,
+      2,
+      0,
+      3
+    ],
+    "whole_frame_waveform_tested": false,
+    "physical_cdc_qualified": false,
+    "synthesis_or_timing_qualified": false,
+    "formal_T11_T12_T13_PASS": false
+  },
+  "source_and_vendor_hashes_unchanged": 42,
+  "old_project_bytes_unchanged": true,
+  "external_identity_and_no_visible_own_residue_check": true,
+  "private_job_zero_confirmed_separately": true,
+  "repair_wrapper_sha256": "DE4B0EC3D67E21C97D19F6A09FF490DB0C16B9F63FE7A9B6BADFE1D09187B867",
+  "wrapper_repair_assessment": "Reused successful native create checkpoint without recreating project. Pre-ready native process identity was recorded in11 samples; late ready marker explains zero post-ready stable samples. Original telemetry failure is retained, not rewritten as a clean original gate PASS. Numeric/source/project checks were not changed.",
+  "xpm_vendor_source_copies": [
+    {
+      "name": "xpm_cdc",
+      "official_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\hdl\\xpm_cdc.sv",
+      "embedded_source_path": "D:\\007 Dev\\OTA_RTL_0829\\.t10work\\m02_25832_dcdbe574\\xpm_cdc.sv",
+      "sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7",
+      "on_disk_source_copies_exact": true
+    },
+    {
+      "name": "xpm_fifo",
+      "official_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\hdl\\xpm_fifo.sv",
+      "embedded_source_path": "D:\\007 Dev\\OTA_RTL_0829\\.t10work\\m02_25832_dcdbe574\\xpm_fifo.sv",
+      "sha256": "D3C1E861CDDF00EBC82552C464A46FB5228E68B4D458001D064B99E04134B9D4",
+      "on_disk_source_copies_exact": true
+    },
+    {
+      "name": "xpm_memory",
+      "official_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_memory\\hdl\\xpm_memory.sv",
+      "embedded_source_path": "D:\\007 Dev\\OTA_RTL_0829\\.t10work\\m02_25832_dcdbe574\\xpm_memory.sv",
+      "sha256": "E72758E6794B1F7AD00428FEEEACC4F90A38B0500583B2CA93CA2EBA12BA01BD",
+      "on_disk_source_copies_exact": true
+    }
+  ],
+  "observed_runtime_library_fingerprints": [
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\asym_bwe_bb.sdb",
+      "sha256": "8EC6F00F880E78D622EB19EAD1D00311AED266844BCB157C13A2A9DDC29D5B8A",
+      "bytes": 4317
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\vcomponents.vdb",
+      "sha256": "A342F77AAD9630A94FA4F04008A96CD065AD76B4EC02D6F2B86F1572BF75BB45",
+      "bytes": 139900
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm.rlx",
+      "sha256": "A55BBA254A230408FC544ECCD4EBA88E4DA2097A05A6844D77F9A2897AB2DE44",
+      "bytes": 939
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_cdc_array_single.sdb",
+      "sha256": "E9002D58B6D388BBACBB752B82EBBE754CF079B169D1C423CE6FEE9926AC4DCB",
+      "bytes": 8726
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_cdc_async_rst.sdb",
+      "sha256": "24754E28F0D320EA2E872F06DC29CC13A0EF82B85DA2F4B6A8036E221E89AEE7",
+      "bytes": 5487
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_cdc_gray.sdb",
+      "sha256": "ECB98D8FFD2ACE0C945EB77C944E68A577B725C6D6807CF257E46345245C16FB",
+      "bytes": 12242
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_cdc_handshake.sdb",
+      "sha256": "A1C2EFCC7C17DD53C61779A988F82E334C55595AE752123EA21D8DDBD43D4EEB",
+      "bytes": 15347
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_cdc_low_latency_handshake.sdb",
+      "sha256": "A56F4B3C8AFE30EB72AB9EC7523F9482905CF02AA27547B67282EF457955CBEA",
+      "bytes": 13633
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_cdc_pulse.sdb",
+      "sha256": "30FE5DBED93CD73253C7840D03BAEF8E50951FDAD0955A39A9DF3266D1FCB5EE",
+      "bytes": 11264
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_cdc_single.sdb",
+      "sha256": "BE274BA4A9112C11335BB652531C28A981B0051B04D58B064551793C6E14690E",
+      "bytes": 7310
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_cdc_sync_rst.sdb",
+      "sha256": "F68C639FB07A529E968279B77BFF321F54C219C3255D81B2AC02FDCBB0541B20",
+      "bytes": 6245
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_counter_updn.sdb",
+      "sha256": "67B903928E0CF77C1258599024485080787B6E5B48F703DC8E54285C06F30E9F",
+      "bytes": 1600
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_async.sdb",
+      "sha256": "2635DBA39FB0EB932A65FCEEEB2E8FE3D524C3FB955EA5072EE82A9FA57022F4",
+      "bytes": 13390
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_axi_reg_slice.sdb",
+      "sha256": "F3B1AF731A1B187D0B2E4206AD3B78A7F2DD3550D1A252E15169A137E98C752E",
+      "bytes": 8858
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_axif.sdb",
+      "sha256": "C53FAFD5B79D136B880C6BC1296F6959EF02117FDA8CAA8D3E64F03E1AEC25ED",
+      "bytes": 87830
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_axil.sdb",
+      "sha256": "52E4C809C29776EDE889BD3FF2698DF1F3CCAF606BC15B1E74BEC9DD097540BE",
+      "bytes": 55363
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_axis.sdb",
+      "sha256": "6B6C8B4483B972B267E151845E615BBA42D0BB7E33B6AFDED165E79251B7CF6B",
+      "bytes": 35526
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_base.sdb",
+      "sha256": "5174D02E332081C017980D2389E23594D3074C4371A8887B23066B7E9B9A8D88",
+      "bytes": 106080
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_ex.sdb",
+      "sha256": "64288A244260E67A8180707C4337DA4EC1DDE30BAADE6212515068B2C12DCAAC",
+      "bytes": 15849
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_gen_dgen.sdb",
+      "sha256": "8C45C20EBB06D5B7242954FFA9381ACE18A250BC73451D066E21C114F83F35ED",
+      "bytes": 5955
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_gen_dverif.sdb",
+      "sha256": "F36A73A53341C268E4AD07742A8C7D9F0B89F8545E1167E2222481E72CEFCB43",
+      "bytes": 13602
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_gen_pctrl.sdb",
+      "sha256": "ED94F3849771E45E109CEDFDA64EE2FE2ED27E1D8E884AFA9F0F75B2168D569A",
+      "bytes": 26775
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_gen_rng.sdb",
+      "sha256": "2E589E46821EC3BC6C427CF0E15C7573879362BFE103C5DDB3E17CA87FBFD40E",
+      "bytes": 2426
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_reg_bit.sdb",
+      "sha256": "98A329D2E2F9B4B33A3857A1BCCC42FF686344A94D33077DDD8151EBF244094A",
+      "bytes": 949
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_reg_vec.sdb",
+      "sha256": "09AEEDE074DAA6D039FB6ECD2C4ECD9705224DA8DF5C38E6744528D444B547E6",
+      "bytes": 1321
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_rst.sdb",
+      "sha256": "DF4C05FCD3C5DD0885B64527BDD42012B27AFC7930B1F478B62D0589AD0B7F6F",
+      "bytes": 11342
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_sync.sdb",
+      "sha256": "227D2BA0F70105FBDFAC616498ECC742FFB2CDE4F479487EB2C4CAA598EA5135",
+      "bytes": 12938
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_fifo_tb.sdb",
+      "sha256": "554497EED52689E4D6A17E2C441A221671B5598A7B8C9640D2F18C6F71203FB9",
+      "bytes": 6018
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_memory_base.sdb",
+      "sha256": "B5FAFEA6EDDDFBDEC53A56823555689418D0AA57C45BE8B7E9DCE362F3117C9D",
+      "bytes": 769569
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_memory_dpdistram.sdb",
+      "sha256": "5156CA858F3F97FCF7FDB3E64DC9011C159B2FC7490F5B38103F4A1DC8A97492",
+      "bytes": 6550
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_memory_dprom.sdb",
+      "sha256": "DEC8B321D446196C54E4E73F5042A006B51E0751D2AA0BDAA63DE0D8FCDA31B5",
+      "bytes": 9759
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_memory_sdpram.sdb",
+      "sha256": "E1B56A54E497236BBA19199DA0695FA83026461BDFAFC5BDB9B613C9554BC7E0",
+      "bytes": 10394
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_memory_spram.sdb",
+      "sha256": "D56099EF665EDC6D3504949524EEB89E93419345CDBD52C8E67EF3E0127B0135",
+      "bytes": 9404
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_memory_sprom.sdb",
+      "sha256": "9B44F388D6E74F162EAFF0BA0E0CF8444BA468C1D4A825BF7B311AFDF5FAF3B5",
+      "bytes": 8044
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_memory_tdpram.sdb",
+      "sha256": "B535A0A0D7B9A9D15CD6CFDCFF66FC3D23714C79BCB224BA4DD5105EAA1D159C",
+      "bytes": 12546
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm_reg_pipe_bit.sdb",
+      "sha256": "4F5FA5E79F503AFAD23C099D2B1DF36DD5AD724BBC3A1C32FEF10F13B4252DA1",
+      "bytes": 1627
+    }
+  ],
+  "vendor_binding_assessment": "compile.log records only user RTL; elaborate.log explicitly binds xpm modules and xsim.ini maps xpm to installed precompiled library. The embedded source-path copies equal all three frozen official files. This proves module binding and matching on-disk source copies, not a complete independently attested binary-to-source build chain. Do not accept a generic module-name-only check as provenance.",
+  "findings": [
+    {
+      "id": "LINK010-RST-001",
+      "priority": "P1",
+      "status": "OPEN",
+      "source": "rtl/cfo_estimator_link.sv:21,53",
+      "problem": "XPM_FIFO_ASYNC.rst must be synchronous to wr_clk; current asynchronous-assert reset output connects directly to FIFO.rst.",
+      "official_source": "https://docs.amd.com/r/2021.1-English/ug974-vivado-ultrascale-libraries/XPM_FIFO_ASYNC",
+      "source_quote": "Must be synchronous to wr_clk.",
+      "effect": "Successful numeric simulation cannot qualify this input reset contract. Do not release current link RTL as passed."
+    },
+    {
+      "id": "LINK010-SVA-002",
+      "status": "REQUIRES_PRECISE_DISPOSITION",
+      "diagnostics": {
+        "S-6": 1,
+        "S-7": 1,
+        "S-4": 16
+      },
+      "problem": "Zero-length wakeup assertion and next-cycle rose(empty) requirement can diagnose legal constant sleep/empty conditions. Inspect each record and reset semantics; do not disable all XPM assertions or ignore all errors.",
+      "separate_from_real_reset_defect": true
+    },
+    {
+      "id": "LINK010-BIND-003",
+      "status": "EVIDENCE_PROBE_INCOMPLETE",
+      "problem": "Frozen controller searched compile-only logs for precompiled XPM binding; elaborate contains bindings. Additional runtime library fingerprints are recorded without claiming full source attestation."
+    },
+    {
+      "id": "LINK010-CREATE-004",
+      "status": "CHECKPOINT_REUSED_WITH_TELEMETRY_LIMIT_RECORDED",
+      "problem": "Ready emitted near natural exit. Creation succeeded; original gate had no post-ready stable sample. No successful stage rerun required."
+    }
+  ],
+  "next_minimum_scope": "Design a separate revision with FIFO-specific synchronous reset while preserving asynchronous external stop, enforce no IO during both-domain reset handling, retain numeric algorithm/vectors, and define targeted XPM checker/provenance evidence. Freeze the minimal affected package and obtain a new manager grant before any native execution; old grant has been recovered.",
+  "native_started_by_review": false,
+  "estimator_or_fft_recomputed": false,
+  "frozen_source_modified": false,
+  "xml_or_wrapper_generated": false,
+  "copied_evidence": [
+    {
+      "path": "create_native.log",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T230702970885Z_luna\\create.log",
+      "sha256": "7515A4B5388D04B9EDEBDEDF4DDB0B7FAB40C27DF3AA7E799AE3E7A6DC2AAC33",
+      "bytes": 10484
+    },
+    {
+      "path": "create_result.json",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T230702970885Z_luna\\create_result.json",
+      "sha256": "77030632F68446A66058AAD5982D1C079732185B8D7E482575EA7D14878E3CF0",
+      "bytes": 29686
+    },
+    {
+      "path": "CFO_LINK010_after_create.xpr",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T230702970885Z_luna\\CFO_LINK010_create.xpr",
+      "sha256": "3B8E4BB9224A565E814FBE7DDABA7535E5FBD3C8EA8B490EC3F87DCFEB479EF1",
+      "bytes": 16840
+    },
+    {
+      "path": "ORIGINAL_ATTEMPT_COMPLETION.json",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\ATTEMPT_COMPLETION.json",
+      "sha256": "A2BE7078087733E511FE981B60EADAD2188A7EBFEF1AB98879AD4F89DA9231C6",
+      "bytes": 40980
+    },
+    {
+      "path": "ORIGINAL_ATTEMPT_ARTIFACT_MANIFEST.json",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\ATTEMPT_ARTIFACT_MANIFEST.json",
+      "sha256": "91FB795968AE9AC9575055A1F041B98F0F053D9DEB1FB118E3BA979BD38CDE16",
+      "bytes": 14182
+    },
+    {
+      "path": "simulate_result.json",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\simulate_result.json",
+      "sha256": "0E8CB150E482983C376B9780D233E08EBE1032844E6444FA4F319F388615A45D",
+      "bytes": 34074
+    },
+    {
+      "path": "native_compile.log",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\native_compile.log",
+      "sha256": "2A720BDC7A098C336FCF4D533D0D81119C4D3B26B054AA05AF0E21DCA318FC21",
+      "bytes": 1680
+    },
+    {
+      "path": "native_elaborate.log",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\native_elaborate.log",
+      "sha256": "FFFAAAD383D0FE99A21A050DC41D4313FD4FE402AD2BE485F327798183107F04",
+      "bytes": 2011
+    },
+    {
+      "path": "native_simulate.log",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\native_simulate.log",
+      "sha256": "2F09AF234DBA7B1FE83680D1226C8645005C13D0A2622049EF05313BCD5C5D75",
+      "bytes": 13222
+    },
+    {
+      "path": "link010_actual.txt",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\link010_actual.txt",
+      "sha256": "6A4F53030432D788FD8C22E01DBEA7B3F89A90F03D0E9D0C79A06201901915C1",
+      "bytes": 236410
+    },
+    {
+      "path": "CFO_LINK010_after_simulate.xpr",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\CFO_LINK010_simulate.xpr",
+      "sha256": "81FCAE67AC40425C9123053D6F0F90397D54296062310C8888DAA62D64F5CEF5",
+      "bytes": 16770
+    },
+    {
+      "path": "xsim.ini",
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010\\CFO_LINK010.sim\\sim_1\\behav\\xsim\\xsim.ini",
+      "sha256": "A102AA98FD38558D175A6E6314796C64E8BBD4659347D2760AB7E6E2AF68F225",
+      "bytes": 28369
+    },
+    {
+      "path": "installed_xpm.rlx",
+      "source": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\xsim\\ip\\xpm\\xpm.rlx",
+      "sha256": "A55BBA254A230408FC544ECCD4EBA88E4DA2097A05A6844D77F9A2897AB2DE44",
+      "bytes": 939
+    }
+  ]
+}

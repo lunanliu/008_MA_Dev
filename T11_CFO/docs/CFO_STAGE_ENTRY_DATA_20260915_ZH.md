@@ -42,7 +42,7 @@ GUI入口：[CFO_SYNC.xpr](D:/008_MA_Dev/T11_CFO/vivado/CFO_SYNC/CFO_SYNC.xpr)�
 
 已有静态检查见reports/LINK010_VECTOR_CHECK.json、reports/LINK010_STATIC_REVIEW_20260915.json。原生实际trace文件名link010_actual.txt：W为接受的前端输入，R为FIFO实际消费，F/E为待交付正常/错误结果，H为真实输出握手，D为取消丢弃。tools/verify_link010.py依据冻结预期逐条比较；正常/错误结果必须有H退休记录。固定矩阵为22完整帧、8取消、10协议错误、32次真实结果握手。它包含多次恢复用例，因此次数不同于四个唯一输入case。
 
-LINK010已派原Luna执行；在实际completion、trace、原生进程树归零和独立复核完成前，不能写为行为验收通过。该里程碑即使通过，也只证明上述连接与估计后端范围，不证明完整CFO波形链、物理CDC或布局布线时序。
+LINK010已由原Luna执行并独立复核，实际completion/trace和原生全树退出证据已保存；数值/协议通过，但FIFO复位契约与XPM诊断未闭合，不能写为阶段验收通过。该里程碑即使通过，也只证明上述连接与估计后端范围，不证明完整CFO波形链、物理CDC或布局布线时序。
 
 ## 最终整链交付的门限
 

@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/t11_phase_rtl",
+  "reviewed_at_utc": "2026-09-14T23:28:05.0625105Z",
+  "status": "ASSERTION_GATE_NOT_CLEARED_BY_THIS_STATIC_REVIEW",
+  "scope": "Bounded read-only review of eighteen XPM diagnostics; no backend numeric acceptance or execution-wrapper audit",
+  "counts": {
+    "S_6": 1,
+    "S_7": 1,
+    "S_4": 16,
+    "total": 18
+  },
+  "reviewed_sources": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_estimator_link.sv",
+      "sha256": "4F6A92AA12C48B18D262ED68E9DE438F083F22F60F56DE217E9A959A284C87D0",
+      "bytes": 7555
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\tb\\cfo_estimator_link_tb.sv",
+      "sha256": "5B110E16E0058CC1A06038D5C62BFC2132AC5BFC9B53CFF654DD100C9735C943",
+      "bytes": 9749
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\LINK010_SOURCE_LOCK.json",
+      "sha256": "C9975BEE22B81FDE0AE670DB4644C3DDE0206C111307A904AA08A5E77D80BCA5",
+      "bytes": 9538
+    }
+  ],
+  "evidence": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\native_simulate.log",
+      "sha256": "2F09AF234DBA7B1FE83680D1226C8645005C13D0A2622049EF05313BCD5C5D75"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\native_elaborate.log",
+      "sha256": "FFFAAAD383D0FE99A21A050DC41D4313FD4FE402AD2BE485F327798183107F04"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010\\attempt_20260914T231822406455Z_luna_repair_v1\\link010_actual.txt",
+      "sha256": "6A4F53030432D788FD8C22E01DBEA7B3F89A90F03D0E9D0C79A06201901915C1"
+    }
+  ],
+  "vendor_provenance": {
+    "official_source": "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+    "embedded_log_source": "D:/007 Dev/OTA_RTL_0829/.t10work/m02_25832_dcdbe574/xpm_fifo.sv",
+    "official_sha256": "D3C1E861CDDF00EBC82552C464A46FB5228E68B4D458001D064B99E04134B9D4",
+    "embedded_path_current_file_sha256": "D3C1E861CDDF00EBC82552C464A46FB5228E68B4D458001D064B99E04134B9D4",
+    "current_disk_copies_identical": true,
+    "frozen_vendor_sha256": "D3C1E861CDDF00EBC82552C464A46FB5228E68B4D458001D064B99E04134B9D4",
+    "local_compare_object_difference_count": 0,
+    "elaborate_evidence": "native_elaborate.log line 3 uses -L xpm; lines 11-26 elaborate XPM modules.",
+    "precompiled_binary_binding_proven_by_this_review": false,
+    "limit": "An existing file at the embedded compiler source path matching the frozen vendor file does not independently prove the provenance of the precompiled xpm library. Root is auditing the actual library mapping. Log line numbers differ from current source coordinates; assertion code and module scope were also compared."
+  },
+  "sleep_checks": {
+    "classification": "STATICALLY_EXPLAINED_STARTUP_ZERO_LENGTH_ASSERTION_FAILURE",
+    "events": [
+      {
+        "code": "S-6",
+        "failure_ps": 1000,
+        "clock": "first clk_fast rising edge",
+        "wr_en": 0
+      },
+      {
+        "code": "S-7",
+        "failure_ps": 3750,
+        "clock": "first clk_slow rising edge",
+        "rd_en": 0
+      }
+    ],
+    "static_conditions": [
+      "RTL line 53 ties sleep permanently to zero; no user sleep-to-wake transaction exists.",
+      "WAKEUP_TIME defaults to zero in vendor xpm_fifo_async line 2170 and is passed unchanged to the base instance at line 2302.",
+      "TB starts with reset_async=1 and s_valid=0; RTL lines 23-24,45-47,84-85 block writes and reads under reset.",
+      "Vendor lines 1590-1599 still instantiate $fell(sleep) |-> !enable[*WAKEUP_TIME] when WAKEUP_TIME=0. Startup previous-sample initialization can trigger $fell for the constant-low signal, and the zero-length overlapped consequent reports failure despite no required wakeup cycles."
+    ],
+    "real_sleep_protocol_violation_demonstrated": false,
+    "vendor_published_erratum_claimed": false
+  },
+  "empty_check": {
+    "classification": "OVERRESTRICTIVE_VENDOR_PROPERTY_IDENTIFIED_RUNTIME_EMPTY_VALUES_NOT_EXPORTED",
+    "vendor_lines": "1582-1586",
+    "property": "($rose(rd_rst_busy) || (empty && $rose(rd_rst_busy))) |-> ##1 $rose(empty)",
+    "static_reason": "The antecedent simplifies to $rose(rd_rst_busy). The consequent requires a new 0-to-1 empty transition one read cycle later, rejecting a FIFO that was already empty and remains empty. The message permits being 1, but the implemented property only accepts a transition.",
+    "reset_fsm_lines": "1710-1717,1744-1755,1767-1784",
+    "reset_fsm_reason": "The vendor independent-clock reset FSM intentionally reenters WRST_IN via WRST_GO2IDLE. Empty-reset/cancel conditions can therefore trigger two busy rises while empty remains 1.",
+    "fwft_empty_reset_lines": "1386-1393",
+    "scenario_evidence": [
+      "TB lines 138-148 issue reset or abort and wait through both busy flags before checking empty/stale results.",
+      "TB lines 157-165 run queued, drained partial-backend, FFT-output and held-result cancellation, each with reset and abort.",
+      "Trace D records: run4 W24/R7; run6 W24/R7; run8 W13/R13; run10 W13/R13; run12,14,16,18 W74/R74.",
+      "The observed pattern is initial reset twice, queued reset/abort once each, and the six already-drained cancellation cases twice each: 2+2+12=16. This matches the reset-FSM explanation but is not a waveform measurement of each failure."
+    ],
+    "events": [
+      {
+        "code": "S-4",
+        "started_ps": 123738,
+        "failure_ps": 130404,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "initial_reset_first_internal_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 270390,
+        "failure_ps": 277056,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "initial_reset_second_internal_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2466310428,
+        "failure_ps": 2466317094,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run4_queued_reset_second_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2525657826,
+        "failure_ps": 2525664492,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run6_queued_abort_second_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2585951796,
+        "failure_ps": 2585958462,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run8_partial_backend_reset_first_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2586045120,
+        "failure_ps": 2586051786,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run8_partial_backend_reset_second_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2636186772,
+        "failure_ps": 2636193438,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run10_partial_backend_abort_first_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2636280096,
+        "failure_ps": 2636286762,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run10_partial_backend_abort_second_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2744882568,
+        "failure_ps": 2744889234,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run12_fft_output_reset_first_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2744975892,
+        "failure_ps": 2744982558,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run12_fft_output_reset_second_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2853565032,
+        "failure_ps": 2853571698,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run14_fft_output_abort_first_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2853658356,
+        "failure_ps": 2853665022,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run14_fft_output_abort_second_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2969833404,
+        "failure_ps": 2969840070,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run16_held_result_reset_first_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 2969926728,
+        "failure_ps": 2969933394,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run16_held_result_reset_second_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 3075956124,
+        "failure_ps": 3075962790,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run18_held_result_abort_first_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      },
+      {
+        "code": "S-4",
+        "started_ps": 3076049448,
+        "failure_ps": 3076056114,
+        "sample_period_ps": 6666,
+        "scenario_inferred_from_order_and_reset_fsm": "run18_held_result_abort_second_sequence",
+        "scenario_is_inference": true,
+        "direct_empty_waveform_available": false,
+        "actual_empty_at_failure": "NOT_EXPORTED_IN_REVIEWED_LOG"
+      }
+    ],
+    "all_failures_exactly_one_read_cycle_after_antecedent": true,
+    "every_failure_proven_empty_equals_one": false,
+    "numerical_pass_used_to_classify_assertions": false,
+    "remaining_evidence": "Capture sampled empty, rd_rst_busy, reset, write/read enables and both busy signals at each reset boundary; existing text logs report the failing property and times, not those values."
+  },
+  "separate_contract_finding": {
+    "id": "LINK010-XPM-RST-SYNC",
+    "severity": "P2",
+    "status": "REQUIRES_DESIGN_REVIEW_SEPARATE_FROM_18_DIAGNOSTIC_ROOT_CAUSES",
+    "official_reference": "https://docs.amd.com/r/2021.1-English/ug974-vivado-ultrascale-libraries/XPM_FIFO_ASYNC",
+    "official_reference_version": "UG974 2021.1, rst port description",
+    "requirement": "FIFO rst must be synchronous to wr_clk.",
+    "source_locations": [
+      "rtl/cfo_estimator_link.sv:21",
+      "rtl/cfo_estimator_link.sv:53",
+      "sim/tb/cfo_estimator_link_tb.sv:140-145"
+    ],
+    "observation": "The FIFO rst port is driven directly by xpm_cdc_async_rst.dest_arst, which asserts asynchronously. The cancellation TB intentionally asserts reset/abort at an offset from clock edges. Synchronous deassertion alone does not establish the documented synchronous rst input contract.",
+    "relation_to_logged_errors": "This static port-contract gap is not asserted to cause S-4/S-6/S-7. Those properties remain overrestrictive/degenerate even if FIFO reset is made synchronous.",
+    "potential_minimum_functional_fix_for_root_review": "If adopted in a new version, provide a FIFO-specific reset synchronized to clk_fast for assertion and deassertion, retain immediate external reset/abort stop-stream gating, and keep admission/read enables blocked through the complete FIFO reset handshake. Do not edit frozen RTL or implement this as part of the checker-only probe."
+  },
+  "minimum_next_validation": {
+    "allowed_to_start_now": false,
+    "slot_status": "Manager reclaimed shared slot; no native job started or authorized by this review.",
+    "scope": "Only a minimal isolated XPM FIFO reset/sleep-checker applicability probe, without the 74-point backend, phase core, FFT, or full waveform.",
+    "preserve": [
+      "All frozen functional RTL and original native evidence",
+      "SIM_ASSERT_CHK=1 and unrelated XPM assertions",
+      "Existing numerical and acceptance thresholds"
+    ],
+    "required_cases": [
+      "Constant sleep=0, WAKEUP_TIME=0 at startup with wr_en=rd_en=0.",
+      "Reset an already empty FIFO and capture both internal reset-busy rises.",
+      "Write a few entries, reset nonempty FIFO, and distinguish first empty transition from subsequent already-empty reset sequence.",
+      "Use a FIFO reset synchronous to wr_clk in the checker probe; record any separate comparison with the frozen asynchronous-assert wrapper explicitly."
+    ],
+    "capture_signals": [
+      "sleep",
+      "WAKEUP_TIME",
+      "rst",
+      "wr_rst_busy",
+      "rd_rst_busy",
+      "wr_en",
+      "rd_en",
+      "empty",
+      "full",
+      "overflow",
+      "underflow",
+      "clk_fast",
+      "clk_slow"
+    ],
+    "capture_method": "Small trace of pre-edge sampled values plus post-NBA values around each reset boundary; no full design wave logging is required.",
+    "checker_specific_corrections_for_a_new_private_verification_version": [
+      "Generate sleep wakeup assertions only for WAKEUP_TIME>0; constant unused sleep with WAKEUP_TIME=0 has no wakeup interval to check.",
+      "For reset completion, check empty==1 at the specified following sample instead of requiring a fresh $rose(empty).",
+      "Retain every other XPM assertion and the original failed log; never disable SIM_ASSERT_CHK globally or whitelist all errors."
+    ],
+    "must_not_do": [
+      "Do not rerun successful 74-observation backend or FFT just to obtain checker evidence.",
+      "Do not suppress unrelated XPM errors or alter the acceptance threshold.",
+      "Do not describe this run as assertion-clean based on numerical PASS."
+    ],
+    "acceptance_evidence": "A separately frozen, minimal probe must explain every diagnostic with actual sampled signals before any precise waiver or private checker correction is accepted."
+  },
+  "actions": {
+    "files_modified": [],
+    "only_new_file": "reports/LINK010_REVIEW_20260915/XPM_ASSERTION_STATIC_REVIEW.json",
+    "matlab_started": false,
+    "vivado_started": false,
+    "xsim_started": false,
+    "native_job_started": false,
+    "source_or_threshold_changed": false
+  },
+  "formal_T11_T12_T13_PASS": false
+}
