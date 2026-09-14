@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN_PACKAGE_READY_DISPATCH_BLOCKED_BY_AUTOMATIC_APPROVAL",
+  "updated_utc": "2026-09-14T09:21:25.0122579Z",
+  "job": "CFO-NATIVE001",
+  "source_commit": "be976c8e990bf5b5a806aa0288f61da2ac1057c9",
+  "source_lock_sha256": "2641190797AE0B0C970886AC4859939C50C35C45C42C1A4388B39E05CA15703B",
+  "job_sha256": "2FCA5D82AE37441E680B0E60B793641AF35CC483C05704AD6693D959662BB56C",
+  "dispatch_delivered": false,
+  "cfo_matlab_started": false,
+  "cfo_vivado_started": false,
+  "recipient_binding_verified": true,
+  "received_manager_authorization_verified": true,
+  "manager_message_received_utc": "2026-09-14T08:42:48.176Z",
+  "approval_rejection": "CFO launch treated as outside trusted current user authorization despite received manager delegation; direct user confirmation required",
+  "no_proxy_dispatch_or_direct_launch": true,
+  "formal_RTL_PASS": false
+}
