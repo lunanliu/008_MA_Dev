@@ -1,0 +1,30 @@
+{
+  "schema": "link010_astra_dispatch_v1",
+  "utc": "2026-09-14T23:04:20.268734+00:00",
+  "status": "DISPATCH_SENT_TO_ORIGINAL_LUNA",
+  "grant_id": "T11_LINK010_AFTER_SF003_DCP_RETURN_20260914T2301Z",
+  "slot_sha256": "6FE0467014461BF7E6883ADE61CB188EAF7456F00CF032762582FC4E3E094442",
+  "source_commit": "d619728230cd0222eb0f3392938e70270f7b483c",
+  "source_lock_sha256": "C9975BEE22B81FDE0AE670DB4644C3DDE0206C111307A904AA08A5E77D80BCA5",
+  "controller_sha256": "9C34DD60865CBBCE90B1443AF8A6934AB830371598D8ADA6DAB9B297EB39CB9B",
+  "fresh_preflight": {
+    "42_hashes_match": true,
+    "resource_and_protected_identity_checks": true,
+    "available_gib": 15.043224334716797,
+    "gui_private_gib": 3.3585739135742188,
+    "xpr_absent": true
+  },
+  "astra": "01a076f1-ad1b-7d33-a29c-4ea34ae84d01",
+  "luna": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+  "scope": "CFO-LINK010 create and one behavioral simulation only",
+  "budget_text_difference": {
+    "job_document": "6 GiB available physical memory described as recommendation",
+    "frozen_guard": "6 GiB is a hard pre-launch check before each native stage",
+    "manager_resolution": "Current field condition satisfies both. Preserve frozen package; do not refreeze or rerun successful stages for this wording difference. Runtime4GiB remains warning only."
+  },
+  "native_started_by_astra": false,
+  "dispatch_sent": true,
+  "dispatched_utc": "2026-09-14T23:05:12.470166+00:00",
+  "dispatch_delivery": "send_message_to_thread succeeded",
+  "monitor_owner": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28"
+}
