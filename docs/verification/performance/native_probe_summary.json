@@ -1,0 +1,559 @@
+{
+  "created_utc": "2026-09-14T01:22:03.466840+00:00",
+  "scope": "Same tiny circuit: synthesis, checkpoint-resumed place/route/reports, and MATLAB thread query. No production T10/XSim run or speedup benchmark.",
+  "status": "COMPLETE_FOR_TINY_PROBE_SCOPE_WITH_DOCUMENTED_WORKFLOW_FAILURES",
+  "vivado_version": "2021.1",
+  "target": "xcvu11p-flgb2104-2-e",
+  "default_parameters": {
+    "general.maxThreads": 2,
+    "synth.maxThreads": 4
+  },
+  "configured_and_child_readback": {
+    "general.maxThreads": 8,
+    "synth.maxThreads": 8
+  },
+  "synthesis": {
+    "completed": true,
+    "max_processes_native_log": 8,
+    "resume_elapsed_at_completion_seconds": 59
+  },
+  "matlab": {
+    "configuration": {
+      "version": "24.1.0.2628055 (R2024a) Update 4",
+      "release": "2024a",
+      "threadsBefore": 8,
+      "previousWhenSelectingAutomatic": 8,
+      "threadsAfterAutomatic": 8,
+      "pctLicenseAvailable": true,
+      "pctInstalled": false,
+      "poolCreatedByProbe": false,
+      "singleCompThreadRequested": false
+    },
+    "exit": {
+      "stage": "matlab",
+      "utc": "2026-09-14T01:14:16.4391999Z",
+      "root_pid": 25980,
+      "root_returncode": 0,
+      "root_exited": true,
+      "owned_active_after": 0,
+      "elapsed_s": 16.0973791,
+      "peak_working_set": 969453568,
+      "stop_reason": null,
+      "error": null,
+      "foreign_pid_modified": false
+    },
+    "rerun_after_success": false
+  },
+  "initial_vivado_failure": {
+    "exit": {
+      "stage": "vivado",
+      "utc": "2026-09-14T01:13:59.8170918Z",
+      "root_pid": 8008,
+      "root_returncode": 1,
+      "root_exited": true,
+      "owned_active_after": 0,
+      "elapsed_s": 12.7822993,
+      "peak_working_set": 1221931008,
+      "stop_reason": null,
+      "error": null,
+      "foreign_pid_modified": false
+    },
+    "message": "Common 17-170 Unknown option '-mode out_of_context'",
+    "kind": "Tool property argument parsing, before synthesis",
+    "repair": "Named set_property parameters; separate frozen resume source; opened existing scratch project; original evidence preserved."
+  },
+  "general_9_probe": {
+    "accepted_by_parameter_interface": true,
+    "proves_official_support": false
+  },
+  "workflow": {
+    "initial_startup_delay_seconds_approx": 943,
+    "known_issue": "Old Luna task workspace-write scope did not include new directory; Astra prepared approved files, Luna remained native executor.",
+    "all_owned_processes_exited": true,
+    "models_or_global_permissions_changed": false,
+    "zero_error_execution_claim": false,
+    "follow_up": "WORKFLOW_REVIEW_ZH.md",
+    "user_gui_not_targeted_or_terminated_by_probe": true,
+    "all_requested_native_stages_completed": true,
+    "placement_repeated_once_due_to_script_failure": true,
+    "additional_actual_failures": [
+      "redirect unavailable in native help stage",
+      "post-start input revision incorrectly labeled prelaunch, corrected by additional audit and preserved original archive",
+      "current_design NAME confused with logical top",
+      "source child_hook overwrote event file handle; optional logging terminated successful place before checkpoint"
+    ],
+    "unnecessary_new_experiments_started": false,
+    "remaining_known_gaps": [
+      "Successful rev04 still writes optional events before checkpoint persistence and does not universally downgrade logging failures.",
+      "Job construction exception recording and external PID creation-time identity checks remain incomplete."
+    ]
+  },
+  "archive": {
+    "path": "native_probe_evidence.zip",
+    "sha256": "8eb72c74b6daf2ef01392debb9efec428463beb367bf8cfd83ab0735e26f2d4e",
+    "members": [
+      {
+        "path": "DESIGN_FREEZE.json",
+        "sha256": "f6bf27fd83def801056f3e055d71d014f0648c15f41ee6e90f6b82e71d9e5b6d"
+      },
+      {
+        "path": "EXECUTION_FREEZE.json",
+        "sha256": "ed35720513dab00aea31df68c12ca496b48f315bea541aa529f72132f047e166"
+      },
+      {
+        "path": "RESUME_DESIGN_FREEZE.json",
+        "sha256": "aedf8a397483f6f19b3b725b27b67a6f95a022ec25583c81ad0190a18164ef8d"
+      },
+      {
+        "path": "RESUME_EXECUTION_FREEZE.json",
+        "sha256": "937a8428644f6316ee81098f66fee4770d906662ab9fc175ef7a037eb93186fd"
+      },
+      {
+        "path": "tiny.sv",
+        "sha256": "aa41a801ec89b0448f4e1f3d02d2b430cbb2582de16d09de6e88ed95286e073b"
+      },
+      {
+        "path": "tiny.xdc",
+        "sha256": "6bf63ff1ba3fd289627a60ccfe253c60ae67a8c8b825e9932e23004760486e85"
+      },
+      {
+        "path": "child_hook.tcl",
+        "sha256": "a7f721fa309569d844f2275c5a8196309e0d5493b366c048d2ff072ecdb0cf12"
+      },
+      {
+        "path": "vivado_probe.tcl",
+        "sha256": "7c8cc9bbbb5d32e30f2afd1b3ca109632853004cf1501da714c8154531235fd4"
+      },
+      {
+        "path": "vivado_resume.tcl",
+        "sha256": "5e1f46f77f11be1be115d5c43399525b6843c62e0f6593e54ece248564ed0e2e"
+      },
+      {
+        "path": "matlab_probe.m",
+        "sha256": "63cfce753ec75c2fe0f0c117dbd8654da9b462e8d630a2b820b5b26da4a75183"
+      },
+      {
+        "path": "probe_job.cs",
+        "sha256": "3739db0db658bc920d447ff4f8ca572f3de01c532910f7fb467eb99b39a7fb3a"
+      },
+      {
+        "path": "run_probe_astra.ps1",
+        "sha256": "0fc13cbd519250cf96fd779db4de6723cf2f920d67ce06ac9302c2a506fec229"
+      },
+      {
+        "path": "run_remaining_astra.ps1",
+        "sha256": "49140bf4b0a0a666036b1feb03859135e0171e77b786cd53890c2d034c9dd80d"
+      },
+      {
+        "path": "parameter_probe.txt",
+        "sha256": "7ccbb979233db1d46445b6525e60fe68a586f7205d6a5d35997a6466a63aabfc"
+      },
+      {
+        "path": "selected_threads.tcl",
+        "sha256": "192e608787275b39d81dbc0205f26661b275440186bd4cd0beccf384ce51f52f"
+      },
+      {
+        "path": "matlab_result.json",
+        "sha256": "1fc597b40394168d30723636742c6a47f4f6039c5b6f69f7009c7a02cd751ecf"
+      },
+      {
+        "path": "matlab.log",
+        "sha256": "2df173eafca20383e7ec9c5e74d3940e9e919121afb0170b4a3ec99c55561ae7"
+      },
+      {
+        "path": "vivado.log",
+        "sha256": "839f5db31a69165f6376bc41f89e2b08f96340c98cc8f710303219f6dd864ce0"
+      },
+      {
+        "path": "vivado_resume.log",
+        "sha256": "1b29bda07fddd42189ff6c0d37a10a5fdfdd05bec41e37f0de67a3f50045f355"
+      },
+      {
+        "path": "vivado_owned_exit.json",
+        "sha256": "7e172ebb12814fd4d70af129de530755f7e2f3b4b92760639ef3d31fbe740892"
+      },
+      {
+        "path": "vivado_resume_owned_exit.json",
+        "sha256": "7df35c3759e007399e19f4393c25a1d3c78eea123c50366c815fa08f44b29cb1"
+      },
+      {
+        "path": "matlab_owned_exit.json",
+        "sha256": "b23886e0b45b44f0643ed6d3dd9e14fae6b6d8e2f47db4a8d3b5f17131219acb"
+      },
+      {
+        "path": "native_stage_results.txt",
+        "sha256": "edc369b9476180fcccb5758ab1ed350469e49e57e39cb44132ec346e83c01a36"
+      },
+      {
+        "path": "vivado_launch.json",
+        "sha256": "d764a58ef91717c4973ed4785ab3de0689d43d52b2f7a5fb300f90ffef1e438a"
+      },
+      {
+        "path": "vivado_resume_launch.json",
+        "sha256": "835aa84238e5ab846d989e1ab2dcd3ddd9b724a842579c915187f71887bd00e0"
+      },
+      {
+        "path": "matlab_launch.json",
+        "sha256": "7ec6fa523783979b8b86eba1bb2d46ebc29423908f05c6dd18d862b9422e8e33"
+      },
+      {
+        "path": "scratch/tiny_probe.runs/synth_1/runme.log",
+        "sha256": "5ee3f3b922356ae323f878dda41af7d9576389f3da8454c566d36373c59b26e4"
+      },
+      {
+        "path": "scratch/tiny_probe.runs/impl_1/runme.log",
+        "sha256": "6df64d1c49d324930a26b0c28125b588fb282ed09f45cdfad183d8edaaab97ce"
+      },
+      {
+        "path": "ASTRA_FINAL_REVIEW.json",
+        "sha256": "1102d2326f93c31d59d15da9aaaf1d0b1a817ab3db6731bad4fa5b2c640acb1f"
+      },
+      {
+        "path": "CONTINUATION_AUTHORIZATION.json",
+        "sha256": "c42da92e9dbb947caa29c0edffb53974ce757be0cf3c91be902cc30d01d31b4f"
+      },
+      {
+        "path": "CONTINUE_TOOL_FIX_rev02.json",
+        "sha256": "58ecacd1ce2f0ba10276bf1829267a19ce67f2e3a8edeee64bdd4de96344a021"
+      },
+      {
+        "path": "CONTINUE_TOOL_FIX_rev03.json",
+        "sha256": "5c153b8c538d22020bf0b3b4b32073b03a83a6d31240f3ed27b3cd9095f32fd9"
+      },
+      {
+        "path": "CONTINUE_TOOL_FIX_rev04.json",
+        "sha256": "1775c72dedcd5314b7ca2ba9e66f7e1434ab98450e99e335e98daf797967638a"
+      },
+      {
+        "path": "DCP_METADATA_IDENTITY.json",
+        "sha256": "3dfc4b2c0eb9988cc76b7bd0e0e4b4916c7dc4bf286298c44eeacc1ad929df44"
+      },
+      {
+        "path": "finish_error.txt",
+        "sha256": "bc57cd22b8dcd31f47e61f93c7bb3c40bd04a032270784d4c3f0b39abd143d7b"
+      },
+      {
+        "path": "finish_error_rev03.txt",
+        "sha256": "7dd086ab6eb690786204c1bd58b2d0aff53204bbcdbe5f74e7010c57eb78bb75"
+      },
+      {
+        "path": "finish_result_rev04.txt",
+        "sha256": "6664e3b8fb64a13e41008978af065fbdb408af930faa399caabd208b88a84f97"
+      },
+      {
+        "path": "finish_stage_events_rev03.txt",
+        "sha256": "852e84902d89c16039f6c9cebaf65487425435d246e5d692d74f4c3f9359fdc1"
+      },
+      {
+        "path": "finish_stage_events_rev04.txt",
+        "sha256": "1d79355e4963d9a38db8738f68e03dbb9371689c6e723a7d254c45b74f2014e2"
+      },
+      {
+        "path": "HELP_CORRECTION_AUDIT_rev02.json",
+        "sha256": "b7d8f4096c26faaff9113958ac52a8dd2f89952a773a17b50f236cacec3f28e5"
+      },
+      {
+        "path": "HELP_PRELAUNCH_CORRECTION.json",
+        "sha256": "1f2cf243e9bd1f5ef02ba818cb20f382fabcf5c4e9673772b58e4bcdfae1c72f"
+      },
+      {
+        "path": "help_prelaunch_rev01.zip",
+        "sha256": "d8be29c44d1e35d20f969f3021462f87880989f4e5da10638dd28380e1cb89a1"
+      },
+      {
+        "path": "matlab_processes.jsonl",
+        "sha256": "dd8070b759182b54ce4f9f83b7afd9fc3ba83cb9dd54b485b84cf8bb1f709184"
+      },
+      {
+        "path": "performance_hook.txt",
+        "sha256": "e03f6f02b78066492d130e159dac667256ddfb2250d4694260c7b38397623d5f"
+      },
+      {
+        "path": "PROBE_AUTHORITY_CLOSED.json",
+        "sha256": "289fb634e4dcce867388be7fc7a52b10282499f95ed872cd5e771c773d1ba738"
+      },
+      {
+        "path": "run_probe_continue.ps1",
+        "sha256": "3a8e32c8b13cd61830ae49306c3ed0957466e31d4e716c26624511318109e501"
+      },
+      {
+        "path": "run_probe_finish_rev03.ps1",
+        "sha256": "a6a2273ae31edc3da68f6dbe123880efb9a566bac0920258d59e2966ea556c03"
+      },
+      {
+        "path": "run_probe_finish_rev04.ps1",
+        "sha256": "efec4861a716f84bc0537fbb600a705edb7d422928f811ce56b1797a1b31e985"
+      },
+      {
+        "path": "STATIC_CHECK.json",
+        "sha256": "17458d769ca613937141a942088aa253e1357f9f1ad45dc8d864614b9f6b0416"
+      },
+      {
+        "path": "tiny_placed_continue_rev04.dcp",
+        "sha256": "38bf8c706e27224a9cbbd9033622566756727aac927ef07105807a5fa07c811a"
+      },
+      {
+        "path": "tiny_routed_continue_rev04.dcp",
+        "sha256": "f011f4cf413ab1511942748f573b6c4c3cd0d64928d7f75db64f77b988a9fffb"
+      },
+      {
+        "path": "tiny_routed_drc_rev04.rpt",
+        "sha256": "69a163024be333eec507d1222fc72741e68d6448d82f027025d79197cfa36a71"
+      },
+      {
+        "path": "tiny_routed_timing_rev04.rpt",
+        "sha256": "7195e2d5241631bd20ea984a51ea761f8d76bf1345b99777d68a38aeaaa616dc"
+      },
+      {
+        "path": "tiny_routed_utilization_rev04.rpt",
+        "sha256": "2fc2335546f3303cb2aa13c2f83982b54b93efa33b72d84f5b9f60825a763203"
+      },
+      {
+        "path": "tiny_route_status_rev04.rpt",
+        "sha256": "c5ddcfcc7fa0c8812b347acbc53662343ed277f31cf6a7c9ccaa290c90f6d7a8"
+      },
+      {
+        "path": "vivado.jou",
+        "sha256": "58650805d8fc85871e1f9ab47516c4f8b1a81866fe595c964dbbc387f3a8abd1"
+      },
+      {
+        "path": "vivado_finish.tcl",
+        "sha256": "244fcd6c449ca506fc3f645ded3e9d64c85e46ff92ddd24fd64f1ee647661985"
+      },
+      {
+        "path": "vivado_finish_design.json",
+        "sha256": "8337de11a728ef5b32cc26af4ecaa5b859b6dedea53d68a90693b609ee48f845"
+      },
+      {
+        "path": "vivado_finish_design_rev01.json",
+        "sha256": "92654adcd7c9fe04c17978a77ef2432298fbfffaf7d1e1f22ab6a369e960bd37"
+      },
+      {
+        "path": "vivado_finish_execution.json",
+        "sha256": "f987917575ac0d05f99cb87670ebb4b3276a376aec6861c535225e3650141de2"
+      },
+      {
+        "path": "vivado_finish_execution_rev01.json",
+        "sha256": "2c010da551bf8e3b10a93504c53fbe40282b0b83ea045d653e4f11f593d94da8"
+      },
+      {
+        "path": "vivado_finish_launch.json",
+        "sha256": "1cf6ccef02bfbc229c606e2c8df3831fa11883523d7f61b0256662587d5c8cf5"
+      },
+      {
+        "path": "vivado_finish_owned_exit.json",
+        "sha256": "39aa567030de0088831188340fc98e56a286336dac5e815db1ade2240f6716c5"
+      },
+      {
+        "path": "vivado_finish_processes.jsonl",
+        "sha256": "2187dff0e48465bd9726705ac6fa19e69591bdec9c7195771104591ef7948d75"
+      },
+      {
+        "path": "vivado_finish_rev02.jou",
+        "sha256": "d0ad068f4f57a6d6a9db9fcf524639296ee06780816ffffa5583f1a72a588409"
+      },
+      {
+        "path": "vivado_finish_rev02.log",
+        "sha256": "39e3049a3063068fa681ed30a7e86fb4ee945780d58919bc858e496fb2c2ad4c"
+      },
+      {
+        "path": "vivado_finish_rev02.tcl",
+        "sha256": "e20446f614e88d93d18169fdf8dd68ca6902d6cd49489327aa5af729b3ef7f74"
+      },
+      {
+        "path": "vivado_finish_rev03.jou",
+        "sha256": "397650dd4f3f234aac92624fff4924d6b0fe76b8e710c7bb104b145e3c7b08e8"
+      },
+      {
+        "path": "vivado_finish_rev03.log",
+        "sha256": "5f9e2640c5b93ed95fbaab1dffe9f350bad712227507d4a3698e00339ffc3cdc"
+      },
+      {
+        "path": "vivado_finish_rev03.tcl",
+        "sha256": "429b9ca929335f1ba241472437857d7f7ef63dd488236c52d6e03bf996bf846d"
+      },
+      {
+        "path": "vivado_finish_rev03_design.json",
+        "sha256": "cdbe7e98898aa4d1221076b4321eb54ea545f1ee8b55c7fb6a08d4e14c150fc5"
+      },
+      {
+        "path": "vivado_finish_rev03_execution.json",
+        "sha256": "8704c9c525921012edd84ef03a0cc7da4fc718d9691757b8b30e8fe3517d94aa"
+      },
+      {
+        "path": "vivado_finish_rev03_launch.json",
+        "sha256": "596b2f5c0d6f72c64a6b904ffe5015fa5a5f632d01000d88a476a552d0ddec85"
+      },
+      {
+        "path": "vivado_finish_rev03_owned_exit.json",
+        "sha256": "4c6e941ba9b8cdebd36e256b281391f778f4c97aeb00f762eb5d1ad9dd94bf33"
+      },
+      {
+        "path": "vivado_finish_rev03_processes.jsonl",
+        "sha256": "02dd84cfb7e94e59a89d3786ee47de1f22d54f9fb6dfee8725c81605a7c2e89f"
+      },
+      {
+        "path": "vivado_finish_rev04.jou",
+        "sha256": "0b60ad850bba097c916fe033777c5537a8056dff3f9c071215f8df03a79e6cce"
+      },
+      {
+        "path": "vivado_finish_rev04.log",
+        "sha256": "6731520ce3d06e71476e5a7b65bc88bd7ce8b0f24327bcc01de6c8e64705a3c3"
+      },
+      {
+        "path": "vivado_finish_rev04.tcl",
+        "sha256": "510fd2038a967cd32649d28303cf5324390530cc33a41df76e7284f10862f44e"
+      },
+      {
+        "path": "vivado_finish_rev04_design.json",
+        "sha256": "843bd5cad44fd1dc3756d3c81e0433092dcb456e40a5077f8439f8545341aad4"
+      },
+      {
+        "path": "vivado_finish_rev04_execution.json",
+        "sha256": "e98c888cd2e12a8406dbc83946d0bb70d8d6a32da81449acfd3e7aa944d7eb25"
+      },
+      {
+        "path": "vivado_finish_rev04_launch.json",
+        "sha256": "9a4a21babae709a1f361a9722f06ecd08d75f3469280565e1f8d2fef5d2ab149"
+      },
+      {
+        "path": "vivado_finish_rev04_owned_exit.json",
+        "sha256": "59027be7b0eea58e5300d8725251c077f6a29301432aace0fd4d94ab3519123c"
+      },
+      {
+        "path": "vivado_finish_rev04_processes.jsonl",
+        "sha256": "f640da9c2c419c5b99ee4749b65feb818a537b5fd06aa2fff000eec8c14b0adf"
+      },
+      {
+        "path": "vivado_help.jou",
+        "sha256": "79571e91a697e4039ae539cdee4eaee38fcf8f5b3ccb788c8e1a03bef2e07307"
+      },
+      {
+        "path": "vivado_help.log",
+        "sha256": "4b84c94505894b03cfa979917208344a9aef113f1b8403dff8d1bfd4c500f884"
+      },
+      {
+        "path": "vivado_help.tcl",
+        "sha256": "91cb632b64e513b7ab0a53e49b9c0fdf9c8810a119f9eb85c011cc85b2d7dc95"
+      },
+      {
+        "path": "vivado_help_design.json",
+        "sha256": "040403b83b09991cc850462f13f708c0a9dc945e4500210d35eb364b6e56b3c8"
+      },
+      {
+        "path": "vivado_help_execution.json",
+        "sha256": "29291997116718037f67103598e2ef5cb222ebb4b652b69ca43c90021d92af0e"
+      },
+      {
+        "path": "vivado_help_launch.json",
+        "sha256": "9037a685c2c5d03e787f3c5fa129608c273b939bb96ac2178be06c68d08cfe5d"
+      },
+      {
+        "path": "vivado_help_owned_exit.json",
+        "sha256": "1ba77934a1b2bc6abdae70cd67555b4e89af55ce905c4bd0a246b485aa05e9fc"
+      },
+      {
+        "path": "vivado_help_processes.jsonl",
+        "sha256": "eca13462994db92613a8157396e5f68e2c9b87a82babd0f0c38bb4b9d7e53e9a"
+      },
+      {
+        "path": "vivado_processes.jsonl",
+        "sha256": "c7fee966aad518f4d072e1d6c48f1ea41b7ddbc0edc3eeec8ec7461b0308f595"
+      },
+      {
+        "path": "vivado_resume.jou",
+        "sha256": "0a6234c15d88b4083dda6cba85bbed973d19cf14857b9ea3b2224d29dd98a240"
+      },
+      {
+        "path": "vivado_resume_processes.jsonl",
+        "sha256": "ccb8c171689f97db06d68f289b204f601b532cbb7134d1b472f5d1b8bf0a095b"
+      },
+      {
+        "path": "scratch/tiny_probe.runs/impl_1/tiny_opt.dcp",
+        "sha256": "551b75a0eff3f7e019181c1e7b8b54f1d1fe4a7bc04f7ade8feec82b3e4526b2"
+      },
+      {
+        "path": "FINAL_CONTINUATION_REVIEW.json",
+        "sha256": "bc8fa15bb259de18dbe313d37738f7e77529e34d8f4754df97000850ca6f0f60"
+      },
+      {
+        "path": "CONTINUATION_COMPLETE.json",
+        "sha256": "cf341e37bcfca784367b6d8c2c852b368090ffb24f713ae5f3c76beca445d77d"
+      },
+      {
+        "path": "FINAL_SCOPE_NOTE.txt",
+        "sha256": "88fdc40496510e3ec1eed13b2234a24639ff0691a05d03aa8de4eb0c93db3ad1"
+      }
+    ],
+    "note": "Earlier closure and failed-attempt records are intentionally retained; this summary identifies the final completed result."
+  },
+  "final_process_inventory": {
+    "sampled_local": "2026-09-14T03:48:00+02:00",
+    "vivado_matlab_xelab_xsim_count": 0,
+    "available_gib": 18.29529571533203,
+    "note": "Read-only OS snapshot after completed rev04; no external processes were terminated by manager."
+  },
+  "latest_user_correction": "Fulfilled: 4GiB is warning only; the same tiny probe completed despite warning. Actual system memory remained ample.",
+  "completed_utc": "2026-09-14T01:45:48.2847799Z",
+  "implementation_initial_budget_stop": {
+    "child_hook_readback": {
+      "general": 8,
+      "synth": 8
+    },
+    "opt_design_completed": true,
+    "place_route_completed": false,
+    "exit": {
+      "stage": "vivado_resume",
+      "utc": "2026-09-14T01:19:30.3500002Z",
+      "root_pid": 29596,
+      "root_returncode": 125,
+      "root_exited": true,
+      "owned_active_after": 0,
+      "elapsed_s": 129.6984831,
+      "peak_working_set": 4303024128,
+      "stop_reason": "memory_budget",
+      "error": null,
+      "foreign_pid_modified": false
+    },
+    "memory_limit_bytes": 4294967296,
+    "interpretation": "Initial 4GiB estimate was incorrectly used as a kill threshold. User authorizes continuation from successful opt checkpoint, using 4GiB as warning only and real system-memory protection."
+  },
+  "implementation": {
+    "place_route_completed": true,
+    "route_nets": 10,
+    "fully_routed_nets": 10,
+    "routing_errors": 0,
+    "drc_violations": 0,
+    "mode": "Non-Project continuation from same successful opt DCP; original project and interrupted impl run preserved",
+    "synthesis_or_optimization_repeated": false,
+    "placement_repeated_once": true,
+    "placement_repeat_reason": "Rev03 place succeeded but source-hook variable collision broke event output before DCP save; no persistent placed state survived. Rev04 used separate channel names and completed; event-before-checkpoint ordering still remains a robustness gap.",
+    "general_threads": 8,
+    "synth_threads": 8,
+    "place_max_cpus_native_log": 8,
+    "route_max_cpus_native_log": 8,
+    "exit": {
+      "stage": "vivado_finish_rev04",
+      "utc": "2026-09-14T01:45:48.2847799Z",
+      "root_pid": 5744,
+      "root_returncode": 0,
+      "root_exited": true,
+      "owned_active_after": 0,
+      "elapsed_s": 157.2448691,
+      "peak_working_set": 5814484992,
+      "minimum_system_available_gib": 12.901199340820312,
+      "soft_4gib_crossed": true,
+      "stop_reason": null,
+      "error": null,
+      "foreign_pid_modified": false
+    },
+    "peak_group_working_set_gib": 5.4151611328125,
+    "timing_scope": "OOC tiny probe only; missing HD.CLK_SRC/port physical context warnings retained. No T10 or board timing qualification."
+  },
+  "astra_final_review": {
+    "path_in_archive": "FINAL_CONTINUATION_REVIEW.json",
+    "sha256": "bc8fa15bb259de18dbe313d37738f7e77529e34d8f4754df97000850ca6f0f60",
+    "status": "PASS_SAME_TINY_CHECKPOINT_PLACE_ROUTE_AND_NORMAL_EXIT",
+    "execution_guide_fully_compliant": false
+  }
+}

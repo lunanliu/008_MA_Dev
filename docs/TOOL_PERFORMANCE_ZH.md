@@ -8,11 +8,11 @@
 
 | 项目 | 后续设置 | 真正控制什么 |
 |---|---|---|
-| Vivado通用内部线程 | `general.maxThreads 8` | 单个Vivado进程中支持并行的步骤；不能设成16 |
+| Vivado通用内部线程 | `general.maxThreads 8` | 按官方支持上限8配置；参数接口接受更大数值不等于该数值受到支持 |
 | 综合内部线程请求 | `synth.maxThreads 8`，与general共同设置 | 本机2021.1脚本取两者较小值；实际阶段并行以原生日志为准 |
 | 综合/实现并发作业 | 默认/上限 `-jobs 16` | 同时调度多少个独立run；不等于一个设计用16核 |
 | 仿真展开子编译 | 默认/上限 `xsim.elaborate.mt_level 16` | xelab生成模型后的并行子编译；不控制逐拍运行的XSim全部步骤 |
-| MATLAB数值计算 | 不带 `-singleCompThread`，`maxNumCompThreads('automatic')` | 由MATLAB选择内建数值函数的计算线程；本机通常为8物理核 |
+| MATLAB数值计算 | 不带 `-singleCompThread`，`maxNumCompThreads('automatic')` | 本机R2024a正常启动与automatic回读均为8；不等于所有代码都能并行 |
 | MATLAB并行池 | 不自动创建 | `parfor/parpool`属于另一个任务并行层，须明确数据隔离、许可证和内存预算 |
 
 线程/作业数是上限，不是CPU持续占用率。综合、布局布线和仿真都有串行部分；增加并行参数不能保证按核数等比例提速，也不能把XSim逐拍运行变成16核运行。
@@ -22,7 +22,10 @@
 1. 核对工具版本、当前运行进程、空闲物理内存和已有同类作业峰值；把实际jobs、展开并行数、内存总预算和硬超时记入本次运行记录。
 2. 轻量独立IP作业可使用16 jobs；完整T10的历史综合曾占约8.34 GB，不能让16份这种作业同时挤进32 GB机器。为系统和现有GUI保留余量，按各子作业峰值合计估算。没有峰值证据时不靠过量并发试探内存极限。
 3. 资源不足时允许降低实际jobs或串行重型MATLAB/Vivado阶段，并记录原因和实际值。默认1 MATLAB槽指同时运行一个MATLAB进程，绝不要求它只用一个CPU线程。不要为“满载”而让两个重型工具争抢内存、产生大量磁盘换页。
+   启动前的内存估算用于选择并发数；运行中轻微超过估算只告警并记录，不能把预估值直接作为杀进程阈值。告警线与真正的保护条件分别冻结；真正保护依据系统可用内存严重不足、持续异常增长、明确故障或无进展，不为小幅越线中断并重复安排已在运行的工作。
 4. 首次实际运行核对原生线程声明、阶段耗时及峰值内存；只在这些证据支持时调整下一次配置。不为比较并行数重复完整帧实验，不降低检查或验收要求来提速。
+
+2026-09-14 03:10 CEST快照：空闲10.09 GiB；Chrome私有常驻约3.67 GiB，Word约0.02 GiB。关闭不用的应用后应重新测量，而非继续沿用关闭前的预算。不要把多进程的共享内存重复相加；约2.27 GiB的Java进程已核实属于Vivado。完整记录在验证目录的 `application_memory_snapshot.json`。
 
 ## Vivado操作入口
 
@@ -49,7 +52,7 @@ t10_prepare_build
 
 ## 验证与参考
 
-配置探针结果见 `docs/verification/performance/`；它只验证参数与子进程传递，不证明T10综合、时序、整帧仿真或具体加速倍数通过。用户GUI保存的XPR及IP生成产物保持现场，未并入本次配置修改；下一次正式作业仍须冻结当时实际工程。
+配置探针结果见 `docs/verification/performance/`：同一小探针已完成综合、布局布线、报告和MATLAB配置查询，place/route原生日志均确认最多8 CPUs。最终续跑157.245秒，进程组工作集峰值5.415 GiB，系统可用最低12.901 GiB，越过4 GiB告警后正常完成。先前4 GiB越线被误作硬停止条件的记录保留，4 GiB现改为告警，续跑复用已有成功检查点；不重跑MATLAB、综合或已完成的优化。即使小探针完整成功，也不证明T10综合、时序、整帧仿真或具体加速倍数通过。用户GUI保存的XPR及IP生成产物保持现场，未并入本次配置修改；下一次正式作业仍须冻结当时实际工程。
 
 - [AMD Vivado 2021.1实现指南：多线程](https://www.amd.com/content/dam/xilinx/support/documents/sw_manuals/xilinx2021_1/ug904-vivado-implementation.pdf)
 - [AMD Vivado 2021.1 xelab命令选项](https://docs.amd.com/r/2021.1-English/ug900-vivado-logic-simulation/xelab-xvhdl-and-xvlog-xsim-Command-Options)
