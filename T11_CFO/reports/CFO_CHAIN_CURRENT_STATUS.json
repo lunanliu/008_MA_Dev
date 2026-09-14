@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-09-14T13:50:20.3717509Z",
-  "stage": "COORD003_ACCEPTED_PHASE004_READY",
+  "updated_utc": "2026-09-14T13:51:57.8060061Z",
+  "stage": "PHASE004_DISPATCHED",
   "rotator_functional_acceptance": "PASS_LIMITED_SCOPE",
   "verified_complex_samples": 20480,
   "formal_T11_T12_T13_PASS": false,
@@ -15,7 +15,7 @@
   "coordinate_expected_native_results": 373,
   "next_job": "CFO-PHASE004",
   "next_job_scope": "Independent 74-point CORDIC/unwrap/phaseOLS native validation",
-  "next_job_delivered": false,
+  "next_job_delivered": true,
   "next_job_document": "docs/PHASE74_NATIVE_JOB_004.md",
   "matlab_allowed_for_this_job": false,
   "estimator": "PHASE_PATH_RTL_READY_NATIVE_NOT_RUN_FFT_QUALITY_PENDING",
