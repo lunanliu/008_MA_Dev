@@ -1,0 +1,1 @@
+create_clock -name cfo_clock -period 6.666667 [get_ports clk]

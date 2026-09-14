@@ -1,0 +1,17 @@
+{
+  "status": "PUBLISHED_PHASE_NODES_MATCH",
+  "published_cases": 19,
+  "scalar_nodes_checked": 6156,
+  "unique_vectors": 27,
+  "complex_points_per_vector": 74,
+  "full_transactions_in_tb": 33,
+  "protocol_error_results": 5,
+  "discarded_transactions": 6,
+  "expected_stall_cycles": 150,
+  "phase_linear_true": 22,
+  "phase_linear_false": 5,
+  "both_unwrap_directions_covered": true,
+  "source_file_count": 58,
+  "no_matlab_run": true,
+  "no_new_waveform_experiment": true
+}

@@ -8,3 +8,8 @@
 *.wdb
 *.pb
 .Xil/
+/vivado/CFO_COORD/*
+!/vivado/CFO_COORD/CFO_COORD.xpr
+/vivado/CFO_PHASE74/*
+!/vivado/CFO_PHASE74/CFO_PHASE74.xpr
+__pycache__/

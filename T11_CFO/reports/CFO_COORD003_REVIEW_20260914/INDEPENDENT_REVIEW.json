@@ -1,0 +1,178 @@
+{
+  "schema": "cfo_coord003_astra_review_v1",
+  "utc": "2026-09-14T13:25:29.302321+00:00",
+  "scope": "Coordinate-control arithmetic and protocol only",
+  "acceptance": "PASS_LIMITED_SCOPE",
+  "guard_telemetry_and_cancel": "PASS",
+  "frozen_artifact_count": 28,
+  "artifact_hashes": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\ATTEMPT_ARTIFACT_MANIFEST.json",
+      "sha256": "0E11C0622FAEE2513D672D82457DC77C4397EF779A2675BFB146A41ED89C72EB"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\ATTEMPT_COMPLETION.json",
+      "sha256": "418CA8A9198BF234D39FA051AE13BAFE32550ED088E50C0DACE6FF6E8FC78C6C"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\controller_events.jsonl",
+      "sha256": "922D986327B9D54A7A0020A042A489024CF8C29ACAE57500CA75BD9ED4918B4E"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\coordinate_actual.txt",
+      "sha256": "7FD32C181B2267F13F73E28034038264E1841C03779C5B78D893CE2CA7096C86"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\create.jou",
+      "sha256": "752754BF2C1328052810ED4D355566DF1F1B64474E7E725A4B1200B16D60786B"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\create.log",
+      "sha256": "5EF08A4D99B4C74BAAC3C4F4FB01442F13817BB75EF1877BC1BF5893117FCD64"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\create.samples.jsonl",
+      "sha256": "A094F6AABED074F068F62E18F540AE3002B12ABA4F4E12A40100D85E7F521B5C"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\create.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\create.stdout.log",
+      "sha256": "E03C904B8FECE83BE4EF5317CFC99B9BD6CE3FD47A7F401DA920E4DFCF1F35F9"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\create_actual_sources.csv",
+      "sha256": "AC9916A41873963732264AC63025A3600BD9D822651649348EACF54CB5C1FE9A"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\create_project_identity.txt",
+      "sha256": "4DC9EA764A3D3776537EB51B4305CDB9D1787842D8E85D8084437D5FD7D56451"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\create_verify.json",
+      "sha256": "96114C516DD8C85A00C69EEA4265BB1C85F36B4CD4BD0F89E00D96C699109995"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\EXECUTION_FREEZE.json",
+      "sha256": "15DDAA4ABAD506A60E49AF0678144A2A85619CF18001741D32446538294B5F92"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\FINAL_XPR_AUDIT.json",
+      "sha256": "262D8BC67211A4AC5897B85E882C50D8B5BF925291D237835D6D0F46DC300058"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\hold.jou",
+      "sha256": "29F0162BB93A3C934D6738B882B5DE681DC0BFC48D63FF9D0FE9FFE31FE52D7F"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\hold.log",
+      "sha256": "DBDF44C494108CAA9E0184826926CB33CA35A9607E0D56CDF37A21D666BD74EF"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\hold.samples.jsonl",
+      "sha256": "29C8DCCCF1181D72A52F6E2CE0CD714057DF92D6DB3CE991B52F4BE74DE09F20"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\hold.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\hold.stdout.log",
+      "sha256": "7F103C09AC67D8181D0444D7282DA04A56B1333CC9A5366EC5BCC2B538DDB146"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\report_clock.json",
+      "sha256": "C387D76F82124134D9FA7E9BFC707D63C4C97AB20E437BAE21195730CA3643DE"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\simulate.jou",
+      "sha256": "F1D66EBD7030AF29F581E37AD2259F45654EF5CBCC278EAA758F8B32FAB20B85"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\simulate.log",
+      "sha256": "DC16423F15D0DAF71718229187B39013E4DB1ED0313F8E86048E112E3F8A5813"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\simulate.samples.jsonl",
+      "sha256": "F9A0C8E15AFD571655276B6E5437C6E2B4DAE7A7AEAC6650672FCBCF66D67F31"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\simulate.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\simulate.stdout.log",
+      "sha256": "747AD4912133C7E396E8FA4EEAE8F24BB1AE636AF829D2F2E52545F488F498A3"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\simulate_actual_sources.csv",
+      "sha256": "AC9916A41873963732264AC63025A3600BD9D822651649348EACF54CB5C1FE9A"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\simulate_project_identity.txt",
+      "sha256": "4DC9EA764A3D3776537EB51B4305CDB9D1787842D8E85D8084437D5FD7D56451"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_COORD003\\attempt_20260914T131705246420Z_luna\\simulate_verify.json",
+      "sha256": "2D9D3A91EC2B938591328D14B00486BBFF09FD5F2D00D02CA8F8A84B95E9016E"
+    }
+  ],
+  "completion_sha256": "418CA8A9198BF234D39FA051AE13BAFE32550ED088E50C0DACE6FF6E8FC78C6C",
+  "manifest_sha256": "63D4B0A5AC490CDC259BE20286DBBB367DD2315DD623851BE6E05BA210C442CA",
+  "final_xpr_sha256": "7605D752B0BB2C0B7BE2841D823E5C0AC3C25EA15D848239E3200AFBC40239A4",
+  "independently_recomputed_results": 373,
+  "unique_vectors": 367,
+  "published_matlab_parameters": 216,
+  "max_latency_cycles": 435,
+  "latency_us_at_target_150MHz": 2.9,
+  "stalled_cycles": 1311,
+  "invalid_descriptors": 7,
+  "reset_discards": 3,
+  "abort_discards": 3,
+  "stages": [
+    {
+      "stage": "hold",
+      "seconds": 12.8591915,
+      "saved_samples": 13,
+      "saved_ready_pid_samples": 3,
+      "maximum_instant_private_bytes": 1179860992,
+      "job_peak_private_bytes": 1197543424,
+      "min_available_physical_bytes": 13293469696,
+      "ready_to_trigger_seconds": 3.0538644,
+      "trigger_to_zero_seconds": 0.1366766
+    },
+    {
+      "stage": "create",
+      "seconds": 14.6530291,
+      "saved_samples": 15,
+      "saved_ready_pid_samples": 1,
+      "maximum_instant_private_bytes": 1179324416,
+      "job_peak_private_bytes": 1202556928,
+      "min_available_physical_bytes": 13298073600,
+      "ready_to_trigger_seconds": null,
+      "trigger_to_zero_seconds": null
+    },
+    {
+      "stage": "simulate",
+      "seconds": 25.7889656,
+      "saved_samples": 25,
+      "saved_ready_pid_samples": 12,
+      "maximum_instant_private_bytes": 1179316224,
+      "job_peak_private_bytes": 1197256704,
+      "min_available_physical_bytes": 13286178816,
+      "ready_to_trigger_seconds": null,
+      "trigger_to_zero_seconds": null
+    }
+  ],
+  "warning_scope": [
+    "unused IP-generated directory is absent in a no-IP project",
+    "default wave-window size excludes two vector arrays; numeric checks unaffected"
+  ],
+  "formal_T11_T12_T13_PASS": false,
+  "matlab_run": false,
+  "synthesis_or_timing_qualified": false,
+  "t10_operated": false,
+  "next_gate": "74-point estimation backend"
+}

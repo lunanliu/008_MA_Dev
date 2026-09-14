@@ -1,0 +1,1018 @@
+{
+  "schema": "phase74_published_case_v1",
+  "generated_utc": "2026-09-14T13:38:55.097Z",
+  "family": "rcfo004",
+  "case_id": 3,
+  "status": "PASS",
+  "source_inputs": {
+    "mat": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\reference\\rcfo004\\results\\case_003\\bit_audit.mat",
+      "exists": true,
+      "bytes": 748591,
+      "sha256": "0914F42A01C2827DE756AFE2810B51EDC60412F6FA8C9A1061935E152CFCC4BD",
+      "header": {
+        "text": "MATLAB 7.3 MAT-file, Platform: PCWIN64, Created on: Sun Sep 13 02:43:55 2026 HDF5 schema 1.00 .",
+        "version_bytes": "0002",
+        "endian_indicator": "IM",
+        "format": "MATLAB 7.3 MAT-file / HDF5",
+        "first_128_sha256": "728246E77BA7DC5397ED7845DA66F364C3B4386E97A1AD4D0ED468EFBC6759CE"
+      }
+    },
+    "json": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\reference\\rcfo004\\results\\case_003\\result.json",
+      "exists": true,
+      "bytes": 4911,
+      "sha256": "925B6A81885877C7E38CF44ACABF072266305673C90EB5E8E0D1F7DB0BBEF82D"
+    }
+  },
+  "decoder": {
+    "tool_path": "D:\\008_MA_Dev\\T11_CFO\\tools\\extract_phase74_published.py",
+    "tool_sha256": "EA71650C8E1018200516FA3F0079E1A6B77427A1965F6B14A5036490AF2B58CF",
+    "python_executable": "C:\\Users\\lunan\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "hdf5_library": {
+      "path": "C:\\Program Files\\National Instruments\\Shared\\UsiCore\\Bin\\hdf5.dll",
+      "exists": true,
+      "bytes": 3334400,
+      "sha256": "428A0CEDA92BCCB06B039896C708982A6A19B2A8B1D42E48BBE098DED7CBB05D"
+    },
+    "hdf5_version": {
+      "major": 1,
+      "minor": 12,
+      "release": 0
+    },
+    "method": "ctypes HDF5 C API; MATLAB 7.3 MAT-file read-only",
+    "matlab_started": false,
+    "vivado_started": false,
+    "recomputed_fields": false
+  },
+  "json_context": {
+    "case_id": {
+      "present": true,
+      "value": 3,
+      "json_path": "case_id"
+    },
+    "label": {
+      "present": false,
+      "value": null,
+      "json_path": "label"
+    },
+    "profile": {
+      "present": true,
+      "value": "NCO32_ROM10_C16F14",
+      "json_path": "profile"
+    },
+    "scope": {
+      "present": false,
+      "value": null,
+      "json_path": "scope"
+    },
+    "bittrue.valid": {
+      "present": true,
+      "value": true,
+      "json_path": "bittrue.valid"
+    },
+    "bittrue.mode": {
+      "present": true,
+      "value": "MAIN_PHASE",
+      "json_path": "bittrue.mode"
+    },
+    "bittrue.hz": {
+      "present": true,
+      "value": 999.8244171142578,
+      "json_path": "bittrue.hz"
+    },
+    "formal_pass": {
+      "present": true,
+      "value": false,
+      "json_path": "formal_pass"
+    },
+    "quality_screen_pass": {
+      "present": true,
+      "value": true,
+      "json_path": "quality_screen_pass"
+    }
+  },
+  "phase_fields": {
+    "bittrue.estimate.phase_q16": {
+      "present": true,
+      "value": 65524493.0,
+      "json_path": "bittrue.estimate.phase_q16"
+    },
+    "bittrue.estimate.phase_linear": {
+      "present": true,
+      "value": true,
+      "json_path": "bittrue.estimate.phase_linear"
+    },
+    "bittrue.estimate.phase_fft_consistent": {
+      "present": true,
+      "value": true,
+      "json_path": "bittrue.estimate.phase_fft_consistent"
+    },
+    "bittrue.estimate.frequency_q16": {
+      "present": true,
+      "value": 65524493.0,
+      "json_path": "bittrue.estimate.frequency_q16"
+    },
+    "bittrue.estimate.fft_q16": {
+      "present": true,
+      "value": 65403639.0,
+      "json_path": "bittrue.estimate.fft_q16"
+    },
+    "bittrue.estimate.spectrum_valid": {
+      "present": true,
+      "value": true,
+      "json_path": "bittrue.estimate.spectrum_valid"
+    },
+    "bittrue.estimate.coherence_grid": {
+      "present": true,
+      "value": 0.9916345092703098,
+      "json_path": "bittrue.estimate.coherence_grid"
+    },
+    "bittrue.estimate.secondary_power_ratio": {
+      "present": true,
+      "value": 0.0473066389173662,
+      "json_path": "bittrue.estimate.secondary_power_ratio"
+    }
+  },
+  "cordic_json_context": {
+    "bittrue.coarse_rotation": {
+      "present": true,
+      "value": {
+        "output_saturation_components": 0,
+        "coefficient_clipped_queries": 0,
+        "rom_entries": 1024
+      },
+      "json_path": "bittrue.coarse_rotation"
+    },
+    "bittrue.final_rotation": {
+      "present": true,
+      "value": {
+        "output_saturation_components": 0,
+        "coefficient_clipped_queries": 0,
+        "rom_entries": 1024
+      },
+      "json_path": "bittrue.final_rotation"
+    },
+    "bittrue.front": {
+      "present": true,
+      "value": {
+        "fft_data_saturation": 0,
+        "pilot_product_saturation": 0,
+        "fractional_bits": 21,
+        "sum_width": 38
+      },
+      "json_path": "bittrue.front"
+    }
+  },
+  "mat_datasets": {
+    "z_codes": {
+      "path": "/ba/estimator/z_codes",
+      "shape": [
+        1,
+        74
+      ],
+      "count": 74,
+      "datatype": {
+        "class_id": 6,
+        "size_bytes": 16,
+        "order_id": 0,
+        "sign_id": -1,
+        "members": [
+          {
+            "name": "real",
+            "offset_bytes": 0,
+            "class_id": 1,
+            "size_bytes": 8,
+            "order_id": 0,
+            "sign_id": -1
+          },
+          {
+            "name": "imag",
+            "offset_bytes": 8,
+            "class_id": 1,
+            "size_bytes": 8,
+            "order_id": 0,
+            "sign_id": -1
+          }
+        ]
+      },
+      "values": [
+        {
+          "real": 1998176,
+          "imag": 714981
+        },
+        {
+          "real": 1802548,
+          "imag": 1142429
+        },
+        {
+          "real": 1487710,
+          "imag": 1497202
+        },
+        {
+          "real": 1141234,
+          "imag": 1808509
+        },
+        {
+          "real": 677265,
+          "imag": 2017045
+        },
+        {
+          "real": 227519,
+          "imag": 2123166
+        },
+        {
+          "real": -242997,
+          "imag": 2121018
+        },
+        {
+          "real": -709022,
+          "imag": 2015595
+        },
+        {
+          "real": -1123056,
+          "imag": 1769166
+        },
+        {
+          "real": -1527304,
+          "imag": 1483241
+        },
+        {
+          "real": -1809116,
+          "imag": 1106570
+        },
+        {
+          "real": -2001280,
+          "imag": 688323
+        },
+        {
+          "real": -2107441,
+          "imag": 227917
+        },
+        {
+          "real": -2122596,
+          "imag": -258245
+        },
+        {
+          "real": -2006040,
+          "imag": -746066
+        },
+        {
+          "real": -1789373,
+          "imag": -1180149
+        },
+        {
+          "real": -1474679,
+          "imag": -1511813
+        },
+        {
+          "real": -1092047,
+          "imag": -1830557
+        },
+        {
+          "real": -687471,
+          "imag": -2011943
+        },
+        {
+          "real": -206527,
+          "imag": -2095719
+        },
+        {
+          "real": 259239,
+          "imag": -2081457
+        },
+        {
+          "real": 743810,
+          "imag": -1972832
+        },
+        {
+          "real": 1165018,
+          "imag": -1791063
+        },
+        {
+          "real": 1546513,
+          "imag": -1463516
+        },
+        {
+          "real": 1825055,
+          "imag": -1066021
+        },
+        {
+          "real": 1993668,
+          "imag": -642759
+        },
+        {
+          "real": 2126625,
+          "imag": -211181
+        },
+        {
+          "real": 2110224,
+          "imag": 283227
+        },
+        {
+          "real": 2016133,
+          "imag": 737448
+        },
+        {
+          "real": 1759402,
+          "imag": 1176380
+        },
+        {
+          "real": 1485549,
+          "imag": 1571778
+        },
+        {
+          "real": 1089225,
+          "imag": 1837037
+        },
+        {
+          "real": 636262,
+          "imag": 2019491
+        },
+        {
+          "real": 171678,
+          "imag": 2120817
+        },
+        {
+          "real": -302073,
+          "imag": 2093204
+        },
+        {
+          "real": -757886,
+          "imag": 2013198
+        },
+        {
+          "real": -1189484,
+          "imag": 1770351
+        },
+        {
+          "real": -1541970,
+          "imag": 1438618
+        },
+        {
+          "real": -1852702,
+          "imag": 1093627
+        },
+        {
+          "real": -2031268,
+          "imag": 665390
+        },
+        {
+          "real": -2117576,
+          "imag": 168392
+        },
+        {
+          "real": -2087039,
+          "imag": -309155
+        },
+        {
+          "real": -1952311,
+          "imag": -791786
+        },
+        {
+          "real": -1743922,
+          "imag": -1205782
+        },
+        {
+          "real": -1444536,
+          "imag": -1551756
+        },
+        {
+          "real": -1029435,
+          "imag": -1838447
+        },
+        {
+          "real": -633398,
+          "imag": -2024898
+        },
+        {
+          "real": -153312,
+          "imag": -2093131
+        },
+        {
+          "real": 316545,
+          "imag": -2096905
+        },
+        {
+          "real": 777615,
+          "imag": -1982962
+        },
+        {
+          "real": 1180047,
+          "imag": -1737647
+        },
+        {
+          "real": 1576155,
+          "imag": -1459741
+        },
+        {
+          "real": 1829371,
+          "imag": -1041065
+        },
+        {
+          "real": 2038313,
+          "imag": -625188
+        },
+        {
+          "real": 2155723,
+          "imag": -152539
+        },
+        {
+          "real": 2104383,
+          "imag": 340075
+        },
+        {
+          "real": 1973112,
+          "imag": 766738
+        },
+        {
+          "real": 1757657,
+          "imag": 1181689
+        },
+        {
+          "real": 1407286,
+          "imag": 1576834
+        },
+        {
+          "real": 1068545,
+          "imag": 1859533
+        },
+        {
+          "real": 615685,
+          "imag": 2028850
+        },
+        {
+          "real": 130179,
+          "imag": 2138213
+        },
+        {
+          "real": -346476,
+          "imag": 2132020
+        },
+        {
+          "real": -793030,
+          "imag": 1962095
+        },
+        {
+          "real": -1226530,
+          "imag": 1721393
+        },
+        {
+          "real": -1627235,
+          "imag": 1405485
+        },
+        {
+          "real": -1844588,
+          "imag": 1066339
+        },
+        {
+          "real": -2037134,
+          "imag": 600391
+        },
+        {
+          "real": -2129814,
+          "imag": 129194
+        },
+        {
+          "real": -2104741,
+          "imag": -375553
+        },
+        {
+          "real": -1962481,
+          "imag": -801957
+        },
+        {
+          "real": -1755971,
+          "imag": -1217330
+        },
+        {
+          "real": -1427855,
+          "imag": -1595351
+        },
+        {
+          "real": -1011004,
+          "imag": -1867129
+        }
+      ]
+    },
+    "angle_turn_q31": {
+      "path": "/ba/estimator/angle_turn_q31",
+      "shape": [
+        1,
+        74
+      ],
+      "count": 74,
+      "datatype": {
+        "class_id": 1,
+        "size_bytes": 8,
+        "order_id": 0,
+        "sign_id": -1
+      },
+      "values": [
+        117443717.0,
+        193070721.0,
+        269522127.0,
+        344471889.0,
+        426153611.0,
+        500384833.0,
+        575857169.0,
+        652478569.0,
+        730187399.0,
+        810308327.0,
+        886119483.0,
+        960520675.0,
+        1036922149.0,
+        -1032362051.0,
+        -952046849.0,
+        -874466697.0,
+        -801056943.0,
+        -720712829.0,
+        -649404959.0,
+        -570444237.0,
+        -494521207.0,
+        -413642603.0,
+        -339765291.0,
+        -259013403.0,
+        -180682993.0,
+        -106594451.0,
+        -33829197.0,
+        45600627.0,
+        119848883.0,
+        201432499.0,
+        278072389.0,
+        353948323.0,
+        432553447.0,
+        509264551.0,
+        585855777.0,
+        659929403.0,
+        739073293.0,
+        817153067.0,
+        891487105.0,
+        965547697.0,
+        1046619903.0,
+        -1023478921.0,
+        -942055329.0,
+        -866982363.0,
+        -793080917.0,
+        -711333525.0,
+        -640486281.0,
+        -561860163.0,
+        -485662755.0,
+        -409140045.0,
+        -332974901.0,
+        -255336383.0,
+        -176830297.0,
+        -101717625.0,
+        -24144065.0,
+        54759683.0,
+        126676433.0,
+        202300901.0,
+        287833711.0,
+        358611747.0,
+        436170155.0,
+        516087931.0,
+        591932995.0,
+        668149237.0,
+        748461731.0,
+        830252821.0,
+        894595017.0,
+        975783919.0,
+        1053034707.0,
+        -1013391893.0,
+        -941152459.0,
+        -866558965.0,
+        -786389949.0,
+        -706489045.0
+      ]
+    },
+    "unwrapped_turn_q31": {
+      "path": "/ba/estimator/unwrapped_turn_q31",
+      "shape": [
+        1,
+        74
+      ],
+      "count": 74,
+      "datatype": {
+        "class_id": 1,
+        "size_bytes": 8,
+        "order_id": 0,
+        "sign_id": -1
+      },
+      "values": [
+        117443717.0,
+        193070721.0,
+        269522127.0,
+        344471889.0,
+        426153611.0,
+        500384833.0,
+        575857169.0,
+        652478569.0,
+        730187399.0,
+        810308327.0,
+        886119483.0,
+        960520675.0,
+        1036922149.0,
+        1115121597.0,
+        1195436799.0,
+        1273016951.0,
+        1346426705.0,
+        1426770819.0,
+        1498078689.0,
+        1577039411.0,
+        1652962441.0,
+        1733841045.0,
+        1807718357.0,
+        1888470245.0,
+        1966800655.0,
+        2040889197.0,
+        2113654451.0,
+        2193084275.0,
+        2267332531.0,
+        2348916147.0,
+        2425556037.0,
+        2501431971.0,
+        2580037095.0,
+        2656748199.0,
+        2733339425.0,
+        2807413051.0,
+        2886556941.0,
+        2964636715.0,
+        3038970753.0,
+        3113031345.0,
+        3194103551.0,
+        3271488375.0,
+        3352911967.0,
+        3427984933.0,
+        3501886379.0,
+        3583633771.0,
+        3654481015.0,
+        3733107133.0,
+        3809304541.0,
+        3885827251.0,
+        3961992395.0,
+        4039630913.0,
+        4118136999.0,
+        4193249671.0,
+        4270823231.0,
+        4349726979.0,
+        4421643729.0,
+        4497268197.0,
+        4582801007.0,
+        4653579043.0,
+        4731137451.0,
+        4811055227.0,
+        4886900291.0,
+        4963116533.0,
+        5043429027.0,
+        5125220117.0,
+        5189562313.0,
+        5270751215.0,
+        5348002003.0,
+        5429059051.0,
+        5501298485.0,
+        5575891979.0,
+        5656060995.0,
+        5735961899.0
+      ]
+    },
+    "weighted_sum": {
+      "dataset": {
+        "path": "/ba/estimator/weighted_sum",
+        "shape": [
+          1,
+          1
+        ],
+        "count": 1,
+        "datatype": {
+          "class_id": 1,
+          "size_bytes": 8,
+          "order_id": 0,
+          "sign_id": -1
+        },
+        "values": [
+          5196204074564.0
+        ]
+      },
+      "value": 5196204074564.0
+    },
+    "predicted_turn_q31": {
+      "path": "/ba/estimator/predicted_turn_q31",
+      "shape": [
+        1,
+        74
+      ],
+      "count": 74,
+      "datatype": {
+        "class_id": 0,
+        "size_bytes": 8,
+        "order_id": 0,
+        "sign_id": 1
+      },
+      "values": [
+        0,
+        76952300,
+        153904600,
+        230856900,
+        307809200,
+        384761500,
+        461713800,
+        538666100,
+        615618401,
+        692570701,
+        769523001,
+        846475301,
+        923427601,
+        1000379901,
+        1077332201,
+        1154284501,
+        1231236801,
+        1308189101,
+        1385141401,
+        1462093701,
+        1539046001,
+        1615998301,
+        1692950601,
+        1769902901,
+        1846855202,
+        1923807502,
+        2000759802,
+        2077712102,
+        2154664402,
+        2231616702,
+        2308569002,
+        2385521302,
+        2462473602,
+        2539425902,
+        2616378202,
+        2693330502,
+        2770282802,
+        2847235102,
+        2924187402,
+        3001139703,
+        3078092003,
+        3155044303,
+        3231996603,
+        3308948903,
+        3385901203,
+        3462853503,
+        3539805803,
+        3616758103,
+        3693710403,
+        3770662703,
+        3847615003,
+        3924567303,
+        4001519603,
+        4078471903,
+        4155424203,
+        4232376504,
+        4309328804,
+        4386281104,
+        4463233404,
+        4540185704,
+        4617138004,
+        4694090304,
+        4771042604,
+        4847994904,
+        4924947204,
+        5001899504,
+        5078851804,
+        5155804104,
+        5232756404,
+        5309708704,
+        5386661005,
+        5463613305,
+        5540565605,
+        5617517905
+      ]
+    },
+    "centered_residual_times74": {
+      "path": "/ba/estimator/centered_residual_times74",
+      "shape": [
+        1,
+        74
+      ],
+      "count": 74,
+      "datatype": {
+        "class_id": 1,
+        "size_bytes": 8,
+        "order_id": 0,
+        "sign_id": -1
+      },
+      "values": [
+        111247350.0,
+        13175446.0,
+        -23890710.0,
+        -172078522.0,
+        177898706.0,
+        -23461066.0,
+        -132978402.0,
+        -157465002.0,
+        -101481856.0,
+        132996616.0,
+        48551960.0,
+        -140230032.0,
+        -180991156.0,
+        -88702204.0,
+        160152544.0,
+        206613592.0,
+        -55534812.0,
+        195459424.0,
+        -222228396.0,
+        -73605168.0,
+        -149771148.0,
+        140775348.0,
+        -86773764.0,
+        194395748.0,
+        296375814.0,
+        84457722.0,
+        -225383682.0,
+        -42046906.0,
+        -242146162.0,
+        100571222.0,
+        77452882.0,
+        -2198202.0,
+        120110774.0,
+        102262270.0,
+        75542794.0,
+        -137479082.0,
+        24698578.0,
+        108131654.0,
+        -85619734.0,
+        -299606200.0,
+        5266844.0,
+        37273620.0,
+        368149228.0,
+        229078512.0,
+        3315316.0,
+        358152124.0,
+        -93622020.0,
+        30240512.0,
+        -25621496.0,
+        -57411156.0,
+        -115660700.0,
+        -64880568.0,
+        50099596.0,
+        -86032876.0,
+        -40059636.0,
+        104347442.0,
+        -268283258.0,
+        -366542826.0,
+        268414914.0,
+        -188480622.0,
+        -143628630.0,
+        75816594.0,
+        -6118870.0,
+        -60587162.0,
+        188067194.0,
+        546137654.0,
+        -387010042.0,
+        -73501494.0,
+        -51413382.0,
+        252337970.0,
+        -96414188.0,
+        -270965832.0,
+        -32928848.0,
+        185267848.0
+      ]
+    },
+    "cordic.atan_turn_q31": {
+      "path": "/ba/estimator/cordic/atan_turn_q31",
+      "shape": [
+        24,
+        1
+      ],
+      "count": 24,
+      "datatype": {
+        "class_id": 1,
+        "size_bytes": 8,
+        "order_id": 0,
+        "sign_id": -1
+      },
+      "values": [
+        268435456.0,
+        158466703.0,
+        83729454.0,
+        42502378.0,
+        21333666.0,
+        10677233.0,
+        5339919.0,
+        2670123.0,
+        1335082.0,
+        667543.0,
+        333772.0,
+        166886.0,
+        83443.0,
+        41722.0,
+        20861.0,
+        10430.0,
+        5215.0,
+        2608.0,
+        1304.0,
+        652.0,
+        326.0,
+        163.0,
+        81.0,
+        41.0
+      ]
+    },
+    "cordic.iterations": {
+      "dataset": {
+        "path": "/ba/estimator/cordic/iterations",
+        "shape": [
+          1,
+          1
+        ],
+        "count": 1,
+        "datatype": {
+          "class_id": 1,
+          "size_bytes": 8,
+          "order_id": 0,
+          "sign_id": -1
+        },
+        "values": [
+          24.0
+        ]
+      },
+      "value": 24.0
+    },
+    "cordic.saturation": {
+      "dataset": {
+        "path": "/ba/estimator/cordic/saturation",
+        "shape": [
+          1,
+          1
+        ],
+        "count": 1,
+        "datatype": {
+          "class_id": 1,
+          "size_bytes": 8,
+          "order_id": 0,
+          "sign_id": -1
+        },
+        "values": [
+          0.0
+        ]
+      },
+      "value": 0.0
+    }
+  },
+  "length_checks": {
+    "z_codes": {
+      "expected": 74,
+      "actual": 74,
+      "matches": true
+    },
+    "angle_turn_q31": {
+      "expected": 74,
+      "actual": 74,
+      "matches": true
+    },
+    "unwrapped_turn_q31": {
+      "expected": 74,
+      "actual": 74,
+      "matches": true
+    },
+    "weighted_sum": {
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    },
+    "predicted_turn_q31": {
+      "expected": 74,
+      "actual": 74,
+      "matches": true
+    },
+    "centered_residual_times74": {
+      "expected": 74,
+      "actual": 74,
+      "matches": true
+    },
+    "cordic.atan_turn_q31": {
+      "expected": 24,
+      "actual": 24,
+      "matches": true
+    },
+    "cordic.iterations": {
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    },
+    "cordic.saturation": {
+      "expected": 1,
+      "actual": 1,
+      "matches": true
+    }
+  },
+  "missing_fields": [],
+  "optional_missing_fields": [
+    "json.label",
+    "json.scope"
+  ],
+  "normalization": {
+    "performed_utc": "2026-09-14T13:45:32.845Z",
+    "source_redecoded": false,
+    "z_codes_integral_iq_components_converted": 148,
+    "reason": "Context-only missing label/scope is optional for rcfo004; preserve estimator field names and expose exact I/Q components as integers."
+  }
+}

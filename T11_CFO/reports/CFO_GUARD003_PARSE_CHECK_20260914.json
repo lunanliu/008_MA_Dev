@@ -1,0 +1,87 @@
+{
+  "schema": "cfo_guard003_parse_check_v1",
+  "recorded_utc": "2026-09-14T13:05:11.940Z",
+  "source": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_native_guard_v3.py",
+    "bytes": 36155,
+    "sha256": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034"
+  },
+  "self_check": {
+    "command": [
+      "C:\\Python314\\python.exe",
+      "-I",
+      "-B",
+      "-X",
+      "utf8",
+      "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_native_guard_v3.py",
+      "--root",
+      "D:\\008_MA_Dev\\T11_CFO",
+      "--self-check"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"schema\": \"cfo_guard003_self_check_v1\", \"checks\": {\"root\": true, \"python\": true, \"vivado\": true, \"xpr\": true, \"probe\": true, \"lock\": true, \"job_kill_on_close\": true, \"create_suspended\": true, \"pointer_size_8\": true, \"pid_stride_8\": true, \"accounting_class_1\": true, \"pid_parser_expected\": true, \"api_argtypes_restype_complete\": true, \"job_census_method\": true}, \"telemetry\": {\"schema\": \"cfo_guard003_self_check_v1\", \"checks\": {\"pointer_size_bytes\": true, \"pid_stride_bytes\": 8, \"pid_width_bits\": 64, \"basic_accounting_class\": 1, \"pid_parser_expected\": true, \"api_argtypes_restype_complete\": true, \"job_census_method\": true, \"job_accounting_active_field\": true}, \"decoded_synthetic\": {\"ids\": [1234, 5678], \"assigned_processes\": 2, \"listed_processes\": 2, \"capacity\": 2, \"issues\": [], \"stride_bytes\": 8}, \"native_started\": false}, \"native_started\": false}\n",
+    "stderr": ""
+  },
+  "ast_contract": {
+    "top_level_functions": [
+      "api_contract_complete",
+      "append_jsonl",
+      "decode_pid_payload",
+      "detail",
+      "err",
+      "freeze",
+      "info",
+      "inh",
+      "main",
+      "markers",
+      "mem",
+      "mono",
+      "native_snapshot",
+      "sha",
+      "snapshot",
+      "spawn",
+      "table",
+      "telemetry_self_check",
+      "utc",
+      "verify",
+      "write_json"
+    ],
+    "job_methods": [
+      "__init__",
+      "accounting",
+      "assign",
+      "census",
+      "close",
+      "extended",
+      "kill",
+      "pid_list"
+    ],
+    "api_contract_count": 19,
+    "pointer_size_bytes": 8,
+    "pid_stride_bytes": 8,
+    "pid_width_bits": 64,
+    "basic_accounting_class": 1,
+    "checks": {
+      "ast_parse": true,
+      "source_utf8": true,
+      "pointer_size_expression": true,
+      "basic_accounting_class_1": true,
+      "decode_pid_payload_function": true,
+      "job_pid_list_method": true,
+      "job_accounting_method": true,
+      "job_census_method": true,
+      "api_argtypes_restype_complete": true,
+      "empty_verified_guard": true,
+      "no_native_probe_started": true
+    }
+  },
+  "execution_scope": {
+    "native_started": false,
+    "vivado_started": false,
+    "matlab_started": false,
+    "t10_operated": false,
+    "normal_error_repeated": false,
+    "rotator_computation_repeated": false
+  },
+  "status": "PASS"
+}

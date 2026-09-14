@@ -1,0 +1,319 @@
+{
+  "schema": "phase74_published_manifest_v1",
+  "generated_utc": "2026-09-14T13:45:32.875Z",
+  "root": "D:\\008_MA_Dev\\T11_CFO",
+  "output_directory": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published",
+  "selected_cases": {
+    "rcfo004": [
+      1,
+      3,
+      11,
+      21,
+      31,
+      41,
+      51,
+      61,
+      71,
+      81
+    ],
+    "rcfo003": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "source_file_count": 38,
+  "output_case_count": 19,
+  "output_files": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo003_case_001.json",
+      "bytes": 21946,
+      "sha256": "EF8C585F27780E69E997ADCCC91E09A566E02B015B7CE018AE226CA61FA486B1"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo003_case_002.json",
+      "bytes": 20622,
+      "sha256": "5E4CF6EC3BD3B9043AEC98390DC0BBD3698AA3B6B2F24B8667D75E6DA665FA71"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo003_case_003.json",
+      "bytes": 21776,
+      "sha256": "0E7B08C5D31484FDC4C45328EDA2535DDC710AC0638332A5DE0E9C386D3BAADF"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo003_case_004.json",
+      "bytes": 21918,
+      "sha256": "BC2550E629D7337F998368752FFF8D0340D4A7AC11FFAE971DB4ABA7B01B03A0"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo003_case_005.json",
+      "bytes": 21969,
+      "sha256": "7D8A479E6265CE3640349F485207B7044A665DDF406B5D3454BE68FC30C83108"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo003_case_006.json",
+      "bytes": 21793,
+      "sha256": "EE8DE10626A4CC2C32CE4EB5FC5C9F9A32B1111B10B40CA60D694C7144099569"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo003_case_007.json",
+      "bytes": 21966,
+      "sha256": "C4872B5A1E0D4D5E3E2C429774DB10F8E11D0FE74DD4752A9E5AC700DCF0415C"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo003_case_008.json",
+      "bytes": 21164,
+      "sha256": "D5F02593CDBA18289C463E31E74D756D57700EEED4D7FA64ECDD05083849AF1E"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo003_case_009.json",
+      "bytes": 21832,
+      "sha256": "383E255D1F794970001E0D162A84E7C5460D120092FED093DCA76EF39A1F7885"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo004_case_001.json",
+      "bytes": 21892,
+      "sha256": "11E5555B8B2106A11D4ECF453B686757BB79A6C582E8D09E862722CDFD26C3A4"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo004_case_003.json",
+      "bytes": 21733,
+      "sha256": "ED5AB15AD9CA72A2934318776D57D798107D4F1325EC55453F2F72F485242C0A"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo004_case_011.json",
+      "bytes": 20962,
+      "sha256": "7FEE808AC1CA626ED830443D092B698C5CC08329A5787C03E5C942EA308ECAD1"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo004_case_021.json",
+      "bytes": 21732,
+      "sha256": "04BE7331A820E0ED59BD7F8AF421617218C108D1C095B8537B394333B431FDD7"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo004_case_031.json",
+      "bytes": 21862,
+      "sha256": "87EE488172FFD8C4A85615AF16957B7D8F9C9FC2C8C2047F31C91F79930309A0"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo004_case_041.json",
+      "bytes": 20765,
+      "sha256": "A7FC424BA189EA26A43AFDF276006DD5930F4F30BED9D9DFC041EA9A90A1B2A0"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo004_case_051.json",
+      "bytes": 21698,
+      "sha256": "4B4B94E4F26BC9CE9F1BBFF1F7461EF70142DBF31B47FAC66BB8D3C796F90917"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo004_case_061.json",
+      "bytes": 21775,
+      "sha256": "4D3F4B7205C5EA6CE80B053F99481B38F64E86B2C6AF566D53879D7727B219A0"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo004_case_071.json",
+      "bytes": 19717,
+      "sha256": "A0585726EDF101F2F9919371CC850F286AE9308DBBB23F9A530310BFDC4DE9FD"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\phase74_published\\rcfo004_case_081.json",
+      "bytes": 21610,
+      "sha256": "E2AFC86AAE6310B63712B3C1516E0452A1A676B5F6FEF300291465EBB9954C4F"
+    }
+  ],
+  "summary": [
+    {
+      "family": "rcfo003",
+      "case_id": 1,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": []
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 2,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": []
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 3,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": []
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 4,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": []
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 5,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": []
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 6,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": []
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 7,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": []
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 8,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": []
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 9,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": []
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 1,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": [
+        "json.label",
+        "json.scope"
+      ]
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 3,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": [
+        "json.label",
+        "json.scope"
+      ]
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 11,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": [
+        "json.label",
+        "json.scope"
+      ]
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 21,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": [
+        "json.label",
+        "json.scope"
+      ]
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 31,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": [
+        "json.label",
+        "json.scope"
+      ]
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 41,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": [
+        "json.label",
+        "json.scope"
+      ]
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 51,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": [
+        "json.label",
+        "json.scope"
+      ]
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 61,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": [
+        "json.label",
+        "json.scope"
+      ]
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 71,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": [
+        "json.label",
+        "json.scope"
+      ]
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 81,
+      "status": "PASS",
+      "missing_fields": [],
+      "optional_missing_fields": [
+        "json.label",
+        "json.scope"
+      ]
+    }
+  ],
+  "all_cases_pass": true,
+  "decoder": {
+    "tool_path": "D:\\008_MA_Dev\\T11_CFO\\tools\\extract_phase74_published.py",
+    "tool_sha256": "A4A6E7E7110ED05D062AC6C5D97AEA060399AE9658705E386F7EE4B3BD38E353",
+    "python_executable": "C:\\Users\\lunan\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "normalization_only": true,
+    "source_redecoded": false,
+    "matlab_started": false,
+    "vivado_started": false,
+    "global_package_install": false,
+    "new_signal_generated": false,
+    "original_hdf5_library": {
+      "path": "C:\\Program Files\\National Instruments\\Shared\\UsiCore\\Bin\\hdf5.dll",
+      "exists": true,
+      "bytes": 3334400,
+      "sha256": "428A0CEDA92BCCB06B039896C708982A6A19B2A8B1D42E48BBE098DED7CBB05D"
+    },
+    "original_hdf5_version": {
+      "major": 1,
+      "minor": 12,
+      "release": 0
+    }
+  }
+}
