@@ -15,3 +15,6 @@
 __pycache__/
 /vivado/CFO_FFT256/*
 !/vivado/CFO_FFT256/CFO_FFT256.xpr
+
+/vivado/CFO_BACKEND74/*
+!/vivado/CFO_BACKEND74/CFO_BACKEND74.xpr

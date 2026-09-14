@@ -1,0 +1,58 @@
+{
+  "schema": "cfo_fft005_execution_defect_audit_v2",
+  "recorded_utc": "2026-09-14T15:43:12.361Z",
+  "purpose": "补齐冻结后包装器原地修复的可追溯证据；不改变已发布结果。",
+  "native_execution": {
+    "controller_path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_fft256_guard_v1.py",
+    "controller_bytes": 17189,
+    "controller_sha256": "2DC0816B705AA91F5475ED88122B2C64D736E66F03D2797B8BBB4100B6F75606",
+    "execution_freeze_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FFT005\\attempt_20260914T152722549484Z_luna\\EXECUTION_FREEZE.json",
+    "execution_freeze_sha256": "1C5472BD69ACDD4553B1D73074BB389FFE185EF3B3579403A7CDB1B0B68E1396",
+    "stages": {
+      "create": {
+        "launch_utc": "2026-09-14T15:27:22.950Z",
+        "zero_utc": "2026-09-14T15:27:35.519Z",
+        "native_exit_code": 0
+      },
+      "simulate": {
+        "launch_utc": "2026-09-14T15:27:35.870Z",
+        "zero_utc": "2026-09-14T15:28:03.094Z",
+        "native_exit_code": 0
+      }
+    },
+    "native_stages_reexecuted_during_repair": false
+  },
+  "in_place_modification": {
+    "same_named_path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_fft256_guard_v1.py",
+    "observed_last_write_utc": "2026-09-14T15:37:04.4554964Z",
+    "occurred_after_native_execution": true,
+    "change_reason": "修复复核入口以允许记录但不升级非持久短命进程 OpenProcess 竞态，并复用已完成 checkpoint。",
+    "used_by_native_stages": false
+  },
+  "recovered_original": {
+    "recovered_from": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_fft256_guard_v1_initial_20260914T152722549484Z.py",
+    "bytes": 17189,
+    "sha256": "2DC0816B705AA91F5475ED88122B2C64D736E66F03D2797B8BBB4100B6F75606",
+    "archive_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FFT005\\controller_archive_20260914T152722549484Z_evidence_repair\\cfo_fft256_guard_v1_original_frozen_20260914T152722549484Z.py"
+  },
+  "repair_v2": {
+    "current_same_named_path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_fft256_guard_v1.py",
+    "bytes": 21297,
+    "sha256": "E8CA4222FD96936FD4E9ED661038850DD9F49FCFB188E7068DBD2CF86982EE09",
+    "archive_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FFT005\\controller_archive_20260914T152722549484Z_evidence_repair\\cfo_fft256_guard_v2_repair_20260914T152722549484Z.py"
+  },
+  "repair_execution": {
+    "mode": "read_only_checkpoint_reverification",
+    "native_stages_reexecuted": false,
+    "matlab_started": false,
+    "vivado_started_during_repair": false,
+    "published_completion_modified": false,
+    "published_manifest_modified": false
+  },
+  "published_artifacts": {
+    "completion_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FFT005\\attempt_20260914T152722549484Z_luna\\ATTEMPT_COMPLETION.json",
+    "completion_sha256": "27E99A7FD52AC3C20E4360A7378196857C53DD533659483643DBED5F3AA5E8FB",
+    "manifest_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FFT005\\attempt_20260914T152722549484Z_luna\\ATTEMPT_ARTIFACT_MANIFEST.json",
+    "manifest_sha256": "8814D8C7DC82649C32A7B8D0F467D687BC20820FE0083934ACC0441E875AC32A"
+  }
+}

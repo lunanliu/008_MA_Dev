@@ -1,0 +1,15 @@
+{
+  "status": "BACKEND74_REFERENCE_PASS",
+  "cases": 28,
+  "published": 19,
+  "modes_0invalid_1main_2fft_3zero": {
+    "0": 4,
+    "1": 22,
+    "2": 1,
+    "3": 1
+  },
+  "matched_published_scalar_fields": 17575,
+  "new_matlab_run": false,
+  "new_native_run": false,
+  "spectrum_cases": 24
+}

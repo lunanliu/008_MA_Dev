@@ -1,0 +1,138 @@
+{
+  "schema": "fft005_independent_review_v1",
+  "utc": "2026-09-14T15:58:05.377860+00:00",
+  "status": "PASS_LIMITED_ARITHMETIC_SCOPE_WITH_RECORDED_EXECUTION_DEFECT",
+  "attempt": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FFT005\\attempt_20260914T152722549484Z_luna",
+  "completion_sha256": "27E99A7FD52AC3C20E4360A7378196857C53DD533659483643DBED5F3AA5E8FB",
+  "manifest_sha256": "8814D8C7DC82649C32A7B8D0F467D687BC20820FE0083934ACC0441E875AC32A",
+  "artifacts_checked": 52,
+  "numeric": {
+    "status": "FFT256_NUMERIC_PASS_LIMITED_SCOPE",
+    "frozen_files": 27,
+    "published_source_identities": 58,
+    "unique_vectors": 27,
+    "published_cases": 19,
+    "native_checked": true,
+    "actual_project_members": 10,
+    "project_identity": "PASS",
+    "rows": {
+      "B": 36642,
+      "O": 8474,
+      "F": 33,
+      "D": 6,
+      "E": 5
+    },
+    "max_tail_cycles": 5121,
+    "max_total_cycles": 6163,
+    "output_stall_cycles": 246,
+    "full_transactions": 33,
+    "discarded_transactions": 6,
+    "protocol_errors": 5,
+    "saturation_extreme_count": 63,
+    "quality_gate_tested": false,
+    "final_mode_tested": false,
+    "formal_T11_T12_T13_PASS": false
+  },
+  "stages": {
+    "create": {
+      "native_seconds": 12.5389871,
+      "peak_private_bytes": 1200463872,
+      "minimum_available_bytes": 9045336064,
+      "final_job_empty_both_queries": true,
+      "nonpersistent_fault_samples": []
+    },
+    "simulate": {
+      "native_seconds": 27.1296388,
+      "peak_private_bytes": 1200267264,
+      "minimum_available_bytes": 9208217600,
+      "final_job_empty_both_queries": true,
+      "nonpersistent_fault_samples": [
+        {
+          "utc": "2026-09-14T15:27:48.776Z",
+          "issues": [],
+          "query_errors": [],
+          "process_open_failures": [
+            {
+              "pid": 45000,
+              "query_error": "OpenProcess: winerror=87 参数错误。",
+              "memory_error": null
+            }
+          ]
+        },
+        {
+          "utc": "2026-09-14T15:27:50.893Z",
+          "issues": [],
+          "query_errors": [],
+          "process_open_failures": [
+            {
+              "pid": 23524,
+              "query_error": "OpenProcess: winerror=87 参数错误。",
+              "memory_error": null
+            },
+            {
+              "pid": 33640,
+              "query_error": "OpenProcess: winerror=87 参数错误。",
+              "memory_error": null
+            }
+          ]
+        },
+        {
+          "utc": "2026-09-14T15:27:55.820Z",
+          "issues": [],
+          "query_errors": [],
+          "process_open_failures": [
+            {
+              "pid": 26344,
+              "query_error": "OpenProcess: winerror=87 参数错误。",
+              "memory_error": null
+            }
+          ]
+        },
+        {
+          "utc": "2026-09-14T15:28:02.897Z",
+          "issues": [],
+          "query_errors": [],
+          "process_open_failures": [
+            {
+              "pid": 15104,
+              "query_error": "OpenProcess: winerror=87 参数错误。",
+              "memory_error": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "native_stages_reexecuted": false,
+  "initial_wrapper_fail_preserved": true,
+  "wrapper_issue": {
+    "frozen": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_fft256_guard_v1.py",
+      "exists": true,
+      "bytes": 17189,
+      "sha256": "2DC0816B705AA91F5475ED88122B2C64D736E66F03D2797B8BBB4100B6F75606"
+    },
+    "later_same_path": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_fft256_guard_v1.py",
+      "exists": true,
+      "bytes": 21297,
+      "sha256": "E8CA4222FD96936FD4E9ED661038850DD9F49FCFB188E7068DBD2CF86982EE09"
+    },
+    "required": "recover exact original controller bytes into new archive; keep published files and record in-place mutation defect",
+    "resolution": "Exact launch bytes recovered and separately archived; in-place mutation is retained as a historical defect, and later repairs must use new filenames."
+  },
+  "no_new_native_run_by_reviewer": true,
+  "pending": [
+    "quality gate and mode composition",
+    "FFT2048 front end",
+    "full frame",
+    "synthesis/timing/throughput"
+  ],
+  "original_controller_restored_exactly": true,
+  "execution_defect_audit": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FFT005\\controller_archive_20260914T152722549484Z_evidence_repair\\EXECUTION_DEFECT_AUDIT_20260914T154312Z.json",
+    "sha256": "FBDB8C3CC04877C74724E8A80839259A5FB80F7B3A50CBA35665984E19807330"
+  },
+  "archived_original_sha256": "2DC0816B705AA91F5475ED88122B2C64D736E66F03D2797B8BBB4100B6F75606",
+  "archived_repair_sha256": "E8CA4222FD96936FD4E9ED661038850DD9F49FCFB188E7068DBD2CF86982EE09"
+}

@@ -1,0 +1,13 @@
+"""One-time freeze of reviewed BACKEND006. Never rerun after dispatch."""
+from pathlib import Path
+import json,hashlib,datetime
+R=Path(__file__).resolve().parents[1]
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest().upper()
+def main():
+ rtl=['cfo_estimate74_backend.sv','cfo_fft74_quality.sv','cfo_divide_rne64wide.sv','cfo_fft256_core.sv','cfo_phase74_core_v2.sv','cfo_divide_rne64.sv']
+ members=[('sources_1','rtl/'+p) for p in rtl]+[('sources_1','ip/'+p) for p in ['fft256_twiddle.mem','phase74_atan_q31.mem']]+[('constrs_1','constraints/cfo_backend74.xdc'),('sim_1','sim/tb/cfo_estimate74_backend_tb.sv'),('sim_1','sim/vectors/backend74_config.svh'),('sim_1','sim/vectors/backend74_div_config.svh')]+[('sim_1','sim/vectors/backend74_'+p+'.mem') for p in ['z','normal','fft','result','quality','phase','div_input','div_output']]+[('utils_1','vivado/run_threads.tcl')]
+ paths=[p for _,p in members]+['sim/vectors/backend74_cases.json','tools/backend74_reference.py','tools/phase74_reference.py','tools/fft256_reference.py','tools/verify_backend74.py','tools/freeze_backend006_sources.py','tools/cfo_native_guard_v3.py','vivado/backend74_project.tcl','vivado/configure_parallel_jobs.tcl','docs/BACKEND74_CONTRACT_V1_ZH.md','docs/BACKEND74_NATIVE_JOB_006.md','docs/CFO_MAIN_CONTRACT.json','matlab/bittrue/cfo_chain_arithmetic.m','reports/BACKEND74_VECTOR_CHECK.json','docs/FFT005_SOURCE_LOCK.json','reports/FFT005_REVIEW_20260914/INDEPENDENT_REVIEW.json','reports/FFT005_REVIEW_20260914/README_ZH.md','reports/FFT005_REVIEW_20260914/EXECUTION_DEFECT_AUDIT_20260914T154312Z.json','reports/FFT005_REVIEW_20260914/cfo_fft256_guard_v1_original_frozen_20260914T152722549484Z.py','reports/FFT005_REVIEW_20260914/cfo_fft256_guard_v2_repair_20260914T152722549484Z.py']
+ assert len(members)==21 and len(paths)==len(set(paths))
+ lock={'schema':'backend006_source_lock_v1','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'root':str(R),'part':'xcvu11p-flgb2104-2-e','hardware_top':'cfo_estimate74_backend','simulation_top':'cfo_estimate74_backend_tb','project_members':[{'fileset':f,'path':p} for f,p in members],'files':[{'path':p,'bytes':(R/p).stat().st_size,'sha256':sha(R/p)} for p in paths],'native_stages':['create','simulate'],'scope':'74-point estimator backend including actual phase/FFT quality and mode merge; no FFT2048 front end/full-frame/physical qualification'}
+ p=R/'docs/BACKEND006_SOURCE_LOCK.json';assert not p.exists();p.write_text(json.dumps(lock,indent=2)+'\n',encoding='utf-8');print(json.dumps({'path':str(p),'sha256':sha(p),'files':len(paths),'project_members':len(members)}))
+if __name__=='__main__':main()
