@@ -1,0 +1,130 @@
+{
+  "schema": "cfo_coord003_source_lock_v1",
+  "utc": "2026-09-14T12:54:26.709638+00:00",
+  "root": "D:\\008_MA_Dev\\T11_CFO",
+  "part": "xcvu11p-flgb2104-2-e",
+  "hardware_top": "cfo_coordinate_control",
+  "simulation_top": "cfo_coordinate_control_tb",
+  "project_members": [
+    {
+      "fileset": "sources_1",
+      "path": "rtl/cfo_coordinate_control.sv"
+    },
+    {
+      "fileset": "constrs_1",
+      "path": "constraints/cfo_coordinate_control.xdc"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/tb/cfo_coordinate_control_tb.sv"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/coordinate_config.svh"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/coordinate_input.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/coordinate_expected.mem"
+    },
+    {
+      "fileset": "utils_1",
+      "path": "vivado/run_threads.tcl"
+    }
+  ],
+  "files": [
+    {
+      "path": "rtl/cfo_coordinate_control.sv",
+      "bytes": 5564,
+      "sha256": "398DDEF7C34289369E8DDFC345ACB49CC22AEA0819DB83AC4E001B1A7AE414B2"
+    },
+    {
+      "path": "sim/tb/cfo_coordinate_control_tb.sv",
+      "bytes": 4512,
+      "sha256": "656F807B7B799017857A1A752424222AC8BEE7E92FD030E79C9258CBC3767869"
+    },
+    {
+      "path": "constraints/cfo_coordinate_control.xdc",
+      "bytes": 61,
+      "sha256": "2C85AF240563AE054415EB1350B6F600CDAA48B075EE4FAE0C90B8D22721559E"
+    },
+    {
+      "path": "sim/vectors/coordinate_input.mem",
+      "bytes": 20552,
+      "sha256": "47CA6B2CBB40815054969380F4ADE03B0469F41B3B02F2F58E380FDEF526DE53"
+    },
+    {
+      "path": "sim/vectors/coordinate_expected.mem",
+      "bytes": 26424,
+      "sha256": "50B846521B4615F1752EAE3966BAFA6B2D19C49236D26301FADD7535E0ECC444"
+    },
+    {
+      "path": "sim/vectors/coordinate_config.svh",
+      "bytes": 37,
+      "sha256": "2BD086579840641B42CE929B69833D4F45A0572BA71AD11DAAEE3B7B0077359B"
+    },
+    {
+      "path": "sim/vectors/coordinate_cases.json",
+      "bytes": 201213,
+      "sha256": "479EA8D41FAB8A59895320F13DD50E02A32701CC8753F43AF77EB3C04F3AA9FA"
+    },
+    {
+      "path": "tools/freeze_coordinate_vectors.py",
+      "bytes": 6396,
+      "sha256": "20C48645F1CDDE61AA4DF36E7F9987CC2616B84061F411FA9D2B9837DE4A103E"
+    },
+    {
+      "path": "tools/verify_coordinate.py",
+      "bytes": 2936,
+      "sha256": "BD13EE80AE7FC914007AFC0A1B934994DEE545910FC49B75EB3CEBDB2BE3B13A"
+    },
+    {
+      "path": "vivado/coordinate_project.tcl",
+      "bytes": 3238,
+      "sha256": "C993F455F63130789C2089041D717D6935A58CF6728B6A6CF131F74909A09AC9"
+    },
+    {
+      "path": "vivado/run_threads.tcl",
+      "bytes": 471,
+      "sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E"
+    },
+    {
+      "path": "vivado/configure_parallel_jobs.tcl",
+      "bytes": 4994,
+      "sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3"
+    },
+    {
+      "path": "vivado/guard_probe_v2.tcl",
+      "bytes": 1011,
+      "sha256": "AF22DB1691A668249BF77B0AA12B80B5A5DED888C73E0918826F4BC9A10BE720"
+    },
+    {
+      "path": "docs/COORDINATE_CONTRACT_V1_ZH.md",
+      "bytes": 4286,
+      "sha256": "95A1B3BEA68FD8539A63D5721FBFE62BEA75E477EB2E395D2C02D23A6DBD76C8"
+    },
+    {
+      "path": "docs/COORDINATE_NATIVE_JOB_003.md",
+      "bytes": 7700,
+      "sha256": "9EEEBA6ABAAD2E72B951B3075635D29149A0720208B56578D505D534727833E8"
+    },
+    {
+      "path": "docs/CFO_MAIN_CONTRACT.json",
+      "bytes": 3621,
+      "sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E"
+    },
+    {
+      "path": "matlab/bittrue/cfo_chain_arithmetic.m",
+      "bytes": 9686,
+      "sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80"
+    },
+    {
+      "path": "reports/COORDINATE_VECTOR_CHECK.json",
+      "bytes": 617,
+      "sha256": "CD2B44230806EFA83107A4D0C841FA0FC72219CAE7A4B97A3CCDB39972877B7A"
+    }
+  ]
+}

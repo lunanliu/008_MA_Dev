@@ -1,0 +1,157 @@
+{
+  "schema": "cfo_guard002_astra_review_v1",
+  "utc": "2026-09-14T12:47:27.961928+00:00",
+  "manifest_sha256": "4DF016C74F140E06AF00B64B116C6E56549C4C4E0D7A934D01AE29C11BE97B2E",
+  "artifact_hash_checks": [
+    {
+      "path": "assemble_repair_audit.ps1",
+      "sha256": "02DA33795AF78CDE3A76F44564A0EF17C2DE0E04DDF045E6F97FAA129C7EA152"
+    },
+    {
+      "path": "ATTEMPT_COMPLETION_REVIEW.json",
+      "sha256": "16E54075016FEAEC03EF032C775A3203733610BD220D5C04B14D68AA5ECF42F4"
+    },
+    {
+      "path": "ATTEMPT_COMPLETION.json",
+      "sha256": "3A8083654F83CCBDB076B20E40BB1412C90F2A71D1C524A10E50D4BA87B8DBC8"
+    },
+    {
+      "path": "error.jou",
+      "sha256": "0954D98B2D650C50EF94F27E78E9D1C4132CE2FDE9BF2CCFF6CE6204E98B7084"
+    },
+    {
+      "path": "error.log",
+      "sha256": "3F650B3109797A18511014A6A9E62B2D43D039B49327CB3E935C735B4F4C3A5A"
+    },
+    {
+      "path": "error.samples.jsonl",
+      "sha256": "D57F0133A540FD01463D163AB99114015F272735ABAD47AE5CD542060BFFBD4B"
+    },
+    {
+      "path": "error.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "error.stdout.log",
+      "sha256": "98188FA2B75652617EDC7B75241C9EA136BD7C405AAE02C09B15F749BEEAD02D"
+    },
+    {
+      "path": "EXECUTION_FREEZE.json",
+      "sha256": "E408356C263CD5E1673C41129651A634BE9801AE868049A5F08BA46B6512FE73"
+    },
+    {
+      "path": "EXECUTION_REPAIR_AUDIT.json",
+      "sha256": "70266F2F0179DC385551A6FA5CD3FC7F90987F0E9F5952FA4EEFCC5716FB3320"
+    },
+    {
+      "path": "guard_controller.log",
+      "sha256": "DCDBE4FBAF15C8C94D5D7358D066EFF980FFBEFA5A8F6F48BAC119E06BAE216F"
+    },
+    {
+      "path": "GUARD002_ARTIFACT_MANIFEST_FINAL.json",
+      "sha256": "ABDFBFFECBE18ED94DF9829819E596EE285B52A94AA108514452A9121721C789"
+    },
+    {
+      "path": "GUARD002_ARTIFACT_MANIFEST.json",
+      "sha256": "7932293C69BBACB7FDDC28931D35BF05FD68D0C99BDE939DD08A61C9F5864C8A"
+    },
+    {
+      "path": "hold.jou",
+      "sha256": "261AE1657CBF61B38D2DC9D5938CD631E441B33D0339D20AAF9E2CC47143463D"
+    },
+    {
+      "path": "hold.log",
+      "sha256": "130E868F61E65480047BD6A1CF7503345E797A06B49EAC81C58D7F80D1987B85"
+    },
+    {
+      "path": "hold.samples.jsonl",
+      "sha256": "965FC7BB721CB1F0AA7C6C5A27B9C7314CCC1C0EB8D3FB36FA9D1C0B42A255A8"
+    },
+    {
+      "path": "hold.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "hold.stdout.log",
+      "sha256": "754A26407C3317FC65F3492D79FE57B213B41C642824981931D9296F17910483"
+    },
+    {
+      "path": "normal.jou",
+      "sha256": "D0B8028DA59BE31652542151253905A8CAB3F1C768ABF3CF29DA639A65B72714"
+    },
+    {
+      "path": "normal.log",
+      "sha256": "3D67FF4EF67C8CDF293B2B11D56A7378C50CEDC95E772782051B95BD7A9D44F0"
+    },
+    {
+      "path": "normal.samples.jsonl",
+      "sha256": "334ACF4B853895DA9CA4C57BC8F2EC5A9FB07F1FA8E630382AE384A7147861B6"
+    },
+    {
+      "path": "normal.stderr.log",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "normal.stdout.log",
+      "sha256": "58CD6C32FDA7D4AF1DAF8229D0E9DBABFC1B1A6AADCB52D3A4281CE0AB27461D"
+    },
+    {
+      "path": "report_clock.json",
+      "sha256": "DEFE4C7B0A4FA9A13B844D207261C274CDE885A31843BBAC5F17A9A907185070"
+    }
+  ],
+  "modes": [
+    {
+      "mode": "normal",
+      "native_pid_from_ready": 11156,
+      "native_exit_code": 0,
+      "samples": 10,
+      "pid_zero_samples": 9,
+      "instant_private_missing_samples": 9,
+      "native_pid_observed_in_samples": false,
+      "launch_to_zero_seconds": 9.8588247,
+      "ready_to_trigger_seconds": null,
+      "trigger_to_zero_seconds": null,
+      "min_available_bytes": 15967973376,
+      "job_peak_private_bytes": 1198313472
+    },
+    {
+      "mode": "error",
+      "native_pid_from_ready": 12716,
+      "native_exit_code": 7,
+      "samples": 10,
+      "pid_zero_samples": 9,
+      "instant_private_missing_samples": 9,
+      "native_pid_observed_in_samples": false,
+      "launch_to_zero_seconds": 9.7168115,
+      "ready_to_trigger_seconds": null,
+      "trigger_to_zero_seconds": null,
+      "min_available_bytes": 16039002112,
+      "job_peak_private_bytes": 1202057216
+    },
+    {
+      "mode": "hold",
+      "native_pid_from_ready": 13552,
+      "native_exit_code": 3221225786,
+      "samples": 13,
+      "pid_zero_samples": 12,
+      "instant_private_missing_samples": 12,
+      "native_pid_observed_in_samples": false,
+      "launch_to_zero_seconds": 12.7289969,
+      "ready_to_trigger_seconds": 3.1168282,
+      "trigger_to_zero_seconds": 0.1370426,
+      "min_available_bytes": 16049844224,
+      "job_peak_private_bytes": 1199235072
+    }
+  ],
+  "normal_and_error_propagation": "PASS",
+  "automatic_job_termination_deadline": "PASS",
+  "kernel_job_final_empty": "CONFIRMED_BY_KERNEL_COUNT",
+  "per_process_identity_and_instant_resource_telemetry": "FAIL",
+  "overall_guard_acceptance": "PARTIAL_REPAIR_REQUIRED",
+  "defect": "ProcessIdList is ULONG_PTR; v2 uses four-byte strides on 64-bit Windows and emits PID 0, omitting the actual Vivado PID. Job enumeration count and handle-based termination are distinct and remain supported.",
+  "required_repair": "Use pointer-sized parsing, complete ctypes signatures, BasicAccounting cross-check, explicit telemetry failure handling. Validate parser offline then only one affected hold native probe before next computation.",
+  "t10_affected": false,
+  "rerun_all_three_probes_required": false,
+  "source_reference": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-jobobject_basic_process_id_list"
+}

@@ -1,0 +1,19 @@
+{
+  "cases": 367,
+  "published_parameter_matches": 216,
+  "boundary_cases": 151,
+  "error_counts": {
+    "0": 360,
+    "1": 2,
+    "2": 2,
+    "3": 2,
+    "4": 1
+  },
+  "source_files": 117,
+  "sha256": {
+    "coordinate_cases.json": "479EA8D41FAB8A59895320F13DD50E02A32701CC8753F43AF77EB3C04F3AA9FA",
+    "coordinate_config.svh": "2BD086579840641B42CE929B69833D4F45A0572BA71AD11DAAEE3B7B0077359B",
+    "coordinate_expected.mem": "50B846521B4615F1752EAE3966BAFA6B2D19C49236D26301FADD7535E0ECC444",
+    "coordinate_input.mem": "47CA6B2CBB40815054969380F4ADE03B0469F41B3B02F2F58E380FDEF526DE53"
+  }
+}
