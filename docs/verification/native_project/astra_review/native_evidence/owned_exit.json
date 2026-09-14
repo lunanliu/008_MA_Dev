@@ -1,0 +1,14 @@
+{
+  "ended_utc": "2026-09-14T00:14:49.6005001Z",
+  "elapsed_seconds": 48.9424772,
+  "root_pid": 6204,
+  "root_returncode": 1,
+  "root_exited": true,
+  "owned_active_after": 0,
+  "job_empty_utc": "2026-09-14T00:14:49.6004414Z",
+  "timed_out": false,
+  "post_root_cleanup": false,
+  "stop_reason": null,
+  "error": null,
+  "foreign_pid_modified": false
+}

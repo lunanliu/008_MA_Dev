@@ -1,0 +1,17 @@
+{
+  "schema": "T10-MIGRATE-GUI001-tcl-repair-v1",
+  "created_utc": "2026-09-14T00:19:12.4756533Z",
+  "job_id": "T10_MIGRATE_GUI001",
+  "attempt_id": "native_project_20260914T001342964Z_luna",
+  "original_tcl_path": "docs/verification/native_project/native_project_check.tcl",
+  "original_tcl_sha256": "5A31D493CB4AFBDC950545C68223F81AE543EAFB60A25DBB1DBC95B200D8FD9B",
+  "line": 95,
+  "original_statement": "puts $h {\"status\":\"PENDING_ASTRA_REVIEW\",\"part\":\"xcvu11p-flgb2104-2-e\",\"hardware_top\":\"t10_two_pass_system\",\"simulation_top\":\"t10_full023_tb\",\"core_sources\":74,\"ips\":34,\"canonical_ip_sources\":true,\"reopened_in_vivado\":true,\"gui_interaction_test\":false,\"ip_output_generation\":false,\"simulation\":false,\"synthesis\":false,\"implementation\":false}}",
+  "revised_statement": "puts $h {{\"status\":\"PENDING_ASTRA_REVIEW\",\"part\":\"xcvu11p-flgb2104-2-e\",\"hardware_top\":\"t10_two_pass_system\",\"simulation_top\":\"t10_full023_tb\",\"core_sources\":74,\"ips\":34,\"canonical_ip_sources\":true,\"reopened_in_vivado\":true,\"gui_interaction_test\":false,\"ip_output_generation\":false,\"simulation\":false,\"synthesis\":false,\"implementation\":false}}",
+  "reason": "The Tcl catch body used one missing JSON opening brace and one extra closing brace. The native JSON content was written without the outer object, then the extra brace caused invalid command name } at } message options.",
+  "original_native_complete_sha256": "DC2CAE0604E5BEA9248FA18E6D82C98A75F2469BEB599855F18361B160AED941",
+  "repaired_native_complete_sha256": "DD23000482DD4433A74394D3BFF18AFB386EE6D25CB3F018864E37CC4A2E19D5",
+  "original_preserved": true,
+  "frozen_tcl_modified": false,
+  "native_rerun": false
+}

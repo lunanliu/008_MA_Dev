@@ -1,0 +1,709 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:43 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't07_g3_up47'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t07_g3_up47 (xilinx.com:ip:fir_compiler:7.2 (Rev. 16)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:42 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't07_g3_up15'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t07_g3_up15 (xilinx.com:ip:fir_compiler:7.2 (Rev. 16)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:40 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't07_g3_down47'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t07_g3_down47 (xilinx.com:ip:fir_compiler:7.2 (Rev. 16)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:39 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't07_g3_down15'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t07_g3_down15 (xilinx.com:ip:fir_compiler:7.2 (Rev. 16)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:38 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_wp_mult_u64_u33'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_wp_mult_u64_u33 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:38 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_sg_mult_u37_u16'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_sg_mult_u37_u16 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:38 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_sg_div_u53_u37'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_sg_div_u53_u37 (xilinx.com:ip:div_gen:5.1 (Rev. 18)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:37 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_rt_mult_u48_u20'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_rt_mult_u48_u20 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:37 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_rt_mult_u30_u48'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_rt_mult_u30_u48 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:37 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_rt_mult_u30_u43'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_rt_mult_u30_u43 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:37 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_rt_mult_u30_s42'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_rt_mult_u30_s42 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:36 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_rt_mult_s41_u38'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_rt_mult_s41_u38 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:36 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_rt_mult_s41_s41'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_rt_mult_s41_s41 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:36 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_rt_mult_s41_s38'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_rt_mult_s41_s38 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:36 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_pair_max_tracker_2lane_cross'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_pair_max_tracker_2lane_cross (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:36 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_observation_engine_weight_product'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_observation_engine_weight_product (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:36 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_observation_engine_square'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_observation_engine_square (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:36 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_fs_mult_u18_s48'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_fs_mult_u18_s48 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:35 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_fs_mult_u18_s11'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_fs_mult_u18_s11 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:35 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_fs_mult_s29_s48'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_fs_mult_s29_s48 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:35 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_fs_mult_s29_s11'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_fs_mult_s29_s11 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:35 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_dds_phase_s32_sincos18'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_dds_phase_s32_sincos18 (xilinx.com:ip:dds_compiler:6.0 (Rev. 21)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:34 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't06_cordic_translate48_parallel'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t06_cordic_translate48_parallel (xilinx.com:ip:cordic:6.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:34 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't05_mult_cfo_s19_const40_full59'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t05_mult_cfo_s19_const40_full59 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:34 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't05_cmpy_rotate_18x18'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t05_cmpy_rotate_18x18 (xilinx.com:ip:cmpy:6.0 (Rev. 20)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:33 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't04_div_u63_u47'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t04_div_u63_u47 (xilinx.com:ip:div_gen:5.1 (Rev. 18)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:32 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't04_cmpy_17x16'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t04_cmpy_17x16 (xilinx.com:ip:cmpy:6.0 (Rev. 20)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:32 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't03_xfft_2048_main'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t03_xfft_2048_main (xilinx.com:ip:xfft:9.1 (Rev. 6)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:30 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 't03_xfft_16384_aux'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of t03_xfft_16384_aux (xilinx.com:ip:xfft:9.1 (Rev. 6)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:28 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'farrow_mul_t16'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of farrow_mul_t16 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:28 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'farrow_mul_h16'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of farrow_mul_h16 (xilinx.com:ip:mult_gen:12.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:28 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'farrow_add_32'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of farrow_add_32 (xilinx.com:ip:c_addsub:12.0 (Rev. 14)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:27 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'farrow_add_28'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of farrow_add_28 (xilinx.com:ip:c_addsub:12.0 (Rev. 14)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 02:14:27 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xcvu11p-flgb2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'farrow_add_18'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of farrow_add_18 (xilinx.com:ip:c_addsub:12.0 (Rev. 14)) to Vivado generation flows.
+

@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "case_id": 1,
+      "frame_id": 6001,
+      "generation": 1,
+      "rtl_result_hex": "fda8456500031231d03f8000",
+      "status_hex": "4800",
+      "value_q18": -3.9303835E+7,
+      "estimate_ppm": -149.93223190307617,
+      "physical_truth_ppm": -150,
+      "accepted_by_T08_value_contract": true,
+      "clamped": false
+    },
+    {
+      "case_id": 2,
+      "frame_id": 6002,
+      "generation": 1,
+      "rtl_result_hex": "fffffed1000000018cd68000",
+      "status_hex": "4800",
+      "value_q18": -303,
+      "estimate_ppm": -0.001155853271484375,
+      "physical_truth_ppm": 0,
+      "accepted_by_T08_value_contract": true,
+      "clamped": false
+    },
+    {
+      "case_id": 3,
+      "frame_id": 6003,
+      "generation": 1,
+      "rtl_result_hex": "0257d36efffcedea00ca8000",
+      "status_hex": "4800",
+      "value_q18": 3.931019E+7,
+      "estimate_ppm": 149.95647430419922,
+      "physical_truth_ppm": 150,
+      "accepted_by_T08_value_contract": true,
+      "clamped": false
+    },
+    {
+      "case_id": 4,
+      "frame_id": 6004,
+      "generation": 1,
+      "rtl_result_hex": "fda7ae0c000312f83f3e7e5e",
+      "status_hex": "4800",
+      "value_q18": -3.934258E+7,
+      "estimate_ppm": -150.08003234863281,
+      "physical_truth_ppm": -150,
+      "accepted_by_T08_value_contract": false,
+      "clamped": false
+    }
+  ],
+  "C04_boundary_rejection_expected": true,
+  "T06_partition_repaired": false
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "t06_v2_official_xfft_completion_v2",
+  "status": "T06_V2_OFFICIAL_XFFT_TRACE_SUBGATE_PASS",
+  "attempt_id": "attempt_20260902T142609651Z_12196_721808b0",
+  "completed_utc": "2026-09-02T16:03:22.6252399Z",
+  "git_revision": "e0d9fa2c0bed4b6b51036d4fb56bf741e9c1ff92",
+  "source_bittrue_attempt": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T06_initial_sfo\\v2_bittrue_study\\attempt_20260902T133426764Z_26680_32c30174",
+  "case_rows_retained": 91,
+  "numeric_case_count": 89,
+  "source_completion_sha256": "f25a891f7473f1b0069a85960183625a840618c25700b705fbd82e7ef85c02e7",
+  "source_binding_summary_sha256": "f19cb16c66bc01277ca1b8f2d2ef55bd08903f586a94d4403d43110726273dd5",
+  "artifact_manifest_sha256": "9f1004e75805b8a8b3c0b45eb397037b0990580b5b8692506550bd839edd97f9",
+  "source_input_manifest_pre_sha256": "a48cda300b10acd7d0e7ff624d52b1d02465e20369bf5064a9ac21b1a2c322d3",
+  "source_input_manifest_post_sha256": "a48cda300b10acd7d0e7ff624d52b1d02465e20369bf5064a9ac21b1a2c322d3",
+  "fixture_summary_sha256": "4dcc13343f35af920084825e33451660066dc2ef4c6db41a570a550cc1b2a6fe",
+  "matlab_code_analyzer_summary_sha256": "1032fb1f94326fd19c3e6309d59b62a9dbdc390be02042c97e620b065ea8963e",
+  "matlab_code_analyzer_results_sha256": "bb757aad55693b8aede19d4a513f15fb46e248bd106377a87965d95b9ba536ef",
+  "format_contract": {
+    "path": "config/t06_initial_sfo_bittrue_format_v3.json",
+    "sha256": "3e9a0439c037349afe0e51947cb9f8a74d571d8f08e7a3c1e16c7499aaaa0da1"
+  },
+  "frontend_binding": {
+    "path": "config/t06_initial_sfo_frontend_binding_v2.json",
+    "sha256": "095e631cc62e9b4cf7b94dcc4127ff1023ebcee48bc9fc6b88a9725b74fd2ef6"
+  },
+  "shared_gain_s16_requantizer": {
+    "path": "matlab/tasks/T06_initial_sfo/t06_shared_gain_s16_requantize.m",
+    "sha256": "559b0282ed963c903c047b7141e4b259d5a6ab52dfe939b5bc3e5ad50a607920",
+    "bytes": 6398
+  },
+  "shared_gain_case_telemetry_match": true,
+  "frontend_telemetry_comparison_count": 1335,
+  "frontend_contract_version": "0.3_SHARED_GAIN_S16",
+  "independent_component_clipping_used": false,
+  "t05_bundle_contract": {
+    "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/bundle_contract.json",
+    "sha256": "ee7d2a77e60b8349e43e8e170b11374e89269e3261ad80cae58a472a3e532ea7"
+  },
+  "t04_exact_prefix": {
+    "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t04_current_generation_quantized_vectors.mat",
+    "sha256": "63c1f35dc378cb28a3e8d9bcd512485bde1bf681f027e063cf43c15a97802955"
+  },
+  "approved_outage_case_count": 2,
+  "approved_outage_case_ids": [
+    "tdld_-05dB_seed_41003",
+    "tdld_-05dB_seed_41005"
+  ],
+  "job_count": 712,
+  "complex_sample_count": 1458176,
+  "official_xfft": true,
+  "official_xfft_xci_sha256": "c7a24575616c9a8b755f56030e9e9e06f84de13369213eb2c1fadb6811bc82ac",
+  "natural_order": true,
+  "full_capture": true,
+  "cycle_tlast_status_trace": true,
+  "zero_power_bins_preserved": true,
+  "zero_power_substitution": "PHASE_CODE_0_WEIGHT_LOW_CLAMP_1",
+  "all_pair_raw_max_zero": "FAIL_CLOSE",
+  "official_xfft_output_role": "INTEGER_FACT_FOR_DOWNSTREAM_MATLAB_CORE_AND_RTL",
+  "surrogate_comparison_role": "CHARACTERIZATION_ONLY_NOT_AN_LSB_GATE",
+  "surrogate_maximum_abs_i_lsb": 1,
+  "surrogate_maximum_abs_q_lsb": 1,
+  "surrogate_greater_than_1_lsb_count": 0,
+  "downstream_core_node_compare_limit_lsb": 1,
+  "pre_post_provenance_match": true,
+  "t06_overall_pass_claimed": false,
+  "downstream_rtl_ooc_psf_status": "NOT_RUN"
+}

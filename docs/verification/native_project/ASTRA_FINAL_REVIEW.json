@@ -1,0 +1,93 @@
+{
+  "schema": "T10-MIGRATE-GUI001-astra-final-v1",
+  "status": "PASS_PROJECT_MIGRATION_SCOPE_WITH_RECOVERED_PUBLICATION",
+  "reviewer": "T10 Astra",
+  "utc": "2026-09-14T00:26:48.894506+00:00",
+  "scope_complete": true,
+  "T10_PASS": false,
+  "job_id": "T10_MIGRATE_GUI001",
+  "project": "vivado/T10_SFO/T10_SFO.xpr",
+  "device": "xcvu11p-flgb2104-2-e",
+  "hardware_top": "t10_two_pass_system",
+  "simulation_top": "t10_full023_tb",
+  "native_attempt_count": 1,
+  "native_elapsed_seconds": 48.9424772,
+  "native_wrapper_returncode": 1,
+  "native_exit_preserved": true,
+  "owned_active_after": 0,
+  "publication_recovered_offline": true,
+  "native_rerun": false,
+  "core_files": 74,
+  "immutable_files_unchanged": 88,
+  "canonical_ip_count": 34,
+  "CONFIG_values_unchanged": 1071,
+  "CONFIG_before_after_reopen_equal": true,
+  "IPDEF_unchanged": true,
+  "project_reopened_in_native_Vivado": true,
+  "GUI_interaction_test": false,
+  "synthesis": false,
+  "implementation": false,
+  "simulation": false,
+  "full_IP_output_generation": false,
+  "automatic_templates": {
+    "veo": 34,
+    "vho": 34,
+    "xml": 34
+  },
+  "active_relative_source_references": 120,
+  "relative_include_directories": 2,
+  "external_active_sources": 0,
+  "missing_active_sources": 0,
+  "relocated_project_open_test": false,
+  "project_changes": [
+    {
+      "key": "PROJECT_PARAM.PACKAGE",
+      "count": 34,
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "key": "PROJECT_PARAM.PREFHDL",
+      "ip": "t03_xfft_2048_main",
+      "before": "VHDL",
+      "after": "VERILOG"
+    },
+    {
+      "key": "MODELPARAM_VALUE.C_PART",
+      "ips": [
+        "t03_xfft_16384_aux",
+        "t03_xfft_2048_main"
+      ],
+      "before": "xcvu11p-flgc2104-2-e",
+      "after": "xcvu11p-flgb2104-2-e"
+    }
+  ],
+  "inactive_historical_xci": "matlab/source_snapshots/T09_FIXED007/evidence/main_fft.xci",
+  "limitations": [
+    "Original one-time frozen Tcl has a final report brace defect; retained as failed evidence, not a daily entry. Corrected report statement was executed by standalone Tcl 8.6.12 only.",
+    "XPR root Path retains original creation-location metadata; all active source/include paths are relative. No separate relocated-open test.",
+    "This pass is for project identity and migration only; no full-frame, synthesis, timing, throughput or board pass is claimed."
+  ],
+  "evidence": [
+    {
+      "path": "docs/verification/native_project/astra_review/IDENTITY_REVIEW_DRAFT.json",
+      "sha256": "8E0CF093E24A20479AB1D595A9E4BCFDBD3877FEAAA8E52D9015A389E5DA1DFC"
+    },
+    {
+      "path": "docs/verification/native_project/astra_review/TCL_ACTUAL_REPAIR_CHECK.json",
+      "sha256": "93D395E44A67EFB3C0F799109E501C4A2BA8A5F872020D94F11A857536ADE2CF"
+    },
+    {
+      "path": "docs/verification/native_project/astra_review/native_evidence/MANIFEST.json",
+      "sha256": "8C751B8DD6375C1AE674407EE8E34F3C36D6BBC2AD053F0DBE559611ED47B034"
+    },
+    {
+      "path": "docs/verification/native_project/astra_review/native_evidence/luna_review_summary.json",
+      "sha256": "6065E0EC4723EA40B259FBE667618A6A8D07C14E2B17DD8315DBBEB60599FA85"
+    },
+    {
+      "path": "vivado/T10_SFO/T10_SFO.xpr",
+      "sha256": "F55401D6F49B95911F2B602DE0AC568A53727F4DCE875FE77FAA8DC5710DA346"
+    }
+  ]
+}

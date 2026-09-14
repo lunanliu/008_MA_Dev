@@ -1,0 +1,34 @@
+{
+  "purpose": "Native project create/open/IP target review only; no simulation/synthesis/run generation unless separately admitted",
+  "part": "xcvu11p-flgb2104-2-e",
+  "files": [
+    {
+      "path": "tools/vivado/create_project.tcl",
+      "sha256": "03fbcaa247b3b96ef0f7f40a6879a94140c77414dc5ea7a01d6280215bf0ec42"
+    },
+    {
+      "path": "tools/vivado/start_simulation_0ns.tcl",
+      "sha256": "bd7dbb1f6bfe079d1c6cd5ea07eeef262cabadd5ea271fc993b4bc1647b66f50"
+    },
+    {
+      "path": "tools/vivado/setup_waves.tcl",
+      "sha256": "9ff84b8cf9f16c22299035e3816a56d0e8764b74cf49666ac155e515c85d75d0"
+    },
+    {
+      "path": "rtl/sources.f",
+      "sha256": "af563f9fd1df0806305aefbb58dc0f65f5139f2b155784d37c1557580bce9b8b"
+    },
+    {
+      "path": "ip/ip_names.txt",
+      "sha256": "c33880efe087a6cb7fb4ca41221816dbec78d4db1e22b2be7668270800fec00c"
+    },
+    {
+      "path": "ip/expected_user_config.json",
+      "sha256": "1027260998ab9660d71d898c7684e4cea46bebdbc0f34c7ea21175a31daaa4e7"
+    },
+    {
+      "path": "constraints/t10_root_clocks.xdc",
+      "sha256": "2e2c1ff7016504a9d2feb9a9b28b6d5e055062f36609d0fe97b02b9f1f30c05f"
+    }
+  ]
+}

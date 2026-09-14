@@ -1,0 +1,24 @@
+{
+  "status": "PASS_TCL_REPORT_ONLY",
+  "utc": "2026-09-14T00:24:42.671438+00:00",
+  "interpreter": "tkinter.Tcl; no Tk GUI; no Vivado",
+  "tcl_version": "8.6.12",
+  "executed_script": "set rc [catch {\nset h [open $repair_out w]\nputs $h {{\"status\":\"PENDING_ASTRA_REVIEW\",\"part\":\"xcvu11p-flgb2104-2-e\",\"hardware_top\":\"t10_two_pass_system\",\"simulation_top\":\"t10_full023_tb\",\"core_sources\":74,\"ips\":34,\"canonical_ip_sources\":true,\"reopened_in_vivado\":true,\"gui_interaction_test\":false,\"ip_output_generation\":false,\"simulation\":false,\"synthesis\":false,\"implementation\":false}}\nclose $h\n} message options]\nset rc",
+  "catch_return_code": 0,
+  "result": {
+    "status": "PENDING_ASTRA_REVIEW",
+    "part": "xcvu11p-flgb2104-2-e",
+    "hardware_top": "t10_two_pass_system",
+    "simulation_top": "t10_full023_tb",
+    "core_sources": 74,
+    "ips": 34,
+    "canonical_ip_sources": true,
+    "reopened_in_vivado": true,
+    "gui_interaction_test": false,
+    "ip_output_generation": false,
+    "simulation": false,
+    "synthesis": false,
+    "implementation": false
+  },
+  "native_rerun": false
+}

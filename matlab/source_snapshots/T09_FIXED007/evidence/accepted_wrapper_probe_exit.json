@@ -1,0 +1,56 @@
+{
+  "schema": "T08-LUNA-007-supervisor-exit-v1",
+  "stage": "matlab",
+  "attempt_id": "attempt_20260908T214146142Z_luna_wrapper_probe",
+  "execution_job_id": "T09-CLOSED003-R02-WRAPPER-PROBE",
+  "source_job_id": "T09-CLOSED003-R02",
+  "started_utc": "2026-09-08T21:41:46.384053Z",
+  "ended_utc": "2026-09-08T21:41:51.524505Z",
+  "elapsed_seconds": 5.14,
+  "command_argv": [
+    "C:\\Python314\\python.exe",
+    "-c",
+    "import subprocess,sys; subprocess.Popen([sys.executable,'-c','import time; time.sleep(120)'])"
+  ],
+  "command_line": "C:\\Python314\\python.exe -c \"import subprocess,sys; subprocess.Popen([sys.executable,'-c','import time; time.sleep(120)'])\"",
+  "cwd": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED003_rev02\\attempt_20260908T214146142Z_luna\\wrapper_probe",
+  "private_path_prepend": null,
+  "root": {
+    "pid": 29064,
+    "creation_utc": "2026-09-08T21:41:46.393363Z",
+    "exit_seen_utc": "2026-09-08T21:41:46.492304Z",
+    "returncode": 0
+  },
+  "returncode": 0,
+  "supervisor_returncode": 125,
+  "timed_out": false,
+  "cancelled": true,
+  "post_root_cleanup_automatic": true,
+  "root_exit_grace_seconds": 5.0,
+  "graceful_stop_available": false,
+  "graceful_stop_note": "Root exited; automatic cleanup of this owned Job after the frozen grace interval",
+  "owned_active_processes_after": 0,
+  "job_empty_utc": "2026-09-08T21:41:51.520450Z",
+  "root_to_job_empty_seconds": 5.028146,
+  "snapshot_count": 11,
+  "ownership": {
+    "windows_job_object": true,
+    "kill_on_job_close": true,
+    "breakaway_allowed": false,
+    "broad_process_name_kill": false,
+    "job_member_snapshots": true
+  },
+  "stdout": {
+    "exists": true,
+    "bytes": 0,
+    "mtime_utc": "2026-09-08T21:41:46.391406Z"
+  },
+  "stderr": {
+    "exists": true,
+    "bytes": 0,
+    "mtime_utc": "2026-09-08T21:41:46.391406Z"
+  },
+  "progress": null,
+  "launch_error": null,
+  "terminate_error": null
+}

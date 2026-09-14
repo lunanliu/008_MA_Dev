@@ -1,0 +1,45 @@
+{
+  "task": "T08",
+  "status": "PASS_SCOPED_FIRST_SFO_MODULE",
+  "task_state": "PASS",
+  "task_pass": true,
+  "accepted_utc": "2026-09-08T19:31:35.870567+00:00",
+  "scope_decision": "D:\\007 Dev\\OTA_RTL_0829\\docs\\t08\\T08_SHORT_SCOPE_AND_HANDOFF_20260908.md",
+  "scope_decision_sha256": "AF426DA0100C5E168889A825B19B33180795A24603BD2DE2BD53B5029DDFD038",
+  "report": "D:\\007 Dev\\OTA_RTL_0829\\docs\\t08\\T08_FINAL_ACCEPTANCE_AND_HANDOFF_ZH_20260908.md",
+  "report_sha256": "015A177A670DCF0490E075E69FDEFE0B0ACBF8287F6E76AD2ACA207C7960E585",
+  "contract": "D:\\007 Dev\\OTA_RTL_0829\\docs\\t08\\INTERFACE_CONTRACT_rev02.md",
+  "contract_sha256": "FFC122B6ED7C309EA90059CB4502B80B45432623E03F24B24391DC01F582245B",
+  "delivery": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t08\\delivery\\T08_FIRST_SFO_MODULE_20260908",
+  "delivery_manifest_sha256": "BC325D8C4C919CACD1E75E8762780B1E531FDD2CF4564F0258DCED9141AB7C65",
+  "numeric_and_continuity_acceptance": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t08\\design\\T08_009\\independent_acceptance_20260908.json",
+  "numeric_and_continuity_acceptance_sha256": "A6732A1FDB9E87865F997F6335153743DC2295DE6FACF45B3421E714827F4410",
+  "gates": {
+    "frozen_T07_arithmetic_and_first_pass_fft_evm": "PASS_REUSED_BOUND",
+    "descriptor_and_complete_short_transaction_behavior": "PASS_003",
+    "production_full_N_post_synthesis_two_symbol_prefix": "PASS_009",
+    "short_active_segment_continuity": "PASS_009",
+    "production150_internal_physical": "PASS_004_005",
+    "current_interface_build_and_delivery": "PASS"
+  },
+  "remaining_required_T08_work": [],
+  "qualification": {
+    "scoped_first_sfo_module": true,
+    "fullframe_production_simulation": false,
+    "fullframe_service": false,
+    "system500msps": false,
+    "board": false,
+    "cdc": false,
+    "top_io_reset_timing": false
+  },
+  "preserved_nonpasses": [
+    "002 old descriptor timing failure",
+    "004 initial no-load report classification failure; later005 independently accepted exact checkpoint",
+    "006 interrupted fullframe",
+    "007 cancelled by user scope",
+    "008 TB elaboration failure, corrected009"
+  ],
+  "no_new_experiments": true,
+  "next_task_auto_start": false,
+  "manager_handoff_required": true
+}

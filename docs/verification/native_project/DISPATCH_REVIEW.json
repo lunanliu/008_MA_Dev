@@ -1,0 +1,19 @@
+{
+  "job_id": "T10_MIGRATE_GUI001",
+  "dispatched": true,
+  "executor": "01a08298-b5b6-79b3-b5b4-18b8ac68993a",
+  "attempt": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna",
+  "actual_started_utc": "2026-09-14T00:14:00.6312160Z",
+  "verified_utc": "2026-09-14T00:15:04.011173+00:00",
+  "monitoring_handoff_confirmed": true,
+  "evidence": "Executor-created actual launch.json and live dedicated Windows Job snapshots",
+  "last_snapshot_utc": "2026-09-14T00:14:46.5616732Z",
+  "owned_root_pid": 6204,
+  "native_vivado_pid": 41916,
+  "foreign_gui_pid": 38288,
+  "foreign_gui_not_modified": true,
+  "hard_timeout_seconds": 1200,
+  "new_job_memory_gib": 4,
+  "native_checks_complete": false,
+  "awaiting_independent_review": true
+}

@@ -1,0 +1,7 @@
+{
+  "work_state": "COMPLETE_WRITES_STOPPED",
+  "started_utc": "2026-09-14T02:23:18.016826+02:00",
+  "next_due_utc": null,
+  "scope": "Astra final scope review complete; no further writes or native jobs; manager Git freeze",
+  "ended_utc": "2026-09-14T00:27:15.5173413Z"
+}

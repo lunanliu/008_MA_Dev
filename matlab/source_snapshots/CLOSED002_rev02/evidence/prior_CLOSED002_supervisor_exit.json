@@ -1,0 +1,59 @@
+{
+  "schema": "T08-LUNA-007-supervisor-exit-v1",
+  "stage": "matlab",
+  "attempt_id": "attempt_20260908T205957780Z_luna",
+  "execution_job_id": "T09-CLOSED002",
+  "source_job_id": "T09-CLOSED002",
+  "started_utc": "2026-09-08T20:59:58.080611Z",
+  "ended_utc": "2026-09-08T21:01:29.030558Z",
+  "elapsed_seconds": 90.95,
+  "command_argv": [
+    "C:\\Program Files\\MATLAB\\R2024a\\bin\\matlab.exe",
+    "-singleCompThread",
+    "-batch",
+    "addpath('D:/007 Dev/OTA_RTL_0829/reports/t09/design/T09_CLOSED002/package'); t09_closed002('D:/007 Dev/OTA_RTL_0829/reports/t09/design/T09_CLOSED002/package','D:/007 Dev/OTA_RTL_0829/reports/t09/execution/T09_CLOSED002/attempt_20260908T205957780Z_luna/results');"
+  ],
+  "command_line": "\"C:\\Program Files\\MATLAB\\R2024a\\bin\\matlab.exe\" -singleCompThread -batch \"addpath('D:/007 Dev/OTA_RTL_0829/reports/t09/design/T09_CLOSED002/package'); t09_closed002('D:/007 Dev/OTA_RTL_0829/reports/t09/design/T09_CLOSED002/package','D:/007 Dev/OTA_RTL_0829/reports/t09/execution/T09_CLOSED002/attempt_20260908T205957780Z_luna/results');\"",
+  "cwd": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED002\\attempt_20260908T205957780Z_luna\\work",
+  "private_path_prepend": null,
+  "root": {
+    "pid": 5024,
+    "creation_utc": "2026-09-08T20:59:58.099534Z",
+    "exit_seen_utc": "2026-09-08T21:00:34.191098Z",
+    "returncode": 1
+  },
+  "returncode": 1,
+  "supervisor_returncode": 125,
+  "timed_out": false,
+  "cancelled": true,
+  "graceful_stop_available": false,
+  "graceful_stop_note": "native batch has no supported graceful stop channel; only the dedicated owned job is terminated",
+  "owned_active_processes_after": 0,
+  "job_empty_utc": "2026-09-08T21:01:29.022550Z",
+  "root_to_job_empty_seconds": 54.831452,
+  "snapshot_count": 15,
+  "ownership": {
+    "windows_job_object": true,
+    "kill_on_job_close": true,
+    "breakaway_allowed": false,
+    "broad_process_name_kill": false,
+    "job_member_snapshots": true
+  },
+  "stdout": {
+    "exists": true,
+    "bytes": 0,
+    "mtime_utc": "2026-09-08T20:59:58.095583Z"
+  },
+  "stderr": {
+    "exists": true,
+    "bytes": 356,
+    "mtime_utc": "2026-09-08T21:00:34.185722Z"
+  },
+  "progress": {
+    "exists": true,
+    "bytes": 81,
+    "mtime_utc": "2026-09-08T21:00:18.589795Z"
+  },
+  "launch_error": null,
+  "terminate_error": null
+}

@@ -1,0 +1,1 @@
+scenario=C02 subtest=independent completed=1 pass=1 local_failures=0

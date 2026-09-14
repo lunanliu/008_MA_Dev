@@ -1,0 +1,147 @@
+{
+  "cases": [
+    {
+      "domain": "conditional",
+      "id": "stats_041_scale_32768",
+      "nodes": "inputs/stats_041_nodes.mat",
+      "input_code_scale": 32768,
+      "input_residual_ppm": 5,
+      "source_definition": {
+        "family": "paper_reference",
+        "channel": "paper_offset_snr_project_grid_fixture",
+        "snr_db": 15,
+        "seed": 31001,
+        "channel_seed": 31001,
+        "noise_seed": 940201,
+        "payload_seed": 940002,
+        "residual_ppm": 5,
+        "cfo_hz": 100000,
+        "delay_origin": 0.37
+      },
+      "upstream_supported_accuracy_not_claimed": true
+    },
+    {
+      "domain": "conditional",
+      "id": "stats_091_scale_32768",
+      "nodes": "inputs/stats_091_nodes.mat",
+      "input_code_scale": 32768,
+      "input_residual_ppm": 5,
+      "source_definition": {
+        "family": "los_snr_sweep",
+        "channel": "tdl_d_los_30ns",
+        "snr_db": -5,
+        "seed": 41001,
+        "channel_seed": 41001,
+        "noise_seed": 950201,
+        "payload_seed": 950002,
+        "residual_ppm": 5,
+        "cfo_hz": 100000,
+        "delay_origin": 0.37
+      },
+      "upstream_supported_accuracy_not_claimed": true
+    },
+    {
+      "domain": "conditional",
+      "id": "stats_271_scale_32768",
+      "nodes": "inputs/stats_271_nodes.mat",
+      "input_code_scale": 32768,
+      "input_residual_ppm": 0,
+      "source_definition": {
+        "family": "los_snr_sweep",
+        "channel": "tdl_d_los_30ns",
+        "snr_db": 20,
+        "seed": 41001,
+        "channel_seed": 41001,
+        "noise_seed": 950201,
+        "payload_seed": 950002,
+        "residual_ppm": 0,
+        "cfo_hz": 100000,
+        "delay_origin": 0.37
+      },
+      "upstream_supported_accuracy_not_claimed": true
+    },
+    {
+      "domain": "conditional",
+      "id": "stats_291_scale_32768",
+      "nodes": "inputs/stats_291_nodes.mat",
+      "input_code_scale": 32768,
+      "input_residual_ppm": 5,
+      "source_definition": {
+        "family": "los_snr_sweep",
+        "channel": "tdl_d_los_30ns",
+        "snr_db": 20,
+        "seed": 41001,
+        "channel_seed": 41001,
+        "noise_seed": 950201,
+        "payload_seed": 950002,
+        "residual_ppm": 5,
+        "cfo_hz": 100000,
+        "delay_origin": 0.37
+      },
+      "upstream_supported_accuracy_not_claimed": true
+    },
+    {
+      "domain": "conditional",
+      "id": "stats_041_scale_263403",
+      "nodes": "inputs/stats_041_nodes.mat",
+      "input_code_scale": 263403,
+      "input_residual_ppm": 5,
+      "source_definition": {
+        "family": "paper_reference",
+        "channel": "paper_offset_snr_project_grid_fixture",
+        "snr_db": 15,
+        "seed": 31001,
+        "channel_seed": 31001,
+        "noise_seed": 940201,
+        "payload_seed": 940002,
+        "residual_ppm": 5,
+        "cfo_hz": 100000,
+        "delay_origin": 0.37
+      },
+      "upstream_supported_accuracy_not_claimed": true
+    },
+    {
+      "domain": "actual_first_integer_output",
+      "id": "frame_6001",
+      "nodes": "inputs/frame_6001_nodes.mat",
+      "input_code_scale": 32768,
+      "input_residual_ppm": -0.06825159082346488,
+      "upstream_limitations_retained": false,
+      "source_attempt": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED002_rev02\\attempt_20260908T211456489Z_luna",
+      "window_unit": "Existing signed16 integer code divided by 32768; multiplication restores exact saved code"
+    },
+    {
+      "domain": "actual_first_integer_output",
+      "id": "frame_6006",
+      "nodes": "inputs/frame_6006_nodes.mat",
+      "input_code_scale": 32768,
+      "input_residual_ppm": 1.0403871502084883,
+      "upstream_limitations_retained": false,
+      "source_attempt": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED003_rev02\\attempt_20260908T214146142Z_luna",
+      "window_unit": "Existing signed16 integer code divided by 32768; multiplication restores exact saved code"
+    },
+    {
+      "domain": "actual_first_integer_output",
+      "id": "frame_6010",
+      "nodes": "inputs/frame_6010_nodes.mat",
+      "input_code_scale": 32768,
+      "input_residual_ppm": 16.339788799557553,
+      "upstream_limitations_retained": true,
+      "source_attempt": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED005\\attempt_20260908T221857075Z_luna",
+      "window_unit": "Existing signed16 integer code divided by 32768; multiplication restores exact saved code"
+    },
+    {
+      "domain": "actual_first_integer_output",
+      "id": "frame_6011",
+      "nodes": "inputs/frame_6011_nodes.mat",
+      "input_code_scale": 32768,
+      "input_residual_ppm": 34.69339543871186,
+      "upstream_limitations_retained": true,
+      "source_attempt": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED005\\attempt_20260908T221857075Z_luna",
+      "window_unit": "Existing signed16 integer code divided by 32768; multiplication restores exact saved code"
+    }
+  ],
+  "backend_padding": 2,
+  "mode_count": 2,
+  "T09_PASS": false
+}

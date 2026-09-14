@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "scope": "Source manifest, Python/Tcl syntax and constant dictionary identity; PowerShell AST and embedded C# compiled separately; no native design process",
+  "tcl_files": [
+    "tools/vivado/create_project.tcl",
+    "docs/verification/native_project/native_project_check.tcl",
+    "ip/expected_user_config.tcl"
+  ],
+  "IPs": 34,
+  "core_files": 74,
+  "config_values": 1071,
+  "config_corrections": 436,
+  "job_sha256": "156DF6BABD4530E14794E7EA415742D9D7F5D0474F339717423DFD2E7A196825",
+  "input_files": 132
+}

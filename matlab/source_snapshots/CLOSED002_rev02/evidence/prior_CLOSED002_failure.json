@@ -1,0 +1,8 @@
+{
+  "case_id": 1,
+  "stage": "generate_channel",
+  "identifier": "MATLAB:json:UnsupportedComplexDataType",
+  "message": "Unable to encode complex valued objects of class double as JSON-formatted text.",
+  "report": "错误使用 jsonencode\nUnable to encode complex valued objects of class double as JSON-formatted text.\n\n出错 t09_closed002>writeJson (第 183 行)\nfwrite(f,jsonencode(value,'PrettyPrint',true),'char');\n\n出错 t09_closed002 (第 83 行)\n        writeJson(fullfile(folder,'input_identity.json'),identity);",
+  "elapsed_seconds": 16.9034249
+}

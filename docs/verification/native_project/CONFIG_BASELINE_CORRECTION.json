@@ -1,0 +1,2626 @@
+{
+  "original_manifest_verified": true,
+  "original_json_sha256": "1027260998AB9660D71D898C7684E4CEA46BEBDBC0F34C7EA21175A31DAAA4E7",
+  "corrected_json_sha256": "E4BCEF84AA04F537694925B66CEFB6E76B8410BB9F1CEAB40614DA793D20B661",
+  "reason": "Only spirit:configurableElementValue stores PARAM_VALUE values; later configElementInfo references have no text and must not overwrite values.",
+  "corrections": [
+    {
+      "ip": "farrow_add_18",
+      "parameter": "A_Type",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "A_Width",
+      "old": "",
+      "corrected": "18"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "Add_Mode",
+      "old": "",
+      "corrected": "Add_Subtract"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "B_Type",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "B_Width",
+      "old": "",
+      "corrected": "18"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "Bypass",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "CE",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "C_In",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "C_Out",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "Implementation",
+      "old": "",
+      "corrected": "Fabric"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "Latency",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "Latency_Configuration",
+      "old": "",
+      "corrected": "Manual"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "Out_Width",
+      "old": "",
+      "corrected": "18"
+    },
+    {
+      "ip": "farrow_add_18",
+      "parameter": "SCLR",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "A_Type",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "A_Width",
+      "old": "",
+      "corrected": "28"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "Add_Mode",
+      "old": "",
+      "corrected": "Add_Subtract"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "B_Type",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "B_Width",
+      "old": "",
+      "corrected": "28"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "Bypass",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "CE",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "C_In",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "C_Out",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "Implementation",
+      "old": "",
+      "corrected": "Fabric"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "Latency",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "Latency_Configuration",
+      "old": "",
+      "corrected": "Manual"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "Out_Width",
+      "old": "",
+      "corrected": "28"
+    },
+    {
+      "ip": "farrow_add_28",
+      "parameter": "SCLR",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "A_Type",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "A_Width",
+      "old": "",
+      "corrected": "32"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "Add_Mode",
+      "old": "",
+      "corrected": "Add_Subtract"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "B_Type",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "B_Width",
+      "old": "",
+      "corrected": "32"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "Bypass",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "CE",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "C_In",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "C_Out",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "Implementation",
+      "old": "",
+      "corrected": "Fabric"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "Latency",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "Latency_Configuration",
+      "old": "",
+      "corrected": "Manual"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "Out_Width",
+      "old": "",
+      "corrected": "32"
+    },
+    {
+      "ip": "farrow_add_32",
+      "parameter": "SCLR",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "3"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "19"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "8"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "3"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "17"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "10"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "aresetn",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "channels",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "data_format",
+      "old": "",
+      "corrected": "fixed_point"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "implementation_options",
+      "old": "",
+      "corrected": "pipelined_streaming_io"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "input_width",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "output_ordering",
+      "old": "",
+      "corrected": "natural_order"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "ovflo",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "phase_factor_width",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "rounding_modes",
+      "old": "",
+      "corrected": "convergent_rounding"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "run_time_configurable_transform_length",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "scaling_options",
+      "old": "",
+      "corrected": "scaled"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "target_clock_frequency",
+      "old": "",
+      "corrected": "500"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "throttle_scheme",
+      "old": "",
+      "corrected": "realtime"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "parameter": "transform_length",
+      "old": "",
+      "corrected": "16384"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "aresetn",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "channels",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "data_format",
+      "old": "",
+      "corrected": "fixed_point"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "implementation_options",
+      "old": "",
+      "corrected": "pipelined_streaming_io"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "input_width",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "output_ordering",
+      "old": "",
+      "corrected": "natural_order"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "ovflo",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "phase_factor_width",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "rounding_modes",
+      "old": "",
+      "corrected": "convergent_rounding"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "scaling_options",
+      "old": "",
+      "corrected": "scaled"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "target_clock_frequency",
+      "old": "",
+      "corrected": "500"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "throttle_scheme",
+      "old": "",
+      "corrected": "realtime"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "parameter": "transform_length",
+      "old": "",
+      "corrected": "2048"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "parameter": "ACLKEN",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "parameter": "APortWidth",
+      "old": "",
+      "corrected": "17"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "parameter": "ARESETN",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "parameter": "BPortWidth",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "parameter": "FlowControl",
+      "old": "",
+      "corrected": "NonBlocking"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "parameter": "LatencyConfig",
+      "old": "",
+      "corrected": "Automatic"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "parameter": "OptimizeGoal",
+      "old": "",
+      "corrected": "Performance"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "parameter": "OutputWidth",
+      "old": "",
+      "corrected": "34"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "parameter": "RoundMode",
+      "old": "",
+      "corrected": "Truncate"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "ACLKEN",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "ARESETN",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "FlowControl",
+      "old": "",
+      "corrected": "NonBlocking"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "OutTready",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "algorithm_type",
+      "old": "",
+      "corrected": "Radix2"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "clocks_per_division",
+      "old": "",
+      "corrected": "8"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "divide_by_zero_detect",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "dividend_and_quotient_width",
+      "old": "",
+      "corrected": "63"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "divisor_width",
+      "old": "",
+      "corrected": "47"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "latency_configuration",
+      "old": "",
+      "corrected": "Automatic"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "operand_sign",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "parameter": "remainder_type",
+      "old": "",
+      "corrected": "Remainder"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "parameter": "ACLKEN",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "parameter": "APortWidth",
+      "old": "",
+      "corrected": "18"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "parameter": "ARESETN",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "parameter": "BPortWidth",
+      "old": "",
+      "corrected": "18"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "parameter": "FlowControl",
+      "old": "",
+      "corrected": "NonBlocking"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "parameter": "LatencyConfig",
+      "old": "",
+      "corrected": "Automatic"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "parameter": "OptimizeGoal",
+      "old": "",
+      "corrected": "Performance"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "parameter": "OutputWidth",
+      "old": "",
+      "corrected": "37"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "parameter": "RoundMode",
+      "old": "",
+      "corrected": "Truncate"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "6"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "19"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "40"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "ACLKEN",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "ARESETN",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "Architectural_Configuration",
+      "old": "",
+      "corrected": "Parallel"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "Coarse_Rotation",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "Compensation_Scaling",
+      "old": "",
+      "corrected": "LUT_based"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "Data_Format",
+      "old": "",
+      "corrected": "SignedFraction"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "Functional_Selection",
+      "old": "",
+      "corrected": "Translate"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "Input_Width",
+      "old": "",
+      "corrected": "48"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "Output_Width",
+      "old": "",
+      "corrected": "48"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "Phase_Format",
+      "old": "",
+      "corrected": "Scaled_Radians"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "Pipelining_Mode",
+      "old": "",
+      "corrected": "Maximum"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "Round_Mode",
+      "old": "",
+      "corrected": "Nearest_Even"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "flow_control",
+      "old": "",
+      "corrected": "NonBlocking"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "parameter": "out_tready",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Amplitude_Mode",
+      "old": "",
+      "corrected": "Full_Range"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "DDS_Clock_Rate",
+      "old": "",
+      "corrected": "125"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "DSP48_Use",
+      "old": "",
+      "corrected": "Minimal"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Has_ACLKEN",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Has_ARESETn",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Has_Phase_Out",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Has_TREADY",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Latency_Configuration",
+      "old": "",
+      "corrected": "Auto"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "M_DATA_Has_TUSER",
+      "old": "",
+      "corrected": "User_Field"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Noise_Shaping",
+      "old": "",
+      "corrected": "Taylor_Series_Corrected"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "OUTPUT_FORM",
+      "old": "",
+      "corrected": "Twos_Complement"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Optimization_Goal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Output_Selection",
+      "old": "",
+      "corrected": "Sine_and_Cosine"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Output_Width",
+      "old": "",
+      "corrected": "18"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "PINC1",
+      "old": "",
+      "corrected": "0"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Parameter_Entry",
+      "old": "",
+      "corrected": "Hardware_Parameters"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "PartsPresent",
+      "old": "",
+      "corrected": "Phase_Generator_and_SIN_COS_LUT"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Phase_Increment",
+      "old": "",
+      "corrected": "Fixed"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Phase_Width",
+      "old": "",
+      "corrected": "32"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Phase_offset",
+      "old": "",
+      "corrected": "Streaming"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "Resync",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "S_PHASE_Has_TUSER",
+      "old": "",
+      "corrected": "User_Field"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "parameter": "S_PHASE_TUSER_Width",
+      "old": "",
+      "corrected": "33"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "3"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "29"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "11"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "3"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "29"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "48"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "3"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "18"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "11"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "3"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "18"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "48"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "3"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "4"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "32"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "32"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "4"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "64"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "33"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "5"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "41"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "38"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "5"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "41"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "41"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "5"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "41"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "38"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "5"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "30"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Signed"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "42"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "5"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "30"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "43"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "5"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "30"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "48"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "5"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "48"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "20"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "ACLKEN",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "ARESETN",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "FlowControl",
+      "old": "",
+      "corrected": "NonBlocking"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "OutTready",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "algorithm_type",
+      "old": "",
+      "corrected": "Radix2"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "clocks_per_division",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "divide_by_zero_detect",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "dividend_and_quotient_width",
+      "old": "",
+      "corrected": "53"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "dividend_has_tuser",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "dividend_tuser_width",
+      "old": "",
+      "corrected": "128"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "divisor_has_tuser",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "divisor_width",
+      "old": "",
+      "corrected": "37"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "latency_configuration",
+      "old": "",
+      "corrected": "Automatic"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "operand_sign",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "parameter": "remainder_type",
+      "old": "",
+      "corrected": "Remainder"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "3"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "37"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "SclrCePriority",
+      "old": "",
+      "corrected": "SCLR_Overrides_CE"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "ClockEnable",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "MultType",
+      "old": "",
+      "corrected": "Parallel_Multiplier"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "Multiplier_Construction",
+      "old": "",
+      "corrected": "Use_Mults"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "OptGoal",
+      "old": "",
+      "corrected": "Speed"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "PipeStages",
+      "old": "",
+      "corrected": "4"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "PortAType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "PortAWidth",
+      "old": "",
+      "corrected": "64"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "PortBType",
+      "old": "",
+      "corrected": "Unsigned"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "PortBWidth",
+      "old": "",
+      "corrected": "33"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "SclrCePriority",
+      "old": "",
+      "corrected": "SCLR_Overrides_CE"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "SyncClear",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "parameter": "Use_Custom_Output_Width",
+      "old": "",
+      "corrected": "false"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "CoefficientSource",
+      "old": "",
+      "corrected": "Vector"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "CoefficientVector",
+      "old": "",
+      "corrected": "-20,0,139,0,-555,0,2484,4096,2484,0,-555,0,139,0,-20"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Coefficient_Structure",
+      "old": "",
+      "corrected": "Symmetric"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Coefficient_Width",
+      "old": "",
+      "corrected": "14"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Data_Fractional_Bits",
+      "old": "",
+      "corrected": "0"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Data_Width",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Decimation_Rate",
+      "old": "",
+      "corrected": "2"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Filter_Type",
+      "old": "",
+      "corrected": "Decimation"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Has_ARESETn",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "M_DATA_Has_TREADY",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Number_Channels",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Number_Paths",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Output_Rounding_Mode",
+      "old": "",
+      "corrected": "Convergent_Rounding_to_Even"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Output_Width",
+      "old": "",
+      "corrected": "17"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Quantization",
+      "old": "",
+      "corrected": "Integer_Coefficients"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "RateSpecification",
+      "old": "",
+      "corrected": "Input_Sample_Period"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "Rate_Change_Type",
+      "old": "",
+      "corrected": "Integer"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "parameter": "SamplePeriod",
+      "old": "",
+      "corrected": "0.0625"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "CoefficientSource",
+      "old": "",
+      "corrected": "Vector"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "CoefficientVector",
+      "old": "",
+      "corrected": "-2,0,5,0,-11,0,23,0,-41,0,70,0,-113,0,178,0,-279,0,450,0,-825,0,2592,4096,2592,0,-825,0,450,0,-279,0,178,0,-113,0,70,0,-41,0,23,0,-11,0,5,0,-2"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Coefficient_Structure",
+      "old": "",
+      "corrected": "Symmetric"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Coefficient_Width",
+      "old": "",
+      "corrected": "14"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Data_Fractional_Bits",
+      "old": "",
+      "corrected": "0"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Data_Width",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Decimation_Rate",
+      "old": "",
+      "corrected": "2"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Filter_Type",
+      "old": "",
+      "corrected": "Decimation"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Has_ARESETn",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "M_DATA_Has_TREADY",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Number_Channels",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Number_Paths",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Output_Rounding_Mode",
+      "old": "",
+      "corrected": "Convergent_Rounding_to_Even"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Output_Width",
+      "old": "",
+      "corrected": "17"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Quantization",
+      "old": "",
+      "corrected": "Integer_Coefficients"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "RateSpecification",
+      "old": "",
+      "corrected": "Input_Sample_Period"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "Rate_Change_Type",
+      "old": "",
+      "corrected": "Integer"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "parameter": "SamplePeriod",
+      "old": "",
+      "corrected": "0.125"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "CoefficientSource",
+      "old": "",
+      "corrected": "Vector"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "CoefficientVector",
+      "old": "",
+      "corrected": "-20,0,139,0,-555,0,2484,4096,2484,0,-555,0,139,0,-20"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Coefficient_Structure",
+      "old": "",
+      "corrected": "Symmetric"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Coefficient_Width",
+      "old": "",
+      "corrected": "14"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Data_Fractional_Bits",
+      "old": "",
+      "corrected": "0"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Data_Width",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Filter_Type",
+      "old": "",
+      "corrected": "Interpolation"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Has_ARESETn",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Interpolation_Rate",
+      "old": "",
+      "corrected": "2"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "M_DATA_Has_TREADY",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Number_Channels",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Number_Paths",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Output_Rounding_Mode",
+      "old": "",
+      "corrected": "Convergent_Rounding_to_Even"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Output_Width",
+      "old": "",
+      "corrected": "17"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Quantization",
+      "old": "",
+      "corrected": "Integer_Coefficients"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "RateSpecification",
+      "old": "",
+      "corrected": "Input_Sample_Period"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "Rate_Change_Type",
+      "old": "",
+      "corrected": "Integer"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "parameter": "SamplePeriod",
+      "old": "",
+      "corrected": "0.125"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "CoefficientSource",
+      "old": "",
+      "corrected": "Vector"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "CoefficientVector",
+      "old": "",
+      "corrected": "-2,0,5,0,-11,0,23,0,-41,0,70,0,-113,0,178,0,-279,0,450,0,-825,0,2592,4096,2592,0,-825,0,450,0,-279,0,178,0,-113,0,70,0,-41,0,23,0,-11,0,5,0,-2"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Coefficient_Structure",
+      "old": "",
+      "corrected": "Symmetric"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Coefficient_Width",
+      "old": "",
+      "corrected": "14"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Data_Fractional_Bits",
+      "old": "",
+      "corrected": "0"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Data_Width",
+      "old": "",
+      "corrected": "16"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Filter_Type",
+      "old": "",
+      "corrected": "Interpolation"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Has_ARESETn",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Interpolation_Rate",
+      "old": "",
+      "corrected": "2"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "M_DATA_Has_TREADY",
+      "old": "",
+      "corrected": "true"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Number_Channels",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Number_Paths",
+      "old": "",
+      "corrected": "1"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Output_Rounding_Mode",
+      "old": "",
+      "corrected": "Convergent_Rounding_to_Even"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Output_Width",
+      "old": "",
+      "corrected": "18"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Quantization",
+      "old": "",
+      "corrected": "Integer_Coefficients"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "RateSpecification",
+      "old": "",
+      "corrected": "Input_Sample_Period"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "Rate_Change_Type",
+      "old": "",
+      "corrected": "Integer"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "parameter": "SamplePeriod",
+      "old": "",
+      "corrected": "0.25"
+    }
+  ],
+  "RTL_modified": false,
+  "XCI_modified": false
+}

@@ -1,0 +1,35 @@
+{
+  "job_id": "T10_MIGRATE_GUI001",
+  "destination": "D:/008_MA_Dev",
+  "part": "xcvu11p-flgb2104-2-e",
+  "allowed_actions": [
+    "create_project",
+    "open_project",
+    "retarget_ip",
+    "report_project_and_ip_identity"
+  ],
+  "forbidden_actions": [
+    "synthesis",
+    "implementation",
+    "generate_ip_outputs",
+    "simulation",
+    "clip_development",
+    "resume_old_runner"
+  ],
+  "native_new_vivado_slots": 1,
+  "existing_foreign_vivado_pid": 38288,
+  "existing_foreign_project": "preamble_sync",
+  "foreign_process_must_not_be_modified": true,
+  "existing_foreign_working_set_bytes": 559828992,
+  "free_memory_kib_at_review": 12320556,
+  "new_job_memory_budget_gib": 4,
+  "start_minimum_free_gib": 8,
+  "total_vivado_hard_limit": 2,
+  "matlab_slots": 0,
+  "hard_timeout_seconds": 1200,
+  "admission_expires_utc": "2026-09-14T00:30:50.828010+00:00",
+  "old_jobs_auto_resume_allowed": false,
+  "native_inputs": "D:/008_MA_Dev/docs/provenance/NATIVE_PROJECT_INPUTS.json",
+  "created_utc": "2026-09-14T00:00:50.828010+00:00",
+  "conditions": "Luna rechecks live resource/process ownership immediately before launch; preserve existing foreign GUI."
+}

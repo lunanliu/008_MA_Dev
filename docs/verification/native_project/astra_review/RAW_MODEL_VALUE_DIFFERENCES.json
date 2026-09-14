@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "t03_xfft_16384_aux",
+    "vlnv_before": "xilinx.com:ip:xfft:9.1",
+    "vlnv_after": "xilinx.com:ip:xfft:9.1",
+    "differences": [
+      {
+        "key": "MODELPARAM_VALUE.C_PART",
+        "before": "xcvu11p-flgc2104-2-e",
+        "after": "xcvu11p-flgb2104-2-e"
+      }
+    ]
+  },
+  {
+    "ip": "t03_xfft_2048_main",
+    "vlnv_before": "xilinx.com:ip:xfft:9.1",
+    "vlnv_after": "xilinx.com:ip:xfft:9.1",
+    "differences": [
+      {
+        "key": "MODELPARAM_VALUE.C_PART",
+        "before": "xcvu11p-flgc2104-2-e",
+        "after": "xcvu11p-flgb2104-2-e"
+      }
+    ]
+  }
+]

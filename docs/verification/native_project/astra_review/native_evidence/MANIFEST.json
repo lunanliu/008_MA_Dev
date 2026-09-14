@@ -1,0 +1,108 @@
+{
+  "utc": "2026-09-14T00:25:14.449611+00:00",
+  "source_attempt": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna",
+  "files": [
+    {
+      "name": "launch.json",
+      "sha256": "D75B474D85F6376929E391FDF2440F7009AE268BA1C5922630041D5677BECAF0",
+      "bytes": 1199,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\launch.json"
+    },
+    {
+      "name": "owned_exit.json",
+      "sha256": "D9A39377A2129B253556FE2DE918EFB1E165A0A0FC8EF0C5F82A1789E37BAA21",
+      "bytes": 367,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\owned_exit.json"
+    },
+    {
+      "name": "vivado.log",
+      "sha256": "004EA2DC938E61C3A544D06AA0883D16B4DCECDEBE73E2937E86A7089C5760E3",
+      "bytes": 21872,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\vivado.log"
+    },
+    {
+      "name": "vivado.jou",
+      "sha256": "551F48145660C03DCEBAD5FB46ACCBDB43BECDBA0CBE27307FFC891CAC8AAF5B",
+      "bytes": 986,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\vivado.jou"
+    },
+    {
+      "name": "native_retarget.log",
+      "sha256": "128F4FE52982092D449D12997F91F46A5093D841B0C8475DC3033F8F784AF39C",
+      "bytes": 22943,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\native_retarget.log"
+    },
+    {
+      "name": "native_complete.json",
+      "sha256": "DC2CAE0604E5BEA9248FA18E6D82C98A75F2469BEB599855F18361B160AED941",
+      "bytes": 333,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\native_complete.json"
+    },
+    {
+      "name": "config_before.csv",
+      "sha256": "1E142D1B02467D7BC7974C3E231F3532A4FF02251F0FED82E1CCE6B77A239BD2",
+      "bytes": 66289,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\config_before.csv"
+    },
+    {
+      "name": "config_after.csv",
+      "sha256": "1E142D1B02467D7BC7974C3E231F3532A4FF02251F0FED82E1CCE6B77A239BD2",
+      "bytes": 66289,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\config_after.csv"
+    },
+    {
+      "name": "config_reopened.csv",
+      "sha256": "1E142D1B02467D7BC7974C3E231F3532A4FF02251F0FED82E1CCE6B77A239BD2",
+      "bytes": 66289,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\config_reopened.csv"
+    },
+    {
+      "name": "files_after.csv",
+      "sha256": "D3C1F0E10E50E9EEBAF89209B65278A551B219F7FA82D6539A9FB738106547A3",
+      "bytes": 14486,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\files_after.csv"
+    },
+    {
+      "name": "files_reopened.csv",
+      "sha256": "D3C1F0E10E50E9EEBAF89209B65278A551B219F7FA82D6539A9FB738106547A3",
+      "bytes": 14486,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\files_reopened.csv"
+    },
+    {
+      "name": "ip_after.csv",
+      "sha256": "A5889E1F93A4BA6E52AB6C2D44FA8923536408F61FE6C22F5D9131A017B0646C",
+      "bytes": 5415,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\ip_after.csv"
+    },
+    {
+      "name": "ip_reopened.csv",
+      "sha256": "A5889E1F93A4BA6E52AB6C2D44FA8923536408F61FE6C22F5D9131A017B0646C",
+      "bytes": 5415,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\ip_reopened.csv"
+    },
+    {
+      "name": "runs_after.csv",
+      "sha256": "A7807635BC843F485499A9669F2CE166F42F5E021611679F9ABBC32E162D8F56",
+      "bytes": 86,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\runs_after.csv"
+    },
+    {
+      "name": "runs_reopened.csv",
+      "sha256": "A7807635BC843F485499A9669F2CE166F42F5E021611679F9ABBC32E162D8F56",
+      "bytes": 86,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\runs_reopened.csv"
+    },
+    {
+      "name": "TCL_REPAIR_RECORD.json",
+      "sha256": "611C9D0B8F72E4D9E55A2E805D8829F04B7E42663C1024F9B5C35E7A34923204",
+      "bytes": 1740,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\TCL_REPAIR_RECORD.json"
+    },
+    {
+      "name": "native_complete_repaired.json",
+      "sha256": "DD23000482DD4433A74394D3BFF18AFB386EE6D25CB3F018864E37CC4A2E19D5",
+      "bytes": 402,
+      "original_path": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna\\native_complete_repaired.json"
+    }
+  ]
+}

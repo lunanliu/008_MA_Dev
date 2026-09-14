@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "test_count": 9,
+  "tests": [
+    {
+      "name": "hardlinked_source",
+      "expected_accept": false,
+      "passed": true,
+      "error": "Source must be one regular unlinked file: C:\\Users\\lunan\\AppData\\Local\\Temp\\t10_source_membership_lbjpgald\\repo\\rtl\\t10\\core_0.sv"
+    },
+    {
+      "name": "valid_exact",
+      "expected_accept": true,
+      "actual_accept": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "name": "external_same_name",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "error": "Source outside this project: C:\\Users\\lunan\\AppData\\Local\\Temp\\t10_source_membership_lbjpgald\\core_0.sv"
+    },
+    {
+      "name": "comment_fake_source",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "error": "Not a plain source path: '# C:\\\\Users\\\\lunan\\\\AppData\\\\Local\\\\Temp\\\\t10_source_membership_lbjpgald\\\\repo\\\\rtl\\\\t10\\\\core_0.sv'"
+    },
+    {
+      "name": "additional_core",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "error": "Unapproved additional compiled source: C:\\Users\\lunan\\AppData\\Local\\Temp\\t10_source_membership_lbjpgald\\repo\\rtl\\t10\\extra.sv"
+    },
+    {
+      "name": "duplicate_core",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "error": "Duplicate compiled source: C:\\Users\\lunan\\AppData\\Local\\Temp\\t10_source_membership_lbjpgald\\repo\\rtl\\t10\\core_0.sv"
+    },
+    {
+      "name": "missing_core",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "error": "Missing exact core/TB/XPM source: c:\\users\\lunan\\appdata\\local\\temp\\t10_source_membership_lbjpgald\\repo\\rtl\\t10\\core_0.sv"
+    },
+    {
+      "name": "unknown_ip_location",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "error": "Unapproved additional compiled source: C:\\Users\\lunan\\AppData\\Local\\Temp\\t10_source_membership_lbjpgald\\repo\\ip\\unapproved\\x.vhd"
+    },
+    {
+      "name": "traversal_path",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "error": "Source path must be absolute without traversal: C:\\Users\\lunan\\AppData\\Local\\Temp\\t10_source_membership_lbjpgald\\repo\\rtl\\t10\\..\\t10\\core_0.sv"
+    }
+  ],
+  "validator_sha256": "B832EBBD9A0BD2305A679F01D68965C9BD4D47F610F47DF87A524A9216C546C2",
+  "native_simulation_run": false,
+  "scope": "Temporary-file source membership tests only; no RTL/MATLAB/native execution"
+}

@@ -17,6 +17,9 @@
 *.lck
 *.tmp
 *.zip
+!/docs/verification/native_project/baseline/original_ip_xci.zip
+!/docs/verification/native_project/astra_review/native_evidence/*.log
+!/docs/verification/native_project/astra_review/native_evidence/*.jou
 /vivado/**/*.cache/
 /vivado/**/*.runs/
 /vivado/**/*.sim/
@@ -39,5 +42,8 @@
 /ip/**/impl/
 /ip/**/*.veo
 /ip/**/*.vho
+/ip/config/*/*.xml
+/vivado/**/*.lpr
+/vivado/**/*.wpc
 Thumbs.db
 desktop.ini

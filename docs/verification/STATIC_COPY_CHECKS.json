@@ -1,0 +1,45 @@
+{
+  "checked_utc": "2026-09-14T00:13:56.183044+00:00",
+  "fixture_shape_checks": [
+    {
+      "file": "raw.mem",
+      "lines": 334215,
+      "hex_digits": 32,
+      "status": "PASS"
+    },
+    {
+      "file": "r1.mem",
+      "lines": 334098,
+      "hex_digits": 32,
+      "status": "PASS"
+    },
+    {
+      "file": "r2.mem",
+      "lines": 334080,
+      "hex_digits": 32,
+      "status": "PASS"
+    },
+    {
+      "file": "delay.mem",
+      "lines": 74,
+      "hex_digits": null,
+      "status": "PASS"
+    },
+    {
+      "file": "delta.mem",
+      "lines": 74,
+      "hex_digits": null,
+      "status": "PASS"
+    }
+  ],
+  "source_records": 291,
+  "source_files_changed": [],
+  "files_changed_since_initial_copy_pending_final_freeze": [
+    "tools/analysis/check_prefix.py",
+    "ip/expected_user_config.json",
+    "tools/vivado/create_project.tcl",
+    "tools/analysis/validate_gui.py",
+    "tools/analysis/migration_diff.patch"
+  ],
+  "boundary": "Static copy/shape checks only. Modified new files require declared final provenance; no numerical model, MATLAB or RTL simulation run."
+}

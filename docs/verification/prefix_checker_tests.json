@@ -1,0 +1,61 @@
+{
+  "status": "OFFLINE_CHECKER_TESTS_PASS",
+  "checked_utc": "2026-09-14T00:09:05.831532+00:00",
+  "tests": [
+    {
+      "name": "reviewed_actual_FULL023_trace",
+      "passed": true,
+      "instances": 32,
+      "diagnostics": 45,
+      "last_algorithm_event_time_ps": 1276000,
+      "last_observed_trace_time_ps": 1999300
+    },
+    {
+      "name": "missing_fifo_rejected",
+      "passed": true,
+      "reason": "FIFO binding set mismatch: missing=[('t10_full023_tb.dut.contexts.memory.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.contexts.memory.xpm_fifo_base_inst', 1)] unexpected=[]"
+    },
+    {
+      "name": "missing_clock_domain_rejected",
+      "passed": true,
+      "reason": "FIFO binding set mismatch: missing=[('t10_full023_tb.dut.contexts.memory.xpm_fifo_base_inst', 1)] unexpected=[]"
+    },
+    {
+      "name": "truncated_observation_honestly_labeled",
+      "passed": true,
+      "last_observed_trace_time_ps": 4433,
+      "complete_prefix_time_ps": null,
+      "prefix_closure_proven": false
+    },
+    {
+      "name": "unknown_native_error_rejected",
+      "passed": true,
+      "reason": "Native error without context: ERROR: unknown error"
+    },
+    {
+      "name": "legacy_other_design_11_fifo_rejected",
+      "passed": true,
+      "reason": "FIFO binding set mismatch: missing=[('t10_full023_tb.dut.contexts.memory.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.contexts.memory.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.fine_binding.memory.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.fine_binding.memory.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.owner.fft.u_egress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.owner.fft.u_egress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.owner.fft.u_ingress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.owner.fft.u_ingress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.backend.backend.divider.metadata_fifo.storage.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.backend.backend.divider.metadata_fifo.storage.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.backend.backend.divider.output_fifo.storage.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.backend.backend.divider.output_fifo.storage.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.backend.backend.phase_metadata.storage.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.backend.backend.phase_metadata.storage.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.backend.extractor.width_fifo.fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.backend.extractor.width_fifo.fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[0].engine.input_fifo.storage.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[0].engine.input_fifo.storage.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[0].engine.pair_bfp.u_result_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[0].engine.pair_bfp.u_result_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[0].engine.result_fifo.storage.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[0].engine.result_fifo.storage.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[1].engine.input_fifo.storage.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[1].engine.input_fifo.storage.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[1].engine.pair_bfp.u_result_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[1].engine.pair_bfp.u_result_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[1].engine.result_fifo.storage.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.backend.observations.engines[1].engine.result_fifo.storage.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.frontend.capture.u_reader.u_output_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.frontend.capture.u_reader.u_output_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.frontend.correction.u_raw_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.frontend.correction.u_raw_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.initial_estimator.service.frontend.correction.u_rotate.u_result_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.initial_estimator.service.frontend.correction.u_rotate.u_result_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.residual_estimator.aux_service.u_egress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.residual_estimator.aux_service.u_egress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.residual_estimator.aux_service.u_ingress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.residual_estimator.aux_service.u_ingress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.residual_estimator.front_stage.main.service.u_egress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.residual_estimator.front_stage.main.service.u_egress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.residual_estimator.front_stage.main.service.u_ingress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.residual_estimator.front_stage.main.service.u_ingress_fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.cdc0.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.cdc0.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.cdc1.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.cdc1.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.cdc2.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.cdc2.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.cdc3.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.cdc3.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.cdc4.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.cdc4.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.cdc5.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.cdc5.fifo.gnuram_async_fifo.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.intermediate[0].bank.responses.memory.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.intermediate[0].bank.responses.memory.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.intermediate[1].bank.responses.memory.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.intermediate[1].bank.responses.memory.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.output_buffer.headers.memory.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.output_buffer.headers.memory.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.output_buffer.responses.memory.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.output_buffer.responses.memory.xpm_fifo_base_inst', 1), ('t10_full023_tb.dut.transport.raw_bank.responses.memory.xpm_fifo_base_inst', 0), ('t10_full023_tb.dut.transport.raw_bank.responses.memory.xpm_fifo_base_inst', 1)] unexpected=[('t10_egress015_tb.dut.cdc0.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.cdc0.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 1), ('t10_egress015_tb.dut.cdc1.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.cdc1.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 1), ('t10_egress015_tb.dut.cdc2.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.cdc2.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 1), ('t10_egress015_tb.dut.cdc3.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.cdc3.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 1), ('t10_egress015_tb.dut.cdc4.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.cdc4.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 1), ('t10_egress015_tb.dut.cdc5.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.cdc5.fifo.gnuram_async_fifo.xpm_fifo_base_inst.full021_observer', 1), ('t10_egress015_tb.dut.intermediate[0].bank.responses.memory.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.intermediate[0].bank.responses.memory.xpm_fifo_base_inst.full021_observer', 1), ('t10_egress015_tb.dut.intermediate[1].bank.responses.memory.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.intermediate[1].bank.responses.memory.xpm_fifo_base_inst.full021_observer', 1), ('t10_egress015_tb.dut.output_buffer.headers.memory.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.output_buffer.headers.memory.xpm_fifo_base_inst.full021_observer', 1), ('t10_egress015_tb.dut.output_buffer.responses.memory.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.output_buffer.responses.memory.xpm_fifo_base_inst.full021_observer', 1), ('t10_egress015_tb.dut.raw_bank.responses.memory.xpm_fifo_base_inst.full021_observer', 0), ('t10_egress015_tb.dut.raw_bank.responses.memory.xpm_fifo_base_inst.full021_observer', 1)]"
+    }
+  ],
+  "checker_sha256": "31CA0241D18673CC22F98B3923EA7882CEADB989E7CC614B26996C586AE4B804",
+  "binding_sha256": "E8863F5B61D2293FAEDC00C3BD017BF402A63DEF02266DB008352586CAC93142",
+  "readonly_replay_source_files": {
+    "xpm_trace.csv": {
+      "bytes": 3236524,
+      "sha256": "304E3BCE83A3128D90E4180C39233B5898B918EC529369FF869EC5F546816327"
+    },
+    "events.csv": {
+      "bytes": 205,
+      "sha256": "280C59A61741BAF40DD34670FF536B83E470D1E1066D0CAFFC83A88968AEDF2D"
+    },
+    "native_chunk_stream.log": {
+      "bytes": 38920,
+      "sha256": "9BB2E81B87BAD575CBD3C89CE1D9B8BA305C59BDC691163490EE04F885B39BD2"
+    }
+  },
+  "native_tools_executed": false,
+  "RTL_modified": false,
+  "numerical_or_benign_edge_predicates_changed": false,
+  "new_FLGB_simulation_pass": false
+}

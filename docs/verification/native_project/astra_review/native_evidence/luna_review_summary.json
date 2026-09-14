@@ -1,0 +1,562 @@
+{
+  "schema": "T10-MIGRATE-GUI001-offline-review-v2",
+  "created_utc": "2026-09-14T00:24:40.7276675Z",
+  "job_id": "T10_MIGRATE_GUI001",
+  "attempt_id": "native_project_20260914T001342964Z_luna",
+  "status": "PENDING_ASTRA_REVIEW",
+  "complete": false,
+  "T10_PASS": false,
+  "native_wrapper_returncode": 1,
+  "owned_active_after": 0,
+  "job_empty_utc": "2026-09-14T00:14:49.6004414Z",
+  "foreign_pid_modified": false,
+  "timed_out": false,
+  "native_checks": {
+    "ips": 34,
+    "core_sources": 74,
+    "reopened_in_vivado": true,
+    "implementation": false,
+    "hardware_top": "t10_two_pass_system",
+    "synthesis": false,
+    "canonical_ip_sources": true,
+    "ip_output_generation": false,
+    "simulation": false,
+    "project_part": "xcvu11p-flgb2104-2-e",
+    "simulation_top": "t10_full023_tb"
+  },
+  "target_metadata_changes": [
+    {
+      "ip": "farrow_add_18",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "farrow_add_28",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "farrow_add_32",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "key": "PROJECT_PARAM.PREFHDL",
+      "before": "VHDL",
+      "after": "VERILOG"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "key": "MODELPARAM_VALUE.C_PART",
+      "before": "xcvu11p-flgc2104-2-e",
+      "after": "xcvu11p-flgb2104-2-e"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "key": "MODELPARAM_VALUE.C_PART",
+      "before": "xcvu11p-flgc2104-2-e",
+      "after": "xcvu11p-flgb2104-2-e"
+    }
+  ],
+  "PARAM_VALUE_changes": [],
+  "unapproved_MODELPARAM_changes": [],
+  "canonical_xci_count": 34,
+  "xpr_sources_1_ip_count": 34,
+  "xpr_canonical_xci_set_equal": true,
+  "inactive_historical_xci": {
+    "path": "matlab/source_snapshots/T09_FIXED007/evidence/main_fft.xci",
+    "exists": true,
+    "referenced_in_xpr": false,
+    "classification": "INACTIVE_HISTORICAL_EVIDENCE"
+  },
+  "csv_checks": {
+    "config_before.csv": {
+      "rows": 1071,
+      "source_mismatch": 0
+    },
+    "config_after.csv": {
+      "rows": 1071,
+      "source_mismatch": 0
+    },
+    "config_reopened.csv": {
+      "rows": 1071,
+      "source_mismatch": 0
+    },
+    "files_after.csv": {
+      "rows": 188,
+      "missing": 0,
+      "outside_workspace": 0
+    },
+    "files_reopened.csv": {
+      "rows": 188,
+      "missing": 0,
+      "outside_workspace": 0
+    },
+    "runs_after.csv": {
+      "rows": 2,
+      "nonzero_progress": 0
+    },
+    "runs_reopened.csv": {
+      "rows": 2,
+      "nonzero_progress": 0
+    }
+  },
+  "raw_review_status": "REVIEW_FAILED",
+  "raw_review_problems": [
+    "Algorithm CONFIG/model changed: t03_xfft_16384_aux",
+    "Algorithm CONFIG/model changed: t03_xfft_2048_main",
+    "More than one active XCI source set or missing canonical XCI"
+  ],
+  "path_audit_sha256": "700F5E4AF9C1B9D0BEC4C837331A26418F12453AF9574DC501F846D40DC7E036",
+  "tcl_repair_record_sha256": "611C9D0B8F72E4D9E55A2E805D8829F04B7E42663C1024F9B5C35E7A34923204",
+  "tcl_output_stub_sha256": "04C79C85EA629138BD0B34DB05762EA95A6254F1CED67561302BEE28973132DA",
+  "auto_instantiation_templates_count": 68,
+  "forbidden_ip_config_products": [],
+  "notes": [
+    "The original native run reached project creation, all 34 IP retarget events, CONFIG_SOURCE_DIFFERENCES_after=0, close/reopen, CONFIG_SOURCE_DIFFERENCES_reopened=0 and wrote native_complete content, then failed only on the frozen Tcl catch-body brace error; original root_returncode=1 and logs are preserved.",
+    "Only the two exact t03 FFT MODELPARAM_VALUE.C_PART target migrations are allowed; all 1071 PARAM_VALUE entries and all other MODELPARAM entries remain unchanged.",
+    "The extra matlab/source_snapshots/T09_FIXED007/evidence/main_fft.xci is recorded as inactive historical evidence and is not in XPR sources_1; canonical ip/config XCI set equals the 34 XPR IP references.",
+    "68 .veo/.vho files are recorded as automatic IP instantiation templates emitted during upgrade_ip; no DCP/MIF/EDIF/NGC or other forbidden ip/config product was found.",
+    "XPR paths were audited offline: all 120 File references use $PPRDIR-relative paths, resolve inside D:\\\\008_MA_Dev and exist; VerilogDir options use $PPRDIR/../../rtl/include.",
+    "No Vivado was started by the repair, review, stub or path audit; no second native run was performed.",
+    "PROJECT_PARAM.PACKAGE and PROJECT_PARAM.PREFHDL differences are classified as target/project metadata, not algorithm CONFIG; only PARAM_VALUE/MODELPARAM_VALUE are subject to the algorithm allowlist.",
+    "The raw reviewer XCI-set warning is superseded by the XPR sources_1 versus ip/config exact-set check plus the explicitly recorded inactive MATLAB historical XCI.",
+    "Rev02 is saved only as an attempt-local repair copy; the frozen source Tcl and original root_returncode=1 remain unchanged.",
+    "Offline algorithm review passes the exact two C_PART target changes; PROJECT_PARAM package/PREFHDL changes are recorded as target metadata."
+  ],
+  "all_xci_value_changes": [
+    {
+      "ip": "farrow_add_18",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "farrow_add_28",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "farrow_add_32",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "key": "MODELPARAM_VALUE.C_PART",
+      "before": "xcvu11p-flgc2104-2-e",
+      "after": "xcvu11p-flgb2104-2-e"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "key": "MODELPARAM_VALUE.C_PART",
+      "before": "xcvu11p-flgc2104-2-e",
+      "after": "xcvu11p-flgb2104-2-e"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "key": "PROJECT_PARAM.PREFHDL",
+      "before": "VHDL",
+      "after": "VERILOG"
+    },
+    {
+      "ip": "t04_cmpy_17x16",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "key": "PROJECT_PARAM.PACKAGE",
+      "before": "flgc2104",
+      "after": "flgb2104"
+    }
+  ],
+  "algorithm_config_changes": [
+    {
+      "ip": "t03_xfft_16384_aux",
+      "key": "MODELPARAM_VALUE.C_PART",
+      "before": "xcvu11p-flgc2104-2-e",
+      "after": "xcvu11p-flgb2104-2-e"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "key": "MODELPARAM_VALUE.C_PART",
+      "before": "xcvu11p-flgc2104-2-e",
+      "after": "xcvu11p-flgb2104-2-e"
+    }
+  ],
+  "unapproved_algorithm_changes": [],
+  "offline_review_complete": false,
+  "native_wrapper_clean": false,
+  "native_wrapper_failure": "Frozen Tcl publication brace error only; original root_returncode=1 preserved",
+  "tcl_actual_check": "Astra independent Tcl 8.6.12 check: docs/verification/native_project/astra_review/TCL_ACTUAL_REPAIR_CHECK.json",
+  "revision_script_path": "native_project_check_rev02.tcl",
+  "revision_script_sha256": "820FEBE873EF3933027B29B4E1D2192E522ED92A7582DDB4A7060575B4306CA8"
+}

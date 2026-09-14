@@ -1,0 +1,130 @@
+{
+  "status": "ACCEPT_SCOPED_THREE_SAME_INPUT_PHYSICAL_CASES",
+  "created_utc": "2026-09-08T21:30:33.130552+00:00",
+  "package_files_verified": 68,
+  "result_files_verified": 44,
+  "raw_and_trace_integer_components_checked": 222432,
+  "windows_reextracted": 666,
+  "estimates_independently_recomputed": 60,
+  "maximum_absolute_numerical_difference": {
+    "quotient": 1.1916163935586911e-14,
+    "delay_samples": 5.10702591327572e-15,
+    "peak_ratio_db": 7.034373084024992e-13,
+    "ppm": 1.214306433183765e-15,
+    "fit_rmse_samples": 3.95516952522712e-16,
+    "rate_ppm": 1.8556022690630058e-10
+  },
+  "records": [
+    {
+      "case_id": 1,
+      "frame_id": 6001,
+      "padding": 2,
+      "initial_rate_truth_ppm": -0.06825159088439615,
+      "estimate_ppm": -0.049331575920681714,
+      "post_rate_truth_ppm": -0.01982281796438604,
+      "post_dtp_ppm": -0.01182169292964445,
+      "post_local_cfo_diagnostic_ppm": -0.019821997658134687,
+      "target_met": true
+    },
+    {
+      "case_id": 1,
+      "frame_id": 6001,
+      "padding": 4,
+      "initial_rate_truth_ppm": -0.06825159088439615,
+      "estimate_ppm": -0.058643388132633104,
+      "post_rate_truth_ppm": -0.008646946624403708,
+      "post_dtp_ppm": -0.0007127991165608223,
+      "post_local_cfo_diagnostic_ppm": -0.008705602099565045,
+      "target_met": true
+    },
+    {
+      "case_id": 2,
+      "frame_id": 6002,
+      "padding": 2,
+      "initial_rate_truth_ppm": 0.0,
+      "estimate_ppm": 0.0033406101642890636,
+      "post_rate_truth_ppm": -0.0037252902845841263,
+      "post_dtp_ppm": 0.0011039285656627982,
+      "post_local_cfo_diagnostic_ppm": -0.003751617304078293,
+      "target_met": true
+    },
+    {
+      "case_id": 2,
+      "frame_id": 6002,
+      "padding": 4,
+      "initial_rate_truth_ppm": 0.0,
+      "estimate_ppm": 0.004479400844195852,
+      "post_rate_truth_ppm": -0.0037252902845841263,
+      "post_dtp_ppm": 0.0011039285656627982,
+      "post_local_cfo_diagnostic_ppm": -0.003751617304078293,
+      "target_met": true
+    },
+    {
+      "case_id": 3,
+      "frame_id": 6003,
+      "padding": 2,
+      "initial_rate_truth_ppm": 0.042158003791106465,
+      "estimate_ppm": 0.03235669768618871,
+      "post_rate_truth_ppm": 0.008630390815592838,
+      "post_dtp_ppm": 0.0069615875517737395,
+      "post_local_cfo_diagnostic_ppm": 0.008656439444617569,
+      "target_met": true
+    },
+    {
+      "case_id": 3,
+      "frame_id": 6003,
+      "padding": 4,
+      "initial_rate_truth_ppm": 0.042158003791106465,
+      "estimate_ppm": 0.03878690532866339,
+      "post_rate_truth_ppm": 0.004905100623758087,
+      "post_dtp_ppm": 0.0032295895270586686,
+      "post_local_cfo_diagnostic_ppm": 0.004933058650985331,
+      "target_met": true
+    }
+  ],
+  "aggregate": {
+    "2": {
+      "post_rate_truth_ppm": {
+        "mean_abs": 0.010726166354854334,
+        "max_abs": 0.01982281796438604
+      },
+      "post_dtp_ppm": {
+        "mean_abs": 0.006629069682360329,
+        "max_abs": 0.01182169292964445
+      }
+    },
+    "4": {
+      "post_rate_truth_ppm": {
+        "mean_abs": 0.005759112510915307,
+        "max_abs": 0.008646946624403708
+      },
+      "post_dtp_ppm": {
+        "mean_abs": 0.0016821057364274296,
+        "max_abs": 0.0032295895270586686
+      }
+    }
+  },
+  "matlab_elapsed_seconds": 156.7393702,
+  "execution": {
+    "native_root_returncode": 0,
+    "supervisor_returncode": 125,
+    "owned_active_processes_after": 0,
+    "root_to_job_empty_seconds": 65.04927,
+    "cancel_observed_to_job_empty_seconds": 0.022455,
+    "root_to_empty_exceeds_60s": true,
+    "actual_cancel_cleanup_within_60s": true,
+    "classification": "Delayed post-root cleanup trigger; actual Job termination within cancellation budget; record operational delay separately"
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "h5py": "3.16.0"
+  },
+  "no_MATLAB_or_Vivado_rerun": true,
+  "resampler_filter_arithmetic_independently_reexecuted": false,
+  "T09_PASS": false,
+  "RTL_qualified": false,
+  "summary_sha256": "70BFB8A9439D50CD056B23A03C79171421F79F7B2DB7E36FCE671412A6D38821",
+  "result_manifest_sha256": "C90778FF5C57B5F77BADD85AF5A84F08E33791FE1EC52D90CEDB99669F18AB43",
+  "review_script_sha256": "B6419E0CFA1A85C5CB8F7F6B1D75CC586BFACF869325CFFB1F7D0E40C859182A"
+}

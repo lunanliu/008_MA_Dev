@@ -1,0 +1,114 @@
+{
+  "complete": true,
+  "sha256": "60eb55aa1229f0cf88037723b8380c1e049d6a4dc24e65bab7441d64806729a9",
+  "record": {
+    "padding": 2,
+    "method": "parabolic_power",
+    "estimate_ppm": -0.049331575920681714,
+    "estimate_valid": true,
+    "correction_executed": true,
+    "primary_branch": "A128 only; no added coarse-CFO correction",
+    "post_rate_truth_ppm": -0.01982281794266072,
+    "post_dtp_ppm": -0.011821692929644455,
+    "post_dtp_valid": true,
+    "post_local_cfo_diagnostic_ppm": -0.019821997658133472,
+    "target_met": true,
+    "second_resample_info": {
+      "schema": "t07_integer_exact_fir_farrow_window_research_v1",
+      "profile": {
+        "coefficient_bits": 14,
+        "data_bits": 16,
+        "mu_bits": 8,
+        "ratio_bits": 28
+      },
+      "input_format": "I16/Q16 signed Q1.15",
+      "fir_output_format": "signed Q1.15, 16 bits",
+      "farrow_branch_horner_format": "signed Q4.15, 19 bits",
+      "interpolation_coefficient_format": "signed Q2.12",
+      "decimation_coefficient_format": "signed Q1.13",
+      "farrow_coefficient_format": "signed Q2.12",
+      "rounding": "RNE ties-to-even at input, every FIR output, Farrow branch, every Horner product/sum, final Farrow output",
+      "overflow": "signed saturate at every declared narrowing, counted per real component",
+      "accumulator": "a priori no-cancellation component bounds <2^53 plus observed integer assertions",
+      "a_priori_bounds": {
+        "fir_component_sum_bound": 1.2616466432E+10,
+        "farrow_branch_component_sum_bound": 1.073741824E+9,
+        "horner_component_sum_bound": 1.34217728E+8,
+        "phase_absolute_bound": 1.434928639880579E+15
+      },
+      "coordinate": "int64 ratio phase; RNE mu with base-index carry",
+      "step_integer": 2.68435443E+8,
+      "step_fractional_bits": 28,
+      "epsilon_hat_exact": -4.9331575920681709E-8,
+      "epsilon_hat_quantized": -4.8428773880004883E-8,
+      "ratio_end_position_error_raw_samples": 0.0012064315201952159,
+      "required_input_first": -31,
+      "required_input_last": 1.336345E+6,
+      "output_count": 1.33632E+6,
+      "output_first": 0,
+      "output_last": 1.336319E+6,
+      "q0_raw_samples": 0,
+      "integer_timing_offset": 0,
+      "fractional_q0": 0,
+      "timing_offset_policy": "q0=integerTO+fractionalQ0 appears once in origin; outputFirst is output addressing",
+      "original_z_count": 5.345401E+6,
+      "k_first": -71,
+      "k_last": 5.345329E+6,
+      "transport_capture_requested": false,
+      "stats_scope": "Original shortest zCount path; FIR statistics retain original full convolution semantics",
+      "legacy_output0_q00_equivalence_fixture_required": true,
+      "legacy_output0_q00_equivalence_executed": false,
+      "stats": {
+        "input_saturated_components": 0,
+        "up_hb1": {
+          "maximum_absolute_integer_accumulator": 8.0482304E+7,
+          "saturated_components": 0,
+          "output_bits": 16,
+          "shift": 12
+        },
+        "up_hb2": {
+          "maximum_absolute_integer_accumulator": 8.0744338E+7,
+          "saturated_components": 0,
+          "output_bits": 16,
+          "shift": 12
+        },
+        "farrow_branch": {
+          "maximum_absolute_integer_accumulator": 8.0744448E+7,
+          "saturated_components": 0,
+          "output_bits": 19,
+          "shift": 12
+        },
+        "farrow_horner": {
+          "maximum_absolute_integer_accumulator": 5.083356E+6,
+          "saturated_components": 0,
+          "output_bits": 19,
+          "shift": 8
+        },
+        "farrow_output": {
+          "maximum_absolute_integer_accumulator": 19857,
+          "saturated_components": 0,
+          "output_bits": 16,
+          "shift": 0
+        },
+        "mu_carry_count": 40329,
+        "down_hb2": {
+          "maximum_absolute_integer_accumulator": 1.60537663E+8,
+          "saturated_components": 0,
+          "output_bits": 16,
+          "shift": 13
+        },
+        "down_hb1": {
+          "maximum_absolute_integer_accumulator": 1.59552461E+8,
+          "saturated_components": 0,
+          "output_bits": 16,
+          "shift": 13
+        }
+      },
+      "total_saturated_components": 0,
+      "maximum_absolute_integer_accumulator": 1.60537663E+8,
+      "whole_t07_pass": false,
+      "rtl_bittrue_comparison_executed": false
+    },
+    "elapsed_seconds": 12.1134283
+  }
+}

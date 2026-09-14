@@ -1,0 +1,2 @@
+Scenario,Subtest,FrameId,Seen,ResultHex,Status,ErrorStage,Halted,Elapsed,FirstDivider,FirstWeighted,SharedGainSamples,InputCount,OutputCount,ObservationCount,WeightCount
+C03,independent,6003,1,0257d36efffcedea00ca8000,4800,0,0,55681,2897,2966,0,4096,4096,6560,6560

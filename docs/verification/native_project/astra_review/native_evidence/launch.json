@@ -1,0 +1,21 @@
+{
+  "job_id": "T10_MIGRATE_GUI001",
+  "started_utc": "2026-09-14T00:14:00.6312160Z",
+  "command_line": "cmd.exe /d /s /c \"\"C:/NIFPGA/programs/Vivado2021_1/bin/vivado.bat\" -mode batch -source \"D:/008_MA_Dev/docs/verification/native_project/native_project_check.tcl\" -log \"D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/vivado.log\" -journal \"D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/vivado.jou\" -tclargs \"D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna\"\"",
+  "cwd": "D:\\008_MA_Dev\\work\\native_project_20260914T001342964Z_luna",
+  "inventory": [
+    {
+      "ProcessId": 38288,
+      "ParentProcessId": 31288,
+      "Name": "vivado.exe",
+      "CreationDate": "2026-09-14T00:44:29.480664+02:00",
+      "CommandLine": "\"C:/NIFPGA/programs/Vivado2021_1/bin/unwrapped/win64.o/vivado.exe\"  "
+    }
+  ],
+  "free_memory_gib": 9.320972442626953,
+  "hard_timeout_seconds": 1200,
+  "owned_memory_budget_gib": 4,
+  "foreign_pid_untouched": 38288,
+  "job_definition_sha256": "156DF6BABD4530E14794E7EA415742D9D7F5D0474F339717423DFD2E7A196825",
+  "admission_sha256": "3EBF0D56967745689ADD9AB1CFC28E8DE7DA520A59C1CDA333BC04F284620822"
+}

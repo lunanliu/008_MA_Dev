@@ -1,0 +1,208 @@
+{
+  "controls": [
+    {
+      "id": "main_job_0",
+      "engine": "main",
+      "path": "controls/main_job_0.npz",
+      "forward": true,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "main_job_7",
+      "engine": "main",
+      "path": "controls/main_job_7.npz",
+      "forward": true,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "main_job_355",
+      "engine": "main",
+      "path": "controls/main_job_355.npz",
+      "forward": true,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "main_job_711",
+      "engine": "main",
+      "path": "controls/main_job_711.npz",
+      "forward": true,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "aux_frame_0",
+      "engine": "aux",
+      "path": "controls/aux_frame_0.npz",
+      "forward": true,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "aux_frame_1",
+      "engine": "aux",
+      "path": "controls/aux_frame_1.npz",
+      "forward": true,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "aux_frame_2",
+      "engine": "aux",
+      "path": "controls/aux_frame_2.npz",
+      "forward": false,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "aux_frame_3",
+      "engine": "aux",
+      "path": "controls/aux_frame_3.npz",
+      "forward": false,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "aux_frame_4",
+      "engine": "aux",
+      "path": "controls/aux_frame_4.npz",
+      "forward": true,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "aux_frame_5",
+      "engine": "aux",
+      "path": "controls/aux_frame_5.npz",
+      "forward": true,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "id": "aux_frame_6",
+      "engine": "aux",
+      "path": "controls/aux_frame_6.npz",
+      "forward": false,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "aux_frame_7",
+      "engine": "aux",
+      "path": "controls/aux_frame_7.npz",
+      "forward": false,
+      "schedule": [
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "parents": [
+    {
+      "path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T06_initial_sfo\\v2_official_xfft_trace\\attempt_20260902T142609651Z_12196_721808b0\\fixture\\t06_v2_official_xfft_input.mem",
+      "role": "input_mem",
+      "sha256": "6C2F88238B876CD0544A5B49CFB52F0025489B760582F563750544FF480C5047",
+      "bytes": 14581760
+    },
+    {
+      "path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T06_initial_sfo\\v2_official_xfft_trace\\attempt_20260902T142609651Z_12196_721808b0\\official_xfft_simulation\\t06_v2_official_xfft_output.csv",
+      "role": "full_output_trace",
+      "sha256": "45310B46F6A6B1576E5FB35696C7DE979617A45D9476EEE3A7648AFFB35C91E2",
+      "bytes": 50871893
+    },
+    {
+      "path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T03_realtime_memory_fft\\auxiliary_fft_runtime\\vec_r02\\auxiliary_fft_input.mem",
+      "role": "auxiliary_input",
+      "sha256": "4E87F70C975F773E4291EC399A39168F8469C6BECE1DDA6F34E3115EAD0C66F3",
+      "bytes": 552960
+    },
+    {
+      "path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T03_realtime_memory_fft\\auxiliary_fft_runtime\\vn02\\auxiliary_fft_rtl_output.csv",
+      "role": "auxiliary_post_synthesis_output",
+      "sha256": "EDEC8D8F843C8A6BC40285942AE51649231D549F0D8844620B120DF61B2ED12C",
+      "bytes": 1326932
+    }
+  ],
+  "selected_main_jobs": [
+    0,
+    7,
+    355,
+    711
+  ]
+}

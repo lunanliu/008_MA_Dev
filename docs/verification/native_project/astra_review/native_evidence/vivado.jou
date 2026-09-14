@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Sep 14 02:14:02 2026
+# Process ID: 41916
+# Current directory: D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna
+# Command line: vivado.exe -mode batch -source D:/008_MA_Dev/docs/verification/native_project/native_project_check.tcl -log D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/vivado.log -journal D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/vivado.jou -tclargs D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna
+# Log file: D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/vivado.log
+# Journal file: D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/vivado.jou
+#-----------------------------------------------------------
+source D:/008_MA_Dev/docs/verification/native_project/native_project_check.tcl

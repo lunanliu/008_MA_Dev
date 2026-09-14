@@ -1,0 +1,42 @@
+{
+  "status": "ACCEPT_CONDITIONAL_FLOATING_STATISTICS_300_CASES",
+  "package_files_verified": 23,
+  "result_files_verified": 627,
+  "windows_independently_fft_checked": 22200,
+  "delays_and_ls_checked": 600,
+  "clean_window_noise_power_reconstructed_with_independent_scipy_czt": true,
+  "maximum_numerical_difference": {
+    "quotient": 2.9790409838967277e-15,
+    "delay_samples": 1.7763568394002505e-15,
+    "ppm": 1.7763568394002505e-15,
+    "ideal_step_ppm": 2.5808186143727596e-10,
+    "noise_power_relative": 3.476267832254803e-12,
+    "measured_snr_db": 1.509903313490213e-11
+  },
+  "maximum_group_mae_difference": 9.481918982617854e-11,
+  "statistical_groups_verified": 60,
+  "all_groups_pass": true,
+  "by_padding": {
+    "2": {
+      "worst_group_mae": 0.012906367430343124,
+      "worst_sample": 0.03142455283695362,
+      "overall_mae": 0.006719947712698784
+    },
+    "4": {
+      "worst_group_mae": 0.012389623704756048,
+      "worst_sample": 0.02914175636555592,
+      "overall_mae": 0.00677643688428094
+    }
+  },
+  "payload_matrices_verified": 20,
+  "analyzer_note": "MSNU at line48 is obsolete NASGU suppression on payloadSeed; remove in a future source revision, do not rerun completed statistics",
+  "review_elapsed_seconds": 24.42199999999866,
+  "matlab_elapsed_seconds": 106.4519427,
+  "physical_upstream_closed_loop_qualified": false,
+  "actual_second_resampler_executed": false,
+  "fixed_point_qualified": false,
+  "T09_PASS": false,
+  "summary_sha256": "CE39728069CF3A9DCFD7FB8E17865196FF6D6096E619CECD1152C720F4255E05",
+  "result_manifest_sha256": "4631B3749261AA57DF07552C05993A74FE838164CA499C0CBB1068BD034163F2",
+  "script_sha256": "8A9114ED43A45AA8E07ABB80B13F5523108F464F0803BF136513CAA116B810F6"
+}

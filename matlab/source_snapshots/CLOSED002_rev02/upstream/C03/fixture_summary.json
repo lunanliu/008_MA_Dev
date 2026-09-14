@@ -1,0 +1,27 @@
+{
+  "schema": "t06_compact14_case_fixture_v1",
+  "status": "COMPACT_CASE_DATA_GENERATION_COMPLETE",
+  "case_index_zero_based": 2,
+  "scenario_id": "C03",
+  "case_id": "single_noiseless_sfo_p150",
+  "saved_raw_samples": 20688,
+  "capture_beats": 5172,
+  "capture_range": [
+    5272,
+    25959
+  ],
+  "bounded_received_range": [
+    512,
+    25959
+  ],
+  "generated_complete_frame_count": 0,
+  "generated_payload_symbol_count": 1,
+  "receiver_clip_component_count": 0,
+  "receiver_maximum_abs_code": 14572,
+  "capture_mem_sha256": "9d76fd98285a516e9030423e57b4318f48978bdac244cb0b7a97ffac32eab7c0",
+  "raw_mat_sha256": "5ae8b0ec9f792ecb3790f564582c13e5d65c20bb21e8d2d3ee00133c76b8a2d9",
+  "context_sha256": "e9d58c55eddee1152acf5beae9dd0c5941df8b33d508a07092011abdb53d0f8c",
+  "mathematical_bittrue_executed": false,
+  "rtl_executed": false,
+  "t06_pass_claimed": false
+}

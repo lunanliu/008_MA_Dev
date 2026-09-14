@@ -1,0 +1,417 @@
+{
+  "schema": "T09_CLOSED002_PACKAGE_v2",
+  "job_id": "T09-CLOSED002-R02",
+  "parent_manifest_sha256": "9431F2493171DF5B5105EC401C3CC7B47BB924710A8C4E6C5D5D59491B2746B6",
+  "revision_scope": "Persistence only; scientific arithmetic and gates unchanged",
+  "files": [
+    {
+      "path": "t09_closed002_rev02.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\matlab\\tasks\\T09_residual_sfo\\t09_closed002_rev02.m",
+      "bytes": 13735,
+      "sha256": "EC67E27C7521096848D8E96C29A4486CF36FA0D83C6C9658271F4FC37BEC001D"
+    },
+    {
+      "path": "t09_dtp_float002.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\t09_dtp_float002.m",
+      "bytes": 2173,
+      "sha256": "844FD0523162C14311524C5249C131DEC43443C4CC44A67A054D2E16149BE625"
+    },
+    {
+      "path": "run_t09_closed002_rev02.ps1",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\scripts\\t09\\run_t09_closed002_rev02.ps1",
+      "bytes": 7075,
+      "sha256": "6DEFE6178F0D0E2B66E9C3BC2586136EC1BD1427263D10278F3580DFAEC32AB1"
+    },
+    {
+      "path": "PLAN_ZH.md",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\PLAN_ZH.md",
+      "bytes": 6132,
+      "sha256": "CBC60FD473307FD8EFA59DDF9E81031927F3F72506A07B2E3E508576FDD541D6"
+    },
+    {
+      "path": "config/frame_config.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\config\\frame_config.json",
+      "bytes": 4222,
+      "sha256": "AD9F405FA117C6DB42FE241981FF7837BC842ACA4E9B31E37203EEF65DD0830C"
+    },
+    {
+      "path": "artifacts/T02_frame_design/t02_production_artifacts.mat",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\artifacts\\T02_frame_design\\t02_production_artifacts.mat",
+      "bytes": 860222,
+      "sha256": "006443A1D2A2F4F0A10ADC0C7735E487CE57E3EE451D13834213FF7B75DA58FD"
+    },
+    {
+      "path": "common/bistatic_active_indices.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_active_indices.m",
+      "bytes": 325,
+      "sha256": "BF68F92931ECC3A16A40B86ECAE6943A48F960CE0DD1CCCE6D2FFAA7B15A0EA0"
+    },
+    {
+      "path": "common/bistatic_apply_channel.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_apply_channel.m",
+      "bytes": 5887,
+      "sha256": "85DBEAF667436AE0B13E2F3F546F1AB5F337F30E6E2FA87874DF2DAE769B895C"
+    },
+    {
+      "path": "common/bistatic_apply_cp_ofdm_channel.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_apply_cp_ofdm_channel.m",
+      "bytes": 28343,
+      "sha256": "B27FE82EDB3DB01125DA3128CC4A2F5FF8BC53A61C9DDDFA22504EA9639F7ADD"
+    },
+    {
+      "path": "common/bistatic_apply_sample_domain_channel.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_apply_sample_domain_channel.m",
+      "bytes": 494,
+      "sha256": "FB77D0DA2EC73AF32BF94C7215F5614505B25FF83E241D227E65CFB980DFD683"
+    },
+    {
+      "path": "common/bistatic_artifact_content_identity.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_artifact_content_identity.m",
+      "bytes": 4828,
+      "sha256": "AC13DDBE95EF4F664CADB3C1A4AFBFED701233D2727BDE609E7FA48263B44A0A"
+    },
+    {
+      "path": "common/bistatic_channel_profile.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_channel_profile.m",
+      "bytes": 4141,
+      "sha256": "8A781B857529E24A596C732808E6BD6BB70FDD20FA230AD19A2EC08F4DED5CB6"
+    },
+    {
+      "path": "common/bistatic_compare_samples.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_compare_samples.m",
+      "bytes": 2142,
+      "sha256": "5D5793F45AE2047AD64BF5545E4C5EC8A2B34007216884B89FBD1F1E7408C940"
+    },
+    {
+      "path": "common/bistatic_cp_ofdm_interpft8_l128_hybrid_query.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_cp_ofdm_interpft8_l128_hybrid_query.m",
+      "bytes": 8144,
+      "sha256": "803FBA6937A0DB7110EEC84880A892AB79C7B3320FE1AE81B26E63BBCD0D5597"
+    },
+    {
+      "path": "common/bistatic_error_statistics.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_error_statistics.m",
+      "bytes": 792,
+      "sha256": "0664F9F362C61AC221109A99CAF4549878A8853B8AC77277578F269E99F08D30"
+    },
+    {
+      "path": "common/bistatic_export_vector.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_export_vector.m",
+      "bytes": 5008,
+      "sha256": "105239635DE5E4AECC26BFA89F982113BB7827041274B028F44253EF508EBE4C"
+    },
+    {
+      "path": "common/bistatic_fixture_artifacts.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_fixture_artifacts.m",
+      "bytes": 1659,
+      "sha256": "F5D0DD6FC5015B6AE6209C092E735433549C380134308E80E572D76C383F44E3"
+    },
+    {
+      "path": "common/bistatic_generate_continuous_waveform.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_generate_continuous_waveform.m",
+      "bytes": 2619,
+      "sha256": "C4966453F7F850417E5177888D83B5C018CC89DFCF7C02DF2F6A3B8352FCB56A"
+    },
+    {
+      "path": "common/bistatic_generate_frame.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_generate_frame.m",
+      "bytes": 1594,
+      "sha256": "CCE5FB8CFF27252154F4F9EA6621AEEBE0991B941858CB0E6F4F6C2B2EA21224"
+    },
+    {
+      "path": "common/bistatic_generate_rtl_package.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_generate_rtl_package.m",
+      "bytes": 2132,
+      "sha256": "CEEF78720419BA6BF2EBF2F65BDA1CFFCE605C5B93BC09369CC492A7C7F64CA2"
+    },
+    {
+      "path": "common/bistatic_gray_qpsk.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_gray_qpsk.m",
+      "bytes": 439,
+      "sha256": "5FCB3DD63423FAE111370C4A1E1C478B8DEED43B8C5ADB600B9875D6C619078A"
+    },
+    {
+      "path": "common/bistatic_import_vector.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_import_vector.m",
+      "bytes": 1954,
+      "sha256": "824B392FE9ABDE3276EF667932E4C0B2553E60AD24DD8C3C09C7A4194F8612C9"
+    },
+    {
+      "path": "common/bistatic_load_config.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_load_config.m",
+      "bytes": 440,
+      "sha256": "92A82CD5C9317FAB7CD73610369A274637846B2EADDF8BB961D06DACDC55F456"
+    },
+    {
+      "path": "common/bistatic_make_cp_ofdm_descriptor.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_make_cp_ofdm_descriptor.m",
+      "bytes": 18581,
+      "sha256": "8F39B32B0801BE56C2BB232021FDB329A316C3E810C698248363570038A6661F"
+    },
+    {
+      "path": "common/bistatic_production_artifacts.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_production_artifacts.m",
+      "bytes": 2519,
+      "sha256": "3AFA4870D59510E030198F330F94F5466B0D0222C06A84E5AA11B36D66AD7CE7"
+    },
+    {
+      "path": "common/bistatic_queue_summary.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_queue_summary.m",
+      "bytes": 1379,
+      "sha256": "1498151FD235A36A44DF0A9503E9665F0CB729DC997CAA079C7E6F412AD4818E"
+    },
+    {
+      "path": "common/bistatic_sha256.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_sha256.m",
+      "bytes": 775,
+      "sha256": "CC50D5ACDBE63113A0C3024B663587EBC46C1ADFB5421BBB5AB7A01FDD630EC1"
+    },
+    {
+      "path": "common/bistatic_validate_config.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_validate_config.m",
+      "bytes": 5848,
+      "sha256": "57D95B4FAEF8EC548ED122F29B124D067D99BA9240B7D56E719BD2F567F31D9D"
+    },
+    {
+      "path": "common/bistatic_validate_matrix.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_validate_matrix.m",
+      "bytes": 6139,
+      "sha256": "FABD99CA20456386C3D56CA9BF596746C82B0EC794A32D2F35416F2C89F80672"
+    },
+    {
+      "path": "common/bistatic_waveform_numeric_sha256.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\common\\bistatic_waveform_numeric_sha256.m",
+      "bytes": 1590,
+      "sha256": "5CF6CB40CD90948931846C807F628DC26CFD62E0613754F82358C7EB04C83224"
+    },
+    {
+      "path": "helpers/t07_fixed_arithmetic_window.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\helpers\\t07_fixed_arithmetic_window.m",
+      "bytes": 15826,
+      "sha256": "B0CF0B4B9A17A2E295A89510A3C9E97E3425449A4BEC8B652E504B4C7C3563BC"
+    },
+    {
+      "path": "helpers/t07_rne_quantize.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\helpers\\t07_rne_quantize.m",
+      "bytes": 722,
+      "sha256": "ECEB0BB0B5222E7152E8EBAF5D945C1AC7B19383336DE194B76398240DD55D2B"
+    },
+    {
+      "path": "helpers/t07_lagrange_coefficients.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\helpers\\t07_lagrange_coefficients.m",
+      "bytes": 302,
+      "sha256": "187CAB594EDDAEB308A86DB64455BE6157C0220C79725A18357436A0ECF0947F"
+    },
+    {
+      "path": "helpers/t02_round_even.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\helpers\\t02_round_even.m",
+      "bytes": 442,
+      "sha256": "AA76433248CDBABCE66E87EB72B2BB12261B33917B85500F33AF32D6BBBBD424"
+    },
+    {
+      "path": "helpers/t04_quantize_receiver_i16.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\helpers\\t04_quantize_receiver_i16.m",
+      "bytes": 993,
+      "sha256": "1FB995DAD60E443D3548DBF677A9B5BC07A7045014CD5777255651221EB08A1C"
+    },
+    {
+      "path": "private_job_supervisor_v2.py",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\private_job_supervisor_v2.py",
+      "bytes": 22872,
+      "sha256": "9CBBEB73E7333D3E40A52DAE0053DE09A79ACB4E7EE0A18A2ACC5966C969610E"
+    },
+    {
+      "path": "evidence/MATH001_INDEPENDENT_REVIEW.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\evidence\\MATH001_INDEPENDENT_REVIEW.json",
+      "bytes": 20431,
+      "sha256": "21414C4D9EDE76363DEDCE238E6B227452D4D725A50349F5892B00B7C47573D9"
+    },
+    {
+      "path": "evidence/T08_INTERFACE_rev02.md",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\evidence\\T08_INTERFACE_rev02.md",
+      "bytes": 6531,
+      "sha256": "FFC122B6ED7C309EA90059CB4502B80B45432623E03F24B24391DC01F582245B"
+    },
+    {
+      "path": "evidence/T08_FINAL_ACCEPTANCE.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\evidence\\T08_FINAL_ACCEPTANCE.json",
+      "bytes": 2270,
+      "sha256": "A793C8F2C0DBC71382FFFE565576D91AA2AE050CC222AF7AAD4E710BAF628379"
+    },
+    {
+      "path": "evidence/T06_THEORETICAL_DOMAIN.md",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\evidence\\T06_THEORETICAL_DOMAIN.md",
+      "bytes": 3514,
+      "sha256": "2AC6FA9DB2DE833FBB917CD5A832EC1802649649D169E7039B3E45D9CCC7D2CA"
+    },
+    {
+      "path": "evidence/T06_C05_DEFERRED.md",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\evidence\\T06_C05_DEFERRED.md",
+      "bytes": 1842,
+      "sha256": "A936F81B262E7A64B6DB47FAEA94DD7E902398CEFD3C530A67B40C9EC16F3D65"
+    },
+    {
+      "path": "evidence/T06_ORIGINAL_GENERATOR.m",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\evidence\\T06_ORIGINAL_GENERATOR.m",
+      "bytes": 13839,
+      "sha256": "820220B5D2DDE6CFE33694FB23645953FF521075B4D5B304469DD45CDD0BC9F8"
+    },
+    {
+      "path": "evidence/T06_C01_C14_SUMMARY.csv",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\evidence\\T06_C01_C14_SUMMARY.csv",
+      "bytes": 3276,
+      "sha256": "5B38C60068E765DA927C0B33240561D27943F12C2645269A803E1A390504615E"
+    },
+    {
+      "path": "upstream/C01/context.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C01\\context.json",
+      "bytes": 1168,
+      "sha256": "6D6356DBD00F6F836D96F9E36741FD7E33F0A6783AD99E4C1B52805BD22E0B92"
+    },
+    {
+      "path": "upstream/C01/service_result.csv",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C01\\service_result.csv",
+      "bytes": 267,
+      "sha256": "346FE4924BA51471C4E6B42D072A9FB32DCDAC256F2407C3F58B7E508C31F229"
+    },
+    {
+      "path": "upstream/C01/case_behavioral_done.txt",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C01\\case_behavioral_done.txt",
+      "bytes": 70,
+      "sha256": "001F80ADA7DC4E7925FD7FEA94AD3E596692E5D14026D43D7C4A2722F88501DE"
+    },
+    {
+      "path": "upstream/C01/raw_window.mat",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C01\\raw_window.mat",
+      "bytes": 108245,
+      "sha256": "A73F2A86C40E75CCCC8A64F9D65FD80E0CE64EF59C5A9C50AF5BBD66690B8911"
+    },
+    {
+      "path": "upstream/C01/fixture_summary.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C01\\fixture_summary.json",
+      "bytes": 897,
+      "sha256": "232AC5A56D566257FAA3B459AF61390A40DBAA565CAA0FCD80B3479B202C865A"
+    },
+    {
+      "path": "upstream/C01/service_raw.csv",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C01\\service_raw.csv",
+      "bytes": 651891,
+      "sha256": "0600A18AB2A3ACAA4EB1D3494EF6075F9230202DF3C467A862437CB0F3528662"
+    },
+    {
+      "path": "upstream/C02/context.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C02\\context.json",
+      "bytes": 1164,
+      "sha256": "FDDD3CB73D18B7202F85B9668C584359AC8B60EBE2E0313A07599901FAFE79EA"
+    },
+    {
+      "path": "upstream/C02/service_result.csv",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C02\\service_result.csv",
+      "bytes": 267,
+      "sha256": "54246B20A3B3FB296031DD212B7B91F97C354A3549EC00D8D052C04F033F2AF4"
+    },
+    {
+      "path": "upstream/C02/case_behavioral_done.txt",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C02\\case_behavioral_done.txt",
+      "bytes": 70,
+      "sha256": "7A102D3F952D2CDC2983B6734F103EEA99AA9B51F18EF48F2097E190931900AD"
+    },
+    {
+      "path": "upstream/C02/raw_window.mat",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C02\\raw_window.mat",
+      "bytes": 108259,
+      "sha256": "E03D51C22D1F2FEE4220B11991E31AF4EAD76D1006BBA3F89731E24E1D10EF90"
+    },
+    {
+      "path": "upstream/C02/fixture_summary.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C02\\fixture_summary.json",
+      "bytes": 896,
+      "sha256": "BB1ACC7FEA891F1A2EAC905C61107A09D0A102BEDD304F54F60CE12B6F5EFA4D"
+    },
+    {
+      "path": "upstream/C02/service_raw.csv",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C02\\service_raw.csv",
+      "bytes": 651798,
+      "sha256": "F0741D5FC07862E16D5CEFAE9B19508A8DEDF68CDC3502449F2FEFAAAFEC74AE"
+    },
+    {
+      "path": "upstream/C03/context.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C03\\context.json",
+      "bytes": 1167,
+      "sha256": "E9D58C55EDDEE1152ACF5BEAE9DD0C5941DF8B33D508A07092011ABDB53D0F8C"
+    },
+    {
+      "path": "upstream/C03/service_result.csv",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C03\\service_result.csv",
+      "bytes": 267,
+      "sha256": "665D5B875FFDEE0E5683CB4EF560420B4FA8B2A589012C3BC6226B1D6CA268F5"
+    },
+    {
+      "path": "upstream/C03/case_behavioral_done.txt",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C03\\case_behavioral_done.txt",
+      "bytes": 70,
+      "sha256": "C18961B3DEC6622CB65614BA6A308198803287F3BCBD0350E9A760E519868D21"
+    },
+    {
+      "path": "upstream/C03/raw_window.mat",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C03\\raw_window.mat",
+      "bytes": 108245,
+      "sha256": "5AE8B0EC9F792ECB3790F564582C13E5D65C20BB21E8D2D3EE00133C76B8A2D9"
+    },
+    {
+      "path": "upstream/C03/fixture_summary.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C03\\fixture_summary.json",
+      "bytes": 897,
+      "sha256": "07AF31E4157E5D74F93A00526AE0F1865B41EDD665696AB1D8A2B3B786B7D6EA"
+    },
+    {
+      "path": "upstream/C03/service_raw.csv",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C03\\service_raw.csv",
+      "bytes": 651830,
+      "sha256": "782416B669030D4950A19090528464C02E098DEC6A03CADD28FE04BC9BB971B4"
+    },
+    {
+      "path": "upstream/C04/context.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C04\\context.json",
+      "bytes": 1177,
+      "sha256": "B69811BB7ECC7C9A033F5B7D63EF7F767E201420C27E7DF0934D1DD53EE1DB61"
+    },
+    {
+      "path": "upstream/C04/service_result.csv",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C04\\service_result.csv",
+      "bytes": 267,
+      "sha256": "218F95EB5EBE83190C239A8B227C1E532404DA971C7E82616286A447CE700C9F"
+    },
+    {
+      "path": "upstream/C04/case_behavioral_done.txt",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\design\\T09_CLOSED002\\package\\upstream\\C04\\case_behavioral_done.txt",
+      "bytes": 70,
+      "sha256": "893DAAED1BC6AEE3ADACA6F3FB2F1E392E8367BD89B99318E676C6138FE22E2E"
+    },
+    {
+      "path": "REPAIR_ZH.md",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\docs\\t09\\T09_CLOSED002_REV02_REPAIR_ZH.md",
+      "bytes": 3823,
+      "sha256": "749D02DBB32D9DC09E6887851A0D798AE174A2848B9609D092B2C1F8F7EF4F92"
+    },
+    {
+      "path": "evidence/prior_CLOSED002_failure.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED002\\attempt_20260908T205957780Z_luna\\results\\failure.json",
+      "bytes": 566,
+      "sha256": "71A9D6A7AE15A669D97AC27E17649F82B010F2BEE6F65D30D853174E9611E69D"
+    },
+    {
+      "path": "evidence/prior_CLOSED002_upstream_admission.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED002\\attempt_20260908T205957780Z_luna\\results\\upstream_admission.json",
+      "bytes": 1443,
+      "sha256": "3686F022DFA336C0180887F6C325C462AC5B6E72FFD636B3A81D0A8209EF0525"
+    },
+    {
+      "path": "evidence/prior_CLOSED002_supervisor_exit.json",
+      "source_path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED002\\attempt_20260908T205957780Z_luna\\supervisor_exit.json",
+      "bytes": 2399,
+      "sha256": "25BCE320F82226662E78DF6A22E0138F86FC4DA83401419B801524DB9F55CBC8"
+    }
+  ],
+  "created_utc": "2026-09-08T21:11:58.9472052Z"
+}

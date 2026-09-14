@@ -1,0 +1,311 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Sep 14 02:14:02 2026
+# Process ID: 41916
+# Current directory: D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna
+# Command line: vivado.exe -mode batch -source D:/008_MA_Dev/docs/verification/native_project/native_project_check.tcl -log D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/vivado.log -journal D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/vivado.jou -tclargs D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna
+# Log file: D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/vivado.log
+# Journal file: D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/vivado.jou
+#-----------------------------------------------------------
+source D:/008_MA_Dev/docs/verification/native_project/native_project_check.tcl
+# set script_root [file normalize [file join [file dirname [info script]] ../../..]]
+# if {$argc!=1} {error "Expected one fresh result directory"}
+# set resultdir [file normalize [lindex $argv 0]]
+# if {![string match "${script_root}/work/*" $resultdir]} {error "Result directory must belong to this workspace work/"}
+# file mkdir $resultdir
+# proc csvrow {channel values} {
+#     set out {};foreach value $values {lappend out "\"[string map [list \" \"\"] $value]\""};puts $channel [join $out ,];flush $channel
+# }
+# proc xci_value {path key} {
+#     set h [open $path r];set text [read $h];close $h
+#     set pattern [format {<spirit:configurableElementValue spirit:referenceId="%s">([^<]*)</spirit:configurableElementValue>} $key]
+#     if {![regexp $pattern $text all value]} {error "Missing XCI field $key in $path"}
+#     return $value
+# }
+# proc config_snapshot {stage} {
+#     global expected_user_config resultdir
+#     set h [open [file join $resultdir config_${stage}.csv] w];csvrow $h {IP Parameter Value Expected SourceMatches}
+#     set snapshot [dict create];set mismatches 0
+#     foreach n [lsort [dict keys $expected_user_config]] {
+#         set ip [get_ips $n];if {[llength $ip]!=1} {error "IP not unique: $n"}
+#         set props [list_property $ip]
+#         foreach key [lsort [dict keys [dict get $expected_user_config $n]]] {
+#             set prop CONFIG.$key
+#             if {[lsearch -exact $props $prop]<0} {error "Missing native CONFIG property $n/$key"}
+#             set value [get_property $prop $ip];set want [dict get $expected_user_config $n $key]
+#             dict set snapshot $n $key $value
+#             set equal [expr {$value eq $want}];if {!$equal} {incr mismatches}
+#             csvrow $h [list $n $key $value $want $equal]
+#         }
+#     };close $h
+#     # Export differences for review instead of silently changing expected values.
+#     puts "CONFIG_SOURCE_DIFFERENCES_${stage}=$mismatches"
+#     return $snapshot
+# }
+# proc project_identity {stage} {
+#     global root target resultdir expected_ipdef
+#     if {[get_property PART [current_project]] ne $target} {error "Project target differs"}
+#     if {[get_property top [get_filesets sources_1]] ne "t10_two_pass_system"} {error "Hardware top differs"}
+#     if {[get_property top [get_filesets sim_1]] ne "t10_full023_tb"} {error "Simulation top differs"}
+#     set declared [read_list [file join $root rtl sources.f]];set count 0
+#     set h [open [file join $resultdir files_${stage}.csv] w];csvrow $h {Fileset Path Exists}
+#     foreach fs {sources_1 sim_1 constrs_1} {
+#         foreach f [get_files -of_objects [get_filesets $fs]] {
+#             set path [file normalize $f]
+#             csvrow $h [list $fs $path [file exists $path]]
+#             if {![string match "${root}/*" $path]} {error "External source dependency: $path"}
+#             if {![file exists $path]} {error "Missing project input: $path"}
+#         }
+#     };close $h
+#     foreach rel $declared {set f [get_files [file normalize [file join $root $rel]]];if {[llength $f]!=1} {error "Declared core missing/ambiguous: $rel"};incr count}
+#     if {$count!=74 || [llength [get_ips]]!=34} {error "Wrong source or IP count"}
+#     set actualxci {};foreach f [get_files -all] {if {[string equal -nocase [file extension $f] .xci]} {lappend actualxci [file normalize $f]}}
+#     set actualxci [lsort -unique $actualxci];set wantedxci {}
+#     set h [open [file join $resultdir ip_${stage}.csv] w];csvrow $h {IP IPDEF Path Device Package Speed Temperature Locked}
+#     foreach n [lsort [dict keys $expected_ipdef]] {
+#         set path [file normalize [file join $root ip config $n ${n}.xci]];lappend wantedxci $path
+#         set ip [get_ips $n];set def [get_property IPDEF $ip]
+#         if {$def ne [dict get $expected_ipdef $n]} {error "IPDEF version changed: $n/$def"}
+#         set device [xci_value $path PROJECT_PARAM.DEVICE];set package [xci_value $path PROJECT_PARAM.PACKAGE]
+#         set speed [xci_value $path PROJECT_PARAM.SPEEDGRADE];set temp [xci_value $path PROJECT_PARAM.TEMPERATURE_GRADE];set locked [get_property IS_LOCKED $ip]
+#         csvrow $h [list $n $def $path $device $package $speed $temp $locked]
+#         if {$device ne "xcvu11p" || $package ne "flgb2104" || $speed ne "-2" || ![string equal -nocase $temp E] || $locked} {error "IP target/lock differs: $n"}
+#     };close $h
+#     if {$actualxci ne [lsort $wantedxci]} {error "Project XCI sources are not exactly canonical ip/config"}
+#     set h [open [file join $resultdir runs_${stage}.csv] w];csvrow $h {Run Status Progress}
+#     foreach run [get_runs] {csvrow $h [list $run [get_property STATUS $run] [get_property PROGRESS $run]];if {[get_property PROGRESS $run] ne "0%"} {error "Unexpected executed design run"}}
+#     close $h
+# }
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/NIFPGA/programs/Vivado2021_1/data/ip'.
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1129.602 ; gain = 0.000
+PROJECT_CREATED: D:/008_MA_Dev/vivado/T10_SFO/T10_SFO.xpr
+Canonical IP: ip/config. No output generation, synthesis, implementation or simulation started.
+WARNING: [Vivado 12-3672] The is_managed property should only be queried on the file object representing this IP. Use the get_files command to access file objects.
+WARNING: [Vivado 12-3670] The generate_synth_checkpoint property should only be queried on the file object representing this IP. Use the get_files command to access file objects.
+CONFIG_SOURCE_DIFFERENCES_before=0
+NATIVE_RETARGET_BEGIN farrow_add_18
+Upgrading 'farrow_add_18'
+INFO: [IP_Flow 19-3420] Updated farrow_add_18 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'farrow_add_18'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END farrow_add_18
+NATIVE_RETARGET_BEGIN farrow_add_28
+Upgrading 'farrow_add_28'
+INFO: [IP_Flow 19-3420] Updated farrow_add_28 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'farrow_add_28'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END farrow_add_28
+NATIVE_RETARGET_BEGIN farrow_add_32
+Upgrading 'farrow_add_32'
+INFO: [IP_Flow 19-3420] Updated farrow_add_32 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'farrow_add_32'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END farrow_add_32
+NATIVE_RETARGET_BEGIN farrow_mul_h16
+Upgrading 'farrow_mul_h16'
+INFO: [IP_Flow 19-3420] Updated farrow_mul_h16 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'farrow_mul_h16'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END farrow_mul_h16
+NATIVE_RETARGET_BEGIN farrow_mul_t16
+Upgrading 'farrow_mul_t16'
+INFO: [IP_Flow 19-3420] Updated farrow_mul_t16 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'farrow_mul_t16'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END farrow_mul_t16
+NATIVE_RETARGET_BEGIN t03_xfft_16384_aux
+Upgrading 't03_xfft_16384_aux'
+INFO: [IP_Flow 19-3420] Updated t03_xfft_16384_aux to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't03_xfft_16384_aux'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t03_xfft_16384_aux
+NATIVE_RETARGET_BEGIN t03_xfft_2048_main
+Upgrading 't03_xfft_2048_main'
+INFO: [IP_Flow 19-3420] Updated t03_xfft_2048_main to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't03_xfft_2048_main'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t03_xfft_2048_main
+NATIVE_RETARGET_BEGIN t04_cmpy_17x16
+Upgrading 't04_cmpy_17x16'
+INFO: [IP_Flow 19-3420] Updated t04_cmpy_17x16 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't04_cmpy_17x16'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t04_cmpy_17x16
+NATIVE_RETARGET_BEGIN t04_div_u63_u47
+Upgrading 't04_div_u63_u47'
+INFO: [IP_Flow 19-3420] Updated t04_div_u63_u47 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't04_div_u63_u47'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t04_div_u63_u47
+NATIVE_RETARGET_BEGIN t05_cmpy_rotate_18x18
+Upgrading 't05_cmpy_rotate_18x18'
+INFO: [IP_Flow 19-3420] Updated t05_cmpy_rotate_18x18 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't05_cmpy_rotate_18x18'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t05_cmpy_rotate_18x18
+NATIVE_RETARGET_BEGIN t05_mult_cfo_s19_const40_full59
+Upgrading 't05_mult_cfo_s19_const40_full59'
+INFO: [IP_Flow 19-3420] Updated t05_mult_cfo_s19_const40_full59 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't05_mult_cfo_s19_const40_full59'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t05_mult_cfo_s19_const40_full59
+NATIVE_RETARGET_BEGIN t06_cordic_translate48_parallel
+Upgrading 't06_cordic_translate48_parallel'
+INFO: [IP_Flow 19-3420] Updated t06_cordic_translate48_parallel to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_cordic_translate48_parallel'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_cordic_translate48_parallel
+NATIVE_RETARGET_BEGIN t06_dds_phase_s32_sincos18
+Upgrading 't06_dds_phase_s32_sincos18'
+INFO: [IP_Flow 19-3420] Updated t06_dds_phase_s32_sincos18 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_dds_phase_s32_sincos18'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_dds_phase_s32_sincos18
+NATIVE_RETARGET_BEGIN t06_fs_mult_s29_s11
+Upgrading 't06_fs_mult_s29_s11'
+INFO: [IP_Flow 19-3420] Updated t06_fs_mult_s29_s11 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_fs_mult_s29_s11'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_fs_mult_s29_s11
+NATIVE_RETARGET_BEGIN t06_fs_mult_s29_s48
+Upgrading 't06_fs_mult_s29_s48'
+INFO: [IP_Flow 19-3420] Updated t06_fs_mult_s29_s48 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_fs_mult_s29_s48'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_fs_mult_s29_s48
+NATIVE_RETARGET_BEGIN t06_fs_mult_u18_s11
+Upgrading 't06_fs_mult_u18_s11'
+INFO: [IP_Flow 19-3420] Updated t06_fs_mult_u18_s11 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_fs_mult_u18_s11'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_fs_mult_u18_s11
+NATIVE_RETARGET_BEGIN t06_fs_mult_u18_s48
+Upgrading 't06_fs_mult_u18_s48'
+INFO: [IP_Flow 19-3420] Updated t06_fs_mult_u18_s48 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_fs_mult_u18_s48'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_fs_mult_u18_s48
+NATIVE_RETARGET_BEGIN t06_observation_engine_square
+Upgrading 't06_observation_engine_square'
+INFO: [IP_Flow 19-3420] Updated t06_observation_engine_square to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_observation_engine_square'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_observation_engine_square
+NATIVE_RETARGET_BEGIN t06_observation_engine_weight_product
+Upgrading 't06_observation_engine_weight_product'
+INFO: [IP_Flow 19-3420] Updated t06_observation_engine_weight_product to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_observation_engine_weight_product'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_observation_engine_weight_product
+NATIVE_RETARGET_BEGIN t06_pair_max_tracker_2lane_cross
+Upgrading 't06_pair_max_tracker_2lane_cross'
+INFO: [IP_Flow 19-3420] Updated t06_pair_max_tracker_2lane_cross to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_pair_max_tracker_2lane_cross'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_pair_max_tracker_2lane_cross
+NATIVE_RETARGET_BEGIN t06_rt_mult_s41_s38
+Upgrading 't06_rt_mult_s41_s38'
+INFO: [IP_Flow 19-3420] Updated t06_rt_mult_s41_s38 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_rt_mult_s41_s38'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_rt_mult_s41_s38
+NATIVE_RETARGET_BEGIN t06_rt_mult_s41_s41
+Upgrading 't06_rt_mult_s41_s41'
+INFO: [IP_Flow 19-3420] Updated t06_rt_mult_s41_s41 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_rt_mult_s41_s41'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_rt_mult_s41_s41
+NATIVE_RETARGET_BEGIN t06_rt_mult_s41_u38
+Upgrading 't06_rt_mult_s41_u38'
+INFO: [IP_Flow 19-3420] Updated t06_rt_mult_s41_u38 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_rt_mult_s41_u38'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_rt_mult_s41_u38
+NATIVE_RETARGET_BEGIN t06_rt_mult_u30_s42
+Upgrading 't06_rt_mult_u30_s42'
+INFO: [IP_Flow 19-3420] Updated t06_rt_mult_u30_s42 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_rt_mult_u30_s42'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_rt_mult_u30_s42
+NATIVE_RETARGET_BEGIN t06_rt_mult_u30_u43
+Upgrading 't06_rt_mult_u30_u43'
+INFO: [IP_Flow 19-3420] Updated t06_rt_mult_u30_u43 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_rt_mult_u30_u43'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_rt_mult_u30_u43
+NATIVE_RETARGET_BEGIN t06_rt_mult_u30_u48
+Upgrading 't06_rt_mult_u30_u48'
+INFO: [IP_Flow 19-3420] Updated t06_rt_mult_u30_u48 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_rt_mult_u30_u48'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_rt_mult_u30_u48
+NATIVE_RETARGET_BEGIN t06_rt_mult_u48_u20
+Upgrading 't06_rt_mult_u48_u20'
+INFO: [IP_Flow 19-3420] Updated t06_rt_mult_u48_u20 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_rt_mult_u48_u20'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_rt_mult_u48_u20
+NATIVE_RETARGET_BEGIN t06_sg_div_u53_u37
+Upgrading 't06_sg_div_u53_u37'
+INFO: [IP_Flow 19-3420] Updated t06_sg_div_u53_u37 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_sg_div_u53_u37'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_sg_div_u53_u37
+NATIVE_RETARGET_BEGIN t06_sg_mult_u37_u16
+Upgrading 't06_sg_mult_u37_u16'
+INFO: [IP_Flow 19-3420] Updated t06_sg_mult_u37_u16 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_sg_mult_u37_u16'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_sg_mult_u37_u16
+NATIVE_RETARGET_BEGIN t06_wp_mult_u64_u33
+Upgrading 't06_wp_mult_u64_u33'
+INFO: [IP_Flow 19-3420] Updated t06_wp_mult_u64_u33 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't06_wp_mult_u64_u33'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t06_wp_mult_u64_u33
+NATIVE_RETARGET_BEGIN t07_g3_down15
+Upgrading 't07_g3_down15'
+INFO: [IP_Flow 19-3420] Updated t07_g3_down15 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't07_g3_down15'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t07_g3_down15
+NATIVE_RETARGET_BEGIN t07_g3_down47
+Upgrading 't07_g3_down47'
+INFO: [IP_Flow 19-3420] Updated t07_g3_down47 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't07_g3_down47'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t07_g3_down47
+NATIVE_RETARGET_BEGIN t07_g3_up15
+Upgrading 't07_g3_up15'
+INFO: [IP_Flow 19-3420] Updated t07_g3_up15 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't07_g3_up15'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t07_g3_up15
+NATIVE_RETARGET_BEGIN t07_g3_up47
+Upgrading 't07_g3_up47'
+INFO: [IP_Flow 19-3420] Updated t07_g3_up47 to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 't07_g3_up47'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/008_MA_Dev/work/native_project_20260914T001342964Z_luna/native_retarget.log'.
+NATIVE_RETARGET_END t07_g3_up47
+CONFIG_SOURCE_DIFFERENCES_after=0
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/008_MA_Dev/vivado/T10_SFO/T10_SFO.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/NIFPGA/programs/Vivado2021_1/data/ip'.
+CONFIG_SOURCE_DIFFERENCES_reopened=0
+invalid command name "}"
+    while executing
+"} message options"
+    invoked from within
+"set rc [catch {
+    source [file join $script_root ip expected_user_config.tcl]
+    source [file join $script_root tools vivado create_project.tcl]
+  ..."
+    (file "D:/008_MA_Dev/docs/verification/native_project/native_project_check.tcl" line 70)
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 14 02:14:49 2026...
