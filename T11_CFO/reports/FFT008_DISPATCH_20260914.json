@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-14T18:06:04.954161+00:00",
+  "job": "CFO-FFT008",
+  "status": "DISPATCHED_TO_ORIGINAL_T11_LUNA",
+  "astra_thread": "01a076f1-ad1b-7d33-a29c-4ea34ae84d01",
+  "luna_thread": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+  "preparation_commit": "7c83bbf",
+  "source_lock_sha256": "F8B73FF909CED64E87C0EBF6ACD8B7F659C3B4D16A3F4C44B80B08CA3E37333C",
+  "controller_sha256": "F95AA616CBB8B348989BF1FE5617E7722B345C8008F99EFA7371065CD9892441",
+  "native_start_not_yet_confirmed": true,
+  "prerequisite_review": "FRONTDATA007 bounded extraction PASS; FFT2048 integer reference matches 182040 published complex pilot bins across 222 windows",
+  "resource": "0 MATLAB, one T11 Vivado, create/simulate serial, T10 protected",
+  "next": "Luna execute and publish, Astra independently review; no automatic synthesis/fullframe"
+}
