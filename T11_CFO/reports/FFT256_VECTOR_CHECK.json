@@ -1,0 +1,12 @@
+{
+  "status": "FFT256_ORACLE_MATCHES_PUBLISHED_MATLAB",
+  "published_cases": 19,
+  "published_scalar_nodes_checked": 17461,
+  "total_cases": 27,
+  "saturating_cases": {
+    "fullscale_quadrant_pattern": 63
+  },
+  "native_rtl_tested": false,
+  "twiddle_positive_one_code": 131071,
+  "no_matlab_run": true
+}

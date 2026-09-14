@@ -1,0 +1,116 @@
+{
+  "schema": "phase004r1_independent_review_v1",
+  "event": "PHASE004R1_REVIEW_237675B8",
+  "utc": "2026-09-14T15:02:36.878776+00:00",
+  "status": "PASS_LIMITED_PHASE_PATH",
+  "reviewer": "T11 Astra",
+  "attempt": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_PHASE004R1\\attempt_20260914T144622597473Z_luna",
+  "completion_sha256": "237675B8ADD0343A49C0CE806B5D911BB9DAAD6C372479B63CEF5A54240C5B5D",
+  "manifest_sha256": "4C828459D33925AF92D998BC7BE9A7733CB510E25FECA27706D6ECBD8775B96A",
+  "artifact_hash_count": 39,
+  "numeric": {
+    "status": "PHASE74_NUMERIC_PASS_LIMITED_SCOPE",
+    "frozen_files": 36,
+    "published_source_identities": 58,
+    "unique_vectors": 27,
+    "published_cases": 19,
+    "native_result_checked": true,
+    "actual_project_members": 12,
+    "project_identity": "PASS",
+    "node_rows_checked": {
+      "P": 2740,
+      "R": 2590,
+      "C": 2590,
+      "F": 33,
+      "D": 6,
+      "E": 5
+    },
+    "full_transactions": 33,
+    "discarded_transactions": 6,
+    "protocol_error_results": 5,
+    "max_tail_cycles": 5272,
+    "max_total_cycles": 7172,
+    "stalled_cycles": 150,
+    "formal_T11_T12_T13_PASS": false,
+    "fft_quality_or_final_modes_tested": false
+  },
+  "actual_sources": {
+    "before": 12,
+    "updated": 12,
+    "simulate": 12
+  },
+  "source_update_only_v1_to_v2": true,
+  "native_seconds": 27.5861022,
+  "native_exit": 0,
+  "job_bound_before_resume": true,
+  "final_job_empty_both_queries": true,
+  "peak_job_private_bytes": 1201594368,
+  "minimum_available_physical_bytes": 11808997376,
+  "telemetry_fault_samples": [
+    {
+      "utc": "2026-09-14T14:46:43.650Z",
+      "issues": [],
+      "query_errors": [],
+      "process_open_failures": [
+        {
+          "pid": 26104,
+          "query_error": "OpenProcess: winerror=87 参数错误。",
+          "memory_error": null
+        },
+        {
+          "pid": 31668,
+          "query_error": "OpenProcess: winerror=87 参数错误。",
+          "memory_error": null
+        },
+        {
+          "pid": 46536,
+          "query_error": "OpenProcess: winerror=87 参数错误。",
+          "memory_error": null
+        }
+      ]
+    }
+  ],
+  "controller_identity": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_fix01_guard_v1.py",
+    "info": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_fix01_guard_v1.py",
+      "exists": true,
+      "bytes": 15173,
+      "sha256": "8C37F4D02B586CCAC61782FA8EB099A744CED42CB23614E2DB79815F94F117A3"
+    },
+    "original_controller": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_guard_v1.py",
+      "info": {
+        "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_guard_v1.py",
+        "exists": true,
+        "bytes": 24596,
+        "sha256": "B35F872630D2995B5EEB5257666188D3506C864FC4004294423078AE0CFE9583"
+      }
+    }
+  },
+  "t10_unchanged_at_execution": {
+    "before": {
+      "28856": "xsimk.exe",
+      "34768": "vivado.exe"
+    },
+    "after": {
+      "28856": "xsimk.exe",
+      "34768": "vivado.exe"
+    },
+    "protected_expected": {
+      "34768": "vivado.exe",
+      "28856": "xsimk.exe"
+    }
+  },
+  "native_tests_repeated_during_review": false,
+  "no_matlab": true,
+  "pending": [
+    "FFT256 arithmetic and quality gate",
+    "phase/FFT consistency and final mode selection",
+    "FFT2048 front end",
+    "full-frame scheduling",
+    "synthesis and physical timing",
+    "sustained throughput"
+  ],
+  "historical_compile_failure_preserved": true
+}

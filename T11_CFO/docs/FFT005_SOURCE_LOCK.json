@@ -1,0 +1,194 @@
+{
+  "schema": "cfo_fft005_source_lock_v1",
+  "utc": "2026-09-14T15:16:05.339019+00:00",
+  "root": "D:\\008_MA_Dev\\T11_CFO",
+  "part": "xcvu11p-flgb2104-2-e",
+  "hardware_top": "cfo_fft256_core",
+  "simulation_top": "cfo_fft256_tb",
+  "project_members": [
+    {
+      "fileset": "sources_1",
+      "path": "rtl/cfo_fft256_core.sv"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "ip/fft256_twiddle.mem"
+    },
+    {
+      "fileset": "constrs_1",
+      "path": "constraints/cfo_fft256.xdc"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/tb/cfo_fft256_tb.sv"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft256_config.svh"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft256_input.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft256_output.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft256_butterfly.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft256_saturation.mem"
+    },
+    {
+      "fileset": "utils_1",
+      "path": "vivado/run_threads.tcl"
+    }
+  ],
+  "files": [
+    {
+      "path": "rtl/cfo_fft256_core.sv",
+      "bytes": 6099,
+      "sha256": "56A957F34A07EF28041C539D319B24C59FCA95D55BE16D202C60ABEABF501D1D"
+    },
+    {
+      "path": "ip/fft256_twiddle.mem",
+      "bytes": 1408,
+      "sha256": "AA8802BA8C2F38BDDB2350114029BC58E7A58E8D49C746F26246691EE913A93D"
+    },
+    {
+      "path": "constraints/cfo_fft256.xdc",
+      "bytes": 60,
+      "sha256": "AE963D0700C2BBF75D7144FB466A654FC6F393D0677E60EB270FF71E186FBD42"
+    },
+    {
+      "path": "sim/tb/cfo_fft256_tb.sv",
+      "bytes": 7617,
+      "sha256": "D78B6F1D0D8BCB34536B863E809F6D6DAC3A5D2A751CE991C7535D7424D0AEC0"
+    },
+    {
+      "path": "sim/vectors/fft256_config.svh",
+      "bytes": 36,
+      "sha256": "DE3F1464439718AA75134A9BAFA1C421DE9CD88815164414E418EB6046C66CB0"
+    },
+    {
+      "path": "sim/vectors/fft256_input.mem",
+      "bytes": 82944,
+      "sha256": "1724354F15A0D60C81E415614A351C5EDC679911E26FF649DDFE63FFF4BC536F"
+    },
+    {
+      "path": "sim/vectors/fft256_output.mem",
+      "bytes": 82944,
+      "sha256": "8912EA46502D47A0BA215AA8A0EF944ED42A4BBD5A49D4ECBD839C95B10EB8CF"
+    },
+    {
+      "path": "sim/vectors/fft256_butterfly.mem",
+      "bytes": 635904,
+      "sha256": "530B67C52593963687B6DDA51BEA5649F4B44A4EEA08138113FBF131AF5E1867"
+    },
+    {
+      "path": "sim/vectors/fft256_saturation.mem",
+      "bytes": 162,
+      "sha256": "7CDFD8F397D043D24A7B36FD26AD8B8E5E7CB37B73A6A85B7266DDEC5302D9AD"
+    },
+    {
+      "path": "vivado/run_threads.tcl",
+      "bytes": 471,
+      "sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E"
+    },
+    {
+      "path": "sim/vectors/fft256_cases.json",
+      "bytes": 2069262,
+      "sha256": "42AA6945443CF333E9D9A7ECB89908818AA32BEBF30EB7DEA02E64A426536557"
+    },
+    {
+      "path": "tools/fft256_reference.py",
+      "bytes": 5148,
+      "sha256": "04D455ABD32EBC30BA8C07D355E2E7303E1A265B14F2314006F6192F49A60D55"
+    },
+    {
+      "path": "tools/extract_fft256_published.py",
+      "bytes": 2144,
+      "sha256": "6E91E6C04C056116C7EC53D33E8D696F1ACA53291D5427AA9F6F8626A955F161"
+    },
+    {
+      "path": "tools/extract_phase74_published.py",
+      "bytes": 24692,
+      "sha256": "A4A6E7E7110ED05D062AC6C5D97AEA060399AE9658705E386F7EE4B3BD38E353"
+    },
+    {
+      "path": "tools/verify_fft256.py",
+      "bytes": 4508,
+      "sha256": "AD9C1998CD2BF5F8B67171D20997E35C2279D9BE3F6C4702FDD8E790A94AF95D"
+    },
+    {
+      "path": "tools/freeze_fft005_sources.py",
+      "bytes": 2133,
+      "sha256": "B3ADEEC2C5924F42DF9FBFA0BB1431A93E9BB02A43A9CCE037D08E769AD49C59"
+    },
+    {
+      "path": "tools/cfo_native_guard_v3.py",
+      "bytes": 36155,
+      "sha256": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034"
+    },
+    {
+      "path": "vivado/fft256_project.tcl",
+      "bytes": 3377,
+      "sha256": "AB05CC1D5073036C067396B01B01971C0B8B384B08D1F4D6E493F68711EA4132"
+    },
+    {
+      "path": "vivado/configure_parallel_jobs.tcl",
+      "bytes": 4994,
+      "sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3"
+    },
+    {
+      "path": "docs/FFT256_CONTRACT_V1_ZH.md",
+      "bytes": 3591,
+      "sha256": "B7167BA89B6677BE6E35BC2BABBA3BBB0D0CBFE7EC2393AF0C4875EF2A21F84E"
+    },
+    {
+      "path": "docs/FFT256_NATIVE_JOB_005.md",
+      "bytes": 5931,
+      "sha256": "CEA25897722A2D715364BDDEDD9005AD6E74600030EA8E94B0BC1491EAA9410C"
+    },
+    {
+      "path": "docs/CFO_MAIN_CONTRACT.json",
+      "bytes": 3621,
+      "sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E"
+    },
+    {
+      "path": "matlab/bittrue/cfo_chain_arithmetic.m",
+      "bytes": 9686,
+      "sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80"
+    },
+    {
+      "path": "reports/FFT256_VECTOR_CHECK.json",
+      "bytes": 318,
+      "sha256": "51B97F3E3342C5BA90E8D41A0D74CB47A9AD921AB084A9D0C0D33127C6A20B92"
+    },
+    {
+      "path": "reports/PHASE004R1_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+      "bytes": 3572,
+      "sha256": "45BDA5FC9C1A7BDDF5F035CC9D3A14EB565A4512E1BDA1EF34FE89A076F2EA31"
+    },
+    {
+      "path": "reports/PHASE004R1_REVIEW_20260914/README_ZH.md",
+      "bytes": 1154,
+      "sha256": "ABE23B90D41F3A24727B1E2EF5D04E69A6D7375FE9A2F428AB9F643A4FA98627"
+    },
+    {
+      "path": "docs/PHASE004R1_SOURCE_LOCK.json",
+      "bytes": 7814,
+      "sha256": "601EB944FD0A0E03B5E459DE11A3749AA72DC6004C2DA94847CC56E737A306CD"
+    }
+  ],
+  "native_stages": [
+    "create",
+    "simulate"
+  ],
+  "previous_native_tests_must_not_repeat": true,
+  "matlab_runs": 0,
+  "scope": "FFT256 arithmetic primitive only; normalization, quality, final modes pending"
+}

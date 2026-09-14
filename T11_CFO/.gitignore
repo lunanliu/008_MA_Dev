@@ -13,3 +13,5 @@
 /vivado/CFO_PHASE74/*
 !/vivado/CFO_PHASE74/CFO_PHASE74.xpr
 __pycache__/
+/vivado/CFO_FFT256/*
+!/vivado/CFO_FFT256/CFO_FFT256.xpr

@@ -1,0 +1,152 @@
+{
+  "schema": "fft256_published_manifest_v1",
+  "utc": "2026-09-14T15:03:19.495Z",
+  "status": "PASS",
+  "case_count": 19,
+  "files": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo004_case_001.json",
+      "exists": true,
+      "bytes": 34543,
+      "sha256": "7E5F9EFC95E357D866BD2B9E93B57E1D459E597D518EEDF91952534AB1156D9A"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo004_case_003.json",
+      "exists": true,
+      "bytes": 34460,
+      "sha256": "D8E34305448D878AC568277278D3FA56FCDCD9C79FB3A9860BD65CE50D8FBCE9"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo004_case_011.json",
+      "exists": true,
+      "bytes": 34128,
+      "sha256": "67E3EEA80EDBB951C2A01A9C67177D99399227B9AE046D54C1665BD4B6F58EF5"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo004_case_021.json",
+      "exists": true,
+      "bytes": 34460,
+      "sha256": "56F5EFE9673C5FB6D8F84A125CCDCD072720BD3D76ED132808E295C313C1F66E"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo004_case_031.json",
+      "exists": true,
+      "bytes": 34539,
+      "sha256": "D2BE199202DE13BCB6648A54905CB94F02B9BBB64C6984326E4FE6325F41F163"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo004_case_041.json",
+      "exists": true,
+      "bytes": 34042,
+      "sha256": "228D2E286ADCD49B0DF796747BCB67EE221071AC3DF9F1D1FB2ABCB5348D460D"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo004_case_051.json",
+      "exists": true,
+      "bytes": 34468,
+      "sha256": "8C9C32D6FDEB428D2F2BEF83EF045E94AFDAB18848317DA7422C125B5DD8D296"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo004_case_061.json",
+      "exists": true,
+      "bytes": 34532,
+      "sha256": "C697665144D64B8591DDC3D173215E4200480FE8742879040CFE4D69105AFF7F"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo004_case_071.json",
+      "exists": true,
+      "bytes": 33742,
+      "sha256": "65EB51F57AA98A495AFFCE18C0609AEA32F8E279E04453D3E976FAAB73CE6C0C"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo004_case_081.json",
+      "exists": true,
+      "bytes": 34470,
+      "sha256": "4B32360E23A69C0DEA48A1032729E4643F8F54333B6CA9353DBC56ACBBBB5AD9"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo003_case_001.json",
+      "exists": true,
+      "bytes": 34567,
+      "sha256": "24C0B8DCB31A7E6EB16E85C182A0D3385BC0DE24AAD428F9769408174155491A"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo003_case_002.json",
+      "exists": true,
+      "bytes": 34061,
+      "sha256": "9D9E379BEE7C5E2065EED2359E5CFC76D9A79900A8B4A954B905AE000C62CEF9"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo003_case_003.json",
+      "exists": true,
+      "bytes": 34501,
+      "sha256": "B3A917AA6C0BC020D3456FF122F6185B2D231F07F9312BCA59B797676EDCE550"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo003_case_004.json",
+      "exists": true,
+      "bytes": 34442,
+      "sha256": "38AC4051382091CBB0B06F0C885D2025F3A4EE873A109150EF43C7800FB6AF82"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo003_case_005.json",
+      "exists": true,
+      "bytes": 34569,
+      "sha256": "569FC2FF55010A62C27D1C2F8FFE6C67F0FDB9967878157108E1C6F1B764644F"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo003_case_006.json",
+      "exists": true,
+      "bytes": 34498,
+      "sha256": "DFF2D84EBA19621F2AA6E216C5302CD491ADACB2987881DFA4A23F3E613E98B4"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo003_case_007.json",
+      "exists": true,
+      "bytes": 34487,
+      "sha256": "E52F28031338D07DB759A85DC9174EB6F7E8D98A682BC677FDD3654A754EC3D7"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo003_case_008.json",
+      "exists": true,
+      "bytes": 34508,
+      "sha256": "DF18E4ABDC7F536D4B6339113D78A28F290F31255F823714181BBCF03B19F6C4"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\fft256_published\\rcfo003_case_009.json",
+      "exists": true,
+      "bytes": 34718,
+      "sha256": "0C64F99BC68E3D01C8FD5EE31ACA3A230E7ECB8060035C352CAB2812FB17BB72"
+    }
+  ],
+  "decoder": {
+    "tool": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\extract_fft256_published.py",
+      "exists": true,
+      "bytes": 2144,
+      "sha256": "6E91E6C04C056116C7EC53D33E8D696F1ACA53291D5427AA9F6F8626A955F161"
+    },
+    "reader": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\extract_phase74_published.py",
+      "exists": true,
+      "bytes": 24692,
+      "sha256": "A4A6E7E7110ED05D062AC6C5D97AEA060399AE9658705E386F7EE4B3BD38E353"
+    },
+    "hdf5_library": {
+      "path": "C:\\Program Files\\National Instruments\\Shared\\UsiCore\\Bin\\hdf5.dll",
+      "exists": true,
+      "bytes": 3334400,
+      "sha256": "428A0CEDA92BCCB06B039896C708982A6A19B2A8B1D42E48BBE098DED7CBB05D"
+    },
+    "hdf5_version": {
+      "major": 1,
+      "minor": 12,
+      "release": 0
+    },
+    "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Python314\\python.exe"
+  },
+  "no_matlab": true,
+  "no_vivado": true,
+  "no_new_signals": true
+}
