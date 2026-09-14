@@ -3,7 +3,7 @@
 set root [file normalize [file join [file dirname [info script]] ../..]]
 set target xcvu11p-flgb2104-2-e
 if {[version -short] ne "2021.1"} {error "Vivado 2021.1 required"}
-set_param general.maxThreads 2
+source [file join $root tools vivado run_threads.tcl]
 set projdir [file join $root vivado T10_SFO]
 set projectfile [file join $projdir T10_SFO.xpr]
 proc read_list {path} {

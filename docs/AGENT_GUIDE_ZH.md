@@ -6,6 +6,8 @@
 
 ## 工具调用
 
+按[性能规范](TOOL_PERFORMANCE_ZH.md)设置父进程及run子进程的并行参数；MATLAB新启动不用单线程标志。启动前记录实际作业数、线程回读值与总内存预算，不从冻结旧脚本继承限速参数。
+
 - 常规工程操作使用Vivado GUI或同一项目的原生Tcl。先确认当前解释器是Vivado Tcl还是XSim Tcl，不能假定所有命令通用。
 - Python只用于明确的离线分析或身份核查，调用独立解释器完整路径。进入Vivado环境后，避免继承PYTHONHOME/PYTHONPATH造成解释器与库混用；不要修改全局环境修补局部问题。
 - PowerShell、Tcl和Python的参数边界分别处理，避免多层拼接引号。路径由项目位置推导，不依赖某台电脑的用户缓存目录。

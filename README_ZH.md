@@ -10,6 +10,8 @@
 4. [迁移说明](docs/MIGRATION_ZH.md)：哪些内容从哪里复制、哪些内容因迁移而修改。
 5. [本地Git指南](docs/LOCAL_GIT_ZH.md)：查看修改和建立自己的版本记录。
 
+工具并行与资源分配统一遵循[性能规范](docs/TOOL_PERFORMANCE_ZH.md)，其中区分Vivado作业数、单作业线程数、仿真展开与MATLAB计算线程。
+
 ## 文件放在哪里
 
 | 目录 | 内容 | 是否应手工修改 |

@@ -1,5 +1,7 @@
 # T10 的 MATLAB 与定点参考：从哪里来、怎样使用
 
+2026-09-14性能配置补充：以下数值与迁移结论保持原有证据边界；新入口 `setup_t10_reference()` 另调用 `configure_compute_threads()`，启用当前会话自动计算线程，回读为 `p.compute.max_threads`。启动时不要传 `-singleCompThread`。本次配置探针及限制见[性能规范](TOOL_PERFORMANCE_ZH.md)，它不是重新验证整条算法。初次复制清单保留原样，新运行入口另记在 `docs/provenance/MATLAB_RUNTIME_MANIFEST.csv`。
+
 本目录整理的是 T10_FULL023 实际使用的参考来源，目的在于让开发者看懂、追溯并进一步维护独立工程。它不是新的实验结果。本次只复制、适配路径和进行静态校验，没有启动 MATLAB、Python 数值模型、Vivado 或 RTL 仿真。
 
 **这里没有一个“整条 T10 的 MATLAB bit-true 顶层”。** 当前依据由 MATLAB 的信号生成及整数重采样、保存的 T06 RTL 估计结果、Python 的 T09 定点运算、AMD 官方 FFT 定点模型，以及已有 RTL 参考输出共同组成。bit-true 指尽量逐位复现有限字长运算，不等于使用 MATLAB 浮点计算一个看起来相同的公式。

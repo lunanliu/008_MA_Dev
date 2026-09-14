@@ -1,0 +1,5 @@
+destination_relative,destination_sha256,change_note
+matlab/setup_t10_reference.m,0BFF8DEB9A655D38E2201B24F0F7DA35DE0C79DACE7CEC407E97FDA2930DB99F,2026-09-14 automatic MATLAB compute-thread setup and navigation documentation; original MATLAB_COPY_MANIFEST remains a historical copy record.
+matlab/configure_compute_threads.m,E5100EAEDA9CC22123EA488D87DE3ED84840C0A1AE44D477A999559272DEFD3C,2026-09-14 automatic MATLAB compute-thread setup and navigation documentation; original MATLAB_COPY_MANIFEST remains a historical copy record.
+matlab/README_ZH.md,3E62E2F8398E2C002817411907470271AF023C534E7B8AEB2F954A24863D3727,2026-09-14 automatic MATLAB compute-thread setup and navigation documentation; original MATLAB_COPY_MANIFEST remains a historical copy record.
+docs/MATLAB_REFERENCE_GUIDE_ZH.md,5C39AC741E9F26102835E8F612685425A8F45E1703F3061500E123280BD363A5,2026-09-14 automatic MATLAB compute-thread setup and navigation documentation; original MATLAB_COPY_MANIFEST remains a historical copy record.

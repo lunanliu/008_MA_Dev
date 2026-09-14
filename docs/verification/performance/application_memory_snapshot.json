@@ -1,0 +1,44 @@
+{
+  "sampled": "2026-09-14T03:10:11.7920631+02:00",
+  "total_gib": 31.421,
+  "available_gib": 10.087,
+  "measurement": "Private resident working set; not commit size and not a guaranteed amount recovered after exit.",
+  "applications": [
+    {
+      "name": "chrome",
+      "count": 34,
+      "private_resident_gib": 3.666900634765625,
+      "note": ""
+    },
+    {
+      "name": "winword",
+      "count": 1,
+      "private_resident_gib": 0.0209808349609375,
+      "note": ""
+    },
+    {
+      "name": "java",
+      "count": 1,
+      "private_resident_gib": 2.2711868286132812,
+      "note": "Verified executable is Vivado bundled JRE; parent vivado, preserve user session."
+    },
+    {
+      "name": "vivado",
+      "count": 1,
+      "private_resident_gib": 0.681854248046875,
+      "note": ""
+    },
+    {
+      "name": "steamwebhelper",
+      "count": 8,
+      "private_resident_gib": 0.2768440246582031,
+      "note": ""
+    },
+    {
+      "name": "cloudmusic",
+      "count": 3,
+      "private_resident_gib": 0.0680084228515625,
+      "note": ""
+    }
+  ]
+}

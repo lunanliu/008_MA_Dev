@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-14",
+  "scope": "Historical command and log evidence; not a performance comparison or rerun",
+  "sources": [
+    {
+      "source": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSED002_rev02\\attempt_20260908T211456489Z_luna\\supervisor_exit.json",
+      "sha256": "d63a2bfb48ac6690e764ae9e1ab9e31c6036e2ed6409997a20c2ea3767ac2c19",
+      "matches": [
+        {
+          "line": 12,
+          "text": "    \"-singleCompThread\","
+        },
+        {
+          "line": 16,
+          "text": "  \"command_line\": \"\\\"C:\\\\Program Files\\\\MATLAB\\\\R2024a\\\\bin\\\\matlab.exe\\\" -singleCompThread -batch \\\"addpath('D:/007 Dev/OTA_RTL_0829/reports/t09/design/T09_CLOSED002_rev02/package'); t09_closed002_rev02('D:/007 Dev/OTA_RTL_0829/reports/t09/design/T09_CLOSED002_rev02/package','D:/007 Dev/OTA_RTL_0829/reports/t09/execution/T09_CLOSED002_rev02/attempt_20260908T211456489Z_luna/results');\\\"\","
+        }
+      ]
+    },
+    {
+      "source": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t09\\execution\\T09_CLOSE036\\attempt_20260910T220417946Z_luna\\supervisor_exit.json",
+      "sha256": "6e26d07f6186074c7c45a95271152635be0ad93bb2def2cd17e8a1ebff23af27",
+      "matches": [
+        {
+          "line": 12,
+          "text": "    \"-singleCompThread\","
+        },
+        {
+          "line": 16,
+          "text": "  \"command_line\": \"\\\"C:\\\\Program Files\\\\MATLAB\\\\R2024a\\\\bin\\\\matlab.exe\\\" -singleCompThread -batch \\\"addpath('D:/007 Dev/OTA_RTL_0829/reports/t09/design/T09_CLOSE036/package'); t09_close036('D:/007 Dev/OTA_RTL_0829/reports/t09/design/T09_CLOSE036/package','D:/007 Dev/OTA_RTL_0829/reports/t09/execution/T09_CLOSE036/attempt_20260910T220417946Z_luna/results');\\\"\","
+        }
+      ]
+    },
+    {
+      "source": "D:\\007 Dev\\OTA_RTL_0829\\reports\\T11_full_frame_coarse_cfo\\execution\\T11-RCFO004\\attempt_20260913T004332727Z_luna\\supervisor_exit.json",
+      "sha256": "e9770ea2f2216b1361a2bee89329cf7927a355a376d2cabfd2515ba9d823a06e",
+      "matches": [
+        {
+          "line": 12,
+          "text": "    \"-singleCompThread\","
+        },
+        {
+          "line": 16,
+          "text": "  \"command_line\": \"\\\"C:\\\\Program Files\\\\MATLAB\\\\R2024a\\\\bin\\\\matlab.exe\\\" -singleCompThread -batch \\\"restoredefaultpath;addpath('D:/007 Dev/OTA_RTL_0829/reports/T11_full_frame_coarse_cfo/model_dispatch/RCFO004/package');t11_rcfo004('D:/007 Dev/OTA_RTL_0829/reports/T11_full_frame_coarse_cfo/model_dispatch/RCFO004/package','D:/007 Dev/OTA_RTL_0829/reports/T11_full_frame_coarse_cfo/execution/T11-RCFO004/attempt_20260913T004332727Z_luna/results');\\\"\","
+        }
+      ]
+    },
+    {
+      "source": "D:\\007 Dev\\OTA_RTL_0829\\reports\\t10\\execution\\T10_SYNTH016\\attempt_20260913T045501329Z_luna\\native.stdout.log",
+      "sha256": "9cef3932894275f6e622de2dacab4f68946a3f1a660647bc657f1df8a2d3132a",
+      "matches": [
+        {
+          "line": 138,
+          "text": "INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes."
+        },
+        {
+          "line": 6750,
+          "text": "INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs"
+        }
+      ]
+    }
+  ]
+}

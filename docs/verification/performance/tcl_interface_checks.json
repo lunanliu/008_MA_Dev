@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "tested_utc": "2026-09-14T01:04:25.313722+00:00",
+  "mode": "ordinary Tcl interpreter with in-memory Vivado API mocks; no native Vivado/MATLAB launched",
+  "mock_script": "work/performance_checks/check_tcl_interfaces.py",
+  "production_sha256": {
+    "tools\\vivado\\configure_parallel_jobs.tcl": "8e532a973c4fae6b6356231d9e27c5033995009387ff0e6ee890b859cc0edbbf",
+    "tools\\vivado\\run_threads.tcl": "0b2b1b5d643f1109c97c6ed3eb775f44a33367499c05d8afcfb4f2d15fea798f",
+    "tools\\vivado\\create_project.tcl": "14e488bc2e662da751cfa33af2e7fc6173e9a492f537d100d7bac406531c81b6"
+  },
+  "status": "PASS",
+  "passed": 29,
+  "total": 29,
+  "cases": [
+    {
+      "case": "default_elaboration_16",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "case": "requested_thread_limits_both_8",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "case": "configuration_does_not_launch",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "case": "default_build_16",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "case": "only_missing_checkpoint_IP_created",
+      "status": "PASS",
+      "details": "missing_ip"
+    },
+    {
+      "case": "existing_GUI_IP_run_hook",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "case": "all_new_synth_impl_PRE_hooks",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "case": "jobs_2",
+      "status": "PASS",
+      "details": {
+        "code": 0,
+        "message": "('synth_1', '-jobs', 2)",
+        "launch": "synth_1 -jobs 2"
+      }
+    },
+    {
+      "case": "jobs_2_with_to_step",
+      "status": "PASS",
+      "details": {
+        "code": 0,
+        "message": "('synth_1', '-jobs', 2, '-to_step', 'route_design')",
+        "launch": "synth_1 -jobs 2 -to_step route_design"
+      }
+    },
+    {
+      "case": "jobs_zero",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "message": "Admitted jobs must be an integer from 1 to 16.",
+        "launch": ""
+      }
+    },
+    {
+      "case": "jobs_17",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "message": "Admitted jobs must be an integer from 1 to 16.",
+        "launch": ""
+      }
+    },
+    {
+      "case": "jobs_missing_value",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "message": "Admitted jobs must be an integer from 1 to 16.",
+        "launch": ""
+      }
+    },
+    {
+      "case": "jobs_duplicate",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "message": "Duplicate -jobs option",
+        "launch": ""
+      }
+    },
+    {
+      "case": "jobs_option_as_value",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "message": "Admitted jobs must be an integer from 1 to 16.",
+        "launch": ""
+      }
+    },
+    {
+      "case": "jobs_abbrev_j",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "message": "Use the full -jobs option followed by its integer value.",
+        "launch": ""
+      }
+    },
+    {
+      "case": "jobs_abbrev_jo",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "message": "Use the full -jobs option followed by its integer value.",
+        "launch": ""
+      }
+    },
+    {
+      "case": "jobs_abbrev_job",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "message": "Use the full -jobs option followed by its integer value.",
+        "launch": ""
+      }
+    },
+    {
+      "case": "jobs_equals",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "message": "Use the full -jobs option followed by its integer value.",
+        "launch": ""
+      }
+    },
+    {
+      "case": "relocate_byte_identical",
+      "status": "PASS",
+      "details": {
+        "code": 0,
+        "hook": "D:/008_MA_Dev/tools/vivado/run_threads.tcl",
+        "property_writes": 8,
+        "message": "(('T10_XELAB_JOBS actual=16 ceiling=16',), ('T10_THREAD_LIMITS pid=43280 cwd=D:/007 Dev/OTA_RTL_0829 general=8 synth=8',), ('T10_RUN_HOOKS installed=8 hook=D:/008_MA_Dev/tools/vivado/run_threads.tcl',), ('T10 performance policy applied: requested general/synth limits=8; xelab jobs=16; build jobs ceiling=16. No run started.',), ('T10_RUN_HOOKS installed=8 hook=D:/008_MA_Dev/tools/vivado/run_threads.tcl',))"
+      }
+    },
+    {
+      "case": "preserve_same_name_different_content",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "hook": "D:/008_MA_Dev/work/performance_checks/fixtures_769c32d19adf469c85e12c79ec46bf3f/different/tools/vivado/run_threads.tcl",
+        "property_writes": 0,
+        "message": "Existing user hook preserved: gui_ip_synth_1 STEPS.SYNTH_DESIGN.TCL.PRE = D:/008_MA_Dev/work/performance_checks/fixtures_769c32d19adf469c85e12c79ec46bf3f/different/tools/vivado/run_threads.tcl. Review chaining before launch."
+      }
+    },
+    {
+      "case": "preserve_missing_old_hook",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "hook": "D:/008_MA_Dev/work/performance_checks/fixtures_769c32d19adf469c85e12c79ec46bf3f/missing/tools/vivado/run_threads.tcl",
+        "property_writes": 0,
+        "message": "Existing user hook preserved: gui_ip_synth_1 STEPS.SYNTH_DESIGN.TCL.PRE = D:/008_MA_Dev/work/performance_checks/fixtures_769c32d19adf469c85e12c79ec46bf3f/missing/tools/vivado/run_threads.tcl. Review chaining before launch."
+      }
+    },
+    {
+      "case": "selected_elaboration_2_survives_resourcing",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "case": "elaboration_1",
+      "status": "PASS",
+      "details": {
+        "code": 0,
+        "actual": "1",
+        "message": "(('T10_XELAB_JOBS actual=16 ceiling=16',), ('T10_THREAD_LIMITS pid=43280 cwd=D:/007 Dev/OTA_RTL_0829 general=8 synth=8',), ('T10_RUN_HOOKS installed=8 hook=D:/008_MA_Dev/tools/vivado/run_threads.tcl',), ('T10 performance policy applied: requested general/synth limits=8; xelab jobs=16; build jobs ceiling=16. No run started.',), ('T10_XELAB_JOBS actual=1 ceiling=16',))"
+      }
+    },
+    {
+      "case": "elaboration_16",
+      "status": "PASS",
+      "details": {
+        "code": 0,
+        "actual": "16",
+        "message": "(('T10_XELAB_JOBS actual=16 ceiling=16',), ('T10_THREAD_LIMITS pid=43280 cwd=D:/007 Dev/OTA_RTL_0829 general=8 synth=8',), ('T10_RUN_HOOKS installed=8 hook=D:/008_MA_Dev/tools/vivado/run_threads.tcl',), ('T10 performance policy applied: requested general/synth limits=8; xelab jobs=16; build jobs ceiling=16. No run started.',), ('T10_XELAB_JOBS actual=16 ceiling=16',))"
+      }
+    },
+    {
+      "case": "elaboration_0",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "actual": "16",
+        "message": "Admitted elaboration jobs must be an integer from 1 to 16."
+      }
+    },
+    {
+      "case": "elaboration_17",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "actual": "16",
+        "message": "Admitted elaboration jobs must be an integer from 1 to 16."
+      }
+    },
+    {
+      "case": "elaboration_not-an-integer",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "actual": "16",
+        "message": "Admitted elaboration jobs must be an integer from 1 to 16."
+      }
+    },
+    {
+      "case": "elaboration_readback_mismatch_rejected",
+      "status": "PASS",
+      "details": {
+        "code": 1,
+        "message": "Elaboration jobs readback mismatch"
+      }
+    },
+    {
+      "case": "production_unchanged_during_checks",
+      "status": "PASS",
+      "details": null
+    }
+  ],
+  "limitations": [
+    "Mock verifies Tcl control flow and argument/property handling only; actual Vivado object availability and child-process execution still require native readback and run logs.",
+    "create_project.tcl was read-only reviewed and hashed; no project creation/opening performed.",
+    "No resource/performance benchmark performed."
+  ],
+  "fixtures_relative": "work/performance_checks/fixtures_769c32d19adf469c85e12c79ec46bf3f"
+}

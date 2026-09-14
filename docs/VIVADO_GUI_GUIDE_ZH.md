@@ -23,21 +23,22 @@ source D:/008_MA_Dev/tools/vivado/create_project.tcl
 
 ## 2. 第一次仿真之前
 
-### 后续作业统一使用16 jobs
+### 后续作业充分使用本机资源
 
-按2026-09-14用户要求，综合/实现的Launch Runs窗口中Number of jobs统一选16。脚本对应 `launch_runs synth_1 -jobs 16`；它控制同时调度多少个run，包括适用的独立IP综合run，不等于一个run强制使用16个CPU核心。
+完整规则见[性能规范](TOOL_PERFORMANCE_ZH.md)。综合和实现的独立作业默认/上限16 jobs；单个Vivado进程请求 `general.maxThreads 8` 与 `synth.maxThreads 8`；仿真展开默认/上限16个子编译任务。这三项含义不同，实际并行以工具阶段与可用资源为准。
 
-仿真准备使用16个xelab并行子编译任务。新建/打开项目脚本及0ns仿真入口会应用这一设置。对已经直接在GUI打开的项目，请在当前尝试结束后、下一次启动前执行：
+对已经直接在GUI打开的项目，请在当前尝试结束后、下一次启动前执行：
 
 ```tcl
 source D:/008_MA_Dev/tools/vivado/configure_parallel_jobs.tcl
+t10_prepare_build
 ```
 
-该文件只设置展开并行数并定义 `t10_launch_runs`，不会启动综合或仿真。随后可在GUI选择16 jobs，或执行 `t10_launch_runs {synth_1}`；实现可用 `t10_launch_runs {impl_1} -to_step route_design`。GUI的下拉选择与脚本参数分别生效，不能把修改脚本描述为已热修改用户正在运行的GUI进程。
+这两条命令应用参数，为已启用独立综合检查点的IP补齐run，并将参数脚本挂到各run的PRE钩子；不会启动综合或仿真。参数因此可以进入真正工作的子Vivado进程，而不只留在父GUI。新增IP后再次prepare。遇到不同用户钩子会保留并报冲突，不能直接覆盖。
 
-单作业内部的 `general.maxThreads` 是另一项设置，本次16 jobs要求没有把它设成16，也没有修改其既有值。16是允许的并行上限，不保证CPU始终满载或一定比8更快。内存不足、交换到磁盘和任务间依赖可能降低速度；发现实测问题须报告，不静默改小用户指定的作业数。
+随后可在GUI选择本次预算允许的jobs，或执行 `t10_launch_runs {synth_1}`；实现可用 `t10_launch_runs {impl_1} -to_step route_design`，默认16。内存不足时允许显式 `-jobs <1到16>`，记录理由；不要启动16份超出内存容量的大型综合。需要下调展开并行时执行 `t10_set_elaboration_jobs <1到16>`；新会话默认16。
 
-本次只更新已审阅的两个启动入口及新增配置文件的指纹；用户GUI保存的XPR和生成产物保留现场，不并入这次配置提交。正式数值验收前，仍需冻结那次实际使用的工程及输入，不能用初次迁移的XPR指纹代替后来GUI修改后的版本。此次配置经过Tcl结构和参数传递检查，未启动新的Vivado作业或测试16 jobs的性能。
+没有修改正在打开的GUI进程或用户保存的XPR。文件变更不等于已启动作业的配置变化。搬到新目录后重新source当地配置；若旧钩子路径已失效，先在Run Properties核对并清除本工程旧性能钩子，再应用新路径，保留其它用户钩子。正式数值验收前仍需冻结那次实际工程和输入。
 
 ### Elaboration在做什么
 
