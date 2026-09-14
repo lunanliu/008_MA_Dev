@@ -1,0 +1,17 @@
+{
+  "updated_utc": "2026-09-14T11:56:25.3358909Z",
+  "stage": "ROTATOR_FUNCTIONAL_ACCEPTED_EXECUTION_GUARD_REPAIR_REQUIRED",
+  "rotator_functional_acceptance": "PASS_LIMITED_SCOPE",
+  "verified_complex_samples": 20480,
+  "formal_T11_T12_T13_PASS": false,
+  "native001_review": "reports/CFO_NATIVE001_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+  "native001_cancel_deadline": "FAIL",
+  "native001_final_tree_release": "CONFIRMED",
+  "next_job": "CFO-GUARD002",
+  "next_job_scope": "Fix execution guard; no repeated RTL calculation",
+  "next_job_delivered": false,
+  "matlab_allowed_for_this_job": false,
+  "coordinate_controller": "NEXT_AFTER_GUARD",
+  "estimator": "NOT_IMPLEMENTED_IN_CURRENT_PROJECT",
+  "synthesis_timing_throughput": "NOT_QUALIFIED"
+}

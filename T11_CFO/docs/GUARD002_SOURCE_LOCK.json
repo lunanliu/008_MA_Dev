@@ -1,0 +1,37 @@
+{
+  "schema": "CFO_GUARD002_SOURCE_LOCK_v1",
+  "job": "CFO-GUARD002",
+  "scope": "No repeated RTL computation; independent execution guard repair and three native entry probes",
+  "files": [
+    {
+      "path": "vivado/guard_probe_v2.tcl",
+      "bytes": 1011,
+      "sha256": "AF22DB1691A668249BF77B0AA12B80B5A5DED888C73E0918826F4BC9A10BE720"
+    },
+    {
+      "path": "vivado/run_threads.tcl",
+      "bytes": 471,
+      "sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E"
+    },
+    {
+      "path": "docs/GUARD_NATIVE_JOB_002.md",
+      "bytes": 6460,
+      "sha256": "ABC69A8E704F7301F9E09AA9E2CEDF8B197B4AAF255C2221F0BD17E2066E8117"
+    },
+    {
+      "path": "docs/ROTATOR_SOURCE_LOCK.json",
+      "bytes": 8352,
+      "sha256": "2641190797AE0B0C970886AC4859939C50C35C45C42C1A4388B39E05CA15703B"
+    },
+    {
+      "path": "tools/verify_rotator.py",
+      "bytes": 4020,
+      "sha256": "8A76878DBC04AFA73A3F87EB53C036BA1332D3429931A577755FF8129FBEB377"
+    },
+    {
+      "path": "reports/CFO_NATIVE001_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+      "bytes": 6613,
+      "sha256": "1B46BFA52F8F96B9D11AA886186A4D8ED53BCCF284AB84934DA26C0F988D59F8"
+    }
+  ]
+}

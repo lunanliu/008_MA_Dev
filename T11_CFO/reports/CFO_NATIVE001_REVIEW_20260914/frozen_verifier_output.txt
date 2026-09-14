@@ -1,0 +1,4 @@
+CFO_SOURCE_IDENTITIES_PASS files=39
+CFO_ACTUAL_PROJECT_PASS files=17
+CFO_NATIVE_NUMERIC_PASS [{"case": 0, "beats": 1280, "saturated_components": 0, "first_cycle": 33, "last_cycle": 1312}, {"case": 1, "beats": 1280, "saturated_components": 0, "first_cycle": 1350, "last_cycle": 3478}, {"case": 2, "beats": 1280, "saturated_components": 5040, "first_cycle": 3504, "last_cycle": 6171}, {"case": 3, "beats": 1280, "saturated_components": 0, "first_cycle": 6201, "last_cycle": 8869}]
+Scope: rotation arithmetic/handshake only; no estimator, coordinate controller, fullframe, synthesis or sustained-rate claim.
