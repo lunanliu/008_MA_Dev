@@ -1,0 +1,631 @@
+{
+  "schema": "cfo_frontdata007_execution_freeze_v1",
+  "freeze_utc": "2026-09-14T17:31:55.306Z",
+  "attempt_directory": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONTDATA007\\attempt_20260914T173145405Z_luna_v3",
+  "command": "C:\\Python314\\python.exe D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONTDATA007\\attempt_20260914T173145405Z_luna_v3\\frozen\\extract_frontdata007_v3_repair.py --attempt D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONTDATA007\\attempt_20260914T173145405Z_luna_v3 --hard-timeout 300",
+  "tool": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONTDATA007\\attempt_20260914T173145405Z_luna_v3\\frozen\\extract_frontdata007_v3_repair.py",
+    "sha256": "580E3E79A6414EC02AF2DF0E67EF411B86BF4BE187E96DA570E7B5FE8B740EA7"
+  },
+  "source_lock": {
+    "lock_file": {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONTDATA007_SOURCE_LOCK.json",
+      "exists": true,
+      "bytes": 20691,
+      "sha256": "D487D3C19FB54BCD969178D82C546648F316F321195A5883C1EDA1812343AA53"
+    },
+    "file_count": 70,
+    "files": [
+      {
+        "path": "docs/FRONTDATA007_JOB_ZH.md",
+        "expected_bytes": 6306,
+        "expected_sha256": "FCDA420D9A289B8DD950A743E9535F35CB2222645682983F57BACB2428F21B00",
+        "actual_bytes": 6306,
+        "actual_sha256": "FCDA420D9A289B8DD950A743E9535F35CB2222645682983F57BACB2428F21B00",
+        "matches": true
+      },
+      {
+        "path": "docs/FFT2048_FRONTEND_ARCHITECTURE_PREP_ZH.md",
+        "expected_bytes": 3949,
+        "expected_sha256": "4FFD27C0BD859464C0EAA9BCE67C277E53FEF2750DB625C7E74D38BCB34FA934",
+        "actual_bytes": 3949,
+        "actual_sha256": "4FFD27C0BD859464C0EAA9BCE67C277E53FEF2750DB625C7E74D38BCB34FA934",
+        "matches": true
+      },
+      {
+        "path": "docs/CFO_MAIN_CONTRACT.json",
+        "expected_bytes": 3621,
+        "expected_sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E",
+        "actual_bytes": 3621,
+        "actual_sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E",
+        "matches": true
+      },
+      {
+        "path": "matlab/bittrue/cfo_chain_arithmetic.m",
+        "expected_bytes": 9686,
+        "expected_sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80",
+        "actual_bytes": 9686,
+        "actual_sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80",
+        "matches": true
+      },
+      {
+        "path": "matlab/bittrue/cfo_chain_bittrue.m",
+        "expected_bytes": 863,
+        "expected_sha256": "88E5A29504B6A7C136DB2EB3AC3922C54A0649D93F2C8BBF5258BD70564293E6",
+        "actual_bytes": 863,
+        "actual_sha256": "88E5A29504B6A7C136DB2EB3AC3922C54A0649D93F2C8BBF5258BD70564293E6",
+        "matches": true
+      },
+      {
+        "path": "matlab/waveform/payload_pilot_cells.csv",
+        "expected_bytes": 4120567,
+        "expected_sha256": "04E3ED790A0EC8B2980D7D7880874CE786072693E8DC4C60A4A1A71F3AC63B6E",
+        "actual_bytes": 4120567,
+        "actual_sha256": "04E3ED790A0EC8B2980D7D7880874CE786072693E8DC4C60A4A1A71F3AC63B6E",
+        "matches": true
+      },
+      {
+        "path": "tools/extract_phase74_published.py",
+        "expected_bytes": 24692,
+        "expected_sha256": "A4A6E7E7110ED05D062AC6C5D97AEA060399AE9658705E386F7EE4B3BD38E353",
+        "actual_bytes": 24692,
+        "actual_sha256": "A4A6E7E7110ED05D062AC6C5D97AEA060399AE9658705E386F7EE4B3BD38E353",
+        "matches": true
+      },
+      {
+        "path": "reports/BACKEND006R1_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+        "expected_bytes": 3315,
+        "expected_sha256": "A26DE40CF37505200F18001335AEF9320141047A97CF862BBEE076706FF9458F",
+        "actual_bytes": 3315,
+        "actual_sha256": "A26DE40CF37505200F18001335AEF9320141047A97CF862BBEE076706FF9458F",
+        "matches": true
+      },
+      {
+        "path": "reports/BACKEND006R1_REVIEW_20260914/README_ZH.md",
+        "expected_bytes": 1318,
+        "expected_sha256": "B7B0237473E8CE76B2F25E4A7039BD5791C9321EBC7012CCFFB4A7B5D22CAB28",
+        "actual_bytes": 1318,
+        "actual_sha256": "B7B0237473E8CE76B2F25E4A7039BD5791C9321EBC7012CCFFB4A7B5D22CAB28",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/phase74_published_manifest.json",
+        "expected_bytes": 8940,
+        "expected_sha256": "59CD84B3FCB9219CFEADDF69FA5BEBF938395A1345C7EDCCD52634B20A9AE1C8",
+        "actual_bytes": 8940,
+        "actual_sha256": "59CD84B3FCB9219CFEADDF69FA5BEBF938395A1345C7EDCCD52634B20A9AE1C8",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_001/bit_audit.mat",
+        "expected_bytes": 748861,
+        "expected_sha256": "F6F4CEF4629518C33FB8C94C53E6A61962084EB70FEAB20F440502BF60445BB9",
+        "actual_bytes": 748861,
+        "actual_sha256": "F6F4CEF4629518C33FB8C94C53E6A61962084EB70FEAB20F440502BF60445BB9",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_001/result.json",
+        "expected_bytes": 4879,
+        "expected_sha256": "E27E3E05EBF640563A34EA86DE40A31F63DD9B5F554764BED6047C8EF17014A4",
+        "actual_bytes": 4879,
+        "actual_sha256": "E27E3E05EBF640563A34EA86DE40A31F63DD9B5F554764BED6047C8EF17014A4",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo004_case_001.json",
+        "expected_bytes": 21892,
+        "expected_sha256": "11E5555B8B2106A11D4ECF453B686757BB79A6C582E8D09E862722CDFD26C3A4",
+        "actual_bytes": 21892,
+        "actual_sha256": "11E5555B8B2106A11D4ECF453B686757BB79A6C582E8D09E862722CDFD26C3A4",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_003/bit_audit.mat",
+        "expected_bytes": 748591,
+        "expected_sha256": "0914F42A01C2827DE756AFE2810B51EDC60412F6FA8C9A1061935E152CFCC4BD",
+        "actual_bytes": 748591,
+        "actual_sha256": "0914F42A01C2827DE756AFE2810B51EDC60412F6FA8C9A1061935E152CFCC4BD",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_003/result.json",
+        "expected_bytes": 4911,
+        "expected_sha256": "925B6A81885877C7E38CF44ACABF072266305673C90EB5E8E0D1F7DB0BBEF82D",
+        "actual_bytes": 4911,
+        "actual_sha256": "925B6A81885877C7E38CF44ACABF072266305673C90EB5E8E0D1F7DB0BBEF82D",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo004_case_003.json",
+        "expected_bytes": 21733,
+        "expected_sha256": "ED5AB15AD9CA72A2934318776D57D798107D4F1325EC55453F2F72F485242C0A",
+        "actual_bytes": 21733,
+        "actual_sha256": "ED5AB15AD9CA72A2934318776D57D798107D4F1325EC55453F2F72F485242C0A",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_011/bit_audit.mat",
+        "expected_bytes": 747164,
+        "expected_sha256": "F09891DEE72326D4495EF9DA1C738944C512D93C6AC24A470EA74D0FF2F4015C",
+        "actual_bytes": 747164,
+        "actual_sha256": "F09891DEE72326D4495EF9DA1C738944C512D93C6AC24A470EA74D0FF2F4015C",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_011/result.json",
+        "expected_bytes": 4823,
+        "expected_sha256": "0415E1590D5514503DFFFC6BB904C8C75E90B3F4CB7DB66587D47AAA89B372E9",
+        "actual_bytes": 4823,
+        "actual_sha256": "0415E1590D5514503DFFFC6BB904C8C75E90B3F4CB7DB66587D47AAA89B372E9",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo004_case_011.json",
+        "expected_bytes": 20962,
+        "expected_sha256": "7FEE808AC1CA626ED830443D092B698C5CC08329A5787C03E5C942EA308ECAD1",
+        "actual_bytes": 20962,
+        "actual_sha256": "7FEE808AC1CA626ED830443D092B698C5CC08329A5787C03E5C942EA308ECAD1",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_021/bit_audit.mat",
+        "expected_bytes": 748359,
+        "expected_sha256": "63B179AD49A6FC9F2F3502A8EC9A1E0F95FEE08A11C7927B172A8988D01A22B9",
+        "actual_bytes": 748359,
+        "actual_sha256": "63B179AD49A6FC9F2F3502A8EC9A1E0F95FEE08A11C7927B172A8988D01A22B9",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_021/result.json",
+        "expected_bytes": 4876,
+        "expected_sha256": "86379091B2DB1AFA984C9824C554BF455D2CB17458BCEB8466BF98DEACEE3C92",
+        "actual_bytes": 4876,
+        "actual_sha256": "86379091B2DB1AFA984C9824C554BF455D2CB17458BCEB8466BF98DEACEE3C92",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo004_case_021.json",
+        "expected_bytes": 21732,
+        "expected_sha256": "04BE7331A820E0ED59BD7F8AF421617218C108D1C095B8537B394333B431FDD7",
+        "actual_bytes": 21732,
+        "actual_sha256": "04BE7331A820E0ED59BD7F8AF421617218C108D1C095B8537B394333B431FDD7",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_031/bit_audit.mat",
+        "expected_bytes": 727271,
+        "expected_sha256": "EB71B72991F470D00C5DDB0A420ED8F83C5FD879883BB77707B183F097EBBF1E",
+        "actual_bytes": 727271,
+        "actual_sha256": "EB71B72991F470D00C5DDB0A420ED8F83C5FD879883BB77707B183F097EBBF1E",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_031/result.json",
+        "expected_bytes": 4568,
+        "expected_sha256": "96D5F7649B4DEE9288D50BE4FA5F73CB63F076C0B0044ED37723AC1DB0C2B58D",
+        "actual_bytes": 4568,
+        "actual_sha256": "96D5F7649B4DEE9288D50BE4FA5F73CB63F076C0B0044ED37723AC1DB0C2B58D",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo004_case_031.json",
+        "expected_bytes": 21862,
+        "expected_sha256": "87EE488172FFD8C4A85615AF16957B7D8F9C9FC2C8C2047F31C91F79930309A0",
+        "actual_bytes": 21862,
+        "actual_sha256": "87EE488172FFD8C4A85615AF16957B7D8F9C9FC2C8C2047F31C91F79930309A0",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_041/bit_audit.mat",
+        "expected_bytes": 698574,
+        "expected_sha256": "E53021CDA75066E57031C492541C908990B92DD2654893547D514B45DB1DF552",
+        "actual_bytes": 698574,
+        "actual_sha256": "E53021CDA75066E57031C492541C908990B92DD2654893547D514B45DB1DF552",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_041/result.json",
+        "expected_bytes": 4352,
+        "expected_sha256": "121A86B002EA976DA83F2DB891B8089023D030138B3D2333B1A660778E40E4ED",
+        "actual_bytes": 4352,
+        "actual_sha256": "121A86B002EA976DA83F2DB891B8089023D030138B3D2333B1A660778E40E4ED",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo004_case_041.json",
+        "expected_bytes": 20765,
+        "expected_sha256": "A7FC424BA189EA26A43AFDF276006DD5930F4F30BED9D9DFC041EA9A90A1B2A0",
+        "actual_bytes": 20765,
+        "actual_sha256": "A7FC424BA189EA26A43AFDF276006DD5930F4F30BED9D9DFC041EA9A90A1B2A0",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_051/bit_audit.mat",
+        "expected_bytes": 727435,
+        "expected_sha256": "7708517BFDCE59EB26158A82338DA327E7D397400023CCAF85C585F77152F733",
+        "actual_bytes": 727435,
+        "actual_sha256": "7708517BFDCE59EB26158A82338DA327E7D397400023CCAF85C585F77152F733",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_051/result.json",
+        "expected_bytes": 4546,
+        "expected_sha256": "C118B02698EC983BC679467810838005D5BB6026DC9544C3859FF342C5282354",
+        "actual_bytes": 4546,
+        "actual_sha256": "C118B02698EC983BC679467810838005D5BB6026DC9544C3859FF342C5282354",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo004_case_051.json",
+        "expected_bytes": 21698,
+        "expected_sha256": "4B4B94E4F26BC9CE9F1BBFF1F7461EF70142DBF31B47FAC66BB8D3C796F90917",
+        "actual_bytes": 21698,
+        "actual_sha256": "4B4B94E4F26BC9CE9F1BBFF1F7461EF70142DBF31B47FAC66BB8D3C796F90917",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_061/bit_audit.mat",
+        "expected_bytes": 637857,
+        "expected_sha256": "04DA33C3FC132AD1B4DDB2C9B8ED1FA8A8C02ADB9D5FB23D9C739B4B73415AA8",
+        "actual_bytes": 637857,
+        "actual_sha256": "04DA33C3FC132AD1B4DDB2C9B8ED1FA8A8C02ADB9D5FB23D9C739B4B73415AA8",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_061/result.json",
+        "expected_bytes": 4590,
+        "expected_sha256": "9F1315CCD8B72C9BB5EC99C7907563ABDF6A44556905AD228028C4C69DE12DD6",
+        "actual_bytes": 4590,
+        "actual_sha256": "9F1315CCD8B72C9BB5EC99C7907563ABDF6A44556905AD228028C4C69DE12DD6",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo004_case_061.json",
+        "expected_bytes": 21775,
+        "expected_sha256": "4D3F4B7205C5EA6CE80B053F99481B38F64E86B2C6AF566D53879D7727B219A0",
+        "actual_bytes": 21775,
+        "actual_sha256": "4D3F4B7205C5EA6CE80B053F99481B38F64E86B2C6AF566D53879D7727B219A0",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_071/bit_audit.mat",
+        "expected_bytes": 309009,
+        "expected_sha256": "00384568B064B695C216308DBE73617B19B93EEA51A72202AFB8ED678A7A9994",
+        "actual_bytes": 309009,
+        "actual_sha256": "00384568B064B695C216308DBE73617B19B93EEA51A72202AFB8ED678A7A9994",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_071/result.json",
+        "expected_bytes": 4322,
+        "expected_sha256": "53E8814B525783686AEAC87A088D9297142972EBAC80C5E88CBB1630028C955D",
+        "actual_bytes": 4322,
+        "actual_sha256": "53E8814B525783686AEAC87A088D9297142972EBAC80C5E88CBB1630028C955D",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo004_case_071.json",
+        "expected_bytes": 19717,
+        "expected_sha256": "A0585726EDF101F2F9919371CC850F286AE9308DBBB23F9A530310BFDC4DE9FD",
+        "actual_bytes": 19717,
+        "actual_sha256": "A0585726EDF101F2F9919371CC850F286AE9308DBBB23F9A530310BFDC4DE9FD",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_081/bit_audit.mat",
+        "expected_bytes": 637948,
+        "expected_sha256": "4FC891C17178C548FD3639B21D15FDB3649BE3C2083B0C6F0315866DC5DBFE83",
+        "actual_bytes": 637948,
+        "actual_sha256": "4FC891C17178C548FD3639B21D15FDB3649BE3C2083B0C6F0315866DC5DBFE83",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_081/result.json",
+        "expected_bytes": 4571,
+        "expected_sha256": "78B4EB89EDF957647A9A06D67844DB7C6794EF2E489CDD45CE78EC6B24D2D85E",
+        "actual_bytes": 4571,
+        "actual_sha256": "78B4EB89EDF957647A9A06D67844DB7C6794EF2E489CDD45CE78EC6B24D2D85E",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo004_case_081.json",
+        "expected_bytes": 21610,
+        "expected_sha256": "E2AFC86AAE6310B63712B3C1516E0452A1A676B5F6FEF300291465EBB9954C4F",
+        "actual_bytes": 21610,
+        "actual_sha256": "E2AFC86AAE6310B63712B3C1516E0452A1A676B5F6FEF300291465EBB9954C4F",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_001/bit_NCO32_ROM10_C16F14_audit.mat",
+        "expected_bytes": 727739,
+        "expected_sha256": "7E19C102F27B0D67BB24C1DB00F13301D1A351D510C4308341146A7971C02E75",
+        "actual_bytes": 727739,
+        "actual_sha256": "7E19C102F27B0D67BB24C1DB00F13301D1A351D510C4308341146A7971C02E75",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_001/bit_NCO32_ROM10_C16F14.json",
+        "expected_bytes": 2995,
+        "expected_sha256": "B75213517479126EB1C362F12090E40853E56C9F6EE03B8F741A1EDF8B9EFA00",
+        "actual_bytes": 2995,
+        "actual_sha256": "B75213517479126EB1C362F12090E40853E56C9F6EE03B8F741A1EDF8B9EFA00",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo003_case_001.json",
+        "expected_bytes": 21946,
+        "expected_sha256": "EF8C585F27780E69E997ADCCC91E09A566E02B015B7CE018AE226CA61FA486B1",
+        "actual_bytes": 21946,
+        "actual_sha256": "EF8C585F27780E69E997ADCCC91E09A566E02B015B7CE018AE226CA61FA486B1",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_002/bit_NCO32_ROM10_C16F14_audit.mat",
+        "expected_bytes": 699232,
+        "expected_sha256": "45223803F0673077B4B356D385162DC93D292F7D922F50D5CDB870BE2033BE9C",
+        "actual_bytes": 699232,
+        "actual_sha256": "45223803F0673077B4B356D385162DC93D292F7D922F50D5CDB870BE2033BE9C",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_002/bit_NCO32_ROM10_C16F14.json",
+        "expected_bytes": 2806,
+        "expected_sha256": "44D8B03BC63EEDFC2BCD0822E389283D7207871EA224E95C1052FCB715185C9F",
+        "actual_bytes": 2806,
+        "actual_sha256": "44D8B03BC63EEDFC2BCD0822E389283D7207871EA224E95C1052FCB715185C9F",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo003_case_002.json",
+        "expected_bytes": 20622,
+        "expected_sha256": "5E4CF6EC3BD3B9043AEC98390DC0BBD3698AA3B6B2F24B8667D75E6DA665FA71",
+        "actual_bytes": 20622,
+        "actual_sha256": "5E4CF6EC3BD3B9043AEC98390DC0BBD3698AA3B6B2F24B8667D75E6DA665FA71",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_003/bit_NCO32_ROM10_C16F14_audit.mat",
+        "expected_bytes": 727172,
+        "expected_sha256": "4DFA8A4189B5E41A36CE9BD50C937A2714B4D1E2162BE84815DD151C4DED9BA3",
+        "actual_bytes": 727172,
+        "actual_sha256": "4DFA8A4189B5E41A36CE9BD50C937A2714B4D1E2162BE84815DD151C4DED9BA3",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_003/bit_NCO32_ROM10_C16F14.json",
+        "expected_bytes": 2994,
+        "expected_sha256": "930FAB2D16CE42E19EBCD8155E140E8648D16A60748081327C61577C847096B4",
+        "actual_bytes": 2994,
+        "actual_sha256": "930FAB2D16CE42E19EBCD8155E140E8648D16A60748081327C61577C847096B4",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo003_case_003.json",
+        "expected_bytes": 21776,
+        "expected_sha256": "0E7B08C5D31484FDC4C45328EDA2535DDC710AC0638332A5DE0E9C386D3BAADF",
+        "actual_bytes": 21776,
+        "actual_sha256": "0E7B08C5D31484FDC4C45328EDA2535DDC710AC0638332A5DE0E9C386D3BAADF",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_004/bit_NCO32_ROM10_C16F14_audit.mat",
+        "expected_bytes": 742299,
+        "expected_sha256": "76853704E03D549B20735F1A7EDA4BF73F2EFB23570CC12B66AF161CF1B160E3",
+        "actual_bytes": 742299,
+        "actual_sha256": "76853704E03D549B20735F1A7EDA4BF73F2EFB23570CC12B66AF161CF1B160E3",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_004/bit_NCO32_ROM10_C16F14.json",
+        "expected_bytes": 2613,
+        "expected_sha256": "4D723C0A1B6F1AC274536E8ACB18FB9526B5D6CE93988C861C0D2CD3F00FD400",
+        "actual_bytes": 2613,
+        "actual_sha256": "4D723C0A1B6F1AC274536E8ACB18FB9526B5D6CE93988C861C0D2CD3F00FD400",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo003_case_004.json",
+        "expected_bytes": 21918,
+        "expected_sha256": "BC2550E629D7337F998368752FFF8D0340D4A7AC11FFAE971DB4ABA7B01B03A0",
+        "actual_bytes": 21918,
+        "actual_sha256": "BC2550E629D7337F998368752FFF8D0340D4A7AC11FFAE971DB4ABA7B01B03A0",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_005/bit_NCO32_ROM10_C16F14_audit.mat",
+        "expected_bytes": 727637,
+        "expected_sha256": "D1BF407E65DADE498FD789A4EDD4B69D53153D2BFAC97A8C3171F64D9422DFCB",
+        "actual_bytes": 727637,
+        "actual_sha256": "D1BF407E65DADE498FD789A4EDD4B69D53153D2BFAC97A8C3171F64D9422DFCB",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_005/bit_NCO32_ROM10_C16F14.json",
+        "expected_bytes": 3049,
+        "expected_sha256": "0BA0667D766BE42338CB2C3B411D85713AFC8BB7715ABD6B4D92922472968348",
+        "actual_bytes": 3049,
+        "actual_sha256": "0BA0667D766BE42338CB2C3B411D85713AFC8BB7715ABD6B4D92922472968348",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo003_case_005.json",
+        "expected_bytes": 21969,
+        "expected_sha256": "7D8A479E6265CE3640349F485207B7044A665DDF406B5D3454BE68FC30C83108",
+        "actual_bytes": 21969,
+        "actual_sha256": "7D8A479E6265CE3640349F485207B7044A665DDF406B5D3454BE68FC30C83108",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_006/bit_NCO32_ROM10_C16F14_audit.mat",
+        "expected_bytes": 727327,
+        "expected_sha256": "AE4A00EF84961730C35AB2DECC8982626A9B7DFD228F450DEDB1E48877A36552",
+        "actual_bytes": 727327,
+        "actual_sha256": "AE4A00EF84961730C35AB2DECC8982626A9B7DFD228F450DEDB1E48877A36552",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_006/bit_NCO32_ROM10_C16F14.json",
+        "expected_bytes": 3029,
+        "expected_sha256": "30BE0DAF6F7F54098F07385C048C7D7C69A3731E104374F3A5D05E8B89665CDB",
+        "actual_bytes": 3029,
+        "actual_sha256": "30BE0DAF6F7F54098F07385C048C7D7C69A3731E104374F3A5D05E8B89665CDB",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo003_case_006.json",
+        "expected_bytes": 21793,
+        "expected_sha256": "EE8DE10626A4CC2C32CE4EB5FC5C9F9A32B1111B10B40CA60D694C7144099569",
+        "actual_bytes": 21793,
+        "actual_sha256": "EE8DE10626A4CC2C32CE4EB5FC5C9F9A32B1111B10B40CA60D694C7144099569",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_007/bit_NCO32_ROM10_C16F14_audit.mat",
+        "expected_bytes": 741329,
+        "expected_sha256": "3804A615133A01B56A5D3F13C8837D7745787CD77EDC2439E3B58196D4CFD2F7",
+        "actual_bytes": 741329,
+        "actual_sha256": "3804A615133A01B56A5D3F13C8837D7745787CD77EDC2439E3B58196D4CFD2F7",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_007/bit_NCO32_ROM10_C16F14.json",
+        "expected_bytes": 2705,
+        "expected_sha256": "E74A30D83E32F45CBBFA97923EC06C6CC972D70F92E5C9A4569154F341498D0D",
+        "actual_bytes": 2705,
+        "actual_sha256": "E74A30D83E32F45CBBFA97923EC06C6CC972D70F92E5C9A4569154F341498D0D",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo003_case_007.json",
+        "expected_bytes": 21966,
+        "expected_sha256": "C4872B5A1E0D4D5E3E2C429774DB10F8E11D0FE74DD4752A9E5AC700DCF0415C",
+        "actual_bytes": 21966,
+        "actual_sha256": "C4872B5A1E0D4D5E3E2C429774DB10F8E11D0FE74DD4752A9E5AC700DCF0415C",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_008/bit_NCO32_ROM10_C16F14_audit.mat",
+        "expected_bytes": 596995,
+        "expected_sha256": "4E0E350D48C5D1C58ECE029F894928737EA8732DC50E42DCF650E104F84F1BD2",
+        "actual_bytes": 596995,
+        "actual_sha256": "4E0E350D48C5D1C58ECE029F894928737EA8732DC50E42DCF650E104F84F1BD2",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_008/bit_NCO32_ROM10_C16F14.json",
+        "expected_bytes": 2901,
+        "expected_sha256": "9FB3E8D6F646FEC684C64111B959E30BA9874DEFB2F67A192AC566E4C81FA946",
+        "actual_bytes": 2901,
+        "actual_sha256": "9FB3E8D6F646FEC684C64111B959E30BA9874DEFB2F67A192AC566E4C81FA946",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo003_case_008.json",
+        "expected_bytes": 21164,
+        "expected_sha256": "D5F02593CDBA18289C463E31E74D756D57700EEED4D7FA64ECDD05083849AF1E",
+        "actual_bytes": 21164,
+        "actual_sha256": "D5F02593CDBA18289C463E31E74D756D57700EEED4D7FA64ECDD05083849AF1E",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_009/bit_NCO32_ROM10_C16F14_audit.mat",
+        "expected_bytes": 806740,
+        "expected_sha256": "B13BB25A8AE72F75FA7F8EB28224BA25708AC15A1B295CA59D349DCDFF011DB8",
+        "actual_bytes": 806740,
+        "actual_sha256": "B13BB25A8AE72F75FA7F8EB28224BA25708AC15A1B295CA59D349DCDFF011DB8",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo003/results/case_009/bit_NCO32_ROM10_C16F14.json",
+        "expected_bytes": 2956,
+        "expected_sha256": "66B3CB9397B75F0B6BE088FF8B9A4B9B287A76F87DCBCFFB11D1ADABC37073F8",
+        "actual_bytes": 2956,
+        "actual_sha256": "66B3CB9397B75F0B6BE088FF8B9A4B9B287A76F87DCBCFFB11D1ADABC37073F8",
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/phase74_published/rcfo003_case_009.json",
+        "expected_bytes": 21832,
+        "expected_sha256": "383E255D1F794970001E0D162A84E7C5460D120092FED093DCA76EF39A1F7885",
+        "actual_bytes": 21832,
+        "actual_sha256": "383E255D1F794970001E0D162A84E7C5460D120092FED093DCA76EF39A1F7885",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_001/input_i16.bin",
+        "expected_bytes": 5345280,
+        "expected_sha256": "CD30B9B9F18392CFE2D71DE1E8AAD35A13287338014A64060101B7DCC32CDED6",
+        "actual_bytes": 5345280,
+        "actual_sha256": "CD30B9B9F18392CFE2D71DE1E8AAD35A13287338014A64060101B7DCC32CDED6",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_003/input_i16.bin",
+        "expected_bytes": 5345280,
+        "expected_sha256": "50558E6F99D6BFBE0E7BF202DAD0495ED651C7E1494BF473B81D0D8C4A41EBCA",
+        "actual_bytes": 5345280,
+        "actual_sha256": "50558E6F99D6BFBE0E7BF202DAD0495ED651C7E1494BF473B81D0D8C4A41EBCA",
+        "matches": true
+      },
+      {
+        "path": "sim/reference/rcfo004/results/case_081/input_i16.bin",
+        "expected_bytes": 5345280,
+        "expected_sha256": "FA78B350D413CAC1A088DBAD5A607CD7F203E1C86299225D156E58424AAD9914",
+        "actual_bytes": 5345280,
+        "actual_sha256": "FA78B350D413CAC1A088DBAD5A607CD7F203E1C86299225D156E58424AAD9914",
+        "matches": true
+      }
+    ],
+    "all_match": true
+  },
+  "csv": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\matlab\\waveform\\payload_pilot_cells.csv",
+    "exists": true,
+    "bytes": 4120567,
+    "sha256": "04E3ED790A0EC8B2980D7D7880874CE786072693E8DC4C60A4A1A71F3AC63B6E"
+  },
+  "hdf5_library": {
+    "path": "C:\\Program Files\\National Instruments\\Shared\\UsiCore\\Bin\\hdf5.dll",
+    "exists": true,
+    "bytes": 3334400,
+    "sha256": "428A0CEDA92BCCB06B039896C708982A6A19B2A8B1D42E48BBE098DED7CBB05D"
+  },
+  "hdf5_version_expected": "1.12.0",
+  "protected_processes": [
+    {
+      "pid": 51032,
+      "name": "python.exe"
+    },
+    {
+      "pid": 34768,
+      "name": "vivado.exe"
+    },
+    {
+      "pid": 28856,
+      "name": "xsimk.exe"
+    }
+  ],
+  "resource": {
+    "utc": "2026-09-14T17:31:55.306Z",
+    "stage": "freeze",
+    "elapsed_seconds": 0.271,
+    "system": {
+      "memory_load_percent": 69,
+      "total_physical_bytes": 33737908224,
+      "available_physical_bytes": 10375532544,
+      "available_physical_gib": 9.662967681884766
+    },
+    "process": {
+      "working_set_bytes": 32366592,
+      "working_set_gib": 0.03014373779296875,
+      "peak_working_set_bytes": 34115584,
+      "peak_working_set_gib": 0.031772613525390625,
+      "pagefile_usage_bytes": 23212032
+    }
+  },
+  "hard_timeout_seconds": 300.0,
+  "matlab_allowed": false,
+  "vivado_allowed": false,
+  "output_policy": "new independent attempt; no existing output overwrite"
+}

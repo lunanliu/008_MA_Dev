@@ -1,0 +1,216 @@
+{
+  "schema": "fft008_source_lock_v1",
+  "utc": "2026-09-14T18:02:14.451975+00:00",
+  "root": "D:\\008_MA_Dev\\T11_CFO",
+  "part": "xcvu11p-flgb2104-2-e",
+  "hardware_top": "cfo_fft2048_core",
+  "simulation_top": "cfo_fft2048_tb",
+  "project_members": [
+    {
+      "fileset": "sources_1",
+      "path": "rtl/cfo_fft2048_core.sv"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "ip/fft2048_twiddle.mem"
+    },
+    {
+      "fileset": "constrs_1",
+      "path": "constraints/cfo_fft2048.xdc"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/tb/cfo_fft2048_tb.sv"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft2048_config.svh"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft2048_input.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft2048_output.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft2048_butterfly.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft2048_saturation.mem"
+    },
+    {
+      "fileset": "sim_1",
+      "path": "sim/vectors/fft2048_window.mem"
+    },
+    {
+      "fileset": "utils_1",
+      "path": "vivado/run_threads.tcl"
+    }
+  ],
+  "files": [
+    {
+      "path": "rtl/cfo_fft2048_core.sv",
+      "bytes": 9177,
+      "sha256": "67B402A1025E53A9691E94A1720968955186C2DACF4C00CE8409CC28532702DB"
+    },
+    {
+      "path": "ip/fft2048_twiddle.mem",
+      "bytes": 11264,
+      "sha256": "9A1C8A4363F3B0E7513B8A52CA70B6462A09A3BDFA2A232159D781C57816A276"
+    },
+    {
+      "path": "constraints/cfo_fft2048.xdc",
+      "bytes": 57,
+      "sha256": "91438FF6943D94AC324649DD0C5C15D1CE3C5C7233E175835B96B6D3CED0104C"
+    },
+    {
+      "path": "sim/tb/cfo_fft2048_tb.sv",
+      "bytes": 9192,
+      "sha256": "B401190EC6AC0EF627B4D90C2E32BA7954E8A4E0F35DD1AB8AA2BEB7D49CB26C"
+    },
+    {
+      "path": "sim/vectors/fft2048_config.svh",
+      "bytes": 36,
+      "sha256": "D9FB61C40C67CE72126483F84F04E7A935336DB082D91EC88939B7006B4CBF21"
+    },
+    {
+      "path": "sim/vectors/fft2048_input.mem",
+      "bytes": 614400,
+      "sha256": "BB0316674DFBFA0A9F61CEE2C6ED6F3A2DA29DE0AF3F22F728FE0134297E1A6D"
+    },
+    {
+      "path": "sim/vectors/fft2048_output.mem",
+      "bytes": 614400,
+      "sha256": "7A33A43F13ACF78DE6E905C58D103B6814E9DF96AB3C331C3D92D0A00581B907"
+    },
+    {
+      "path": "sim/vectors/fft2048_butterfly.mem",
+      "bytes": 6533120,
+      "sha256": "F0B8F41EE232BD47B52BE201BFCD24EEA2FFD2F2286E544522177BAEA3168ECF"
+    },
+    {
+      "path": "sim/vectors/fft2048_saturation.mem",
+      "bytes": 120,
+      "sha256": "EE288DFFA9535ECDFB450082802E6C4D13F709AACFDEF0BD3F410F6B2B2F4C54"
+    },
+    {
+      "path": "sim/vectors/fft2048_window.mem",
+      "bytes": 80,
+      "sha256": "3C42377D57AC5702D790F7F7041D3FE5B9EE0A7ADEFB700815805B9F5347B3E8"
+    },
+    {
+      "path": "vivado/run_threads.tcl",
+      "bytes": 471,
+      "sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E"
+    },
+    {
+      "path": "tools/fft2048_reference.py",
+      "bytes": 6430,
+      "sha256": "57613E521802AEBFB876AA0B3527C43D870CD98EEE2AFA2B85A4D2769072602D"
+    },
+    {
+      "path": "tools/verify_fft2048.py",
+      "bytes": 5448,
+      "sha256": "EF7E280182F105CB20E11D1D1C27B7EA72BCD77DB1DFEBA9A618F70EF9B9531D"
+    },
+    {
+      "path": "tools/freeze_fft008_sources.py",
+      "bytes": 2507,
+      "sha256": "3E7CE9329D514CD209A0A01CB6AED24E70EC896244B4EF31CB210F099AE9719B"
+    },
+    {
+      "path": "tools/review_frontdata007.py",
+      "bytes": 5218,
+      "sha256": "7A1ABAA69EDB25806F166DF4065CDE3CE082D4A694E57C0FAF149105E49325CE"
+    },
+    {
+      "path": "tools/cfo_native_guard_v3.py",
+      "bytes": 36155,
+      "sha256": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034"
+    },
+    {
+      "path": "tools/cfo_phase74_guard_v1.py",
+      "bytes": 24596,
+      "sha256": "B35F872630D2995B5EEB5257666188D3506C864FC4004294423078AE0CFE9583"
+    },
+    {
+      "path": "tools/cfo_phase74_fix01_guard_v1.py",
+      "bytes": 15173,
+      "sha256": "8C37F4D02B586CCAC61782FA8EB099A744CED42CB23614E2DB79815F94F117A3"
+    },
+    {
+      "path": "vivado/fft2048_project.tcl",
+      "bytes": 3413,
+      "sha256": "40650E03F922E545F424CDD58E2436BB8E24098F20E541D265FEDDD978D6331C"
+    },
+    {
+      "path": "vivado/configure_parallel_jobs.tcl",
+      "bytes": 4994,
+      "sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3"
+    },
+    {
+      "path": "docs/FFT2048_CONTRACT_V1_ZH.md",
+      "bytes": 3422,
+      "sha256": "1EC229C2AFE20049AC002AE6EC30EFEF9D47464C11FA7A5BDCF82E7755422D5E"
+    },
+    {
+      "path": "docs/FFT2048_NATIVE_JOB_008.md",
+      "bytes": 4128,
+      "sha256": "91A2110873A74CFA5E00FE6F54A44E3EEC033CC5402CE79A59788DD6BBC39551"
+    },
+    {
+      "path": "docs/CFO_MAIN_CONTRACT.json",
+      "bytes": 3621,
+      "sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E"
+    },
+    {
+      "path": "docs/FRONTDATA007_SOURCE_LOCK.json",
+      "bytes": 20691,
+      "sha256": "D487D3C19FB54BCD969178D82C546648F316F321195A5883C1EDA1812343AA53"
+    },
+    {
+      "path": "sim/vectors/fft2048_cases.json",
+      "bytes": 6741390,
+      "sha256": "DED81BB6E1336616F82ED364050B67AFB9EFCB0FE27927BC0971092F79F1CA15"
+    },
+    {
+      "path": "matlab/bittrue/cfo_chain_arithmetic.m",
+      "bytes": 9686,
+      "sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80"
+    },
+    {
+      "path": "reports/FFT2048_VECTOR_CHECK.json",
+      "bytes": 3273,
+      "sha256": "259A39E2F2E153BFC98E00F25A4438131B53928B6B43532119D71FC5119D73D0"
+    },
+    {
+      "path": "reports/FRONTDATA007_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+      "bytes": 5037,
+      "sha256": "FC706790BE9CA0DF51A93A0D690CABEFF9E29CBDAF035C7EA7D196968AFA1979"
+    },
+    {
+      "path": "reports/FRONTDATA007_REVIEW_20260914/README_ZH.md",
+      "bytes": 884,
+      "sha256": "9185121D75B0DBF2A5728B298FC07D2374D8488779B5E727BA72B5F9C55C1E4F"
+    },
+    {
+      "path": "reports/FRONTDATA007_REVIEW_20260914/extract_frontdata007_v3_repair.py",
+      "bytes": 48426,
+      "sha256": "580E3E79A6414EC02AF2DF0E67EF411B86BF4BE187E96DA570E7B5FE8B740EA7"
+    },
+    {
+      "path": "reports/BACKEND006R1_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+      "bytes": 3315,
+      "sha256": "A26DE40CF37505200F18001335AEF9320141047A97CF862BBEE076706FF9458F"
+    }
+  ],
+  "native_stages": [
+    "create",
+    "simulate"
+  ],
+  "scope": "FFT2048 primitive only. No full-frame, pilot multiply/sum, CDC, synthesis or clock500 physical qualification."
+}

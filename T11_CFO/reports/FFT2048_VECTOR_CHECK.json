@@ -1,0 +1,128 @@
+{
+  "status": "FFT2048_INTEGER_ORACLE_MATCHES_PUBLISHED_PILOT_NODES",
+  "source_cases": [
+    {
+      "case_id": 1,
+      "windows": 74,
+      "pilot_complex_exact": 60680
+    },
+    {
+      "case_id": 3,
+      "windows": 74,
+      "pilot_complex_exact": 60680
+    },
+    {
+      "case_id": 81,
+      "windows": 74,
+      "pilot_complex_exact": 60680
+    }
+  ],
+  "source_windows": 222,
+  "published_complex_fft_nodes_exact": 182040,
+  "native_unique_windows": 20,
+  "native_published_windows": 12,
+  "integer_corners": 8,
+  "saturations": {
+    "fullscale_quadrants": 511
+  },
+  "address_schedule": {
+    "stages": [
+      {
+        "stage": 0,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      },
+      {
+        "stage": 1,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      },
+      {
+        "stage": 2,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      },
+      {
+        "stage": 3,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      },
+      {
+        "stage": 4,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      },
+      {
+        "stage": 5,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      },
+      {
+        "stage": 6,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      },
+      {
+        "stage": 7,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      },
+      {
+        "stage": 8,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      },
+      {
+        "stage": 9,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      },
+      {
+        "stage": 10,
+        "butterflies": 1024,
+        "unique_addresses": 2048,
+        "bank_conflicts": 0,
+        "issue_to_commit_cycles": 7,
+        "stage_cycles": 1031
+      }
+    ],
+    "run_cycles": 11341,
+    "input_cycles": 2048,
+    "output_first_latency": 3,
+    "output_samples": 2048,
+    "ideal_service_cycles_with_output_handshake": 15440,
+    "qualification": "Static schedule budget only; RTL cycles and 500 MHz timing not yet measured"
+  },
+  "no_matlab_or_vivado_run": true,
+  "full_fft_is_integer_oracle_not_published_matlab_full_fft": true
+}

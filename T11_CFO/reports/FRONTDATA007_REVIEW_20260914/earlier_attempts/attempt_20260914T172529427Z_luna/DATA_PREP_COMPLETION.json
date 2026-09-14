@@ -1,0 +1,210 @@
+{
+  "schema": "cfo_frontdata007_completion_v1",
+  "status": "INCOMPLETE",
+  "completed_utc": "2026-09-14T17:25:52.538Z",
+  "attempt_directory": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONTDATA007\\attempt_20260914T172529427Z_luna",
+  "selected_case_count": 0,
+  "expected_case_count": 19,
+  "matlab_started": false,
+  "vivado_started": false,
+  "final_manifest": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONTDATA007\\attempt_20260914T172529427Z_luna\\published\\FINAL_MANIFEST.json",
+    "bytes": 79776,
+    "sha256": "B09CB7D6CE248E8462E1190E394863CDD65496162FF10C024F4C4C5F5A4B6F3C"
+  },
+  "resource": {
+    "elapsed_seconds": 0.324,
+    "sample_count": 8,
+    "max_process_working_set_bytes": 33898496,
+    "max_process_peak_working_set_bytes": 33972224,
+    "warning_line_bytes": 1073741824,
+    "warning_line_crossed": false,
+    "last_sample": {
+      "utc": "2026-09-14T17:25:52.523Z",
+      "stage": "final",
+      "elapsed_seconds": 0.324,
+      "system": {
+        "memory_load_percent": 69,
+        "total_physical_bytes": 33737908224,
+        "available_physical_bytes": 10339065856,
+        "available_physical_gib": 9.629005432128906
+      },
+      "process": {
+        "working_set_bytes": 32657408,
+        "working_set_gib": 0.030414581298828125,
+        "peak_working_set_bytes": 33972224,
+        "peak_working_set_gib": 0.03163909912109375,
+        "pagefile_usage_bytes": 23277568
+      }
+    },
+    "samples": [
+      {
+        "utc": "2026-09-14T17:25:52.212Z",
+        "stage": "startup",
+        "elapsed_seconds": 0.014,
+        "system": {
+          "memory_load_percent": 69,
+          "total_physical_bytes": 33737908224,
+          "available_physical_bytes": 10362933248,
+          "available_physical_gib": 9.651233673095703
+        },
+        "process": {
+          "working_set_bytes": 27201536,
+          "working_set_gib": 0.025333404541015625,
+          "peak_working_set_bytes": 29270016,
+          "peak_working_set_gib": 0.02725982666015625,
+          "pagefile_usage_bytes": 18239488
+        }
+      },
+      {
+        "utc": "2026-09-14T17:25:52.378Z",
+        "stage": "CSV row 10000",
+        "elapsed_seconds": 0.179,
+        "system": {
+          "memory_load_percent": 69,
+          "total_physical_bytes": 33737908224,
+          "available_physical_bytes": 10340798464,
+          "available_physical_gib": 9.630619049072266
+        },
+        "process": {
+          "working_set_bytes": 28614656,
+          "working_set_gib": 0.02664947509765625,
+          "peak_working_set_bytes": 29626368,
+          "peak_working_set_gib": 0.027591705322265625,
+          "pagefile_usage_bytes": 19558400
+        }
+      },
+      {
+        "utc": "2026-09-14T17:25:52.401Z",
+        "stage": "CSV row 20000",
+        "elapsed_seconds": 0.202,
+        "system": {
+          "memory_load_percent": 69,
+          "total_physical_bytes": 33737908224,
+          "available_physical_bytes": 10340179968,
+          "available_physical_gib": 9.630043029785156
+        },
+        "process": {
+          "working_set_bytes": 29728768,
+          "working_set_gib": 0.02768707275390625,
+          "peak_working_set_bytes": 29732864,
+          "peak_working_set_gib": 0.027690887451171875,
+          "pagefile_usage_bytes": 20881408
+        }
+      },
+      {
+        "utc": "2026-09-14T17:25:52.423Z",
+        "stage": "CSV row 30000",
+        "elapsed_seconds": 0.225,
+        "system": {
+          "memory_load_percent": 69,
+          "total_physical_bytes": 33737908224,
+          "available_physical_bytes": 10337898496,
+          "available_physical_gib": 9.627918243408203
+        },
+        "process": {
+          "working_set_bytes": 30781440,
+          "working_set_gib": 0.028667449951171875,
+          "peak_working_set_bytes": 30785536,
+          "peak_working_set_gib": 0.0286712646484375,
+          "pagefile_usage_bytes": 22204416
+        }
+      },
+      {
+        "utc": "2026-09-14T17:25:52.452Z",
+        "stage": "CSV row 40000",
+        "elapsed_seconds": 0.254,
+        "system": {
+          "memory_load_percent": 69,
+          "total_physical_bytes": 33737908224,
+          "available_physical_bytes": 10337501184,
+          "available_physical_gib": 9.627548217773438
+        },
+        "process": {
+          "working_set_bytes": 31883264,
+          "working_set_gib": 0.029693603515625,
+          "peak_working_set_bytes": 31887360,
+          "peak_working_set_gib": 0.029697418212890625,
+          "pagefile_usage_bytes": 23527424
+        }
+      },
+      {
+        "utc": "2026-09-14T17:25:52.475Z",
+        "stage": "CSV row 50000",
+        "elapsed_seconds": 0.277,
+        "system": {
+          "memory_load_percent": 69,
+          "total_physical_bytes": 33737908224,
+          "available_physical_bytes": 10337079296,
+          "available_physical_gib": 9.627155303955078
+        },
+        "process": {
+          "working_set_bytes": 32792576,
+          "working_set_gib": 0.03054046630859375,
+          "peak_working_set_bytes": 32796672,
+          "peak_working_set_gib": 0.030544281005859375,
+          "pagefile_usage_bytes": 23527424
+        }
+      },
+      {
+        "utc": "2026-09-14T17:25:52.498Z",
+        "stage": "CSV row 60000",
+        "elapsed_seconds": 0.3,
+        "system": {
+          "memory_load_percent": 69,
+          "total_physical_bytes": 33737908224,
+          "available_physical_bytes": 10336034816,
+          "available_physical_gib": 9.626182556152344
+        },
+        "process": {
+          "working_set_bytes": 33898496,
+          "working_set_gib": 0.0315704345703125,
+          "peak_working_set_bytes": 33902592,
+          "peak_working_set_gib": 0.031574249267578125,
+          "pagefile_usage_bytes": 24850432
+        }
+      },
+      {
+        "utc": "2026-09-14T17:25:52.502Z",
+        "stage": "freeze",
+        "elapsed_seconds": 0.304,
+        "system": {
+          "memory_load_percent": 69,
+          "total_physical_bytes": 33737908224,
+          "available_physical_bytes": 10337497088,
+          "available_physical_gib": 9.627544403076172
+        },
+        "process": {
+          "working_set_bytes": 32264192,
+          "working_set_gib": 0.030048370361328125,
+          "peak_working_set_bytes": 33972224,
+          "peak_working_set_gib": 0.03163909912109375,
+          "pagefile_usage_bytes": 23162880
+        }
+      },
+      {
+        "utc": "2026-09-14T17:25:52.523Z",
+        "stage": "final",
+        "elapsed_seconds": 0.324,
+        "system": {
+          "memory_load_percent": 69,
+          "total_physical_bytes": 33737908224,
+          "available_physical_bytes": 10339065856,
+          "available_physical_gib": 9.629005432128906
+        },
+        "process": {
+          "working_set_bytes": 32657408,
+          "working_set_gib": 0.030414581298828125,
+          "peak_working_set_bytes": 33972224,
+          "peak_working_set_gib": 0.03163909912109375,
+          "pagefile_usage_bytes": 23277568
+        }
+      }
+    ]
+  },
+  "failure": {
+    "type": "AttributeError",
+    "message": "function 'H5Dget_layout' not found",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONTDATA007\\attempt_20260914T172529427Z_luna\\frozen\\extract_frontdata007_v1.py\", line 902, in main\n    api = H5(HDF5_PATH)\n  File \"D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONTDATA007\\attempt_20260914T172529427Z_luna\\frozen\\extract_frontdata007_v1.py\", line 319, in __init__\n    self.declare()\n    ~~~~~~~~~~~~^^\n  File \"D:\\008_MA_Dev\\T11_CFO\\work\\CFO_FRONTDATA007\\attempt_20260914T172529427Z_luna\\frozen\\extract_frontdata007_v1.py\", line 358, in declare\n    fn = getattr(h, name)\n  File \"C:\\Python314\\Lib\\ctypes\\__init__.py\", line 486, in __getattr__\n    func = self.__getitem__(name)\n  File \"C:\\Python314\\Lib\\ctypes\\__init__.py\", line 491, in __getitem__\n    func = self._FuncPtr((name_or_ordinal, self))\nAttributeError: function 'H5Dget_layout' not found\n"
+  }
+}

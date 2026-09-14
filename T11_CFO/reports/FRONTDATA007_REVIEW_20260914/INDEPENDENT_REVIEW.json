@@ -1,0 +1,197 @@
+{
+  "status": "PASS_DATA_EXTRACTION_AND_INTEGER_IDENTITIES_ONLY",
+  "utc": "2026-09-14T17:49:52.114697+00:00",
+  "completion_sha256": "556B4FA02FE65B1DE48AE1E1AA10C2E7030FB93FB0E134BD9E6659A30126AC57",
+  "manifest_sha256": "071853E923E0967E1C04E4269CA768B9CCD27AAEEFFC5433B26C075C133FCF1E",
+  "source_files_verified": 70,
+  "published_files_verified": 22,
+  "cases": [
+    {
+      "family": "rcfo003",
+      "case_id": 1,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 2,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 3,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 4,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 5,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 6,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 7,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 8,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 9,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 1,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 74
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 3,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 74
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 11,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 21,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 31,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 41,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 51,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 61,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 71,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 0
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 81,
+      "H_exact_complex_points": 60680,
+      "z_exact_windows": 74,
+      "raw_windows_hashchecked": 74
+    }
+  ],
+  "H_exact_complex_points": 1152920,
+  "z_exact_windows": 1406,
+  "raw_windows": 222,
+  "coefficient_pairs": [
+    [
+      -131072,
+      0
+    ],
+    [
+      -92682,
+      -92682
+    ],
+    [
+      -92682,
+      92682
+    ],
+    [
+      0,
+      -131072
+    ],
+    [
+      0,
+      131071
+    ],
+    [
+      92682,
+      -92682
+    ],
+    [
+      92682,
+      92682
+    ],
+    [
+      131071,
+      0
+    ]
+  ],
+  "all_19_coefficient_matrices_exact": true,
+  "resource": {
+    "elapsed_seconds": 11.832,
+    "peak_working_set_bytes": 125059072,
+    "private_usage_peak": "NOT_RECORDED",
+    "minimum_available_physical_bytes": 10281426944
+  },
+  "decoder_review": {
+    "repairs": "v1 nonexistent H5Dget_layout replaced with H5Pget_layout; v2 chunk-size query crash avoided; v3 H5Dread_chunk with zlib deflate, exact shape, mask, decoded length and edge clipping checks",
+    "limitation": "Reader frozen for these compressed datasets only. Allocation equals uncompressed chunk size; this is not a general arbitrary-chunk safety proof and the reader is not approved for new data. No new extraction was run during this review."
+  },
+  "boundaries": [
+    "raw windows require global-index coarse rotation before FFT",
+    "No new MATLAB or Vivado run",
+    "No FFT2048 RTL acceptance",
+    "No resource synthesis or full-frame throughput qualification"
+  ]
+}
