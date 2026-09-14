@@ -1,0 +1,527 @@
+{
+  "schema": "frontdata007_source_lock_v1",
+  "utc": "2026-09-14T16:42:31.042943+00:00",
+  "root": "D:\\008_MA_Dev\\T11_CFO",
+  "matlab_allowed": false,
+  "vivado_allowed": false,
+  "cases": [
+    {
+      "family": "rcfo004",
+      "case_id": 1,
+      "mat": "sim/reference/rcfo004/results/case_001/bit_audit.mat",
+      "json": "sim/reference/rcfo004/results/case_001/result.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo004_case_001.json"
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 3,
+      "mat": "sim/reference/rcfo004/results/case_003/bit_audit.mat",
+      "json": "sim/reference/rcfo004/results/case_003/result.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo004_case_003.json"
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 11,
+      "mat": "sim/reference/rcfo004/results/case_011/bit_audit.mat",
+      "json": "sim/reference/rcfo004/results/case_011/result.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo004_case_011.json"
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 21,
+      "mat": "sim/reference/rcfo004/results/case_021/bit_audit.mat",
+      "json": "sim/reference/rcfo004/results/case_021/result.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo004_case_021.json"
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 31,
+      "mat": "sim/reference/rcfo004/results/case_031/bit_audit.mat",
+      "json": "sim/reference/rcfo004/results/case_031/result.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo004_case_031.json"
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 41,
+      "mat": "sim/reference/rcfo004/results/case_041/bit_audit.mat",
+      "json": "sim/reference/rcfo004/results/case_041/result.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo004_case_041.json"
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 51,
+      "mat": "sim/reference/rcfo004/results/case_051/bit_audit.mat",
+      "json": "sim/reference/rcfo004/results/case_051/result.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo004_case_051.json"
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 61,
+      "mat": "sim/reference/rcfo004/results/case_061/bit_audit.mat",
+      "json": "sim/reference/rcfo004/results/case_061/result.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo004_case_061.json"
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 71,
+      "mat": "sim/reference/rcfo004/results/case_071/bit_audit.mat",
+      "json": "sim/reference/rcfo004/results/case_071/result.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo004_case_071.json"
+    },
+    {
+      "family": "rcfo004",
+      "case_id": 81,
+      "mat": "sim/reference/rcfo004/results/case_081/bit_audit.mat",
+      "json": "sim/reference/rcfo004/results/case_081/result.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo004_case_081.json"
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 1,
+      "mat": "sim/reference/rcfo003/results/case_001/bit_NCO32_ROM10_C16F14_audit.mat",
+      "json": "sim/reference/rcfo003/results/case_001/bit_NCO32_ROM10_C16F14.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo003_case_001.json"
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 2,
+      "mat": "sim/reference/rcfo003/results/case_002/bit_NCO32_ROM10_C16F14_audit.mat",
+      "json": "sim/reference/rcfo003/results/case_002/bit_NCO32_ROM10_C16F14.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo003_case_002.json"
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 3,
+      "mat": "sim/reference/rcfo003/results/case_003/bit_NCO32_ROM10_C16F14_audit.mat",
+      "json": "sim/reference/rcfo003/results/case_003/bit_NCO32_ROM10_C16F14.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo003_case_003.json"
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 4,
+      "mat": "sim/reference/rcfo003/results/case_004/bit_NCO32_ROM10_C16F14_audit.mat",
+      "json": "sim/reference/rcfo003/results/case_004/bit_NCO32_ROM10_C16F14.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo003_case_004.json"
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 5,
+      "mat": "sim/reference/rcfo003/results/case_005/bit_NCO32_ROM10_C16F14_audit.mat",
+      "json": "sim/reference/rcfo003/results/case_005/bit_NCO32_ROM10_C16F14.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo003_case_005.json"
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 6,
+      "mat": "sim/reference/rcfo003/results/case_006/bit_NCO32_ROM10_C16F14_audit.mat",
+      "json": "sim/reference/rcfo003/results/case_006/bit_NCO32_ROM10_C16F14.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo003_case_006.json"
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 7,
+      "mat": "sim/reference/rcfo003/results/case_007/bit_NCO32_ROM10_C16F14_audit.mat",
+      "json": "sim/reference/rcfo003/results/case_007/bit_NCO32_ROM10_C16F14.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo003_case_007.json"
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 8,
+      "mat": "sim/reference/rcfo003/results/case_008/bit_NCO32_ROM10_C16F14_audit.mat",
+      "json": "sim/reference/rcfo003/results/case_008/bit_NCO32_ROM10_C16F14.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo003_case_008.json"
+    },
+    {
+      "family": "rcfo003",
+      "case_id": 9,
+      "mat": "sim/reference/rcfo003/results/case_009/bit_NCO32_ROM10_C16F14_audit.mat",
+      "json": "sim/reference/rcfo003/results/case_009/bit_NCO32_ROM10_C16F14.json",
+      "verified_phase": "sim/vectors/phase74_published/rcfo003_case_009.json"
+    }
+  ],
+  "raw_window_sources": [
+    {
+      "case_id": 1,
+      "path": "sim/reference/rcfo004/results/case_001/input_i16.bin",
+      "sample_format": "little-endian signed16 I then Q",
+      "window_start0": 25984,
+      "window_spacing": 17920,
+      "windows": 74,
+      "samples_per_window": 2048,
+      "output_bytes": 606208
+    },
+    {
+      "case_id": 3,
+      "path": "sim/reference/rcfo004/results/case_003/input_i16.bin",
+      "sample_format": "little-endian signed16 I then Q",
+      "window_start0": 25984,
+      "window_spacing": 17920,
+      "windows": 74,
+      "samples_per_window": 2048,
+      "output_bytes": 606208
+    },
+    {
+      "case_id": 81,
+      "path": "sim/reference/rcfo004/results/case_081/input_i16.bin",
+      "sample_format": "little-endian signed16 I then Q",
+      "window_start0": 25984,
+      "window_spacing": 17920,
+      "windows": 74,
+      "samples_per_window": 2048,
+      "output_bytes": 606208
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/FRONTDATA007_JOB_ZH.md",
+      "bytes": 6306,
+      "sha256": "FCDA420D9A289B8DD950A743E9535F35CB2222645682983F57BACB2428F21B00"
+    },
+    {
+      "path": "docs/FFT2048_FRONTEND_ARCHITECTURE_PREP_ZH.md",
+      "bytes": 3949,
+      "sha256": "4FFD27C0BD859464C0EAA9BCE67C277E53FEF2750DB625C7E74D38BCB34FA934"
+    },
+    {
+      "path": "docs/CFO_MAIN_CONTRACT.json",
+      "bytes": 3621,
+      "sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E"
+    },
+    {
+      "path": "matlab/bittrue/cfo_chain_arithmetic.m",
+      "bytes": 9686,
+      "sha256": "0893D0728D07246F33A96604F6DC8595AFCC66AC7C7211CF77C3A7715DF82D80"
+    },
+    {
+      "path": "matlab/bittrue/cfo_chain_bittrue.m",
+      "bytes": 863,
+      "sha256": "88E5A29504B6A7C136DB2EB3AC3922C54A0649D93F2C8BBF5258BD70564293E6"
+    },
+    {
+      "path": "matlab/waveform/payload_pilot_cells.csv",
+      "bytes": 4120567,
+      "sha256": "04E3ED790A0EC8B2980D7D7880874CE786072693E8DC4C60A4A1A71F3AC63B6E"
+    },
+    {
+      "path": "tools/extract_phase74_published.py",
+      "bytes": 24692,
+      "sha256": "A4A6E7E7110ED05D062AC6C5D97AEA060399AE9658705E386F7EE4B3BD38E353"
+    },
+    {
+      "path": "reports/BACKEND006R1_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+      "bytes": 3315,
+      "sha256": "A26DE40CF37505200F18001335AEF9320141047A97CF862BBEE076706FF9458F"
+    },
+    {
+      "path": "reports/BACKEND006R1_REVIEW_20260914/README_ZH.md",
+      "bytes": 1318,
+      "sha256": "B7B0237473E8CE76B2F25E4A7039BD5791C9321EBC7012CCFFB4A7B5D22CAB28"
+    },
+    {
+      "path": "sim/vectors/phase74_published/phase74_published_manifest.json",
+      "bytes": 8940,
+      "sha256": "59CD84B3FCB9219CFEADDF69FA5BEBF938395A1345C7EDCCD52634B20A9AE1C8"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_001/bit_audit.mat",
+      "bytes": 748861,
+      "sha256": "F6F4CEF4629518C33FB8C94C53E6A61962084EB70FEAB20F440502BF60445BB9"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_001/result.json",
+      "bytes": 4879,
+      "sha256": "E27E3E05EBF640563A34EA86DE40A31F63DD9B5F554764BED6047C8EF17014A4"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo004_case_001.json",
+      "bytes": 21892,
+      "sha256": "11E5555B8B2106A11D4ECF453B686757BB79A6C582E8D09E862722CDFD26C3A4"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_003/bit_audit.mat",
+      "bytes": 748591,
+      "sha256": "0914F42A01C2827DE756AFE2810B51EDC60412F6FA8C9A1061935E152CFCC4BD"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_003/result.json",
+      "bytes": 4911,
+      "sha256": "925B6A81885877C7E38CF44ACABF072266305673C90EB5E8E0D1F7DB0BBEF82D"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo004_case_003.json",
+      "bytes": 21733,
+      "sha256": "ED5AB15AD9CA72A2934318776D57D798107D4F1325EC55453F2F72F485242C0A"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_011/bit_audit.mat",
+      "bytes": 747164,
+      "sha256": "F09891DEE72326D4495EF9DA1C738944C512D93C6AC24A470EA74D0FF2F4015C"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_011/result.json",
+      "bytes": 4823,
+      "sha256": "0415E1590D5514503DFFFC6BB904C8C75E90B3F4CB7DB66587D47AAA89B372E9"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo004_case_011.json",
+      "bytes": 20962,
+      "sha256": "7FEE808AC1CA626ED830443D092B698C5CC08329A5787C03E5C942EA308ECAD1"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_021/bit_audit.mat",
+      "bytes": 748359,
+      "sha256": "63B179AD49A6FC9F2F3502A8EC9A1E0F95FEE08A11C7927B172A8988D01A22B9"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_021/result.json",
+      "bytes": 4876,
+      "sha256": "86379091B2DB1AFA984C9824C554BF455D2CB17458BCEB8466BF98DEACEE3C92"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo004_case_021.json",
+      "bytes": 21732,
+      "sha256": "04BE7331A820E0ED59BD7F8AF421617218C108D1C095B8537B394333B431FDD7"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_031/bit_audit.mat",
+      "bytes": 727271,
+      "sha256": "EB71B72991F470D00C5DDB0A420ED8F83C5FD879883BB77707B183F097EBBF1E"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_031/result.json",
+      "bytes": 4568,
+      "sha256": "96D5F7649B4DEE9288D50BE4FA5F73CB63F076C0B0044ED37723AC1DB0C2B58D"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo004_case_031.json",
+      "bytes": 21862,
+      "sha256": "87EE488172FFD8C4A85615AF16957B7D8F9C9FC2C8C2047F31C91F79930309A0"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_041/bit_audit.mat",
+      "bytes": 698574,
+      "sha256": "E53021CDA75066E57031C492541C908990B92DD2654893547D514B45DB1DF552"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_041/result.json",
+      "bytes": 4352,
+      "sha256": "121A86B002EA976DA83F2DB891B8089023D030138B3D2333B1A660778E40E4ED"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo004_case_041.json",
+      "bytes": 20765,
+      "sha256": "A7FC424BA189EA26A43AFDF276006DD5930F4F30BED9D9DFC041EA9A90A1B2A0"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_051/bit_audit.mat",
+      "bytes": 727435,
+      "sha256": "7708517BFDCE59EB26158A82338DA327E7D397400023CCAF85C585F77152F733"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_051/result.json",
+      "bytes": 4546,
+      "sha256": "C118B02698EC983BC679467810838005D5BB6026DC9544C3859FF342C5282354"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo004_case_051.json",
+      "bytes": 21698,
+      "sha256": "4B4B94E4F26BC9CE9F1BBFF1F7461EF70142DBF31B47FAC66BB8D3C796F90917"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_061/bit_audit.mat",
+      "bytes": 637857,
+      "sha256": "04DA33C3FC132AD1B4DDB2C9B8ED1FA8A8C02ADB9D5FB23D9C739B4B73415AA8"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_061/result.json",
+      "bytes": 4590,
+      "sha256": "9F1315CCD8B72C9BB5EC99C7907563ABDF6A44556905AD228028C4C69DE12DD6"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo004_case_061.json",
+      "bytes": 21775,
+      "sha256": "4D3F4B7205C5EA6CE80B053F99481B38F64E86B2C6AF566D53879D7727B219A0"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_071/bit_audit.mat",
+      "bytes": 309009,
+      "sha256": "00384568B064B695C216308DBE73617B19B93EEA51A72202AFB8ED678A7A9994"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_071/result.json",
+      "bytes": 4322,
+      "sha256": "53E8814B525783686AEAC87A088D9297142972EBAC80C5E88CBB1630028C955D"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo004_case_071.json",
+      "bytes": 19717,
+      "sha256": "A0585726EDF101F2F9919371CC850F286AE9308DBBB23F9A530310BFDC4DE9FD"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_081/bit_audit.mat",
+      "bytes": 637948,
+      "sha256": "4FC891C17178C548FD3639B21D15FDB3649BE3C2083B0C6F0315866DC5DBFE83"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_081/result.json",
+      "bytes": 4571,
+      "sha256": "78B4EB89EDF957647A9A06D67844DB7C6794EF2E489CDD45CE78EC6B24D2D85E"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo004_case_081.json",
+      "bytes": 21610,
+      "sha256": "E2AFC86AAE6310B63712B3C1516E0452A1A676B5F6FEF300291465EBB9954C4F"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_001/bit_NCO32_ROM10_C16F14_audit.mat",
+      "bytes": 727739,
+      "sha256": "7E19C102F27B0D67BB24C1DB00F13301D1A351D510C4308341146A7971C02E75"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_001/bit_NCO32_ROM10_C16F14.json",
+      "bytes": 2995,
+      "sha256": "B75213517479126EB1C362F12090E40853E56C9F6EE03B8F741A1EDF8B9EFA00"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo003_case_001.json",
+      "bytes": 21946,
+      "sha256": "EF8C585F27780E69E997ADCCC91E09A566E02B015B7CE018AE226CA61FA486B1"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_002/bit_NCO32_ROM10_C16F14_audit.mat",
+      "bytes": 699232,
+      "sha256": "45223803F0673077B4B356D385162DC93D292F7D922F50D5CDB870BE2033BE9C"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_002/bit_NCO32_ROM10_C16F14.json",
+      "bytes": 2806,
+      "sha256": "44D8B03BC63EEDFC2BCD0822E389283D7207871EA224E95C1052FCB715185C9F"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo003_case_002.json",
+      "bytes": 20622,
+      "sha256": "5E4CF6EC3BD3B9043AEC98390DC0BBD3698AA3B6B2F24B8667D75E6DA665FA71"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_003/bit_NCO32_ROM10_C16F14_audit.mat",
+      "bytes": 727172,
+      "sha256": "4DFA8A4189B5E41A36CE9BD50C937A2714B4D1E2162BE84815DD151C4DED9BA3"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_003/bit_NCO32_ROM10_C16F14.json",
+      "bytes": 2994,
+      "sha256": "930FAB2D16CE42E19EBCD8155E140E8648D16A60748081327C61577C847096B4"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo003_case_003.json",
+      "bytes": 21776,
+      "sha256": "0E7B08C5D31484FDC4C45328EDA2535DDC710AC0638332A5DE0E9C386D3BAADF"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_004/bit_NCO32_ROM10_C16F14_audit.mat",
+      "bytes": 742299,
+      "sha256": "76853704E03D549B20735F1A7EDA4BF73F2EFB23570CC12B66AF161CF1B160E3"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_004/bit_NCO32_ROM10_C16F14.json",
+      "bytes": 2613,
+      "sha256": "4D723C0A1B6F1AC274536E8ACB18FB9526B5D6CE93988C861C0D2CD3F00FD400"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo003_case_004.json",
+      "bytes": 21918,
+      "sha256": "BC2550E629D7337F998368752FFF8D0340D4A7AC11FFAE971DB4ABA7B01B03A0"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_005/bit_NCO32_ROM10_C16F14_audit.mat",
+      "bytes": 727637,
+      "sha256": "D1BF407E65DADE498FD789A4EDD4B69D53153D2BFAC97A8C3171F64D9422DFCB"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_005/bit_NCO32_ROM10_C16F14.json",
+      "bytes": 3049,
+      "sha256": "0BA0667D766BE42338CB2C3B411D85713AFC8BB7715ABD6B4D92922472968348"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo003_case_005.json",
+      "bytes": 21969,
+      "sha256": "7D8A479E6265CE3640349F485207B7044A665DDF406B5D3454BE68FC30C83108"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_006/bit_NCO32_ROM10_C16F14_audit.mat",
+      "bytes": 727327,
+      "sha256": "AE4A00EF84961730C35AB2DECC8982626A9B7DFD228F450DEDB1E48877A36552"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_006/bit_NCO32_ROM10_C16F14.json",
+      "bytes": 3029,
+      "sha256": "30BE0DAF6F7F54098F07385C048C7D7C69A3731E104374F3A5D05E8B89665CDB"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo003_case_006.json",
+      "bytes": 21793,
+      "sha256": "EE8DE10626A4CC2C32CE4EB5FC5C9F9A32B1111B10B40CA60D694C7144099569"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_007/bit_NCO32_ROM10_C16F14_audit.mat",
+      "bytes": 741329,
+      "sha256": "3804A615133A01B56A5D3F13C8837D7745787CD77EDC2439E3B58196D4CFD2F7"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_007/bit_NCO32_ROM10_C16F14.json",
+      "bytes": 2705,
+      "sha256": "E74A30D83E32F45CBBFA97923EC06C6CC972D70F92E5C9A4569154F341498D0D"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo003_case_007.json",
+      "bytes": 21966,
+      "sha256": "C4872B5A1E0D4D5E3E2C429774DB10F8E11D0FE74DD4752A9E5AC700DCF0415C"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_008/bit_NCO32_ROM10_C16F14_audit.mat",
+      "bytes": 596995,
+      "sha256": "4E0E350D48C5D1C58ECE029F894928737EA8732DC50E42DCF650E104F84F1BD2"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_008/bit_NCO32_ROM10_C16F14.json",
+      "bytes": 2901,
+      "sha256": "9FB3E8D6F646FEC684C64111B959E30BA9874DEFB2F67A192AC566E4C81FA946"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo003_case_008.json",
+      "bytes": 21164,
+      "sha256": "D5F02593CDBA18289C463E31E74D756D57700EEED4D7FA64ECDD05083849AF1E"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_009/bit_NCO32_ROM10_C16F14_audit.mat",
+      "bytes": 806740,
+      "sha256": "B13BB25A8AE72F75FA7F8EB28224BA25708AC15A1B295CA59D349DCDFF011DB8"
+    },
+    {
+      "path": "sim/reference/rcfo003/results/case_009/bit_NCO32_ROM10_C16F14.json",
+      "bytes": 2956,
+      "sha256": "66B3CB9397B75F0B6BE088FF8B9A4B9B287A76F87DCBCFFB11D1ADABC37073F8"
+    },
+    {
+      "path": "sim/vectors/phase74_published/rcfo003_case_009.json",
+      "bytes": 21832,
+      "sha256": "383E255D1F794970001E0D162A84E7C5460D120092FED093DCA76EF39A1F7885"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_001/input_i16.bin",
+      "bytes": 5345280,
+      "sha256": "CD30B9B9F18392CFE2D71DE1E8AAD35A13287338014A64060101B7DCC32CDED6"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_003/input_i16.bin",
+      "bytes": 5345280,
+      "sha256": "50558E6F99D6BFBE0E7BF202DAD0495ED651C7E1494BF473B81D0D8C4A41EBCA"
+    },
+    {
+      "path": "sim/reference/rcfo004/results/case_081/input_i16.bin",
+      "bytes": 5345280,
+      "sha256": "FA78B350D413CAC1A088DBAD5A607CD7F203E1C86299225D156E58424AAD9914"
+    }
+  ],
+  "scope": "Read and verify published compressed frontend arrays, copy exact raw windows; no rotate/FFT execution or regenerated reference"
+}
