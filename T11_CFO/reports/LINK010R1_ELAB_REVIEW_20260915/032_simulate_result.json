@@ -1,0 +1,1369 @@
+{
+  "schema": "cfo_phase004_stage_result_v1",
+  "stage": "simulate",
+  "argv": [
+    "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+    "-mode",
+    "batch",
+    "-source",
+    "D:\\008_MA_Dev\\T11_CFO\\vivado\\link010r1_project.tcl",
+    "-log",
+    "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log",
+    "-journal",
+    "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.jou",
+    "-tclargs",
+    "simulate",
+    "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna"
+  ],
+  "command_line": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat -mode batch -source D:\\008_MA_Dev\\T11_CFO\\vivado\\link010r1_project.tcl -log D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log -journal D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.jou -tclargs simulate D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna",
+  "paths": {
+    "log": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log",
+    "journal": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.jou",
+    "stdout": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.stdout.log",
+    "stderr": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.stderr.log",
+    "samples": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.samples.jsonl"
+  },
+  "binding_succeeded": true,
+  "events": {
+    "create_suspended": "2026-09-15T00:40:54.486Z",
+    "job_assigned": "2026-09-15T00:40:54.508Z",
+    "launch": "2026-09-15T00:40:54.510Z",
+    "ready": "2026-09-15T00:41:08.259Z",
+    "trigger": null,
+    "zero": "2026-09-15T00:41:13.928Z"
+  },
+  "event_mono_ns": {
+    "create_suspended": 221778383016900,
+    "job_assigned": 221778405258400,
+    "launch": 221778407157800,
+    "ready": 221792151987600,
+    "trigger": null,
+    "zero": 221797787742900
+  },
+  "samples_count": 19,
+  "telemetry_fault_samples": [
+    {
+      "utc": "2026-09-15T00:41:05.247Z",
+      "issues": [],
+      "query_errors": [],
+      "process_open_failures": [
+        {
+          "pid": 36132,
+          "query_error": "OpenProcess: winerror=87 参数错误。",
+          "memory_error": null
+        }
+      ]
+    }
+  ],
+  "persistent_telemetry_fault": false,
+  "termination_requested_by_controller": false,
+  "termination_reason": null,
+  "ready_pid": 43136,
+  "stable_telemetry_samples": 42,
+  "unstable_after_ready_samples": 1,
+  "controller_errors": [],
+  "launcher_pid": 34372,
+  "end_census": {
+    "pids": [],
+    "assigned_processes": 0,
+    "listed_processes": 0,
+    "active_processes": 0,
+    "pid_stride_bytes": 8,
+    "pid_width_bits": 64,
+    "active_accounting": {
+      "api_available": true,
+      "active_processes": 0,
+      "total_processes": 19,
+      "total_terminated_processes": 0,
+      "total_page_fault_count": 837004
+    },
+    "pid_list": {
+      "ids": [],
+      "assigned_processes": 0,
+      "listed_processes": 0,
+      "capacity": 256,
+      "issues": [],
+      "stride_bytes": 8,
+      "api_available": true,
+      "success": true,
+      "query_bytes": 8,
+      "buffer_bytes": 2056
+    },
+    "pid_cross_check": {
+      "active_accounting": 0,
+      "pid_list_count": 0,
+      "decoded_count": 0,
+      "match": true
+    },
+    "issues": [],
+    "query_errors": [],
+    "query_error": null,
+    "empty_verified": true
+  },
+  "active_pids_at_loop_end": [],
+  "active_query_error_at_loop_end": null,
+  "job_extended_at_loop_end": {
+    "api_available": true,
+    "peak_job_private_commit_bytes": 1199415296,
+    "peak_process_memory_bytes": 1185472512,
+    "job_memory_limit_bytes": 0
+  },
+  "markers": {
+    "ready": {
+      "found": true,
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log",
+      "line": "CFO_LINK010R1_READY action=simulate pid=43136"
+    },
+    "done": {
+      "found": false,
+      "line": null,
+      "path": null
+    },
+    "passed": {
+      "found": false,
+      "line": null,
+      "path": null
+    }
+  },
+  "native_exit_code": 1,
+  "final_census_before_close": {
+    "pids": [],
+    "assigned_processes": 0,
+    "listed_processes": 0,
+    "active_processes": 0,
+    "pid_stride_bytes": 8,
+    "pid_width_bits": 64,
+    "active_accounting": {
+      "api_available": true,
+      "active_processes": 0,
+      "total_processes": 19,
+      "total_terminated_processes": 0,
+      "total_page_fault_count": 837004
+    },
+    "pid_list": {
+      "ids": [],
+      "assigned_processes": 0,
+      "listed_processes": 0,
+      "capacity": 256,
+      "issues": [],
+      "stride_bytes": 8,
+      "api_available": true,
+      "success": true,
+      "query_bytes": 8,
+      "buffer_bytes": 2056
+    },
+    "pid_cross_check": {
+      "active_accounting": 0,
+      "pid_list_count": 0,
+      "decoded_count": 0,
+      "match": true
+    },
+    "issues": [],
+    "query_errors": [],
+    "query_error": null,
+    "empty_verified": true
+  },
+  "native_exit_code_final": 1,
+  "post_native_processes": [
+    {
+      "pid": 14300,
+      "parent_pid": 11240,
+      "image_name": "vivado.exe",
+      "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+      "private_usage_bytes": 1114886144,
+      "working_set_bytes": 710148096,
+      "pagefile_usage_bytes": 1114886144,
+      "cpu_time_100ns": 6834531250,
+      "creation_filetime_100ns": 134338922191654740
+    },
+    {
+      "pid": 28856,
+      "parent_pid": 34768,
+      "image_name": "xsimk.exe",
+      "image_path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xsim.dir\\t10_full023_tb_behav\\xsimk.exe",
+      "private_usage_bytes": 1110188032,
+      "working_set_bytes": 431362048,
+      "pagefile_usage_bytes": 1110188032,
+      "cpu_time_100ns": 736584062500,
+      "creation_filetime_100ns": 134338327375072737
+    },
+    {
+      "pid": 34768,
+      "parent_pid": 40656,
+      "image_name": "vivado.exe",
+      "image_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+      "private_usage_bytes": 470593536,
+      "working_set_bytes": 170074112,
+      "pagefile_usage_bytes": 470593536,
+      "cpu_time_100ns": 293750000,
+      "creation_filetime_100ns": 134338317352384478
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log",
+      "exists": true,
+      "bytes": 22796,
+      "sha256": "90DD0910F9B08370C018041A3B0CBF96EC685DF217A1851393C327DADA2AFBD1"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.jou",
+      "exists": true,
+      "bytes": 1016,
+      "sha256": "BF5E836EFBE058600B88B76D8EA5C9B64A672D796E729F53B8894C16651047F5"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.stdout.log",
+      "exists": true,
+      "bytes": 22132,
+      "sha256": "3BD8257CD62A44D0714E95D051879C6E40870A7EB7842E9980B8E746DD4ABC0F"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.stderr.log",
+      "exists": true,
+      "bytes": 338,
+      "sha256": "85BCB4ACC0957DD8E4EE426B5217FB3B66B3B0A16BC90D438641B7A0D5B8FD96"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate_actual_sources.csv",
+      "exists": true,
+      "bytes": 1994,
+      "sha256": "0F28511DC926995990F8754232E9F5D0C11269A4E08029D8A2AC0420A391F92B"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate_project_identity.txt",
+      "exists": true,
+      "bytes": 214,
+      "sha256": "8AF523BD67453E1D7041B8C950D4DEB7E6D9BBD7A8387B5D77DE8B1723CEA052"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\link010_actual.txt",
+      "exists": false,
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\link010r1_reset_audit.txt",
+      "exists": false,
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xvlog.log",
+      "exists": true,
+      "bytes": 3868,
+      "sha256": "FA9C17276FC6E31D9A627F2E675C876A67E3A90DC684C5DB1464C69D4B2F1C27"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\compile.log",
+      "exists": true,
+      "bytes": 3868,
+      "sha256": "FA9C17276FC6E31D9A627F2E675C876A67E3A90DC684C5DB1464C69D4B2F1C27"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\elaborate.log",
+      "exists": true,
+      "bytes": 646,
+      "sha256": "A214BE86E111F6A49A2EE8334BCDAB0447311EDD2D7E4BA4AB761CC2BD13B93C"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xelab.log",
+      "exists": false,
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\simulate.log",
+      "exists": false,
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xsim.log",
+      "exists": false,
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xsim.dir\\cfo_estimator_link_tb_behav\\xsimkernel.log",
+      "exists": false,
+      "error": "FileNotFoundError(2, 'No such file or directory')"
+    }
+  ],
+  "launch_to_zero_seconds": 19.3805851,
+  "verify": {
+    "argv": [
+      "C:\\Python314\\python.exe",
+      "-I",
+      "-B",
+      "-X",
+      "utf8",
+      "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1.py",
+      "--sources",
+      "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate_actual_sources.csv",
+      "--identity",
+      "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate_project_identity.txt",
+      "--actual",
+      "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\link010_actual.txt",
+      "--reset-audit",
+      "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\link010r1_reset_audit.txt"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1.py\", line 86, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1.py\", line 51, in main\n    for line in a.actual.read_text().splitlines():\n                ~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 787, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python314\\Lib\\pathlib\\__init__.py\", line 771, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\008_MA_Dev\\\\T11_CFO\\\\work\\\\CFO_LINK010R1\\\\attempt_20260915T004038984710Z_luna\\\\link010_actual.txt'\n",
+    "parsed": null
+  },
+  "source_check": {
+    "lock_sha256": "F01D289223D90FE71F3767B1030B35809AA1C651FC249EDA3362AB5E455F3069",
+    "all_members_match": true,
+    "members": [
+      {
+        "path": "rtl/cfo_estimator_link.sv",
+        "expected_sha256": "4F6A92AA12C48B18D262ED68E9DE438F083F22F60F56DE217E9A959A284C87D0",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_estimator_link.sv",
+          "exists": true,
+          "bytes": 7555,
+          "sha256": "4F6A92AA12C48B18D262ED68E9DE438F083F22F60F56DE217E9A959A284C87D0"
+        },
+        "matches": true
+      },
+      {
+        "path": "rtl/cfo_estimate74_backend.sv",
+        "expected_sha256": "11CED857047E438C8375C70E5D952EA54EA14CFF533C5CD4B4560BCF684AEA5A",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_estimate74_backend.sv",
+          "exists": true,
+          "bytes": 4110,
+          "sha256": "11CED857047E438C8375C70E5D952EA54EA14CFF533C5CD4B4560BCF684AEA5A"
+        },
+        "matches": true
+      },
+      {
+        "path": "rtl/cfo_fft74_quality_v2.sv",
+        "expected_sha256": "84B39001F074DFB2C08951221A5E801A02457EE7826C7813229F2478068EE3AF",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_fft74_quality_v2.sv",
+          "exists": true,
+          "bytes": 9279,
+          "sha256": "84B39001F074DFB2C08951221A5E801A02457EE7826C7813229F2478068EE3AF"
+        },
+        "matches": true
+      },
+      {
+        "path": "rtl/cfo_divide_rne64wide.sv",
+        "expected_sha256": "7F414B65CE687C9724F580848C996542D0BA3360EB7539AB1281835FD35D0D37",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_divide_rne64wide.sv",
+          "exists": true,
+          "bytes": 1828,
+          "sha256": "7F414B65CE687C9724F580848C996542D0BA3360EB7539AB1281835FD35D0D37"
+        },
+        "matches": true
+      },
+      {
+        "path": "rtl/cfo_fft256_core.sv",
+        "expected_sha256": "56A957F34A07EF28041C539D319B24C59FCA95D55BE16D202C60ABEABF501D1D",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_fft256_core.sv",
+          "exists": true,
+          "bytes": 6099,
+          "sha256": "56A957F34A07EF28041C539D319B24C59FCA95D55BE16D202C60ABEABF501D1D"
+        },
+        "matches": true
+      },
+      {
+        "path": "rtl/cfo_phase74_core_v2.sv",
+        "expected_sha256": "70115D741EFFADDFFA8E1C69767057638CAB6F28DBB9FA6BAD7C36E40A760028",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_phase74_core_v2.sv",
+          "exists": true,
+          "bytes": 9546,
+          "sha256": "70115D741EFFADDFFA8E1C69767057638CAB6F28DBB9FA6BAD7C36E40A760028"
+        },
+        "matches": true
+      },
+      {
+        "path": "rtl/cfo_divide_rne64.sv",
+        "expected_sha256": "3FCCE6E2792C706E3F77E7E80D67CDA6A5DA1B1A6261FE31E643F640957F17EE",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_divide_rne64.sv",
+          "exists": true,
+          "bytes": 1783,
+          "sha256": "3FCCE6E2792C706E3F77E7E80D67CDA6A5DA1B1A6261FE31E643F640957F17EE"
+        },
+        "matches": true
+      },
+      {
+        "path": "ip/fft256_twiddle.mem",
+        "expected_sha256": "AA8802BA8C2F38BDDB2350114029BC58E7A58E8D49C746F26246691EE913A93D",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\ip\\fft256_twiddle.mem",
+          "exists": true,
+          "bytes": 1408,
+          "sha256": "AA8802BA8C2F38BDDB2350114029BC58E7A58E8D49C746F26246691EE913A93D"
+        },
+        "matches": true
+      },
+      {
+        "path": "ip/phase74_atan_q31.mem",
+        "expected_sha256": "B058188D4642C069C4DEC0028A240E3329FC228B962A3280B45A5B3D98C9F22C",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\ip\\phase74_atan_q31.mem",
+          "exists": true,
+          "bytes": 240,
+          "sha256": "B058188D4642C069C4DEC0028A240E3329FC228B962A3280B45A5B3D98C9F22C"
+        },
+        "matches": true
+      },
+      {
+        "path": "constraints/cfo_link010.xdc",
+        "expected_sha256": "B275761663A1F95049178EBC0F3DA881EF4207CAC144D9E849E3FFC14139EED1",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\constraints\\cfo_link010.xdc",
+          "exists": true,
+          "bytes": 282,
+          "sha256": "B275761663A1F95049178EBC0F3DA881EF4207CAC144D9E849E3FFC14139EED1"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/tb/cfo_estimator_link_tb.sv",
+        "expected_sha256": "5B110E16E0058CC1A06038D5C62BFC2132AC5BFC9B53CFF654DD100C9735C943",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\tb\\cfo_estimator_link_tb.sv",
+          "exists": true,
+          "bytes": 9749,
+          "sha256": "5B110E16E0058CC1A06038D5C62BFC2132AC5BFC9B53CFF654DD100C9735C943"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/link010_config.svh",
+        "expected_sha256": "FDB914760B3AE8F2954932E29EA84075B1D2F3B14A4E40379E71DAFD95A96849",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\link010_config.svh",
+          "exists": true,
+          "bytes": 70,
+          "sha256": "FDB914760B3AE8F2954932E29EA84075B1D2F3B14A4E40379E71DAFD95A96849"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/link010_input.mem",
+        "expected_sha256": "E5CA2615936D55EE5C2D1584C53FB5861B94A2E2D860BDA9F15891D990D9C717",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\link010_input.mem",
+          "exists": true,
+          "bytes": 13912,
+          "sha256": "E5CA2615936D55EE5C2D1584C53FB5861B94A2E2D860BDA9F15891D990D9C717"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/link010_read.mem",
+        "expected_sha256": "05FC963EC139700D63526A6C52F21A056F37725CD73797BD789B5CD92E523C3E",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\link010_read.mem",
+          "exists": true,
+          "bytes": 13320,
+          "sha256": "05FC963EC139700D63526A6C52F21A056F37725CD73797BD789B5CD92E523C3E"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/link010_result.mem",
+        "expected_sha256": "465A9FE45B1E514F0EE5190A57B2552A678697D016DC4DF0D51B912ABCD57E05",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\link010_result.mem",
+          "exists": true,
+          "bytes": 540,
+          "sha256": "465A9FE45B1E514F0EE5190A57B2552A678697D016DC4DF0D51B912ABCD57E05"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/link010_error_input.mem",
+        "expected_sha256": "DB9F57A96541A83AD058D1F6A4786446E7AB3DABF08AB155D93A30E3808DC013",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\link010_error_input.mem",
+          "exists": true,
+          "bytes": 470,
+          "sha256": "DB9F57A96541A83AD058D1F6A4786446E7AB3DABF08AB155D93A30E3808DC013"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/link010_error_read.mem",
+        "expected_sha256": "FBCAD538BA0122A422B4CF716CE0D4B4D2DEE0020B3F50CEA21F8561AF43EC1A",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\link010_error_read.mem",
+          "exists": true,
+          "bytes": 450,
+          "sha256": "FBCAD538BA0122A422B4CF716CE0D4B4D2DEE0020B3F50CEA21F8561AF43EC1A"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/link010_error_result.mem",
+        "expected_sha256": "0A93D9E35009571F596C8790BC68CC728ACA53EBD76A59AF2F64845165EC5432",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\link010_error_result.mem",
+          "exists": true,
+          "bytes": 1350,
+          "sha256": "0A93D9E35009571F596C8790BC68CC728ACA53EBD76A59AF2F64845165EC5432"
+        },
+        "matches": true
+      },
+      {
+        "path": "vivado/run_threads.tcl",
+        "expected_sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\run_threads.tcl",
+          "exists": true,
+          "bytes": 471,
+          "sha256": "3A7F154B06301C8DB711BE01AAD7FA543771F8405C338C4368F4FDFA12175E2E"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/link010_vectors.py",
+        "expected_sha256": "83C9B0C06F08BBCDE2901834A3942A996FA0C63BB97A03405AB489A090147EF1",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\link010_vectors.py",
+          "exists": true,
+          "bytes": 5475,
+          "sha256": "83C9B0C06F08BBCDE2901834A3942A996FA0C63BB97A03405AB489A090147EF1"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/verify_link010.py",
+        "expected_sha256": "583DA1C2119C5292D3981B2C754E331E5FE962DF7B0172583971B1686BCD8DA7",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010.py",
+          "exists": true,
+          "bytes": 5611,
+          "sha256": "583DA1C2119C5292D3981B2C754E331E5FE962DF7B0172583971B1686BCD8DA7"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/freeze_link010_sources.py",
+        "expected_sha256": "C8A19CBA35DF5E1DBBBE90AEBB22843ED2DE1366571C800AE38738FC0326B00E",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\freeze_link010_sources.py",
+          "exists": true,
+          "bytes": 3144,
+          "sha256": "C8A19CBA35DF5E1DBBBE90AEBB22843ED2DE1366571C800AE38738FC0326B00E"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/link010_admission.py",
+        "expected_sha256": "0FB96FEFC044468A842B494A2A0CB4F6519A07290159AACA248FC39AE8CF930B",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\link010_admission.py",
+          "exists": true,
+          "bytes": 33596,
+          "sha256": "0FB96FEFC044468A842B494A2A0CB4F6519A07290159AACA248FC39AE8CF930B"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/backend74_reference.py",
+        "expected_sha256": "93049FFD870B097611A1213633C162ECBBF222A17206CA0D25D0890A466E150E",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\backend74_reference.py",
+          "exists": true,
+          "bytes": 6888,
+          "sha256": "93049FFD870B097611A1213633C162ECBBF222A17206CA0D25D0890A466E150E"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/cfo_native_guard_v3.py",
+        "expected_sha256": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_native_guard_v3.py",
+          "exists": true,
+          "bytes": 36155,
+          "sha256": "FD2AB067BB509A2BAE4F26270DCC4E77EF0EC61DE62B564EC4DEA2B1A3D37034"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/cfo_phase74_guard_v1.py",
+        "expected_sha256": "B35F872630D2995B5EEB5257666188D3506C864FC4004294423078AE0CFE9583",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\cfo_phase74_guard_v1.py",
+          "exists": true,
+          "bytes": 24596,
+          "sha256": "B35F872630D2995B5EEB5257666188D3506C864FC4004294423078AE0CFE9583"
+        },
+        "matches": true
+      },
+      {
+        "path": "vivado/link010_project.tcl",
+        "expected_sha256": "4DD649D1347D09A8A451C6AFF4B2D7CD345AAA66E906A0B15067D5ED502A5ACA",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\link010_project.tcl",
+          "exists": true,
+          "bytes": 3970,
+          "sha256": "4DD649D1347D09A8A451C6AFF4B2D7CD345AAA66E906A0B15067D5ED502A5ACA"
+        },
+        "matches": true
+      },
+      {
+        "path": "vivado/configure_parallel_jobs.tcl",
+        "expected_sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\configure_parallel_jobs.tcl",
+          "exists": true,
+          "bytes": 4994,
+          "sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3"
+        },
+        "matches": true
+      },
+      {
+        "path": "docs/LINK010_CONTRACT_V1_ZH.md",
+        "expected_sha256": "AEEC419210A3E963F5E107033CCA41A1020382A27F0518559B53A669F3CF87DD",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\LINK010_CONTRACT_V1_ZH.md",
+          "exists": true,
+          "bytes": 3945,
+          "sha256": "AEEC419210A3E963F5E107033CCA41A1020382A27F0518559B53A669F3CF87DD"
+        },
+        "matches": true
+      },
+      {
+        "path": "docs/LINK010_NATIVE_JOB_010.md",
+        "expected_sha256": "75E067ACD807C48BB4081017006DFFD3EB7FF8C2E66C472B87E7FE322023FDD6",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\LINK010_NATIVE_JOB_010.md",
+          "exists": true,
+          "bytes": 3422,
+          "sha256": "75E067ACD807C48BB4081017006DFFD3EB7FF8C2E66C472B87E7FE322023FDD6"
+        },
+        "matches": true
+      },
+      {
+        "path": "docs/CFO_MAIN_CONTRACT.json",
+        "expected_sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\CFO_MAIN_CONTRACT.json",
+          "exists": true,
+          "bytes": 3621,
+          "sha256": "AA241740C06E0CF1443D79E46F29A9358A2E67C47F4D17F9D39EA9BBFAD5B93E"
+        },
+        "matches": true
+      },
+      {
+        "path": "docs/BACKEND006R1_SOURCE_LOCK.json",
+        "expected_sha256": "2BFBD70A0B237352C5F8547AF21281840CDFEEAA861E0F975B75C7B57837ACFF",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\BACKEND006R1_SOURCE_LOCK.json",
+          "exists": true,
+          "bytes": 11832,
+          "sha256": "2BFBD70A0B237352C5F8547AF21281840CDFEEAA861E0F975B75C7B57837ACFF"
+        },
+        "matches": true
+      },
+      {
+        "path": "docs/FRONT009_SOURCE_LOCK.json",
+        "expected_sha256": "09A6A7F5AD994934B9CA30137139A7639A16638DB966AB3498AEDA9CF9765393",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\FRONT009_SOURCE_LOCK.json",
+          "exists": true,
+          "bytes": 7055,
+          "sha256": "09A6A7F5AD994934B9CA30137139A7639A16638DB966AB3498AEDA9CF9765393"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/link010_cases.json",
+        "expected_sha256": "06AC8CAFA7B7FC66939AB78938163AAD36BF714343B7B9A48C16DEAACA46EA1E",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\link010_cases.json",
+          "exists": true,
+          "bytes": 112740,
+          "sha256": "06AC8CAFA7B7FC66939AB78938163AAD36BF714343B7B9A48C16DEAACA46EA1E"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vectors/backend74_cases.json",
+        "expected_sha256": "86FD2EFD18692389CA8052CB61D76271098F8CB90FBE178879883E2434B6F105",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vectors\\backend74_cases.json",
+          "exists": true,
+          "bytes": 302082,
+          "sha256": "86FD2EFD18692389CA8052CB61D76271098F8CB90FBE178879883E2434B6F105"
+        },
+        "matches": true
+      },
+      {
+        "path": "reports/LINK010_VECTOR_CHECK.json",
+        "expected_sha256": "A9AF933954FF64CEDC571D2D18B74964B3C31BE5FD5E0921637901FE1E9FCB74",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010_VECTOR_CHECK.json",
+          "exists": true,
+          "bytes": 1204,
+          "sha256": "A9AF933954FF64CEDC571D2D18B74964B3C31BE5FD5E0921637901FE1E9FCB74"
+        },
+        "matches": true
+      },
+      {
+        "path": "reports/LINK010_STATIC_REVIEW_20260915.json",
+        "expected_sha256": "1AFBDA82AA29D99445AB8A0B7345FC674DDD1D5F7E6542DE28892D6E199F7EEE",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010_STATIC_REVIEW_20260915.json",
+          "exists": true,
+          "bytes": 7050,
+          "sha256": "1AFBDA82AA29D99445AB8A0B7345FC674DDD1D5F7E6542DE28892D6E199F7EEE"
+        },
+        "matches": true
+      },
+      {
+        "path": "reports/FRONT009_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+        "expected_sha256": "96AA054209812E5E167B2E240A5E4BAE7489CAD9411EC0DA38CF90D81D10873A",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\FRONT009_REVIEW_20260914\\INDEPENDENT_REVIEW.json",
+          "exists": true,
+          "bytes": 1796,
+          "sha256": "96AA054209812E5E167B2E240A5E4BAE7489CAD9411EC0DA38CF90D81D10873A"
+        },
+        "matches": true
+      },
+      {
+        "path": "reports/BACKEND006R1_REVIEW_20260914/INDEPENDENT_REVIEW.json",
+        "expected_sha256": "A26DE40CF37505200F18001335AEF9320141047A97CF862BBEE076706FF9458F",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\BACKEND006R1_REVIEW_20260914\\INDEPENDENT_REVIEW.json",
+          "exists": true,
+          "bytes": 3315,
+          "sha256": "A26DE40CF37505200F18001335AEF9320141047A97CF862BBEE076706FF9458F"
+        },
+        "matches": true
+      },
+      {
+        "path": "rtl/cfo_estimator_link_v2.sv",
+        "expected_sha256": "7878CE644410D8362DEA13154100A8D6DB7FEA8E48E1A0F94372251D6E599014",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_estimator_link_v2.sv",
+          "exists": true,
+          "bytes": 9841,
+          "sha256": "7878CE644410D8362DEA13154100A8D6DB7FEA8E48E1A0F94372251D6E599014"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/tb/cfo_estimator_link_r1_tb.sv",
+        "expected_sha256": "FD38A1DEBC79390B47896B4D6C0CE19B8BEAAAD797197A211097DF7CB765F6F9",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\tb\\cfo_estimator_link_r1_tb.sv",
+          "exists": true,
+          "bytes": 21774,
+          "sha256": "FD38A1DEBC79390B47896B4D6C0CE19B8BEAAAD797197A211097DF7CB765F6F9"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vendor/link010r1/xpm_cdc.sv",
+        "expected_sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vendor\\link010r1\\xpm_cdc.sv",
+          "exists": true,
+          "bytes": 64836,
+          "sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vendor/link010r1/xpm_memory.sv",
+        "expected_sha256": "E72758E6794B1F7AD00428FEEEACC4F90A38B0500583B2CA93CA2EBA12BA01BD",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vendor\\link010r1\\xpm_memory.sv",
+          "exists": true,
+          "bytes": 486058,
+          "sha256": "E72758E6794B1F7AD00428FEEEACC4F90A38B0500583B2CA93CA2EBA12BA01BD"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vendor/link010r1/xpm_fifo.sv",
+        "expected_sha256": "22F40E9F1DE08436A6E15808A959D8BBF22916BEE3DE95ED7D3991BD0C19FF5C",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vendor\\link010r1\\xpm_fifo.sv",
+          "exists": true,
+          "bytes": 230974,
+          "sha256": "22F40E9F1DE08436A6E15808A959D8BBF22916BEE3DE95ED7D3991BD0C19FF5C"
+        },
+        "matches": true
+      },
+      {
+        "path": "docs/LINK010_SOURCE_LOCK.json",
+        "expected_sha256": "C9975BEE22B81FDE0AE670DB4644C3DDE0206C111307A904AA08A5E77D80BCA5",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\LINK010_SOURCE_LOCK.json",
+          "exists": true,
+          "bytes": 9538,
+          "sha256": "C9975BEE22B81FDE0AE670DB4644C3DDE0206C111307A904AA08A5E77D80BCA5"
+        },
+        "matches": true
+      },
+      {
+        "path": "docs/LINK010R1_CONTRACT_ZH.md",
+        "expected_sha256": "A09900AE1972F7297460187F9076D34E922E6A20A7D41E611700AAC6CBBB9241",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\LINK010R1_CONTRACT_ZH.md",
+          "exists": true,
+          "bytes": 3562,
+          "sha256": "A09900AE1972F7297460187F9076D34E922E6A20A7D41E611700AAC6CBBB9241"
+        },
+        "matches": true
+      },
+      {
+        "path": "docs/LINK010R1_NATIVE_JOB.md",
+        "expected_sha256": "3B5EAC8B17F28FD577600563BF342C77FE9CB43A5CB0205372BCDE3C4CC2AE25",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\docs\\LINK010R1_NATIVE_JOB.md",
+          "exists": true,
+          "bytes": 3906,
+          "sha256": "3B5EAC8B17F28FD577600563BF342C77FE9CB43A5CB0205372BCDE3C4CC2AE25"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/verify_link010r1.py",
+        "expected_sha256": "8099CA4EC39373EF82C910E21C39B12E4B3723FE832E2B1FBE9C10B337B9A2D1",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1.py",
+          "exists": true,
+          "bytes": 6843,
+          "sha256": "8099CA4EC39373EF82C910E21C39B12E4B3723FE832E2B1FBE9C10B337B9A2D1"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/verify_link010r1_models.py",
+        "expected_sha256": "C5FD9B54075C918FCD60CFB04CD8C7C9FEB3DBB596532367F529CE7CDAE6ED58",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1_models.py",
+          "exists": true,
+          "bytes": 1858,
+          "sha256": "C5FD9B54075C918FCD60CFB04CD8C7C9FEB3DBB596532367F529CE7CDAE6ED58"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/verify_link010r1_reset.py",
+        "expected_sha256": "E28F55CBF483C9B904E56A3D54D747377A1EC27610A5A2B70A6F2342C7D760C0",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1_reset.py",
+          "exists": true,
+          "bytes": 6708,
+          "sha256": "E28F55CBF483C9B904E56A3D54D747377A1EC27610A5A2B70A6F2342C7D760C0"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/verify_link010r1_binding.py",
+        "expected_sha256": "589DF51BC1B689FA16BB07ED378880C4A6F9DC6060B72C8523990324FAE0B4DA",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1_binding.py",
+          "exists": true,
+          "bytes": 22496,
+          "sha256": "589DF51BC1B689FA16BB07ED378880C4A6F9DC6060B72C8523990324FAE0B4DA"
+        },
+        "matches": true
+      },
+      {
+        "path": "tools/freeze_link010r1_sources.py",
+        "expected_sha256": "E1C65F4A98C6C5ECC2982F08A4ECA8B3D6C85291450BFC8FFE65F340D1AB89FA",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\freeze_link010r1_sources.py",
+          "exists": true,
+          "bytes": 3287,
+          "sha256": "E1C65F4A98C6C5ECC2982F08A4ECA8B3D6C85291450BFC8FFE65F340D1AB89FA"
+        },
+        "matches": true
+      },
+      {
+        "path": "vivado/link010r1_project.tcl",
+        "expected_sha256": "A04D3BC4F063779028288B72074696F99ABF2287A277171B8DD0947E23718037",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\link010r1_project.tcl",
+          "exists": true,
+          "bytes": 5605,
+          "sha256": "A04D3BC4F063779028288B72074696F99ABF2287A277171B8DD0947E23718037"
+        },
+        "matches": true
+      },
+      {
+        "path": "sim/vendor/link010r1/xpm_fifo_assertions.diff",
+        "expected_sha256": "F56AB0EE2C8A820029EEB5C4E1EF77494EB4629B230CD7BF7D06039625E49C8F",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vendor\\link010r1\\xpm_fifo_assertions.diff",
+          "exists": true,
+          "bytes": 744,
+          "sha256": "F56AB0EE2C8A820029EEB5C4E1EF77494EB4629B230CD7BF7D06039625E49C8F"
+        },
+        "matches": true
+      },
+      {
+        "path": "reports/LINK010R1_RESET_FIX_DRAFT_REVIEW.json",
+        "expected_sha256": "2B89264F09140D8A902A1EC1F333FFBB9599D1AF65CC0E6257BECFE3353E639B",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_RESET_FIX_DRAFT_REVIEW.json",
+          "exists": true,
+          "bytes": 9268,
+          "sha256": "2B89264F09140D8A902A1EC1F333FFBB9599D1AF65CC0E6257BECFE3353E639B"
+        },
+        "matches": true
+      },
+      {
+        "path": "reports/LINK010R1_TB_STATIC_REVIEW.json",
+        "expected_sha256": "AA8ABD3DC05B2AEEA84DC40478D139F2D4A32ACAFCB70BABB9A4710B9F687B38",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_TB_STATIC_REVIEW.json",
+          "exists": true,
+          "bytes": 14205,
+          "sha256": "AA8ABD3DC05B2AEEA84DC40478D139F2D4A32ACAFCB70BABB9A4710B9F687B38"
+        },
+        "matches": true
+      },
+      {
+        "path": "reports/LINK010R1_MODEL_BINDING_STATIC_REVIEW.json",
+        "expected_sha256": "FBAF8EDCC49EFEEA8C95F8058FAA7FCAE0A66BED327E211FB49B26C910903EA2",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_MODEL_BINDING_STATIC_REVIEW.json",
+          "exists": true,
+          "bytes": 12126,
+          "sha256": "FBAF8EDCC49EFEEA8C95F8058FAA7FCAE0A66BED327E211FB49B26C910903EA2"
+        },
+        "matches": true
+      },
+      {
+        "path": "reports/LINK010R1_BINDING_HELPER_REVIEW.json",
+        "expected_sha256": "829CB3BCD73057E5DA72F13679BFD24C41231D1538E87911F3C55197EB7C0F0E",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_BINDING_HELPER_REVIEW.json",
+          "exists": true,
+          "bytes": 11817,
+          "sha256": "829CB3BCD73057E5DA72F13679BFD24C41231D1538E87911F3C55197EB7C0F0E"
+        },
+        "matches": true
+      },
+      {
+        "path": "reports/LINK010R1_STATIC_REVIEW.json",
+        "expected_sha256": "C88C084730E4DEA66B75B874CF30F82D753E2FB3DDA28A470EB9CC7AEEABF8B3",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_STATIC_REVIEW.json",
+          "exists": true,
+          "bytes": 7439,
+          "sha256": "C88C084730E4DEA66B75B874CF30F82D753E2FB3DDA28A470EB9CC7AEEABF8B3"
+        },
+        "matches": true
+      },
+      {
+        "path": "reports/LINK010R1_PRE_FREEZE_CHECK.json",
+        "expected_sha256": "20755F7F549A74665D4F2152138EB0C94B12B66647C728CB962A6644C675F288",
+        "actual": {
+          "path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_PRE_FREEZE_CHECK.json",
+          "exists": true,
+          "bytes": 712,
+          "sha256": "20755F7F549A74665D4F2152138EB0C94B12B66647C728CB962A6644C675F288"
+        },
+        "matches": true
+      },
+      {
+        "path": "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+        "expected_sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7",
+        "actual": {
+          "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\hdl\\xpm_cdc.sv",
+          "exists": true,
+          "bytes": 64836,
+          "sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7"
+        },
+        "matches": true
+      },
+      {
+        "path": "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+        "expected_sha256": "D3C1E861CDDF00EBC82552C464A46FB5228E68B4D458001D064B99E04134B9D4",
+        "actual": {
+          "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\hdl\\xpm_fifo.sv",
+          "exists": true,
+          "bytes": 230951,
+          "sha256": "D3C1E861CDDF00EBC82552C464A46FB5228E68B4D458001D064B99E04134B9D4"
+        },
+        "matches": true
+      },
+      {
+        "path": "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv",
+        "expected_sha256": "E72758E6794B1F7AD00428FEEEACC4F90A38B0500583B2CA93CA2EBA12BA01BD",
+        "actual": {
+          "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_memory\\hdl\\xpm_memory.sv",
+          "exists": true,
+          "bytes": 486058,
+          "sha256": "E72758E6794B1F7AD00428FEEEACC4F90A38B0500583B2CA93CA2EBA12BA01BD"
+        },
+        "matches": true
+      }
+    ],
+    "all_checks": true
+  },
+  "xpr": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.xpr",
+    "exists": true,
+    "bytes": 18566,
+    "sha256": "5123211F34830D04D27268E252715051FFE5D53C07E75674E15D4D25B356DB0F"
+  },
+  "saved_native_identity_check": {
+    "samples": 18,
+    "consistent_creation_identity": true,
+    "observations": [
+      {
+        "utc": "2026-09-15T00:40:55.605Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:40:56.654Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:40:57.718Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:40:58.779Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:40:59.846Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:41:00.907Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:41:01.958Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:41:03.003Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:41:04.046Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:41:05.112Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:41:06.169Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:41:07.229Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": false
+      },
+      {
+        "utc": "2026-09-15T00:41:08.288Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": true
+      },
+      {
+        "utc": "2026-09-15T00:41:09.352Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": true
+      },
+      {
+        "utc": "2026-09-15T00:41:10.422Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": true
+      },
+      {
+        "utc": "2026-09-15T00:41:11.506Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": true
+      },
+      {
+        "utc": "2026-09-15T00:41:12.575Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": true
+      },
+      {
+        "utc": "2026-09-15T00:41:13.652Z",
+        "pid": 43136,
+        "creation_filetime_100ns": 134339064555008192,
+        "ready_already_visible": true
+      }
+    ]
+  },
+  "native_error_diagnostics": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log",
+      "line": "ERROR: [XSIM 43-4412] File \"D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_r1_tb.sv\" Line 84 : Initial value not supported yet."
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log",
+      "line": "ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/elaborate.log' file for more information."
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log",
+      "line": "ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation."
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log",
+      "line": "ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors."
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.stdout.log",
+      "line": "ERROR: [XSIM 43-4412] File \"D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_r1_tb.sv\" Line 84 : Initial value not supported yet."
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.stdout.log",
+      "line": "ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors."
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.stderr.log",
+      "line": "ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/elaborate.log' file for more information."
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.stderr.log",
+      "line": "ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation."
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\elaborate.log",
+      "line": "ERROR: [XSIM 43-4412] File \"D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_r1_tb.sv\" Line 84 : Initial value not supported yet."
+    }
+  ],
+  "vendor_binding_check": {
+    "schema": "link010r1_binding_v1",
+    "status": "LINK010R1_BINDING_FAIL",
+    "all_checks": false,
+    "native_started": false,
+    "checks": {
+      "nonempty_compile.bat": true,
+      "nonempty_cfo_estimator_link_tb_vlog.prj": true,
+      "nonempty_xvlog.log": true,
+      "nonempty_compile.log": true,
+      "nonempty_elaborate.log": true,
+      "nonempty_xsim.ini": true,
+      "compile_command": true,
+      "project_parse": true,
+      "project_exact_private_xpm_sources": true,
+      "project_private_xpm_library": true,
+      "parse_xvlog.log": true,
+      "exact_private_sources_xvlog.log": true,
+      "private_library_xvlog.log": true,
+      "parse_compile.log": true,
+      "exact_private_sources_compile.log": true,
+      "private_library_compile.log": true,
+      "elaboration_elaborate.log": true,
+      "seven_private_xpm_modules": false,
+      "no_other_xpm_binding": true,
+      "private_mapping": true,
+      "exact_private_simdir": true,
+      "mapped_private_directory_exists": true,
+      "filesystem_evidence_stable_and_readable": true
+    },
+    "errors": [
+      "seven_private_xpm_modules: missing private elaborated modules: xpm_fifo_async, xpm_fifo_base, xpm_fifo_rst, xpm_cdc_async_rst, xpm_cdc_sync_rst, xpm_cdc_single, xpm_memory_base"
+    ],
+    "details": {
+      "compile_commands": [
+        {
+          "line": "call xvlog  --incr --relax -L uvm -prj cfo_estimator_link_tb_vlog.prj -log xvlog.log",
+          "project": "d:\\008_ma_dev\\t11_cfo\\vivado\\cfo_link010r1\\cfo_link010r1.sim\\sim_1\\behav\\xsim\\cfo_estimator_link_tb_vlog.prj"
+        }
+      ],
+      "project_vendor_sources": [
+        {
+          "path": "d:\\008_ma_dev\\t11_cfo\\sim\\vendor\\link010r1\\xpm_cdc.sv",
+          "library": "cfo_xpm",
+          "language": "sv"
+        },
+        {
+          "path": "d:\\008_ma_dev\\t11_cfo\\sim\\vendor\\link010r1\\xpm_fifo.sv",
+          "library": "cfo_xpm",
+          "language": "sv"
+        },
+        {
+          "path": "d:\\008_ma_dev\\t11_cfo\\sim\\vendor\\link010r1\\xpm_memory.sv",
+          "library": "cfo_xpm",
+          "language": "sv"
+        }
+      ],
+      "analyzed_vendor_sources": {
+        "xvlog.log": [
+          {
+            "path": "d:\\008_ma_dev\\t11_cfo\\sim\\vendor\\link010r1\\xpm_cdc.sv",
+            "library": "cfo_xpm",
+            "language": "SystemVerilog"
+          },
+          {
+            "path": "d:\\008_ma_dev\\t11_cfo\\sim\\vendor\\link010r1\\xpm_fifo.sv",
+            "library": "cfo_xpm",
+            "language": "SystemVerilog"
+          },
+          {
+            "path": "d:\\008_ma_dev\\t11_cfo\\sim\\vendor\\link010r1\\xpm_memory.sv",
+            "library": "cfo_xpm",
+            "language": "SystemVerilog"
+          }
+        ],
+        "compile.log": [
+          {
+            "path": "d:\\008_ma_dev\\t11_cfo\\sim\\vendor\\link010r1\\xpm_cdc.sv",
+            "library": "cfo_xpm",
+            "language": "SystemVerilog"
+          },
+          {
+            "path": "d:\\008_ma_dev\\t11_cfo\\sim\\vendor\\link010r1\\xpm_fifo.sv",
+            "library": "cfo_xpm",
+            "language": "SystemVerilog"
+          },
+          {
+            "path": "d:\\008_ma_dev\\t11_cfo\\sim\\vendor\\link010r1\\xpm_memory.sv",
+            "library": "cfo_xpm",
+            "language": "SystemVerilog"
+          }
+        ]
+      },
+      "elaboration_commands": [
+        {
+          "line": "Running: C:/NIFPGA/programs/Vivado2021_1/bin/unwrapped/win64.o/xelab.exe -wto cf04e00e44b249c2bffa68fa1a03346e --incr --debug typical --relax --mt 16 -L cfo_xpm -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cfo_estimator_link_tb_behav cfo_xpm.cfo_estimator_link_tb cfo_xpm.glbl -log elaborate.log ",
+          "libraries": [
+            "cfo_xpm",
+            "uvm",
+            "unisims_ver",
+            "unimacro_ver",
+            "secureip"
+          ]
+        }
+      ],
+      "expected_modules": {
+        "xpm_fifo_async": false,
+        "xpm_fifo_base": false,
+        "xpm_fifo_rst": false,
+        "xpm_cdc_async_rst": false,
+        "xpm_cdc_sync_rst": false,
+        "xpm_cdc_single": false,
+        "xpm_memory_base": false
+      },
+      "wrong_bindings": [],
+      "mapping": {
+        "line": "cfo_xpm=xsim.dir/cfo_xpm",
+        "target": "d:\\008_ma_dev\\t11_cfo\\vivado\\cfo_link010r1\\cfo_link010r1.sim\\sim_1\\behav\\xsim\\xsim.dir\\cfo_xpm",
+        "resolved_directory": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xsim.dir\\cfo_xpm"
+      }
+    },
+    "evidence": [
+      {
+        "name": "compile.bat",
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\compile.bat",
+        "bytes": 920,
+        "sha256": "E5B691EBC23DB1AFA06DF5826F13E148134A88A982445ABE5CF64240FD0D2E97"
+      },
+      {
+        "name": "cfo_estimator_link_tb_vlog.prj",
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\cfo_estimator_link_tb_vlog.prj",
+        "bytes": 813,
+        "sha256": "8CEF37E98C6702343442572F18F0ED9DCA267FA650A076A7EE6F136436640F77"
+      },
+      {
+        "name": "xvlog.log",
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xvlog.log",
+        "bytes": 3868,
+        "sha256": "FA9C17276FC6E31D9A627F2E675C876A67E3A90DC684C5DB1464C69D4B2F1C27"
+      },
+      {
+        "name": "compile.log",
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\compile.log",
+        "bytes": 3868,
+        "sha256": "FA9C17276FC6E31D9A627F2E675C876A67E3A90DC684C5DB1464C69D4B2F1C27"
+      },
+      {
+        "name": "elaborate.log",
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\elaborate.log",
+        "bytes": 646,
+        "sha256": "A214BE86E111F6A49A2EE8334BCDAB0447311EDD2D7E4BA4AB761CC2BD13B93C"
+      },
+      {
+        "name": "xsim.ini",
+        "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xsim.ini",
+        "bytes": 92,
+        "sha256": "1A9A8F3B2EDE12C07EA7BBB12363BB3132286B10055E382664A00B2E7BF8EDBD"
+      }
+    ],
+    "simdir": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim"
+  },
+  "status": "FAIL",
+  "copied_logs": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\native_xvlog.log",
+      "exists": true,
+      "bytes": 3868,
+      "sha256": "FA9C17276FC6E31D9A627F2E675C876A67E3A90DC684C5DB1464C69D4B2F1C27"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\native_compile.log",
+      "exists": true,
+      "bytes": 3868,
+      "sha256": "FA9C17276FC6E31D9A627F2E675C876A67E3A90DC684C5DB1464C69D4B2F1C27"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\native_elaborate.log",
+      "exists": true,
+      "bytes": 646,
+      "sha256": "A214BE86E111F6A49A2EE8334BCDAB0447311EDD2D7E4BA4AB761CC2BD13B93C"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\native_cfo_estimator_link_tb_vlog.prj",
+      "exists": true,
+      "bytes": 813,
+      "sha256": "8CEF37E98C6702343442572F18F0ED9DCA267FA650A076A7EE6F136436640F77"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\native_compile.bat",
+      "exists": true,
+      "bytes": 920,
+      "sha256": "E5B691EBC23DB1AFA06DF5826F13E148134A88A982445ABE5CF64240FD0D2E97"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\native_xsim.ini",
+      "exists": true,
+      "bytes": 92,
+      "sha256": "1A9A8F3B2EDE12C07EA7BBB12363BB3132286B10055E382664A00B2E7BF8EDBD"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "EXACT_TB_EQUIVALENCE_PASS_PENDING_NATIVE",
+  "replacement_count": 8,
+  "reverse_byte_identical": true,
+  "base_frozen_files_verified": 60,
+  "vendor_dependencies_verified": 3,
+  "tb_sha256": "4C7EC8E1FB2F194FF982130439CE90375C6414FC7B1B2C8A0F2D646A518B078E",
+  "native_started": false,
+  "utc": "2026-09-15T00:54:25.169262+00:00",
+  "independent_reviewer": "/root/t11_phase_rtl",
+  "clocking_skew_preserved": "PRE #1step; POST #0.010 ns",
+  "types_preserved": "wire [31:0] four-state vector; integer signed four-state epoch",
+  "stimulus_and_thresholds": "byte identical outside exact replacements",
+  "compatibility_cause": "candidate XSim clocking input alias limitation; not isolated by a revised native run",
+  "native_runtime_result": "NOT_RUN"
+}

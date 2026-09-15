@@ -1,0 +1,13 @@
+{"utc":"2026-09-15T00:40:39.333Z","event":"execution_freeze_written","sha256":"ADE61AFFCB53D8F7501F4E9EB272707A86F0B826A5E862F4D44E1D66B3ACD9A1"}
+{"utc":"2026-09-15T00:40:39.448Z","event":"create_suspended_begin","stage":"create","argv":["C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat","-mode","batch","-source","D:\\008_MA_Dev\\T11_CFO\\vivado\\link010r1_project.tcl","-log","D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\create.log","-journal","D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\create.jou","-tclargs","create","D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna"]}
+{"utc":"2026-09-15T00:40:39.461Z","event":"create_suspended_done","stage":"create","launcher_pid":37764}
+{"utc":"2026-09-15T00:40:39.464Z","event":"job_assigned","stage":"create","launcher_pid":37764,"kill_on_job_close":true}
+{"utc":"2026-09-15T00:40:39.465Z","event":"native_resumed_launch","stage":"create"}
+{"utc":"2026-09-15T00:40:53.966Z","event":"native_ready","stage":"create","marker":{"found":true,"path":"D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\create.log","line":"CFO_LINK010R1_READY action=create pid=37144"}}
+{"utc":"2026-09-15T00:40:54.142Z","event":"job_zero_natural","stage":"create"}
+{"utc":"2026-09-15T00:40:54.486Z","event":"create_suspended_begin","stage":"simulate","argv":["C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat","-mode","batch","-source","D:\\008_MA_Dev\\T11_CFO\\vivado\\link010r1_project.tcl","-log","D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log","-journal","D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.jou","-tclargs","simulate","D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna"]}
+{"utc":"2026-09-15T00:40:54.506Z","event":"create_suspended_done","stage":"simulate","launcher_pid":34372}
+{"utc":"2026-09-15T00:40:54.508Z","event":"job_assigned","stage":"simulate","launcher_pid":34372,"kill_on_job_close":true}
+{"utc":"2026-09-15T00:40:54.510Z","event":"native_resumed_launch","stage":"simulate"}
+{"utc":"2026-09-15T00:41:08.259Z","event":"native_ready","stage":"simulate","marker":{"found":true,"path":"D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T004038984710Z_luna\\simulate.log","line":"CFO_LINK010R1_READY action=simulate pid=43136"}}
+{"utc":"2026-09-15T00:41:13.928Z","event":"job_zero_natural","stage":"simulate"}

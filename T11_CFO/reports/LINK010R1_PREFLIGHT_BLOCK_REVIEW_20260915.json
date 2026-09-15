@@ -1,0 +1,48 @@
+{
+  "status": "BLOCKED_PREFLIGHT_EVIDENCE_VERIFIED_NO_NATIVE",
+  "utc": "2026-09-15T00:17:44.973908+00:00",
+  "attempt": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T001340607807Z_luna",
+  "expected_hashes": {
+    "ATTEMPT_COMPLETION.json": "1FCCB1E05A248212CFF59E929C4DD9B11A8A7C342CA0ED5F03DBD934964D6B60",
+    "EXECUTION_FREEZE.json": "DF5274A4A00E1A5597FE70380AAC7390FA8F2FFF1E85194DC0879ADFF881B911",
+    "ATTEMPT_ARTIFACT_MANIFEST.json": "CA5E63C46EA9A591C1AD2682F772450C2F8EF9FBF6CECEC6BF58479B68DE8D30"
+  },
+  "artifacts": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T001340607807Z_luna\\ATTEMPT_COMPLETION.json",
+      "matches": true
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T001340607807Z_luna\\cfo_link010r1_guard_v1_frozen.py",
+      "matches": true
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T001340607807Z_luna\\controller_events.jsonl",
+      "matches": true
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T001340607807Z_luna\\EXECUTION_FREEZE.json",
+      "matches": true
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1\\attempt_20260915T001340607807Z_luna\\report_clock.json",
+      "matches": true
+    }
+  ],
+  "native_started": false,
+  "new_xpr_absent": true,
+  "blocking_checks": [
+    "gui_absent_or_editor_only_verified",
+    "no_unapproved_native_compute_or_ambiguous_gui"
+  ],
+  "old_gui_expected_project": "D:/008_MA_Dev/I16_AddSub_CLIP/vivado/I16_AddSub/I16_AddSub.xpr",
+  "actual_window_titles": [
+    "Sync_Frontend - [D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.xpr] - Vivado 2021.1",
+    "theAwtToolkitWindow",
+    "MSCTFIME UI",
+    "Default IME"
+  ],
+  "source_lock_verified_in_freeze": true,
+  "existing_stage_to_repeat": null,
+  "next_change_scope": "Execution admission identification only; preserve original source lock, RTL/TB/vectors/thresholds and failed attempt."
+}

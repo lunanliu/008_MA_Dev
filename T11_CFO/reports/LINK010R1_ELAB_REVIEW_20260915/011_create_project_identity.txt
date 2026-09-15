@@ -1,0 +1,7 @@
+part=xcvu11p-flgb2104-2-e
+hardware_top=cfo_estimator_link
+simulation_top=cfo_estimator_link_tb
+project=D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.xpr
+vivado=2021.1
+xelab_jobs=16
+xpm_libraries=

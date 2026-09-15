@@ -1,0 +1,8 @@
+{
+  "thread_id": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+  "status": "COMPLETE",
+  "started_utc": "2026-09-15T00:40:38.992Z",
+  "interval_minutes": 15,
+  "ended_utc": "2026-09-15T00:41:14.334Z",
+  "final_status": "BLOCKED_AFTER_SIMULATE"
+}
