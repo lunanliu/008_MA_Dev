@@ -1,0 +1,8 @@
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/NIFPGA/programs/Vivado2021_1/bin/unwrapped/win64.o/xelab.exe -wto cf04e00e44b249c2bffa68fa1a03346e --incr --debug typical --relax --mt 16 -L cfo_xpm -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cfo_estimator_link_tb_behav cfo_xpm.cfo_estimator_link_tb cfo_xpm.glbl -log elaborate.log 
+Using 16 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+ERROR: [XSIM 43-4412] File "D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_r1_tb.sv" Line 84 : Initial value not supported yet.

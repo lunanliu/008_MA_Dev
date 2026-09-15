@@ -1,0 +1,51 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_divide_rne64.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_divide_rne64
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_divide_rne64wide.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_divide_rne64wide
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_estimate74_backend.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_estimate74_backend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_estimator_link_v2.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_estimator_link
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_fft256_core.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_fft256_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_fft74_quality_v2.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_fft74_quality
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_phase74_core_v2.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_phase74_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_cdc.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module xpm_cdc_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
+INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
+INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_low_latency_handshake
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_fifo.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module xpm_fifo_base
+INFO: [VRFC 10-311] analyzing module xpm_fifo_rst
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_vec
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_bit
+WARNING: [VRFC 10-8426] non-net output port 'd_out' cannot be initialized at declaration in SystemVerilog mode [D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_fifo.sv:1909]
+INFO: [VRFC 10-311] analyzing module xpm_reg_pipe_bit
+INFO: [VRFC 10-311] analyzing module xpm_fifo_sync
+INFO: [VRFC 10-311] analyzing module xpm_fifo_async
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axif
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_fifo.sv:3660]
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axil
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axi_reg_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_memory.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-311] analyzing module asym_bwe_bb
+INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
+INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
+INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
+INFO: [VRFC 10-311] analyzing module xpm_memory_spram
+INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_r1_tb.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_estimator_link_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/glbl.v" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module glbl

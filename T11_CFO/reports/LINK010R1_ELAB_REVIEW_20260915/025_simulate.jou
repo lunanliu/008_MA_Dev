@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Sep 15 02:40:56 2026
+# Process ID: 43136
+# Current directory: D:/008_MA_Dev/T11_CFO
+# Command line: vivado.exe -mode batch -source D:\008_MA_Dev\T11_CFO\vivado\link010r1_project.tcl -log D:\008_MA_Dev\T11_CFO\work\CFO_LINK010R1\attempt_20260915T004038984710Z_luna\simulate.log -journal D:\008_MA_Dev\T11_CFO\work\CFO_LINK010R1\attempt_20260915T004038984710Z_luna\simulate.jou -tclargs simulate D:\008_MA_Dev\T11_CFO\work\CFO_LINK010R1\attempt_20260915T004038984710Z_luna
+# Log file: D:/008_MA_Dev/T11_CFO/work/CFO_LINK010R1/attempt_20260915T004038984710Z_luna/simulate.log
+# Journal file: D:\008_MA_Dev\T11_CFO\work\CFO_LINK010R1\attempt_20260915T004038984710Z_luna\simulate.jou
+#-----------------------------------------------------------
+source {D:\008_MA_Dev\T11_CFO\vivado\link010r1_project.tcl}
