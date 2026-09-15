@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-09-15T18:37:33.2087644+02:00",
+  "tracked_root_and_observed_ids": [
+    24692,
+    19612,
+    25560,
+    50348,
+    30456,
+    24836
+  ],
+  "recursive_remaining": [],
+  "all_native_compiler_processes": [
+    {
+      "Name": "vivado.exe",
+      "ProcessId": 14300,
+      "ParentProcessId": 11240,
+      "CreationDate": "2026-09-14T22:43:39.165474+02:00",
+      "CommandLine": "\"C:/NIFPGA/programs/Vivado2021_1/bin/unwrapped/win64.o/vivado.exe\"  "
+    }
+  ],
+  "wrapper_short_pid_capture": "NOT_RECORDED; completion log and current native process census checked",
+  "boundary": "No remaining tracked group/descendants or native compiler processes except preserved user GUI; does not claim capture of every historical transient PID or continuous resource peak."
+}

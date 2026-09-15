@@ -1,0 +1,358 @@
+{
+  "reviewed_at": "2026-09-15T18:28:34.765636+02:00",
+  "reviewer": "01a0a53b-5d75-7e92-9b0b-184308ae662a",
+  "job": "SFO-FN01",
+  "status": "COMPILE_ELABORATE_AND_WRAPPER_SYNTAX_ACCEPTED",
+  "native_projects": [
+    {
+      "name": "canonical",
+      "native_members": 283,
+      "native_members_match": true,
+      "ip_count": 34,
+      "ip_export_locked_count": 34,
+      "lock_reason": "Read-only canonical project"
+    },
+    {
+      "name": "private",
+      "native_members": 283,
+      "native_members_match": true,
+      "ip_count": 34,
+      "ip_export_locked_count": 0,
+      "lock_reason": "Private project unlocked"
+    }
+  ],
+  "actual_compilation": {
+    "entries": 138,
+    "core": 74,
+    "tb": 2,
+    "xpm": 3,
+    "vendor_support": 59,
+    "all_inputs_private_and_frozen_hash_match": true
+  },
+  "errors": 0,
+  "critical_warnings": 0,
+  "warnings": {
+    "count": 43,
+    "groups": {
+      "filemgmt 56-3": 2,
+      "IP_Flow 19-2162": 34,
+      "filemgmt 56-2": 2,
+      "VRFC 10-3380": 1,
+      "VRFC 10-8426": 1,
+      "VRFC 10-2821": 1,
+      "VRFC 10-5021": 1,
+      "XSIM 43-3980": 1
+    },
+    "items": [
+      {
+        "line": 3678,
+        "code": "filemgmt 56-3",
+        "message": "WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/008_MA_Dev/Sync_SFO/Sync_SFO.gen/sources_1'.",
+        "next_line": "WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'D:/008_MA_Dev/Sync_SFO/Sync_SFO.ip_user_files'."
+      },
+      {
+        "line": 3679,
+        "code": "filemgmt 56-3",
+        "message": "WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'D:/008_MA_Dev/Sync_SFO/Sync_SFO.ip_user_files'.",
+        "next_line": "Scanning sources..."
+      },
+      {
+        "line": 3685,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't07_g3_up47' is locked:",
+        "next_line": "* Project containing IP 't07_g3_up47' is read-only."
+      },
+      {
+        "line": 3687,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't03_xfft_2048_main' is locked:",
+        "next_line": "* Project containing IP 't03_xfft_2048_main' is read-only."
+      },
+      {
+        "line": 3689,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_rt_mult_u48_u20' is locked:",
+        "next_line": "* Project containing IP 't06_rt_mult_u48_u20' is read-only."
+      },
+      {
+        "line": 3691,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_rt_mult_s41_s38' is locked:",
+        "next_line": "* Project containing IP 't06_rt_mult_s41_s38' is read-only."
+      },
+      {
+        "line": 3693,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_rt_mult_s41_u38' is locked:",
+        "next_line": "* Project containing IP 't06_rt_mult_s41_u38' is read-only."
+      },
+      {
+        "line": 3695,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_rt_mult_u30_s42' is locked:",
+        "next_line": "* Project containing IP 't06_rt_mult_u30_s42' is read-only."
+      },
+      {
+        "line": 3697,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_rt_mult_u30_u43' is locked:",
+        "next_line": "* Project containing IP 't06_rt_mult_u30_u43' is read-only."
+      },
+      {
+        "line": 3699,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_rt_mult_s41_s41' is locked:",
+        "next_line": "* Project containing IP 't06_rt_mult_s41_s41' is read-only."
+      },
+      {
+        "line": 3701,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_rt_mult_u30_u48' is locked:",
+        "next_line": "* Project containing IP 't06_rt_mult_u30_u48' is read-only."
+      },
+      {
+        "line": 3703,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_fs_mult_s29_s48' is locked:",
+        "next_line": "* Project containing IP 't06_fs_mult_s29_s48' is read-only."
+      },
+      {
+        "line": 3705,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_fs_mult_s29_s11' is locked:",
+        "next_line": "* Project containing IP 't06_fs_mult_s29_s11' is read-only."
+      },
+      {
+        "line": 3707,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_fs_mult_u18_s48' is locked:",
+        "next_line": "* Project containing IP 't06_fs_mult_u18_s48' is read-only."
+      },
+      {
+        "line": 3709,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_fs_mult_u18_s11' is locked:",
+        "next_line": "* Project containing IP 't06_fs_mult_u18_s11' is read-only."
+      },
+      {
+        "line": 3711,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't04_div_u63_u47' is locked:",
+        "next_line": "* Project containing IP 't04_div_u63_u47' is read-only."
+      },
+      {
+        "line": 3713,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_wp_mult_u64_u33' is locked:",
+        "next_line": "* Project containing IP 't06_wp_mult_u64_u33' is read-only."
+      },
+      {
+        "line": 3715,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_pair_max_tracker_2lane_cross' is locked:",
+        "next_line": "* Project containing IP 't06_pair_max_tracker_2lane_cross' is read-only."
+      },
+      {
+        "line": 3717,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_observation_engine_weight_product' is locked:",
+        "next_line": "* Project containing IP 't06_observation_engine_weight_product' is read-only."
+      },
+      {
+        "line": 3719,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_observation_engine_square' is locked:",
+        "next_line": "* Project containing IP 't06_observation_engine_square' is read-only."
+      },
+      {
+        "line": 3721,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_cordic_translate48_parallel' is locked:",
+        "next_line": "* Project containing IP 't06_cordic_translate48_parallel' is read-only."
+      },
+      {
+        "line": 3723,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't04_cmpy_17x16' is locked:",
+        "next_line": "* Project containing IP 't04_cmpy_17x16' is read-only."
+      },
+      {
+        "line": 3725,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_sg_div_u53_u37' is locked:",
+        "next_line": "* Project containing IP 't06_sg_div_u53_u37' is read-only."
+      },
+      {
+        "line": 3727,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_sg_mult_u37_u16' is locked:",
+        "next_line": "* Project containing IP 't06_sg_mult_u37_u16' is read-only."
+      },
+      {
+        "line": 3729,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't05_cmpy_rotate_18x18' is locked:",
+        "next_line": "* Project containing IP 't05_cmpy_rotate_18x18' is read-only."
+      },
+      {
+        "line": 3731,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't06_dds_phase_s32_sincos18' is locked:",
+        "next_line": "* Project containing IP 't06_dds_phase_s32_sincos18' is read-only."
+      },
+      {
+        "line": 3733,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't05_mult_cfo_s19_const40_full59' is locked:",
+        "next_line": "* Project containing IP 't05_mult_cfo_s19_const40_full59' is read-only."
+      },
+      {
+        "line": 3735,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't07_g3_down47' is locked:",
+        "next_line": "* Project containing IP 't07_g3_down47' is read-only."
+      },
+      {
+        "line": 3737,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't07_g3_down15' is locked:",
+        "next_line": "* Project containing IP 't07_g3_down15' is read-only."
+      },
+      {
+        "line": 3739,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 'farrow_mul_t16' is locked:",
+        "next_line": "* Project containing IP 'farrow_mul_t16' is read-only."
+      },
+      {
+        "line": 3741,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 'farrow_mul_h16' is locked:",
+        "next_line": "* Project containing IP 'farrow_mul_h16' is read-only."
+      },
+      {
+        "line": 3743,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 'farrow_add_32' is locked:",
+        "next_line": "* Project containing IP 'farrow_add_32' is read-only."
+      },
+      {
+        "line": 3745,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 'farrow_add_18' is locked:",
+        "next_line": "* Project containing IP 'farrow_add_18' is read-only."
+      },
+      {
+        "line": 3747,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 'farrow_add_28' is locked:",
+        "next_line": "* Project containing IP 'farrow_add_28' is read-only."
+      },
+      {
+        "line": 3749,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't07_g3_up15' is locked:",
+        "next_line": "* Project containing IP 't07_g3_up15' is read-only."
+      },
+      {
+        "line": 3751,
+        "code": "IP_Flow 19-2162",
+        "message": "WARNING: [IP_Flow 19-2162] IP 't03_xfft_16384_aux' is locked:",
+        "next_line": "* Project containing IP 't03_xfft_16384_aux' is read-only."
+      },
+      {
+        "line": 3756,
+        "code": "filemgmt 56-2",
+        "message": "WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'D:/008_MA_Dev/Sync_SFO/work/FN01/project/Sync_SFO.gen/sources_1', nor could it be found using path 'D:/008_MA_Dev/Sync_SFO/Sync_SFO.gen/sources_1'.",
+        "next_line": "WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'D:/008_MA_Dev/Sync_SFO/work/FN01/project/Sync_SFO.ip_user_files', nor could it be found using path 'D:/008_MA_Dev/Sync_SFO/Sync_SFO.ip_user_files'."
+      },
+      {
+        "line": 3757,
+        "code": "filemgmt 56-2",
+        "message": "WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'D:/008_MA_Dev/Sync_SFO/work/FN01/project/Sync_SFO.ip_user_files', nor could it be found using path 'D:/008_MA_Dev/Sync_SFO/Sync_SFO.ip_user_files'.",
+        "next_line": "Scanning sources..."
+      },
+      {
+        "line": 3952,
+        "code": "VRFC 10-3380",
+        "message": "WARNING: [VRFC 10-3380] identifier 'obfault' is used before its declaration [D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/control/sfo_two_pass_transport.sv:250]",
+        "next_line": "INFO: [VRFC 10-2263] Analyzing SystemVerilog file \"D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/buffering/sfo_uram_frame_bank.sv\" into library xil_defaultlib"
+      },
+      {
+        "line": 3976,
+        "code": "VRFC 10-8426",
+        "message": "WARNING: [VRFC 10-8426] non-net output port 'd_out' cannot be initialized at declaration in SystemVerilog mode [D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/vendor/xpm/xpm_fifo.sv:1909]",
+        "next_line": "INFO: [VRFC 10-311] analyzing module xpm_reg_pipe_bit"
+      },
+      {
+        "line": 3982,
+        "code": "VRFC 10-2821",
+        "message": "WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/vendor/xpm/xpm_fifo.sv:3660]",
+        "next_line": "INFO: [VRFC 10-311] analyzing module xpm_fifo_axil"
+      },
+      {
+        "line": 4086,
+        "code": "VRFC 10-5021",
+        "message": "WARNING: [VRFC 10-5021] port 'm_axis_data_tuser' is not connected on this instance [D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/fft_service/sfo_initial_fft_service.sv:162]",
+        "next_line": "Completed static elaboration"
+      },
+      {
+        "line": 4089,
+        "code": "XSIM 43-3980",
+        "message": "WARNING: [XSIM 43-3980] File \"D:/008_MA_Dev/Sync_SFO/work/FN01/project/sim/tb/sync_sfo_full_frame_tb.sv\" Line 36 : The SystemVerilog feature \": Sensitivity on Associative Array\" is not supported yet for simulation.",
+        "next_line": "Completed simulation data flow analysis"
+      }
+    ]
+  },
+  "canonical_frozen_inputs_verified": 539,
+  "canonical_frozen_input_mismatches": 0,
+  "private_unchanged_inputs": 538,
+  "private_xpr_diff_categories": {
+    "private_project_location": 1,
+    "compile_elaborate_launch_metadata": 1,
+    "disabled_incremental_directory_rebased": 20,
+    "strategy_description_removed": 18
+  },
+  "private_xpr_export_is_not_the_delivered_canonical_xpr": true,
+  "native_seconds": 1006.558775,
+  "snapshot": "sync_sfo_full_frame_tb_behav",
+  "wrapper_syntax": "PASS_XVHDL_2021_1_2008",
+  "runtime_simulation": false,
+  "synthesis": false,
+  "physical_timing": false,
+  "sustained_throughput": false,
+  "NI_compile": false,
+  "board_validation": false,
+  "runtime_fifo_trace_binding_coverage": "NOT_RUN; 32 renamed expected paths retained, compile/elaboration accepted bind syntax, no runtime trace was produced.",
+  "execution_summary_corrections": {
+    "canonical_locked_ip_count": 34,
+    "reason": "All34 canonical rows report1 due read-only; original Luna summary incorrectly reported0. Private rows all0.",
+    "private_xpr_difference_note": "40 structural metadata changes, not only2; full categories above."
+  },
+  "finalized_at": "2026-09-15T18:43:04.661158+02:00",
+  "review_complete": true,
+  "process_closure_evidence": {
+    "path": "reports/functional_review/FN01/FN01_PROCESS_CLOSURE_EVIDENCE.json",
+    "bytes": 10961,
+    "sha256": "195B3D81345267B38FD7560C1DB7AF66038D6DF418DFB24CC499E80BA47169BB"
+  },
+  "independent_process_closure_check": {
+    "path": "reports/functional_review/FN01/ASTRA_PROCESS_CLOSURE_CHECK.json",
+    "bytes": 810,
+    "sha256": "AF61ECC137EBBB57517E13FBD2DE520F83D2A232DE80D888B2CB5EFD2102E1D8"
+  },
+  "closure_artifacts_verified": 16,
+  "process_closure_scope": "Recorded FN01 roots and descendants absent; current native tool census contains only preserved user GUI. Short-lived wrapper child PID was not recorded. No claim of complete historical PID capture or continuously measured resource peak.",
+  "ready_for_manual_clip_integration": true,
+  "ready_for_board_test": false,
+  "board_test_prerequisites": [
+    "Core synthesis and suitable netlist export",
+    "NI project binding and target compilation with clocks, resets, CDC, DDR/DMA and capture/replay",
+    "Independent case6001 input/references followed by board validation"
+  ],
+  "frontend_integration_prerequisites": [
+    "288-bit atomic record adaptation to SFO interfaces with coordinate/status conversion",
+    "Full-frame raw IQ storage and replay outside the frontend local capture buffer"
+  ],
+  "no_additional_native_job_required_for_this_naming_scope": true
+}

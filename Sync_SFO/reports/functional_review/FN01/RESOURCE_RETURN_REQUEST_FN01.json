@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-09-15T18:43:04.661158+02:00",
+  "job": "SFO-FN01",
+  "grant_id": "SFO_FN01_20260915_OPEN_COMPILE_ELABORATE",
+  "grant_sha256": "1EBDB7340CAD52B564696BD3B462766F76613339C37D1DD76CBCB1EA99333D5E",
+  "requester": "01a0a53b-5d75-7e92-9b0b-184308ae662a",
+  "manager": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "action": "RETURN_SHARED_VIVADO_SLOT_AFTER_COMPLETED_REVIEW",
+  "status": "REQUESTED_TO_MANAGER",
+  "native_jobs_remaining": 0,
+  "next_native_job": null,
+  "review": {
+    "path": "reports/functional_review/FN01/ASTRA_NATIVE_REVIEW.json",
+    "bytes": 15732,
+    "sha256": "39F303617B9819209CE8AB7605B52F2A13079434FA1D1EA38E861121DF79EF2B"
+  },
+  "process_check": {
+    "path": "reports/functional_review/FN01/ASTRA_PROCESS_CLOSURE_CHECK.json",
+    "bytes": 810,
+    "sha256": "AF61ECC137EBBB57517E13FBD2DE520F83D2A232DE80D888B2CB5EFD2102E1D8"
+  },
+  "central_resource_slot_modified_by_this_task": false,
+  "source_commit": "c4d853a1987f66f212fd44fcd8e9a42dd00035d2",
+  "request_commit": "9c4f1683a71622e885b75df553d0b70a88ffe777",
+  "ready_for_manual_clip_integration": true,
+  "board_validation": "NOT_RUN"
+}

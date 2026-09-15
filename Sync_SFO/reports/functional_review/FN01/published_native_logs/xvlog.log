@@ -1,0 +1,192 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_cfo_phase_increment.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_cfo_phase_increment
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/control/sfo_domain_reset.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_domain_reset
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/resampling/sfo_farrow_arithmetic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_farrow_add
+INFO: [VRFC 10-311] analyzing module sfo_farrow_horner
+INFO: [VRFC 10-311] analyzing module sfo_farrow_real
+INFO: [VRFC 10-311] analyzing module sfo_farrow_parallel
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/sim/tb/sfo_fifo_history_observer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_fifo_history_observer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/resampling/sfo_fir_down15.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_fir_down15
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/resampling/sfo_fir_down47.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_fir_down47
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/resampling/sfo_fir_up15.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_fir_up15
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/resampling/sfo_fir_up47.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_fir_up47
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/first_resampling/sfo_first_frame_scheduler.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_first_frame_scheduler
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/first_resampling/sfo_first_pass_descriptor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_first_pass_descriptor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/first_resampling/sfo_first_resampler.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_first_resampler
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/resampling/sfo_guarded_farrow_stream.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_guarded_farrow_stream
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/resampling/sfo_guarded_resampling_core.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_guarded_resampling_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_cfo_derotate_s16_4lane.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_cfo_derotate_s16_4lane
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_dds_phase_4lane.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_dds_phase_4lane
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_derotate_wide_4lane.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_derotate_wide_4lane
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/common/sfo_stream_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_estimation_service.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_estimation_service
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_estimator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_estimator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/fft_service/sfo_initial_fft_arbiter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_fft_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_fft_pair_extractor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_fft_pair_extractor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_fft_pair_extractor_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_fft_pair_extractor_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_fft_pair_extractor_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_fft_pair_extractor_memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/fft_service/sfo_initial_fft_service.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_fft_service
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_fft_swls_backend.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_fft_swls_backend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_five_sum_accumulator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_five_sum_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_frame_context_join.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_frame_context_join
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_observation_engine.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_observation_engine
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_observation_engine_2lane.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_observation_engine_2lane
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_observation_engine_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_observation_engine_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_observation_store.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_observation_store
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_observation_store_bank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_observation_store_bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_pair_max_tracker_2lane.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_pair_max_tracker_2lane
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_pair_phasor_bfp.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_pair_phasor_bfp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_ps3_ps10_job_sequencer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_ps3_ps10_job_sequencer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_raw_reader_4lane.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_raw_reader_4lane
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_raw_reader_local_capture.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_raw_reader_local_capture
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_raw_to_fft_frontend.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_raw_to_fft_frontend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_regression_tail.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_regression_tail
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_shared_gain_s16_4lane.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_shared_gain_s16_4lane
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_shared_gain_s16_lane.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_shared_gain_s16_lane
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_swls_weighted_backend.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_swls_weighted_backend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_unsigned_divider_service.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_unsigned_divider_service
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_unsigned_divider_service_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_unsigned_divider_service_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/initial_estimation/sfo_initial_weight_pack.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_initial_weight_pack
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/buffering/sfo_intermediate_frame_bank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_intermediate_frame_bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/resampling/sfo_nominal_pack4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_nominal_pack4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/buffering/sfo_output_buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_output_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/buffering/sfo_raw_frame_ring.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_raw_frame_ring
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/buffering/sfo_record_cdc_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_record_cdc_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_delay_backend4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_delay_backend4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_div_u80_u49_rne.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_div_u80_u49_rne
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_estimator4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_estimator4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_fft_grid_stage4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_fft_grid_stage4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/fft_service/sfo_residual_fft_service4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_fft_service4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/fft_service/sfo_residual_fft_window4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_fft_window4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_grid_packet_queue2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_grid_packet_queue2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/fft_service/sfo_residual_ifft_service4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_ifft_service4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_ls74.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_ls74
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_nominal_window_reader4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_nominal_window_reader4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_peak_interpolate.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_peak_interpolate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_peak_triplet4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_peak_triplet4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_pilot_front2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_pilot_front2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_pilot_grid4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_pilot_grid4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_pilot_rotate2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_pilot_rotate2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_pilot_select_phase4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_pilot_select_phase4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/residual_estimation/sfo_residual_power4.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_residual_power4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/second_resampling/sfo_second_pass_descriptor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_second_pass_descriptor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/second_resampling/sfo_second_resampler.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_second_resampler
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/buffering/sfo_sync_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_sync_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/buffering/sfo_training_capture_buffer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_training_capture_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/control/sfo_two_pass_transport.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_two_pass_transport
+WARNING: [VRFC 10-3380] identifier 'obfault' is used before its declaration [D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/control/sfo_two_pass_transport.sv:250]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/buffering/sfo_uram_frame_bank.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_uram_frame_bank
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/common/sfo_vendor_multiplier_adapters.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sfo_square18_vendor_adapter
+INFO: [VRFC 10-311] analyzing module sfo_square48_vendor_adapter
+INFO: [VRFC 10-311] analyzing module sfo_cfo_scale_vendor_adapter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/control/sync_sfo_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_sfo_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/vendor/xpm/xpm_cdc.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_cdc_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
+INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
+INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_low_latency_handshake
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/vendor/xpm/xpm_fifo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_fifo_base
+INFO: [VRFC 10-311] analyzing module xpm_fifo_rst
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_vec
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_bit
+WARNING: [VRFC 10-8426] non-net output port 'd_out' cannot be initialized at declaration in SystemVerilog mode [D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/vendor/xpm/xpm_fifo.sv:1909]
+INFO: [VRFC 10-311] analyzing module xpm_reg_pipe_bit
+INFO: [VRFC 10-311] analyzing module xpm_fifo_sync
+INFO: [VRFC 10-311] analyzing module xpm_fifo_async
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axif
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/vendor/xpm/xpm_fifo.sv:3660]
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axil
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axi_reg_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/rtl/vendor/xpm/xpm_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-311] analyzing module asym_bwe_bb
+INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
+INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
+INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
+INFO: [VRFC 10-311] analyzing module xpm_memory_spram
+INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/sim/tb/sync_sfo_full_frame_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sync_sfo_full_frame_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/008_MA_Dev/Sync_SFO/work/FN01/project/Sync_SFO.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

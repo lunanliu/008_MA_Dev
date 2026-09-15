@@ -5,7 +5,7 @@
 | 交付内容 | 入口 |
 |---|---|
 | 完整核心工程与功能分区 | [工程](Sync_SFO.xpr) · [74 个核心源列表](rtl/sources.f) · [功能/名称映射](docs/functional_review_20260915/NAME_MAPPING_ZH.md) |
-| 独立明文 VHDL Wrapper | [sync_sfo_manual_wrapper.vhd](wrapper/sync_sfo_manual_wrapper.vhd) · [102 个端口](wrapper/ports.csv) · [接口合同](wrapper/interface_contract.json) |
+| 独立明文 VHDL Wrapper | [sync_sfo_manual_wrapper.vhd](wrapper/sync_sfo_manual_wrapper.vhd) · [102 个端口](wrapper/ports.csv) · [接口合同](wrapper/interface_contract_FN01.json) |
 | 手工 CLIP、时钟、前端接口及测试步骤 | [当前交付指南](docs/SFO_SYNC_MODULE_GUI_ZH.md) |
 | 输入设值、波形及预期输出 | [case6001 设值](handoff/T10_SFO_20260915_manual/data/case6001_settings.json) · [文件哈希和来源](handoff/T10_SFO_20260915_manual/data/data_manifest.json) |
 | MATLAB 来源 | [参考入口](matlab/README_ZH.md) |
@@ -23,3 +23,7 @@
 输入/控制为 125 MHz，重采样和当前输出为 150 MHz，FFT 服务使用 500 MHz。时钟源、锁定顺序、DDR/DMA 和平台 CDC 由用户的 NI 工程负责；Wrapper 仅拼接和拆分位段。前端 288 位记录尚需适配，上层还须保留并回放完整原始波形。
 
 `handoff/T10_SFO_20260915_manual`、`archive` 和旧 `vivado/T10_SFO*` 保留历史身份。历史包中的旧名字用于追溯；当前操作以本页及根 XPR 为准。已有 case6001 行为证据不等于实现时序、持续吞吐、NI 全目标编译或板测通过。本轮不生成 CLIP XML、配置包或 LabVIEW 工程；原生验证进度见验证状态页。
+
+## FN01 原生检查结果
+
+2026-09-15：根 XPR 与私有副本均原生打开，283 个实际成员匹配；74 个核心 RTL、2 个测试文件、3 个 XPM 与 59 个 IP 支持文件组成的 138 项编译输入全部符合冻结哈希。行为源编译、展开快照和独立 Wrapper 的 xvhdl 语法检查通过。原生执行约 16 分 47 秒，未推进仿真时间。43 条警告已分类，详情见 [独立验收](reports/functional_review/FN01/ASTRA_REVIEW_ZH.md)。

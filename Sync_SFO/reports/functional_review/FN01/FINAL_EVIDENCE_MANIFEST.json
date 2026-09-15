@@ -1,0 +1,197 @@
+{
+  "created_at": "2026-09-15T18:43:04.661158+02:00",
+  "job": "SFO-FN01",
+  "scope": "Final native evidence and current delivery entry points; excludes itself, runtime workspaces and report clock. Original frozen input manifest remains unchanged.",
+  "files": [
+    {
+      "path": "reports/functional_review/FN01/astra_compile_input_audit.json",
+      "bytes": 51653,
+      "sha256": "11D58605E9B89C029641DC64681C80FC44AC80513BDF1B3A5F9AA9E8A7A8DFE0"
+    },
+    {
+      "path": "reports/functional_review/FN01/ASTRA_NATIVE_REVIEW.json",
+      "bytes": 15732,
+      "sha256": "39F303617B9819209CE8AB7605B52F2A13079434FA1D1EA38E861121DF79EF2B"
+    },
+    {
+      "path": "reports/functional_review/FN01/ASTRA_NATIVE_REVIEW_PRELIMINARY.json",
+      "bytes": 14351,
+      "sha256": "2F9A1239ED5DE89A907C4D929C66C7260E302E5D6023C21750AC931693C20224"
+    },
+    {
+      "path": "reports/functional_review/FN01/astra_private_xpr_structure_diff.json",
+      "bytes": 25779,
+      "sha256": "78F450F9EDD0D5B6A8205EEA19C639CD414E92E60184BE77EC395C91BB42BAFF"
+    },
+    {
+      "path": "reports/functional_review/FN01/ASTRA_PROCESS_CLOSURE_CHECK.json",
+      "bytes": 810,
+      "sha256": "AF61ECC137EBBB57517E13FBD2DE520F83D2A232DE80D888B2CB5EFD2102E1D8"
+    },
+    {
+      "path": "reports/functional_review/FN01/ASTRA_REVIEW_ZH.md",
+      "bytes": 5942,
+      "sha256": "E13CE5C147A4860E4F2246479C6C87A3A48B40E8CD5C8CEDFFC37FFFEE20BD57"
+    },
+    {
+      "path": "reports/functional_review/FN01/canonical_actual_files.tsv",
+      "bytes": 32062,
+      "sha256": "602EDEC17980F47C6B4B5742638DDC56D397759C82E59BD5C5E81ABA2E007CBE"
+    },
+    {
+      "path": "reports/functional_review/FN01/canonical_ip_status.tsv",
+      "bytes": 4385,
+      "sha256": "C47FE4103084FA89CA419FC37929BD684CEC7B43E6FA2572B184C6F317802906"
+    },
+    {
+      "path": "reports/functional_review/FN01/compile_order_after.txt",
+      "bytes": 13032,
+      "sha256": "A51593FE584D85C7DE1B71F452D9F235418242828DB1F096511D4959902F190C"
+    },
+    {
+      "path": "reports/functional_review/FN01/compile_order_before.txt",
+      "bytes": 13032,
+      "sha256": "A51593FE584D85C7DE1B71F452D9F235418242828DB1F096511D4959902F190C"
+    },
+    {
+      "path": "reports/functional_review/FN01/FN01_EXECUTION_SUMMARY.json",
+      "bytes": 4131,
+      "sha256": "AA77274C12547B7034F17EC9C25AB3E882332C2D23CDAB3193ECCC3A3DD64762"
+    },
+    {
+      "path": "reports/functional_review/FN01/FN01_PROCESS_CLOSURE_EVIDENCE.json",
+      "bytes": 10961,
+      "sha256": "195B3D81345267B38FD7560C1DB7AF66038D6DF418DFB24CC499E80BA47169BB"
+    },
+    {
+      "path": "reports/functional_review/FN01/frozen_input_manifest.csv",
+      "bytes": 68424,
+      "sha256": "107B78D5BF50433BA297FA3CB743EC560FE4581D0EC46A364F7883986C73C72C"
+    },
+    {
+      "path": "reports/functional_review/FN01/input_source_private_hash_check.csv",
+      "bytes": 160132,
+      "sha256": "35405C2B3438EEAB8A25EDCE87DB5606D43E22B6EBF35D948168F0E1BE6FCA3C"
+    },
+    {
+      "path": "reports/functional_review/FN01/native.jou",
+      "bytes": 839,
+      "sha256": "6AE647D7DCF41F91D6FD20920C1752BEA78EEC03EC15718DFFAB48AFC5BBF02D"
+    },
+    {
+      "path": "reports/functional_review/FN01/native.log",
+      "bytes": 376721,
+      "sha256": "1A36BFB0D1DA0CCBC229B39CBB7EB708EBB54AD82BDAA71DE715F2707B9BF596"
+    },
+    {
+      "path": "reports/functional_review/FN01/preparation.json",
+      "bytes": 277,
+      "sha256": "9BAD99B3FEB4A980DBD28CA995E63A291295DFCCEC1F7F24BC5ED731A11BDAD4"
+    },
+    {
+      "path": "reports/functional_review/FN01/private_actual_files.tsv",
+      "bytes": 37156,
+      "sha256": "D744FAFFB0CD197560BD4D48824A4946A4A2FA5D550B2394A62DFC5BEB319F2E"
+    },
+    {
+      "path": "reports/functional_review/FN01/private_ip_status.tsv",
+      "bytes": 4997,
+      "sha256": "AF1FF1D99BEB11BC9A9A25223B421BF3E388CB15A76E1D6CD59566DC4B86E685"
+    },
+    {
+      "path": "reports/functional_review/FN01/private_xpr_post_native_diff.txt",
+      "bytes": 144443,
+      "sha256": "5E550A9BCB5AA031B259FD97485E30255DE8A0B8A6D86B5EEB6AB0986F1557F0"
+    },
+    {
+      "path": "reports/functional_review/FN01/published_native_logs/compile.bat",
+      "bytes": 1137,
+      "sha256": "C6D9B9D40E0A8D26E908637D2429B0C1D3D9399CBB74B3A1967ECDDCDA2CBA3B"
+    },
+    {
+      "path": "reports/functional_review/FN01/published_native_logs/elaborate.bat",
+      "bytes": 2190,
+      "sha256": "A9DA7AC8082B0C4B508B8C984CB3460130E311A69A57A92F0BEE776526E848DA"
+    },
+    {
+      "path": "reports/functional_review/FN01/published_native_logs/elaborate.log",
+      "bytes": 218834,
+      "sha256": "27C722E888B929CE112CCB50F1169E3E00C2A6471083F3BF329D5E787B851C31"
+    },
+    {
+      "path": "reports/functional_review/FN01/published_native_logs/sync_sfo_full_frame_tb_vhdl.prj",
+      "bytes": 2661,
+      "sha256": "8513BC01B00CE10CD49D8913DB41183CC83ECB25C4D9B9FA16C19DE2F96ACF29"
+    },
+    {
+      "path": "reports/functional_review/FN01/published_native_logs/sync_sfo_full_frame_tb_vlog.prj",
+      "bytes": 5400,
+      "sha256": "14C867C1DD0212285553CE64ED76CBA05C8E444A83AA45E3C921C9CFF642F333"
+    },
+    {
+      "path": "reports/functional_review/FN01/published_native_logs/wrapper_xvhdl.log",
+      "bytes": 201,
+      "sha256": "F12361A41D70A76A60CD46DAAF5A7E4299D8013A40DF2954D0DE9299B9B5F070"
+    },
+    {
+      "path": "reports/functional_review/FN01/published_native_logs/xvhdl.log",
+      "bytes": 7804,
+      "sha256": "FE5A4ED8C4C6FACC6D35B662231A580127B3CE4B97F29A8560BACAE84F7CB080"
+    },
+    {
+      "path": "reports/functional_review/FN01/published_native_logs/xvlog.log",
+      "bytes": 20739,
+      "sha256": "A3B10837ACE56AC57181D0B76A595109103AF1F66EE6FB70D48F4350E852F4FC"
+    },
+    {
+      "path": "reports/functional_review/FN01/RESOURCE_RETURN_REQUEST_FN01.json",
+      "bytes": 1168,
+      "sha256": "B42E754AF594D39525B7AED3093F10F2BE08BAD8BDFFB05D90A537EEC6B608ED"
+    },
+    {
+      "path": "reports/functional_review/FN01/stage_status.tsv",
+      "bytes": 496,
+      "sha256": "F5618971201AF834E58F47CADA719CD2B571189BFA46F98A56FB5F2F359967C0"
+    },
+    {
+      "path": "README_ZH.md",
+      "bytes": 3093,
+      "sha256": "D3565808B2E06063EBB35792AECCADC4F710C0876ED7211B799534691EB0D492"
+    },
+    {
+      "path": "docs/SFO_SYNC_MODULE_GUI_ZH.md",
+      "bytes": 11040,
+      "sha256": "2CB11AEFF1CFB8C45F978BE842A475E31EF25CA2C3BCFCE8EAB1C314A3D1B44E"
+    },
+    {
+      "path": "Sync_SFO.xpr",
+      "bytes": 69828,
+      "sha256": "647E6B30D931C22D4BE8D9EB50456DD95ABABF5167D9208CCD0760B481357189"
+    },
+    {
+      "path": "wrapper/sync_sfo_manual_wrapper.vhd",
+      "bytes": 11648,
+      "sha256": "137C3DDEB38BEDEF61DF80D75EDE42F03A2C027CC95E4474BED787F4C2B20CA9"
+    },
+    {
+      "path": "wrapper/interface_contract_FN01.json",
+      "bytes": 58960,
+      "sha256": "76DE17554CD2930EB12B7BE08F0E2C260E552D6981938C2BB5BD2502A7FB73D5"
+    },
+    {
+      "path": "docs/functional_review_20260915/REVIEW_STATUS_ZH.md",
+      "bytes": 2555,
+      "sha256": "AEE8500B8C3A1CB63C718707BFE3FE4DD6CF0817120023CA1DA98D2CF980048C"
+    },
+    {
+      "path": "docs/functional_review_20260915/current_input_manifest.csv",
+      "bytes": 68424,
+      "sha256": "107B78D5BF50433BA297FA3CB743EC560FE4581D0EC46A364F7883986C73C72C"
+    },
+    {
+      "path": "docs/functional_review_20260915/RESOURCE_REQUEST_FN01.json",
+      "bytes": 3732,
+      "sha256": "1C035455EB5C4858D3451988B2159E68F2C588D0FAF69714A2D9E7D1A9243EEA"
+    }
+  ]
+}

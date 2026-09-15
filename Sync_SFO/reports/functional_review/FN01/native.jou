@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Sep 15 17:54:58 2026
+# Process ID: 25560
+# Current directory: D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01
+# Command line: vivado.exe -mode batch -source D:\008_MA_Dev\Sync_SFO\docs\functional_review_20260915\job_FN01\native_open_compile_elaborate.tcl -log native.log -journal native.jou
+# Log file: D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/native.log
+# Journal file: D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01\native.jou
+#-----------------------------------------------------------
+source {D:\008_MA_Dev\Sync_SFO\docs\functional_review_20260915\job_FN01\native_open_compile_elaborate.tcl}

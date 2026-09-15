@@ -1,0 +1,39 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ip/config/t07_g3_down47/sim/t07_g3_down47.vhd" \
+"../../../../ip/config/t07_g3_down15/sim/t07_g3_down15.vhd" \
+"../../../../ip/config/farrow_mul_t16/sim/farrow_mul_t16.vhd" \
+"../../../../ip/config/farrow_mul_h16/sim/farrow_mul_h16.vhd" \
+"../../../../ip/config/farrow_add_32/sim/farrow_add_32.vhd" \
+"../../../../ip/config/farrow_add_18/sim/farrow_add_18.vhd" \
+"../../../../ip/config/farrow_add_28/sim/farrow_add_28.vhd" \
+"../../../../ip/config/t07_g3_up15/sim/t07_g3_up15.vhd" \
+"../../../../ip/config/t07_g3_up47/sim/t07_g3_up47.vhd" \
+"../../../../ip/config/t03_xfft_16384_aux/sim/t03_xfft_16384_aux.vhd" \
+"../../../../ip/config/t03_xfft_2048_main/sim/t03_xfft_2048_main.vhd" \
+"../../../../ip/config/t06_rt_mult_u48_u20/sim/t06_rt_mult_u48_u20.vhd" \
+"../../../../ip/config/t06_rt_mult_s41_s38/sim/t06_rt_mult_s41_s38.vhd" \
+"../../../../ip/config/t06_rt_mult_s41_u38/sim/t06_rt_mult_s41_u38.vhd" \
+"../../../../ip/config/t06_rt_mult_u30_s42/sim/t06_rt_mult_u30_s42.vhd" \
+"../../../../ip/config/t06_rt_mult_u30_u43/sim/t06_rt_mult_u30_u43.vhd" \
+"../../../../ip/config/t06_rt_mult_s41_s41/sim/t06_rt_mult_s41_s41.vhd" \
+"../../../../ip/config/t06_rt_mult_u30_u48/sim/t06_rt_mult_u30_u48.vhd" \
+"../../../../ip/config/t06_fs_mult_s29_s48/sim/t06_fs_mult_s29_s48.vhd" \
+"../../../../ip/config/t06_fs_mult_s29_s11/sim/t06_fs_mult_s29_s11.vhd" \
+"../../../../ip/config/t06_fs_mult_u18_s48/sim/t06_fs_mult_u18_s48.vhd" \
+"../../../../ip/config/t06_fs_mult_u18_s11/sim/t06_fs_mult_u18_s11.vhd" \
+"../../../../ip/config/t04_div_u63_u47/sim/t04_div_u63_u47.vhd" \
+"../../../../ip/config/t06_wp_mult_u64_u33/sim/t06_wp_mult_u64_u33.vhd" \
+"../../../../ip/config/t06_pair_max_tracker_2lane_cross/sim/t06_pair_max_tracker_2lane_cross.vhd" \
+"../../../../ip/config/t06_observation_engine_weight_product/sim/t06_observation_engine_weight_product.vhd" \
+"../../../../ip/config/t06_observation_engine_square/sim/t06_observation_engine_square.vhd" \
+"../../../../ip/config/t06_cordic_translate48_parallel/sim/t06_cordic_translate48_parallel.vhd" \
+"../../../../ip/config/t04_cmpy_17x16/sim/t04_cmpy_17x16.vhd" \
+"../../../../ip/config/t06_sg_div_u53_u37/sim/t06_sg_div_u53_u37.vhd" \
+"../../../../ip/config/t06_sg_mult_u37_u16/sim/t06_sg_mult_u37_u16.vhd" \
+"../../../../ip/config/t05_cmpy_rotate_18x18/sim/t05_cmpy_rotate_18x18.vhd" \
+"../../../../ip/config/t06_dds_phase_s32_sincos18/sim/t06_dds_phase_s32_sincos18.vhd" \
+"../../../../ip/config/t05_mult_cfo_s19_const40_full59/sim/t05_mult_cfo_s19_const40_full59.vhd" \
+
+# Do not sort compile order
+nosort

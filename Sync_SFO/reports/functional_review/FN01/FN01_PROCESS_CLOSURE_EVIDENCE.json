@@ -1,0 +1,238 @@
+{
+  "schema": "SYNC_SFO_FN01_PROCESS_CLOSURE_EVIDENCE_V1",
+  "job_id": "SFO-FN01",
+  "assembled_from_existing_records": true,
+  "native_stage_relaunched_for_archive": false,
+  "wrapper_stage_relaunched_for_archive": false,
+  "scope": "Process identity, monitoring observations, closure checks, and final evidence hashes for the already completed FN01 run.",
+  "authoritative_sources": [
+    {
+      "path": "C:/Users/lunan/.codex/sessions/2026/09/15/rollout-2026-09-15T16-57-37-01a0a592-d143-7770-a6e6-fa45251be664.jsonl",
+      "use": "Task tool history containing launcher PID, stage output, exits, and final target-PID check; relevant records ordinal 230, 581, 614, 682, 740."
+    },
+    {
+      "path": "D:/007 Dev/OTA_RTL_0829/reports/operations/single_task_control.json",
+      "use": "Manager-recorded FN01 native process snapshot and ownership state."
+    },
+    {
+      "path": "D:/007 Dev/OTA_RTL_0829/reports/operations/manager_watchdog/PATROL_20260915T160754Z.json",
+      "use": "Manager patrol snapshot at native elaboration, including PID chain, free memory, and parallelism."
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/FN01_EXECUTION_SUMMARY.json",
+      "use": "Completed-run summary and sampled high-water observations."
+    }
+  ],
+  "launches": {
+    "native": {
+      "start_local": "2026-09-15T17:54:56.4412257+02:00",
+      "launcher": {
+        "role": "PowerShell execution wrapper",
+        "pid": 24692,
+        "record": "Task session ordinal 230: FN01_WRAPPER_PID=24692"
+      },
+      "root": {
+        "image": "vivado.exe",
+        "pid": 25560,
+        "parent_pid": 19612,
+        "command_role": "Vivado 2021.1 batch native_open_compile_elaborate.tcl",
+        "record": "Manager process snapshot and native.log Process ID"
+      },
+      "observed_descendants": [
+        {
+          "image": "cmd.exe",
+          "pid": 50348,
+          "parent_pid": 25560,
+          "role": "Vivado-launched command wrapper"
+        },
+        {
+          "image": "xelab.exe",
+          "pid": 30456,
+          "parent_pid": 50348,
+          "role": "behavioral elaboration child"
+        }
+      ],
+      "end_local": "2026-09-15T18:11:43+02:00",
+      "exit_code": 0
+    },
+    "wrapper_xvhdl": {
+      "start_local": "2026-09-15T18:12:48.5855225+02:00",
+      "launcher": {
+        "role": "PowerShell execution wrapper",
+        "pid": 24836,
+        "record": "Task session ordinal 614: WRAPPER_WRAPPER_PID=24836"
+      },
+      "child_pid": null,
+      "child_pid_note": "The short-lived xvhdl.exe PID was not recorded; no PID is inferred from the successful exit.",
+      "end_local": "2026-09-15T18:12:50.4089609+02:00",
+      "exit_code": 0
+    }
+  },
+  "protected_user_gui": {
+    "vivado_pid": 14300,
+    "parent_pid": 11240,
+    "role": "pre-existing editor-only user GUI",
+    "descendants": [
+      {
+        "image": "java.exe",
+        "pid": 18688,
+        "parent_pid": 14300
+      },
+      {
+        "image": "conhost.exe",
+        "pid": 29568,
+        "parent_pid": 18688
+      }
+    ],
+    "modified": false
+  },
+  "monitoring_samples": [
+    {
+      "time": "2026-09-15T15:47:12.4034193Z",
+      "kind": "fresh_preflight",
+      "free_gib": 15.607,
+      "total_gib": 31.421,
+      "other_compute_groups": 0,
+      "protected_gui_pids": [14300, 18688, 29568]
+    },
+    {
+      "time": "2026-09-15T18:00:38.7155683+02:00",
+      "kind": "task_session_snapshot",
+      "free_gib": 14.889,
+      "observed_processes": [
+        {
+          "image": "vivado.exe",
+          "pid": 25560,
+          "working_set_bytes": 455536640
+        },
+        {
+          "image": "vivado.exe",
+          "pid": 14300,
+          "working_set_bytes": 514486272,
+          "protected": true
+        }
+      ]
+    },
+    {
+      "time": "2026-09-15T16:10:09.6116616Z",
+      "kind": "manager_patrol_snapshot",
+      "free_gib": 10.906,
+      "native_root_pid": 25560,
+      "xelab_pid": 30456,
+      "phase": "ELABORATE"
+    },
+    {
+      "time": "2026-09-15T18:11:34+02:00",
+      "kind": "sampled_high_water",
+      "free_gib": 10.079,
+      "xelab_working_set_bytes": 5827182592,
+      "source": "FN01_EXECUTION_SUMMARY.json",
+      "precision_note": "Sampled observation, not an OS-integrated peak counter."
+    },
+    {
+      "time": "2026-09-15T18:26:01.8255837+02:00",
+      "kind": "post-closure_target_pid_check",
+      "free_gib": 15.567,
+      "total_gib": 31.421,
+      "target_pid_state": {
+        "24692": "NOT_PRESENT",
+        "25560": "NOT_PRESENT",
+        "30456": "NOT_PRESENT",
+        "24836": "NOT_PRESENT",
+        "14300": "PRESENT_PROTECTED_GUI",
+        "18688": "PRESENT_PROTECTED_GUI_DESCENDANT",
+        "29568": "PRESENT_PROTECTED_GUI_DESCENDANT"
+      }
+    }
+  ],
+  "resource_observations": {
+    "observed_max_fn01_vivado_working_set_bytes": 502218752,
+    "observed_max_xelab_working_set_bytes": 5827182592,
+    "observed_min_free_memory_gib": 10.079,
+    "peak_note": "All peak values are sampled high-water observations; no OS-integrated peak counter was available.",
+    "parallelism": {
+      "general_maxThreads": 8,
+      "synth_maxThreads": 8,
+      "xelab": 16
+    }
+  },
+  "closure_checks": {
+    "native_root_exit_code": 0,
+    "wrapper_xvhdl_exit_code": 0,
+    "full_native_tree_ended": true,
+    "wrapper_tree_ended": true,
+    "native_error_matches": 0,
+    "native_warning_count": 43,
+    "simulation_runtime_started": false,
+    "synthesis_started": false,
+    "implementation_started": false,
+    "matlab_started": false,
+    "clip_xml_generated": false,
+    "final_native_tool_filter": "No FN01 vivado/xelab/xvlog/xvhdl/xsim/xsimk/MATLAB process remained; only protected user GUI vivado PID 14300 was present."
+  },
+  "input_and_project_corrections": {
+    "source_manifest_files": 539,
+    "source_mismatches": 0,
+    "private_post_native_mismatches": 1,
+    "private_mismatch": {
+      "relative_path": "Sync_SFO.xpr",
+      "source_sha256": "647E6B30D931C22D4BE8D9EB50456DD95ABABF5167D9208CCD0760B481357189",
+      "private_sha256": "B2764CB569AC2F4AF11868ECC0D4D450BE61A1B0E0822DA6F9D51EC44BC2104C",
+      "source_bytes": 69828,
+      "private_bytes": 70245,
+      "classification": "Vivado private-project metadata after open; canonical XPR unchanged"
+    },
+    "non_xpr_private_mismatches": 0,
+    "canonical_private_normalized_member_differences": 0,
+    "canonical_members": 283,
+    "private_members": 283,
+    "canonical_ip_count": 34,
+    "private_ip_count": 34,
+    "ip_status_correction": {
+      "canonical_ip_status_rows": 34,
+      "canonical_locked_raw_value_1_rows": 34,
+      "private_ip_status_rows": 34,
+      "private_locked_raw_value_0_rows": 34,
+      "original_summary_field_canonical_locked_ip_count": 0,
+      "correction": "The original summary field is not an accurate raw locked-count representation. IP Flow 19-2162 states the canonical entries are read-only because they belong to the original project; private compilation had locked=0."
+    },
+    "private_xpr_diff_classification": {
+      "project_path_changes": 1,
+      "wtxsim_launch_sim_changes": 1,
+      "autoincremental_dir_changed_entries": 20,
+      "strat_handle_desc_removed_entries": 18,
+      "total_classified_metadata_changes": 40,
+      "filesets_and_source_selection_changed": false,
+      "evidence": "private_xpr_post_native_diff.txt"
+    }
+  },
+  "evidence_artifacts": [
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/FN01_EXECUTION_SUMMARY.json", "bytes": 4131, "sha256": "AA77274C12547B7034F17EC9C25AB3E882332C2D23CDAB3193ECCC3A3DD64762"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/stage_status.tsv", "bytes": 496, "sha256": "F5618971201AF834E58F47CADA719CD2B571189BFA46F98A56FB5F2F359967C0"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/native.log", "bytes": 376721, "sha256": "1A36BFB0D1DA0CCBC229B39CBB7EB708EBB54AD82BDAA71DE715F2707B9BF596"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/native.jou", "bytes": 839, "sha256": "6AE647D7DCF41F91D6FD20920C1752BEA78EEC03EC15718DFFAB48AFC5BBF02D"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/compile_order_before.txt", "bytes": 13032, "sha256": "A51593FE584D85C7DE1B71F452D9F235418242828DB1F096511D4959902F190C"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/compile_order_after.txt", "bytes": 13032, "sha256": "A51593FE584D85C7DE1B71F452D9F235418242828DB1F096511D4959902F190C"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/input_source_private_hash_check.csv", "bytes": 160132, "sha256": "35405C2B3438EEAB8A25EDCE87DB5606D43E22B6EBF35D948168F0E1BE6FCA3C"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/canonical_actual_files.tsv", "bytes": 32062, "sha256": "602EDEC17980F47C6B4B5742638DDC56D397759C82E59BD5C5E81ABA2E007CBE"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/private_actual_files.tsv", "bytes": 37156, "sha256": "D744FAFFB0CD197560BD4D48824A4946A4A2FA5D550B2394A62DFC5BEB319F2E"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/canonical_ip_status.tsv", "bytes": 4385, "sha256": "C47FE4103084FA89CA419FC37929BD684CEC7B43E6FA2572B184C6F317802906"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/private_ip_status.tsv", "bytes": 4997, "sha256": "AF1FF1D99BEB11BC9A9A25223B421BF3E388CB15A76E1D6CD59566DC4B86E685"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/private_xpr_post_native_diff.txt", "bytes": 144443, "sha256": "5E550A9BCB5AA031B259FD97485E30255DE8A0B8A6D86B5EEB6AB0986F1557F0"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/work/FN01/project/wrapper/sync_sfo_manual_wrapper.vhd", "bytes": 11648, "sha256": "137C3DDEB38BEDEF61DF80D75EDE42F03A2C027CC95E4474BED787F4C2B20CA9"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/work/FN01/wrapper_syntax/xvhdl.log", "bytes": 201, "sha256": "F12361A41D70A76A60CD46DAAF5A7E4299D8013A40DF2954D0DE9299B9B5F070"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/work/FN01/wrapper_syntax/xvhdl.pb", "bytes": 335, "sha256": "9792A96F358ED4E4B09E21143442B6E76B613C96664A6423431771078CBE11E3"},
+    {"path": "D:/008_MA_Dev/Sync_SFO/reports/functional_review/FN01/preparation.json", "bytes": 277, "sha256": "9BAD99B3FEB4A980DBD28CA995E63A291295DFCCEC1F7F24BC5ED731A11BDAD4"}
+  ],
+  "canonical_xpr_integrity": {
+    "path": "D:/008_MA_Dev/Sync_SFO/Sync_SFO.xpr",
+    "bytes": 69828,
+    "sha256": "647E6B30D931C22D4BE8D9EB50456DD95ABABF5167D9208CCD0760B481357189",
+    "git_diff_for_file_exit_code": 0
+  },
+  "handoff": {
+    "reviewer": "Astra 01a0a53b-5d75-7e92-9b0b-184308ae662a",
+    "slot_action": "Requested Astra/manager to return the shared slot; this Luna did not modify resource_slot.json.",
+    "qualification_boundary": "Compile/elaborate and independent Wrapper syntax only; no functional, timing, throughput, MATLAB, board, synthesis, or implementation PASS."
+  }
+}

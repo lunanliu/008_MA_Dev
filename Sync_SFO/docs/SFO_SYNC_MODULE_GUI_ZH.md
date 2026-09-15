@@ -40,7 +40,7 @@ FFT 服务另外使用 125/500 MHz 变宽异步 FIFO。500 MHz 复位从已寄�
 
 ## 3. 核心与 Wrapper 端口
 
-完整逐端口信息见 [ports.csv](../wrapper/ports.csv) 和 [interface_contract.json](../wrapper/interface_contract.json)：名称、方向、宽度、符号/单位、默认值、时钟域、valid/ready 和背压条件。核心 37 端口与 Wrapper 102 端口的拼接/拆分一致，Wrapper 无额外寄存器、FIFO、CDC 或通用参数。其 component 绑定固定 `sync_sfo_top` 默认输出 150 MHz。
+完整逐端口信息见 [ports.csv](../wrapper/ports.csv) 和 [interface_contract.json](../wrapper/interface_contract_FN01.json)：名称、方向、宽度、符号/单位、默认值、时钟域、valid/ready 和背压条件。核心 37 端口与 Wrapper 102 端口的拼接/拆分一致，Wrapper 无额外寄存器、FIFO、CDC 或通用参数。其 component 绑定固定 `sync_sfo_top` 默认输出 150 MHz。
 
 | 核心记录（高位 → 低位） | 格式 |
 |---|---|
