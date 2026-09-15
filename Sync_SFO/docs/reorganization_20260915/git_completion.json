@@ -1,0 +1,31 @@
+{
+  "root": {
+    "path": "D:\\008_MA_Dev",
+    "commit": "b89548a17a79f469d07be12d9c270cb4663d969a",
+    "uncommitted_tracked_paths": [
+      ".gitignore",
+      "AGENTS.md",
+      "README_ZH.md",
+      "Sync_SFO/vivado/T10_SFO/T10_SFO.xpr"
+    ],
+    "staged_remaining": [],
+    "remotes": ""
+  },
+  "frontend": {
+    "path": "D:\\008_MA_Dev\\Sync_Frontend",
+    "commit": "0a4643381ddbebf84023e9c629986abbb6d5b6fb",
+    "uncommitted_tracked_paths": [],
+    "staged_remaining": [],
+    "remotes": ""
+  },
+  "i16": {
+    "path": "D:\\008_MA_Dev\\Sync_Frontend\\examples\\I16_AddSub_CLIP",
+    "commit": "2e68de61ba6be85748e398d360579c998db466d2",
+    "uncommitted_tracked_paths": [
+      "README_ZH.md",
+      "vivado/I16_AddSub/I16_AddSub.xpr"
+    ],
+    "staged_remaining": [],
+    "remotes": ""
+  }
+}
