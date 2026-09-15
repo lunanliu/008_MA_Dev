@@ -1,0 +1,2940 @@
+{
+  "status": "PASS_STATIC_HANDOFF",
+  "created_utc": "2026-09-15T07:39:46.206737+00:00",
+  "scope": "Static source, interface, frozen data and current entry documentation only",
+  "core_top": "t10_two_pass_system",
+  "part": "xcvu11p-flgb2104-2-e",
+  "output_clock_MHz": 150,
+  "clocks_MHz": [
+    125,
+    150,
+    500
+  ],
+  "core_ports": 37,
+  "wrapper_ports": 102,
+  "project_files": 149,
+  "xpr_declared_dependencies": [
+    "constraints/t10_root_clocks.xdc",
+    "ip/config/farrow_add_18/farrow_add_18.xci",
+    "ip/config/farrow_add_28/farrow_add_28.xci",
+    "ip/config/farrow_add_32/farrow_add_32.xci",
+    "ip/config/farrow_mul_h16/farrow_mul_h16.xci",
+    "ip/config/farrow_mul_t16/farrow_mul_t16.xci",
+    "ip/config/t03_xfft_16384_aux/t03_xfft_16384_aux.xci",
+    "ip/config/t03_xfft_2048_main/t03_xfft_2048_main.xci",
+    "ip/config/t04_cmpy_17x16/t04_cmpy_17x16.xci",
+    "ip/config/t04_div_u63_u47/t04_div_u63_u47.xci",
+    "ip/config/t05_cmpy_rotate_18x18/t05_cmpy_rotate_18x18.xci",
+    "ip/config/t05_mult_cfo_s19_const40_full59/t05_mult_cfo_s19_const40_full59.xci",
+    "ip/config/t06_cordic_translate48_parallel/t06_cordic_translate48_parallel.xci",
+    "ip/config/t06_dds_phase_s32_sincos18/t06_dds_phase_s32_sincos18.xci",
+    "ip/config/t06_fs_mult_s29_s11/t06_fs_mult_s29_s11.xci",
+    "ip/config/t06_fs_mult_s29_s48/t06_fs_mult_s29_s48.xci",
+    "ip/config/t06_fs_mult_u18_s11/t06_fs_mult_u18_s11.xci",
+    "ip/config/t06_fs_mult_u18_s48/t06_fs_mult_u18_s48.xci",
+    "ip/config/t06_observation_engine_square/t06_observation_engine_square.xci",
+    "ip/config/t06_observation_engine_weight_product/t06_observation_engine_weight_product.xci",
+    "ip/config/t06_pair_max_tracker_2lane_cross/t06_pair_max_tracker_2lane_cross.xci",
+    "ip/config/t06_rt_mult_s41_s38/t06_rt_mult_s41_s38.xci",
+    "ip/config/t06_rt_mult_s41_s41/t06_rt_mult_s41_s41.xci",
+    "ip/config/t06_rt_mult_s41_u38/t06_rt_mult_s41_u38.xci",
+    "ip/config/t06_rt_mult_u30_s42/t06_rt_mult_u30_s42.xci",
+    "ip/config/t06_rt_mult_u30_u43/t06_rt_mult_u30_u43.xci",
+    "ip/config/t06_rt_mult_u30_u48/t06_rt_mult_u30_u48.xci",
+    "ip/config/t06_rt_mult_u48_u20/t06_rt_mult_u48_u20.xci",
+    "ip/config/t06_sg_div_u53_u37/t06_sg_div_u53_u37.xci",
+    "ip/config/t06_sg_mult_u37_u16/t06_sg_mult_u37_u16.xci",
+    "ip/config/t06_wp_mult_u64_u33/t06_wp_mult_u64_u33.xci",
+    "ip/config/t07_g3_down15/t07_g3_down15.xci",
+    "ip/config/t07_g3_down47/t07_g3_down47.xci",
+    "ip/config/t07_g3_up15/t07_g3_up15.xci",
+    "ip/config/t07_g3_up47/t07_g3_up47.xci",
+    "rtl/common/bistatic_stream_pkg.sv",
+    "rtl/common/t03_main_fft_service.sv",
+    "rtl/common/t03_uram_frame_bank.sv",
+    "rtl/common/t05_local_capture_buffer.sv",
+    "rtl/common/t05_phase_increment_controller.sv",
+    "rtl/common/t05_vendor_multiplier_adapters.sv",
+    "rtl/t06/t06_cfo_derotate_s16_4lane.sv",
+    "rtl/t06/t06_dds_phase_4lane.sv",
+    "rtl/t06/t06_derotate_wide_4lane.sv",
+    "rtl/t06/t06_fft_pair_extractor.sv",
+    "rtl/t06/t06_fft_pair_extractor_fifo.sv",
+    "rtl/t06/t06_fft_pair_extractor_memory.sv",
+    "rtl/t06/t06_fft_swls_backend.sv",
+    "rtl/t06/t06_five_sum_accumulator.sv",
+    "rtl/t06/t06_frame_context_join.sv",
+    "rtl/t06/t06_initial_sfo_service.sv",
+    "rtl/t06/t06_initial_sfo_standalone.sv",
+    "rtl/t06/t06_main_fft_exclusive_owner.sv",
+    "rtl/t06/t06_observation_engine.sv",
+    "rtl/t06/t06_observation_engine_2lane.sv",
+    "rtl/t06/t06_observation_engine_fifo.sv",
+    "rtl/t06/t06_observation_store.sv",
+    "rtl/t06/t06_observation_store_bank.sv",
+    "rtl/t06/t06_pair_max_tracker_2lane.sv",
+    "rtl/t06/t06_pair_phasor_bfp.sv",
+    "rtl/t06/t06_ps3_ps10_job_sequencer.sv",
+    "rtl/t06/t06_raw_reader_4lane.sv",
+    "rtl/t06/t06_raw_reader_local_capture.sv",
+    "rtl/t06/t06_raw_to_fft_frontend.sv",
+    "rtl/t06/t06_regression_tail.sv",
+    "rtl/t06/t06_shared_gain_s16_4lane.sv",
+    "rtl/t06/t06_shared_gain_s16_lane.sv",
+    "rtl/t06/t06_swls_weighted_backend.sv",
+    "rtl/t06/t06_unsigned_divider_service.sv",
+    "rtl/t06/t06_unsigned_divider_service_fifo.sv",
+    "rtl/t06/t06_weight_pack.sv",
+    "rtl/t07/farrow_microbench.sv",
+    "rtl/t07/g3_down15_top.sv",
+    "rtl/t07/g3_down47_top.sv",
+    "rtl/t07/g3_farrow_guard_stream.sv",
+    "rtl/t07/g3_up15_top.sv",
+    "rtl/t07/g3_up47_top.sv",
+    "rtl/t07/t07_guard_frame_core.sv",
+    "rtl/t07/t07_nominal_pack4_rev02.sv",
+    "rtl/t07/t07_sync_fifo.sv",
+    "rtl/t08/t08_descriptor.sv",
+    "rtl/t08/t08_first_sfo_resampler.sv",
+    "rtl/t08/t08_frame_engine.sv",
+    "rtl/t09/t09_aux_ifft_service4.sv",
+    "rtl/t09/t09_div_u80_u49_rne.sv",
+    "rtl/t09/t09_dtp_frame_backend4.sv",
+    "rtl/t09/t09_fft_grid_stage4.sv",
+    "rtl/t09/t09_grid_packet_queue2.sv",
+    "rtl/t09/t09_main_fft_service4.sv",
+    "rtl/t09/t09_main_fft_window4.sv",
+    "rtl/t09/t09_nominal_window_reader4.sv",
+    "rtl/t09/t09_peak_interpolate.sv",
+    "rtl/t09/t09_peak_triplet4.sv",
+    "rtl/t09/t09_pilot_front2.sv",
+    "rtl/t09/t09_pilot_grid4.sv",
+    "rtl/t09/t09_pilot_rotate2.sv",
+    "rtl/t09/t09_pilot_select_phase4.sv",
+    "rtl/t09/t09_power4.sv",
+    "rtl/t09/t09_residual_sfo_pipeline4.sv",
+    "rtl/t09/t09_sfo_ls74.sv",
+    "rtl/t10/t10_cdc_fifo.sv",
+    "rtl/t10/t10_domain_reset.sv",
+    "rtl/t10/t10_output_buffer.sv",
+    "rtl/t10/t10_r1_bank.sv",
+    "rtl/t10/t10_raw_ring.sv",
+    "rtl/t10/t10_second_descriptor.sv",
+    "rtl/t10/t10_second_sfo_resampler.sv",
+    "rtl/t10/t10_two_pass_system.sv",
+    "rtl/t10/t10_two_pass_transport.sv",
+    "rtl/vendor/xpm/xpm_cdc.sv",
+    "rtl/vendor/xpm/xpm_fifo.sv",
+    "rtl/vendor/xpm/xpm_memory.sv",
+    "sim/data/delay.mem",
+    "sim/data/delta.mem",
+    "sim/data/r1.mem",
+    "sim/data/r2.mem",
+    "sim/data/raw.mem",
+    "sim/data/t09_pilot_phase.mem",
+    "sim/tb/t10_full023_fifo_observer.sv",
+    "sim/tb/t10_full023_tb.sv"
+  ],
+  "wrapper_sha256": "340E034DCAE4AA0F700C27396CD7EF2286FE71A9864BB9A2C02AE28EAAA7D7D9",
+  "xpr_sha256": "05E4DB9B97E5BB49A43F24ABFF28D372409F79ED08DBD515F6E703C2F62249A2",
+  "checks": [
+    {
+      "check": "Core source identity",
+      "status": "PASS"
+    },
+    {
+      "check": "SV header parsed",
+      "status": "PASS",
+      "ports": 37
+    },
+    {
+      "check": "Frame ID parameter is 32",
+      "status": "PASS"
+    },
+    {
+      "check": "Estimator struct ordering and 96-bit width",
+      "status": "PASS"
+    },
+    {
+      "check": "Independent SV-to-VHDL component signature",
+      "status": "PASS",
+      "ports": 37
+    },
+    {
+      "check": "Wrapper entity matches 102-port contract",
+      "status": "PASS",
+      "ports": 102
+    },
+    {
+      "check": "Core contract matches SV header",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen 150 MHz output profile; no Wrapper generic",
+      "status": "PASS"
+    },
+    {
+      "check": "Wrapper combinational only",
+      "status": "PASS"
+    },
+    {
+      "check": "All 37 component ports mapped",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width clk125",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction clk125 via clk125",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width clk150",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction clk150 via clk150",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width clk500",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction clk500 via clk500",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width reset_request",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction reset_request via reset_request",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width abort125",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction abort125 via abort125",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width s_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction s_valid via s_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width s_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction s_ready via s_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width s_data",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction s_data via s_iq3",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction s_data via s_iq2",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction s_data via s_iq1",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction s_data via s_iq0",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width s_frame_id",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction s_frame_id via s_frame_id",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width s_absolute_index",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction s_absolute_index via s_absolute_index",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width s_lane_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction s_lane_valid via s_lane_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width frame_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction frame_valid via frame_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width frame_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction frame_ready via frame_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width frame_record",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction frame_record via frame_id",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction frame_record via frame_generation",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction frame_record via frame_raw_first_word_hi",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction frame_record via frame_raw_first_word_lo",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction frame_record via frame_nominal_absolute",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction frame_record via frame_q0_q28",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width cfo_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction cfo_valid via cfo_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width cfo_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction cfo_ready via cfo_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width cfo_record",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction cfo_record via cfo_value_hz",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction cfo_record via cfo_quality",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction cfo_record via cfo_status",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction cfo_record via cfo_frame_id",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width fine_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction fine_valid via fine_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width fine_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction fine_ready via fine_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width fine_record",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction fine_record via fine_start_samples",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction fine_record via fine_quality",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction fine_record via fine_status",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction fine_record via fine_frame_id",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width m_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction m_valid via m_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width m_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction m_ready via m_ready",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width m_record",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width m_reset",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction m_reset via m_reset",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width m_fault",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction m_fault via m_fault",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width fault",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction fault via fault",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width error_code125",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction error_code125 via error_code125",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width error_code150",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction error_code150 via error_code150",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width diagnostic",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width residual_point_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction residual_point_valid via residual_point_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width residual_point_record",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width debug125",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width debug150",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width debug_e1_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction debug_e1_valid via debug_e1_valid",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width debug_e1_data",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width debug_e1_beat",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction debug_e1_beat via debug_e1_beat",
+      "status": "PASS"
+    },
+    {
+      "check": "Port width debug_e1_last",
+      "status": "PASS"
+    },
+    {
+      "check": "Port direction debug_e1_last via debug_e1_last",
+      "status": "PASS"
+    },
+    {
+      "check": "Input IQ lane order",
+      "status": "PASS"
+    },
+    {
+      "check": "Frame descriptor field ordering",
+      "status": "PASS"
+    },
+    {
+      "check": "CFO field ordering",
+      "status": "PASS"
+    },
+    {
+      "check": "Fine timing field ordering",
+      "status": "PASS"
+    },
+    {
+      "check": "Written port map matches contract",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment m_iq0",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment m_iq1",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment m_iq2",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment m_iq3",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment m_frame_id",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment m_generation",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment m_beat",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment m_last",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment diag_w00",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment diag_w01",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment diag_w02",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment diag_w03",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment diag_w04",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment diag_w05",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment diag_w06",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment diag_w07",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w00",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w01",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w02",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w03",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w04",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w05",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w06",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w07",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w08",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w09",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w10",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w11",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w12",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w13",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w14",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug125_w15",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w00",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w01",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w02",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w03",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w04",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w05",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w06",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w07",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w08",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w09",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w10",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w11",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w12",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w13",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w14",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug150_w15",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment point_w0",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment point_w1",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment point_w2",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment point_w3",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment point_w4",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug_e1_iq0",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug_e1_iq1",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug_e1_iq2",
+      "status": "PASS"
+    },
+    {
+      "check": "Output assignment debug_e1_iq3",
+      "status": "PASS"
+    },
+    {
+      "check": "Every entity output driven",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping m_iq0",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping m_iq1",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping m_iq2",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping m_iq3",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug_e1_iq0",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug_e1_iq1",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug_e1_iq2",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug_e1_iq3",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping diag_w00",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping diag_w01",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping diag_w02",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping diag_w03",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping diag_w04",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping diag_w05",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping diag_w06",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping diag_w07",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w00",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w01",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w02",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w03",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w04",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w05",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w06",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w07",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w08",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w09",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w10",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w11",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w12",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w13",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w14",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug125_w15",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w00",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w01",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w02",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w03",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w04",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w05",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w06",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w07",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w08",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w09",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w10",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w11",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w12",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w13",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w14",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping debug150_w15",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping point_w0",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping point_w1",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping point_w2",
+      "status": "PASS"
+    },
+    {
+      "check": "Low-word-first mapping point_w3",
+      "status": "PASS"
+    },
+    {
+      "check": "Packed output mapping m_frame_id",
+      "status": "PASS"
+    },
+    {
+      "check": "Packed output mapping m_generation",
+      "status": "PASS"
+    },
+    {
+      "check": "Packed output mapping m_beat",
+      "status": "PASS"
+    },
+    {
+      "check": "Packed output mapping m_last",
+      "status": "PASS"
+    },
+    {
+      "check": "Packed output mapping point_w4",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR part FLGB",
+      "status": "PASS"
+    },
+    {
+      "check": "Core-only synthesis top",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen simulation top",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t07_g3_up47/t07_g3_up47.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t07_g3_up47/t07_g3_up47.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t03_xfft_2048_main/t03_xfft_2048_main.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t03_xfft_2048_main/t03_xfft_2048_main.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_rt_mult_u48_u20/t06_rt_mult_u48_u20.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_rt_mult_u48_u20/t06_rt_mult_u48_u20.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_rt_mult_s41_s38/t06_rt_mult_s41_s38.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_rt_mult_s41_s38/t06_rt_mult_s41_s38.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_rt_mult_s41_u38/t06_rt_mult_s41_u38.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_rt_mult_s41_u38/t06_rt_mult_s41_u38.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_rt_mult_u30_s42/t06_rt_mult_u30_s42.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_rt_mult_u30_s42/t06_rt_mult_u30_s42.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_rt_mult_u30_u43/t06_rt_mult_u30_u43.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_rt_mult_u30_u43/t06_rt_mult_u30_u43.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_rt_mult_s41_s41/t06_rt_mult_s41_s41.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_rt_mult_s41_s41/t06_rt_mult_s41_s41.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_rt_mult_u30_u48/t06_rt_mult_u30_u48.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_rt_mult_u30_u48/t06_rt_mult_u30_u48.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_fs_mult_s29_s48/t06_fs_mult_s29_s48.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_fs_mult_s29_s48/t06_fs_mult_s29_s48.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_fs_mult_s29_s11/t06_fs_mult_s29_s11.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_fs_mult_s29_s11/t06_fs_mult_s29_s11.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_fs_mult_u18_s48/t06_fs_mult_u18_s48.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_fs_mult_u18_s48/t06_fs_mult_u18_s48.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_fs_mult_u18_s11/t06_fs_mult_u18_s11.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_fs_mult_u18_s11/t06_fs_mult_u18_s11.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t04_div_u63_u47/t04_div_u63_u47.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t04_div_u63_u47/t04_div_u63_u47.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_wp_mult_u64_u33/t06_wp_mult_u64_u33.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_wp_mult_u64_u33/t06_wp_mult_u64_u33.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_pair_max_tracker_2lane_cross/t06_pair_max_tracker_2lane_cross.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_pair_max_tracker_2lane_cross/t06_pair_max_tracker_2lane_cross.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_observation_engine_weight_product/t06_observation_engine_weight_product.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_observation_engine_weight_product/t06_observation_engine_weight_product.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_observation_engine_square/t06_observation_engine_square.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_observation_engine_square/t06_observation_engine_square.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_cordic_translate48_parallel/t06_cordic_translate48_parallel.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_cordic_translate48_parallel/t06_cordic_translate48_parallel.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t04_cmpy_17x16/t04_cmpy_17x16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t04_cmpy_17x16/t04_cmpy_17x16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_sg_div_u53_u37/t06_sg_div_u53_u37.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_sg_div_u53_u37/t06_sg_div_u53_u37.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_sg_mult_u37_u16/t06_sg_mult_u37_u16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_sg_mult_u37_u16/t06_sg_mult_u37_u16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t05_cmpy_rotate_18x18/t05_cmpy_rotate_18x18.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t05_cmpy_rotate_18x18/t05_cmpy_rotate_18x18.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t06_dds_phase_s32_sincos18/t06_dds_phase_s32_sincos18.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t06_dds_phase_s32_sincos18/t06_dds_phase_s32_sincos18.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t05_mult_cfo_s19_const40_full59/t05_mult_cfo_s19_const40_full59.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t05_mult_cfo_s19_const40_full59/t05_mult_cfo_s19_const40_full59.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/common/bistatic_stream_pkg.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/common/bistatic_stream_pkg.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t07/farrow_microbench.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t07/farrow_microbench.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t07/g3_down15_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t07/g3_down15_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t07/g3_down47_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t07/g3_down47_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t07/g3_farrow_guard_stream.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t07/g3_farrow_guard_stream.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t07/g3_up15_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t07/g3_up15_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t07/g3_up47_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t07/g3_up47_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/common/t03_main_fft_service.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/common/t03_main_fft_service.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/common/t03_uram_frame_bank.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/common/t03_uram_frame_bank.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/common/t05_local_capture_buffer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/common/t05_local_capture_buffer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/common/t05_phase_increment_controller.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/common/t05_phase_increment_controller.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/common/t05_vendor_multiplier_adapters.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/common/t05_vendor_multiplier_adapters.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_cfo_derotate_s16_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_cfo_derotate_s16_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_dds_phase_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_dds_phase_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_derotate_wide_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_derotate_wide_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_fft_pair_extractor.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_fft_pair_extractor.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_fft_pair_extractor_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_fft_pair_extractor_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_fft_pair_extractor_memory.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_fft_pair_extractor_memory.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_fft_swls_backend.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_fft_swls_backend.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_five_sum_accumulator.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_five_sum_accumulator.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_frame_context_join.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_frame_context_join.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_initial_sfo_service.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_initial_sfo_service.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_initial_sfo_standalone.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_initial_sfo_standalone.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_main_fft_exclusive_owner.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_main_fft_exclusive_owner.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_observation_engine.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_observation_engine.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_observation_engine_2lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_observation_engine_2lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_observation_engine_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_observation_engine_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_observation_store.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_observation_store.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_observation_store_bank.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_observation_store_bank.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_pair_max_tracker_2lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_pair_max_tracker_2lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_pair_phasor_bfp.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_pair_phasor_bfp.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_ps3_ps10_job_sequencer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_ps3_ps10_job_sequencer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_raw_reader_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_raw_reader_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_raw_reader_local_capture.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_raw_reader_local_capture.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_raw_to_fft_frontend.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_raw_to_fft_frontend.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_regression_tail.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_regression_tail.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_shared_gain_s16_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_shared_gain_s16_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_shared_gain_s16_lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_shared_gain_s16_lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_swls_weighted_backend.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_swls_weighted_backend.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_unsigned_divider_service.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_unsigned_divider_service.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_unsigned_divider_service_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_unsigned_divider_service_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t06/t06_weight_pack.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t06/t06_weight_pack.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t07/t07_guard_frame_core.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t07/t07_guard_frame_core.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t07/t07_nominal_pack4_rev02.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t07/t07_nominal_pack4_rev02.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t07/t07_sync_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t07/t07_sync_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t08/t08_descriptor.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t08/t08_descriptor.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t08/t08_first_sfo_resampler.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t08/t08_first_sfo_resampler.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t08/t08_frame_engine.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t08/t08_frame_engine.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_aux_ifft_service4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_aux_ifft_service4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_div_u80_u49_rne.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_div_u80_u49_rne.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_dtp_frame_backend4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_dtp_frame_backend4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_fft_grid_stage4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_fft_grid_stage4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_grid_packet_queue2.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_grid_packet_queue2.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_main_fft_service4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_main_fft_service4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_main_fft_window4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_main_fft_window4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_nominal_window_reader4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_nominal_window_reader4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_peak_interpolate.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_peak_interpolate.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_peak_triplet4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_peak_triplet4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_pilot_front2.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_pilot_front2.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_pilot_grid4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_pilot_grid4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_pilot_rotate2.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_pilot_rotate2.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_pilot_select_phase4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_pilot_select_phase4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_power4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_power4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_residual_sfo_pipeline4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_residual_sfo_pipeline4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t09/t09_sfo_ls74.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t09/t09_sfo_ls74.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t10/t10_cdc_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t10/t10_cdc_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t10/t10_domain_reset.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t10/t10_domain_reset.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t10/t10_output_buffer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t10/t10_output_buffer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t10/t10_r1_bank.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t10/t10_r1_bank.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t10/t10_raw_ring.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t10/t10_raw_ring.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t10/t10_second_descriptor.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t10/t10_second_descriptor.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t10/t10_second_sfo_resampler.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t10/t10_second_sfo_resampler.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t10/t10_two_pass_transport.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t10/t10_two_pass_transport.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/vendor/xpm/xpm_cdc.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/vendor/xpm/xpm_cdc.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/vendor/xpm/xpm_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/vendor/xpm/xpm_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/vendor/xpm/xpm_memory.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/vendor/xpm/xpm_memory.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../rtl/t10/t10_two_pass_system.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../rtl/t10/t10_two_pass_system.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../sim/data/t09_pilot_phase.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../sim/data/t09_pilot_phase.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../constraints/t10_root_clocks.xdc",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../constraints/t10_root_clocks.xdc",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../sim/tb/t10_full023_fifo_observer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../sim/tb/t10_full023_fifo_observer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../sim/tb/t10_full023_tb.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../sim/tb/t10_full023_tb.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../sim/data/raw.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../sim/data/raw.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../sim/data/r1.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../sim/data/r1.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../sim/data/r2.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../sim/data/r2.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../sim/data/delay.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../sim/data/delay.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../sim/data/delta.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../sim/data/delta.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t07_g3_down47/t07_g3_down47.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t07_g3_down47/t07_g3_down47.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t07_g3_down15/t07_g3_down15.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t07_g3_down15/t07_g3_down15.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/farrow_mul_t16/farrow_mul_t16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/farrow_mul_t16/farrow_mul_t16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/farrow_mul_h16/farrow_mul_h16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/farrow_mul_h16/farrow_mul_h16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/farrow_add_32/farrow_add_32.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/farrow_add_32/farrow_add_32.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/farrow_add_18/farrow_add_18.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/farrow_add_18/farrow_add_18.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/farrow_add_28/farrow_add_28.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/farrow_add_28/farrow_add_28.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t07_g3_up15/t07_g3_up15.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t07_g3_up15/t07_g3_up15.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Relative XPR source $PPRDIR/../../ip/config/t03_xfft_16384_aux/t03_xfft_16384_aux.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "XPR source resolves $PPRDIR/../../ip/config/t03_xfft_16384_aux/t03_xfft_16384_aux.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "All 74 frozen RTL explicitly selected",
+      "status": "PASS"
+    },
+    {
+      "check": "Declared project dependency set",
+      "status": "PASS",
+      "count": 120
+    },
+    {
+      "check": "All 34 XCI dependencies",
+      "status": "PASS"
+    },
+    {
+      "check": "Wrapper excluded from core XPR",
+      "status": "PASS"
+    },
+    {
+      "check": "Project copy manifest count",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/common/bistatic_stream_pkg.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t07/farrow_microbench.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t07/g3_down15_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t07/g3_down47_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t07/g3_farrow_guard_stream.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t07/g3_up15_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t07/g3_up47_top.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/common/t03_main_fft_service.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/common/t03_uram_frame_bank.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/common/t05_local_capture_buffer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/common/t05_phase_increment_controller.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/common/t05_vendor_multiplier_adapters.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_cfo_derotate_s16_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_dds_phase_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_derotate_wide_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_fft_pair_extractor.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_fft_pair_extractor_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_fft_pair_extractor_memory.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_fft_swls_backend.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_five_sum_accumulator.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_frame_context_join.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_initial_sfo_service.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_initial_sfo_standalone.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_main_fft_exclusive_owner.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_observation_engine.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_observation_engine_2lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_observation_engine_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_observation_store.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_observation_store_bank.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_pair_max_tracker_2lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_pair_phasor_bfp.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_ps3_ps10_job_sequencer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_raw_reader_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_raw_reader_local_capture.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_raw_to_fft_frontend.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_regression_tail.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_shared_gain_s16_4lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_shared_gain_s16_lane.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_swls_weighted_backend.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_unsigned_divider_service.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_unsigned_divider_service_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t06/t06_weight_pack.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t07/t07_guard_frame_core.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t07/t07_nominal_pack4_rev02.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t07/t07_sync_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t08/t08_descriptor.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t08/t08_first_sfo_resampler.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t08/t08_frame_engine.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_aux_ifft_service4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_div_u80_u49_rne.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_dtp_frame_backend4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_fft_grid_stage4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_grid_packet_queue2.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_main_fft_service4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_main_fft_window4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_nominal_window_reader4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_peak_interpolate.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_peak_triplet4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_pilot_front2.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_pilot_grid4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_pilot_rotate2.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_pilot_select_phase4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_power4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_residual_sfo_pipeline4.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t09/t09_sfo_ls74.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t10/t10_cdc_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t10/t10_domain_reset.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t10/t10_output_buffer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t10/t10_r1_bank.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t10/t10_raw_ring.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t10/t10_second_descriptor.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t10/t10_second_sfo_resampler.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t10/t10_two_pass_system.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/t10/t10_two_pass_transport.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/include/t06_observation_engine_ip_config.svh",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/include/t06_pair_max_tracker_2lane_ip_config.svh",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/include/t06_shared_gain_ip_config.svh",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/vendor/xpm/xpm_cdc.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/vendor/xpm/xpm_fifo.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/vendor/xpm/xpm_memory.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/farrow_add_18/farrow_add_18.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/farrow_add_28/farrow_add_28.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/farrow_add_32/farrow_add_32.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/farrow_mul_h16/farrow_mul_h16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/farrow_mul_t16/farrow_mul_t16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t03_xfft_16384_aux/t03_xfft_16384_aux.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t03_xfft_2048_main/t03_xfft_2048_main.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t04_cmpy_17x16/t04_cmpy_17x16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t04_div_u63_u47/t04_div_u63_u47.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t05_cmpy_rotate_18x18/t05_cmpy_rotate_18x18.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t05_mult_cfo_s19_const40_full59/t05_mult_cfo_s19_const40_full59.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_cordic_translate48_parallel/t06_cordic_translate48_parallel.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_dds_phase_s32_sincos18/t06_dds_phase_s32_sincos18.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_fs_mult_s29_s11/t06_fs_mult_s29_s11.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_fs_mult_s29_s48/t06_fs_mult_s29_s48.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_fs_mult_u18_s11/t06_fs_mult_u18_s11.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_fs_mult_u18_s48/t06_fs_mult_u18_s48.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_observation_engine_square/t06_observation_engine_square.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_observation_engine_weight_product/t06_observation_engine_weight_product.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_pair_max_tracker_2lane_cross/t06_pair_max_tracker_2lane_cross.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_rt_mult_s41_s38/t06_rt_mult_s41_s38.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_rt_mult_s41_s41/t06_rt_mult_s41_s41.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_rt_mult_s41_u38/t06_rt_mult_s41_u38.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_rt_mult_u30_s42/t06_rt_mult_u30_s42.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_rt_mult_u30_u43/t06_rt_mult_u30_u43.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_rt_mult_u30_u48/t06_rt_mult_u30_u48.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_rt_mult_u48_u20/t06_rt_mult_u48_u20.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_sg_div_u53_u37/t06_sg_div_u53_u37.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_sg_mult_u37_u16/t06_sg_mult_u37_u16.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t06_wp_mult_u64_u33/t06_wp_mult_u64_u33.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t07_g3_down15/t07_g3_down15.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t07_g3_down47/t07_g3_down47.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t07_g3_up15/t07_g3_up15.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/config/t07_g3_up47/t07_g3_up47.xci",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/sim/tb/t10_full023_fifo_observer.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/sim/tb/t10_full023_tb.sv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/sim/data/raw.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/sim/data/r1.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/sim/data/r2.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/sim/data/delay.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/sim/data/delta.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/sim/data/t09_pilot_phase.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/sim/data/provenance.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/analysis/evidence/t09_fixed007_case006.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/analysis/check_prefix.py",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/sources.f",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/ip_names.txt",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/expected_user_config.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/rtl/vendor/xpm/README_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/README_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/constraints/t10_root_clocks.xdc",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/vivado/create_project.tcl",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/vivado/start_simulation_0ns.tcl",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/vivado/setup_waves.tcl",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/analysis/validate_gui.py",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/analysis/report_evm_gui.py",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/analysis/migration_diff.patch",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/analysis/README_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/docs/RTL_MIGRATION_NOTES_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/ip/expected_user_config.tcl",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/analysis/evidence/expected_fifo_bindings.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/vivado/T10_SFO/T10_SFO.xpr",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/vivado/configure_parallel_jobs.tcl",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/tools/vivado/run_threads.tcl",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/docs/provenance/RUN03_APPROVED_INPUTS.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/docs/provenance/RTL_COPY_MANIFEST.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/constraints/README_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/constraints/reference_synth016/production_clocks.xdc",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen project copy core_project/constraints/reference_synth016/production_crossing_constraints.tcl",
+      "status": "PASS"
+    },
+    {
+      "check": "User XPR remains byte-identical",
+      "status": "PASS"
+    },
+    {
+      "check": "Binary identity data/raw_input_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "MEM source identity raw.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Exact MEM-to-U32LE conversion raw_input_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "Binary identity data/expected_e1_iq_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "MEM source identity r1.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Exact MEM-to-U32LE conversion expected_e1_iq_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "Binary identity data/expected_output_iq_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "MEM source identity r2.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Exact MEM-to-U32LE conversion expected_output_iq_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "Binary identity data/expected_points_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "All Wrapper inputs have setup values",
+      "status": "PASS"
+    },
+    {
+      "check": "Full port CSV",
+      "status": "PASS",
+      "rows": 102
+    },
+    {
+      "check": "Offline comparator Python syntax only; hardware execution not performed",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen simulation data deployment raw.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen simulation data deployment r1.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen simulation data deployment r2.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen simulation data deployment delay.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen simulation data deployment delta.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "Frozen simulation data deployment t09_pilot_phase.mem",
+      "status": "PASS"
+    },
+    {
+      "check": "No new netlist or LabVIEW artifact",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> core_project/vivado/T10_SFO/T10_SFO.xpr",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> wrapper/t10_sfo_manual_wrapper.vhd",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> docs/VIVADO_HANDOFF_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> docs/INTERFACE_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> wrapper/ports.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> docs/HOST_TEST_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> data/case6001_settings.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> data/data_manifest.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> FILE_MANIFEST.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> evidence/STATIC_CHECKS.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> evidence/T10_RUN03_INDEPENDENT_REVIEW_20260915_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link README_ZH.md -> evidence/T10_RUN03_INDEPENDENT_REVIEW_20260915.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> INTERFACE_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> ../data/raw_input_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> ../data/expected_e1_iq_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> ../data/expected_output_iq_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> ../data/expected_points_u32le.bin",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> ../data/data_manifest.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> ../data/expected_points.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> INTERFACE_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> ../data/case6001_settings.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> ../tools/compare_capture.py",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link HOST_TEST_ZH.md -> ../data/capture_status_template.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link INTERFACE_ZH.md -> ../wrapper/t10_sfo_manual_wrapper.vhd",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link INTERFACE_ZH.md -> ../wrapper/ports.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link INTERFACE_ZH.md -> ../wrapper/interface_contract.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link VIVADO_HANDOFF_ZH.md -> ../core_project/vivado/T10_SFO/T10_SFO.xpr",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link VIVADO_HANDOFF_ZH.md -> ../evidence/project_copy_manifest.json",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link VIVADO_HANDOFF_ZH.md -> ../FILE_MANIFEST.csv",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link VIVADO_HANDOFF_ZH.md -> ../core_project/constraints/t10_root_clocks.xdc",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link VIVADO_HANDOFF_ZH.md -> INTERFACE_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "Current entry documentation link VIVADO_HANDOFF_ZH.md -> ../evidence/T10_RUN03_INDEPENDENT_REVIEW_20260915_ZH.md",
+      "status": "PASS"
+    },
+    {
+      "check": "All 102 CSV port records agree with checked interface contract, every field",
+      "status": "PASS"
+    }
+  ],
+  "current_document_links": [
+    {
+      "document": "README_ZH.md",
+      "target": "core_project/vivado/T10_SFO/T10_SFO.xpr"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "wrapper/t10_sfo_manual_wrapper.vhd"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "docs/VIVADO_HANDOFF_ZH.md"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "docs/INTERFACE_ZH.md"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "wrapper/ports.csv"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "docs/HOST_TEST_ZH.md"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "data/case6001_settings.json"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "data/data_manifest.json"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "FILE_MANIFEST.csv"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "evidence/STATIC_CHECKS.json"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "evidence/T10_RUN03_INDEPENDENT_REVIEW_20260915_ZH.md"
+    },
+    {
+      "document": "README_ZH.md",
+      "target": "evidence/T10_RUN03_INDEPENDENT_REVIEW_20260915.json"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "INTERFACE_ZH.md"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "../data/raw_input_u32le.bin"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "../data/expected_e1_iq_u32le.bin"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "../data/expected_output_iq_u32le.bin"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "../data/expected_points_u32le.bin"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "../data/data_manifest.json"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "../data/expected_points.csv"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "INTERFACE_ZH.md"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "../data/case6001_settings.json"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "../tools/compare_capture.py"
+    },
+    {
+      "document": "docs/HOST_TEST_ZH.md",
+      "target": "../data/capture_status_template.json"
+    },
+    {
+      "document": "docs/INTERFACE_ZH.md",
+      "target": "../wrapper/t10_sfo_manual_wrapper.vhd"
+    },
+    {
+      "document": "docs/INTERFACE_ZH.md",
+      "target": "../wrapper/ports.csv"
+    },
+    {
+      "document": "docs/INTERFACE_ZH.md",
+      "target": "../wrapper/interface_contract.json"
+    },
+    {
+      "document": "docs/VIVADO_HANDOFF_ZH.md",
+      "target": "../core_project/vivado/T10_SFO/T10_SFO.xpr"
+    },
+    {
+      "document": "docs/VIVADO_HANDOFF_ZH.md",
+      "target": "../evidence/project_copy_manifest.json"
+    },
+    {
+      "document": "docs/VIVADO_HANDOFF_ZH.md",
+      "target": "../FILE_MANIFEST.csv"
+    },
+    {
+      "document": "docs/VIVADO_HANDOFF_ZH.md",
+      "target": "../core_project/constraints/t10_root_clocks.xdc"
+    },
+    {
+      "document": "docs/VIVADO_HANDOFF_ZH.md",
+      "target": "INTERFACE_ZH.md"
+    },
+    {
+      "document": "docs/VIVADO_HANDOFF_ZH.md",
+      "target": "../evidence/T10_RUN03_INDEPENDENT_REVIEW_20260915_ZH.md"
+    }
+  ],
+  "boundaries": {
+    "Vivado_open_or_compile": "NOT_RUN_THIS_HANDOFF",
+    "Wrapper_native_compile_or_netlist_binding": "NOT_RUN",
+    "synthesis_or_simulation": "NOT_RUN_THIS_HANDOFF",
+    "CLIP_XML_VI_DMA_DDR_clock_CDC_adapter": "USER_PLATFORM_WORK",
+    "NI_compile_board_timing_throughput": "NOT_QUALIFIED",
+    "comparator_hardware_capture": "NOT_RUN",
+    "historical_evidence_links": "Preserved original locations, excluded from portable current-entry link check",
+    "final_manifest": "FILE_MANIFEST.csv covers files except itself; independently reread at publication"
+  },
+  "publication_utc": "2026-09-15T07:41:27.314212+00:00"
+}

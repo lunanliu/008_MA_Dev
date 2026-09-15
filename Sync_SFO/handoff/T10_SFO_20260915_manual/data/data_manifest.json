@@ -1,0 +1,121 @@
+{
+  "format": "Headerless little-endian UInt32; IQ low16=I, high16=Q, both signed Q1.15; earliest complex sample first",
+  "input_frame_id": 6001,
+  "generation": 1,
+  "files": [
+    {
+      "file": "data/raw_input_u32le.bin",
+      "source": "D:\\008_MA_Dev\\sim\\data\\raw.mem",
+      "source_sha256": "8EE64DC2C60497176D98FB68D4259E805AB0122D2933A4059F25BE3A80AE33DA",
+      "sha256": "2932F176D7F90EFD4314592337227B9242AEFDA1E82F304725E172D9D330FA5B",
+      "bytes": 5347440,
+      "complex_samples": 1336860,
+      "beats128": 334215,
+      "role": "DUT input",
+      "first_four_u32_hex": [
+        "0xFFA40DE7",
+        "0xFE4B04FE",
+        "0xE51021B9",
+        "0xE9E21B89"
+      ],
+      "first_four_iq_i16": [
+        [
+          3559,
+          -92
+        ],
+        [
+          1278,
+          -437
+        ],
+        [
+          8633,
+          -6896
+        ],
+        [
+          7049,
+          -5662
+        ]
+      ]
+    },
+    {
+      "file": "data/expected_e1_iq_u32le.bin",
+      "source": "D:\\008_MA_Dev\\sim\\data\\r1.mem",
+      "source_sha256": "9A10E8A668C72645DB11ECABE2F95B19FE297939A2161B5A225B886AED0708E5",
+      "sha256": "9FBD296D0A94868165DD70C2ADE4815F7815151CDF1E52AFE2AEF726B9B23BD7",
+      "bytes": 5345568,
+      "complex_samples": 1336392,
+      "beats128": 334098,
+      "role": "E1 reference only",
+      "first_four_u32_hex": [
+        "0x15F1144D",
+        "0x0466010F",
+        "0xEC280670",
+        "0xEF4A0BE9"
+      ],
+      "first_four_iq_i16": [
+        [
+          5197,
+          5617
+        ],
+        [
+          271,
+          1126
+        ],
+        [
+          1648,
+          -5080
+        ],
+        [
+          3049,
+          -4278
+        ]
+      ]
+    },
+    {
+      "file": "data/expected_output_iq_u32le.bin",
+      "source": "D:\\008_MA_Dev\\sim\\data\\r2.mem",
+      "source_sha256": "EE1B6AB0FE36EFC43CA6F293B1C3F42797CE3483C9C6CA387B226D0088E18894",
+      "sha256": "7C60D109DEC779D9705A8524848AD2F0E16070D8A5F69211234A902C49554437",
+      "bytes": 5345280,
+      "complex_samples": 1336320,
+      "beats128": 334080,
+      "role": "Final/E2 reference only",
+      "first_four_u32_hex": [
+        "0x0117FDCA",
+        "0x16230603",
+        "0x187703AD",
+        "0x0F00E8FB"
+      ],
+      "first_four_iq_i16": [
+        [
+          -566,
+          279
+        ],
+        [
+          1539,
+          5667
+        ],
+        [
+          941,
+          6263
+        ],
+        [
+          -5893,
+          3840
+        ]
+      ]
+    },
+    {
+      "file": "data/expected_points_u32le.bin",
+      "source": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\points.csv",
+      "source_sha256": "1AF274E95DD2341D8B2D97FF543CC5FB5B3CAB4DEAB283E620D6DB2EFB04DAEC",
+      "sha256": "9B637B2EE45C9C5B4994F9D64356210BDD976F02F5B0D985DC36DE630E3A4337",
+      "bytes": 1480,
+      "records": 74,
+      "words_u32_per_record": 5,
+      "role": "verified point records, comparator only; never drive into RTL"
+    }
+  ],
+  "no_new_waveforms": true,
+  "source": "frozen RUN03 inputs and independently accepted original outputs"
+}

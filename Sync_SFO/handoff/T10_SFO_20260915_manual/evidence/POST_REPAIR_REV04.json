@@ -1,0 +1,21 @@
+{
+  "repair": "post-processing-only",
+  "revision": "rev04",
+  "source_audit_script": "D:\\008_MA_Dev\\work\\t10_fullframe_20260914_run03\\audit_run_rev03.py",
+  "source_audit_script_sha256": "CD97631C4FD0075BEC31B3BE616D96266227735908951829F3A38DD1BF952730",
+  "repair_script": "D:\\008_MA_Dev\\work\\t10_fullframe_20260914_run03\\post_repair_rev04.py",
+  "repair_script_sha256": "F3E270B323690353BB197D947A20C300DC1DE257768545E4BE50CB143F30D1F5",
+  "native_stdout_sha256": "F67050E2537C3B864885429A220AB5577B0923C6C13740E9B084F082315C6F70",
+  "native_complete_marker": "D:\\008_MA_Dev\\work\\t10_fullframe_20260914_run03\\native_complete.txt",
+  "native_compile_order_preserved": true,
+  "validation_runtime": "D:\\008_MA_Dev\\work\\t10_fullframe_20260914_run03\\post_validation_runtime",
+  "review": "D:\\008_MA_Dev\\work\\t10_fullframe_20260914_run03\\review_post_repair_rev04",
+  "prior_failed_review_preserved": "D:\\008_MA_Dev\\work\\t10_fullframe_20260914_run03\\review",
+  "validator": "D:\\008_MA_Dev\\tools\\analysis\\validate_gui.py",
+  "evm_reporter": "D:\\008_MA_Dev\\tools\\analysis\\report_evm_gui.py",
+  "command": "C:\\Users\\lunan\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -I -B -X utf8 D:\\008_MA_Dev\\work\\t10_fullframe_20260914_run03\\post_repair_rev04.py",
+  "native_simulation_restarted": false,
+  "matlab_started": false,
+  "vivado_started": false,
+  "T10_PASS": false
+}

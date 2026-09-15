@@ -1,0 +1,58 @@
+{
+  "role": "fixed input values; NOT register addresses or implemented VI configuration",
+  "clocks_MHz": {
+    "clk125": 125,
+    "clk150": 150,
+    "clk500": 500
+  },
+  "wrapper_inputs": {
+    "clk125": "125 MHz",
+    "clk150": "150 MHz",
+    "clk500": "500 MHz",
+    "reset_request": "1",
+    "abort125": "0",
+    "s_valid": "0",
+    "frame_valid": "0",
+    "cfo_valid": "0",
+    "fine_valid": "0",
+    "s_iq0": "raw_input_u32le.bin",
+    "s_iq1": "raw_input_u32le.bin",
+    "s_iq2": "raw_input_u32le.bin",
+    "s_iq3": "raw_input_u32le.bin",
+    "s_frame_id": "6001",
+    "s_absolute_index": "-172+4*b",
+    "s_lane_valid": "0x0F",
+    "frame_id": "6001",
+    "frame_generation": "1",
+    "frame_raw_first_word_lo": "0",
+    "frame_raw_first_word_hi": "0",
+    "frame_nominal_absolute": "0",
+    "frame_q0_q28": "0",
+    "cfo_value_hz": "100000",
+    "cfo_quality": "0",
+    "cfo_status": "0x2800",
+    "cfo_frame_id": "6001",
+    "fine_start_samples": "0",
+    "fine_quality": "0",
+    "fine_status": "0x3800",
+    "fine_frame_id": "6001",
+    "m_ready": "连续接收路径就绪时1"
+  },
+  "raw_replay": {
+    "u32_elements": 1336860,
+    "beats128": 334215,
+    "initial_absolute_index": -172,
+    "increment_per_accepted_beat": 4,
+    "DDR_base_address": "chosen by user adapter; unrelated to frame_raw_first_word"
+  },
+  "expected_results": {
+    "output_beats": 334080,
+    "output_samples": 1336320,
+    "e1_beats": 334098,
+    "point_count": 74,
+    "first_ppm_q18": -39303835,
+    "second_ppm_q18": -12945,
+    "first_step_q28": 268395209,
+    "second_step_q28": 268435443
+  }
+}

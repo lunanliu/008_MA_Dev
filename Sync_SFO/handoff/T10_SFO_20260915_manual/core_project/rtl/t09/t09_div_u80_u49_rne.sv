@@ -1,0 +1,67 @@
+`timescale 1ns/1ps
+// One transaction at a time. Unsigned magnitude arithmetic; caller owns sign restoration.
+module t09_div_u80_u49_rne (
+    input logic clk,
+    input logic rst,
+    input logic s_valid,
+    output logic s_ready,
+    input logic [79:0] s_numerator,
+    input logic [48:0] s_denominator,
+    input logic [31:0] s_tag,
+    output logic m_valid,
+    input logic m_ready,
+    output logic [79:0] m_quotient,
+    output logic [48:0] m_remainder,
+    output logic [80:0] m_rne,
+    output logic [31:0] m_tag,
+    output logic m_divide_by_zero,
+    output logic busy
+);
+    logic [79:0] quotient_shift;
+    logic [48:0] divisor;
+    logic [48:0] remainder;
+    logic [31:0] tag;
+    logic [6:0] remaining;
+    logic [49:0] trial;
+    logic subtract;
+    logic [49:0] next_remainder_wide;
+    logic [48:0] next_remainder;
+    logic [79:0] next_quotient;
+    logic [49:0] twice_remainder;
+    logic round_up;
+
+    assign s_ready=!rst && !busy && (!m_valid || m_ready);
+    assign trial={remainder,quotient_shift[79]};
+    assign subtract=trial>={1'b0,divisor};
+    assign next_remainder_wide=subtract ? trial-{1'b0,divisor} : trial;
+    assign next_remainder=next_remainder_wide[48:0];
+    assign next_quotient={quotient_shift[78:0],subtract};
+    assign twice_remainder={next_remainder,1'b0};
+    assign round_up=(twice_remainder>{1'b0,divisor}) ||
+                    ((twice_remainder=={1'b0,divisor}) && next_quotient[0]);
+
+    always_ff @(posedge clk) begin
+        if(rst) begin
+            quotient_shift<='0;divisor<='0;remainder<='0;tag<='0;remaining<='0;
+            busy<=0;m_valid<=0;m_quotient<='0;m_remainder<='0;m_rne<='0;m_tag<='0;m_divide_by_zero<=0;
+        end else begin
+            if(m_valid && m_ready) m_valid<=0;
+            if(s_valid && s_ready) begin
+                if(s_denominator==0) begin
+                    m_valid<=1;m_tag<=s_tag;m_quotient<='0;m_remainder<='0;m_rne<='0;m_divide_by_zero<=1;
+                    busy<=0;
+                end else begin
+                    quotient_shift<=s_numerator;divisor<=s_denominator;remainder<='0;
+                    tag<=s_tag;remaining<=7'd80;busy<=1;
+                end
+            end else if(busy) begin
+                quotient_shift<=next_quotient;remainder<=next_remainder;remaining<=remaining-1'b1;
+                if(remaining==1) begin
+                    busy<=0;m_valid<=1;m_tag<=tag;m_quotient<=next_quotient;
+                    m_remainder<=next_remainder;m_rne<={1'b0,next_quotient}+{{80{1'b0}},round_up};
+                    m_divide_by_zero<=0;
+                end
+            end
+        end
+    end
+endmodule

@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-15T05:52:42.3039005Z",
+  "root_pid": 40656,
+  "root_returncode": 0,
+  "root_exited": true,
+  "owned_active_after": 0,
+  "elapsed_s": 93426.907077,
+  "peak_summed_working_set_bytes": 6360580096,
+  "minimum_system_available_gib": 3.119140625,
+  "maximum_system_commit_percent": 47.0,
+  "stop_reason": null,
+  "error": null,
+  "absolute_simulation_deadline_utc": null,
+  "foreign_process_modified": false
+}

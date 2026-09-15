@@ -1,0 +1,103 @@
+﻿name,direction,width,vhdl_type,labview_type,interpretation,clock_domain,meaning,case_value_or_expected,valid_when,reset_or_idle
+clk125,input,1,std_logic,Boolean/Clock,Clock,Clock,外部连续时钟 125 MHz,125 MHz,复位前稳定并持续运行,不得使用布尔软件翻转代替时钟
+clk150,input,1,std_logic,Boolean/Clock,Clock,Clock,外部连续时钟 150 MHz,150 MHz,复位前稳定并持续运行,不得使用布尔软件翻转代替时钟
+clk500,input,1,std_logic,Boolean/Clock,Clock,Clock,外部连续时钟 500 MHz,500 MHz,复位前稳定并持续运行,不得使用布尔软件翻转代替时钟
+reset_request,input,1,std_logic,Boolean/Clock,Boolean,异步请求→各域内部同步释放,高有效总复位,1,稳定时钟后保持高；释放后等各域就绪,开机/异常恢复=1；运行=0
+abort125,input,1,std_logic,Boolean/Clock,Boolean,125 MHz,取消，触发粘滞故障,0,125 MHz同步；停止后必须总复位恢复,正常=0
+s_valid,input,1,std_logic,Boolean/Clock,Boolean,125 MHz,原始数据有效,0,与ready同拍为1时接收；被阻塞时保持有效及全部字段,复位/空闲=0
+s_ready,output,1,std_logic,Boolean/Clock,Boolean,125 MHz,原始数据可接收,由核心产生,与valid同拍解释,复位期间0；不能固定为1
+frame_valid,input,1,std_logic,Boolean/Clock,Boolean,125 MHz,帧描述符有效,0,与ready同拍为1时接收；被阻塞时保持有效及全部字段,复位/空闲=0
+frame_ready,output,1,std_logic,Boolean/Clock,Boolean,125 MHz,帧描述符可接收,由核心产生,与valid同拍解释,复位期间0；不能固定为1
+cfo_valid,input,1,std_logic,Boolean/Clock,Boolean,125 MHz,粗CFO记录有效,0,与ready同拍为1时接收；被阻塞时保持有效及全部字段,复位/空闲=0
+cfo_ready,output,1,std_logic,Boolean/Clock,Boolean,125 MHz,粗CFO记录可接收,由核心产生,与valid同拍解释,复位期间0；不能固定为1
+fine_valid,input,1,std_logic,Boolean/Clock,Boolean,125 MHz,精定时记录有效,0,与ready同拍为1时接收；被阻塞时保持有效及全部字段,复位/空闲=0
+fine_ready,output,1,std_logic,Boolean/Clock,Boolean,125 MHz,精定时记录可接收,由核心产生,与valid同拍解释,复位期间0；不能固定为1
+s_iq0,input,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,125 MHz,第4b+0个复数点，Q在高16位I在低16位,raw_input_u32le.bin,s_valid && s_ready,valid=0时可置0
+s_iq1,input,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,125 MHz,第4b+1个复数点，Q在高16位I在低16位,raw_input_u32le.bin,s_valid && s_ready,valid=0时可置0
+s_iq2,input,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,125 MHz,第4b+2个复数点，Q在高16位I在低16位,raw_input_u32le.bin,s_valid && s_ready,valid=0时可置0
+s_iq3,input,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,125 MHz,第4b+3个复数点，Q在高16位I在低16位,raw_input_u32le.bin,s_valid && s_ready,valid=0时可置0
+s_frame_id,input,32,std_logic_vector(31 downto 0),U32,U32,125 MHz,本拍所属帧号,6001,s_valid && s_ready,6001
+s_absolute_index,input,32,std_logic_vector(31 downto 0),U32,I32二补码，单位复数样点,125 MHz,本拍第一个样点相对采样坐标,-172+4*b,s_valid && s_ready,起点-172；只在接受时加4
+s_lane_valid,input,8,std_logic_vector(7 downto 0),U8,U8,125 MHz,低4位通道掩码，高4位必须0,0x0F,s_valid && s_ready,0x0F
+frame_id,input,32,std_logic_vector(31 downto 0),U32,U32,125 MHz,描述符帧号,6001,frame_valid && frame_ready,6001
+frame_generation,input,32,std_logic_vector(31 downto 0),U32,U32,125 MHz,本次生成编号,1,frame_valid && frame_ready,1
+frame_raw_first_word_lo,input,32,std_logic_vector(31 downto 0),U32,U32,125 MHz,内部接收流128位拍地址低32位；不是DDR地址,0,frame_valid && frame_ready,0
+frame_raw_first_word_hi,input,32,std_logic_vector(31 downto 0),U32,U32,125 MHz,内部拍地址高32位,0,frame_valid && frame_ready,0
+frame_nominal_absolute,input,32,std_logic_vector(31 downto 0),U32,I32二补码，样点,125 MHz,名义帧原点采样坐标,0,frame_valid && frame_ready,0
+frame_q0_q28,input,32,std_logic_vector(31 downto 0),U32,U32，低28位Q0.28,125 MHz,初始小数相位；高4位必须0,0,frame_valid && frame_ready,0
+cfo_value_hz,input,32,std_logic_vector(31 downto 0),U32,I32二补码，Hz,125 MHz,外部粗CFO估计,100000,cfo_valid && cfo_ready,100000
+cfo_quality,input,16,std_logic_vector(15 downto 0),U16,U16,125 MHz,质量字段,0,cfo_valid && cfo_ready,0
+cfo_status,input,16,std_logic_vector(15 downto 0),U16,U16,125 MHz,类型/有效状态字段,0x2800,cfo_valid && cfo_ready,0x2800
+cfo_frame_id,input,32,std_logic_vector(31 downto 0),U32,U32,125 MHz,所属帧号,6001,cfo_valid && cfo_ready,6001
+fine_start_samples,input,32,std_logic_vector(31 downto 0),U32,I32二补码，样点,125 MHz,外部精定时帧起点,0,fine_valid && fine_ready,0
+fine_quality,input,16,std_logic_vector(15 downto 0),U16,U16,125 MHz,质量字段,0,fine_valid && fine_ready,0
+fine_status,input,16,std_logic_vector(15 downto 0),U16,U16,125 MHz,类型/有效状态字段,0x3800,fine_valid && fine_ready,0x3800
+fine_frame_id,input,32,std_logic_vector(31 downto 0),U32,U32,125 MHz,所属帧号,6001,fine_valid && fine_ready,6001
+m_valid,output,1,std_logic,Boolean/Clock,Boolean,150 MHz,最终输出有效,核心产生,仅在150 MHz域采样/驱动,复位时m_ready=0；其它由核心产生
+m_ready,input,1,std_logic,Boolean/Clock,Boolean,150 MHz,接收端有容量,连续接收路径就绪时1,仅在150 MHz域采样/驱动,复位时m_ready=0；其它由核心产生
+m_reset,output,1,std_logic,Boolean/Clock,Boolean,150 MHz,150 MHz域内部复位状态,运行时0,仅在150 MHz域采样/驱动,复位时m_ready=0；其它由核心产生
+m_fault,output,1,std_logic,Boolean/Clock,Boolean,150 MHz,150 MHz域故障,成功时0,仅在150 MHz域采样/驱动,复位时m_ready=0；其它由核心产生
+m_iq0,output,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,150 MHz,输出第4b+0点,expected_output_iq_u32le.bin,m_valid && m_ready,无有效数据时不解释
+m_iq1,output,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,150 MHz,输出第4b+1点,expected_output_iq_u32le.bin,m_valid && m_ready,无有效数据时不解释
+m_iq2,output,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,150 MHz,输出第4b+2点,expected_output_iq_u32le.bin,m_valid && m_ready,无有效数据时不解释
+m_iq3,output,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,150 MHz,输出第4b+3点,expected_output_iq_u32le.bin,m_valid && m_ready,无有效数据时不解释
+m_frame_id,output,32,std_logic_vector(31 downto 0),U32,U32位模式,150 MHz,输出帧号,6001,m_valid && m_ready,见有效条件；无独立Wrapper复位逻辑
+m_generation,output,32,std_logic_vector(31 downto 0),U32,U32位模式,150 MHz,输出生成编号,1,m_valid && m_ready,见有效条件；无独立Wrapper复位逻辑
+m_beat,output,32,std_logic_vector(31 downto 0),U32,U32位模式,150 MHz,输出拍号,0..334079,m_valid && m_ready,见有效条件；无独立Wrapper复位逻辑
+m_last,output,1,std_logic,Boolean/Clock,Boolean,150 MHz,名义帧最后一拍,仅拍334079为1,m_valid && m_ready,见有效条件；无独立Wrapper复位逻辑
+fault,output,1,std_logic,Boolean/Clock,Boolean,125 MHz,控制域综合故障,成功时0,125 MHz采样,复位期间0
+error_code125,output,8,std_logic_vector(7 downto 0),U8,U8,125 MHz,该域第一个错误码,成功时0,所在域采样；粘滞直到复位,复位=0
+error_code150,output,8,std_logic_vector(7 downto 0),U8,U8,150 MHz,该域第一个错误码,成功时0,所在域采样；粘滞直到复位,复位=0
+diag_w00,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,diagnostic[31:0]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+diag_w01,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,diagnostic[63:32]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+diag_w02,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,diagnostic[95:64]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+diag_w03,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,diagnostic[127:96]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+diag_w04,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,diagnostic[159:128]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+diag_w05,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,diagnostic[191:160]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+diag_w06,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,diagnostic[223:192]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+diag_w07,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,diagnostic[255:224]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w00,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[31:0]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w01,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[63:32]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w02,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[95:64]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w03,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[127:96]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w04,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[159:128]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w05,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[191:160]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w06,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[223:192]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w07,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[255:224]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w08,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[287:256]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w09,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[319:288]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w10,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[351:320]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w11,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[383:352]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w12,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[415:384]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w13,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[447:416]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w14,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[479:448]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug125_w15,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,125 MHz,debug125[511:480]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w00,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[31:0]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w01,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[63:32]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w02,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[95:64]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w03,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[127:96]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w04,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[159:128]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w05,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[191:160]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w06,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[223:192]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w07,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[255:224]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w08,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[287:256]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w09,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[319:288]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w10,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[351:320]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w11,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[383:352]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w12,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[415:384]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w13,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[447:416]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w14,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[479:448]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+debug150_w15,output,32,std_logic_vector(31 downto 0),U32,U32位模式；部分字段为I32,150 MHz,debug150[511:480]；逐字释义见调试表,见调试表,所在域快照；跨域整体握手后读,计数复位清零；状态按表
+residual_point_valid,output,1,std_logic,Boolean/Clock,Boolean,125 MHz,T09点记录观察脉冲,共74次,每个高电平周期捕获整条point；没有ready,复位/空闲无事件
+point_w0,output,32,std_logic_vector(31 downto 0),U32,U32原始位模式,125 MHz,point记录第0个低位优先U32字；w4仅bit0有定义,expected_points_u32le.bin,residual_point_valid=1,无valid不解释
+point_w1,output,32,std_logic_vector(31 downto 0),U32,U32原始位模式,125 MHz,point记录第1个低位优先U32字；w4仅bit0有定义,expected_points_u32le.bin,residual_point_valid=1,无valid不解释
+point_w2,output,32,std_logic_vector(31 downto 0),U32,U32原始位模式,125 MHz,point记录第2个低位优先U32字；w4仅bit0有定义,expected_points_u32le.bin,residual_point_valid=1,无valid不解释
+point_w3,output,32,std_logic_vector(31 downto 0),U32,U32原始位模式,125 MHz,point记录第3个低位优先U32字；w4仅bit0有定义,expected_points_u32le.bin,residual_point_valid=1,无valid不解释
+point_w4,output,32,std_logic_vector(31 downto 0),U32,U32原始位模式,125 MHz,point记录第4个低位优先U32字；w4仅bit0有定义,expected_points_u32le.bin,residual_point_valid=1,无valid不解释
+debug_e1_valid,output,1,std_logic,Boolean/Clock,Boolean,150 MHz,E1已接受数据的观察脉冲，无ready,共334098拍；末拍334097,debug_e1_valid=1,无valid不解释
+debug_e1_beat,output,32,std_logic_vector(31 downto 0),U32,U32,150 MHz,E1拍号0..334097,共334098拍；末拍334097,debug_e1_valid=1,无valid不解释
+debug_e1_last,output,1,std_logic,Boolean/Clock,Boolean,150 MHz,仅E1末拍为1,共334098拍；末拍334097,debug_e1_valid=1,无valid不解释
+debug_e1_iq0,output,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,150 MHz,E1观察第4b+0点,expected_e1_iq_u32le.bin,debug_e1_valid=1；不能施加背压,见有效条件；无独立Wrapper复位逻辑
+debug_e1_iq1,output,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,150 MHz,E1观察第4b+1点,expected_e1_iq_u32le.bin,debug_e1_valid=1；不能施加背压,见有效条件；无独立Wrapper复位逻辑
+debug_e1_iq2,output,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,150 MHz,E1观察第4b+2点,expected_e1_iq_u32le.bin,debug_e1_valid=1；不能施加背压,见有效条件；无独立Wrapper复位逻辑
+debug_e1_iq3,output,32,std_logic_vector(31 downto 0),U32,U32容器；两个I16 Q1.15,150 MHz,E1观察第4b+3点,expected_e1_iq_u32le.bin,debug_e1_valid=1；不能施加背压,见有效条件；无独立Wrapper复位逻辑

@@ -48,6 +48,12 @@
 Thumbs.db
 desktop.ini
 
+# Independent user-authorized synchronization frontend repository.
+/Sync_Frontend/
+
+# Independent I16 CLIP demonstration.
+/I16_AddSub_CLIP/
+
 # 2026-09-15 module relocation: preserved originals and local generated products.
 /Sync_SFO/archive/
 /Sync_CFO/archive/

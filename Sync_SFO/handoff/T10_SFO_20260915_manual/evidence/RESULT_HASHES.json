@@ -1,0 +1,42 @@
+{
+  "files": [
+    {
+      "path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\result.txt",
+      "sha256": "87351CE7D12C1310FF3A50553354A840778D686A397480D8E9B47C8C1BCBC379",
+      "bytes": 299
+    },
+    {
+      "path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\data.csv",
+      "sha256": "AFF969B2EA97BE963385A7CF8614504914FA49E27EE7743DBC06DEFC49A4ED41",
+      "bytes": 63015850
+    },
+    {
+      "path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\events.csv",
+      "sha256": "8B33CFC2419810A39C79F67C5067A0D3B8D9996EE1D51900E70FF0F84BFB76E9",
+      "bytes": 11155
+    },
+    {
+      "path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\points.csv",
+      "sha256": "1AF274E95DD2341D8B2D97FF543CC5FB5B3CAB4DEAB283E620D6DB2EFB04DAEC",
+      "bytes": 3636
+    },
+    {
+      "path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\xpm_trace.csv",
+      "sha256": "50B3F747CC40FF37DEE9AB864F7ADAB2AA3118D6B47D2C4F53F8D0BC47129310",
+      "bytes": 3247706
+    },
+    {
+      "path": "D:\\008_MA_Dev\\vivado\\T10_SFO_exec_20260914_run03\\T10_SFO.sim\\sim_1\\behav\\xsim\\compile_order.txt",
+      "sha256": "4DD3322BB7D7746037B4E9965E1E726339DF2CB642D9EE2EAAEE3EE854651246",
+      "bytes": 8042
+    },
+    {
+      "path": "D:\\008_MA_Dev\\work\\t10_fullframe_20260914_run03\\native_stdout.log",
+      "sha256": "F67050E2537C3B864885429A220AB5577B0923C6C13740E9B084F082315C6F70",
+      "bytes": 379288
+    }
+  ],
+  "status": "PENDING_ASTRA_REVIEW",
+  "T10_PASS": false,
+  "post_repair": "rev04"
+}

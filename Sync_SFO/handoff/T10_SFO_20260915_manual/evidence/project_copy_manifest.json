@@ -1,0 +1,1053 @@
+{
+  "created_utc": "2026-09-15T07:00:43.359976+00:00",
+  "source_root": "D:\\008_MA_Dev",
+  "exact_approved_inputs": 144,
+  "original_xpr_unmodified": true,
+  "copy_xpr_byte_identical": true,
+  "generated_IP_outputs": "not included; generate locally from 34 frozen XCI; four FIR coefficient vectors are embedded",
+  "files": [
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\common\\bistatic_stream_pkg.sv",
+      "destination": "core_project/rtl/common/bistatic_stream_pkg.sv",
+      "sha256": "7C2551AA0D2827FD04515A9E782B6C015A4D26AC050303823F0C69CDA49DDA83",
+      "bytes": 2233,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t07\\farrow_microbench.sv",
+      "destination": "core_project/rtl/t07/farrow_microbench.sv",
+      "sha256": "8FF75991145F0F91EA7C1E78B36D57173C53AE254379C023E34F960508B68B91",
+      "bytes": 12105,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t07\\g3_down15_top.sv",
+      "destination": "core_project/rtl/t07/g3_down15_top.sv",
+      "sha256": "EEA609F0D99B0905DCDA5789BCE9EEB406E7362EE05EFBDE87F10711DD4FB52B",
+      "bytes": 3481,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t07\\g3_down47_top.sv",
+      "destination": "core_project/rtl/t07/g3_down47_top.sv",
+      "sha256": "66B78C8A23FDB867C2A70610E2A2D430B865A63147590C8221CA6C0B420B2BE4",
+      "bytes": 3480,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t07\\g3_farrow_guard_stream.sv",
+      "destination": "core_project/rtl/t07/g3_farrow_guard_stream.sv",
+      "sha256": "9D42E9B3357E01D3D3BFCF95FE1028F5677496762EE7EA0EBF6C2EE520DEA428",
+      "bytes": 9610,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t07\\g3_up15_top.sv",
+      "destination": "core_project/rtl/t07/g3_up15_top.sv",
+      "sha256": "3A0591EC246379325C9C0186BF86B71BB509502B265B82A285564FBB0BBAD53C",
+      "bytes": 2829,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t07\\g3_up47_top.sv",
+      "destination": "core_project/rtl/t07/g3_up47_top.sv",
+      "sha256": "9177632A07F446AA1066CEEE537EA920A79E4DC1B37451DA338D8D5C73D57C00",
+      "bytes": 2828,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\common\\t03_main_fft_service.sv",
+      "destination": "core_project/rtl/common/t03_main_fft_service.sv",
+      "sha256": "488759B2FB969C275E23B4C23BD2540C87C0E49DF75F86DBA50E8F884FD251BC",
+      "bytes": 8937,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\common\\t03_uram_frame_bank.sv",
+      "destination": "core_project/rtl/common/t03_uram_frame_bank.sv",
+      "sha256": "A43C37A867896264D87DBF0AE950C3AA9FE201070F19F9E379E3A23F806F545E",
+      "bytes": 1690,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\common\\t05_local_capture_buffer.sv",
+      "destination": "core_project/rtl/common/t05_local_capture_buffer.sv",
+      "sha256": "ED5FFDE09F09762F4C8AD998495521BE32FECD57E4D26C2B08B08A97C8B24C3C",
+      "bytes": 5954,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\common\\t05_phase_increment_controller.sv",
+      "destination": "core_project/rtl/common/t05_phase_increment_controller.sv",
+      "sha256": "D1C5D4CA3427AFFAED482413262280FE0A7DAEBE5B09CCC057583398D603FEF1",
+      "bytes": 3511,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\common\\t05_vendor_multiplier_adapters.sv",
+      "destination": "core_project/rtl/common/t05_vendor_multiplier_adapters.sv",
+      "sha256": "92FC0E54EE6C733459CB7F89E94C55D7189EB655EB2181CB52077AF85B58C54E",
+      "bytes": 2447,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_cfo_derotate_s16_4lane.sv",
+      "destination": "core_project/rtl/t06/t06_cfo_derotate_s16_4lane.sv",
+      "sha256": "0CEA082DFA19048A47DBAF40FAE7A0FCB616AB1E76991C7C5E33413FB46A3A52",
+      "bytes": 4759,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_dds_phase_4lane.sv",
+      "destination": "core_project/rtl/t06/t06_dds_phase_4lane.sv",
+      "sha256": "AAFCEB7E1844CE144686E004CD735CF9F1657D4292256F03CE9667CA24DED072",
+      "bytes": 4058,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_derotate_wide_4lane.sv",
+      "destination": "core_project/rtl/t06/t06_derotate_wide_4lane.sv",
+      "sha256": "FF22A8B966A6EACA8512C8CD4B13B7B7D062E982D5F2C728FBAAF1A943A1902A",
+      "bytes": 5772,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_fft_pair_extractor.sv",
+      "destination": "core_project/rtl/t06/t06_fft_pair_extractor.sv",
+      "sha256": "A36E84C1FFF6C4C5F55631B3172B571BF9127D02FC6B81DEF50F75BEEBBE7698",
+      "bytes": 9329,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_fft_pair_extractor_fifo.sv",
+      "destination": "core_project/rtl/t06/t06_fft_pair_extractor_fifo.sv",
+      "sha256": "FDD4F7C9B6214418B18726261395DCAA03F29E84964AC0F14AEED72F69E043A9",
+      "bytes": 1639,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_fft_pair_extractor_memory.sv",
+      "destination": "core_project/rtl/t06/t06_fft_pair_extractor_memory.sv",
+      "sha256": "AD0BCDD5355F6FE238A058D11DE1B8FA8058DDA4A55E399DE1CA9D16CCB61DF8",
+      "bytes": 1268,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_fft_swls_backend.sv",
+      "destination": "core_project/rtl/t06/t06_fft_swls_backend.sv",
+      "sha256": "F67F4B83A32C41011EADCBB56C00FD3A4BED08A41164B6C93C724A0DFD0887CB",
+      "bytes": 10422,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_five_sum_accumulator.sv",
+      "destination": "core_project/rtl/t06/t06_five_sum_accumulator.sv",
+      "sha256": "9DF86E6BC0A75331AB2DC18DAFEE28A62CA6B6ABADDAEE1CAC8F34E91006E293",
+      "bytes": 5664,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_frame_context_join.sv",
+      "destination": "core_project/rtl/t06/t06_frame_context_join.sv",
+      "sha256": "E8F4D46F8F368EC7BEE47DE062B09953535163C3B3BFBD20F950B4656751100C",
+      "bytes": 8566,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_initial_sfo_service.sv",
+      "destination": "core_project/rtl/t06/t06_initial_sfo_service.sv",
+      "sha256": "264C6B65921B4A5772F191CA0AE1635FDACB8265595CB748C1C58A2E5CD4C64C",
+      "bytes": 13948,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_initial_sfo_standalone.sv",
+      "destination": "core_project/rtl/t06/t06_initial_sfo_standalone.sv",
+      "sha256": "7A6589EC88E24A52EB933634407E8CD6824638AEEF67E95056F8532BF62B4513",
+      "bytes": 3791,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_main_fft_exclusive_owner.sv",
+      "destination": "core_project/rtl/t06/t06_main_fft_exclusive_owner.sv",
+      "sha256": "7E36196D21731EE645AC03627617B299D88EF0D4F8008C2C138388EE94998C0F",
+      "bytes": 5543,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_observation_engine.sv",
+      "destination": "core_project/rtl/t06/t06_observation_engine.sv",
+      "sha256": "03C691A4DE504F8892F4FC0B6D11CD509C16C39688DB57D960A8EC0A23CBAF67",
+      "bytes": 10755,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_observation_engine_2lane.sv",
+      "destination": "core_project/rtl/t06/t06_observation_engine_2lane.sv",
+      "sha256": "67CAFE9C6874B5F13F1C70487E933129383B1CA9ECDDB31E5C4F90A911821E45",
+      "bytes": 9336,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_observation_engine_fifo.sv",
+      "destination": "core_project/rtl/t06/t06_observation_engine_fifo.sv",
+      "sha256": "2FAEAD05A3457BA9006BBA5EA7E5437B9F5D18A054647BA374CDA8C3BF3E53C0",
+      "bytes": 1790,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_observation_store.sv",
+      "destination": "core_project/rtl/t06/t06_observation_store.sv",
+      "sha256": "542292C2C431052655717DC8C1C24DD7A091825E7CEC5B866EE0CB5EF8991163",
+      "bytes": 9341,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_observation_store_bank.sv",
+      "destination": "core_project/rtl/t06/t06_observation_store_bank.sv",
+      "sha256": "8966860D0FEB245098500B35C9B0EACFBB86D3FDB645E24397AF9C00654D5C0E",
+      "bytes": 1650,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_pair_max_tracker_2lane.sv",
+      "destination": "core_project/rtl/t06/t06_pair_max_tracker_2lane.sv",
+      "sha256": "F6CC77F6A56C634260AECB9CCFC8631F043A65058A22B4D035F0F704FA7FBD0D",
+      "bytes": 7684,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_pair_phasor_bfp.sv",
+      "destination": "core_project/rtl/t06/t06_pair_phasor_bfp.sv",
+      "sha256": "B603B6B3187B0DC6E5B513170B38ED7361D0D564F70157E6B7DA57E54CBB175B",
+      "bytes": 7640,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_ps3_ps10_job_sequencer.sv",
+      "destination": "core_project/rtl/t06/t06_ps3_ps10_job_sequencer.sv",
+      "sha256": "45B7C4A77005E77E4F4B5F322D896823598EDBE92753357C6D2C7BF3E35BE4C8",
+      "bytes": 3763,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_raw_reader_4lane.sv",
+      "destination": "core_project/rtl/t06/t06_raw_reader_4lane.sv",
+      "sha256": "594710DC49B057E041F35D563370836BFE7D5B25E57F6F247C734A4BDAD2D205",
+      "bytes": 9733,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_raw_reader_local_capture.sv",
+      "destination": "core_project/rtl/t06/t06_raw_reader_local_capture.sv",
+      "sha256": "56D87FA5D1F1A2940C1EE42F2FB53AE50708A54DE41C545DDE3E0A81A568586A",
+      "bytes": 6057,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_raw_to_fft_frontend.sv",
+      "destination": "core_project/rtl/t06/t06_raw_to_fft_frontend.sv",
+      "sha256": "B549A929678A75AE8FBF6EF3D400749DC919E3B5DA55B69A2952B5E800854CB1",
+      "bytes": 11369,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_regression_tail.sv",
+      "destination": "core_project/rtl/t06/t06_regression_tail.sv",
+      "sha256": "8CECD709DF1D9D5E190497D7FDC97C31498C9737FE2D5DF69E9161CE089561A7",
+      "bytes": 10624,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_shared_gain_s16_4lane.sv",
+      "destination": "core_project/rtl/t06/t06_shared_gain_s16_4lane.sv",
+      "sha256": "07EACFC133284E0C8BB2D4BD2399A49DF0DB7FC494C8802EE4883E812EA8E8D0",
+      "bytes": 2031,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_shared_gain_s16_lane.sv",
+      "destination": "core_project/rtl/t06/t06_shared_gain_s16_lane.sv",
+      "sha256": "42077D45C38486FB0D8C968F43AFFDE56D511D2FF3AA1DE41256E8128B8ADC9B",
+      "bytes": 9506,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_swls_weighted_backend.sv",
+      "destination": "core_project/rtl/t06/t06_swls_weighted_backend.sv",
+      "sha256": "21316ED19DA3A8A5AF2719FE19B25173C01DE401B94F43B12D3FA29F4FFFACE9",
+      "bytes": 14741,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_unsigned_divider_service.sv",
+      "destination": "core_project/rtl/t06/t06_unsigned_divider_service.sv",
+      "sha256": "7B1B2F6C8B47C6E1E68FBCC46F4CF7E791BBF0EA9DC1CE10D91AB8BD565F3E83",
+      "bytes": 6015,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_unsigned_divider_service_fifo.sv",
+      "destination": "core_project/rtl/t06/t06_unsigned_divider_service_fifo.sv",
+      "sha256": "1F359E0350B51EAC4C869A4ADC584BB6501139DE078ED5AD0BDE2626C8604B89",
+      "bytes": 1600,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t06\\t06_weight_pack.sv",
+      "destination": "core_project/rtl/t06/t06_weight_pack.sv",
+      "sha256": "6D55741CBE6A9D35B2FBD92CF0E1366656FDDE0D985151B49849638DA8F3452A",
+      "bytes": 4388,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t07\\t07_guard_frame_core.sv",
+      "destination": "core_project/rtl/t07/t07_guard_frame_core.sv",
+      "sha256": "B2A38BC1F7D79C7D0DC1F3EB15A5E1A6140AF7EBF5E01095D654D47C1976BA34",
+      "bytes": 4308,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t07\\t07_nominal_pack4_rev02.sv",
+      "destination": "core_project/rtl/t07/t07_nominal_pack4_rev02.sv",
+      "sha256": "DFEE265BAACAB0521F29D878A793053475414259AF68C273D6CC48D494BBB6E1",
+      "bytes": 2446,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t07\\t07_sync_fifo.sv",
+      "destination": "core_project/rtl/t07/t07_sync_fifo.sv",
+      "sha256": "81770BD607DF638284BF3A376CFD1A88EAD6D997D03D386A3268A3A0DC40D303",
+      "bytes": 1989,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t08\\t08_descriptor.sv",
+      "destination": "core_project/rtl/t08/t08_descriptor.sv",
+      "sha256": "46C06C7957470A4EF149EBE4B2BD7B854D5E7AB236F9C6CF02C0F9BF7194BC10",
+      "bytes": 6494,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t08\\t08_first_sfo_resampler.sv",
+      "destination": "core_project/rtl/t08/t08_first_sfo_resampler.sv",
+      "sha256": "F76C2519575C74C53C9CAA24652BFEA3B0F66656018B9397CECDA5B858D8EF49",
+      "bytes": 6866,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t08\\t08_frame_engine.sv",
+      "destination": "core_project/rtl/t08/t08_frame_engine.sv",
+      "sha256": "20BE3D9C80E715D30276323497A2328C2FA80B32F87F80C096523984F24D2B71",
+      "bytes": 8583,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_aux_ifft_service4.sv",
+      "destination": "core_project/rtl/t09/t09_aux_ifft_service4.sv",
+      "sha256": "8324E32294A41589BDBD324166A768B13D90A41941ED0178A4620DA24FF67C84",
+      "bytes": 10567,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_div_u80_u49_rne.sv",
+      "destination": "core_project/rtl/t09/t09_div_u80_u49_rne.sv",
+      "sha256": "AF1BCEAA62A5DD06D1FD5DD4BB079E109F53AB150D21DE387408CD9C857DEF78",
+      "bytes": 2617,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_dtp_frame_backend4.sv",
+      "destination": "core_project/rtl/t09/t09_dtp_frame_backend4.sv",
+      "sha256": "008F0102F3C9E0C28135427EA58A91DA5E5D345113F2A26586EAC0EBB3594D22",
+      "bytes": 6830,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_fft_grid_stage4.sv",
+      "destination": "core_project/rtl/t09/t09_fft_grid_stage4.sv",
+      "sha256": "2C705E5D22B7AE192A798EA25C7872D040B8350D5459F87818AD25121B56AD2C",
+      "bytes": 7415,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_grid_packet_queue2.sv",
+      "destination": "core_project/rtl/t09/t09_grid_packet_queue2.sv",
+      "sha256": "8765D5DC53F27D84B35E3EA7F27F285305A12D0C060BCEDBAF7AA941A4260E1C",
+      "bytes": 3166,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_main_fft_service4.sv",
+      "destination": "core_project/rtl/t09/t09_main_fft_service4.sv",
+      "sha256": "B0854B778D76EE945B01BCE3F5D42C8B0A81242622884307368C7E84B27AC7E4",
+      "bytes": 10685,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_main_fft_window4.sv",
+      "destination": "core_project/rtl/t09/t09_main_fft_window4.sv",
+      "sha256": "34B74F5125AF359BCFE0D040D6279AC7061D7D8FAEB4575305671577C91EF5A4",
+      "bytes": 8315,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_nominal_window_reader4.sv",
+      "destination": "core_project/rtl/t09/t09_nominal_window_reader4.sv",
+      "sha256": "F0BEA6745B7B30414C3C0FE5B5A0FCBFFCE121358219AC6A74E68255BBC70F44",
+      "bytes": 6965,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_peak_interpolate.sv",
+      "destination": "core_project/rtl/t09/t09_peak_interpolate.sv",
+      "sha256": "73C14A9F5627DFE8112CFF00782E2EE19379724EA1F9AF4568D420BBD1DA0733",
+      "bytes": 4880,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_peak_triplet4.sv",
+      "destination": "core_project/rtl/t09/t09_peak_triplet4.sv",
+      "sha256": "A41103C7C422EB979F4E4BE8E9E62103B71491B456D321C452E2336610A15B9B",
+      "bytes": 6047,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_pilot_front2.sv",
+      "destination": "core_project/rtl/t09/t09_pilot_front2.sv",
+      "sha256": "119ED24B88B7B90B880E5D1053D43B89D959780FCC4F12F8D33B6A7B5F59A5F1",
+      "bytes": 2122,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_pilot_grid4.sv",
+      "destination": "core_project/rtl/t09/t09_pilot_grid4.sv",
+      "sha256": "C45835A0BE682D5249C467B3ACC779C717DF6E4FC9F82904C85060B33A5BB108",
+      "bytes": 7552,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_pilot_rotate2.sv",
+      "destination": "core_project/rtl/t09/t09_pilot_rotate2.sv",
+      "sha256": "9F1D51C53EE2347BD173A9CD44B53A53AB1E3DAB5368A0F6D00052DFF39EC4ED",
+      "bytes": 3278,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_pilot_select_phase4.sv",
+      "destination": "core_project/rtl/t09/t09_pilot_select_phase4.sv",
+      "sha256": "B0108B31769B496C16E9E7EEFF984CD635939E6601E31723E7C489C373FEF2EC",
+      "bytes": 1765,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_power4.sv",
+      "destination": "core_project/rtl/t09/t09_power4.sv",
+      "sha256": "B4933D6B4A7193B6DDECE3EF9A7DF765C3B2E3F819BB3FDC7E62F0D76070BBEE",
+      "bytes": 1171,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_residual_sfo_pipeline4.sv",
+      "destination": "core_project/rtl/t09/t09_residual_sfo_pipeline4.sv",
+      "sha256": "4179728569BB40F38EE38945BD850E0C90172F9AA1F982F42D3524D3C04974B7",
+      "bytes": 10895,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t09\\t09_sfo_ls74.sv",
+      "destination": "core_project/rtl/t09/t09_sfo_ls74.sv",
+      "sha256": "C588B2E78814B2393069D9FDCF662DCAB31EF8529AD824F7E420A71AB547D3D0",
+      "bytes": 8272,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t10\\t10_cdc_fifo.sv",
+      "destination": "core_project/rtl/t10/t10_cdc_fifo.sv",
+      "sha256": "A6FC48DB68C7344E2685B501EE554B024E8A278B27A02756E6DDF0D6346137BE",
+      "bytes": 2705,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t10\\t10_domain_reset.sv",
+      "destination": "core_project/rtl/t10/t10_domain_reset.sv",
+      "sha256": "6DAEC6D46375352ED699C5AC4D8197ADB723AA7256BB24B5CBDE66A390BDAE7C",
+      "bytes": 514,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t10\\t10_output_buffer.sv",
+      "destination": "core_project/rtl/t10/t10_output_buffer.sv",
+      "sha256": "01AF295576E5B783B0979D3646EA6BAA411E78E60045F7B8E7AF913FD434B1A3",
+      "bytes": 3615,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t10\\t10_r1_bank.sv",
+      "destination": "core_project/rtl/t10/t10_r1_bank.sv",
+      "sha256": "C3EAB6766CAEF06A60BA6EC1C2C046909FB20DBB85AB00F8BFDF7CC991A74FC8",
+      "bytes": 6042,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t10\\t10_raw_ring.sv",
+      "destination": "core_project/rtl/t10/t10_raw_ring.sv",
+      "sha256": "9D859488CB7F891FD3E2BF9C2B78497C4041A60DA60EE3A320028397271538BB",
+      "bytes": 5774,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t10\\t10_second_descriptor.sv",
+      "destination": "core_project/rtl/t10/t10_second_descriptor.sv",
+      "sha256": "29F6D2E515D1FF855BA731D7B4EB0A16A370315393D5F26D5767E172B7EBBD15",
+      "bytes": 6733,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t10\\t10_second_sfo_resampler.sv",
+      "destination": "core_project/rtl/t10/t10_second_sfo_resampler.sv",
+      "sha256": "97CC8079ECA050638BCF614DBB1CE8090EED9497664E86157D2AF4C50F35CD81",
+      "bytes": 6759,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t10\\t10_two_pass_system.sv",
+      "destination": "core_project/rtl/t10/t10_two_pass_system.sv",
+      "sha256": "61C5831E1D406825421440C17CA35A995FC8EFE1C6D44A16D7803690C8A598E1",
+      "bytes": 8674,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\t10\\t10_two_pass_transport.sv",
+      "destination": "core_project/rtl/t10/t10_two_pass_transport.sv",
+      "sha256": "C3259FC95C12EA9CA84B55A89B8EA09EA58F50BFC7ED25B1F962FF8424C7EBCE",
+      "bytes": 17991,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\include\\t06_observation_engine_ip_config.svh",
+      "destination": "core_project/rtl/include/t06_observation_engine_ip_config.svh",
+      "sha256": "0ADD552BDAE0412679636D3868886543F16B3E2E7E1C8A3CF58D92C648601110",
+      "bytes": 68,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\include\\t06_pair_max_tracker_2lane_ip_config.svh",
+      "destination": "core_project/rtl/include/t06_pair_max_tracker_2lane_ip_config.svh",
+      "sha256": "2972533FC8F285EF8BA384AA5A850C26EE617F7EA13F5AB5BAC13CA91F845265",
+      "bytes": 38,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\include\\t06_shared_gain_ip_config.svh",
+      "destination": "core_project/rtl/include/t06_shared_gain_ip_config.svh",
+      "sha256": "361A4FD37406C4DB451312A33D103798D0B86AF000C574E0341538FB6620C3D8",
+      "bytes": 217,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\vendor\\xpm\\xpm_cdc.sv",
+      "destination": "core_project/rtl/vendor/xpm/xpm_cdc.sv",
+      "sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7",
+      "bytes": 64836,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\vendor\\xpm\\xpm_fifo.sv",
+      "destination": "core_project/rtl/vendor/xpm/xpm_fifo.sv",
+      "sha256": "D3C1E861CDDF00EBC82552C464A46FB5228E68B4D458001D064B99E04134B9D4",
+      "bytes": 230951,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\vendor\\xpm\\xpm_memory.sv",
+      "destination": "core_project/rtl/vendor/xpm/xpm_memory.sv",
+      "sha256": "E72758E6794B1F7AD00428FEEEACC4F90A38B0500583B2CA93CA2EBA12BA01BD",
+      "bytes": 486058,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\farrow_add_18\\farrow_add_18.xci",
+      "destination": "core_project/ip/config/farrow_add_18/farrow_add_18.xci",
+      "sha256": "C59B56A551EC4C824E695646B4A2F757CD3DF1E030341EB5A6EF5F452710C49F",
+      "bytes": 28292,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\farrow_add_28\\farrow_add_28.xci",
+      "destination": "core_project/ip/config/farrow_add_28/farrow_add_28.xci",
+      "sha256": "090F076B7CE244908188CF51D5F410C56C74C8B453A1278A17A699172B69569B",
+      "bytes": 28312,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\farrow_add_32\\farrow_add_32.xci",
+      "destination": "core_project/ip/config/farrow_add_32/farrow_add_32.xci",
+      "sha256": "A731CD261DBD8AC20695DB75E0993ABBBE7566187A8D51D29FA4A7FFEA9834B7",
+      "bytes": 28320,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\farrow_mul_h16\\farrow_mul_h16.xci",
+      "destination": "core_project/ip/config/farrow_mul_h16/farrow_mul_h16.xci",
+      "sha256": "9B260BA5B07D0C9317CCCC7DFDD06DBA2AA65680689BB649B1470E26C8DAB8DA",
+      "bytes": 20398,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\farrow_mul_t16\\farrow_mul_t16.xci",
+      "destination": "core_project/ip/config/farrow_mul_t16/farrow_mul_t16.xci",
+      "sha256": "6FE20F2014DC030CB04538CEC8558B799CCC9F398B6ABDB77C0301F08917475F",
+      "bytes": 20400,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t03_xfft_16384_aux\\t03_xfft_16384_aux.xci",
+      "destination": "core_project/ip/config/t03_xfft_16384_aux/t03_xfft_16384_aux.xci",
+      "sha256": "6F63F1BEA9D2890A98E2E49D948E3A30AC75A7C5518C899B0C50FAAB46AE1E49",
+      "bytes": 67189,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t03_xfft_2048_main\\t03_xfft_2048_main.xci",
+      "destination": "core_project/ip/config/t03_xfft_2048_main/t03_xfft_2048_main.xci",
+      "sha256": "762FDCE0E56FD831F7F3D4F8FCB037856407FF9429C8B946B825C3324BBFCAEC",
+      "bytes": 67051,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t04_cmpy_17x16\\t04_cmpy_17x16.xci",
+      "destination": "core_project/ip/config/t04_cmpy_17x16/t04_cmpy_17x16.xci",
+      "sha256": "3B5F97E08D80086C107A49149C49D6EF65B97C955F1431218A1DB85479071B42",
+      "bytes": 47563,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t04_div_u63_u47\\t04_div_u63_u47.xci",
+      "destination": "core_project/ip/config/t04_div_u63_u47/t04_div_u63_u47.xci",
+      "sha256": "5284131BD9865656E0F4CE8778ACC3A5BEF5E5E09BE22773C84C8108BD453C00",
+      "bytes": 45744,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t05_cmpy_rotate_18x18\\t05_cmpy_rotate_18x18.xci",
+      "destination": "core_project/ip/config/t05_cmpy_rotate_18x18/t05_cmpy_rotate_18x18.xci",
+      "sha256": "4BE6339FBC2848B3FD4B2B4CCEC7A74517872411F7377C748229FF548A746832",
+      "bytes": 47577,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t05_mult_cfo_s19_const40_full59\\t05_mult_cfo_s19_const40_full59.xci",
+      "destination": "core_project/ip/config/t05_mult_cfo_s19_const40_full59/t05_mult_cfo_s19_const40_full59.xci",
+      "sha256": "0D3686353DB05C6B15EDDF35B5839284297249A205D6B562C901716A46559815",
+      "bytes": 20257,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_cordic_translate48_parallel\\t06_cordic_translate48_parallel.xci",
+      "destination": "core_project/ip/config/t06_cordic_translate48_parallel/t06_cordic_translate48_parallel.xci",
+      "sha256": "9A3F252B67BB28FB7D157E8BBAB7896F966396B62BFDFF94D02470F7F6C7ECC1",
+      "bytes": 39929,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_dds_phase_s32_sincos18\\t06_dds_phase_s32_sincos18.xci",
+      "destination": "core_project/ip/config/t06_dds_phase_s32_sincos18/t06_dds_phase_s32_sincos18.xci",
+      "sha256": "474FDDA03A39065AF86879234777345DB23D6C828341D5A02201F720CBC0099C",
+      "bytes": 67686,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_fs_mult_s29_s11\\t06_fs_mult_s29_s11.xci",
+      "destination": "core_project/ip/config/t06_fs_mult_s29_s11/t06_fs_mult_s29_s11.xci",
+      "sha256": "BE0EFE276E4F442A0792981CBA88FC7273104375219AE8E2D6C445136D3860D6",
+      "bytes": 20411,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_fs_mult_s29_s48\\t06_fs_mult_s29_s48.xci",
+      "destination": "core_project/ip/config/t06_fs_mult_s29_s48/t06_fs_mult_s29_s48.xci",
+      "sha256": "B58292E3D232D06AB631FF2B78A32914A61182A13CD01FD513F9619B9780D69E",
+      "bytes": 20411,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_fs_mult_u18_s11\\t06_fs_mult_u18_s11.xci",
+      "destination": "core_project/ip/config/t06_fs_mult_u18_s11/t06_fs_mult_u18_s11.xci",
+      "sha256": "5933DBCB00B1E0956EE11A916730ABA44670165893810635D2263B4374393049",
+      "bytes": 20413,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_fs_mult_u18_s48\\t06_fs_mult_u18_s48.xci",
+      "destination": "core_project/ip/config/t06_fs_mult_u18_s48/t06_fs_mult_u18_s48.xci",
+      "sha256": "1A3E9E46FD46ED3F0009D62F1383593211AD25AE83A329B6CA33437A6A48F2F2",
+      "bytes": 20413,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_observation_engine_square\\t06_observation_engine_square.xci",
+      "destination": "core_project/ip/config/t06_observation_engine_square/t06_observation_engine_square.xci",
+      "sha256": "13E43E8C85E7231FD0EDE5A3B09E8917D9419C90D8B4E04FA78FE0282E0BF1D4",
+      "bytes": 20253,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_observation_engine_weight_product\\t06_observation_engine_weight_product.xci",
+      "destination": "core_project/ip/config/t06_observation_engine_weight_product/t06_observation_engine_weight_product.xci",
+      "sha256": "DC927825EBF7BB9CA6F491315CA0B436A3EEB77675E5ABF8B27015374779217D",
+      "bytes": 20273,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_pair_max_tracker_2lane_cross\\t06_pair_max_tracker_2lane_cross.xci",
+      "destination": "core_project/ip/config/t06_pair_max_tracker_2lane_cross/t06_pair_max_tracker_2lane_cross.xci",
+      "sha256": "98B6150104895F84C3FB55831E80A6605147082FA7405B8DF31234806D0FA6CE",
+      "bytes": 20263,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_rt_mult_s41_s38\\t06_rt_mult_s41_s38.xci",
+      "destination": "core_project/ip/config/t06_rt_mult_s41_s38/t06_rt_mult_s41_s38.xci",
+      "sha256": "B677F184E7B9F9C26BCB085BB8EF03ADB920F6BEE1486AC1B6D4B4C822F96424",
+      "bytes": 20411,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_rt_mult_s41_s41\\t06_rt_mult_s41_s41.xci",
+      "destination": "core_project/ip/config/t06_rt_mult_s41_s41/t06_rt_mult_s41_s41.xci",
+      "sha256": "601EF1B7AA9ED64448B17A53B7109CDC4E07D985F5F7F9221CC9E06B1DC89898",
+      "bytes": 20411,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_rt_mult_s41_u38\\t06_rt_mult_s41_u38.xci",
+      "destination": "core_project/ip/config/t06_rt_mult_s41_u38/t06_rt_mult_s41_u38.xci",
+      "sha256": "B1F6C1A01D83A155974947B02C276E607A0D55FD0C7DC14BF0204EF6B7EDB6E7",
+      "bytes": 20413,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_rt_mult_u30_s42\\t06_rt_mult_u30_s42.xci",
+      "destination": "core_project/ip/config/t06_rt_mult_u30_s42/t06_rt_mult_u30_s42.xci",
+      "sha256": "1116393DDD55593755CB1FFC9B3FF277FFB6541A0A4D8821C817941571C11075",
+      "bytes": 20413,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_rt_mult_u30_u43\\t06_rt_mult_u30_u43.xci",
+      "destination": "core_project/ip/config/t06_rt_mult_u30_u43/t06_rt_mult_u30_u43.xci",
+      "sha256": "6093BB16DFB172EC11CAD0043D4CDF0ECF79B14F789FECF29A0195CC56060670",
+      "bytes": 20415,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_rt_mult_u30_u48\\t06_rt_mult_u30_u48.xci",
+      "destination": "core_project/ip/config/t06_rt_mult_u30_u48/t06_rt_mult_u30_u48.xci",
+      "sha256": "740242938119EAEE8A8AB7A830BB7211BCE183E180B171A7E7F8603FFC4A49B1",
+      "bytes": 20415,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_rt_mult_u48_u20\\t06_rt_mult_u48_u20.xci",
+      "destination": "core_project/ip/config/t06_rt_mult_u48_u20/t06_rt_mult_u48_u20.xci",
+      "sha256": "8753021E311A6E7E4419F95019F550519498659E25575335D9F84B6A250D3C9E",
+      "bytes": 20415,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_sg_div_u53_u37\\t06_sg_div_u53_u37.xci",
+      "destination": "core_project/ip/config/t06_sg_div_u53_u37/t06_sg_div_u53_u37.xci",
+      "sha256": "903947A2CAABAEBB2CA5CFC87BEC43CE193273AB324BA73DD186283E5E72BA4D",
+      "bytes": 46491,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_sg_mult_u37_u16\\t06_sg_mult_u37_u16.xci",
+      "destination": "core_project/ip/config/t06_sg_mult_u37_u16/t06_sg_mult_u37_u16.xci",
+      "sha256": "00E9B88807D212719DE7B7858DD361BA6E9886DC821D16204D043C463EA576CD",
+      "bytes": 20705,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t06_wp_mult_u64_u33\\t06_wp_mult_u64_u33.xci",
+      "destination": "core_project/ip/config/t06_wp_mult_u64_u33/t06_wp_mult_u64_u33.xci",
+      "sha256": "4C1516082903F9D93EBC600D629F4A5AF8AC0562AB9FE31875B3C3037CE2AD97",
+      "bytes": 20705,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t07_g3_down15\\t07_g3_down15.xci",
+      "destination": "core_project/ip/config/t07_g3_down15/t07_g3_down15.xci",
+      "sha256": "72191452E7C3482E22AF05C2F1472B07FB67F788C598DABBDFF55A764BAF201D",
+      "bytes": 67417,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t07_g3_down47\\t07_g3_down47.xci",
+      "destination": "core_project/ip/config/t07_g3_down47/t07_g3_down47.xci",
+      "sha256": "A5070390646EE6D102C4F427DE7ECCDBF1395F820E6636163428A4B816962517",
+      "bytes": 66537,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t07_g3_up15\\t07_g3_up15.xci",
+      "destination": "core_project/ip/config/t07_g3_up15/t07_g3_up15.xci",
+      "sha256": "7AD4DBAC8E0C96796C4BC6B8DE7687E77AEF12C8A408E0ED6B924E7D9DA759F7",
+      "bytes": 67122,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\config\\t07_g3_up47\\t07_g3_up47.xci",
+      "destination": "core_project/ip/config/t07_g3_up47/t07_g3_up47.xci",
+      "sha256": "3D3F04B8886359E0491152C77AFB1B8D649880AC8B2DD6C4037A90525C3157ED",
+      "bytes": 66477,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\sim\\tb\\t10_full023_fifo_observer.sv",
+      "destination": "core_project/sim/tb/t10_full023_fifo_observer.sv",
+      "sha256": "B72A81B5DD062CBAFCDECC179C68631905616E44F7B45CF8CBF2E650E0A288FC",
+      "bytes": 2200,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\sim\\tb\\t10_full023_tb.sv",
+      "destination": "core_project/sim/tb/t10_full023_tb.sv",
+      "sha256": "E50246C79470334DED125DAC1D6C8337855C45924CECC12890347018CAC229C4",
+      "bytes": 11920,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\sim\\data\\raw.mem",
+      "destination": "core_project/sim/data/raw.mem",
+      "sha256": "8EE64DC2C60497176D98FB68D4259E805AB0122D2933A4059F25BE3A80AE33DA",
+      "bytes": 11363310,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\sim\\data\\r1.mem",
+      "destination": "core_project/sim/data/r1.mem",
+      "sha256": "9A10E8A668C72645DB11ECABE2F95B19FE297939A2161B5A225B886AED0708E5",
+      "bytes": 11359332,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\sim\\data\\r2.mem",
+      "destination": "core_project/sim/data/r2.mem",
+      "sha256": "EE1B6AB0FE36EFC43CA6F293B1C3F42797CE3483C9C6CA387B226D0088E18894",
+      "bytes": 11358720,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\sim\\data\\delay.mem",
+      "destination": "core_project/sim/data/delay.mem",
+      "sha256": "CA339B6D39A32C0B190B9CC6E3E2258C063E861B9DF1BF994AAD15A3B71EBD4B",
+      "bytes": 592,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\sim\\data\\delta.mem",
+      "destination": "core_project/sim/data/delta.mem",
+      "sha256": "53023254A2CB1EBCA4097E69919C0E6ED3FBDF86B274F19BC25DC182CB89C477",
+      "bytes": 518,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\sim\\data\\t09_pilot_phase.mem",
+      "destination": "core_project/sim/data/t09_pilot_phase.mem",
+      "sha256": "849DC48015473BF266B2B5B9A62F8FFD400AD82E9BF2E1E16CB99FDCC6F611FF",
+      "bytes": 151552,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\sim\\data\\provenance.json",
+      "destination": "core_project/sim/data/provenance.json",
+      "sha256": "25E1B9C25B7430B8121A54A03E90B1FE906A8C626AF2455A529821A510E29C71",
+      "bytes": 2358,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\analysis\\evidence\\t09_fixed007_case006.json",
+      "destination": "core_project/tools/analysis/evidence/t09_fixed007_case006.json",
+      "sha256": "F9E4A340C5B2DDC8954A2DFF62BF2EB3AFFDB043F8B4C8B2B4A0BC6BFAB4F098",
+      "bytes": 28969,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\analysis\\check_prefix.py",
+      "destination": "core_project/tools/analysis/check_prefix.py",
+      "sha256": "31CA0241D18673CC22F98B3923EA7882CEADB989E7CC614B26996C586AE4B804",
+      "bytes": 5313,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\sources.f",
+      "destination": "core_project/rtl/sources.f",
+      "sha256": "AF563F9FD1DF0806305AEFBB58DC0F65F5139F2B155784D37C1557580BCE9B8B",
+      "bytes": 2448,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\ip_names.txt",
+      "destination": "core_project/ip/ip_names.txt",
+      "sha256": "C33880EFE087A6CB7FB4CA41221816DBEC78D4DB1E22B2BE7668270800FEC00C",
+      "bytes": 686,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\expected_user_config.json",
+      "destination": "core_project/ip/expected_user_config.json",
+      "sha256": "E4BCEF84AA04F537694925B66CEFB6E76B8410BB9F1CEAB40614DA793D20B661",
+      "bytes": 36652,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\rtl\\vendor\\xpm\\README_ZH.md",
+      "destination": "core_project/rtl/vendor/xpm/README_ZH.md",
+      "sha256": "D067EEB78CE05A5FF32CFE3AA867738E8D98EB3072A4C9C2DD105B23116D71CB",
+      "bytes": 304,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\README_ZH.md",
+      "destination": "core_project/ip/README_ZH.md",
+      "sha256": "8DE7AF854FC7592FB444DB24ADC81FCCD9805FD549BCC9F594DBDCD864EB521F",
+      "bytes": 816,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\constraints\\t10_root_clocks.xdc",
+      "destination": "core_project/constraints/t10_root_clocks.xdc",
+      "sha256": "2E2C1FF7016504A9D2FEB9A9B28B6D5E055062F36609D0FE97B02B9F1F30C05F",
+      "bytes": 269,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\vivado\\create_project.tcl",
+      "destination": "core_project/tools/vivado/create_project.tcl",
+      "sha256": "14E488BC2E662DA751CFA33AF2E7FC6173E9A492F537D100D7BAC406531C81B6",
+      "bytes": 3322,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\vivado\\start_simulation_0ns.tcl",
+      "destination": "core_project/tools/vivado/start_simulation_0ns.tcl",
+      "sha256": "23A758230E59E894C19D0FDC0555B2A8ECBE2E0670671F8C58EEF7FE5E683E68",
+      "bytes": 1773,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\vivado\\setup_waves.tcl",
+      "destination": "core_project/tools/vivado/setup_waves.tcl",
+      "sha256": "9FF84B8CF9F16C22299035E3816A56D0E8764B74CF49666AC155E515C85D75D0",
+      "bytes": 731,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\analysis\\validate_gui.py",
+      "destination": "core_project/tools/analysis/validate_gui.py",
+      "sha256": "B832EBBD9A0BD2305A679F01D68965C9BD4D47F610F47DF87A524A9216C546C2",
+      "bytes": 12453,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\analysis\\report_evm_gui.py",
+      "destination": "core_project/tools/analysis/report_evm_gui.py",
+      "sha256": "3D4EF26440B4A391662429E5EF9C80E5C4AD17CF281C2CEEE1FE0CD9361A2462",
+      "bytes": 2522,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\analysis\\migration_diff.patch",
+      "destination": "core_project/tools/analysis/migration_diff.patch",
+      "sha256": "E16A53EFA1FF1559C42B4572017BF721D50248A948450607227BA6207546A147",
+      "bytes": 23945,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\analysis\\README_ZH.md",
+      "destination": "core_project/tools/analysis/README_ZH.md",
+      "sha256": "7172C1027046DFA9A9F5FA0B7C2209DA0ADA4585EF091699E0BA66BE86F70A7B",
+      "bytes": 2600,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\docs\\RTL_MIGRATION_NOTES_ZH.md",
+      "destination": "core_project/docs/RTL_MIGRATION_NOTES_ZH.md",
+      "sha256": "CD2839BA0A3CD2045A44CD20DEEC7D5AE865E9CF47261966842A677B5D1F7D11",
+      "bytes": 6483,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\ip\\expected_user_config.tcl",
+      "destination": "core_project/ip/expected_user_config.tcl",
+      "sha256": "96DE062EE2B381C3C432143F6B5BF16FB1667EF6B1C915F65A9D9BBF50C02F02",
+      "bytes": 86498,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\analysis\\evidence\\expected_fifo_bindings.json",
+      "destination": "core_project/tools/analysis/evidence/expected_fifo_bindings.json",
+      "sha256": "E8863F5B61D2293FAEDC00C3BD017BF402A63DEF02266DB008352586CAC93142",
+      "bytes": 12559,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\vivado\\T10_SFO\\T10_SFO.xpr",
+      "destination": "core_project/vivado/T10_SFO/T10_SFO.xpr",
+      "sha256": "05E4DB9B97E5BB49A43F24ABFF28D372409F79ED08DBD515F6E703C2F62249A2",
+      "bytes": 65320,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\vivado\\configure_parallel_jobs.tcl",
+      "destination": "core_project/tools/vivado/configure_parallel_jobs.tcl",
+      "sha256": "8E532A973C4FAE6B6356231D9E27C5033995009387FF0E6EE890B859CC0EDBBF",
+      "bytes": 4994,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\tools\\vivado\\run_threads.tcl",
+      "destination": "core_project/tools/vivado/run_threads.tcl",
+      "sha256": "0B2B1B5D643F1109C97C6ED3EB775F44A33367499C05D8AFCFB4F2D15FEA798F",
+      "bytes": 471,
+      "role": "frozen RUN03 project input"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\work\\t10_fullframe_20260914_run03\\APPROVED_INPUTS.csv",
+      "destination": "core_project/docs/provenance/RUN03_APPROVED_INPUTS.csv",
+      "sha256": "02205C9E0823991ED9CD16BC9C43357EA014EF2FF2C537F4E7DC54D9AB01448D",
+      "bytes": 41494,
+      "role": "provenance or constraint boundary"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\docs\\provenance\\RTL_COPY_MANIFEST.csv",
+      "destination": "core_project/docs/provenance/RTL_COPY_MANIFEST.csv",
+      "sha256": "E5B53BB4E2E6EA86C54B0A55054D75637BD05D237BFD7EC3077FCD0B1285BA5B",
+      "bytes": 39386,
+      "role": "provenance or constraint boundary"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\constraints\\README_ZH.md",
+      "destination": "core_project/constraints/README_ZH.md",
+      "sha256": "DE1D4B26F121394A5158F618AAB8D0299601CF2EF847FDA5FA21BA6075C7BB62",
+      "bytes": 1075,
+      "role": "provenance or constraint boundary"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\constraints\\reference_synth016\\production_clocks.xdc",
+      "destination": "core_project/constraints/reference_synth016/production_clocks.xdc",
+      "sha256": "2A78BAAE4E6C78E7887E239B5038B89FA9004833B80DA556559EC0E0356F24BB",
+      "bytes": 610,
+      "role": "historical constraints NOT active"
+    },
+    {
+      "source": "D:\\008_MA_Dev\\constraints\\reference_synth016\\production_crossing_constraints.tcl",
+      "destination": "core_project/constraints/reference_synth016/production_crossing_constraints.tcl",
+      "sha256": "D43B54D9ABCFDB473EE8A4A7FE236A7C1FBF48A275482C95AC3FF52FE8470C29",
+      "bytes": 1419,
+      "role": "historical constraints NOT active"
+    }
+  ]
+}
