@@ -1,11 +1,11 @@
 {
-  "core": "t10_two_pass_system",
-  "core_source_sha256": "61C5831E1D406825421440C17CA35A995FC8EFE1C6D44A16D7803690C8A598E1",
+  "core": "sync_sfo_top",
+  "core_source_sha256": "A24B1CCEDEB38E5E8E001402C3A1FD38EDFBA5E7BCE007A00D5037597980003F",
   "core_parameter": {
     "OUTPUT_CLOCK_MHZ": 150
   },
   "parameter_binding": "Uses frozen core default150; no VHDL generic or runtime setting. Synthesized core must retain this value.",
-  "entity": "t10_sfo_manual_wrapper",
+  "entity": "sync_sfo_manual_wrapper",
   "core_ports": [
     {
       "name": "clk125",
@@ -1658,5 +1658,8 @@
   ],
   "no_clock_generation": true,
   "no_added_CDC_or_registers": true,
-  "native_wrapper_compilation": "NOT_RUN_STATIC_DELIVERY_ONLY"
+  "native_wrapper_compilation": "NOT_RUN_STATIC_DELIVERY_ONLY",
+  "baseline_commit": "dd5e8f7a642625f06c4996d17e3642bbadc7d557",
+  "functional_refactor_proof": "../docs/functional_review_20260915/preview_equivalence_v2.json",
+  "wrapper_source_sha256": "137C3DDEB38BEDEF61DF80D75EDE42F03A2C027CC95E4474BED787F4C2B20CA9"
 }

@@ -265,511 +265,511 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/common/bistatic_stream_pkg.sv">
+      <File Path="$PPRDIR/rtl/common/sfo_stream_pkg.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t07/farrow_microbench.sv">
+      <File Path="$PPRDIR/rtl/resampling/sfo_farrow_arithmetic.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t07/g3_down15_top.sv">
+      <File Path="$PPRDIR/rtl/resampling/sfo_fir_down15.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t07/g3_down47_top.sv">
+      <File Path="$PPRDIR/rtl/resampling/sfo_fir_down47.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t07/g3_farrow_guard_stream.sv">
+      <File Path="$PPRDIR/rtl/resampling/sfo_guarded_farrow_stream.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t07/g3_up15_top.sv">
+      <File Path="$PPRDIR/rtl/resampling/sfo_fir_up15.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t07/g3_up47_top.sv">
+      <File Path="$PPRDIR/rtl/resampling/sfo_fir_up47.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/common/t03_main_fft_service.sv">
+      <File Path="$PPRDIR/rtl/fft_service/sfo_initial_fft_service.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/common/t03_uram_frame_bank.sv">
+      <File Path="$PPRDIR/rtl/buffering/sfo_uram_frame_bank.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/common/t05_local_capture_buffer.sv">
+      <File Path="$PPRDIR/rtl/buffering/sfo_training_capture_buffer.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/common/t05_phase_increment_controller.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_cfo_phase_increment.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/common/t05_vendor_multiplier_adapters.sv">
+      <File Path="$PPRDIR/rtl/common/sfo_vendor_multiplier_adapters.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_cfo_derotate_s16_4lane.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_cfo_derotate_s16_4lane.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_dds_phase_4lane.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_dds_phase_4lane.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_derotate_wide_4lane.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_derotate_wide_4lane.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_fft_pair_extractor.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_fft_pair_extractor.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_fft_pair_extractor_fifo.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_fft_pair_extractor_fifo.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_fft_pair_extractor_memory.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_fft_pair_extractor_memory.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_fft_swls_backend.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_fft_swls_backend.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_five_sum_accumulator.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_five_sum_accumulator.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_frame_context_join.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_frame_context_join.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_initial_sfo_service.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_estimation_service.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_initial_sfo_standalone.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_estimator.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_main_fft_exclusive_owner.sv">
+      <File Path="$PPRDIR/rtl/fft_service/sfo_initial_fft_arbiter.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_observation_engine.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_observation_engine.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_observation_engine_2lane.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_observation_engine_2lane.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_observation_engine_fifo.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_observation_engine_fifo.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_observation_store.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_observation_store.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_observation_store_bank.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_observation_store_bank.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_pair_max_tracker_2lane.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_pair_max_tracker_2lane.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_pair_phasor_bfp.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_pair_phasor_bfp.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_ps3_ps10_job_sequencer.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_ps3_ps10_job_sequencer.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_raw_reader_4lane.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_raw_reader_4lane.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_raw_reader_local_capture.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_raw_reader_local_capture.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_raw_to_fft_frontend.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_raw_to_fft_frontend.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_regression_tail.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_regression_tail.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_shared_gain_s16_4lane.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_shared_gain_s16_4lane.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_shared_gain_s16_lane.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_shared_gain_s16_lane.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_swls_weighted_backend.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_swls_weighted_backend.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_unsigned_divider_service.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_unsigned_divider_service.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_unsigned_divider_service_fifo.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_unsigned_divider_service_fifo.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t06/t06_weight_pack.sv">
+      <File Path="$PPRDIR/rtl/initial_estimation/sfo_initial_weight_pack.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t07/t07_guard_frame_core.sv">
+      <File Path="$PPRDIR/rtl/resampling/sfo_guarded_resampling_core.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t07/t07_nominal_pack4_rev02.sv">
+      <File Path="$PPRDIR/rtl/resampling/sfo_nominal_pack4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t07/t07_sync_fifo.sv">
+      <File Path="$PPRDIR/rtl/buffering/sfo_sync_fifo.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t08/t08_descriptor.sv">
+      <File Path="$PPRDIR/rtl/first_resampling/sfo_first_pass_descriptor.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t08/t08_first_sfo_resampler.sv">
+      <File Path="$PPRDIR/rtl/first_resampling/sfo_first_resampler.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t08/t08_frame_engine.sv">
+      <File Path="$PPRDIR/rtl/first_resampling/sfo_first_frame_scheduler.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_aux_ifft_service4.sv">
+      <File Path="$PPRDIR/rtl/fft_service/sfo_residual_ifft_service4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_div_u80_u49_rne.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_div_u80_u49_rne.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_dtp_frame_backend4.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_delay_backend4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_fft_grid_stage4.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_fft_grid_stage4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_grid_packet_queue2.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_grid_packet_queue2.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_main_fft_service4.sv">
+      <File Path="$PPRDIR/rtl/fft_service/sfo_residual_fft_service4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_main_fft_window4.sv">
+      <File Path="$PPRDIR/rtl/fft_service/sfo_residual_fft_window4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_nominal_window_reader4.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_nominal_window_reader4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_peak_interpolate.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_peak_interpolate.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_peak_triplet4.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_peak_triplet4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_pilot_front2.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_pilot_front2.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_pilot_grid4.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_pilot_grid4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_pilot_rotate2.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_pilot_rotate2.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_pilot_select_phase4.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_pilot_select_phase4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_power4.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_power4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_residual_sfo_pipeline4.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_estimator4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t09/t09_sfo_ls74.sv">
+      <File Path="$PPRDIR/rtl/residual_estimation/sfo_residual_ls74.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t10/t10_cdc_fifo.sv">
+      <File Path="$PPRDIR/rtl/buffering/sfo_record_cdc_fifo.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t10/t10_domain_reset.sv">
+      <File Path="$PPRDIR/rtl/control/sfo_domain_reset.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t10/t10_output_buffer.sv">
+      <File Path="$PPRDIR/rtl/buffering/sfo_output_buffer.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t10/t10_r1_bank.sv">
+      <File Path="$PPRDIR/rtl/buffering/sfo_intermediate_frame_bank.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t10/t10_raw_ring.sv">
+      <File Path="$PPRDIR/rtl/buffering/sfo_raw_frame_ring.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t10/t10_second_descriptor.sv">
+      <File Path="$PPRDIR/rtl/second_resampling/sfo_second_pass_descriptor.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t10/t10_second_sfo_resampler.sv">
+      <File Path="$PPRDIR/rtl/second_resampling/sfo_second_resampler.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t10/t10_two_pass_transport.sv">
+      <File Path="$PPRDIR/rtl/control/sfo_two_pass_transport.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -797,14 +797,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/rtl/t10/t10_two_pass_system.sv">
+      <File Path="$PPRDIR/rtl/control/sync_sfo_top.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/sim/data/t09_pilot_phase.mem">
+      <File Path="$PPRDIR/sim/data/residual_pilot_phase.mem">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -812,13 +812,13 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="t10_two_pass_system"/>
+        <Option Name="TopModule" Val="sync_sfo_top"/>
         <Option Name="VerilogDir" Val="$PPRDIR/rtl/include"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/constraints/t10_root_clocks.xdc">
+      <File Path="$PPRDIR/constraints/sync_sfo_clocks.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -830,14 +830,14 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/sim/tb/t10_full023_fifo_observer.sv">
+      <File Path="$PPRDIR/sim/tb/sfo_fifo_history_observer.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/sim/tb/t10_full023_tb.sv">
+      <File Path="$PPRDIR/sim/tb/sync_sfo_full_frame_tb.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -876,7 +876,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="t10_full023_tb"/>
+        <Option Name="TopModule" Val="sync_sfo_full_frame_tb"/>
         <Option Name="VerilogDir" Val="$PPRDIR/rtl/include"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>

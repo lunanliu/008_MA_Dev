@@ -1,0 +1,482 @@
+[
+  {
+    "file": "rtl/t07/farrow_microbench.sv",
+    "module": "farrow_add",
+    "declarations": 3,
+    "inherited_ports": 3
+  },
+  {
+    "file": "rtl/t07/farrow_microbench.sv",
+    "module": "farrow_horner",
+    "declarations": 8,
+    "inherited_ports": 1
+  },
+  {
+    "file": "rtl/t07/farrow_microbench.sv",
+    "module": "farrow_real",
+    "declarations": 7,
+    "inherited_ports": 3
+  },
+  {
+    "file": "rtl/t07/farrow_microbench.sv",
+    "module": "farrow_microbench",
+    "declarations": 11,
+    "inherited_ports": 2
+  },
+  {
+    "file": "rtl/t07/g3_down15_top.sv",
+    "module": "g3_down15_top",
+    "declarations": 8,
+    "inherited_ports": 2
+  },
+  {
+    "file": "rtl/t07/g3_down47_top.sv",
+    "module": "g3_down47_top",
+    "declarations": 8,
+    "inherited_ports": 2
+  },
+  {
+    "file": "rtl/t07/g3_farrow_guard_stream.sv",
+    "module": "g3_farrow_guard_stream",
+    "declarations": 22,
+    "inherited_ports": 2
+  },
+  {
+    "file": "rtl/t07/g3_up15_top.sv",
+    "module": "g3_up15_top",
+    "declarations": 8,
+    "inherited_ports": 2
+  },
+  {
+    "file": "rtl/t07/g3_up47_top.sv",
+    "module": "g3_up47_top",
+    "declarations": 8,
+    "inherited_ports": 2
+  },
+  {
+    "file": "rtl/common/t03_main_fft_service.sv",
+    "module": "t03_main_fft_service",
+    "declarations": 17,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/common/t03_uram_frame_bank.sv",
+    "module": "t03_uram_frame_bank",
+    "declarations": 8,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/common/t05_local_capture_buffer.sv",
+    "module": "t05_local_capture_buffer",
+    "declarations": 19,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/common/t05_phase_increment_controller.sv",
+    "module": "t05_phase_increment_controller",
+    "declarations": 14,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/common/t05_vendor_multiplier_adapters.sv",
+    "module": "t05_square18_vendor_adapter",
+    "declarations": 6,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/common/t05_vendor_multiplier_adapters.sv",
+    "module": "t05_square48_vendor_adapter",
+    "declarations": 6,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/common/t05_vendor_multiplier_adapters.sv",
+    "module": "t05_cfo_scale_vendor_adapter",
+    "declarations": 7,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t06/t06_cfo_derotate_s16_4lane.sv",
+    "module": "t06_cfo_derotate_s16_4lane",
+    "declarations": 16,
+    "inherited_ports": 3
+  },
+  {
+    "file": "rtl/t06/t06_dds_phase_4lane.sv",
+    "module": "t06_dds_phase_4lane",
+    "declarations": 11,
+    "inherited_ports": 1
+  },
+  {
+    "file": "rtl/t06/t06_derotate_wide_4lane.sv",
+    "module": "t06_derotate_wide_4lane",
+    "declarations": 17,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t06/t06_fft_pair_extractor.sv",
+    "module": "t06_fft_pair_extractor",
+    "declarations": 28,
+    "inherited_ports": 9
+  },
+  {
+    "file": "rtl/t06/t06_fft_pair_extractor_fifo.sv",
+    "module": "t06_fft_pair_extractor_fifo",
+    "declarations": 6,
+    "inherited_ports": 9
+  },
+  {
+    "file": "rtl/t06/t06_fft_pair_extractor_memory.sv",
+    "module": "t06_fft_pair_extractor_memory",
+    "declarations": 4,
+    "inherited_ports": 4
+  },
+  {
+    "file": "rtl/t06/t06_fft_swls_backend.sv",
+    "module": "t06_fft_swls_backend",
+    "declarations": 19,
+    "inherited_ports": 4
+  },
+  {
+    "file": "rtl/t06/t06_five_sum_accumulator.sv",
+    "module": "t06_five_sum_accumulator",
+    "declarations": 24,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t06/t06_frame_context_join.sv",
+    "module": "t06_frame_context_join",
+    "declarations": 21,
+    "inherited_ports": 6
+  },
+  {
+    "file": "rtl/t06/t06_initial_sfo_service.sv",
+    "module": "t06_initial_sfo_service",
+    "declarations": 35,
+    "inherited_ports": 10
+  },
+  {
+    "file": "rtl/t06/t06_initial_sfo_standalone.sv",
+    "module": "t06_initial_sfo_standalone",
+    "declarations": 22,
+    "inherited_ports": 11
+  },
+  {
+    "file": "rtl/t06/t06_main_fft_exclusive_owner.sv",
+    "module": "t06_main_fft_exclusive_owner",
+    "declarations": 19,
+    "inherited_ports": 5
+  },
+  {
+    "file": "rtl/t06/t06_observation_engine.sv",
+    "module": "t06_observation_engine",
+    "declarations": 13,
+    "inherited_ports": 8
+  },
+  {
+    "file": "rtl/t06/t06_observation_engine_2lane.sv",
+    "module": "t06_observation_engine_2lane",
+    "declarations": 30,
+    "inherited_ports": 21
+  },
+  {
+    "file": "rtl/t06/t06_observation_engine_fifo.sv",
+    "module": "t06_observation_engine_fifo",
+    "declarations": 4,
+    "inherited_ports": 8
+  },
+  {
+    "file": "rtl/t06/t06_observation_store.sv",
+    "module": "t06_observation_store",
+    "declarations": 39,
+    "inherited_ports": 11
+  },
+  {
+    "file": "rtl/t06/t06_observation_store_bank.sv",
+    "module": "t06_observation_store_bank",
+    "declarations": 4,
+    "inherited_ports": 4
+  },
+  {
+    "file": "rtl/t06/t06_pair_max_tracker_2lane.sv",
+    "module": "t06_pair_max_tracker_2lane",
+    "declarations": 17,
+    "inherited_ports": 4
+  },
+  {
+    "file": "rtl/t06/t06_pair_phasor_bfp.sv",
+    "module": "t06_pair_phasor_bfp",
+    "declarations": 19,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t06/t06_ps3_ps10_job_sequencer.sv",
+    "module": "t06_ps3_ps10_job_sequencer",
+    "declarations": 18,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t06/t06_raw_reader_4lane.sv",
+    "module": "t06_raw_reader_4lane",
+    "declarations": 33,
+    "inherited_ports": 9
+  },
+  {
+    "file": "rtl/t06/t06_raw_reader_local_capture.sv",
+    "module": "t06_raw_reader_local_capture",
+    "declarations": 33,
+    "inherited_ports": 5
+  },
+  {
+    "file": "rtl/t06/t06_raw_to_fft_frontend.sv",
+    "module": "t06_raw_to_fft_frontend",
+    "declarations": 31,
+    "inherited_ports": 8
+  },
+  {
+    "file": "rtl/t06/t06_regression_tail.sv",
+    "module": "t06_regression_tail",
+    "declarations": 32,
+    "inherited_ports": 2
+  },
+  {
+    "file": "rtl/t06/t06_shared_gain_s16_4lane.sv",
+    "module": "t06_shared_gain_s16_4lane",
+    "declarations": 16,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t06/t06_shared_gain_s16_lane.sv",
+    "module": "t06_shared_gain_s16_lane",
+    "declarations": 15,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t06/t06_swls_weighted_backend.sv",
+    "module": "t06_swls_weighted_backend",
+    "declarations": 24,
+    "inherited_ports": 5
+  },
+  {
+    "file": "rtl/t06/t06_unsigned_divider_service.sv",
+    "module": "t06_unsigned_divider_service",
+    "declarations": 14,
+    "inherited_ports": 3
+  },
+  {
+    "file": "rtl/t06/t06_unsigned_divider_service_fifo.sv",
+    "module": "t06_unsigned_divider_service_fifo",
+    "declarations": 4,
+    "inherited_ports": 8
+  },
+  {
+    "file": "rtl/t06/t06_weight_pack.sv",
+    "module": "t06_weight_pack",
+    "declarations": 20,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t07/t07_guard_frame_core.sv",
+    "module": "t07_guard_frame_core",
+    "declarations": 14,
+    "inherited_ports": 4
+  },
+  {
+    "file": "rtl/t07/t07_nominal_pack4_rev02.sv",
+    "module": "t07_nominal_pack4_rev02",
+    "declarations": 12,
+    "inherited_ports": 2
+  },
+  {
+    "file": "rtl/t07/t07_sync_fifo.sv",
+    "module": "t07_sync_fifo",
+    "declarations": 9,
+    "inherited_ports": 3
+  },
+  {
+    "file": "rtl/t08/t08_descriptor.sv",
+    "module": "t08_descriptor",
+    "declarations": 14,
+    "inherited_ports": 13
+  },
+  {
+    "file": "rtl/t08/t08_first_sfo_resampler.sv",
+    "module": "t08_first_sfo_resampler",
+    "declarations": 32,
+    "inherited_ports": 23
+  },
+  {
+    "file": "rtl/t08/t08_frame_engine.sv",
+    "module": "t08_frame_engine",
+    "declarations": 27,
+    "inherited_ports": 11
+  },
+  {
+    "file": "rtl/t09/t09_aux_ifft_service4.sv",
+    "module": "t09_aux_ifft_service4",
+    "declarations": 18,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_div_u80_u49_rne.sv",
+    "module": "t09_div_u80_u49_rne",
+    "declarations": 15,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_dtp_frame_backend4.sv",
+    "module": "t09_dtp_frame_backend4",
+    "declarations": 39,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_fft_grid_stage4.sv",
+    "module": "t09_fft_grid_stage4",
+    "declarations": 23,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_grid_packet_queue2.sv",
+    "module": "t09_grid_packet_queue2",
+    "declarations": 19,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_main_fft_service4.sv",
+    "module": "t09_main_fft_service4",
+    "declarations": 18,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_main_fft_window4.sv",
+    "module": "t09_main_fft_window4",
+    "declarations": 55,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_nominal_window_reader4.sv",
+    "module": "t09_nominal_window_reader4",
+    "declarations": 54,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_peak_interpolate.sv",
+    "module": "t09_peak_interpolate",
+    "declarations": 24,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_peak_triplet4.sv",
+    "module": "t09_peak_triplet4",
+    "declarations": 29,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_pilot_front2.sv",
+    "module": "t09_pilot_front2",
+    "declarations": 17,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_pilot_grid4.sv",
+    "module": "t09_pilot_grid4",
+    "declarations": 33,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_pilot_rotate2.sv",
+    "module": "t09_pilot_rotate2",
+    "declarations": 14,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_pilot_select_phase4.sv",
+    "module": "t09_pilot_select_phase4",
+    "declarations": 18,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_power4.sv",
+    "module": "t09_power4",
+    "declarations": 11,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_residual_sfo_pipeline4.sv",
+    "module": "t09_residual_sfo_pipeline4",
+    "declarations": 23,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t09/t09_sfo_ls74.sv",
+    "module": "t09_sfo_ls74",
+    "declarations": 24,
+    "inherited_ports": 0
+  },
+  {
+    "file": "rtl/t10/t10_cdc_fifo.sv",
+    "module": "t10_cdc_fifo",
+    "declarations": 9,
+    "inherited_ports": 8
+  },
+  {
+    "file": "rtl/t10/t10_domain_reset.sv",
+    "module": "t10_domain_reset",
+    "declarations": 2,
+    "inherited_ports": 1
+  },
+  {
+    "file": "rtl/t10/t10_output_buffer.sv",
+    "module": "t10_output_buffer",
+    "declarations": 13,
+    "inherited_ports": 9
+  },
+  {
+    "file": "rtl/t10/t10_r1_bank.sv",
+    "module": "t10_r1_bank",
+    "declarations": 30,
+    "inherited_ports": 19
+  },
+  {
+    "file": "rtl/t10/t10_raw_ring.sv",
+    "module": "t10_raw_ring",
+    "declarations": 18,
+    "inherited_ports": 9
+  },
+  {
+    "file": "rtl/t10/t10_second_descriptor.sv",
+    "module": "t10_second_descriptor",
+    "declarations": 15,
+    "inherited_ports": 8
+  },
+  {
+    "file": "rtl/t10/t10_second_sfo_resampler.sv",
+    "module": "t10_second_sfo_resampler",
+    "declarations": 33,
+    "inherited_ports": 18
+  },
+  {
+    "file": "rtl/t10/t10_two_pass_system.sv",
+    "module": "t10_two_pass_system",
+    "declarations": 30,
+    "inherited_ports": 7
+  },
+  {
+    "file": "rtl/t10/t10_two_pass_transport.sv",
+    "module": "t10_two_pass_transport",
+    "declarations": 31,
+    "inherited_ports": 5
+  },
+  {
+    "file": "sim/tb/t10_full023_fifo_observer.sv",
+    "module": "t10_full023_fifo_observer",
+    "declarations": 1,
+    "inherited_ports": 11
+  },
+  {
+    "file": "sim/tb/t10_full023_tb.sv",
+    "module": "t10_full023_tb",
+    "declarations": 0,
+    "inherited_ports": 0
+  }
+]

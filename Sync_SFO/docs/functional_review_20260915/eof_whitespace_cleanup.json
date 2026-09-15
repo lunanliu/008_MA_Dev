@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "only_final_lf_bytes_removed": true,
+  "files": [
+    {
+      "path": "rtl/first_resampling/sfo_first_frame_scheduler.sv",
+      "before_sha256": "ae41a3358437eb805e6f327675267c1e267604234706f84cf805730f9eb8e0c7",
+      "after_sha256": "96db099600e46fec598fe9d06a9b477baa5be4b40851657bd3d60f87b8928664",
+      "operation": "Remove only redundant final LF bytes; retain exactly one EOF newline."
+    },
+    {
+      "path": "rtl/resampling/sfo_guarded_farrow_stream.sv",
+      "before_sha256": "2fcad1e673d837287d20536df2db9f56c4363490e889948f0031885618058973",
+      "after_sha256": "bdcb509531b84755dad38b7b4ef680721aa3f30a52e4dc75d7ba3ffbc7a92b2a",
+      "operation": "Remove only redundant final LF bytes; retain exactly one EOF newline."
+    },
+    {
+      "path": "rtl/resampling/sfo_guarded_resampling_core.sv",
+      "before_sha256": "58b5c824c30dcdf40a13b9f568a31e8931b78cc2a0d8d6f376c2641366681f75",
+      "after_sha256": "f31f773589b4aba01199bc7d20c4ebf2ec4b2dea8eb3d912a50750d69506eae4",
+      "operation": "Remove only redundant final LF bytes; retain exactly one EOF newline."
+    }
+  ]
+}

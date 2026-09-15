@@ -11,7 +11,7 @@ def validate(root,package,emit=True,log_path=None):
  root,package=Path(root),Path(package)
  rows=list(csv.DictReader((root/'xpm_trace.csv').open(encoding='utf-8-sig')));groups={}
  for r in rows:
-  domain=int(r['Domain']);identity=canon(r['Fifo']).removesuffix('.full023_observer');t=int(r['TimePs'])
+  domain=int(r['Domain']);identity=canon(r['Fifo']).removesuffix('.sfo_history_observer');t=int(r['TimePs'])
   g=groups.setdefault((identity,domain),{});require(t not in g or g[t]==r,'Conflicting FIFO trace duplicates');g[t]=r
   require(r['Sleep'] in ['0','x'] and r['Overflow'] in ['0','x'] and r['Underflow'] in ['0','x'],'FIFO diagnostic event')
   en=r['WrEn' if domain==0 else 'RdEn'];busy=(r['Rst']!='0' or r['WrBusy']!='0') if domain==0 else r['RdBusy']!='0'

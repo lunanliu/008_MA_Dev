@@ -1,20 +1,25 @@
 # Sync_SFO：两级采样频偏估计与补偿
 
-本轮只整理工程入口和文件路径。唯一日常 GUI 入口：[Sync_SFO.xpr](Sync_SFO.xpr)。Vivado 2021.1，器件 `xcvu11p-flgb2104-2-e`，核心 top `t10_two_pass_system`，仿真 top `t10_full023_tb`，核心输出时钟参数保持原默认 150 MHz。
+唯一日常 GUI 入口：[Sync_SFO.xpr](Sync_SFO.xpr)。Vivado 2021.1，器件 `xcvu11p-flgb2104-2-e`，综合顶层 `sync_sfo_top`，仿真顶层 `sync_sfo_full_frame_tb`。核心 `OUTPUT_CLOCK_MHZ=150` 保持不变。
 
-| 内容 | 位置 |
+| 交付内容 | 入口 |
 |---|---|
-| 核心源码、IP、约束 | [rtl](rtl/) · [ip](ip/) · [constraints](constraints/) |
-| 独立 VHDL Wrapper | [t10_sfo_manual_wrapper.vhd](wrapper/t10_sfo_manual_wrapper.vhd) · [端口表](wrapper/ports.csv) |
-| 测试输入与预期输出 | [sim/data](sim/data/) · [case6001 设值](handoff/T10_SFO_20260915_manual/data/case6001_settings.json) |
-| MATLAB 波形和参考模型 | [matlab/README_ZH.md](matlab/README_ZH.md) |
-| Host 喂数和读回 | [手工操作](handoff/T10_SFO_20260915_manual/docs/HOST_TEST_ZH.md) |
-| 前端到 SFO 的边界 | [接口对照说明](docs/SFO_SYNC_MODULE_GUI_ZH.md) |
-| 完整帧已有证据 | [RUN03 独立复核](handoff/T10_SFO_20260915_manual/evidence/T10_RUN03_INDEPENDENT_REVIEW_20260915_ZH.md) |
-| 路径与版本检查 | [本次整理记录](docs/reorganization_20260915/) |
+| 完整核心工程与功能分区 | [工程](Sync_SFO.xpr) · [74 个核心源列表](rtl/sources.f) · [功能/名称映射](docs/functional_review_20260915/NAME_MAPPING_ZH.md) |
+| 独立明文 VHDL Wrapper | [sync_sfo_manual_wrapper.vhd](wrapper/sync_sfo_manual_wrapper.vhd) · [102 个端口](wrapper/ports.csv) · [接口合同](wrapper/interface_contract.json) |
+| 手工 CLIP、时钟、前端接口及测试步骤 | [当前交付指南](docs/SFO_SYNC_MODULE_GUI_ZH.md) |
+| 输入设值、波形及预期输出 | [case6001 设值](handoff/T10_SFO_20260915_manual/data/case6001_settings.json) · [文件哈希和来源](handoff/T10_SFO_20260915_manual/data/data_manifest.json) |
+| MATLAB 来源 | [参考入口](matlab/README_ZH.md) |
+| 已有整帧行为证据 | [RUN03 独立复核](handoff/T10_SFO_20260915_manual/evidence/T10_RUN03_INDEPENDENT_REVIEW_20260915_ZH.md) |
+| 本次变更证据 | [验证状态](docs/functional_review_20260915/REVIEW_STATUS_ZH.md) |
 
-新入口明确复用 2026-09-15 手工交付包的完整版本，74 核心 RTL、34 XCI、约束、测试台及数据逐字节比对；不按同名或修改时间选源。Wrapper 独立存放，不加入核心综合源集。PRE 钩子沿用既有 run_threads.tcl，general/synth 请求 8，xelab 设置 16；后续实际 jobs 仍需按资源核算。
+## 处理顺序
 
-原 `vivado/T10_SFO*` 是历史工程；`handoff/T10_SFO_20260915_manual` 保持原包及清单身份。日常操作从根 XPR 开始，历史源码、实验结果和报告不要重新解释成新实验。`archive/pre_reorganization_root` 是旧根原件保留区，不能作为新主入口的依赖。
+原始 I/Q、帧描述及 TO/CFO 记录 → 首次 SFO 估计 → 第一次重采样 → 残余 SFO 估计 → 第二次重采样 → 补偿后 I/Q 和元数据。包含原始环形缓存、中间 bank、输出缓冲和内部跨时钟通道。
 
-已有 case6001 全帧行为证据不等于实现时序、持续吞吐、NI 编译或板测通过。前端联合结果到 SFO 的适配器尚未实现。本轮没有启动综合、实现、仿真或 MATLAB，没有生成新的网表、CLIP XML 或 LabVIEW 工程。
+本次从 V5_Final `dd5e8f7a642625f06c4996d17e3642bbadc7d557` 整理功能命名、端口声明和排版。74 个自有核心 RTL、2 个测试文件及 3 个头文件通过名称还原后的词法、语法结构和端口一致性检查；厂商 IP 名称、34 个 XCI、生成源码和算法保持。Wrapper 独立存放，不加入核心综合源集。
+
+## 使用边界
+
+输入/控制为 125 MHz，重采样和当前输出为 150 MHz，FFT 服务使用 500 MHz。时钟源、锁定顺序、DDR/DMA 和平台 CDC 由用户的 NI 工程负责；Wrapper 仅拼接和拆分位段。前端 288 位记录尚需适配，上层还须保留并回放完整原始波形。
+
+`handoff/T10_SFO_20260915_manual`、`archive` 和旧 `vivado/T10_SFO*` 保留历史身份。历史包中的旧名字用于追溯；当前操作以本页及根 XPR 为准。已有 case6001 行为证据不等于实现时序、持续吞吐、NI 全目标编译或板测通过。本轮不生成 CLIP XML、配置包或 LabVIEW 工程；原生验证进度见验证状态页。

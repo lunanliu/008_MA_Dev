@@ -28,15 +28,15 @@ def validate_source_membership(repo, compile_order):
         q=Path(rel)
         if q.is_absolute() or '..' in q.parts or not rel.startswith('rtl/') or q.suffix.lower()!='.sv':fail('Invalid frozen core entry: '+rel)
         path=checked(str(repo/q));expected[os.path.normcase(str(path))]='core'
-    for rel,kind in [('sim/tb/t10_full023_tb.sv','tb'),('sim/tb/t10_full023_fifo_observer.sv','tb')]+[('rtl/vendor/xpm/'+n,'xpm') for n in ('xpm_cdc.sv','xpm_memory.sv','xpm_fifo.sv')]:
+    for rel,kind in [('sim/tb/sync_sfo_full_frame_tb.sv','tb'),('sim/tb/sfo_fifo_history_observer.sv','tb')]+[('rtl/vendor/xpm/'+n,'xpm') for n in ('xpm_cdc.sv','xpm_memory.sv','xpm_fifo.sv')]:
         path=checked(str(repo/rel));expected[os.path.normcase(str(path))]=kind
     if len(expected)!=79:fail('Core/TB/XPM identity collision')
-    optional={os.path.normcase(str(checked(str(repo/'sim/data'/n)))) for n in ('raw.mem','r1.mem','r2.mem','delay.mem','delta.mem','t09_pilot_phase.mem')}
+    optional={os.path.normcase(str(checked(str(repo/'sim/data'/n)))) for n in ('raw.mem','r1.mem','r2.mem','delay.mem','delta.mem','residual_pilot_phase.mem')}
     optional.update(os.path.normcase(str(checked(str(p)))) for p in (repo/'rtl/include').glob('*.svh'))
     ip_names=(repo/'ip/ip_names.txt').read_text(encoding='utf-8-sig').splitlines()
     if len(ip_names)!=34 or len(set(ip_names))!=34 or any(not re.fullmatch(r'[A-Za-z0-9_]+',n) for n in ip_names):fail('Expected 34 exact IP names')
     prefixes=[Path('ip/config')/n for n in ip_names]
-    prefixes += [Path('vivado/T10_SFO')/tree/'sources_1/ip'/n for tree in ('T10_SFO.gen','T10_SFO.srcs') for n in ip_names]
+    prefixes += [Path(tree)/'sources_1/ip'/n for tree in ('Sync_SFO.gen','Sync_SFO.srcs') for n in ip_names]
     seen=set();generated=[];counts={'core':0,'tb':0,'xpm':0,'optional_data_or_header':0}
     for lineno,raw in enumerate(Path(compile_order).read_text(encoding='utf-8-sig').splitlines(),1):
         if not raw:fail('Blank compile-order line '+str(lineno))
@@ -49,7 +49,7 @@ def validate_source_membership(repo, compile_order):
         if re.search(r'(?i)(sim_netlist|post_synth|post_route|_stub\.|\.dcp$|\.sdf$)',p.name):fail('Forbidden netlist/stub source: '+raw)
         if p.suffix.lower() not in ('.v','.sv','.vhd','.vhdl','.vh','.svh'):fail('Unknown compiled source type: '+raw)
         if not any(rel.is_relative_to(prefix) for prefix in prefixes):fail('Unapproved additional compiled source: '+raw)
-        if p.name in {Path(x).name for x in source_entries}|{'t10_full023_tb.sv','t10_full023_fifo_observer.sv','xpm_cdc.sv','xpm_memory.sv','xpm_fifo.sv'}:
+        if p.name in {Path(x).name for x in source_entries}|{'sync_sfo_full_frame_tb.sv','sfo_fifo_history_observer.sv','xpm_cdc.sv','xpm_memory.sv','xpm_fifo.sv'}:
             fail('Core/TB/XPM basename cannot be supplied by IP directory: '+raw)
         generated.append(rel.as_posix())
     missing=set(expected)-seen
@@ -61,7 +61,7 @@ def validate_source_membership(repo, compile_order):
 def main():
     if len(sys.argv) not in (5,6):raise SystemExit('usage: python validate_gui.py REPO RUNTIME_DIR SAVED_NATIVE_LOG NEW_REVIEW_DIR [FINAL_MANIFEST_CSV]')
     P,S,L,O=map(Path,sys.argv[1:5])
-    final_candidate=Path(sys.argv[5]) if len(sys.argv)==6 else P/'docs/provenance/RTL_FINAL_MANIFEST.csv'
+    final_candidate=Path(sys.argv[5]) if len(sys.argv)==6 else P/'docs/functional_review_20260915/current_input_manifest.csv'
     if not final_candidate.is_file():raise FileNotFoundError('Final manifest is not frozen: '+str(final_candidate))
     if final_candidate.resolve()==(P/'docs/provenance/RTL_COPY_MANIFEST.csv').resolve():raise AssertionError('Final manifest cannot be the original copy snapshot')
     if O.exists():raise FileExistsError('Review directory must be new; preserve prior evidence')
@@ -102,15 +102,25 @@ def main():
     source_membership=validate_source_membership(P,B/'compile_order.txt')
     copy_manifest=P/'docs/provenance/RTL_COPY_MANIFEST.csv'
     with copy_manifest.open(encoding='utf-8-sig',newline='') as stream:copied=list(csv.DictReader(stream))
-    active_manifest=Path(sys.argv[5]) if len(sys.argv)==6 else P/'docs/provenance/RTL_FINAL_MANIFEST.csv'
+    active_manifest=Path(sys.argv[5]) if len(sys.argv)==6 else P/'docs/functional_review_20260915/current_input_manifest.csv'
     need(active_manifest.is_file(),'Final manifest is not frozen; RTL_FINAL_MANIFEST.csv required')
     need(active_manifest.resolve()!=copy_manifest.resolve(),'Original copy manifest cannot serve as final acceptance manifest')
     with active_manifest.open(encoding='utf-8-sig',newline='') as stream:active=list(csv.DictReader(stream))
     need(bool(active),'Empty active manifest')
     for x in active:need(sha(P/x['destination_relative'])==x['destination_sha256'],'Approved migration input changed: '+x['destination_relative'])
-    core=[x for x in copied if x['destination_relative'] in (P/'rtl/sources.f').read_text().splitlines()]
-    need(len(core)==74 and all(sha(P/x['destination_relative'])==x['source_sha256'] for x in core),'74 original production core sources must remain byte-identical')
-    need(set(x['destination_relative'] for x in copied)<=set(x['destination_relative'] for x in active),'Final manifest must cover all original migration inputs')
+    proof=json.loads((P/'docs/functional_review_20260915/preview_equivalence_v2.json').read_text())
+    need(proof['status']=='PASS' and proof['passed']==79,'Complete inverse-name proof required')
+    mapping={r['old']:r for r in proof['files']}
+    source_set=set((P/'rtl/sources.f').read_text().splitlines())
+    core=[x for x in copied if x['destination_relative'] in mapping and mapping[x['destination_relative']]['new'] in source_set]
+    need(len(core)==74,'74 original core identities required')
+    for x in core:
+        r=mapping[x['destination_relative']]
+        need(r['before_sha256'].upper()==x['source_sha256'],'Baseline identity changed')
+        need(sha(P/r['new'])==r['after_sha256'].upper(),'Renamed source differs from equivalence proof')
+        need(all(r[k] for k in ('inverse_tokens_equal','inverse_raw_tokens_equal','inverse_tree_equal','ports_equal')),'Incomplete equivalence check')
+    rename_plan=json.loads((P/'docs/functional_review_20260915/rename_plan.json').read_text())
+    need({rename_plan['paths'].get(x['destination_relative'],x['destination_relative']) for x in copied}<=set(x['destination_relative'] for x in active),'Final manifest must cover all original migration inputs through rename map')
     log=L.read_text(errors='replace');need('T10_FULL023_PASS full_frame=1336320 real_T06=1 real_T09=1' in log,'Native full-frame completion marker')
     spec=importlib.util.spec_from_file_location('prefix',P/'tools/analysis/check_prefix.py');prefix=importlib.util.module_from_spec(spec);spec.loader.exec_module(prefix);g=prefix.validate(S,P,emit=False,log_path=L)
     # GUI migration: require a saved native completion marker, then bind exact saved evidence hashes.

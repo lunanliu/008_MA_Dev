@@ -2,7 +2,9 @@
 # Does not continue an old simulation, and refuses existing output to prevent false completion reuse.
 set root [file normalize [file join [file dirname [info script]] ../..]]
 if {[get_property PART [current_project]] ne "xcvu11p-flgb2104-2-e"} {error "Expected FLGB target"}
-set simdir [file join $root vivado T10_SFO T10_SFO.sim sim_1 behav xsim]
+if {[get_property TOP [get_filesets sources_1]] ne "sync_sfo_top"} {error "Expected sync_sfo_top"}
+if {[file normalize [get_property DIRECTORY [current_project]]] ne $root} {error "Use the root Sync_SFO project"}
+set simdir [file join $root Sync_SFO.sim sim_1 behav xsim]
 foreach n {result.txt data.csv events.csv points.csv xpm_trace.csv} {
     if {[file exists [file join $simdir $n]]} {error "Preserve prior simulation outputs before starting a fresh attempt: $n"}
 }
@@ -14,7 +16,7 @@ source [file join $root tools vivado configure_parallel_jobs.tcl]
 launch_simulation -simset sim_1 -mode behavioral -step compile
 launch_simulation -simset sim_1 -mode behavioral -step elaborate
 file mkdir $simdir
-foreach n {raw.mem r1.mem r2.mem delay.mem delta.mem t09_pilot_phase.mem} {
+foreach n {raw.mem r1.mem r2.mem delay.mem delta.mem residual_pilot_phase.mem} {
     file copy -force [file join $root sim data $n] [file join $simdir $n]
 }
 set h [open [file join $simdir compile_order.txt] w]
