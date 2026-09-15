@@ -1,0 +1,43 @@
+{
+  "status": "V2_PRIOR_FINDINGS_CLOSED_EXCEPT_REQUIRED_PREFLIGHT_EVIDENCE_GATE",
+  "utc": "2026-09-15T01:48:36.036655+00:00",
+  "native_started": false,
+  "scientific_files_and_vendor_verified": 71,
+  "xpr_sha256": "5123211F34830D04D27268E252715051FFE5D53C07E75674E15D4D25B356DB0F",
+  "reviewed_sha256": {
+    "runner": "982BB5C9ECD48ED2B24B20BA61604729C44D5A56C00FC2D3B059EDAF5CAC3B13",
+    "helper": "B16765EF64A900A5FFF6A6D995A2FD3B7BC3776F9E27C359C3FA707E431FC218",
+    "tcl": "B106E35A3A6FF3F17A61863ADBD897C1C620D36DACDC84E944F5D08A020289E6"
+  },
+  "closed": [
+    "Exact simulate-only grant stage check",
+    "Pinned entry dependencies and pre/post comparison",
+    "Full initial and immediately pre-launch admission snapshots",
+    "Old project, controller and dependency integrity affect final PASS",
+    "Attempt-local native logs and pre/post XPR copies",
+    "Report clock finalized before terminal artifact manifest",
+    "Reset precedes mem copy; binding diagnostics saved on failure"
+  ],
+  "remaining": [
+    {
+      "prior_finding": "E1/E2 required frozen evidence before native",
+      "file": "tools/cfo_link010r1_compat1_guard_v2_repair.py",
+      "lines": [
+        325,
+        344,
+        358,
+        368,
+        374,
+        401,
+        403,
+        406,
+        421
+      ],
+      "control_flow": "safe_wjson failures append errors and return None; required copy errors also append errors. The preflight and launch branches only test checks/launch_checks and do not require empty critical errors or a successful execution-freeze hash. Q.stage can therefore run without required persisted freeze/admission evidence.",
+      "required": "Block before native on required preflight freeze/copy/admission evidence failure, save blocked result as possible; leave native-completed evidence recovery behavior intact."
+    }
+  ],
+  "scope": "Only previously requested execution omissions; no new scientific review or native probe",
+  "repair_owner": "Original paired Luna",
+  "tcl_support_limit": "2021.1 native acceptance of positional reset command remains untested; adjacent official version syntax evidence retained."
+}
