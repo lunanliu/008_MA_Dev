@@ -1,0 +1,22 @@
+{
+  "recorded_utc": "2026-09-15T00:06:51.539493+00:00",
+  "status": "REQUESTED_PENDING_MANAGER_GRANT",
+  "job": "CFO-LINK010R1",
+  "manager_thread": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "astra_thread": "01a076f1-ad1b-7d33-a29c-4ea34ae84d01",
+  "luna_thread": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+  "source_commit": "f5371e977d398eeaa92147bef7011f5b613d3a4f",
+  "source_lock_sha256": "F01D289223D90FE71F3767B1030B35809AA1C651FC249EDA3362AB5E455F3069",
+  "controller_sha256": "9654C5B8B9ED5D252C9CA4F3008A08590CF972D332678FE876F70F097D887E84",
+  "static_review_sha256": "C88C084730E4DEA66B75B874CF30F82D753E2FB3DDA28A470EB9CC7AEEABF8B3",
+  "frozen_self_check": {
+    "status": "PASS",
+    "lock": true,
+    "vector_verify": true,
+    "x64_job": true,
+    "xpr_absent": true,
+    "native_started": false
+  },
+  "dispatch_to_luna": false,
+  "retired_grant_reused": false
+}
