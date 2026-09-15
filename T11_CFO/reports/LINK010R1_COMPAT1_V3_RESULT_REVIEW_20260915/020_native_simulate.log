@@ -1,0 +1,8 @@
+Time resolution is 1 ps
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse 
+
+will be reported.
+Time: 1 ps  Iteration: 0  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1545_149  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_fifo.sv Line: 1551
+CFO_LINK010R1_RESET_AUDIT_PASS reset_epochs=9 common_assertions=9 fifo_assertions=8 fifo_deassertions=9 recoveries=9 fast_samples=1048 slow_samples=415 q_rows=2926
+CFO_LINK010_PASS unique=4 completed=22 protocol_errors=10 max_tail=6792 max_total=1150364 source_stalls=99485 full_runs=21 reset_discards=4 abort_discards=4
+$finish called at time : 3702638 ns : File "D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_r1_compat1_tb.sv" Line 407

@@ -1,0 +1,1 @@
+{"status": "EXACT_TB_EQUIVALENCE_PASS_PENDING_NATIVE", "replacement_count": 8, "reverse_byte_identical": true, "base_frozen_files_verified": 60, "vendor_dependencies_verified": 3, "tb_sha256": "4C7EC8E1FB2F194FF982130439CE90375C6414FC7B1B2C8A0F2D646A518B078E", "native_started": false, "actual_project_members": 25, "all_actual_source_properties_preserved": true}

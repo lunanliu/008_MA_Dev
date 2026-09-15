@@ -1,0 +1,100 @@
+{
+  "status": "NUMERIC_PROTOCOL_EVIDENCE_PASSED_RESET_PRE_OBSERVABILITY_BLOCKED",
+  "utc": "2026-09-15T03:01:12.177400+00:00",
+  "attempt": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna",
+  "original_completion_sha256": "D3CCD4510F9CC3A153C602B71B47EAC3B99327348D3E5466C52558C748742EF5",
+  "original_manifest_sha256": "57368D5D0D9F523DC5D82EAC9F1A0C646412FB5AFD5B89C0ED65172E39730FD5",
+  "original_freeze_sha256": "AC433AD76548AB18E3C95FEDCA38383AD2729D75F83A351D6F7639337BF16C54",
+  "original_terminal_status": "BLOCKED_AFTER_SIMULATE",
+  "original_artifacts_verified_and_archived": 65,
+  "native": {
+    "stages": [
+      "simulate"
+    ],
+    "exit_code": 0,
+    "launch_to_zero_seconds": 57.6081804,
+    "job_total_processes": 43,
+    "job_final_empty": true,
+    "peak_job_private_commit_bytes": 1200156672,
+    "error_diagnostics": [],
+    "all_protection_and_immutable_input_gates": true
+  },
+  "numeric_protocol": {
+    "rows": {
+      "W": 2056,
+      "R": 2022,
+      "F": 22,
+      "H": 32,
+      "D": 8,
+      "E": 10
+    },
+    "max_tail_slow_cycles": 6792,
+    "max_total_fast_cycles": 1150364,
+    "source_stalls": 99485,
+    "burst_full_runs": 21,
+    "tb_pass_marker": "CFO_LINK010_PASS unique=4 completed=22 protocol_errors=10 max_tail=6792 max_total=1150364 source_stalls=99485 full_runs=21 reset_discards=4 abort_discards=4",
+    "evidence_basis": "Original frozen verifier completed identity and all numeric/protocol assertions before raising at its reset-audit call; stdout JSON is absent because that call failed. This is not a combined reset PASS."
+  },
+  "private_xpm_binding_before_after_and_post": true,
+  "reset_audit": {
+    "tb_pass_marker_present": true,
+    "strict_independent_pass": false,
+    "audit_sha256": "EACEAEE1F819E879B3CD26DAE628B9385A410F66C697FDB10B7FA113730C1F91",
+    "rows": {
+      "A": 9,
+      "T": 17,
+      "C": 9,
+      "Q": 2926,
+      "Z": 1
+    },
+    "pairs": {
+      "F": 1048,
+      "S": 415
+    },
+    "unknown_epoch_records": 250,
+    "unknown_epoch_by_domain": {
+      "F_PRE": 184,
+      "S_PRE": 66
+    },
+    "known_epoch_time_mismatches": 5,
+    "external_reset_bits_time_mismatches": 10,
+    "external_mismatches_by_change": {
+      "assertion": 4,
+      "deassertion": 6
+    },
+    "q_unknown_bits_records": 4,
+    "only_unknown_vector_bit": 7,
+    "coverage": "All 18 per-domain request-to-recovery intervals have clock observations; all 9 recoveries have matching fast POST witnesses. These facts cannot restore incorrect PRE samples.",
+    "decisive_example": {
+      "A3_trigger_ps": 2586002022,
+      "A3_async_check_ps": 2586002032,
+      "A3_external_bits": "110",
+      "fast_PRE_sample_ps": 2586002999,
+      "fast_PRE_recorded_external_bits": "000",
+      "fast_POST_sample_ps": 2586003010,
+      "fast_POST_external_bits": "110",
+      "request_precedes_PRE_ps": 977
+    },
+    "no_sample_or_epoch_rewritten": true,
+    "DUT_defect_demonstrated": false,
+    "diagnostic": "Clocking input updates and monitor consumption appear inconsistent; exact simulator mechanism not established."
+  },
+  "preserved_wdb": {
+    "source_path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\cfo_estimator_link_tb_behav.wdb",
+    "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\saved_cfo_estimator_link_tb_behav.wdb",
+    "bytes": 47290549,
+    "sha256": "10F15DB798098B058B613F6802217E5BCC3E4D9F4EBD81A65C052FD575354567",
+    "contents_not_yet_inspected": true,
+    "native_started": false
+  },
+  "wdb_recovery_limit": "WDB contents were not opened. No confirmed 2021.1 interface for exporting full historical WDB signals without rerunning simulation was found. Do not claim the WDB lacks needed signals.",
+  "next_step_proposal": {
+    "requires_new_package_and_exact_grant": true,
+    "smallest_candidate": "Only passive TB observer: pack epoch and bits into one explicit 64-bit wire clocking input with existing #1step; record edge first, then read sampled PRE snapshot and direct POST after the existing 10 ps wait. Preserve all stimulus and acceptance rules.",
+    "why_existing_text_cannot_be_fixed": "10 PRE vectors contradict independent saved request/pulse timestamps, not only missing labels. Skipping rows, forcing epoch values or redefining their time would weaken the original gate.",
+    "necessary_validation_if_approved": "One unchanged LINK010 numeric/protocol matrix with corrected passive observations; reuse created project, no MATLAB/front FFT/whole-CFO repeat. Verify true PRE timing before full acceptance.",
+    "candidate_not_yet_implemented_or_native_validated": true
+  },
+  "native_started_by_review": false,
+  "whole_CFO_or_formal_T11_T12_T13_PASS": false
+}

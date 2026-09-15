@@ -1,0 +1,67 @@
+{
+  "schema": "compat1_preexisting_simdir_v1",
+  "records": [
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xvlog.log",
+      "exists": true,
+      "destination": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\xvlog.log",
+      "sha256": "FA9C17276FC6E31D9A627F2E675C876A67E3A90DC684C5DB1464C69D4B2F1C27",
+      "copied": true
+    },
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\compile.log",
+      "exists": true,
+      "destination": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\compile.log",
+      "sha256": "FA9C17276FC6E31D9A627F2E675C876A67E3A90DC684C5DB1464C69D4B2F1C27",
+      "copied": true
+    },
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\elaborate.log",
+      "exists": true,
+      "destination": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\elaborate.log",
+      "sha256": "A214BE86E111F6A49A2EE8334BCDAB0447311EDD2D7E4BA4AB761CC2BD13B93C",
+      "copied": true
+    },
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xelab.log",
+      "exists": false
+    },
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\simulate.log",
+      "exists": false
+    },
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xsim.log",
+      "exists": false
+    },
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\compile.bat",
+      "exists": true,
+      "destination": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\compile.bat",
+      "sha256": "E5B691EBC23DB1AFA06DF5826F13E148134A88A982445ABE5CF64240FD0D2E97",
+      "copied": true
+    },
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\cfo_estimator_link_tb_vlog.prj",
+      "exists": true,
+      "destination": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\cfo_estimator_link_tb_vlog.prj",
+      "sha256": "8CEF37E98C6702343442572F18F0ED9DCA267FA650A076A7EE6F136436640F77",
+      "copied": true
+    },
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xsim.ini",
+      "exists": true,
+      "destination": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\xsim.ini",
+      "sha256": "1A9A8F3B2EDE12C07EA7BBB12363BB3132286B10055E382664A00B2E7BF8EDBD",
+      "copied": true
+    },
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\link010_actual.txt",
+      "exists": false
+    },
+    {
+      "source": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\link010r1_reset_audit.txt",
+      "exists": false
+    }
+  ]
+}

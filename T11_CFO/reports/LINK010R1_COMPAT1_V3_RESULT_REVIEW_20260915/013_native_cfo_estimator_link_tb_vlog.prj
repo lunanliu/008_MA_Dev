@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+sv cfo_xpm  -i "../../../../../../sim/vectors" --include "../../../../../../sim/vectors" \
+"../../../../../../rtl/cfo_divide_rne64.sv" \
+"../../../../../../rtl/cfo_divide_rne64wide.sv" \
+"../../../../../../rtl/cfo_estimate74_backend.sv" \
+"../../../../../../rtl/cfo_estimator_link_v2.sv" \
+"../../../../../../rtl/cfo_fft256_core.sv" \
+"../../../../../../rtl/cfo_fft74_quality_v2.sv" \
+"../../../../../../rtl/cfo_phase74_core_v2.sv" \
+"../../../../../../sim/vendor/link010r1/xpm_cdc.sv" \
+"../../../../../../sim/vendor/link010r1/xpm_fifo.sv" \
+"../../../../../../sim/vendor/link010r1/xpm_memory.sv" \
+"../../../../../../sim/tb/cfo_estimator_link_r1_compat1_tb.sv" \
+
+# compile glbl module
+verilog cfo_xpm "glbl.v"
+
+# Do not sort compile order
+nosort

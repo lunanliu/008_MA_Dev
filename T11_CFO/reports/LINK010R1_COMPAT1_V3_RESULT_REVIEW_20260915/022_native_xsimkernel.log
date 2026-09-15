@@ -1,0 +1,7 @@
+Running: xsim.dir/cfo_estimator_link_tb_behav/xsimk.exe -simmode gui -wdb cfo_estimator_link_tb_behav.wdb -simrunnum 0 -socket 7387
+Design successfully loaded
+Design Loading Memory Usage: 8896 KB (Peak: 8896 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 21180 KB (Peak: 21180 KB)
+Simulation CPU Usage: 26296 ms

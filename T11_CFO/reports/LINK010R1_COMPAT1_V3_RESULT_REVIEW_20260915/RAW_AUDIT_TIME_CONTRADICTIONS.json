@@ -1,0 +1,1901 @@
+{
+  "analysis": "Compare unchanged Q observations to independent saved A request timestamps and frozen pulse widths; no normalization/output sample repair",
+  "external_pre_mismatches": [
+    {
+      "line": 266,
+      "sample_ps": 200999,
+      "epoch_raw": "x",
+      "domain": "F",
+      "phase": "P",
+      "changed": 1,
+      "external_bits_observed": "110",
+      "external_bits_from_saved_stimulus": "000"
+    },
+    {
+      "line": 574,
+      "sample_ps": 2466264999,
+      "epoch_raw": "1",
+      "domain": "F",
+      "phase": "P",
+      "changed": 1,
+      "external_bits_observed": "110",
+      "external_bits_from_saved_stimulus": "000"
+    },
+    {
+      "line": 876,
+      "sample_ps": 2525638999,
+      "epoch_raw": "2",
+      "domain": "F",
+      "phase": "P",
+      "changed": 1,
+      "external_bits_observed": "101",
+      "external_bits_from_saved_stimulus": "000"
+    },
+    {
+      "line": 1111,
+      "sample_ps": 2586002999,
+      "epoch_raw": "2",
+      "domain": "F",
+      "phase": "P",
+      "changed": 1,
+      "external_bits_observed": "000",
+      "external_bits_from_saved_stimulus": "110"
+    },
+    {
+      "line": 1178,
+      "sample_ps": 2586052999,
+      "epoch_raw": "3",
+      "domain": "F",
+      "phase": "P",
+      "changed": 1,
+      "external_bits_observed": "110",
+      "external_bits_from_saved_stimulus": "000"
+    },
+    {
+      "line": 1413,
+      "sample_ps": 2636270999,
+      "epoch_raw": "3",
+      "domain": "F",
+      "phase": "P",
+      "changed": 1,
+      "external_bits_observed": "000",
+      "external_bits_from_saved_stimulus": "101"
+    },
+    {
+      "line": 1480,
+      "sample_ps": 2636320999,
+      "epoch_raw": "4",
+      "domain": "F",
+      "phase": "P",
+      "changed": 1,
+      "external_bits_observed": "101",
+      "external_bits_from_saved_stimulus": "000"
+    },
+    {
+      "line": 1715,
+      "sample_ps": 2744986999,
+      "epoch_raw": "4",
+      "domain": "F",
+      "phase": "P",
+      "changed": 1,
+      "external_bits_observed": "000",
+      "external_bits_from_saved_stimulus": "110"
+    },
+    {
+      "line": 1782,
+      "sample_ps": 2745036999,
+      "epoch_raw": "5",
+      "domain": "F",
+      "phase": "P",
+      "changed": 1,
+      "external_bits_observed": "110",
+      "external_bits_from_saved_stimulus": "000"
+    },
+    {
+      "line": 2327,
+      "sample_ps": 2969996999,
+      "epoch_raw": "6",
+      "domain": "F",
+      "phase": "P",
+      "changed": 1,
+      "external_bits_observed": "000",
+      "external_bits_from_saved_stimulus": "110"
+    }
+  ],
+  "known_epoch_mismatches": [
+    {
+      "line": 809,
+      "sample_ps": 2525588999,
+      "epoch_raw": 1,
+      "epoch_from_saved_stimulus": 2,
+      "domain": "F",
+      "phase": "P"
+    },
+    {
+      "line": 1111,
+      "sample_ps": 2586002999,
+      "epoch_raw": 2,
+      "epoch_from_saved_stimulus": 3,
+      "domain": "F",
+      "phase": "P"
+    },
+    {
+      "line": 1413,
+      "sample_ps": 2636270999,
+      "epoch_raw": 3,
+      "epoch_from_saved_stimulus": 4,
+      "domain": "F",
+      "phase": "P"
+    },
+    {
+      "line": 1715,
+      "sample_ps": 2744986999,
+      "epoch_raw": 4,
+      "epoch_from_saved_stimulus": 5,
+      "domain": "F",
+      "phase": "P"
+    },
+    {
+      "line": 2327,
+      "sample_ps": 2969996999,
+      "epoch_raw": 6,
+      "epoch_from_saved_stimulus": 7,
+      "domain": "F",
+      "phase": "P"
+    }
+  ],
+  "unknown_epoch_records": [
+    {
+      "line": 6,
+      "sample_ps": 999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 8,
+      "sample_ps": 2999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 10,
+      "sample_ps": 3749,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 12,
+      "sample_ps": 4999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 14,
+      "sample_ps": 6999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 16,
+      "sample_ps": 8999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 18,
+      "sample_ps": 10415,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 20,
+      "sample_ps": 10999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 22,
+      "sample_ps": 12999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 24,
+      "sample_ps": 14999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 26,
+      "sample_ps": 16999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 28,
+      "sample_ps": 17081,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 30,
+      "sample_ps": 18999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 32,
+      "sample_ps": 20999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 34,
+      "sample_ps": 22999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 36,
+      "sample_ps": 23747,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 38,
+      "sample_ps": 24999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 40,
+      "sample_ps": 26999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 42,
+      "sample_ps": 28999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 44,
+      "sample_ps": 30413,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 46,
+      "sample_ps": 30999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 48,
+      "sample_ps": 32999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 50,
+      "sample_ps": 34999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 52,
+      "sample_ps": 36999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 54,
+      "sample_ps": 37079,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 56,
+      "sample_ps": 38999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 58,
+      "sample_ps": 40999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 60,
+      "sample_ps": 42999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 62,
+      "sample_ps": 43745,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 64,
+      "sample_ps": 44999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 66,
+      "sample_ps": 46999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 68,
+      "sample_ps": 48999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 70,
+      "sample_ps": 50411,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 72,
+      "sample_ps": 50999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 74,
+      "sample_ps": 52999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 76,
+      "sample_ps": 54999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 78,
+      "sample_ps": 56999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 80,
+      "sample_ps": 57077,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 82,
+      "sample_ps": 58999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 84,
+      "sample_ps": 60999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 86,
+      "sample_ps": 62999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 88,
+      "sample_ps": 63743,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 90,
+      "sample_ps": 64999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 92,
+      "sample_ps": 66999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 94,
+      "sample_ps": 68999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 96,
+      "sample_ps": 70409,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 98,
+      "sample_ps": 70999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 100,
+      "sample_ps": 72999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 102,
+      "sample_ps": 74999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 104,
+      "sample_ps": 76999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 106,
+      "sample_ps": 77075,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 108,
+      "sample_ps": 78999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 110,
+      "sample_ps": 80999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 112,
+      "sample_ps": 82999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 114,
+      "sample_ps": 83741,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 116,
+      "sample_ps": 84999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 118,
+      "sample_ps": 86999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 120,
+      "sample_ps": 88999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 122,
+      "sample_ps": 90407,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 124,
+      "sample_ps": 90999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 126,
+      "sample_ps": 92999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 128,
+      "sample_ps": 94999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 130,
+      "sample_ps": 96999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 132,
+      "sample_ps": 97073,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 134,
+      "sample_ps": 98999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 136,
+      "sample_ps": 100999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 138,
+      "sample_ps": 102999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 140,
+      "sample_ps": 103739,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 142,
+      "sample_ps": 104999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 144,
+      "sample_ps": 106999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 146,
+      "sample_ps": 108999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 148,
+      "sample_ps": 110405,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 150,
+      "sample_ps": 110999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 152,
+      "sample_ps": 112999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 154,
+      "sample_ps": 114999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 156,
+      "sample_ps": 116999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 158,
+      "sample_ps": 117071,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 160,
+      "sample_ps": 118999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 162,
+      "sample_ps": 120999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 164,
+      "sample_ps": 122999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 166,
+      "sample_ps": 123737,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 168,
+      "sample_ps": 124999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 170,
+      "sample_ps": 126999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 172,
+      "sample_ps": 128999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 174,
+      "sample_ps": 130403,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 176,
+      "sample_ps": 130999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 178,
+      "sample_ps": 132999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 180,
+      "sample_ps": 134999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 182,
+      "sample_ps": 136999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 184,
+      "sample_ps": 137069,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 186,
+      "sample_ps": 138999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 188,
+      "sample_ps": 140999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 190,
+      "sample_ps": 142999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 192,
+      "sample_ps": 143735,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 194,
+      "sample_ps": 144999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 196,
+      "sample_ps": 146999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 198,
+      "sample_ps": 148999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 200,
+      "sample_ps": 150401,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 202,
+      "sample_ps": 150999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 204,
+      "sample_ps": 152999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 206,
+      "sample_ps": 154999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 208,
+      "sample_ps": 156999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 210,
+      "sample_ps": 157067,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 212,
+      "sample_ps": 158999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 214,
+      "sample_ps": 160999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 216,
+      "sample_ps": 162999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 218,
+      "sample_ps": 163733,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 220,
+      "sample_ps": 164999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 222,
+      "sample_ps": 166999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 224,
+      "sample_ps": 168999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 226,
+      "sample_ps": 170399,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 228,
+      "sample_ps": 170999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 230,
+      "sample_ps": 172999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 232,
+      "sample_ps": 174999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 234,
+      "sample_ps": 176999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 236,
+      "sample_ps": 177065,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 238,
+      "sample_ps": 178999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 240,
+      "sample_ps": 180999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 242,
+      "sample_ps": 182999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 244,
+      "sample_ps": 183731,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 246,
+      "sample_ps": 184999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 248,
+      "sample_ps": 186999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 250,
+      "sample_ps": 188999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 252,
+      "sample_ps": 190397,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 254,
+      "sample_ps": 190999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 256,
+      "sample_ps": 192999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 258,
+      "sample_ps": 194999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 260,
+      "sample_ps": 196999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 262,
+      "sample_ps": 197063,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 264,
+      "sample_ps": 198999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 266,
+      "sample_ps": 200999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 268,
+      "sample_ps": 202999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 270,
+      "sample_ps": 203729,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 272,
+      "sample_ps": 204999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 274,
+      "sample_ps": 206999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 276,
+      "sample_ps": 208999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 278,
+      "sample_ps": 210395,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 280,
+      "sample_ps": 210999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 282,
+      "sample_ps": 212999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 285,
+      "sample_ps": 214999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 287,
+      "sample_ps": 216999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 289,
+      "sample_ps": 217061,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 291,
+      "sample_ps": 218999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 293,
+      "sample_ps": 220999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 295,
+      "sample_ps": 222999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 297,
+      "sample_ps": 223727,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 299,
+      "sample_ps": 224999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 301,
+      "sample_ps": 226999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 303,
+      "sample_ps": 228999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 305,
+      "sample_ps": 230393,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 307,
+      "sample_ps": 230999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 309,
+      "sample_ps": 232999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 311,
+      "sample_ps": 234999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 313,
+      "sample_ps": 236999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 315,
+      "sample_ps": 237059,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 317,
+      "sample_ps": 238999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 319,
+      "sample_ps": 240999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 321,
+      "sample_ps": 242999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 323,
+      "sample_ps": 243725,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 325,
+      "sample_ps": 244999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 327,
+      "sample_ps": 246999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 329,
+      "sample_ps": 248999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 331,
+      "sample_ps": 250391,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 333,
+      "sample_ps": 250999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 335,
+      "sample_ps": 252999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 337,
+      "sample_ps": 254999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 339,
+      "sample_ps": 256999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 341,
+      "sample_ps": 257057,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 343,
+      "sample_ps": 258999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 345,
+      "sample_ps": 260999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 347,
+      "sample_ps": 262999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 349,
+      "sample_ps": 263723,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 351,
+      "sample_ps": 264999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 353,
+      "sample_ps": 266999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 355,
+      "sample_ps": 268999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 357,
+      "sample_ps": 270389,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 359,
+      "sample_ps": 270999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 361,
+      "sample_ps": 272999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 363,
+      "sample_ps": 274999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 365,
+      "sample_ps": 276999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 367,
+      "sample_ps": 277055,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 369,
+      "sample_ps": 278999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 371,
+      "sample_ps": 280999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 373,
+      "sample_ps": 282999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 375,
+      "sample_ps": 283721,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 377,
+      "sample_ps": 284999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 379,
+      "sample_ps": 286999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 381,
+      "sample_ps": 288999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 383,
+      "sample_ps": 290387,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 385,
+      "sample_ps": 290999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 387,
+      "sample_ps": 292999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 389,
+      "sample_ps": 294999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 391,
+      "sample_ps": 296999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 393,
+      "sample_ps": 297053,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 395,
+      "sample_ps": 298999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 397,
+      "sample_ps": 300999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 399,
+      "sample_ps": 302999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 401,
+      "sample_ps": 303719,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 403,
+      "sample_ps": 304999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 405,
+      "sample_ps": 306999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 407,
+      "sample_ps": 308999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 409,
+      "sample_ps": 310385,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 411,
+      "sample_ps": 310999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 413,
+      "sample_ps": 312999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 415,
+      "sample_ps": 314999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 417,
+      "sample_ps": 316999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 419,
+      "sample_ps": 317051,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 421,
+      "sample_ps": 318999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 423,
+      "sample_ps": 320999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 425,
+      "sample_ps": 322999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 427,
+      "sample_ps": 323717,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 429,
+      "sample_ps": 324999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 431,
+      "sample_ps": 326999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 433,
+      "sample_ps": 328999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 435,
+      "sample_ps": 330383,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 437,
+      "sample_ps": 330999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 439,
+      "sample_ps": 332999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 442,
+      "sample_ps": 334999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 444,
+      "sample_ps": 336999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 446,
+      "sample_ps": 337049,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 448,
+      "sample_ps": 338999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 450,
+      "sample_ps": 340999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 452,
+      "sample_ps": 342999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 454,
+      "sample_ps": 343715,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 456,
+      "sample_ps": 344999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 458,
+      "sample_ps": 346999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 460,
+      "sample_ps": 348999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 462,
+      "sample_ps": 350381,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 464,
+      "sample_ps": 350999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 466,
+      "sample_ps": 352999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 468,
+      "sample_ps": 354999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 470,
+      "sample_ps": 356999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 472,
+      "sample_ps": 357047,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 474,
+      "sample_ps": 358999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 476,
+      "sample_ps": 360999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 478,
+      "sample_ps": 362999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 480,
+      "sample_ps": 363713,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 482,
+      "sample_ps": 364999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 484,
+      "sample_ps": 370379,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 486,
+      "sample_ps": 377045,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 488,
+      "sample_ps": 383711,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 490,
+      "sample_ps": 390377,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 492,
+      "sample_ps": 397043,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 494,
+      "sample_ps": 403709,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 496,
+      "sample_ps": 410375,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 498,
+      "sample_ps": 417041,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 500,
+      "sample_ps": 423707,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 502,
+      "sample_ps": 430373,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 504,
+      "sample_ps": 437039,
+      "domain": "S",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 0
+    },
+    {
+      "line": 507,
+      "sample_ps": 2466214999,
+      "domain": "F",
+      "phase": "P",
+      "epoch_from_saved_stimulus": 1
+    }
+  ],
+  "original_records_rewritten": false,
+  "native_started": false
+}

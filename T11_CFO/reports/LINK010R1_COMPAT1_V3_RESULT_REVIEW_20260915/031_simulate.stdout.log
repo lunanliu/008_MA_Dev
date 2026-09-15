@@ -1,0 +1,425 @@
+WARNING: Default location for XILINX_VIVADO_HLS not found: 
+WARNING: Default location for XILINX_HLS not found: 
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source {D:\008_MA_Dev\T11_CFO\vivado\link010r1_compat1_project_v2_repair.tcl}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# if {$argc != 2} {error "Usage: -tclargs simulate <attempt-directory>"}
+# set action [lindex $argv 0]
+# set evidence [file normalize [lindex $argv 1]]
+# if {$action ne "simulate"} {error "compat1 is simulate-only"}
+# if {![file isdirectory $evidence]} {error "Evidence directory must already exist"}
+# set project_dir [file join $root vivado CFO_LINK010R1]
+# set xpr [file join $project_dir CFO_LINK010R1.xpr]
+# set old_tb_path [file normalize [file join $root sim tb cfo_estimator_link_r1_tb.sv]]
+# set new_tb_path [file normalize [file join $root sim tb cfo_estimator_link_r1_compat1_tb.sv]]
+# if {![file exists $xpr]} {error "Created CFO_LINK010R1 project is missing"}
+# if {![file exists $new_tb_path]} {error "Frozen compat1 TB is missing"}
+# proc save_sim_evidence {simdir evidence} {
+#  foreach name {xvlog.log compile.log elaborate.log xelab.log simulate.log xsim.log compile.bat cfo_estimator_link_tb_vlog.prj xsim.ini} {
+#   set src [file join $simdir $name]
+#   if {[file exists $src]} {file copy -force $src [file join $evidence native_$name]}
+#  }
+#  set kernel [file join $simdir xsim.dir cfo_estimator_link_tb_behav xsimkernel.log]
+#  if {[file exists $kernel]} {file copy -force $kernel [file join $evidence native_xsimkernel.log]}
+#  foreach name {link010_actual.txt link010r1_reset_audit.txt} {
+#   set src [file join $simdir $name]
+#   if {[file exists $src]} {file copy -force $src [file join $evidence $name]}
+#  }
+# }
+# proc invoke_binding {root simdir evidence phase} {
+#  set output ""
+#  set options {}
+#  set rc [catch {exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools verify_link010r1_binding.py] --simdir $simdir 2>@1} output options]
+#  set report [file join $evidence compat1_binding_${phase}.json]
+#  set h [open $report w]
+#  puts $h $output
+#  close $h
+#  set raw [file join $evidence compat1_binding_${phase}.raw.log]
+#  set h [open $raw w]
+#  puts $h [format "exit_code=%d\noptions=%s\noutput:\n%s" $rc $options $output]
+#  close $h
+#  return [list $rc $output]
+# }
+# open_project $xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+# if {[get_property PART [current_project]] ne "xcvu11p-flgb2104-2-e"} {error "Wrong part"}
+# if {[get_property TOP [get_filesets sources_1]] ne "cfo_estimator_link"} {error "Wrong hardware top"}
+# if {[get_property TOP [get_filesets sim_1]] ne "cfo_estimator_link_tb"} {error "Wrong simulation top before replacement"}
+# set old_tb {}
+# foreach f [get_files -of_objects [get_filesets sim_1]] {
+#  if {[string equal -nocase [file normalize $f] $old_tb_path]} {lappend old_tb $f}
+# }
+# if {[llength $old_tb] != 1} {error "Expected exactly one original R1 TB in sim_1"}
+# set old_obj [lindex $old_tb 0]
+# set old_library [get_property LIBRARY $old_obj]
+# set old_synth [get_property USED_IN_SYNTHESIS $old_obj]
+# set old_sim [get_property USED_IN_SIMULATION $old_obj]
+# set old_impl [get_property USED_IN_IMPLEMENTATION $old_obj]
+# remove_files -fileset sim_1 $old_obj
+# add_files -fileset sim_1 -norecurse $new_tb_path
+# set new_obj {}
+# foreach f [get_files -of_objects [get_filesets sim_1]] {
+#  if {[string equal -nocase [file normalize $f] $new_tb_path]} {lappend new_obj $f}
+# }
+# if {[llength $new_obj] != 1} {error "Compat1 TB was not added exactly once"}
+# set new_obj [lindex $new_obj 0]
+# set_property library $old_library $new_obj
+# set_property used_in_synthesis $old_synth $new_obj
+# set_property used_in_simulation $old_sim $new_obj
+# set_property used_in_implementation $old_impl $new_obj
+# set_property top cfo_estimator_link_tb [get_filesets sim_1]
+# set_property include_dirs [list [file join $root sim vectors]] [get_filesets sim_1]
+# source [file join $root vivado configure_parallel_jobs.tcl]
+## if {[llength [get_projects -quiet]] != 1} {
+##     error "Open the intended CFO project before applying its parallel-job policy."
+## }
+## if {[get_property PART [current_project]] ne "xcvu11p-flgb2104-2-e"} {
+##     error "Expected the CFO FLGB project."
+## }
+## namespace eval ::cfo_performance {}
+## if {![info exists ::cfo_performance::elab_jobs]} {set ::cfo_performance::elab_jobs 16}
+## proc cfo_set_elaboration_jobs {jobs} {
+##     if {![string is integer -strict $jobs] || $jobs < 1 || $jobs > 16} {
+##         error "Admitted elaboration jobs must be an integer from 1 to 16."
+##     }
+##     set_property xsim.elaborate.mt_level $jobs [get_filesets sim_1]
+##     if {[get_property xsim.elaborate.mt_level [get_filesets sim_1]] != $jobs} {
+##         error "Elaboration jobs readback mismatch"
+##     }
+##     set ::cfo_performance::elab_jobs $jobs
+##     puts "CFO_XELAB_JOBS actual=$jobs ceiling=16"
+## }
+## cfo_set_elaboration_jobs $::cfo_performance::elab_jobs
+CFO_XELAB_JOBS actual=16 ceiling=16
+## set ::cfo_performance::hook [file normalize [file join [file dirname [info script]] run_threads.tcl]]
+## source $::cfo_performance::hook
+### set_param general.maxThreads 8
+### set_param synth.maxThreads 8
+### if {[get_param general.maxThreads] != 8 || [get_param synth.maxThreads] != 8} {
+###     error "Vivado did not accept the requested thread limits."
+### }
+### puts "CFO_THREAD_LIMITS pid=[pid] cwd=[pwd] general=[get_param general.maxThreads] synth=[get_param synth.maxThreads]"
+CFO_THREAD_LIMITS pid=35700 cwd=D:/008_MA_Dev/T11_CFO general=8 synth=8
+## proc cfo_install_thread_hooks {} {
+##     set hook $::cfo_performance::hook
+##     set assignments {}
+##     foreach run [get_runs -quiet] {
+##         foreach property [list_property $run] {
+##             if {![regexp {^STEPS\..+\.TCL\.PRE$} $property]} {continue}
+##             set previous [get_property $property $run]
+##             if {$previous ne "" && [file normalize $previous] ne $hook} {
+##                 # A matching basename is not proof of ownership. Only relocate
+##                 # an existing byte-identical hook; otherwise preserve and stop.
+##                 set same_content 0
+##                 if {[file isfile $previous]} {
+##                     set old_handle [open $previous rb]
+##                     set old_content [read $old_handle]
+##                     close $old_handle
+##                     set new_handle [open $hook rb]
+##                     set new_content [read $new_handle]
+##                     close $new_handle
+##                     set same_content [expr {$old_content eq $new_content}]
+##                 }
+##                 if {!$same_content} {
+##                     error "Existing user hook preserved: $run $property = $previous. Review chaining before launch."
+##                 }
+##             }
+##             lappend assignments [list $run $property]
+##         }
+##     }
+##     # Preflight all slots before writing any; never overwrite an unrelated user hook.
+##     foreach assignment $assignments {
+##         lassign $assignment run property
+##         set_property $property $hook $run
+##         if {[file normalize [get_property $property $run]] ne $hook} {
+##             error "Run hook readback mismatch: $run $property"
+##         }
+##     }
+##     puts "CFO_RUN_HOOKS installed=[llength $assignments] hook=$hook"
+## }
+## proc cfo_prepare_build {} {
+##     # Define missing OOC runs only for IPs already configured to produce a checkpoint.
+##     # Do not turn OOC on, force regeneration, or launch computation here.
+##     foreach ip [get_ips -quiet] {
+##         set name [get_property NAME $ip]
+##         if {[llength [get_runs -quiet ${name}_synth_1]]} {continue}
+##         set xci [get_files -quiet -all [get_property IP_FILE $ip]]
+##         if {[llength $xci] != 1} {error "Cannot resolve canonical XCI for $name"}
+##         if {[get_property GENERATE_SYNTH_CHECKPOINT $xci]} {create_ip_run $ip}
+##     }
+##     source $::cfo_performance::hook
+##     cfo_install_thread_hooks
+## }
+## proc cfo_launch_runs {run_names args} {
+##     if {[llength $run_names] == 0} {error "Specify the intended run names."}
+##     set jobs 16
+##     foreach argument $args {
+##         if {$argument in {-j -jo -job} || [string match -jobs=* $argument]} {
+##             error "Use the full -jobs option followed by its integer value."
+##         }
+##     }
+##     set index [lsearch -exact $args -jobs]
+##     if {$index >= 0} {
+##         set jobs [lindex $args [expr {$index + 1}]]
+##         set args [lreplace $args $index [expr {$index + 1}]]
+##         if {[lsearch -exact $args -jobs] >= 0} {error "Duplicate -jobs option"}
+##     }
+##     if {![string is integer -strict $jobs] || $jobs < 1 || $jobs > 16} {
+##         error "Admitted jobs must be an integer from 1 to 16."
+##     }
+##     cfo_prepare_build
+##     puts "CFO build launch: actual_jobs=$jobs ceiling=16; runs=$run_names; resource decision belongs in run admission."
+##     launch_runs {*}$run_names -jobs $jobs {*}$args
+## }
+## cfo_install_thread_hooks
+CFO_RUN_HOOKS installed=10 hook=D:/008_MA_Dev/T11_CFO/vivado/run_threads.tcl
+## puts "CFO performance policy applied: requested general/synth limits=8; xelab jobs=$::cfo_performance::elab_jobs; build jobs ceiling=16. No run started."
+CFO performance policy applied: requested general/synth limits=8; xelab jobs=16; build jobs ceiling=16. No run started.
+# update_compile_order -fileset sources_1
+# update_compile_order -fileset sim_1
+# set h [open [file join $evidence simulate_actual_sources.csv] w]
+# puts $h "fileset,path,library,used_in_synthesis,used_in_simulation,used_in_implementation"
+# foreach fs {sources_1 constrs_1 sim_1 utils_1} {
+#  foreach f [lsort [get_files -of_objects [get_filesets $fs]]] {
+#   puts $h "$fs,[file normalize $f],[get_property LIBRARY $f],[get_property USED_IN_SYNTHESIS $f],[get_property USED_IN_SIMULATION $f],[get_property USED_IN_IMPLEMENTATION $f]"
+#  }
+# }
+WARNING: [Common 17-673] Cannot get value of property 'USED_IN_IMPLEMENTATION' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'USED_IN_IMPLEMENTATION' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'USED_IN_SIMULATION' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'USED_IN_IMPLEMENTATION' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'USED_IN_IMPLEMENTATION' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'USED_IN_IMPLEMENTATION' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'USED_IN_IMPLEMENTATION' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'USED_IN_IMPLEMENTATION' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'USED_IN_IMPLEMENTATION' because this property is not valid in conjunction with other property setting on this object.
+WARNING: [Common 17-673] Cannot get value of property 'USED_IN_IMPLEMENTATION' because this property is not valid in conjunction with other property setting on this object.
+# close $h
+# set h [open [file join $evidence simulate_project_identity.txt] w]
+# foreach {name value} [list part [get_property PART [current_project]] hardware_top [get_property TOP [get_filesets sources_1]] simulation_top [get_property TOP [get_filesets sim_1]] project $xpr vivado [version -short] xelab_jobs [get_property xsim.elaborate.mt_level [get_filesets sim_1]] xpm_libraries [lsort [get_property XPM_LIBRARIES [current_project]]]] {puts $h "$name=$value"}
+# close $h
+# set compat_check [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools verify_link010r1_compat1.py] --sources [file join $evidence simulate_actual_sources.csv]]
+# set h [open [file join $evidence compat1_source_check_pre_simulate.json] w]
+# puts $h $compat_check
+# close $h
+# puts "CFO_LINK010R1_COMPAT1_READY action=simulate pid=[pid]"
+CFO_LINK010R1_COMPAT1_READY action=simulate pid=35700
+# flush stdout
+# reset_simulation -mode behavioral sim_1
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+# set simdir [file join $project_dir CFO_LINK010R1.sim sim_1 behav xsim]
+# foreach name {link010_actual.txt link010r1_reset_audit.txt xvlog.log compile.log elaborate.log xelab.log simulate.log xsim.log compile.bat cfo_estimator_link_tb_vlog.prj xsim.ini} {
+#  set stale [file join $simdir $name]
+#  if {[file exists $stale]} {file delete -force $stale}
+# }
+# if {[file exists [file join $simdir xsim.dir]]} {file delete -force [file join $simdir xsim.dir]}
+# file mkdir $simdir
+# file copy -force [file join $root ip fft256_twiddle.mem] $simdir
+# file copy -force [file join $root ip phase74_atan_q31.mem] $simdir
+# foreach suffix {input read result error_input error_read error_result} {file copy -force [file join $root sim vectors link010_${suffix}.mem] $simdir}
+# set_property xsim.simulate.runtime 0ns [get_filesets sim_1]
+# launch_simulation -simset sim_1 -mode behavioral
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'cfo_estimator_link_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/NIFPGA/programs/Vivado2021_1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'cfo_estimator_link_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/fft256_twiddle.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/phase74_atan_q31.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_input.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_read.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_result.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_error_input.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_error_read.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_error_result.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_input.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_read.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_result.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_error_input.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_error_read.mem'
+INFO: [SIM-utils-43] Exported 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/link010_error_result.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj cfo_estimator_link_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_divide_rne64.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_divide_rne64
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_divide_rne64wide.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_divide_rne64wide
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_estimate74_backend.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_estimate74_backend
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_estimator_link_v2.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_estimator_link
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_fft256_core.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_fft256_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_fft74_quality_v2.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_fft74_quality
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/rtl/cfo_phase74_core_v2.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_phase74_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_cdc.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module xpm_cdc_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_gray
+INFO: [VRFC 10-311] analyzing module xpm_cdc_handshake
+INFO: [VRFC 10-311] analyzing module xpm_cdc_pulse
+INFO: [VRFC 10-311] analyzing module xpm_cdc_array_single
+INFO: [VRFC 10-311] analyzing module xpm_cdc_sync_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_async_rst
+INFO: [VRFC 10-311] analyzing module xpm_cdc_low_latency_handshake
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_fifo.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module xpm_fifo_base
+INFO: [VRFC 10-311] analyzing module xpm_fifo_rst
+INFO: [VRFC 10-311] analyzing module xpm_counter_updn
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_vec
+INFO: [VRFC 10-311] analyzing module xpm_fifo_reg_bit
+WARNING: [VRFC 10-8426] non-net output port 'd_out' cannot be initialized at declaration in SystemVerilog mode [D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_fifo.sv:1909]
+INFO: [VRFC 10-311] analyzing module xpm_reg_pipe_bit
+INFO: [VRFC 10-311] analyzing module xpm_fifo_sync
+INFO: [VRFC 10-311] analyzing module xpm_fifo_async
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axif
+WARNING: [VRFC 10-2821] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_fifo.sv:3660]
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axil
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axi_reg_slice
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_memory.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module xpm_memory_base
+INFO: [VRFC 10-311] analyzing module asym_bwe_bb
+INFO: [VRFC 10-311] analyzing module xpm_memory_dpdistram
+INFO: [VRFC 10-311] analyzing module xpm_memory_dprom
+INFO: [VRFC 10-311] analyzing module xpm_memory_sdpram
+INFO: [VRFC 10-311] analyzing module xpm_memory_spram
+INFO: [VRFC 10-311] analyzing module xpm_memory_sprom
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_r1_compat1_tb.sv" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module cfo_estimator_link_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/glbl.v" into library cfo_xpm
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim'
+"xelab -wto cf04e00e44b249c2bffa68fa1a03346e --incr --debug typical --relax --mt 16 -L cfo_xpm -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cfo_estimator_link_tb_behav cfo_xpm.cfo_estimator_link_tb cfo_xpm.glbl -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/NIFPGA/programs/Vivado2021_1/bin/unwrapped/win64.o/xelab.exe -wto cf04e00e44b249c2bffa68fa1a03346e --incr --debug typical --relax --mt 16 -L cfo_xpm -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot cfo_estimator_link_tb_behav cfo_xpm.cfo_estimator_link_tb cfo_xpm.glbl -log elaborate.log 
+Using 16 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module cfo_xpm.xpm_cdc_async_rst(RST_ACTIVE_HIG...
+Compiling module cfo_xpm.xpm_cdc_sync_rst(INIT_SYNC_FF=1,...
+Compiling module cfo_xpm.xpm_cdc_single(DEST_SYNC_FF=2,IN...
+Compiling module cfo_xpm.xpm_cdc_single(DEST_SYNC_FF=2,SI...
+Compiling module cfo_xpm.xpm_cdc_sync_rst(DEST_SYNC_FF=2,...
+Compiling module cfo_xpm.xpm_fifo_rst(COMMON_CLOCK=0,SIM_...
+Compiling module cfo_xpm.xpm_fifo_reg_bit
+Compiling module cfo_xpm.xpm_counter_updn(COUNTER_WIDTH=5...
+Compiling module cfo_xpm.xpm_counter_updn
+Compiling module cfo_xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module cfo_xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module cfo_xpm.xpm_fifo_reg_vec
+Compiling module cfo_xpm.xpm_cdc_gray(INIT_SYNC_FF=1,WIDT...
+Compiling module cfo_xpm.xpm_fifo_reg_vec(REG_WIDTH=5)
+Compiling module cfo_xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module cfo_xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module cfo_xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module cfo_xpm.xpm_fifo_async(FIFO_MEMORY_TYPE=...
+Compiling module cfo_xpm.cfo_divide_rne64
+Compiling module cfo_xpm.cfo_phase74_core
+Compiling module cfo_xpm.cfo_fft256_core
+Compiling module cfo_xpm.cfo_divide_rne64wide
+Compiling module cfo_xpm.cfo_fft74_quality
+Compiling module cfo_xpm.cfo_estimate74_backend
+Compiling module cfo_xpm.cfo_estimator_link
+Compiling module cfo_xpm.reset_audit_fast_cb
+Compiling module cfo_xpm.reset_audit_slow_cb
+Compiling module cfo_xpm.cfo_estimator_link_tb
+Compiling module cfo_xpm.glbl
+Built simulation snapshot cfo_estimator_link_tb_behav
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim/xsim.dir/cfo_estimator_link_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Sep 15 04:32:18 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1131.285 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/008_MA_Dev/T11_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cfo_estimator_link_tb_behav -key {Behavioral:sim_1:Functional:cfo_estimator_link_tb} -tclbatch {cfo_estimator_link_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source cfo_estimator_link_tb.tcl
+## current_wave_config
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cfo_estimator_link_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 1131.285 ; gain = 0.000
+# set binding_before_result [invoke_binding $root $simdir $evidence before]
+# set binding_before_rc [lindex $binding_before_result 0]
+# set binding_before [lindex $binding_before_result 1]
+# if {$binding_before_rc != 0 || [string first {"all_checks": true} $binding_before] < 0} {
+#  save_sim_evidence $simdir $evidence
+#  error "Private XPM binding failed before stimulus: $binding_before"
+# }
+# puts "CFO_LINK010R1_COMPAT1_PRIVATE_BINDING_PASS_BEFORE"
+CFO_LINK010R1_COMPAT1_PRIVATE_BINDING_PASS_BEFORE
+# set run_output ""
+# set run_options {}
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse 
+
+will be reported.
+Time: 1 ps  Iteration: 0  Process: /cfo_estimator_link_tb/dut/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1545_149  Scope: cfo_estimator_link_tb.dut.observation_fifo.\gnuram_async_fifo.xpm_fifo_base_inst   File: D:/008_MA_Dev/T11_CFO/sim/vendor/link010r1/xpm_fifo.sv Line: 1551
+CFO_LINK010R1_RESET_AUDIT_PASS reset_epochs=9 common_assertions=9 fifo_assertions=8 fifo_deassertions=9 recoveries=9 fast_samples=1048 slow_samples=415 q_rows=2926
+CFO_LINK010_PASS unique=4 completed=22 protocol_errors=10 max_tail=6792 max_total=1150364 source_stalls=99485 full_runs=21 reset_discards=4 abort_discards=4
+$finish called at time : 3702638 ns : File "D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_r1_compat1_tb.sv" Line 407
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:26 . Memory (MB): peak = 1131.285 ; gain = 0.000
+# set run_rc [catch {run all} run_output run_options]
+# if {$run_rc != 0} {
+#  set h [open [file join $evidence run_all.raw.log] w]
+#  puts $h [format "exit_code=%d\noptions=%s\noutput:\n%s" $run_rc $run_options $run_output]
+#  close $h
+#  catch {close_sim}
+#  save_sim_evidence $simdir $evidence
+#  error "run all failed: $run_output"
+# }
+# set close_output ""
+# set close_options {}
+INFO: [Simtcl 6-16] Simulation closed
+# set close_rc [catch {close_sim} close_output close_options]
+# if {$close_rc != 0} {
+#  set h [open [file join $evidence close_sim.raw.log] w]
+#  puts $h [format "exit_code=%d\noptions=%s\noutput:\n%s" $close_rc $close_options $close_output]
+#  close $h
+#  save_sim_evidence $simdir $evidence
+#  error "close_sim failed: $close_output"
+# }
+# set binding_after_result [invoke_binding $root $simdir $evidence after]
+# set binding_after_rc [lindex $binding_after_result 0]
+# set binding_after [lindex $binding_after_result 1]
+# if {$binding_after_rc != 0 || [string first {"all_checks": true} $binding_after] < 0} {
+#  save_sim_evidence $simdir $evidence
+#  error "Private XPM binding failed after result save: $binding_after"
+# }
+# puts "CFO_LINK010R1_COMPAT1_PRIVATE_BINDING_PASS_AFTER"
+CFO_LINK010R1_COMPAT1_PRIVATE_BINDING_PASS_AFTER
+# save_sim_evidence $simdir $evidence
+# if {![file exists [file join $simdir link010_actual.txt]] || ![file exists [file join $simdir link010r1_reset_audit.txt]]} {error "Native trace or reset audit missing after simulation"}
+# puts "CFO_LINK010R1_NATIVE_DONE action=simulate"
+CFO_LINK010R1_NATIVE_DONE action=simulate
+# close_project
+# exit 0
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 15 04:32:49 2026...

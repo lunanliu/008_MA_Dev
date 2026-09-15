@@ -1,0 +1,395 @@
+{
+  "status": "RAW_EVIDENCE_PRESERVED_PENDING_REVIEW",
+  "artifacts": [
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\ATTEMPT_COMPLETION.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\000_ATTEMPT_COMPLETION.json",
+      "bytes": 120741,
+      "sha256": "D3CCD4510F9CC3A153C602B71B47EAC3B99327348D3E5466C52558C748742EF5"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\cfo_link010r1_compat1_guard_v3_repair_frozen.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\001_cfo_link010r1_compat1_guard_v3_repair_frozen.py",
+      "bytes": 31821,
+      "sha256": "DF8274302D1878DE7AB0D5C6926F4B5F472B8771913B0AB531CB03943764181E"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\CFO_LINK010R1_post_compat1.xpr",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\002_CFO_LINK010R1_post_compat1.xpr",
+      "bytes": 18574,
+      "sha256": "73FD63F5F06F69DEDFFB88CF7351A0E8D607667385A2C4083B8987FD7546B1BF"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\CFO_LINK010R1_pre_compat1.xpr",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\003_CFO_LINK010R1_pre_compat1.xpr",
+      "bytes": 18566,
+      "sha256": "5123211F34830D04D27268E252715051FFE5D53C07E75674E15D4D25B356DB0F"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\compat1_binding_after.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\004_compat1_binding_after.json",
+      "bytes": 4818,
+      "sha256": "090360254F153A52227DFCC5101D6107D9EE03EC3FD3698D8C25B642CEA59F63"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\compat1_binding_after.raw.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\005_compat1_binding_after.raw.log",
+      "bytes": 4866,
+      "sha256": "8D4CCDD92AA9AD3FB4770E412A472A7DC350A746265EEAC03E5ECD24562E56C5"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\compat1_binding_before.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\006_compat1_binding_before.json",
+      "bytes": 4818,
+      "sha256": "090360254F153A52227DFCC5101D6107D9EE03EC3FD3698D8C25B642CEA59F63"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\compat1_binding_before.raw.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\007_compat1_binding_before.raw.log",
+      "bytes": 4866,
+      "sha256": "8D4CCDD92AA9AD3FB4770E412A472A7DC350A746265EEAC03E5ECD24562E56C5"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\compat1_source_check_pre_simulate.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\008_compat1_source_check_pre_simulate.json",
+      "bytes": 365,
+      "sha256": "ED027074EEB6FBCFF5014822E75015A53293C74A956E2E932FE15C05C980E589"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\controller_events.jsonl",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\009_controller_events.jsonl",
+      "bytes": 2278,
+      "sha256": "512093ABE4541F95DA99596B88101D49C716EC26988A2A7FDBB890FC2EBFC256"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\EXECUTION_FREEZE.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\010_EXECUTION_FREEZE.json",
+      "bytes": 295639,
+      "sha256": "AC433AD76548AB18E3C95FEDCA38383AD2729D75F83A351D6F7639337BF16C54"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\link010r1_reset_audit.txt",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\011_link010r1_reset_audit.txt",
+      "bytes": 190644,
+      "sha256": "EACEAEE1F819E879B3CD26DAE628B9385A410F66C697FDB10B7FA113730C1F91"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\link010_actual.txt",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\012_link010_actual.txt",
+      "bytes": 236410,
+      "sha256": "04953812776741920EAE70C60A9C8E4EB579D4F7E4E02BE4DE0EFC19DA8E43E9"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_cfo_estimator_link_tb_vlog.prj",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\013_native_cfo_estimator_link_tb_vlog.prj",
+      "bytes": 821,
+      "sha256": "1F372178A9C77F427CE8F62C35185CC139C6AB082347B64ED4CC7D8A1157AC64"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_compile.bat",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\014_native_compile.bat",
+      "bytes": 920,
+      "sha256": "70B28095B4350C17EF81537F6AA169CC1BB57A1DA021A072C5CA428C454AD0D7"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_compile.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\015_native_compile.log",
+      "bytes": 3876,
+      "sha256": "E65632F6523883EAD7A3FABDED1F8E865C77C8869AB83ADDA8AE61B14699DC22"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_elaborate.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\016_native_elaborate.log",
+      "bytes": 2196,
+      "sha256": "E6D7A59FFA306E34CC6EE4E6BB2E28B51869BE761B034D6674E2859C05D07DD9"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_evidence_copy.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\017_native_evidence_copy.json",
+      "bytes": 4441,
+      "sha256": "FA6F2A5306E10A0569A7F781C3891B681E04C4E3B13670FC80109D2FF882EF2A"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_link010r1_reset_audit.txt",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\018_native_link010r1_reset_audit.txt",
+      "bytes": 190644,
+      "sha256": "EACEAEE1F819E879B3CD26DAE628B9385A410F66C697FDB10B7FA113730C1F91"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_link010_actual.txt",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\019_native_link010_actual.txt",
+      "bytes": 236410,
+      "sha256": "04953812776741920EAE70C60A9C8E4EB579D4F7E4E02BE4DE0EFC19DA8E43E9"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_simulate.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\020_native_simulate.log",
+      "bytes": 892,
+      "sha256": "E54BB532C5917229C94FBC222B4C85A08B47653AD3CB3A58805141500E99CD3E"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_xsim.ini",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\021_native_xsim.ini",
+      "bytes": 92,
+      "sha256": "1A9A8F3B2EDE12C07EA7BBB12363BB3132286B10055E382664A00B2E7BF8EDBD"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_xsimkernel.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\022_native_xsimkernel.log",
+      "bytes": 354,
+      "sha256": "10A13BA4CBC3A85F7E960F1533DE52CB3AB848E6743306ECF24883ACAC0E6B9E"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\native_xvlog.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\023_native_xvlog.log",
+      "bytes": 3876,
+      "sha256": "E65632F6523883EAD7A3FABDED1F8E865C77C8869AB83ADDA8AE61B14699DC22"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\024_preexisting_simdir_snapshot.json",
+      "bytes": 3383,
+      "sha256": "72355C8F3A11EC649C9F9DF7F58C1CE1532C6EE80753062EF2C448C706134C17"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\PRE_SIMULATE_ADMISSION.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\025_PRE_SIMULATE_ADMISSION.json",
+      "bytes": 142934,
+      "sha256": "CE523C93CE527BC2F9C05D746C3DFC3E79C419449D20BF4B436536D4A9AB7BC4"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\report_clock.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\026_report_clock.json",
+      "bytes": 265,
+      "sha256": "18B186BD70F7CF9457672915AC133638386DB67CF040E4BA1438D7D3A7F957F5"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\simulate.jou",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\027_simulate.jou",
+      "bytes": 1140,
+      "sha256": "A6A16C59B4123627A78AD4C72D1698ABE65A818ECAAC835D1D3A3415C96E92CE"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\simulate.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\028_simulate.log",
+      "bytes": 28496,
+      "sha256": "5DE8009ECC2EE44EB380115F8DE7B74617BDA6745EF2A4058744C4461B3AB220"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\simulate.samples.jsonl",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\029_simulate.samples.jsonl",
+      "bytes": 143222,
+      "sha256": "A5B95778A2DC38BBCFDC91A7F00744F59EDC43ACBB9FCB054A18CC88D5FB4C58"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\simulate.stderr.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\030_simulate.stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\simulate.stdout.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\031_simulate.stdout.log",
+      "bytes": 28211,
+      "sha256": "1F4B610CBB22CE5FE1E9316C1DD7E162864C3BC38E2B2BCBE4FA33CC0BC27362"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\simulate_actual_sources.csv",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\032_simulate_actual_sources.csv",
+      "bytes": 2002,
+      "sha256": "15FB0FDCC5383A297832E4EE3BD1631E5E3C811077B4B72DBC9ED24499B1008C"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\simulate_project_identity.txt",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\033_simulate_project_identity.txt",
+      "bytes": 214,
+      "sha256": "8AF523BD67453E1D7041B8C950D4DEB7E6D9BBD7A8387B5D77DE8B1723CEA052"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\simulate_result.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\034_simulate_result.json",
+      "bytes": 74349,
+      "sha256": "414A2D378056D229DB9E6EEC4124F526101C043FD410604CFA863A36DCAEBCA1"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\admission_helper_v2.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\035_admission_helper_v2.py",
+      "bytes": 5204,
+      "sha256": "8EF422428352F9EF991E59E6304F0EDF644C5CB7A7AA19B8FDE3EA99CC097899"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\base_gui_helper.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\036_base_gui_helper.py",
+      "bytes": 13038,
+      "sha256": "CE1D6B786FE9DD495616A9F5B79155BA2D6653B5B4320DFC897500679060ABD3"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\binding_checker.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\037_binding_checker.py",
+      "bytes": 22496,
+      "sha256": "589DF51BC1B689FA16BB07ED378880C4A6F9DC6060B72C8523990324FAE0B4DA"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\compat1_tcl_v2.tcl",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\038_compat1_tcl_v2.tcl",
+      "bytes": 7910,
+      "sha256": "B106E35A3A6FF3F17A61863ADBD897C1C620D36DACDC84E944F5D08A020289E6"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\compat_checker.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\039_compat_checker.py",
+      "bytes": 2774,
+      "sha256": "2491BED375EE0ED51AC70E095EED4F8DA36BF8D80254A7AC6C701D6E9143955D"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\compat_tb.sv",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\040_compat_tb.sv",
+      "bytes": 21800,
+      "sha256": "4C7EC8E1FB2F194FF982130439CE90375C6414FC7B1B2C8A0F2D646A518B078E"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\entry_runner.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\041_entry_runner.py",
+      "bytes": 31821,
+      "sha256": "DF8274302D1878DE7AB0D5C6926F4B5F472B8771913B0AB531CB03943764181E"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\numeric_models.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\042_numeric_models.py",
+      "bytes": 1858,
+      "sha256": "C5FD9B54075C918FCD60CFB04CD8C7C9FEB3DBB596532367F529CE7CDAE6ED58"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\numeric_verifier.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\043_numeric_verifier.py",
+      "bytes": 6843,
+      "sha256": "8099CA4EC39373EF82C910E21C39B12E4B3723FE832E2B1FBE9C10B337B9A2D1"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\original_r1_repair.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\044_original_r1_repair.py",
+      "bytes": 3131,
+      "sha256": "486C678D4BD0EEC29942BBCFD3A884A7A59CC025B01A63F68FD48C6CEA65636F"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\original_tcl.tcl",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\045_original_tcl.tcl",
+      "bytes": 5605,
+      "sha256": "A04D3BC4F063779028288B72074696F99ABF2287A277171B8DD0947E23718037"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\original_v1_guard.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\046_original_v1_guard.py",
+      "bytes": 12486,
+      "sha256": "9654C5B8B9ED5D252C9CA4F3008A08590CF972D332678FE876F70F097D887E84"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\parallel_tcl.tcl",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\047_parallel_tcl.tcl",
+      "bytes": 4994,
+      "sha256": "50B5FCAB461B47C19D3E7B2C02EE111F7D203B3791B2C6D4807A45382C2585B3"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\reset_checker.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\048_reset_checker.py",
+      "bytes": 6708,
+      "sha256": "E28F55CBF483C9B904E56A3D54D747377A1EC27610A5A2B70A6F2342C7D760C0"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\reused_xpr.xpr",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\049_reused_xpr.xpr",
+      "bytes": 18566,
+      "sha256": "5123211F34830D04D27268E252715051FFE5D53C07E75674E15D4D25B356DB0F"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\source_lock.json",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\050_source_lock.json",
+      "bytes": 14991,
+      "sha256": "4245E75E0D3049F9F7E92EDCF68B4E286BE30DE59747D8A03A0BBE14C2C3FFA3"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\submitted_v1_helper.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\051_submitted_v1_helper.py",
+      "bytes": 3960,
+      "sha256": "B3F8D17A8B73226643EBD0C7453550B5660EFA1F315082266CEFC1EFC4837B37"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\submitted_v1_runner.py",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\052_submitted_v1_runner.py",
+      "bytes": 16938,
+      "sha256": "95B4179580E524B0008A71E3323813C4B8DC6CEE4813F7AB9F709E229245A3CD"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\execution_dependencies\\submitted_v1_tcl.tcl",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\053_submitted_v1_tcl.tcl",
+      "bytes": 5475,
+      "sha256": "575520FAF9C28291E8DB79E657F7DB111669ECA870E95F9439035B9E10D72881"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\cfo_estimator_link_tb_vlog.prj",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\054_cfo_estimator_link_tb_vlog.prj",
+      "bytes": 813,
+      "sha256": "8CEF37E98C6702343442572F18F0ED9DCA267FA650A076A7EE6F136436640F77"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\compile.bat",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\055_compile.bat",
+      "bytes": 920,
+      "sha256": "E5B691EBC23DB1AFA06DF5826F13E148134A88A982445ABE5CF64240FD0D2E97"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\compile.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\056_compile.log",
+      "bytes": 3868,
+      "sha256": "FA9C17276FC6E31D9A627F2E675C876A67E3A90DC684C5DB1464C69D4B2F1C27"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\elaborate.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\057_elaborate.log",
+      "bytes": 646,
+      "sha256": "A214BE86E111F6A49A2EE8334BCDAB0447311EDD2D7E4BA4AB761CC2BD13B93C"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\xsim.ini",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\058_xsim.ini",
+      "bytes": 92,
+      "sha256": "1A9A8F3B2EDE12C07EA7BBB12363BB3132286B10055E382664A00B2E7BF8EDBD"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\work\\CFO_LINK010R1_COMPAT1_V3\\attempt_20260915T023151418430Z_luna\\preexisting_simdir_snapshot\\xvlog.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\059_xvlog.log",
+      "bytes": 3868,
+      "sha256": "FA9C17276FC6E31D9A627F2E675C876A67E3A90DC684C5DB1464C69D4B2F1C27"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.xpr",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\060_CFO_LINK010R1.xpr",
+      "bytes": 18574,
+      "sha256": "73FD63F5F06F69DEDFFB88CF7351A0E8D607667385A2C4083B8987FD7546B1BF"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\xvlog.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\061_xvlog.log",
+      "bytes": 3876,
+      "sha256": "E65632F6523883EAD7A3FABDED1F8E865C77C8869AB83ADDA8AE61B14699DC22"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\compile.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\062_compile.log",
+      "bytes": 3876,
+      "sha256": "E65632F6523883EAD7A3FABDED1F8E865C77C8869AB83ADDA8AE61B14699DC22"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\elaborate.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\063_elaborate.log",
+      "bytes": 2196,
+      "sha256": "E6D7A59FFA306E34CC6EE4E6BB2E28B51869BE761B034D6674E2859C05D07DD9"
+    },
+    {
+      "original_path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim\\simulate.log",
+      "archived_path": "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915\\064_simulate.log",
+      "bytes": 892,
+      "sha256": "E54BB532C5917229C94FBC222B4C85A08B47653AD3CB3A58805141500E99CD3E"
+    }
+  ]
+}
