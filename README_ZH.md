@@ -1,3 +1,19 @@
+# 三模块当前入口（2026-09-15 目录整理）
+
+| 模块 | 日常 GUI / 说明入口 | 实际范围 |
+|---|---|---|
+| 同步前端 | [Sync_Frontend.xpr](Sync_Frontend/Sync_Frontend.xpr) · [README](Sync_Frontend/README_ZH.md) | sync_frontend_top；旧用户 GUI 保持原位 |
+| 两级 SFO | [Sync_SFO.xpr](Sync_SFO/Sync_SFO.xpr) · [README](Sync_SFO/README_ZH.md) | t10_two_pass_system，原默认输出参数 150 MHz |
+| CFO | [九个真实阶段工程](Sync_CFO/README_ZH.md) | 完整 CFO 整链顶层尚未交付 |
+
+[旧新路径映射](PATH_MAPPING_ZH.md) · [整理验证与边界](Sync_SFO/docs/reorganization_20260915/REORGANIZATION_RESULT_ZH.md) · [Git 与原有修改](Sync_SFO/docs/reorganization_20260915/GIT_REORGANIZATION_ZH.md) · [独立 I16 示例](Sync_Frontend/examples/README_ZH.md)。
+
+本轮仅整理路径：不改算法或接口，不启动新的综合、实现、仿真或 MATLAB，不生成新网表、CLIP XML 或 LabVIEW 工程。前端与 I16 保留独立 Git；SFO/CFO 继续使用根 Git。
+
+以下原 README 内容完整保留用于追溯，其中旧相对路径按上方映射进入 Sync_SFO；日常入口以上表为准。
+
+---
+
 # T10 两级SFO独立Vivado工程
 
 本项目用于研究和调试“第一次采样频率偏差估计 → 第一次重采样 → 第二次估计 → 第二次重采样”。目标器件固定为 **xcvu11p-flgb2104-2-e**，开发工具为 **Vivado 2021.1**。本目录由本地Git管理，没有云端远程仓库。

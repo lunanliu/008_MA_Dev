@@ -1,0 +1,18 @@
+[
+  {
+    "source": "D:\\008_MA_Dev\\Sync_Frontend\\vivado\\Sync_Frontend\\Sync_Frontend.srcs",
+    "target": "D:\\008_MA_Dev\\Sync_Frontend\\Sync_Frontend.srcs"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\Sync_SFO\\handoff\\T10_SFO_20260915_manual\\wrapper",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\wrapper"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_20260915_manual\\sync_frontend_clip.vhd",
+    "target": "D:\\008_MA_Dev\\Sync_Frontend\\wrapper\\sync_frontend_clip.vhd"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\Sync_SFO\\handoff\\T10_SFO_20260915_manual\\core_project\\docs\\provenance\\RUN03_APPROVED_INPUTS.csv",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\docs\\provenance\\RUN03_APPROVED_INPUTS.csv"
+  }
+]

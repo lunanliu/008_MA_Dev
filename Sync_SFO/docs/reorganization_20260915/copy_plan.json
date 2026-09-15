@@ -1,0 +1,54 @@
+[
+  {
+    "source": "D:\\008_MA_Dev\\constraints",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\constraints"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\docs",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\docs"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\handoff",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\handoff"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\ip",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\ip"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\matlab",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\matlab"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\rtl",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\rtl"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\sim",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\sim"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\tools",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\tools"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\vivado",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\vivado"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\work",
+    "target": "D:\\008_MA_Dev\\Sync_SFO\\work"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\T11_CFO",
+    "target": "D:\\008_MA_Dev\\Sync_CFO"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\I16_AddSub_CLIP",
+    "target": "D:\\008_MA_Dev\\Sync_Frontend\\examples\\I16_AddSub_CLIP"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\I16_AddSub_CLIP_Source_Project.zip",
+    "target": "D:\\008_MA_Dev\\Sync_Frontend\\examples\\I16_AddSub_CLIP_Source_Project.zip"
+  }
+]

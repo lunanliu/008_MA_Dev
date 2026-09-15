@@ -1,0 +1,67 @@
+[
+  {
+    "old": "D:\\008_MA_Dev\\constraints",
+    "current": "D:\\008_MA_Dev\\Sync_SFO\\constraints",
+    "archive": "D:\\008_MA_Dev\\Sync_SFO\\archive\\pre_reorganization_root\\constraints"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\docs",
+    "current": "D:\\008_MA_Dev\\Sync_SFO\\docs",
+    "archive": "D:\\008_MA_Dev\\Sync_SFO\\archive\\pre_reorganization_root\\docs"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\handoff",
+    "current": "D:\\008_MA_Dev\\Sync_SFO\\handoff",
+    "archive": "D:\\008_MA_Dev\\Sync_SFO\\archive\\pre_reorganization_root\\handoff"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\ip",
+    "current": "D:\\008_MA_Dev\\Sync_SFO\\ip",
+    "archive": "D:\\008_MA_Dev\\Sync_SFO\\archive\\pre_reorganization_root\\ip"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\matlab",
+    "current": "D:\\008_MA_Dev\\Sync_SFO\\matlab",
+    "archive": "D:\\008_MA_Dev\\Sync_SFO\\archive\\pre_reorganization_root\\matlab"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\rtl",
+    "current": "D:\\008_MA_Dev\\Sync_SFO\\rtl",
+    "archive": "D:\\008_MA_Dev\\Sync_SFO\\archive\\pre_reorganization_root\\rtl"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\sim",
+    "current": "D:\\008_MA_Dev\\Sync_SFO\\sim",
+    "archive": "D:\\008_MA_Dev\\Sync_SFO\\archive\\pre_reorganization_root\\sim"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\tools",
+    "current": "D:\\008_MA_Dev\\Sync_SFO\\tools",
+    "archive": "D:\\008_MA_Dev\\Sync_SFO\\archive\\pre_reorganization_root\\tools"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\vivado",
+    "current": "D:\\008_MA_Dev\\Sync_SFO\\vivado",
+    "archive": "D:\\008_MA_Dev\\Sync_SFO\\archive\\pre_reorganization_root\\vivado"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\work",
+    "current": "D:\\008_MA_Dev\\Sync_SFO\\work",
+    "archive": "D:\\008_MA_Dev\\Sync_SFO\\archive\\pre_reorganization_root\\work"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\T11_CFO",
+    "current": "D:\\008_MA_Dev\\Sync_CFO",
+    "archive": "D:\\008_MA_Dev\\Sync_CFO\\archive\\pre_reorganization_T11_CFO"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\I16_AddSub_CLIP",
+    "current": "D:\\008_MA_Dev\\Sync_Frontend\\examples\\I16_AddSub_CLIP",
+    "archive": "D:\\008_MA_Dev\\Sync_Frontend\\examples\\archive\\I16_AddSub_CLIP"
+  },
+  {
+    "old": "D:\\008_MA_Dev\\I16_AddSub_CLIP_Source_Project.zip",
+    "current": "D:\\008_MA_Dev\\Sync_Frontend\\examples\\I16_AddSub_CLIP_Source_Project.zip",
+    "archive": "D:\\008_MA_Dev\\Sync_Frontend\\examples\\archive\\I16_AddSub_CLIP_Source_Project.zip"
+  }
+]

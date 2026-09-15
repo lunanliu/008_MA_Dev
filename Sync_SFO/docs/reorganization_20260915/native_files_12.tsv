@@ -1,0 +1,5 @@
+fileset	path	file_type	library
+sources_1	D:/008_MA_Dev/Sync_Frontend/examples/I16_AddSub_CLIP/rtl/i16_addsub_core.vhd	VHDL	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_Frontend/examples/I16_AddSub_CLIP/clip/i16_addsub_clip.vhd	VHDL	xil_defaultlib
+constrs_1	D:/008_MA_Dev/Sync_Frontend/examples/I16_AddSub_CLIP/constraints/i16_addsub_ooc.xdc	XDC	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_Frontend/examples/I16_AddSub_CLIP/sim/i16_addsub_tb.vhd	VHDL 2008	xil_defaultlib

@@ -1,0 +1,234 @@
+[
+  {
+    "source": "D:/008_MA_Dev/Sync_SFO/handoff/T10_SFO_20260915_manual/core_project/vivado/T10_SFO/T10_SFO.xpr",
+    "target": "D:/008_MA_Dev/Sync_SFO/Sync_SFO.xpr",
+    "before_sha256": "05e4db9b97e5bb49a43f24abff28d372409f79ed08dbd515f6e703c2f62249a2",
+    "after_sha256": "7fa39003cbde576250da053b5607b1946b828644297df7edc5666f5ccae1dce3",
+    "replacements": [
+      [
+        "$PPRDIR/../../",
+        "$PPRDIR/"
+      ]
+    ],
+    "thread_hooks": "$PPRDIR/tools/vivado/run_threads.tcl"
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.xpr",
+    "target": "D:/008_MA_Dev/Sync_Frontend/Sync_Frontend.xpr",
+    "before_sha256": "11cbfe9ffd3774b225e7cbd77788ca9dedd1f2a2b6add436bc4e8070960a6eb8",
+    "after_sha256": "dc57452445c1c0041da26f2d0618534949995282ff44da6ba7eaf20e97c35bb9",
+    "replacements": [
+      [
+        "$PPRDIR/../../",
+        "$PPRDIR/"
+      ],
+      [
+        "D:/008_MA_Dev/Sync_Frontend/sim/data/",
+        "../../../../sim/data/"
+      ]
+    ],
+    "thread_hooks": null
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_BACKEND74/CFO_BACKEND74.xpr",
+    "target": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_BACKEND74/CFO_BACKEND74.xpr",
+    "before_sha256": "2186f6c5da625acede61283db2451c52e55e3551c097fd8ebef1ca2ead221d5e",
+    "after_sha256": "595b0195d0d655f403ffe26b1d89eb3b6803174e318a1e74222f66f9b3a9b1b7",
+    "replacements": [
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_cdc.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_fifo.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_memory.sv"
+      ]
+    ],
+    "thread_hooks": null
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_COORD/CFO_COORD.xpr",
+    "target": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_COORD/CFO_COORD.xpr",
+    "before_sha256": "7605d752b0bb2c0b7be2841d823e5c0ac3c25ea15d848239e3200afbc40239a4",
+    "after_sha256": "b1eb1271c5312fe92df89fc6e14730a0f3fe281840597bef39fba670356caffa",
+    "replacements": [
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_cdc.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_fifo.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_memory.sv"
+      ]
+    ],
+    "thread_hooks": null
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_FFT2048/CFO_FFT2048.xpr",
+    "target": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_FFT2048/CFO_FFT2048.xpr",
+    "before_sha256": "a3f09efa805be554092e32d0e42ca23bbf131d01ac0dd6df671b936f2d891647",
+    "after_sha256": "fc6777d90fe0d9f3b520e4dc7042d9243f6d8b5330a26594e49572db826a31b7",
+    "replacements": [
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_cdc.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_fifo.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_memory.sv"
+      ]
+    ],
+    "thread_hooks": null
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_FFT256/CFO_FFT256.xpr",
+    "target": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_FFT256/CFO_FFT256.xpr",
+    "before_sha256": "7b7d3d662bee64ff17261e71dc45ba35d37bd2a415cb87e67d048ea4df0b9369",
+    "after_sha256": "c0c4d52b77ed423240b24bf9f5c102b79441fc7e5dcd5138a53d5573761e4bc9",
+    "replacements": [
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_cdc.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_fifo.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_memory.sv"
+      ]
+    ],
+    "thread_hooks": null
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_FRONT2048/CFO_FRONT2048.xpr",
+    "target": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_FRONT2048/CFO_FRONT2048.xpr",
+    "before_sha256": "67c3342838f691cd1bca2499b2049315c323db80a37da6b224a1097a88cb4329",
+    "after_sha256": "d20bc7c2dfe7415ada28450e45fd3bafce67cc2dfd9f711527b3b6b160606e38",
+    "replacements": [
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_cdc.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_fifo.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_memory.sv"
+      ]
+    ],
+    "thread_hooks": null
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_LINK010/CFO_LINK010.xpr",
+    "target": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_LINK010/CFO_LINK010.xpr",
+    "before_sha256": "81fcae67ac40425c9123053d6f0f90397d54296062310c8888daa62d64f5cef5",
+    "after_sha256": "a758d60db0735a746570ed9480e6a923cef7ff1486dcc0edb0fe990adaa4815a",
+    "replacements": [
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_cdc.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_fifo.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_memory.sv"
+      ]
+    ],
+    "thread_hooks": null
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.xpr",
+    "target": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.xpr",
+    "before_sha256": "73fd63f5f06f69dedffb88cf7351a0e8d607667385a2c4083b8987fd7546b1bf",
+    "after_sha256": "b1f7f3b83601798081ec9da066e9da6155ceb4888486a896b2aa0c529b7d1122",
+    "replacements": [
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_cdc.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_fifo.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_memory.sv"
+      ]
+    ],
+    "thread_hooks": null
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_PHASE74/CFO_PHASE74.xpr",
+    "target": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_PHASE74/CFO_PHASE74.xpr",
+    "before_sha256": "f4ea4ef3d0e7a71b89e55770eb4be368329ccec6800253cb1234a353741054ad",
+    "after_sha256": "47120d5c5989ff555edd9dc11113674fa5627c7eb29600fe50e475e500c34529",
+    "replacements": [
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_cdc.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_fifo.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_memory.sv"
+      ]
+    ],
+    "thread_hooks": null
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_SYNC/CFO_SYNC.xpr",
+    "target": "D:/008_MA_Dev/Sync_CFO/vivado/CFO_SYNC/CFO_SYNC.xpr",
+    "before_sha256": "8ee3459986419c34b42b4261a0e38b2d5c670b47e25e33d80b46074cd4ee8063",
+    "after_sha256": "56a5bf5291b6285a3e8a35f960636d943e2816e5ab2427f873cda9e0f23a6870",
+    "replacements": [
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_cdc.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_fifo.sv"
+      ],
+      [
+        "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv",
+        "$PPRDIR/../../rtl/vendor/vivado_2021_1_xpm/xpm_memory.sv"
+      ]
+    ],
+    "thread_hooks": null
+  },
+  {
+    "source": "D:/008_MA_Dev/Sync_Frontend/examples/I16_AddSub_CLIP/vivado/I16_AddSub/I16_AddSub.xpr",
+    "target": "D:/008_MA_Dev/Sync_Frontend/examples/I16_AddSub_CLIP/I16_AddSub.xpr",
+    "before_sha256": "106c7dc79eabbf735556d03d0f48e5df98ea4b53a109e0a599d674351bdfa313",
+    "after_sha256": "ef4d75c0dcc6fc87de75bf952e9b0614f4a39098a44b8b07d2908081edf2308c",
+    "replacements": [
+      [
+        "$PPRDIR/../../",
+        "$PPRDIR/"
+      ]
+    ],
+    "thread_hooks": null
+  }
+]

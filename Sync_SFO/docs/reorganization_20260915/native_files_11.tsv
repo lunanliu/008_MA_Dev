@@ -1,0 +1,18 @@
+fileset	path	file_type	library
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_rotate4.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/ip/cfo_rot_lut.mem	Memory File	xil_defaultlib
+constrs_1	D:/008_MA_Dev/Sync_CFO/constraints/cfo_rotate4.xdc	XDC	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rotator_configs.svh	Verilog Header	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/tb/cfo_rotate4_tb.sv	SystemVerilog	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case0_input.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case0_expected.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case0_sat.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case1_input.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case1_expected.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case1_sat.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case2_input.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case2_expected.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case2_sat.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case3_input.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case3_expected.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/rot_case3_sat.mem	Memory File	xil_defaultlib

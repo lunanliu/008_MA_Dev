@@ -1,0 +1,13 @@
+fileset	path	file_type	library
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_divide_rne64.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_phase74_core_v2.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/ip/phase74_atan_q31.mem	Memory File	xil_defaultlib
+constrs_1	D:/008_MA_Dev/Sync_CFO/constraints/cfo_phase74.xdc	XDC	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/phase74_config.svh	Verilog Header	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/tb/cfo_phase74_tb.sv	SystemVerilog	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/phase74_z.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/phase74_angle.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/phase74_pred.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/phase74_center.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/phase74_result.mem	Memory File	xil_defaultlib
+utils_1	D:/008_MA_Dev/Sync_CFO/vivado/run_threads.tcl	TCL	xil_defaultlib

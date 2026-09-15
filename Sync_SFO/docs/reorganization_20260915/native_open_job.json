@@ -1,0 +1,13 @@
+{
+  "scope": "read-only project manager open and actual file-set export",
+  "projects": 12,
+  "vivado": "C:/NIFPGA/programs/Vivado2021_1/bin/vivado.bat",
+  "threads": 8,
+  "parallel_projects": 1,
+  "compute_jobs": 0,
+  "estimated_minutes": "1-3",
+  "resource_snapshot_free_kib": 16717852,
+  "no_launch_or_generation": true,
+  "output": "D:\\008_MA_Dev\\Sync_SFO\\docs\\reorganization_20260915",
+  "start": "2026-09-15T15:43:54.3076520+02:00"
+}

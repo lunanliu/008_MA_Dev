@@ -1,0 +1,5 @@
+{
+  "frontend_gitattributes_suffix": "\n# Preserve bytes of new directory-entry assets.\nSync_Frontend.srcs/** -text\nSync_Frontend.xpr -text\nwrapper/sync_frontend_clip.vhd -text\n",
+  "i16_new_gitattributes": "# Preserve the new root project entry bytes.\n/I16_AddSub.xpr -text\n",
+  "root_gitignore_suffix": "\n# Independent module repository after reorganization.\n/Sync_Frontend/\n"
+}

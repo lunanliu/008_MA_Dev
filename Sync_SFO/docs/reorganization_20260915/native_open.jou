@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Sep 15 15:43:56 2026
+# Process ID: 41036
+# Current directory: D:/008_MA_Dev/Sync_SFO/docs/reorganization_20260915
+# Command line: vivado.exe -mode batch -notrace -source D:\008_MA_Dev\Sync_SFO\docs\reorganization_20260915\native_open_check.tcl -log D:\008_MA_Dev\Sync_SFO\docs\reorganization_20260915\native_open.log -journal D:\008_MA_Dev\Sync_SFO\docs\reorganization_20260915\native_open.jou
+# Log file: D:/008_MA_Dev/Sync_SFO/docs/reorganization_20260915/native_open.log
+# Journal file: D:\008_MA_Dev\Sync_SFO\docs\reorganization_20260915\native_open.jou
+#-----------------------------------------------------------
+source {D:\008_MA_Dev\Sync_SFO\docs\reorganization_20260915\native_open_check.tcl} -notrace

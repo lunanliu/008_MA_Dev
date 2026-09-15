@@ -1,0 +1,14 @@
+fileset	path	file_type	library
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_fft2048_core.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_front2048_window.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/ip/fft2048_twiddle.mem	Memory File	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/ip/front2048_coefficient_index.mem	Memory File	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/ip/front2048_coefficient_table.mem	Memory File	xil_defaultlib
+constrs_1	D:/008_MA_Dev/Sync_CFO/constraints/cfo_front2048.xdc	XDC	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/front2048_config.svh	Verilog Header	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/tb/cfo_front2048_tb.sv	SystemVerilog	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/front2048_input.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/front2048_pilot.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/front2048_result.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/front2048_metadata.mem	Memory File	xil_defaultlib
+utils_1	D:/008_MA_Dev/Sync_CFO/vivado/run_threads.tcl	TCL	xil_defaultlib

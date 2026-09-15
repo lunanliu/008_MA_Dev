@@ -1,0 +1,22 @@
+[
+  {
+    "path": "README_ZH.md",
+    "position": "prefix",
+    "added_utf8": "# 三模块当前入口（2026-09-15 目录整理）\n\n| 模块 | 日常 GUI / 说明入口 | 实际范围 |\n|---|---|---|\n| 同步前端 | [Sync_Frontend.xpr](Sync_Frontend/Sync_Frontend.xpr) · [README](Sync_Frontend/README_ZH.md) | sync_frontend_top；旧用户 GUI 保持原位 |\n| 两级 SFO | [Sync_SFO.xpr](Sync_SFO/Sync_SFO.xpr) · [README](Sync_SFO/README_ZH.md) | t10_two_pass_system，原默认输出参数 150 MHz |\n| CFO | [九个真实阶段工程](Sync_CFO/README_ZH.md) | 完整 CFO 整链顶层尚未交付 |\n\n[旧新路径映射](PATH_MAPPING_ZH.md) · [整理验证与边界](Sync_SFO/docs/reorganization_20260915/REORGANIZATION_RESULT_ZH.md) · [Git 与原有修改](Sync_SFO/docs/reorganization_20260915/GIT_REORGANIZATION_ZH.md) · [独立 I16 示例](Sync_Frontend/examples/README_ZH.md)。\n\n本轮仅整理路径：不改算法或接口，不启动新的综合、实现、仿真或 MATLAB，不生成新网表、CLIP XML 或 LabVIEW 工程。前端与 I16 保留独立 Git；SFO/CFO 继续使用根 Git。\n\n以下原 README 内容完整保留用于追溯，其中旧相对路径按上方映射进入 Sync_SFO；日常入口以上表为准。\n\n---\n\n"
+  },
+  {
+    "path": "AGENTS.md",
+    "position": "prefix",
+    "added_utf8": "# 2026-09-15 目录映射补充（原规则全文保留）\n\n本轮用户批准的三模块入口与路径整理按 D:/007 Dev/OTA_RTL_0829/docs/operations/SYNC_SFO_DIRECTORY_REORGANIZATION_AUTHORIZATION_20260915_ZH.md 执行。新增位置见 [PATH_MAPPING_ZH.md](PATH_MAPPING_ZH.md)。下方旧规则中的根目录 docs、tools、rtl、ip、constraints、sim、matlab、vivado、handoff、work 均已归入 Sync_SFO；T11_CFO 对应 Sync_CFO。Sync_Frontend 保持原位，I16 示例在其 examples 内且保持独立身份。\n\n本补充只解释搬迁后的路径，不扩大算法、实验、配对或交付授权。用户打开的旧前端 GUI 状态保持；旧规则原文和已有用户修改均保留如下。\n\n---\n\n"
+  },
+  {
+    "path": ".gitignore",
+    "position": "suffix",
+    "added_utf8": "\n# 2026-09-15 module relocation: preserved originals and local generated products.\n/Sync_SFO/archive/\n/Sync_CFO/archive/\n/Sync_SFO/work/\n/Sync_SFO/results/\n/Sync_SFO/vivado/**/*.cache/\n/Sync_SFO/vivado/**/*.runs/\n/Sync_SFO/vivado/**/*.sim/\n/Sync_SFO/vivado/**/*.gen/\n/Sync_SFO/vivado/**/*.hw/\n/Sync_SFO/vivado/**/*.ip_user_files/\n/Sync_SFO/vivado/**/webtalk*\n/Sync_SFO/vivado/**/usage_statistics_webtalk*\n/Sync_SFO/*.cache/\n/Sync_SFO/*.runs/\n/Sync_SFO/*.sim/\n/Sync_SFO/*.gen/\n/Sync_SFO/*.hw/\n/Sync_SFO/*.ip_user_files/\n/Sync_CFO/vivado/**/*.cache/\n/Sync_CFO/vivado/**/*.runs/\n/Sync_CFO/vivado/**/*.sim/\n/Sync_CFO/vivado/**/*.gen/\n/Sync_CFO/vivado/**/*.hw/\n/Sync_CFO/vivado/**/*.ip_user_files/\n/Sync_SFO/ip/**/synth/\n/Sync_SFO/ip/**/sim/\n/Sync_SFO/ip/**/hdl/\n/Sync_SFO/ip/**/doc/\n/Sync_SFO/ip/**/simulation/\n/Sync_SFO/ip/**/ipstatic/\n/Sync_SFO/ip/**/constraints/\n/Sync_SFO/ip/**/cmodel/\n/Sync_SFO/ip/**/example_design/\n/Sync_SFO/ip/**/impl/\n/Sync_SFO/ip/**/*.veo\n/Sync_SFO/ip/**/*.vho\n/Sync_SFO/ip/config/*/*.xml\n/Sync_SFO/docs/reorganization_20260915/*.index.before\n/Sync_SFO/docs/reorganization_20260915/report_clock.json\n"
+  },
+  {
+    "path": "Sync_Frontend/.gitignore",
+    "position": "suffix",
+    "added_utf8": "\n# New root GUI uses isolated generated products; imported XCI remain versioned.\n/Sync_Frontend.cache/\n/Sync_Frontend.gen/\n/Sync_Frontend.hw/\n/Sync_Frontend.ip_user_files/\n/Sync_Frontend.runs/\n/Sync_Frontend.sim/\n/examples/I16_AddSub_CLIP/\n/examples/archive/\n"
+  }
+]

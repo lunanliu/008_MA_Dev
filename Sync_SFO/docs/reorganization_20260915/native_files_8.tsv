@@ -1,0 +1,20 @@
+fileset	path	file_type	library
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_divide_rne64.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_divide_rne64wide.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_estimate74_backend.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_fft256_core.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_fft74_quality_v2.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_phase74_core_v2.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_estimator_link.sv	SystemVerilog	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/ip/fft256_twiddle.mem	Memory File	xil_defaultlib
+sources_1	D:/008_MA_Dev/Sync_CFO/ip/phase74_atan_q31.mem	Memory File	xil_defaultlib
+constrs_1	D:/008_MA_Dev/Sync_CFO/constraints/cfo_link010.xdc	XDC	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_config.svh	Verilog Header	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/tb/cfo_estimator_link_tb.sv	SystemVerilog	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_input.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_read.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_result.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_error_input.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_error_read.mem	Memory File	xil_defaultlib
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_error_result.mem	Memory File	xil_defaultlib
+utils_1	D:/008_MA_Dev/Sync_CFO/vivado/run_threads.tcl	TCL	xil_defaultlib

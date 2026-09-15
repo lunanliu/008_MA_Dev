@@ -1,0 +1,26 @@
+fileset	path	file_type	library
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_divide_rne64.sv	SystemVerilog	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_divide_rne64wide.sv	SystemVerilog	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_estimate74_backend.sv	SystemVerilog	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_fft256_core.sv	SystemVerilog	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_fft74_quality_v2.sv	SystemVerilog	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_phase74_core_v2.sv	SystemVerilog	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/vendor/vivado_2021_1_xpm/xpm_cdc.sv	SystemVerilog	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/vendor/vivado_2021_1_xpm/xpm_fifo.sv	SystemVerilog	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/vendor/vivado_2021_1_xpm/xpm_memory.sv	SystemVerilog	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/rtl/cfo_estimator_link_v2.sv	SystemVerilog	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/ip/fft256_twiddle.mem	Memory File	cfo_xpm
+sources_1	D:/008_MA_Dev/Sync_CFO/ip/phase74_atan_q31.mem	Memory File	cfo_xpm
+constrs_1	D:/008_MA_Dev/Sync_CFO/constraints/cfo_link010.xdc	XDC	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vendor/link010r1/xpm_cdc.sv	SystemVerilog	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vendor/link010r1/xpm_fifo.sv	SystemVerilog	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vendor/link010r1/xpm_memory.sv	SystemVerilog	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_config.svh	Verilog Header	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/tb/cfo_estimator_link_r1_compat1_tb.sv	SystemVerilog	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_input.mem	Memory File	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_read.mem	Memory File	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_result.mem	Memory File	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_error_input.mem	Memory File	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_error_read.mem	Memory File	cfo_xpm
+sim_1	D:/008_MA_Dev/Sync_CFO/sim/vectors/link010_error_result.mem	Memory File	cfo_xpm
+utils_1	D:/008_MA_Dev/Sync_CFO/vivado/run_threads.tcl	TCL	cfo_xpm

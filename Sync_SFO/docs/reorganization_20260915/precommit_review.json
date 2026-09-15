@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "path_moves": 907,
+  "changed_move_contents": [
+    "Sync_CFO/README_ZH.md",
+    "Sync_CFO/docs/CFO_STAGE_ENTRY_DATA_20260915_ZH.md",
+    "Sync_CFO/docs/DELIVERY_BOUNDARY_20260915_ZH.md",
+    "Sync_CFO/vivado/CFO_BACKEND74/CFO_BACKEND74.xpr",
+    "Sync_CFO/vivado/CFO_COORD/CFO_COORD.xpr",
+    "Sync_CFO/vivado/CFO_FFT2048/CFO_FFT2048.xpr",
+    "Sync_CFO/vivado/CFO_FFT256/CFO_FFT256.xpr",
+    "Sync_CFO/vivado/CFO_FRONT2048/CFO_FRONT2048.xpr",
+    "Sync_CFO/vivado/CFO_PHASE74/CFO_PHASE74.xpr",
+    "Sync_CFO/vivado/CFO_SYNC/CFO_SYNC.xpr"
+  ],
+  "all_other_moved_index_blobs_unchanged": true,
+  "new_hardware_assets_staged_with_exact_bytes": 25,
+  "new_navigation_links_checked": 42,
+  "missing_new_links": [],
+  "user_dirty_root_paths": [
+    ".gitignore",
+    "AGENTS.md",
+    "README_ZH.md",
+    "Sync_SFO/vivado/T10_SFO/T10_SFO.xpr"
+  ],
+  "user_dirty_i16_paths": [
+    "README_ZH.md",
+    "vivado/I16_AddSub/I16_AddSub.xpr"
+  ]
+}

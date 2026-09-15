@@ -1,3 +1,11 @@
+# 2026-09-15 目录映射补充（原规则全文保留）
+
+本轮用户批准的三模块入口与路径整理按 D:/007 Dev/OTA_RTL_0829/docs/operations/SYNC_SFO_DIRECTORY_REORGANIZATION_AUTHORIZATION_20260915_ZH.md 执行。新增位置见 [PATH_MAPPING_ZH.md](PATH_MAPPING_ZH.md)。下方旧规则中的根目录 docs、tools、rtl、ip、constraints、sim、matlab、vivado、handoff、work 均已归入 Sync_SFO；T11_CFO 对应 Sync_CFO。Sync_Frontend 保持原位，I16 示例在其 examples 内且保持独立身份。
+
+本补充只解释搬迁后的路径，不扩大算法、实验、配对或交付授权。用户打开的旧前端 GUI 状态保持；旧规则原文和已有用户修改均保留如下。
+
+---
+
 # 本工程执行规则
 
 1. 用户总管家任务的最新要求优先。范围为T10两级SFO独立Vivado工程；器件只用 `xcvu11p-flgb2104-2-e`。暂不开发CLIP/LabVIEW或CFO后续模块。

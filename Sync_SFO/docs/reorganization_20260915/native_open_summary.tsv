@@ -1,0 +1,13 @@
+index	xpr	part	top	files	ips
+1	D:/008_MA_Dev/Sync_SFO/Sync_SFO.xpr	xcvu11p-flgb2104-2-e	t10_two_pass_system	283	34
+2	D:/008_MA_Dev/Sync_Frontend/Sync_Frontend.xpr	xcvu11p-flgb2104-2-e	sync_frontend_top	55	15
+3	D:/008_MA_Dev/Sync_CFO/vivado/CFO_BACKEND74/CFO_BACKEND74.xpr	xcvu11p-flgb2104-2-e	cfo_estimate74_backend	21	0
+4	D:/008_MA_Dev/Sync_CFO/vivado/CFO_COORD/CFO_COORD.xpr	xcvu11p-flgb2104-2-e	cfo_coordinate_control	7	0
+5	D:/008_MA_Dev/Sync_CFO/vivado/CFO_FFT2048/CFO_FFT2048.xpr	xcvu11p-flgb2104-2-e	cfo_fft2048_core	11	0
+6	D:/008_MA_Dev/Sync_CFO/vivado/CFO_FFT256/CFO_FFT256.xpr	xcvu11p-flgb2104-2-e	cfo_fft256_core	10	0
+7	D:/008_MA_Dev/Sync_CFO/vivado/CFO_FRONT2048/CFO_FRONT2048.xpr	xcvu11p-flgb2104-2-e	cfo_front2048_window	13	0
+8	D:/008_MA_Dev/Sync_CFO/vivado/CFO_LINK010/CFO_LINK010.xpr	xcvu11p-flgb2104-2-e	cfo_estimator_link	19	0
+9	D:/008_MA_Dev/Sync_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.xpr	xcvu11p-flgb2104-2-e	cfo_estimator_link	25	0
+10	D:/008_MA_Dev/Sync_CFO/vivado/CFO_PHASE74/CFO_PHASE74.xpr	xcvu11p-flgb2104-2-e	cfo_phase74_core	12	0
+11	D:/008_MA_Dev/Sync_CFO/vivado/CFO_SYNC/CFO_SYNC.xpr	xcvu11p-flgb2104-2-e	cfo_rotate4	17	0
+12	D:/008_MA_Dev/Sync_Frontend/examples/I16_AddSub_CLIP/I16_AddSub.xpr	xcvu11p-flgb2104-2-e	i16_addsub_clip	4	0
