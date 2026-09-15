@@ -1,0 +1,28 @@
+{
+  "status": "TCL_REPAIR_REQUIRED_PENDING_2021_1_NATIVE_CONFIRMATION",
+  "utc": "2026-09-15T01:08:27.824337+00:00",
+  "reviewed_tcl": "vivado/link010r1_compat1_project.tcl",
+  "reviewed_sha256": "575520FAF9C28291E8DB79E657F7DB111669ECA870E95F9439035B9E10D72881",
+  "findings": [
+    {
+      "id": "T1",
+      "issue": "reset_simulation -simset is not supported by the official adjacent-version command syntax; current mem copy precedes simulation-directory cleanup.",
+      "recommended": "reset_simulation -mode behavioral sim_1 before mkdir/copy",
+      "source": "https://docs.amd.com/r/2020.2-English/ug835-vivado-tcl-commands/reset_simulation",
+      "evidence_limit": "2021.1 index located but command body unavailable; installed plaintext definition not found; actual 2021.1 acceptance remains untested."
+    },
+    {
+      "id": "T2",
+      "issue": "Failure at launch/helper/run bypasses final trace copies; mutable active compile evidence not independently copied by outer runner.",
+      "required": "Unified success/failure snapshot with missing-file records and original error preservation."
+    },
+    {
+      "id": "T3",
+      "issue": "Failed binding helper exit 2 makes exec throw before JSON is saved.",
+      "required": "Capture command status/output, save diagnostics, rethrow original failure."
+    }
+  ],
+  "scientific_changes": false,
+  "native_started": false,
+  "execution_repair_owner": "original paired Luna"
+}

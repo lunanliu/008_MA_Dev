@@ -1,0 +1,48 @@
+{
+  "status": "EXECUTION_ENTRY_REQUIRES_REPAIR_NO_NATIVE_ADMISSION",
+  "utc": "2026-09-15T01:06:57.881485+00:00",
+  "reviewed_files": [
+    {
+      "path": "tools/cfo_link010r1_compat1_guard.py",
+      "bytes": 16938,
+      "sha256": "95B4179580E524B0008A71E3323813C4B8DC6CEE4813F7AB9F709E229245A3CD"
+    },
+    {
+      "path": "tools/link010r1_compat1_admission_repair.py",
+      "bytes": 3960,
+      "sha256": "B3F8D17A8B73226643EBD0C7453550B5660EFA1F315082266CEFC1EFC4837B37"
+    },
+    {
+      "path": "vivado/link010r1_compat1_project.tcl",
+      "bytes": 5475,
+      "sha256": "575520FAF9C28291E8DB79E657F7DB111669ECA870E95F9439035B9E10D72881"
+    }
+  ],
+  "scientific_lock_sha256": "4245E75E0D3049F9F7E92EDCF68B4E286BE30DE59747D8A03A0BBE14C2C3FFA3",
+  "scientific_scope_unchanged": true,
+  "native_started": false,
+  "findings": [
+    {
+      "id": "E1",
+      "issue": "Tcl absent from scientific lock has no pinned runtime hash gate; helper constant is not enforced by main. Record-only snapshots do not freeze reviewed execution bytes.",
+      "required": "Pin and verify exact entry dependencies before launch and at completion; save immutable copies."
+    },
+    {
+      "id": "E2",
+      "issue": "Full admission snapshot is neither included in freeze nor separately published; no second fresh pre-launch audit.",
+      "required": "Preserve full GUI/process/slot admission and run fresh admission, source, entry, XPR and free-memory checks immediately before launch."
+    },
+    {
+      "id": "E3",
+      "issue": "Final PASS uses post.all_checks but does not require recorded old_project_bytes_unchanged or controller_bytes_unchanged.",
+      "required": "All protected project/controller/entry-identity conditions must affect final PASS."
+    },
+    {
+      "id": "E4",
+      "issue": "Artifact manifest points at mutable active simulation logs and XPR without original-style immutable copies; report clock remains active.",
+      "required": "Save attempt-local native logs, compile/library inputs and pre/post XPR snapshots; finish report clock before final manifest; preserve completed stage evidence if subsequent parsing fails."
+    }
+  ],
+  "repair_owner": "Original paired Luna 01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+  "next_action": "New execution entry revision only; do not alter science lock or rerun native."
+}
