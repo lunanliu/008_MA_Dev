@@ -14,7 +14,7 @@ FRONT009窗口前端已独立复核通过：82,026条pilot记录、98个z结果�
 
 下一最小步骤LINK010已完成RTL、保存证据向量与静态审查，已按docs/LINK010_NATIVE_JOB_010.md冻结39份工程/证据文件与3份官方XPM依赖，源验证和资源helper静态检查通过；已完成原Luna执行和独立复核，当前为数值/协议通过但FIFO复位契约阻断。它把171位窗口观测消息通过500→150MHz XPM FIFO送到已冻结74点后端；四类结果、协议错误、背压、取消恢复及32次真实输出握手均纳入验证平台。输入复用FRONT009实际z与BACKEND006R1已有向量，不重跑MATLAB/FFT2048。原生结果为22完整帧、8取消、10错误、32真实握手逐位一致；异步置位直接驱动要求同步的FIFO.rst，且18条XPM诊断待精确闭合，因此LINK010尚未验收。详见[独立复核](reports/LINK010_REVIEW_20260915/README_ZH.md)。
 
-复位修订LINK010R1已完成静态审查并冻结：只调整FIFO同步复位与两域恢复握手，增加被动边沿审计，保留原数值/协议矩阵。新包含60个冻结文件、3个官方依赖、25个工程成员；尚无R1原生通过结论。详见[修订契约](docs/LINK010R1_CONTRACT_ZH.md)、[执行审查包](docs/LINK010R1_NATIVE_JOB.md)和[静态审查](reports/LINK010R1_STATIC_REVIEW.json)。该工程已成功创建；首次simulate在XSim展开测试台时失败，尚未运行RTL刺激。41份产物已[封存复核](reports/LINK010R1_ELAB_REVIEW_20260915/README_ZH.md)。当前[compat1最小修复](docs/LINK010R1_COMPAT1_CONTRACT_ZH.md)仅更换八处clocking绑定写法并通过逐字节等价审查，复用已创建工程，只重试失败simulate；新清单为68份文件、3份官方依赖、25个工程成员，尚待新精确准入及原生验证。
+复位修订LINK010R1已完成静态审查并冻结：只调整FIFO同步复位与两域恢复握手，增加被动边沿审计，保留原数值/协议矩阵。新包含60个冻结文件、3个官方依赖、25个工程成员；尚无R1原生通过结论。详见[修订契约](docs/LINK010R1_CONTRACT_ZH.md)、[执行审查包](docs/LINK010R1_NATIVE_JOB.md)和[静态审查](reports/LINK010R1_STATIC_REVIEW.json)。该工程已成功创建；首次simulate在XSim展开测试台时失败，尚未运行RTL刺激。41份产物已[封存复核](reports/LINK010R1_ELAB_REVIEW_20260915/README_ZH.md)。当前[compat1最小修复](docs/LINK010R1_COMPAT1_CONTRACT_ZH.md)仅更换八处clocking绑定写法并通过逐字节等价审查，复用已创建工程，只重试失败simulate；新清单为68份文件、3份官方依赖、25个工程成员。执行入口v3已补齐必需冻结记录保存成功门并通过定向静态复核；[精确仿真准入包](reports/LINK010R1_COMPAT1_V3_ADMISSION_PACKAGE_20260915.json)已提交，等待共享槽新grant及原Luna原生验证。
 
 共享槽以总管家resource_slot.json的即时授权为准；用户GUI编辑态不占计算组，但全部子进程内存计入准入；当前已切换至Sync_Frontend，按原Luna的会话感知准入逐次核查。T10持续受保护。缓存、两次全帧旋转、综合和物理CDC/时序尚待后续门限，不以接口行为仿真替代。
 
