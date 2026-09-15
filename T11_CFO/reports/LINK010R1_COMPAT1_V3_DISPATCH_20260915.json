@@ -1,0 +1,23 @@
+{
+  "status": "DISPATCHED_TO_ORIGINAL_LUNA",
+  "utc": "2026-09-15T02:32:23.377054+00:00",
+  "grant_id": "T11_LINK010R1_COMPAT1_V3_20260915_SIM_ONLY",
+  "authorized_job": "CFO-LINK010R1-COMPAT1",
+  "allowed_stages": [
+    "simulate"
+  ],
+  "astra": "01a076f1-ad1b-7d33-a29c-4ea34ae84d01",
+  "luna": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+  "dispatch_tool": "send_message_to_thread",
+  "dispatch_tool_success_receipt": {
+    "threadId": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+    "isError": false
+  },
+  "admission_package_sha256": "E5848C6263A30952855520302358788B55038359DF6C72A4A6E0D7C162C34858",
+  "manager_receipt_sha256": "E71CC9720315C53E78ACA90CE745118D6DE6C7F46471B68F1E0A99FBE3010C74",
+  "script_sha256": "DF8274302D1878DE7AB0D5C6926F4B5F472B8771913B0AB531CB03943764181E",
+  "native_started_by_astra": false,
+  "native_result": "NOT_YET_RECEIVED",
+  "monitor_owner": "original Luna",
+  "create_checkpoint_reused": true
+}
