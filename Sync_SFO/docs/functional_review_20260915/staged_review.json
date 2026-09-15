@@ -1,0 +1,7 @@
+{
+  "scope": "Sync_SFO only",
+  "files": 299,
+  "exact_worktree_bytes_checked": 217,
+  "baseline": "dd5e8f7a642625f06c4996d17e3642bbadc7d557",
+  "all_passed": true
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "SYNC_SFO_NATIVE_RESOURCE_REQUEST_V1",
+  "job_id": "SFO-FN01",
+  "status": "FROZEN_AWAITING_MANAGER_SLOT",
+  "created_at": "2026-09-15T17:45:26.429696+02:00",
+  "astra_thread": "01a0a53b-5d75-7e92-9b0b-184308ae662a",
+  "luna_thread": "01a0a592-d143-7770-a6e6-fa45251be664",
+  "manager_thread": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "baseline_commit": "dd5e8f7a642625f06c4996d17e3642bbadc7d557",
+  "reviewed_source_commit": "c4d853a1987f66f212fd44fcd8e9a42dd00035d2",
+  "canonical_project": "D:\\008_MA_Dev\\Sync_SFO\\Sync_SFO.xpr",
+  "part": "xcvu11p-flgb2104-2-e",
+  "core_top": "sync_sfo_top",
+  "simulation_top": "sync_sfo_full_frame_tb",
+  "scope": [
+    "read_only_canonical_project_open_and_exact_source_export",
+    "private_copy_project_open",
+    "behavioral_compile",
+    "behavioral_elaborate_without_simulation",
+    "independent_vhdl_wrapper_syntax_compile"
+  ],
+  "not_authorized": [
+    "simulate_or_run_time",
+    "full_frame_rerun",
+    "short_invalid_estimator_input",
+    "synthesis",
+    "implementation",
+    "MATLAB",
+    "vendor_config_or_algorithm_changes",
+    "NI_CLIP_XML_generation"
+  ],
+  "input_manifest": {
+    "path": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\current_input_manifest.csv",
+    "sha256": "107B78D5BF50433BA297FA3CB743EC560FE4581D0EC46A364F7883986C73C72C",
+    "files": 539,
+    "bytes": 161972592
+  },
+  "job_files": [
+    {
+      "path": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\job_FN01\\expected_native_entries.tsv",
+      "sha256": "72650C5B6F32A91D7D7A5642E8F2224C0D299EA430C3E54F6BD501406713D490"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\job_FN01\\JOB_ZH.md",
+      "sha256": "47A4C6BE2900C18587A40D24A5B9404E9DDA9AAF1EA1246AC12037B50C3BB9A5"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\job_FN01\\native_open_compile_elaborate.tcl",
+      "sha256": "8EAFF27C5DEED3CC5C3D9FBA7FB6FA4048669AE54C9D436043C475E9C9446570"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\job_FN01\\prepare_private.ps1",
+      "sha256": "2FDDF3422CCE5E78E4785EB65570007771CC73B26F0937EFB907011E1BFB3532"
+    }
+  ],
+  "private_project": "D:\\008_MA_Dev\\Sync_SFO\\work\\FN01\\project\\Sync_SFO.xpr",
+  "output_directory": "D:\\008_MA_Dev\\Sync_SFO\\reports\\functional_review\\FN01",
+  "parallelism": {
+    "general_maxThreads": 8,
+    "synth_maxThreads": 8,
+    "xelab_requested": 16,
+    "xelab_ceiling": 16,
+    "vivado_main_jobs": 1,
+    "MATLAB_processes": 0,
+    "lower_parallelism_requires_recorded_resource_reason": true
+  },
+  "resources": {
+    "combined_descendant_peak_estimate_gib": [
+      8,
+      12
+    ],
+    "last_observed_free_gib": 15.7,
+    "observation_time": "2026-09-15T17:36:56+02:00",
+    "expected_minutes": [
+      10,
+      30
+    ],
+    "review_minutes": 60,
+    "hard_protection_minutes": 120,
+    "estimate_only_warns": true,
+    "real_protection": "Severe sustained resource pressure, explicit errors, proven stall or hard protection; preserve all successful/failed stages; track exact owned process tree."
+  },
+  "preconditions": [
+    "manager_grant_matches_job_and_hash",
+    "fresh_global_resources_and_process_tree",
+    "all539_original_input_hashes_match",
+    "private_output_directories_do_not_exist",
+    "preserve_user_GUI_PID14300"
+  ],
+  "static_summary": {
+    "active_verified_sv_headers": 79,
+    "core_rtl": 74,
+    "direct_xpr_references": 120,
+    "vendor_xci": 34,
+    "own_named_port_connections_checked": 2108,
+    "core_ports": 37,
+    "wrapper_ports": 102
+  }
+}
