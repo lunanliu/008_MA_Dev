@@ -1,0 +1,171 @@
+{
+  "status": "STATIC_REVIEW_PASS_PENDING_NATIVE",
+  "utc": "2026-09-15T00:03:50.822530+00:00",
+  "native_started": false,
+  "reviewer": "T11 Astra /root",
+  "review_scope": "Minimal reset-contract correction and passive checks for LINK010; no estimator or fixed input recomputation.",
+  "files": [
+    {
+      "path": "rtl/cfo_estimator_link_v2.sv",
+      "bytes": 9841,
+      "sha256": "7878CE644410D8362DEA13154100A8D6DB7FEA8E48E1A0F94372251D6E599014"
+    },
+    {
+      "path": "sim/tb/cfo_estimator_link_r1_tb.sv",
+      "bytes": 21774,
+      "sha256": "FD38A1DEBC79390B47896B4D6C0CE19B8BEAAAD797197A211097DF7CB765F6F9"
+    },
+    {
+      "path": "tools/verify_link010r1_binding.py",
+      "bytes": 22496,
+      "sha256": "589DF51BC1B689FA16BB07ED378880C4A6F9DC6060B72C8523990324FAE0B4DA"
+    },
+    {
+      "path": "tools/verify_link010r1_reset.py",
+      "bytes": 6708,
+      "sha256": "E28F55CBF483C9B904E56A3D54D747377A1EC27610A5A2B70A6F2342C7D760C0"
+    },
+    {
+      "path": "tools/verify_link010r1.py",
+      "bytes": 6843,
+      "sha256": "8099CA4EC39373EF82C910E21C39B12E4B3723FE832E2B1FBE9C10B337B9A2D1"
+    },
+    {
+      "path": "tools/verify_link010r1_models.py",
+      "bytes": 1858,
+      "sha256": "C5FD9B54075C918FCD60CFB04CD8C7C9FEB3DBB596532367F529CE7CDAE6ED58"
+    },
+    {
+      "path": "vivado/link010r1_project.tcl",
+      "bytes": 5605,
+      "sha256": "A04D3BC4F063779028288B72074696F99ABF2287A277171B8DD0947E23718037"
+    },
+    {
+      "path": "docs/LINK010R1_CONTRACT_ZH.md",
+      "bytes": 3562,
+      "sha256": "A09900AE1972F7297460187F9076D34E922E6A20A7D41E611700AAC6CBBB9241"
+    },
+    {
+      "path": "docs/LINK010R1_NATIVE_JOB.md",
+      "bytes": 3906,
+      "sha256": "3B5EAC8B17F28FD577600563BF342C77FE9CB43A5CB0205372BCDE3C4CC2AE25"
+    },
+    {
+      "path": "reports/LINK010R1_RESET_FIX_DRAFT_REVIEW.json",
+      "bytes": 9268,
+      "sha256": "2B89264F09140D8A902A1EC1F333FFBB9599D1AF65CC0E6257BECFE3353E639B"
+    },
+    {
+      "path": "reports/LINK010R1_TB_STATIC_REVIEW.json",
+      "bytes": 14205,
+      "sha256": "AA8ABD3DC05B2AEEA84DC40478D139F2D4A32ACAFCB70BABB9A4710B9F687B38"
+    },
+    {
+      "path": "reports/LINK010R1_MODEL_BINDING_STATIC_REVIEW.json",
+      "bytes": 12126,
+      "sha256": "FBAF8EDCC49EFEEA8C95F8058FAA7FCAE0A66BED327E211FB49B26C910903EA2"
+    },
+    {
+      "path": "reports/LINK010R1_BINDING_HELPER_REVIEW.json",
+      "bytes": 11817,
+      "sha256": "829CB3BCD73057E5DA72F13679BFD24C41231D1538E87911F3C55197EB7C0F0E"
+    },
+    {
+      "path": "reports/LINK010R1_PRE_FREEZE_CHECK.json",
+      "bytes": 712,
+      "sha256": "20755F7F549A74665D4F2152138EB0C94B12B66647C728CB962A6644C675F288"
+    }
+  ],
+  "changes_reviewed": [
+    "FIFO.rst is driven only by four-stage synchronous fifo_reset; asynchronous common_reset masks IO immediately.",
+    "Reset completion handshake prevents reader release during the official two-pass rd_busy gap and flushes frame credit.",
+    "After removing only the reset block and substitutions, RTL text equals the frozen source; after removing audit block and one no-delay call, TB text equals frozen stimulus. These comparisons normalize text newlines.",
+    "Original packet/result layout, error behavior, numerical expected data, 22F/10E/8D/32H schedule and timing/backpressure limits remain fixed.",
+    "Passive reset log keeps four-state bits and PRE/POST edge snapshots, FIFO transitions, common-mask observations, and 9 complete recoveries. Independent parser checks initial reset, transition timing, supported exemptions, linked recovery snapshots and continuous busy-window samples.",
+    "Private vendor copies have only two exact translate_off assertion fixes; all synthesis contents are byte-identical.",
+    "Actual compile.bat/prj, compiled source/library logs, ordered -L search, module bindings, unique actual local library mapping and filesystem stability are mandatory through one shared read-only helper. Same-library/default_lib does not itself prove binding.",
+    "The helper is called once after launch_simulation at runtime0ns and before run all, using explicit isolated Python; it has no native-launch API. The completion gate calls the same read-only checker.",
+    "Exact new job, source-lock hash and controller hash must match a fresh manager grant before each launch. Saved native identity samples replace the flawed late READY-only sample condition while keeping Job, ready, done, exit and zero requirements.",
+    "Failed native stages still retain external preservation, old project and controller identity evidence. All 8 previous project files remain read-only."
+  ],
+  "pre_freeze_checks": {
+    "status": "PASS",
+    "native_started": false,
+    "checks": {
+      "rtl_inverse_exact": true,
+      "tb_inverse_exact": true,
+      "python_ast": true,
+      "late_ready_saved_identity_accepted": true,
+      "wrong_pid_rejected": true,
+      "actual_compile_script_format_recognized": true,
+      "actual_multiline_prj_format_recognized": true,
+      "exact_current_grant_accepted": true,
+      "mismatched_grant_authorized_job_rejected": true,
+      "mismatched_grant_manifest_sha256_rejected": true,
+      "mismatched_grant_script_sha256_rejected": true
+    },
+    "saved_create_identity_samples": 11,
+    "scope": "Static inverse proof, saved telemetry read and in-memory admission counterexamples only; no R1 native qualification."
+  },
+  "private_models": {
+    "status": "PRIVATE_XPM_EXACT_PATCH_PASS",
+    "native_started": false,
+    "files": [
+      {
+        "name": "xpm_cdc",
+        "official_sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7",
+        "private_sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7",
+        "exact_byte_copy": true,
+        "outside_translate_off_identical": true
+      },
+      {
+        "name": "xpm_fifo",
+        "official_sha256": "D3C1E861CDDF00EBC82552C464A46FB5228E68B4D458001D064B99E04134B9D4",
+        "private_sha256": "22F40E9F1DE08436A6E15808A959D8BBF22916BEE3DE95ED7D3991BD0C19FF5C",
+        "exact_byte_copy": false,
+        "outside_translate_off_identical": true
+      },
+      {
+        "name": "xpm_memory",
+        "official_sha256": "E72758E6794B1F7AD00428FEEEACC4F90A38B0500583B2CA93CA2EBA12BA01BD",
+        "private_sha256": "E72758E6794B1F7AD00428FEEEACC4F90A38B0500583B2CA93CA2EBA12BA01BD",
+        "exact_byte_copy": true,
+        "outside_translate_off_identical": true
+      }
+    ],
+    "global_installation_modified": false,
+    "global_assertion_disable_used": false
+  },
+  "binding_helper_review_status": "HELPER_STATIC_REVIEW_PASS_NATIVE_BINDING_PENDING",
+  "remaining_native_gates": [
+    "Real Vivado project selection and private-library compilation/elaboration.",
+    "Unchanged numerical/protocol trace plus new passive reset audit.",
+    "No native ERROR/FATAL, exact source hashes, complete Job zero and protected external identities."
+  ],
+  "budgets": {
+    "groups": 1,
+    "matlab": 0,
+    "expected_gib": [
+      1.5,
+      3
+    ],
+    "warning_gib": 4,
+    "required_free_gib": 6,
+    "hard_seconds": {
+      "create": 120,
+      "simulate": 600
+    },
+    "threads": {
+      "general": 8,
+      "synth": 8,
+      "xelab": 16
+    }
+  },
+  "not_claimed": [
+    "R1 behavioral pass",
+    "whole CFO chain completion",
+    "synthesis/timing or physical CDC qualification",
+    "sustained 500MS/s qualification",
+    "CLIP/XML/Wrapper validation"
+  ]
+}

@@ -1,0 +1,18 @@
+--- official/xpm_fifo.sv
++++ private-simulation/xpm_fifo.sv
+@@ -1581,13 +1581,13 @@
+ 
+   if (SIM_ASSERT_CHK == 1) begin : rst_empty_chk
+     assert property (@(posedge rd_clk )
+-      ($rose(rd_rst_busy) || (empty && $rose(rd_rst_busy))) |-> ##1 $rose(empty))
++      ($rose(rd_rst_busy) || (empty && $rose(rd_rst_busy))) |-> ##1 (empty === 1'b1))
+     else 
+       $error("[%s %s-%0d] Reset is applied, but empty flag is not 1 or transitioning to 1 at %0t.", "EMPTY_CHECK", "S", 4, $time);
+ 
+   end : rst_empty_chk
+ 
+-  if (SIM_ASSERT_CHK == 1) begin : sleep_chk
++  if (SIM_ASSERT_CHK == 1 && WAKEUP_TIME > 0) begin : sleep_chk
+     assert property (@(posedge wr_clk )
+       ($fell(sleep) |->  !wr_en[*WAKEUP_TIME]))
+     else 

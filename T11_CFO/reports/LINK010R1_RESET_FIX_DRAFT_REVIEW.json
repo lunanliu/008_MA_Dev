@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "review_id": "LINK010R1_RESET_FIX_DRAFT_REVIEW",
+  "reviewed_at_utc": "2026-09-14T23:40:36.6283842Z",
+  "status": "DRAFT_PENDING_NATIVE_VALIDATION_NOT_FROZEN",
+  "reviewer": "/root/t11_phase_rtl",
+  "independent_static_reviewer": "/root/t11_phase_rtl/reset_v2_review",
+  "files": {
+    "frozen_original": {
+      "path": "D:/008_MA_Dev/T11_CFO/rtl/cfo_estimator_link.sv",
+      "sha256": "4F6A92AA12C48B18D262ED68E9DE438F083F22F60F56DE217E9A959A284C87D0",
+      "modified": false
+    },
+    "draft": {
+      "path": "D:/008_MA_Dev/T11_CFO/rtl/cfo_estimator_link_v2.sv",
+      "sha256": "7878CE644410D8362DEA13154100A8D6DB7FEA8E48E1A0F94372251D6E599014",
+      "bytes": 9841,
+      "module": "cfo_estimator_link",
+      "interface_identical": true
+    },
+    "report": "reports/LINK010R1_RESET_FIX_DRAFT_REVIEW.json"
+  },
+  "change_regions": [
+    {
+      "lines": "23-29",
+      "change": "FIFO-only reset uses xpm_cdc_sync_rst with four clk_fast stages. The signal fifo_reset is the only FIFO.rst driver."
+    },
+    {
+      "lines": "31-51",
+      "change": "Three explicitly initialized reset-state bits and two two-stage CDC level synchronizers implement FIFO completion -> slow ready -> fast admission."
+    },
+    {
+      "lines": "53-59",
+      "change": "Both busy outputs immediately include common_reset and remain asserted until their reset-handshake release condition."
+    },
+    {
+      "lines": "88",
+      "change": "FIFO.rst changes from rst_fast to fifo_reset."
+    },
+    {
+      "lines": "94,140",
+      "change": "Fast state/credit alignment and slow state reset now use the complete domain busy conditions instead of only the raw FIFO busy flag."
+    }
+  ],
+  "scope_validation": {
+    "inverse_replacement_exactly_recovers_original": true,
+    "algorithm_changed": false,
+    "packet_layout_changed": false,
+    "frame_credit_algorithm_changed": false,
+    "backend_or_fifo_capacity_changed": false,
+    "existing_xpr_tcl_tb_changed": false,
+    "vendor_changed": false,
+    "acceptance_threshold_changed": false,
+    "old_review_directory_changed": false
+  },
+  "xpm_api_review": {
+    "source": "C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv",
+    "source_sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7",
+    "api_lines": "1059-1069",
+    "configuration": {
+      "DEST_SYNC_FF": 4,
+      "INIT": 1,
+      "INIT_SYNC_FF": 1,
+      "SIM_ASSERT_CHK": 1,
+      "src_rst": "rst_fast",
+      "dest_clk": "clk_fast",
+      "dest_rst": "fifo_reset"
+    },
+    "implementation_lines": "1110-1136",
+    "meaning": "The destination register chain initializes to 1 and clocks the entire src_rst level, so normal assertion and deassertion both occur after clk_fast edges. INIT_SYNC_FF=1 additionally models GSR initialization in simulation. It is not a single-stage asynchronous sample.",
+    "handshake_configuration": "Each xpm_cdc_single uses DEST_SYNC_FF=2, INIT_SYNC_FF=1, SRC_INPUT_REG=0, SIM_ASSERT_CHK=1; both source levels are registered. Their initial synchronized outputs are 0."
+  },
+  "correctness_argument": [
+    "common_reset remains a direct asynchronous mask in both domain busy outputs, preventing new input acceptance, FIFO read/write and output validity immediately. Existing local asynchronous-assert/synchronous-release resets are retained.",
+    "After an externally captured reset request, rst_fast remains asserted across four fast edges. FIFO reset passes through four further clocked stages; the pulse is therefore not presented asynchronously to XPM_FIFO_ASYNC.rst. This does not promise capture of a pulse below hardware minimum width.",
+    "fifo_reset_done cannot assert before fifo_reset_seen, which requires observing fifo_reset && wr_busy. Completion then requires both fifo_reset and wr_busy low. The reviewed XPM 2021.1 wr_busy remains high through both internal reset passes.",
+    "slow_reset_ready remains zero until the synchronized completion level arrives and local rd_busy is low. Therefore a temporary rd_busy low interval between the two reset passes cannot admit reads or backend work.",
+    "Fast input admission waits for the slow-ready acknowledgement to return through two fast stages, so no new packet can reach a slow domain still held in reset.",
+    "The handshake has no cyclic release dependency: FIFO completion depends only on local FIFO state; slow ready depends on completion/rd_busy; final fast admission depends on returned ready.",
+    "The fast control busy branch continuously aligns done_seen with done_sync, while the slow busy branch holds done_toggle at zero. Asynchronous reset clears the reset-handshake source levels and four-edge local tails allow the two-stage synchronizers to flush; old credit cannot reopen a new frame during reset.",
+    "The three new register initial values, INIT=1 FIFO reset, and initialized handshake synchronizers keep primary ready/valid interfaces closed at GSR-only startup. Existing busy branches initialize control before admission; payload registers may be unspecified while valid is zero."
+  ],
+  "independent_review": {
+    "reviewed_rtl_sha_before_comment_only_clarification": "056C4F548DBC35CD6300A3ED0C9C3E3C5ABB4EC2CE240F775C18ADA6A39FBE10",
+    "final_change_after_independent_review": "Only line 25 comment changed to state that a pulse must first be captured; logic unchanged.",
+    "deterministic_deadlock_early_release_or_credit_defect_found": false,
+    "native_run": false
+  },
+  "necessary_observation_signals": [
+    "clk_fast",
+    "clk_slow",
+    "common_reset",
+    "rst_fast",
+    "rst_slow",
+    "fifo_reset",
+    "wr_busy",
+    "rd_busy",
+    "fifo_reset_seen",
+    "fifo_reset_done",
+    "fifo_reset_done_slow",
+    "slow_reset_ready",
+    "slow_reset_ready_fast",
+    "fast_reset_busy",
+    "slow_reset_busy",
+    "write_fire",
+    "read_fire",
+    "s_valid",
+    "s_ready",
+    "m_valid",
+    "m_ready",
+    "fifo_empty",
+    "done_toggle",
+    "done_sync",
+    "done_seen"
+  ],
+  "minimum_required_validation": [
+    "After initialization/GSR, every fifo_reset assertion and deassertion must coincide with a clk_fast edge; distinguish sampled pre-edge values from post-NBA changes.",
+    "No accepted input or FIFO write while fast_reset_busy; no FIFO read/backend input/output handshake while slow_reset_busy. Check both enables throughout both FIFO reset passes.",
+    "No fifo_reset_done before seen reset+writer-busy and complete writer-busy removal; no slow-ready before synchronized completion and rd_busy low; no fast admission before returned slow-ready.",
+    "Observe credit reset/alignment and prove no stale read/result/frame appears after reset/abort at queued, drained partial, FFT-output and held-result cancellation.",
+    "Root-selected R1 link regression preserves the 22 normal F + 10 link-error E + 8 discard D matrix and requires 32 true H retirements; add only reset-edge and domain-busy IO observations. Do not independently rerun completed 001-009 jobs.",
+    "Record startup and near-release reset behavior separately from physical minimum-pulse or metastability qualification."
+  ],
+  "boundaries": [
+    "This RTL and report are an unfrozen draft pending the next revision freeze and native validation. No compile, simulation or timing success is claimed.",
+    "The clock inputs must run continuously. Per the XPM contract, a new external reset should not be issued before both busy outputs from the previous reset sequence deassert. Holding one reset request high is supported.",
+    "An external pulse must satisfy the physical capture/minimum-pulse requirements of the asynchronous reset path. RTL pulse stretching is not proof for arbitrarily narrow physical pulses.",
+    "A reset immediately adjacent to a newly asserted reset-ready/done level can interrupt the XPM single-bit stable-for-two-following-samples assumption. Capture these reset levels if such a corner is tested; do not silently suppress unrelated S-1 diagnostics.",
+    "At GSR-only startup read_audit_valid may remain X before the first slow clock because the original bare register has no initializer; consumers must qualify audit with slow_reset_busy. Primary ready/valid interfaces are masked.",
+    "The 18 previous XPM model diagnostics and precompiled binding are separate root-owned work. This draft does not edit vendor assertions, simulation library mapping, old XPR, Tcl or TB.",
+    "Root will separately freeze any private simulation-only checker corrections and explicit private cfo_xpm library. Those changes are not included here.",
+    "No physical CDC, implementation timing, sustained-throughput, board or whole T11/T12/T13 acceptance follows from this static review."
+  ],
+  "execution": {
+    "native_started": false,
+    "vivado_started": false,
+    "matlab_started": false,
+    "tests_executed": "Only static source/hash/API inspection and exact inverse-replacement scope check",
+    "new_files": [
+      "rtl/cfo_estimator_link_v2.sv",
+      "reports/LINK010R1_RESET_FIX_DRAFT_REVIEW.json"
+    ],
+    "prior_frozen_files_modified": []
+  },
+  "formal_T11_T12_T13_PASS": false
+}

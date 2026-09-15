@@ -1,0 +1,186 @@
+{
+  "schema": "t11.link010r1.model_binding_static_review.v1",
+  "created_utc": "2026-09-15T01:49:55.492207+02:00",
+  "reviewer_role": "Astra independent static review",
+  "status": "STATIC_MODEL_PATCH_PASS_BINDING_CONDITIONAL",
+  "native_started": false,
+  "matlab_or_vivado_started": false,
+  "only_new_report_written": true,
+  "scope": "Original installed XPM HDL, LINK010 and LINK010R1 Tcl, private exact patch and reset-interface inspection. No experiment, synthesis, or native binding qualification.",
+  "reviewed_source_snapshots": [
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\link010_project.tcl",
+      "sha256": "4DD649D1347D09A8A451C6AFF4B2D7CD345AAA66E906A0B15067D5ED502A5ACA"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\vivado\\link010r1_project.tcl",
+      "sha256": "910448BA9FB3EB59020C22D5BC26541A70344D37E1BB0C5F8BAA82969C146BAF"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1_models.py",
+      "sha256": "C5FD9B54075C918FCD60CFB04CD8C7C9FEB3DBB596532367F529CE7CDAE6ED58"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\T11_CFO\\rtl\\cfo_estimator_link_v2.sv",
+      "sha256": "7878CE644410D8362DEA13154100A8D6DB7FEA8E48E1A0F94372251D6E599014"
+    }
+  ],
+  "models": [
+    {
+      "module_file": "xpm_cdc",
+      "official_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\hdl\\xpm_cdc.sv",
+      "private_path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vendor\\link010r1\\xpm_cdc.sv",
+      "official_bytes": 64836,
+      "private_bytes": 64836,
+      "official_sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7",
+      "private_sha256": "D08434ED5A310C44C13936D6EDA5381D64FF0F627A335368C85826A30E8ADAA7",
+      "byte_identical": true,
+      "exact_approved_edits_only": true,
+      "outside_translate_off_byte_identical": true,
+      "outside_translate_off_sha256": "BFADEA33FDC68B752F624B4204B71830C50912074F8C6D5D566CD0D8F0B0568D",
+      "changed_line_blocks": []
+    },
+    {
+      "module_file": "xpm_memory",
+      "official_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_memory\\hdl\\xpm_memory.sv",
+      "private_path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vendor\\link010r1\\xpm_memory.sv",
+      "official_bytes": 486058,
+      "private_bytes": 486058,
+      "official_sha256": "E72758E6794B1F7AD00428FEEEACC4F90A38B0500583B2CA93CA2EBA12BA01BD",
+      "private_sha256": "E72758E6794B1F7AD00428FEEEACC4F90A38B0500583B2CA93CA2EBA12BA01BD",
+      "byte_identical": true,
+      "exact_approved_edits_only": true,
+      "outside_translate_off_byte_identical": true,
+      "outside_translate_off_sha256": "B92BCC0A0DBEE3C1A63A10972BAF850D5EFC5D7229D2B1D78DFEB5566AF6C56E",
+      "changed_line_blocks": []
+    },
+    {
+      "module_file": "xpm_fifo",
+      "official_path": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\hdl\\xpm_fifo.sv",
+      "private_path": "D:\\008_MA_Dev\\T11_CFO\\sim\\vendor\\link010r1\\xpm_fifo.sv",
+      "official_bytes": 230951,
+      "private_bytes": 230974,
+      "official_sha256": "D3C1E861CDDF00EBC82552C464A46FB5228E68B4D458001D064B99E04134B9D4",
+      "private_sha256": "22F40E9F1DE08436A6E15808A959D8BBF22916BEE3DE95ED7D3991BD0C19FF5C",
+      "byte_identical": false,
+      "exact_approved_edits_only": true,
+      "outside_translate_off_byte_identical": true,
+      "outside_translate_off_sha256": "4F4E362C4A6A8BD7CA5C57950BD8B541B6069F40022B81FE68F4E6853AAA8958",
+      "changed_line_blocks": [
+        {
+          "operation": "replace",
+          "official_start_line": 1584,
+          "official_end_line": 1584,
+          "private_start_line": 1584,
+          "private_end_line": 1584
+        },
+        {
+          "operation": "replace",
+          "official_start_line": 1590,
+          "official_end_line": 1590,
+          "private_start_line": 1590,
+          "private_end_line": 1590
+        }
+      ]
+    }
+  ],
+  "patch_assessment": [
+    {
+      "reference": "official/private xpm_fifo.sv:1542-1613,1582-1600",
+      "finding": "Exactly two line replacements, both inside synthesis translate_off. S4 retains reset-busy trigger and next-read-edge timing while requiring empty exactly 1; already-empty is accepted, X/Z is rejected. sleep_chk generate condition gains WAKEUP_TIME>0 so zero-length repetitions are not elaborated; positive legal WAKEUP_TIME=2 behavior is unchanged. Native compiler behavior remains pending."
+    },
+    {
+      "reference": "rtl/cfo_estimator_link_v2.sv:21-29,35-59,83-89; official xpm_cdc.sv:1111-1136",
+      "finding": "FIFO rst is now the four-stage synchronous reset synchronizer output on clk_fast, separate from asynchronous interface masking. FIFO busy and cross-domain reset completion handshake remain required. The assertion patch is not a substitute for this RTL contract. Clock-running and no-new-reset-during-busy assumptions must be exercised by R1 TB."
+    },
+    {
+      "reference": "tools/verify_link010r1_models.py:11-22",
+      "finding": "Read-only checker passed. Independent exact replacement, balanced translate-marker scan, outside-block byte comparison and changed-line enumeration also passed. CDC and memory are byte-identical; FIFO changed lines are 1584 and 1590 only."
+    }
+  ],
+  "binding_findings": [
+    {
+      "severity": "REQUIRED_GATE",
+      "reference": "vivado/link010r1_project.tcl:17; installed data/XilinxTclStore/tclapp/xilinx/xsim/common/utils.tcl:3464-3470",
+      "finding": "Empty XPM_LIBRARIES does not disable graph auto-detection; installed exporter merges auto_detect_xpm results with this property. Do not infer zero automatic XPM dependencies from the property alone."
+    },
+    {
+      "severity": "REQUIRED_GATE",
+      "reference": "AMD UG900 Verilog Search Order; installed xsim/sim.tcl:2016-2020,2115-2118,2162-2164",
+      "finding": "Search precedence is uselib, then ordered -L libraries, then parent-unit library, then work. Putting RTL/TB and models in cfo_xpm simplifies the project but does not itself outrank -L xpm. Require cfo_xpm before every xpm search entry and verify actual elaborated modules. MORE_OPTIONS is appended last and is not a reliable prepend mechanism."
+    },
+    {
+      "severity": "REQUIRED_GATE",
+      "reference": "installed xsim/helpers.tcl:479-533; xsim/common/utils.tcl:5173-5211",
+      "finding": "Blindly disabling precompiled XPM can inject original vendor HDL into a local xpm library before design sources, potentially putting xpm first. Reject unexpected vendor XPM compilation and duplicate module definitions within one active compile useset."
+    },
+    {
+      "severity": "MAPPING_EVIDENCE",
+      "reference": "installed data/xsim/xsim.ini:311; xsim/sim.tcl:523-560,1066-1070",
+      "finding": "Installed ini maps xpm globally but has no cfo_xpm entry. Local design libraries are generated under compiled_design_lib/library. Verify the generated cfo_xpm map resolves within this new private simulation work directory, has no conflicting later mapping/reparse escape, and never points into installed/global libraries. An unused xpm mapping/search entry alone is not proof of xpm binding."
+    },
+    {
+      "severity": "SCOPE_DETAIL",
+      "reference": "vivado/link010r1_project.tcl:18-26,45-50",
+      "finding": "Reviewed Tcl excludes official files from simulation and private files from synthesis/implementation. Official files do not explicitly set used_in_implementation=false, so describe them as non-simulation hardware sources or set that flag if strictly synthesis-only is required. File-set CSV is inventory, not actual compile-order/binding proof."
+    }
+  ],
+  "minimal_recommendation": [
+    "Keep the private three-model library and exact two edits; set default_lib=cfo_xpm and explicit LIBRARY=cfo_xpm for all participating HDL if desired. Preserve useset separation. Do not change installed utilities, global ini, assertion-disable macros, or frozen original sources.",
+    "Before native compile, inspect/freeze generated .prj, compile command and xsim.ini: exactly the three expected private XPM files for simulation, no official auto-injected XPM source, and cfo_xpm resolving inside the private simulation directory. Check the actual ordered -L arguments before elaboration.",
+    "Before claiming simulation PASS, require compile evidence for the private files and elaboration evidence for cfo_xpm.xpm_fifo_async, cfo_xpm.xpm_fifo_base, cfo_xpm.xpm_fifo_rst, cfo_xpm.xpm_memory_base and instantiated CDC units; reject xpm.* bindings and duplicate-definition warnings. Include glbl compilation/top because XPM CDC simulation references glbl.GSR.",
+    "If project auto-injection cannot satisfy these gates, use an explicit private .prj/.ini and xelab command with cfo_xpm first; this is deterministic but a larger wrapper change, not necessary when the project-generated evidence meets all gates."
+  ],
+  "qualification_boundary": {
+    "binding_pass": false,
+    "reason": "No Vivado/XSim invoked; generated project mapping, compile commands and elaboration do not yet exist for this review. Tcl recommendations after recorded snapshot need fresh static verification.",
+    "regression_required": {
+      "normal_frames": 22,
+      "error_cases": 10,
+      "discard_cases": 8
+    },
+    "regression_status": "REQUIRED_UNCHANGED_NOT_RUN_BY_REVIEW",
+    "new_reset_coverage": "short asynchronous pulse, assertion/deassertion on clk_fast, startup GSR, FIFO double reset sequence, no IO while either side busy, post-reset recovery and no stale frame/credit; dynamic evidence required",
+    "excluded_claims": [
+      "full-frame chain qualification",
+      "synthesis or implementation equivalence proof",
+      "timing closure",
+      "sustained throughput",
+      "board validation"
+    ]
+  },
+  "primary_reference": {
+    "url": "https://docs.amd.com/r/en-US/ug900-vivado-logic-simulation/Verilog-Search-Order",
+    "version_observed": "2026.1; precedence cross-checked against installed 2021.1 exporter source; no 2021.1 native experiment"
+  },
+  "modified_frozen_inputs": false,
+  "static_followup_at_utc": "2026-09-14T23:51:50.0388915Z",
+  "current_gate_review": {
+    "scope": "Additional read-only review of updated default_lib/cfo_xpm and post-elaboration gate; no native execution",
+    "reviewed_tcl_sha256": "910448BA9FB3EB59020C22D5BC26541A70344D37E1BB0C5F8BAA82969C146BAF",
+    "findings": [
+      {
+        "severity": "REQUIRED_FIX",
+        "finding": "Positive presence checks do not reject extra official or other same-name XPM sources. Extract all analyzed/compiled xpm_cdc.sv, xpm_memory.sv and xpm_fifo.sv paths and require the exact three private paths.",
+        "reference": "link010r1_project.tcl:77-83; cfo_link010r1_guard_v1.py:69-71"
+      },
+      {
+        "severity": "REQUIRED_FIX",
+        "finding": "Missing ini or zero cfo_xpm mappings currently passes all([]); mere directory existence is insufficient. Require one unambiguous explicit cfo_xpm mapping to an existing directory resolved beneath the private simdir.",
+        "reference": "cfo_link010r1_guard_v1.py:78-84; link010r1_project.tcl:97"
+      },
+      {
+        "severity": "PORTABILITY_FIX",
+        "finding": "Default compiled_design_lib is xsim.dir, but simulation.compileDesignLibsToXSimLib=true changes it to xsim_lib. Validate the actual private mapping target rather than hardcoding xsim.dir; no live parameter claim was made.",
+        "reference": "installed xsim/helpers.tcl:87 and sim.tcl:339-341"
+      },
+      {
+        "severity": "EVIDENCE_FIX",
+        "finding": "Existing generated compile command points at cfo_estimator_link_tb_vlog.prj, not xvlog.prj. Read and preserve the actual -prj target. Existing xvlog log format places analyzed absolute file path and library on one line.",
+        "reference": "old CFO_LINK010/CFO_LINK010.sim/sim_1/behav/xsim/compile.bat:20-21"
+      }
+    ],
+    "parent_notified": true,
+    "later_parent_changes_not_implicitly_reviewed": true
+  }
+}

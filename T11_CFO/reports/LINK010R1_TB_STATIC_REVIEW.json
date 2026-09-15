@@ -1,0 +1,356 @@
+{
+  "schema_version": 1,
+  "review_id": "LINK010R1_TB_STATIC_REVIEW",
+  "reviewed_at_utc": "2026-09-14T23:54:52.6493666Z",
+  "status": "DRAFT_STATIC_REVIEW_COMPLETE_NATIVE_NOT_RUN",
+  "reviewer": "/root/t11_phase_rtl",
+  "independent_reviewer": "/root/t11_phase_rtl/reset_v2_review",
+  "source_files": [
+    {
+      "path": "D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_r1_tb.sv",
+      "sha256": "FD38A1DEBC79390B47896B4D6C0CE19B8BEAAAD797197A211097DF7CB765F6F9",
+      "bytes": 21774,
+      "module": "cfo_estimator_link_tb",
+      "new_file": true
+    },
+    {
+      "path": "D:/008_MA_Dev/T11_CFO/sim/tb/cfo_estimator_link_tb.sv",
+      "sha256": "5B110E16E0058CC1A06038D5C62BFC2132AC5BFC9B53CFF654DD100C9735C943",
+      "modified": false
+    },
+    {
+      "path": "D:/008_MA_Dev/T11_CFO/rtl/cfo_estimator_link_v2.sv",
+      "sha256": "7878CE644410D8362DEA13154100A8D6DB7FEA8E48E1A0F94372251D6E599014",
+      "modified": false
+    }
+  ],
+  "scope_preservation": {
+    "inverse_removal_exactly_recovers_frozen_tb": true,
+    "only_additions": "Passive reset audit declaration/monitor/tasks block and reset_audit_finish() immediately before the original numeric trace fclose.",
+    "clock_stimulus_changed": false,
+    "reset_or_abort_stimulus_changed": false,
+    "vectors_changed": false,
+    "case_schedule_changed": false,
+    "existing_numeric_trace_format_changed": false,
+    "existing_numeric_thresholds_changed": false,
+    "existing_acceptance_matrix": "22 F normal results, 10 E link-error results, 8 D discards, 32 real H retirements",
+    "old_lock_xpr_tcl_or_vendor_changed": false
+  },
+  "static_findings": {
+    "open_deterministic_sampling_or_count_findings": 0,
+    "resolved_before_delivery": [
+      "The audit_finish call is checked to exist before the original numeric fclose; audit success is not deferred to a final block.",
+      "FIFO transition checking contains no delay, so it cannot miss a second transition during a 10 ps wait. Multiple transitions on one fast edge fail immediately.",
+      "POST derived-state checks and recovery recognition are skipped only when an asynchronous request transition occurs in that PRE-to-POST window; PRE busy/IO checks remain active and the request has its own trigger+10ps check."
+    ],
+    "independent_review_result": "Final SHA reviewed; no deterministic new sampling/count problem found; removing all audit additions recovers the original TB exactly."
+  },
+  "audit_output": {
+    "filename": "link010r1_reset_audit.txt",
+    "format": "Whitespace-separated tagged records; ignore lines beginning with #; all timestamps are integer picoseconds printed with %0d.",
+    "timestamp_conversion": "longint'($realtime / 1ps)",
+    "bit_encoding": "bits32 is exactly 32 binary four-state characters, MSB first. Preserve 0/1/x/z (case-insensitive); do not parse the entire word as an integer when unknowns are present.",
+    "bit_mapping": [
+      {
+        "bit": 31,
+        "signal": "common_reset",
+        "text_character_index": 0
+      },
+      {
+        "bit": 30,
+        "signal": "reset_async",
+        "text_character_index": 1
+      },
+      {
+        "bit": 29,
+        "signal": "abort_async",
+        "text_character_index": 2
+      },
+      {
+        "bit": 28,
+        "signal": "rst_fast",
+        "text_character_index": 3
+      },
+      {
+        "bit": 27,
+        "signal": "rst_slow",
+        "text_character_index": 4
+      },
+      {
+        "bit": 26,
+        "signal": "fifo_reset",
+        "text_character_index": 5
+      },
+      {
+        "bit": 25,
+        "signal": "wr_busy",
+        "text_character_index": 6
+      },
+      {
+        "bit": 24,
+        "signal": "rd_busy",
+        "text_character_index": 7
+      },
+      {
+        "bit": 23,
+        "signal": "fast_reset_busy",
+        "text_character_index": 8
+      },
+      {
+        "bit": 22,
+        "signal": "slow_reset_busy",
+        "text_character_index": 9
+      },
+      {
+        "bit": 21,
+        "signal": "fifo_empty",
+        "text_character_index": 10
+      },
+      {
+        "bit": 20,
+        "signal": "fifo_reset_seen",
+        "text_character_index": 11
+      },
+      {
+        "bit": 19,
+        "signal": "fifo_reset_done",
+        "text_character_index": 12
+      },
+      {
+        "bit": 18,
+        "signal": "fifo_reset_done_slow",
+        "text_character_index": 13
+      },
+      {
+        "bit": 17,
+        "signal": "slow_reset_ready",
+        "text_character_index": 14
+      },
+      {
+        "bit": 16,
+        "signal": "slow_reset_ready_fast",
+        "text_character_index": 15
+      },
+      {
+        "bit": 15,
+        "signal": "write_fire",
+        "text_character_index": 16
+      },
+      {
+        "bit": 14,
+        "signal": "read_fire",
+        "text_character_index": 17
+      },
+      {
+        "bit": 13,
+        "signal": "s_valid",
+        "text_character_index": 18
+      },
+      {
+        "bit": 12,
+        "signal": "s_ready",
+        "text_character_index": 19
+      },
+      {
+        "bit": 11,
+        "signal": "m_valid",
+        "text_character_index": 20
+      },
+      {
+        "bit": 10,
+        "signal": "m_ready",
+        "text_character_index": 21
+      },
+      {
+        "bit": 9,
+        "signal": "closed_fast",
+        "text_character_index": 22
+      },
+      {
+        "bit": 8,
+        "signal": "done_toggle",
+        "text_character_index": 23
+      },
+      {
+        "bit": 7,
+        "signal": "done_sync",
+        "text_character_index": 24
+      },
+      {
+        "bit": 6,
+        "signal": "done_seen",
+        "text_character_index": 25
+      },
+      {
+        "bit": 5,
+        "signal": "backend_input_valid",
+        "text_character_index": 26
+      },
+      {
+        "bit": 4,
+        "signal": "b_valid",
+        "text_character_index": 27
+      },
+      {
+        "bit": 3,
+        "signal": "b_ready",
+        "text_character_index": 28
+      },
+      {
+        "bit": 2,
+        "signal": "fifo_full",
+        "text_character_index": 29
+      },
+      {
+        "bit": 1,
+        "signal": "overflow",
+        "text_character_index": 30
+      },
+      {
+        "bit": 0,
+        "signal": "underflow",
+        "text_character_index": 31
+      }
+    ],
+    "records": [
+      {
+        "tag": "Q",
+        "tokens": 8,
+        "fields": [
+          "tag",
+          "edge_ps",
+          "sample_ps",
+          "epoch",
+          "domain",
+          "phase",
+          "common_change_window",
+          "bits32"
+        ],
+        "meaning": "Clock sample. domain F=fast, S=slow. phase P is input #1step sampled before edge, sample_ps=edge_ps-1. phase A is raw POST snapshot at edge_ps+10. common_change_window=1 if reset inputs differ PRE/POST or a common_reset transition was recorded in the inclusive edge..POST interval."
+      },
+      {
+        "tag": "A",
+        "tokens": 5,
+        "fields": [
+          "tag",
+          "trigger_ps",
+          "check_ps",
+          "epoch",
+          "bits32"
+        ],
+        "meaning": "Common reset assertion and asynchronous stop-stream check, check_ps=trigger_ps+10. Epoch 0 explicitly represents initial reset, trigger_ps=0; epochs 1..8 are existing cancellations."
+      },
+      {
+        "tag": "T",
+        "tokens": 5,
+        "fields": [
+          "tag",
+          "edge_ps",
+          "epoch",
+          "value",
+          "fast_edge_ps"
+        ],
+        "meaning": "Immediate FIFO reset transition; no delay or settled multi-signal snapshot in this record. value is 0/1, edge_ps must equal the most recent fast rising edge. Initial high value is represented by the initial A, not counted as a runtime T assertion."
+      },
+      {
+        "tag": "C",
+        "tokens": 4,
+        "fields": [
+          "tag",
+          "check_ps",
+          "epoch",
+          "bits32"
+        ],
+        "meaning": "First unambiguous fast POST observation of both busy outputs low for this epoch; verifies empty, completion handshake and zero stale credit/IO."
+      },
+      {
+        "tag": "Z",
+        "tokens": 8,
+        "fields": [
+          "tag",
+          "common_assertions",
+          "fifo_assertions",
+          "fifo_deassertions",
+          "recoveries",
+          "fast_samples",
+          "slow_samples",
+          "q_rows"
+        ],
+        "meaning": "One successful audit footer written before audit fclose and before numeric trace fclose."
+      },
+      {
+        "tag": "X",
+        "tokens": "4 or more",
+        "fields": [
+          "tag",
+          "time_ps",
+          "epoch",
+          "reason remainder"
+        ],
+        "meaning": "First audit error, flushed immediately before fatal. Any X means failure."
+      }
+    ],
+    "sampling_and_order": [
+      "Each domain uses an independent clocking block with input #1step; its monitor waits on that clocking event, not another Active-region posedge callback.",
+      "A separate delay-free fast-posedge monitor records the edge timestamp used by T alignment checks.",
+      "Fast and slow processes can run at the same timestamp. Parse Q by (domain,edge_ps,phase), never by cross-domain file-line order.",
+      "PRE epoch is sampled by the clocking block; POST epoch is the variable value at POST execution. At common_change_window=1 the POST epoch can be the old or new value if the request process shares that ps. Anchor epoch transitions using A.trigger_ps and allow that exact boundary, not arbitrary mismatches.",
+      "A common transition within the 10 ps window may leave a POST snapshot inside asynchronous propagation. Keep the evidence and the independent A check; do not apply stable POST derived-state expectations to changed=1 records.",
+      "The initial A is recorded at 10 ps after declared initial reset. Subsequent FIFO reset transitions are checked without blocking delays."
+    ],
+    "log_volume": "Q is emitted only while either domain busy is nonzero/unknown, a common transition overlaps the sample window, or the corresponding domain has a remaining 16-cycle tail. Each domain manages its own tail. Assertions continue throughout the whole test even when normal-operation Q output is suppressed."
+  },
+  "independent_python_contract": {
+    "expected_counts_are_requirements_not_observed_results": true,
+    "counts": {
+      "A": 9,
+      "T": 17,
+      "T_value_1": 8,
+      "T_value_0": 9,
+      "C": 9,
+      "Z": 1,
+      "X": 0
+    },
+    "epochs": "Exactly 0..8; one A and one C per epoch. Epoch 0 has no T assertion and one T deassertion; every later epoch has one T assertion then one T deassertion before C.",
+    "pairing": "Exactly one P and one A Q record per captured (domain,edge_ps), P sample=edge-1, A sample=edge+10. Z.q_rows=2*(Z.fast_samples+Z.slow_samples), and domain Q-pair counts equal the footer sample counts.",
+    "time_rules": "T.edge_ps=T.fast_edge_ps and matches a fast rising edge at 1000+2000*n ps. No duplicate T timestamps. A.check_ps=A.trigger_ps+10. C must correspond to its fast Q POST timestamp/snapshot. Do not require file rows from different processes at the same time to have a fixed order.",
+    "A_required_bits": "31=1; 15=0,14=0,12=0,11=0 (common reset, write/read enables, source ready and output valid). Initial A additionally proves FIFO reset bit26=1.",
+    "fast_PRE_rule": "If any of bits31,28,26,25,24,23 is not known 0, bits15 and12 must be known 0.",
+    "slow_PRE_rule": "If any of bits31,27,26,25,24,22 is not known 0, bits14,5,11 must be known 0.",
+    "fast_POST_rules_for_unchanged_window": [
+      "If bit19=1 then bit20=1 and bits26,25=0.",
+      "If bit23=0 then bits31,28,26,25,24,22=0 and bits19,16=1."
+    ],
+    "slow_POST_rules_for_unchanged_window": [
+      "If bit17=1 then bit18=1 and bit24=0.",
+      "If bit22=0 then bits31,27,26,25,24=0 and bits18,17=1.",
+      "If bit22=1 then bit8=0."
+    ],
+    "C_required_bits": "bits23,22=0; bit21=1; bits20..16=11111; bits8..6=000; bits15,14,11=0. There is only one C per epoch, and a later A cannot precede prior recovery.",
+    "unknown_policy": "Preserve unknown bits in early reset snapshots. Required control values are four-state exact comparisons; an X/Z in a bit required to be 0 or 1 is a failure. Do not require inactive payload/diagnostic flags to be fully known at initialization.",
+    "successful_markers": [
+      "CFO_LINK010R1_RESET_AUDIT_PASS reset_epochs=9 common_assertions=9 fifo_assertions=8 fifo_deassertions=9 recoveries=9 ...",
+      "Original CFO_LINK010_PASS remains required independently."
+    ],
+    "numeric_trace": "link010_actual.txt remains W/R/F/E/H/D with its original checker and thresholds; reset audit supplements, not replaces, those checks."
+  },
+  "boundaries": [
+    "Native compilation and simulation have not been run. In particular XSim acceptance of these clocking-block constructs remains a required native check.",
+    "The count requirements describe unchanged test stimuli, not measured successful coverage.",
+    "S-4/S-6/S-7 vendor assertion policy and explicit private cfo_xpm binding remain root-owned work. No vendor modifications were made here.",
+    "The audit validates sampled functional reset/handshake behavior, not physical reset minimum pulse width, metastability MTBF, implementation timing or board CDC.",
+    "A delta-cycle transition that never materializes as a signal event cannot be measured by an event monitor; runtime observable FIFO-reset events are checked without a delay blind window.",
+    "Only initial reset plus the existing eight cancellations are stimulated. No extra reset waveform or additional case was introduced."
+  ],
+  "actions": {
+    "new_files": [
+      "sim/tb/cfo_estimator_link_r1_tb.sv",
+      "reports/LINK010R1_TB_STATIC_REVIEW.json"
+    ],
+    "frozen_files_modified": [],
+    "native_started": false,
+    "matlab_started": false,
+    "vivado_started": false
+  },
+  "formal_T11_T12_T13_PASS": false
+}

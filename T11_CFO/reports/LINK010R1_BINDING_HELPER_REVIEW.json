@@ -1,0 +1,352 @@
+{
+  "schema": "link010r1_binding_helper_review_v1",
+  "created_utc": "2026-09-15T00:02:35.438708+00:00",
+  "status": "HELPER_STATIC_REVIEW_PASS_NATIVE_BINDING_PENDING",
+  "helper": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1_binding.py",
+    "sha256": "589DF51BC1B689FA16BB07ED378880C4A6F9DC6060B72C8523990324FAE0B4DA",
+    "bytes": 22496,
+    "function_start_lines": {
+      "canonical": 29,
+      "inside": 47,
+      "tokens": 54,
+      "logical_lines": 70,
+      "xpm_source": 88,
+      "parse_prj": 93,
+      "parse_compile": 118,
+      "parse_analyzed": 151,
+      "parse_elaboration": 161,
+      "parse_mapping": 193,
+      "check_documents": 215,
+      "no_reparse": 275,
+      "run": 282,
+      "self_check": 352,
+      "main": 407
+    }
+  },
+  "interface": {
+    "run": "run(simdir) -> dict",
+    "main": "main(argv=None) -> exit code; JSON stdout",
+    "cli": [
+      "C:/Python314/python.exe",
+      "-I",
+      "-B",
+      "-X",
+      "utf8",
+      "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1_binding.py",
+      "--simdir",
+      "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim"
+    ],
+    "success_status": "LINK010R1_BINDING_PASS",
+    "failure_status": "LINK010R1_BINDING_FAIL",
+    "required_acceptance_field": "all_checks == true",
+    "exit_codes": {
+      "pass": 0,
+      "fail": 2
+    },
+    "fields": [
+      "schema",
+      "status",
+      "all_checks",
+      "native_started",
+      "checks",
+      "errors",
+      "details",
+      "evidence"
+    ],
+    "self_check_cli": "--self-check"
+  },
+  "scope": {
+    "fixed_root": "D:\\008_MA_Dev\\T11_CFO",
+    "fixed_simdir": "D:\\008_MA_Dev\\T11_CFO\\vivado\\CFO_LINK010R1\\CFO_LINK010R1.sim\\sim_1\\behav\\xsim",
+    "required_files": [
+      "compile.bat",
+      "cfo_estimator_link_tb_vlog.prj",
+      "xvlog.log",
+      "compile.log",
+      "elaborate.log",
+      "xsim.ini"
+    ],
+    "optional_if_present": [
+      "xelab.log"
+    ],
+    "maximum_bytes_per_file": 16777216,
+    "read_source_contents": false,
+    "launch_native": false,
+    "write_files_in_helper": false,
+    "global_configuration_access": false
+  },
+  "verified_checks": [
+    "Only exact new CFO_LINK010R1 behavioral simdir is accepted; old project is rejected before evidence read.",
+    "Exactly one actual xvlog invocation in compile.bat, with exactly one -prj resolving to cfo_estimator_link_tb_vlog.prj; echo lines do not count; working-directory changes and hidden response files are rejected.",
+    "Multiline PRJ continuation records, quoted Windows paths, include options and nosort are handled. Each private XPM source must occur exactly once in cfo_xpm with sv language; other XPM HDL files including vendor xpm_VCOMP are rejected.",
+    "Both xvlog.log and compile.log must independently identify precisely the three private XPM source paths once each in cfo_xpm. Extra official paths, duplicates and wrong libraries fail.",
+    "Actual Running: xelab command is required in each present elaboration log. cfo_xpm must appear and precede any xpm search entry; xpm absence is intentionally allowed. Library-directory overrides, alternate ini and hidden response inputs are rejected.",
+    "Seven exact XPM module names must be compiled in cfo_xpm. Any xpm library binding or XPM-prefixed module bound to another library fails.",
+    "Exactly one explicit cfo_xpm mapping is required, targeting an existing directory strictly under simdir. xsim.dir and xsim_lib layouts are accepted through actual mapping. Missing/empty/duplicate/variable-dependent/escaping mappings fail.",
+    "Files and mapped directory are checked for reparse points. Nonempty bounded UTF-8 evidence is hashed; file membership, size, mtime and identity are checked for changes during reading."
+  ],
+  "static_validation": {
+    "python_ast_pass": true,
+    "self_check": {
+      "schema": "link010r1_binding_self_check_v1",
+      "status": "PASS",
+      "all_checks": true,
+      "native_started": false,
+      "filesystem_fixtures_created": false,
+      "synthetic_in_memory_only": true,
+      "passed": 38,
+      "total": 38,
+      "cases": [
+        {
+          "name": "valid_default_local_library",
+          "expected_pass": true,
+          "observed_pass": true,
+          "passed": true
+        },
+        {
+          "name": "valid_xsim_lib_mapping",
+          "expected_pass": true,
+          "observed_pass": true,
+          "passed": true
+        },
+        {
+          "name": "valid_windows_path_case",
+          "expected_pass": true,
+          "observed_pass": true,
+          "passed": true
+        },
+        {
+          "name": "missing_compile.bat",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "missing_cfo_estimator_link_tb_vlog.prj",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "missing_xvlog.log",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "missing_compile.log",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "missing_elaborate.log",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "missing_xsim.ini",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "empty_optional_xelab_log",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "echo_without_actual_compile",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "wrong_actual_project",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "working_directory_changed",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "hidden_compile_response_file",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "duplicate_private_prj_source",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "extra_official_prj_source",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "extra_vendor_vcomp_prj_source",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "wrong_prj_library",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "wrong_compile_library",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "extra_official_analysis",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "duplicate_private_analysis",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "xpm_precedes_private",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "echo_command_is_not_actual_xelab",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "private_library_directory_override",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "alternate_ini_bypasses_audit",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "missing_expected_module",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "module_name_prefix_is_not_match",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "global_xpm_binding",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "other_library_xpm_binding",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "missing_mapping",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "empty_mapping",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "duplicate_mapping",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "outside_mapping",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "installed_mapping",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "environment_mapping",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "root_only_mapping",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "drive_relative_mapping",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        },
+        {
+          "name": "mapping_library_case_mismatch",
+          "expected_pass": false,
+          "observed_pass": false,
+          "passed": true
+        }
+      ]
+    },
+    "existing_vivado2021_1_compile_bat_format_parsed": true,
+    "existing_generated_multiline_prj_records_parsed": 9,
+    "old_project_simdir_rejected": true,
+    "separate_read_only_reviewer": "No confirmed blocker for the fixed generated format. Clarified that absence of -L xpm is allowed; no code change needed.",
+    "disk_fixtures_created": false
+  },
+  "boundaries": [
+    "No MATLAB/Vivado/XSim executable was started. Native_started=false denotes this helper starts no native process, not that its caller has none.",
+    "No native R1 success path or filesystem-based synthetic successful project was run in this review; real mapping/compilation/elaboration remains pending until Luna executes the frozen job.",
+    "This checker qualifies binding evidence only. Source-content hashes, exact two assertion edits, full selected-source lock, numerical 22F/10E/8D regression, reset coverage, process/resource protection and publication are separate gates.",
+    "The parser deliberately targets frozen Vivado 2021.1 generated formats and rejects unrecognized/hidden inputs. It does not infer binding from a library name or directory alone.",
+    "An idle/zero-nanosecond checkpoint is assumed for the initial check; compile and elaboration evidence must remain unchanged through the repeated guard check."
+  ],
+  "files_written_by_this_subtask": [
+    "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1_binding.py",
+    "D:\\008_MA_Dev\\T11_CFO\\reports\\LINK010R1_BINDING_HELPER_REVIEW.json"
+  ],
+  "tcl_or_guard_modified": false,
+  "frozen_files_modified": false,
+  "native_started": false,
+  "ready_for_parent_freeze": true
+}

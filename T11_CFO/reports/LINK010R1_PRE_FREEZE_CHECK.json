@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "native_started": false,
+  "checks": {
+    "rtl_inverse_exact": true,
+    "tb_inverse_exact": true,
+    "python_ast": true,
+    "late_ready_saved_identity_accepted": true,
+    "wrong_pid_rejected": true,
+    "actual_compile_script_format_recognized": true,
+    "actual_multiline_prj_format_recognized": true,
+    "exact_current_grant_accepted": true,
+    "mismatched_grant_authorized_job_rejected": true,
+    "mismatched_grant_manifest_sha256_rejected": true,
+    "mismatched_grant_script_sha256_rejected": true
+  },
+  "saved_create_identity_samples": 11,
+  "scope": "Static inverse proof, saved telemetry read and in-memory admission counterexamples only; no R1 native qualification."
+}
