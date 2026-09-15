@@ -1,0 +1,23 @@
+{
+  "recorded_utc": "2026-09-15T00:12:33.879524+00:00",
+  "status": "DISPATCHED_TO_ORIGINAL_LUNA",
+  "job": "CFO-LINK010R1",
+  "grant_id": "T11_LINK010R1_20260915_REV01",
+  "slot_status": "GRANTED_CFO_LINK010R1_CREATE_SIMULATE_ONLY",
+  "slot_sha256_at_dispatch_check": "ECE249D68B0F61AA6965AB3A477B6FA53940C91EDE1DD2E2227B15C042D3AD6A",
+  "available_gib_at_manager_grant": 14.24,
+  "source_lock_sha256": "F01D289223D90FE71F3767B1030B35809AA1C651FC249EDA3362AB5E455F3069",
+  "controller_sha256": "9654C5B8B9ED5D252C9CA4F3008A08590CF972D332678FE876F70F097D887E84",
+  "locked_files_checked": 63,
+  "project_members": 25,
+  "new_xpr_absent_at_dispatch_check": true,
+  "source_commit": "f5371e977d398eeaa92147bef7011f5b613d3a4f",
+  "astra": "01a076f1-ad1b-7d33-a29c-4ea34ae84d01",
+  "luna": "01a076f0-d8c0-72a0-8371-cb2ff29c1b28",
+  "dispatch_tool_acknowledged": true,
+  "native_started_by_astra": false,
+  "luna_start_not_yet_claimed": true,
+  "retired_grant_reused": false,
+  "pre_dispatch_check_note": "An initial local status equality check expected bare GRANTED; the manager uses the more precise GRANTED_CFO_LINK010R1_CREATE_SIMULATE_ONLY, which is supported by the unchanged frozen helper. Corrected only the read-only local comparison, then all 63 hashes passed; no frozen input or execution policy changed.",
+  "execution_scope": "Only new project create and once-only R1 link behavior matrix; fresh stage admission and full private Job monitoring by original Luna; no T10 operation."
+}
