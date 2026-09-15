@@ -1,0 +1,41 @@
+{
+  "schema": "link010r1_compat2_static_review_v1",
+  "status": "LOCAL_STATIC_REVIEW_PASS_PENDING_NATIVE",
+  "utc": "2026-09-15T03:13:14.267226+00:00",
+  "scope": "Approved local passive observer preparation only; no native or cross-task results transmission.",
+  "candidate_tb": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\tb\\cfo_estimator_link_r1_compat2_tb.sv",
+    "bytes": 21985,
+    "sha256": "AF414075F3C976CBA25301E3C0866A098286BCC9F7AF08429DACD4B9B1792796"
+  },
+  "checker": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\tools\\verify_link010r1_compat2.py",
+    "sha256": "27A2DE4379DD33CA89AAAABEBF44D8F5E8F329D5D605298A5CFFB688F6B314F7"
+  },
+  "checks": {
+    "forward_exact_five_replacements": true,
+    "reverse_byte_identical": true,
+    "outside_passive_observer_byte_identical": true,
+    "original_skews_clocks_stimulus_and_gates_preserved": true,
+    "four_state_snapshot_preserves_epoch_and_bits": true,
+    "original_parsers_unchanged": true,
+    "independent_diff_review_pass": true,
+    "no_new_conditions_or_matrix": true
+  },
+  "independent_reviewer": "/root/t06_reuse_audit",
+  "source_identity_check": {
+    "status": "COMPAT2_FROZEN_SOURCE_PASS",
+    "base_frozen_files_verified": 68,
+    "vendor_dependencies_verified": 3,
+    "tb_sha256": "AF414075F3C976CBA25301E3C0866A098286BCC9F7AF08429DACD4B9B1792796",
+    "native_started": false,
+    "native_behavior_qualified": false,
+    "check_scope": "Frozen bytes and optional actual source table; not a new equivalence or behavior test"
+  },
+  "known_limit": "Static preservation and candidate scheduling do not prove XSim native sampling correctness. Original strict reset and numeric gates still required.",
+  "native_started": false,
+  "xpr_modified": false,
+  "old_records_rewritten": false,
+  "cross_codex_task_message_sent": false,
+  "execution_entry_prepared": false
+}

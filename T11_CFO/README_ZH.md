@@ -16,6 +16,8 @@ FRONT009窗口前端已独立复核通过：82,026条pilot记录、98个z结果�
 
 复位修订LINK010R1已完成静态审查并冻结：只调整FIFO同步复位与两域恢复握手，增加被动边沿审计，保留原数值/协议矩阵。新包含60个冻结文件、3个官方依赖、25个工程成员；尚无R1原生通过结论。详见[修订契约](docs/LINK010R1_CONTRACT_ZH.md)、[执行审查包](docs/LINK010R1_NATIVE_JOB.md)和[静态审查](reports/LINK010R1_STATIC_REVIEW.json)。该工程已成功创建；首次simulate在XSim展开测试台时失败，尚未运行RTL刺激。41份产物已[封存复核](reports/LINK010R1_ELAB_REVIEW_20260915/README_ZH.md)。当前[compat1最小修复](docs/LINK010R1_COMPAT1_CONTRACT_ZH.md)仅更换八处clocking绑定写法并通过逐字节等价审查，复用已创建工程，只重试失败simulate；新清单为68份文件、3份官方依赖、25个工程成员。执行入口v3已补齐必需冻结记录保存成功门并通过定向静态复核；[精确仿真准入包](reports/LINK010R1_COMPAT1_V3_ADMISSION_PACKAGE_20260915.json)已完成一次57.608秒simulate，数值/协议与私有XPM绑定证据通过；独立复核发现10条PRE复位位与标称时间矛盾，复位观测门仍阻断。原始65份产物及WDB已[封存复核](reports/LINK010R1_COMPAT1_V3_RESULT_REVIEW_20260915/README_ZH.md)，不能靠补epoch或跳过记录恢复PASS。旧grant已回收；已提出仅修被动观测后的最小后续方案，尚未重跑。
 
+compat2的本地被动观测修订已完成并通过静态复核：阶段编号与观测位统一为64位四态快照，保留原#1step，在原10ps等待结束后读取PRE与POST。原检查条件、激励与记录格式不变，五处精确替换反变换后逐字节恢复compat1。已冻结79份文件、3份官方依赖和25项候选源集；实际XPR未改，未启动native或跨任务回传，尚无新采样效果的原生结论。见[本地修订契约](docs/LINK010R1_COMPAT2_CONTRACT_ZH.md)、[静态复核](reports/LINK010R1_COMPAT2_STATIC_REVIEW.json)和[科学清单](docs/LINK010R1_COMPAT2_SOURCE_LOCK.json)。
+
 共享槽以总管家resource_slot.json的即时授权为准；用户GUI编辑态不占计算组，但全部子进程内存计入准入；当前已切换至Sync_Frontend，按原Luna的会话感知准入逐次核查。T10持续受保护。缓存、两次全帧旋转、综合和物理CDC/时序尚待后续门限，不以接口行为仿真替代。
 
 ## 当前可用内容

@@ -1,0 +1,77 @@
+{
+  "schema": "link010r1_compat2_tb_draft_review_v1",
+  "utc": "2026-09-15T03:07:36.8987690Z",
+  "status": "STATIC_DRAFT_CANDIDATE_PENDING_NATIVE",
+  "scope": "Only a new passive compat2 TB and this review report; no RTL, stimulus, checker, Tcl, wrapper or helper changes.",
+  "base": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\tb\\cfo_estimator_link_r1_compat1_tb.sv",
+    "bytes": 21800,
+    "sha256": "4C7EC8E1FB2F194FF982130439CE90375C6414FC7B1B2C8A0F2D646A518B078E"
+  },
+  "candidate": {
+    "path": "D:\\008_MA_Dev\\T11_CFO\\sim\\tb\\cfo_estimator_link_r1_compat2_tb.sv",
+    "bytes": 21985,
+    "sha256": "AF414075F3C976CBA25301E3C0866A098286BCC9F7AF08429DACD4B9B1792796",
+    "module": "cfo_estimator_link_tb"
+  },
+  "exact_transformations": [
+    {
+      "name": "packed_snapshot_declaration",
+      "occurrences": 1,
+      "before": " integer reset_audit_fd=0,reset_audit_epoch=0,reset_audit_rows=0;",
+      "after": " integer reset_audit_fd=0,reset_audit_epoch=0,reset_audit_rows=0;\n // Compat2 candidate: one four-state snapshot aligns epoch and signal bits.\n wire [63:0] reset_audit_snapshot={reset_audit_epoch,reset_audit_bits};"
+    },
+    {
+      "name": "clocking_inputs",
+      "occurrences": 2,
+      "before": "  input reset_audit_bits;\n  input reset_audit_epoch;",
+      "after": "  input reset_audit_snapshot;"
+    },
+    {
+      "name": "fast_monitor_consumption",
+      "occurrences": 1,
+      "before": "   pre=reset_audit_fast_cb.reset_audit_bits;pre_epoch=reset_audit_fast_cb.reset_audit_epoch;\n   edge_ps=reset_audit_ps();\n   // These are edge-sampled values, not the values changed by this edge's NBA.\n   if(pre[31]!==1'b0 || pre[28]!==1'b0 || pre[26]!==1'b0 ||\n      pre[25]!==1'b0 || pre[24]!==1'b0 || pre[23]!==1'b0)\n    if(pre[15]!==1'b0 || pre[12]!==1'b0)\n     reset_audit_fail(\"Write enable/source ready active at reset/busy sampling edge\");\n   #0.010;\n   post=reset_audit_bits;",
+      "after": "   edge_ps=reset_audit_ps();\n   #0.010;\n   // Consume the #1step snapshot after the clocking update has settled.\n   {pre_epoch,pre}=reset_audit_fast_cb.reset_audit_snapshot;\n   post=reset_audit_bits;\n   // These are edge-sampled values, not the values changed by this edge's NBA.\n   if(pre[31]!==1'b0 || pre[28]!==1'b0 || pre[26]!==1'b0 ||\n      pre[25]!==1'b0 || pre[24]!==1'b0 || pre[23]!==1'b0)\n    if(pre[15]!==1'b0 || pre[12]!==1'b0)\n     reset_audit_fail(\"Write enable/source ready active at reset/busy sampling edge\");"
+    },
+    {
+      "name": "slow_monitor_consumption",
+      "occurrences": 1,
+      "before": "   pre=reset_audit_slow_cb.reset_audit_bits;pre_epoch=reset_audit_slow_cb.reset_audit_epoch;\n   edge_ps=reset_audit_ps();\n   if(pre[31]!==1'b0 || pre[27]!==1'b0 || pre[26]!==1'b0 ||\n      pre[25]!==1'b0 || pre[24]!==1'b0 || pre[22]!==1'b0)\n    if(pre[14]!==1'b0 || pre[5]!==1'b0 || pre[11]!==1'b0)\n     reset_audit_fail(\"Reader/backend/output active at reset/busy sampling edge\");\n   #0.010;\n   post=reset_audit_bits;",
+      "after": "   edge_ps=reset_audit_ps();\n   #0.010;\n   // Consume the #1step snapshot after the clocking update has settled.\n   {pre_epoch,pre}=reset_audit_slow_cb.reset_audit_snapshot;\n   post=reset_audit_bits;\n   if(pre[31]!==1'b0 || pre[27]!==1'b0 || pre[26]!==1'b0 ||\n      pre[25]!==1'b0 || pre[24]!==1'b0 || pre[22]!==1'b0)\n    if(pre[14]!==1'b0 || pre[5]!==1'b0 || pre[11]!==1'b0)\n     reset_audit_fail(\"Reader/backend/output active at reset/busy sampling edge\");"
+    }
+  ],
+  "static_checks": {
+    "exact_replacement_occurrences": 5,
+    "reverse_transform_byte_identical": true,
+    "clocking_input_skew_count": 2,
+    "original_10ps_delay_occurrences": 5,
+    "candidate_10ps_delay_occurrences": 5,
+    "pre_gate_blocks_reused_verbatim": true,
+    "outside_decl_inputs_monitor_consumption_spans_byte_identical": true,
+    "new_acceptance_conditions": 0,
+    "signal_bitmap_and_trace_format_unchanged": true,
+    "clock_stimulus_matrix_and_thresholds_unchanged": true,
+    "old_file_sha_after": "4C7EC8E1FB2F194FF982130439CE90375C6414FC7B1B2C8A0F2D646A518B078E"
+  },
+  "sampling_contract": {
+    "snapshot": "wire [63:0] reset_audit_snapshot={reset_audit_epoch,reset_audit_bits};",
+    "upper_32": "Original signed four-state 32-bit integer epoch bit pattern",
+    "lower_32": "Original wire [31:0] four-state signal bitmap",
+    "consumer": "Single concatenation assignment {pre_epoch,pre}=clocking.snapshot; no two-state conversion or defaulting",
+    "event": "Original named clocking event for each domain",
+    "sequence": "Record edge_ps; wait the original sole monitor #0.010; read clockvar PRE snapshot; read direct POST bits; execute all original PRE and POST gates",
+    "time_labels": "PRE=edge_ps-1 ps; POST=the original current edge+10 ps",
+    "async_boundary": "Same-time and edge-to-POST requests remain distinguished by the unchanged A records and changed-window logic"
+  },
+  "rationale": "Candidate avoids separate integer clockvar handling and same-time-slot consumption of clocking inputs. Existing compat1 records motivate this change but do not prove the candidate works in XSim 2021.1.",
+  "validation": {
+    "native_started": false,
+    "vivado_or_xsim_compile": "NOT_RUN",
+    "simulation": "NOT_RUN",
+    "new_probe_or_matrix": "NOT_RUN",
+    "checker_executed": "NOT_RUN",
+    "old_evidence_rewritten": false,
+    "whole_task_pass": false
+  },
+  "remaining_gate": "Native evidence must confirm the same original clocking skew, epoch/value alignment, all original A/T/C/Q/Z and numerical gates; static equivalence is not native acceptance."
+}
