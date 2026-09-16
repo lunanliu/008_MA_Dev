@@ -1,0 +1,21 @@
+{
+  "job_id": "OTA001",
+  "revision": "A01",
+  "state": "DISPATCHED_WAITING_CONCRETE_MANAGER_SLOT",
+  "astra_thread_id": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna_thread_id": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "manager_thread_id": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "manifest": "D:/008_MA_Dev/Sync_OTA/docs/jobs/OTA001_source_lock.json",
+  "manifest_sha256": "341d18aaef1c368a1dca728e646bf2acb235c3facc34b469f65c05b37cbb7866",
+  "job_document": "D:/008_MA_Dev/Sync_OTA/docs/jobs/OTA001_ZH.md",
+  "source_commit": "ea13956",
+  "must_not_launch_until": "Manager grant explicitly matches OTA001, this Astra/Luna pair and frozen inputs; refresh actual all-system resources",
+  "native_started": false,
+  "stages": [
+    "store",
+    "descriptor"
+  ],
+  "result_review_owner": "Astra",
+  "next_design": "Bind formal SFO context to production transport; complete CFO chain and reset/CDC before full-core project and synthesis",
+  "created_utc": "2026-09-16T21:39:20.9048649Z"
+}
