@@ -1,0 +1,14 @@
+{
+  "job_id": "OTA001",
+  "revision": "A01",
+  "state": "GRANTED_DISPATCH_SENT",
+  "grant_id": "SYNC_OTA_OTA001_A01_20260916T213951Z",
+  "grant_record": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA001_A01_RESOURCE_GRANT_20260916.json",
+  "manifest_sha256": "341D18AAEF1C368A1DCA728E646BF2ACB235C3FACC34B469F65C05B37CBB7866",
+  "first_start_not_after_utc": "2026-09-16T22:09:51.4472341Z",
+  "dispatched_utc": "2026-09-16T21:41:52.6828792Z",
+  "followup_issue": "SEALED release_frame and replay_valid same edge: enforce mutual exclusion at top or fix replay_ready in a new revision; not covered by OTA001 A01",
+  "frozen_input_changed": false,
+  "review_and_slot_return_owner": "Astra via manager",
+  "astra_state": "IDLE_WAITING_LUNA_RESULT"
+}

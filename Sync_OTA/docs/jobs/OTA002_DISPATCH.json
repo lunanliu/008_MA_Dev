@@ -1,0 +1,17 @@
+{
+  "job": "OTA002",
+  "revision": "A01",
+  "state": "DISPATCHED_WAITING_CONCRETE_MANAGER_SLOT",
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "manifest": "docs/jobs/OTA002_source_lock.json",
+  "manifest_sha256": "f0655da779236dc40026c06e9b63b0a6f8e0b0769447321a0883dd2b1ae4ef95",
+  "stages": [
+    "context",
+    "backend74",
+    "cfo_control"
+  ],
+  "native_started": false,
+  "old_OTA001_grant_reusable": false,
+  "created_utc": "2026-09-16T22:10:16.2557671Z"
+}

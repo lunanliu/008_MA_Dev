@@ -1,0 +1,52 @@
+[
+  {
+    "source": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\hdl\\xpm_cdc.sv",
+    "target": "rtl\\vendor\\xpm\\xpm_cdc.sv",
+    "sha256": "d08434ed5a310c44c13936d6eda5381d64ff0f627a335368c85826a30e8adaa7"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\Sync_CFO\\sim\\vendor\\link010r1\\xpm_cdc.sv",
+    "target": "sim\\vendor\\link010r1\\xpm_cdc.sv",
+    "sha256": "d08434ed5a310c44c13936d6eda5381d64ff0f627a335368c85826a30e8adaa7"
+  },
+  {
+    "source": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_memory\\hdl\\xpm_memory.sv",
+    "target": "rtl\\vendor\\xpm\\xpm_memory.sv",
+    "sha256": "e72758e6794b1f7ad00428feeeacc4f90a38b0500583b2ca93ca2eba12ba01bd"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\Sync_CFO\\sim\\vendor\\link010r1\\xpm_memory.sv",
+    "target": "sim\\vendor\\link010r1\\xpm_memory.sv",
+    "sha256": "e72758e6794b1f7ad00428feeeacc4f90a38b0500583b2ca93ca2eba12ba01bd"
+  },
+  {
+    "source": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\hdl\\xpm_fifo.sv",
+    "target": "rtl\\vendor\\xpm\\xpm_fifo.sv",
+    "sha256": "d3c1e861cddf00ebc82552c464a46fb5228e68b4d458001d064b99e04134b9d4"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\Sync_CFO\\sim\\vendor\\link010r1\\xpm_fifo.sv",
+    "target": "sim\\vendor\\link010r1\\xpm_fifo.sv",
+    "sha256": "22f40e9f1de08436a6e15808a959d8bbf22916bee3de95ed7d3991bd0c19ff5c"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\Sync_CFO\\sim\\vectors\\link010_input.mem",
+    "target": "sim\\data\\link010_input.mem",
+    "sha256": "e5ca2615936d55ee5c2d1584c53fb5861b94a2e2d860bda9f15891d990d9c717"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\Sync_CFO\\sim\\vectors\\link010_read.mem",
+    "target": "sim\\data\\link010_read.mem",
+    "sha256": "05fc963ec139700d63526a6c52f21a056f37725cd73797bd789b5cd92e523c3e"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\Sync_CFO\\sim\\vectors\\link010_result.mem",
+    "target": "sim\\data\\link010_result.mem",
+    "sha256": "465a9fe45b1e514f0ee5190a57b2552a678697d016dc4df0d51b912abcd57e05"
+  },
+  {
+    "source": "D:\\008_MA_Dev\\Sync_CFO\\tools\\verify_link010r1_models.py",
+    "target": "tools\\verify_link010r1_models.py",
+    "sha256": "c5fd9b54075c918fcd60cfb04cd8c7c9feb3dbb596532367f529ce7cdae6ed58"
+  }
+]

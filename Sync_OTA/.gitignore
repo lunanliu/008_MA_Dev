@@ -1,0 +1,10 @@
+/work/
+/.Xil/
+/Sync_OTA.cache/
+/Sync_OTA.gen/
+/Sync_OTA.hw/
+/Sync_OTA.ip_user_files/
+/Sync_OTA.runs/
+/Sync_OTA.sim/
+*.jou
+*.log

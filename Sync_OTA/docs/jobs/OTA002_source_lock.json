@@ -1,0 +1,302 @@
+{
+  "job": "OTA002",
+  "revision": "A01",
+  "created_utc": "2026-09-16T22:08:39.283561+00:00",
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "stages": [
+    "context",
+    "backend74",
+    "cfo_control"
+  ],
+  "files": [
+    {
+      "path": "rtl/control/ota_sfo_context_join.sv",
+      "bytes": 2193,
+      "sha256": "0c3755959e92bfaf482181d4ff747e4a173aa84a1c8b85d22d87e3cf7aa2a4d5"
+    },
+    {
+      "path": "rtl/common/ota_async_fifo.sv",
+      "bytes": 2869,
+      "sha256": "2517eb89e59e389f77bfb62710b912efbe9f231c3821189b097e85edbee1f1b8"
+    },
+    {
+      "path": "rtl/sfo/first_resampling/sfo_first_pass_descriptor.sv",
+      "bytes": 8241,
+      "sha256": "08db58888997d797a083ed760c4fe2cfbc0903afd622a84639103d43828c7356"
+    },
+    {
+      "path": "rtl/sfo/second_resampling/sfo_second_pass_descriptor.sv",
+      "bytes": 8308,
+      "sha256": "c29c6806c482e853f893b829d12c6e94d9338a17fc95143de6d445d9c3adb780"
+    },
+    {
+      "path": "rtl/cfo/ota_cfo_chain.sv",
+      "bytes": 12849,
+      "sha256": "b5c4d2d5c7a16ca3ba453f9a18149d2cfdfdba4ac5d17f63cfde94cbe170046b"
+    },
+    {
+      "path": "rtl/buffer/ota_frame_store.sv",
+      "bytes": 4667,
+      "sha256": "c22e73b80b6e1a9b495e72186baf5bc809375c3370ff14db088b49ba47bf56a8"
+    },
+    {
+      "path": "rtl/cfo/cfo_estimator_link_v2.sv",
+      "bytes": 9841,
+      "sha256": "7878ce644410d8362dea13154100a8d6db7fea8e48e1a0f94372251d6e599014"
+    },
+    {
+      "path": "rtl/cfo/cfo_estimate74_backend.sv",
+      "bytes": 4110,
+      "sha256": "11ced857047e438c8375c70e5d952ea54ea14cff533c5cd4b4560bcf684aea5a"
+    },
+    {
+      "path": "rtl/cfo/cfo_fft74_quality_v2.sv",
+      "bytes": 9279,
+      "sha256": "84b39001f074dfb2c08951221a5e801a02457ee7826c7813229f2478068ee3af"
+    },
+    {
+      "path": "rtl/cfo/cfo_divide_rne64wide.sv",
+      "bytes": 1828,
+      "sha256": "7f414b65ce687c9724f580848c996542d0ba3360eb7539ab1281835fd35d0d37"
+    },
+    {
+      "path": "rtl/cfo/cfo_fft256_core.sv",
+      "bytes": 6099,
+      "sha256": "56a957f34a07ef28041c539d319b24c59fca95d55be16d202c60abeabf501d1d"
+    },
+    {
+      "path": "rtl/cfo/cfo_phase74_core_v2.sv",
+      "bytes": 9546,
+      "sha256": "70115d741effaddffa8e1c69767057638cab6f28dbb9fa6bad7c36e40a760028"
+    },
+    {
+      "path": "rtl/cfo/cfo_divide_rne64.sv",
+      "bytes": 1783,
+      "sha256": "3fcce6e2792c706e3f77e7e80d67cda6a5da1b1a6261fe31e643f640957f17ee"
+    },
+    {
+      "path": "rtl/cfo/cfo_rotate4.sv",
+      "bytes": 4264,
+      "sha256": "77cc206f82bcbb0b09583334e14ef7c35fc5aced1562df383b91e80f5aabf916"
+    },
+    {
+      "path": "rtl/cfo/cfo_coordinate_control.sv",
+      "bytes": 5564,
+      "sha256": "398ddef7c34289369e8ddfc345acb49cc22aea0819db83ac4e001b1a7ae414b2"
+    },
+    {
+      "path": "rtl/cfo/cfo_front2048_window.sv",
+      "bytes": 6043,
+      "sha256": "8472c3b80d6e188654c31b52cc5b1553c654102c6b83efecf5a606ea45198165"
+    },
+    {
+      "path": "rtl/cfo/cfo_fft2048_core.sv",
+      "bytes": 9177,
+      "sha256": "67b402a1025e53a9691e94a1720968955186c2dacf4c00ce8409cc28532702db"
+    },
+    {
+      "path": "sim/tb/ota_context_boundary_tb.sv",
+      "bytes": 5220,
+      "sha256": "65979a957fac4d807dfd6d3a081af45f31b4c95409d7b11b18b68c931ca97fce"
+    },
+    {
+      "path": "sim/tb/ota_backend74_tb.sv",
+      "bytes": 3896,
+      "sha256": "d78c6aed48e0960c5f4f8431fd492e49f5314abe9c532ed378284cf432d5da2e"
+    },
+    {
+      "path": "sim/tb/ota_cfo_control_tb.sv",
+      "bytes": 2916,
+      "sha256": "4a516ec5ee39b2804baf183b16a36e0a78c7cdfd69eb408555b345dff227f4ff"
+    },
+    {
+      "path": "rtl/vendor/xpm/xpm_cdc.sv",
+      "bytes": 64836,
+      "sha256": "d08434ed5a310c44c13936d6eda5381d64ff0f627a335368c85826a30e8adaa7"
+    },
+    {
+      "path": "rtl/vendor/xpm/xpm_memory.sv",
+      "bytes": 486058,
+      "sha256": "e72758e6794b1f7ad00428feeeacc4f90a38b0500583b2ca93ca2eba12ba01bd"
+    },
+    {
+      "path": "rtl/vendor/xpm/xpm_fifo.sv",
+      "bytes": 230951,
+      "sha256": "d3c1e861cddf00ebc82552c464a46fb5228e68b4d458001d064b99e04134b9d4"
+    },
+    {
+      "path": "sim/vendor/link010r1/xpm_cdc.sv",
+      "bytes": 64836,
+      "sha256": "d08434ed5a310c44c13936d6eda5381d64ff0f627a335368c85826a30e8adaa7"
+    },
+    {
+      "path": "sim/vendor/link010r1/xpm_memory.sv",
+      "bytes": 486058,
+      "sha256": "e72758e6794b1f7ad00428feeeacc4f90a38b0500583b2ca93ca2eba12ba01bd"
+    },
+    {
+      "path": "sim/vendor/link010r1/xpm_fifo.sv",
+      "bytes": 230974,
+      "sha256": "22f40e9f1de08436a6e15808a959d8bbf22916bee3de95ed7d3991bd0c19ff5c"
+    },
+    {
+      "path": "ip/cfo/cfo_rot_lut.mem",
+      "bytes": 10240,
+      "sha256": "72b5cd0673ef0011ccebf8cb4cd89f5406360330e5de8bd0fd62b706cf6fc5fe"
+    },
+    {
+      "path": "ip/cfo/fft2048_twiddle.mem",
+      "bytes": 11264,
+      "sha256": "9a1c8a4363f3b0e7513b8a52ca70b6462a09a3bdfa2a232159d781c57816a276"
+    },
+    {
+      "path": "ip/cfo/front2048_coefficient_index.mem",
+      "bytes": 182040,
+      "sha256": "d058acdae6cdd2628304fcd73f5579e2c62833bf00d16d0291187b39201d78d4"
+    },
+    {
+      "path": "ip/cfo/front2048_coefficient_table.mem",
+      "bytes": 88,
+      "sha256": "ca93ff648c57459891ed7489d38c5f312a2d6969f6f4901130903d16f6403387"
+    },
+    {
+      "path": "ip/cfo/fft256_twiddle.mem",
+      "bytes": 1408,
+      "sha256": "aa8802ba8c2f38bddb2350114029bc58e7a58e8d49c746f26246691ee913a93d"
+    },
+    {
+      "path": "ip/cfo/phase74_atan_q31.mem",
+      "bytes": 240,
+      "sha256": "b058188d4642c069c4dec0028a240e3329fc228b962a3280b45a5b3d98c9f22c"
+    },
+    {
+      "path": "sim/data/link010_input.mem",
+      "bytes": 13912,
+      "sha256": "e5ca2615936d55ee5c2d1584c53fb5861b94a2e2d860bda9f15891d990d9c717"
+    },
+    {
+      "path": "sim/data/link010_read.mem",
+      "bytes": 13320,
+      "sha256": "05fc963ec139700d63526a6c52f21a056f37725cd73797bd789b5cd92e523c3e"
+    },
+    {
+      "path": "sim/data/link010_result.mem",
+      "bytes": 540,
+      "sha256": "465a9fe45b1e514f0ee5190a57b2552a678697d016dc4df0d51b912abcd57e05"
+    },
+    {
+      "path": "tools/vivado/run_ota002.tcl",
+      "bytes": 5068,
+      "sha256": "e85892935927f9dbacf2885b7bcb2af4557a98fdcc641a329994631346fbfed1"
+    },
+    {
+      "path": "tools/vivado/run_threads.tcl",
+      "bytes": 277,
+      "sha256": "68fa434e3bdd884b34922b7eafb1af6787205d7542f7e38bad73e81f140e189e"
+    },
+    {
+      "path": "tools/verify_ota002_binding.py",
+      "bytes": 1659,
+      "sha256": "c480d8fea6ff0a760c0de900c233a3d8d5288938c61e56197d929e5b83459f84"
+    },
+    {
+      "path": "tools/verify_link010r1_models.py",
+      "bytes": 1858,
+      "sha256": "c5fd9b54075c918fcd60cfb04cd8c7c9feb3dbb596532367f529ce7cdae6ed58"
+    },
+    {
+      "path": "docs/jobs/OTA002_ZH.md",
+      "bytes": 5748,
+      "sha256": "27f70fa99227a6c1fc26a7b5ead40163c759af537b572118c3c73d67935078d2"
+    },
+    {
+      "path": "docs/provenance/OTA002_REUSED_INPUTS.json",
+      "bytes": 2271,
+      "sha256": "1905756aa872c175782b47088b8a87bd4fdada671b6b83463ff4fe5c71095b58"
+    }
+  ],
+  "static_syntax": [
+    {
+      "path": "rtl/control/ota_sfo_context_join.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/common/ota_async_fifo.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/sfo/first_resampling/sfo_first_pass_descriptor.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/sfo/second_resampling/sfo_second_pass_descriptor.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/ota_cfo_chain.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/buffer/ota_frame_store.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_estimator_link_v2.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_estimate74_backend.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_fft74_quality_v2.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_divide_rne64wide.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_fft256_core.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_phase74_core_v2.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_divide_rne64.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_rotate4.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_coordinate_control.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_front2048_window.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "rtl/cfo/cfo_fft2048_core.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "sim/tb/ota_context_boundary_tb.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "sim/tb/ota_backend74_tb.sv",
+      "static_syntax_exit": 0
+    },
+    {
+      "path": "sim/tb/ota_cfo_control_tb.sv",
+      "static_syntax_exit": 0
+    }
+  ],
+  "scope": "Only the three directed jobs. No full OTA qualification or synthesis."
+}

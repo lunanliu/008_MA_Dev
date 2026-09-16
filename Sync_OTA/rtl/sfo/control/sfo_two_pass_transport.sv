@@ -2,6 +2,7 @@
 // The estimator boundary ports are connected to real T06/T09 in t10_two_pass_system.
 // Short tests drive these same ports with explicitly labelled saved estimate records.
 module sfo_two_pass_transport #(
+    parameter integer REQUIRE_CONTEXT_ACK = 0,
     parameter integer NOMINAL_SAMPLES = 1336320,
     RAW_DEPTH = 393216,
     BANK_DEPTH = 335872,
@@ -10,6 +11,13 @@ module sfo_two_pass_transport #(
     // Legacy callers retain125; the frozen T10-to-CFO candidate selects150 explicitly.
     parameter integer OUTPUT_CLOCK_MHZ = 125
 ) (
+    // Formal successful descriptor launches, clk150. No debug-derived configuration.
+    output wire first_context_valid,
+    input wire first_context_ready,
+    output wire [223:0] first_context_record,
+    output wire second_context_valid,
+    input wire second_context_ready,
+    output wire [223:0] second_context_record,
     input  logic         clk125,
     input  logic         clk150,
     input  logic         reset_request,
@@ -363,9 +371,18 @@ module sfo_two_pass_transport #(
   );
   assign raw_m_ready = e1sr;
   sfo_first_resampler #(
+      .REQUIRE_CONTEXT_ACK(REQUIRE_CONTEXT_ACK),
       .NOMINAL_SAMPLES(NOMINAL_SAMPLES),
       .PROCESSING_LIMIT_CYCLES(PROCESSING_LIMIT_CYCLES)
   ) first_resampling (
+      .context_valid(first_context_valid),
+      .context_ready(first_context_ready),
+      .context_frame(first_context_record[223:192]),
+      .context_generation(first_context_record[191:160]),
+      .context_step_q28(first_context_record[159:128]),
+      .context_phase(first_context_record[127:64]),
+      .context_raw_first(first_context_record[63:32]),
+      .context_nominal_first(first_context_record[31:0]),
       .clk                    (clk150),
       .rst                    (rst150),
       .abort_request          (halted150),
@@ -510,9 +527,18 @@ module sfo_two_pass_transport #(
       (match_res0 ^ match_res1) && bestready[res_bank];
   assign resr = e2cv && e2cr;
   sfo_second_resampler #(
+      .REQUIRE_CONTEXT_ACK(REQUIRE_CONTEXT_ACK),
       .NOMINAL_SAMPLES(NOMINAL_SAMPLES),
       .PROCESSING_LIMIT_CYCLES(PROCESSING_LIMIT_CYCLES)
   ) second_resampling (
+      .context_valid(second_context_valid),
+      .context_ready(second_context_ready),
+      .context_frame(second_context_record[223:192]),
+      .context_generation(second_context_record[191:160]),
+      .context_step_q28(second_context_record[159:128]),
+      .context_phase(second_context_record[127:64]),
+      .context_raw_first(second_context_record[63:32]),
+      .context_nominal_first(second_context_record[31:0]),
       .clk                  (clk150),
       .rst                  (rst150),
       .abort_request        (halted150),

@@ -18,11 +18,11 @@ module ota_sfo_context_join (
  logic [31:0] frame_id,generation,step1;
  logic signed [31:0] coarse_hz;
  logic signed [53:0] origin;
- wire first_match=first_frame==frame_id&&first_generation==generation&&first_step_q28!=0;
- wire second_match=second_frame==frame_id&&second_generation==generation&&second_step_q28!=0;
+ wire first_identity_matches=first_frame==frame_id&&first_generation==generation&&first_step_q28!=0;
+ wire second_identity_matches=second_frame==frame_id&&second_generation==generation&&second_step_q28!=0;
  assign meta_ready=!rst&&!cancel&&error_code==0&&!have_meta;
- assign first_ready=!rst&&!cancel&&error_code==0&&have_meta&&!have_first&&first_match;
- assign m_valid=!rst&&!cancel&&error_code==0&&have_meta&&have_first&&second_valid&&second_match;
+ assign first_ready=!rst&&!cancel&&error_code==0&&have_meta&&!have_first&&first_identity_matches;
+ assign m_valid=!rst&&!cancel&&error_code==0&&have_meta&&have_first&&second_valid&&second_identity_matches;
  assign second_ready=m_valid&&m_ready;
  assign m_context={frame_id,generation,step1,second_step_q28,origin,coarse_hz};
  always_ff @(posedge clk)begin
@@ -33,10 +33,11 @@ module ota_sfo_context_join (
     have_meta<=1;frame_id<=meta_frame;generation<=meta_generation;
     coarse_hz<=meta_coarse_hz_q8;origin<=meta_raw_origin_q28;
    end
-   if(first_valid&&have_meta&&!have_first&&!first_match)error_code<=8'h41;
-   if(second_valid&&have_meta&&have_first&&!second_match)error_code<=8'h42;
+   if(first_valid&&have_meta&&!have_first&&!first_identity_matches)error_code<=8'h41;
+   if(second_valid&&have_meta&&have_first&&!second_identity_matches)error_code<=8'h42;
    if(first_valid&&first_ready)begin have_first<=1;step1<=first_step_q28;end
    if(m_valid&&m_ready)begin have_meta<=0;have_first<=0;end
   end
  end
 endmodule
+

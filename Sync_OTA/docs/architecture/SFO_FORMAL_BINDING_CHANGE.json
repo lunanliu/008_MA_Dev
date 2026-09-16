@@ -1,0 +1,12 @@
+[
+  {
+    "path": "rtl\\sfo\\control\\sfo_two_pass_transport.sv",
+    "before_sha256": "c81c3764bb0ebb97b6333e0ed4ed06c6b0a9d37a1f98655ead9c16473c0527d4",
+    "after_sha256": "a9e20eef14d2a3b99c367405a1975ca38fa61602a861f5f17c880e3d9a2ca512"
+  },
+  {
+    "path": "rtl\\sfo\\control\\sync_sfo_top.sv",
+    "before_sha256": "a24b1ccedeb38e5e8e001402c3a1fd38edfba5e7bce007a00d5037597980003f",
+    "after_sha256": "3de2e4de9b836e77fb1de9c7db02ced114d8939779a94f54b067f1e354d28641"
+  }
+]

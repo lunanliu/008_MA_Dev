@@ -3,8 +3,17 @@
 // full-size R0/R1/output memories and explicit 125/150/500 MHz boundaries.
 // Select150 explicitly for the T10-to-CFO output profile; IQ sample rate remains500MS/s.
 module sync_sfo_top #(
+    parameter integer REQUIRE_CONTEXT_ACK = 0,
+    parameter integer PROCESSING_LIMIT_CYCLES = 400896,
     parameter integer OUTPUT_CLOCK_MHZ = 150
 ) (
+    // Formal successful descriptor launches, clk150. No debug-derived configuration.
+    output wire first_context_valid,
+    input wire first_context_ready,
+    output wire [223:0] first_context_record,
+    output wire second_context_valid,
+    input wire second_context_ready,
+    output wire [223:0] second_context_record,
     input  logic                                               clk125,
     input  logic                                               clk150,
     input  logic                                               clk500,
@@ -197,8 +206,12 @@ module sync_sfo_top #(
       .busy              (qbusy)
   );
   sfo_two_pass_transport #(
+      .REQUIRE_CONTEXT_ACK(REQUIRE_CONTEXT_ACK),
+      .PROCESSING_LIMIT_CYCLES(PROCESSING_LIMIT_CYCLES),
       .OUTPUT_CLOCK_MHZ(OUTPUT_CLOCK_MHZ)
   ) two_pass_transport (
+      .first_context_valid(first_context_valid),.first_context_ready(first_context_ready),.first_context_record(first_context_record),
+      .second_context_valid(second_context_valid),.second_context_ready(second_context_ready),.second_context_record(second_context_record),
       .clk125                (clk125),
       .clk150                (clk150),
       .reset_request         (reset_request),

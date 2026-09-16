@@ -1,0 +1,125 @@
+{
+  "job": "OTA001",
+  "revision": "A01",
+  "review_utc": "2026-09-16T21:48:05.132707+00:00",
+  "manifest_sha256": "341d18aaef1c368a1dca728e646bf2acb235c3facc34b469f65c05b37cbb7866",
+  "frozen_inputs_verified": 8,
+  "stages": [
+    {
+      "stage": "store",
+      "status": "PASS",
+      "native_log": "work\\OTA001\\store_a01\\native.log",
+      "native_log_sha256": "b37959ee85c90db1470867428957f48deb0e5928d694a1851d9f0aea313100e8",
+      "xpr_sha256": "68e9c8d3a1e8989b6aeea9c577e25257389f39f864d44e3b2f08e57fd2554095",
+      "result_sha256": "a00acd67968ac35bc5cfcd5b2ebf8d86f5b37c0889652f5dfa959f5c2032ee89",
+      "actual_sources_sha256": "b07881e2a39f7aea2c25bd5e0fa5405a04e408a427c4167e52fb18d6c2dda52d",
+      "simulation_finish": "1456 ns : File \"D:/008_MA_Dev/Sync_OTA/sim/tb/ota_frame_store_tb.sv\" Line 90",
+      "warnings": [
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) synth_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality."
+      ],
+      "nested_log_hashes": [
+        {
+          "path": "work\\OTA001\\store_a01\\project\\OTA001_store.sim\\sim_1\\behav\\xsim\\compile.log",
+          "sha256": "65f5d36b7a0b414a11c48d503661f73a3be1ee274f65d323ed334f075f829b89"
+        },
+        {
+          "path": "work\\OTA001\\store_a01\\project\\OTA001_store.sim\\sim_1\\behav\\xsim\\elaborate.log",
+          "sha256": "0d0d52f79a49967e91745e370cb7daaddf4181e8fd54113a39c19d28648b1fb3"
+        },
+        {
+          "path": "work\\OTA001\\store_a01\\project\\OTA001_store.sim\\sim_1\\behav\\xsim\\simulate.log",
+          "sha256": "7aab583c73abf06b7b53eac05f37fb01c3361add105dc8084104bfa4d4e01f65"
+        },
+        {
+          "path": "work\\OTA001\\store_a01\\project\\OTA001_store.sim\\sim_1\\behav\\xsim\\webtalk.log",
+          "sha256": "08a6eaa004a2b300a96f0d5159da6739fb2f1d491f3d05a7bb089684ec7eab34"
+        },
+        {
+          "path": "work\\OTA001\\store_a01\\project\\OTA001_store.sim\\sim_1\\behav\\xsim\\webtalk_34876.backup.log",
+          "sha256": "07f00ca40565ed2b5d8472aafc4a77b522b1fd65ec01753afb8c7b523c92b09a"
+        },
+        {
+          "path": "work\\OTA001\\store_a01\\project\\OTA001_store.sim\\sim_1\\behav\\xsim\\xvlog.log",
+          "sha256": "65f5d36b7a0b414a11c48d503661f73a3be1ee274f65d323ed334f075f829b89"
+        },
+        {
+          "path": "work\\OTA001\\store_a01\\project\\OTA001_store.sim\\sim_1\\behav\\xsim\\xsim.dir\\ota_frame_store_tb_behav\\xsimcrash.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "work\\OTA001\\store_a01\\project\\OTA001_store.sim\\sim_1\\behav\\xsim\\xsim.dir\\ota_frame_store_tb_behav\\xsimkernel.log",
+          "sha256": "5a443c7d99bec7bd05994f378a7ce185a1faab800e5f001c2eb47fa4074bd5e3"
+        }
+      ]
+    },
+    {
+      "stage": "descriptor",
+      "status": "PASS_WITH_TB_WARNING",
+      "native_log": "work\\OTA001\\descriptor_a01\\native.log",
+      "native_log_sha256": "f3c79aaf418f681a565fadd401e117bcc01fba37eb8a96788109e3f6c9d0b149",
+      "xpr_sha256": "d6ffaba34d725ff63ea3094c27beaeea3632324edcaf7605e2605fb815866cda",
+      "result_sha256": "68713361f3b4884b68f3da8d6b01b98c32de6b8a6fbeb43473a8e5dcd9c51c93",
+      "actual_sources_sha256": "2b41ff97b027cf29d8034e7b9745797e74be15e3448047f6c15951bb3ccbb062",
+      "simulation_finish": "312 ns : File \"D:/008_MA_Dev/Sync_OTA/sim/tb/ota_frontend_descriptor_tb.sv\" Line 38",
+      "warnings": [
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) synth_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.",
+        "WARNING: [VRFC 10-2659] decimal constant 20000000000 is too large, should be smaller than 2147483648; using -1474836480 instead [D:/008_MA_Dev/Sync_OTA/sim/tb/ota_frontend_descriptor_tb.sv:35]"
+      ],
+      "nested_log_hashes": [
+        {
+          "path": "work\\OTA001\\descriptor_a01\\project\\OTA001_descriptor.sim\\sim_1\\behav\\xsim\\compile.log",
+          "sha256": "a0caeefa7594d94e1095ae33dda49615eb343d5c40c6e87b2c865ddd451f012e"
+        },
+        {
+          "path": "work\\OTA001\\descriptor_a01\\project\\OTA001_descriptor.sim\\sim_1\\behav\\xsim\\elaborate.log",
+          "sha256": "6d2b6eeca21f86fa88a8d503172e12614f4155b8ba97a795c66d6c0249b2ad55"
+        },
+        {
+          "path": "work\\OTA001\\descriptor_a01\\project\\OTA001_descriptor.sim\\sim_1\\behav\\xsim\\simulate.log",
+          "sha256": "afb3de108d298f271959026d23f3aec574d15f93f499bf1dca26f64bd3edd480"
+        },
+        {
+          "path": "work\\OTA001\\descriptor_a01\\project\\OTA001_descriptor.sim\\sim_1\\behav\\xsim\\webtalk.log",
+          "sha256": "aeab705984cf260b0eb04a4f198f211f26ac356ec3b6461e4b4513abea9577b3"
+        },
+        {
+          "path": "work\\OTA001\\descriptor_a01\\project\\OTA001_descriptor.sim\\sim_1\\behav\\xsim\\webtalk_33736.backup.log",
+          "sha256": "ac97d34539d658fb3df9e9f4328fd779c8082572a471be5f1235364fa77fd058"
+        },
+        {
+          "path": "work\\OTA001\\descriptor_a01\\project\\OTA001_descriptor.sim\\sim_1\\behav\\xsim\\xvlog.log",
+          "sha256": "a0caeefa7594d94e1095ae33dda49615eb343d5c40c6e87b2c865ddd451f012e"
+        },
+        {
+          "path": "work\\OTA001\\descriptor_a01\\project\\OTA001_descriptor.sim\\sim_1\\behav\\xsim\\xsim.dir\\ota_frontend_descriptor_tb_behav\\xsimcrash.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "work\\OTA001\\descriptor_a01\\project\\OTA001_descriptor.sim\\sim_1\\behav\\xsim\\xsim.dir\\ota_frontend_descriptor_tb_behav\\xsimkernel.log",
+          "sha256": "6ea2882ad13e397db8d8dd00a1c0c54ae6efd04553f0302bda19cc45fde3b88d"
+        }
+      ]
+    }
+  ],
+  "scope": "Frozen directed component checks only. No synthesis, full CFO origin proof, integration or DDR throughput qualification.",
+  "process_closure": "Luna reports normal zero exits and stage cleanup scans. Independent current process snapshot recorded separately; memory log peak is not aggregate whole-tree peak.",
+  "deferred_issue": "SEALED release_frame/replay_valid mutual exclusion; do not claim covered."
+}
