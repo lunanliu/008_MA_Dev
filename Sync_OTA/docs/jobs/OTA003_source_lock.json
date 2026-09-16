@@ -1,0 +1,154 @@
+{
+  "job": "OTA003",
+  "revision": "A01",
+  "created_utc": "2026-09-16T23:24:49.846914+00:00",
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "stages": [
+    "bridge",
+    "capture",
+    "dual_rotation"
+  ],
+  "files": [
+    {
+      "path": "rtl/buffer/ota_ddr_bridge.sv",
+      "bytes": 4552,
+      "sha256": "a4cd6f6b5b0ec320098408ee7b7748c4cb7f9c580b0934a314c07e69fffbf9b9"
+    },
+    {
+      "path": "rtl/common/ota_async_fifo.sv",
+      "bytes": 2869,
+      "sha256": "2517eb89e59e389f77bfb62710b912efbe9f231c3821189b097e85edbee1f1b8"
+    },
+    {
+      "path": "rtl/control/ota_capture_controller.sv",
+      "bytes": 9589,
+      "sha256": "b0015b1ab87c1d084e1189aead3837e78c19d05c92657d6bf9614682d1b404ce"
+    },
+    {
+      "path": "rtl/buffer/ota_frame_store.sv",
+      "bytes": 4667,
+      "sha256": "c22e73b80b6e1a9b495e72186baf5bc809375c3370ff14db088b49ba47bf56a8"
+    },
+    {
+      "path": "rtl/control/ota_frontend_descriptor.sv",
+      "bytes": 2839,
+      "sha256": "c7a7e244d18c4a108bb3755d164480ab2f4af80d5ccbc87c86da0e3adfba19ad"
+    },
+    {
+      "path": "rtl/cfo/cfo_coordinate_control.sv",
+      "bytes": 5564,
+      "sha256": "398ddef7c34289369e8ddfc345acb49cc22aea0819db83ac4e001b1a7ae414b2"
+    },
+    {
+      "path": "rtl/cfo/cfo_rotate4.sv",
+      "bytes": 4264,
+      "sha256": "77cc206f82bcbb0b09583334e14ef7c35fc5aced1562df383b91e80f5aabf916"
+    },
+    {
+      "path": "ip/cfo/cfo_rot_lut.mem",
+      "bytes": 10240,
+      "sha256": "72b5cd0673ef0011ccebf8cb4cd89f5406360330e5de8bd0fd62b706cf6fc5fe"
+    },
+    {
+      "path": "sim/tb/ota_ddr_bridge_tb.sv",
+      "bytes": 4377,
+      "sha256": "a68911037a13595dd5be141696a936b1193e37cef6e4020bc3933928ee9c388a"
+    },
+    {
+      "path": "sim/tb/ota_capture_controller_tb.sv",
+      "bytes": 7418,
+      "sha256": "5f1a30df0fd316d0f34ce9245a17e690aeee1a288910ef4fc8a1007cde1c4625"
+    },
+    {
+      "path": "sim/tb/ota_dual_rotation_tb.sv",
+      "bytes": 3951,
+      "sha256": "e0db9c0a6e8a74aeabb6ad19439bc3e227cea5ad79a1b212221b148f3742cede"
+    },
+    {
+      "path": "sim/data/ota_dual_input.mem",
+      "bytes": 43520,
+      "sha256": "ea3c16d170cf4f0b35342f0d7659ed9826b32b829bd7d1016e000ea05bf7fe8c"
+    },
+    {
+      "path": "sim/data/ota_dual_coarse.mem",
+      "bytes": 43520,
+      "sha256": "2588d37089c4e348583191ac78eb6015ad0ddaa27865576609794e6d1935765f"
+    },
+    {
+      "path": "sim/data/ota_dual_final.mem",
+      "bytes": 43520,
+      "sha256": "89c74b2a3507efa89a8cc31eb317609303106fe3836cb42df2a53f63b93d5a3e"
+    },
+    {
+      "path": "sim/data/ota_dual_config.svh",
+      "bytes": 266,
+      "sha256": "6370761cd03c90b22a2f3883cbe415a04164af0aab9a0492ba66cfba1358b570"
+    },
+    {
+      "path": "tools/vivado/run_ota003.tcl",
+      "bytes": 4867,
+      "sha256": "7bb63c6a99f71fe8e94921678bec7ec85cf86ec2eb08b98c4447a4ba898ae3c5"
+    },
+    {
+      "path": "tools/vivado/run_threads.tcl",
+      "bytes": 277,
+      "sha256": "68fa434e3bdd884b34922b7eafb1af6787205d7542f7e38bad73e81f140e189e"
+    },
+    {
+      "path": "tools/verify_xpm_binding.py",
+      "bytes": 1896,
+      "sha256": "5e345096bd957f7f618218656055ecc070d92ad27c321b99a04aa2f20fc123b6"
+    },
+    {
+      "path": "tools/monitor_native_job.ps1",
+      "bytes": 7212,
+      "sha256": "24e9526e4c323360b05b81fcd7de06735124536d910dbc39cdc9018eafc74d5d"
+    },
+    {
+      "path": "tools/generate_dual_fragment.py",
+      "bytes": 2479,
+      "sha256": "c73af7ea5f41a16822fae576dc2fdb170eb65fb1084e6b5caa862a8139431c67"
+    },
+    {
+      "path": "docs/provenance/OTA_DUAL_FRAGMENT.json",
+      "bytes": 797,
+      "sha256": "6cf1dc003055d029f09b60089d6990f75bc48403fb80a7c79679b305923431b3"
+    },
+    {
+      "path": "docs/jobs/OTA003_ZH.md",
+      "bytes": 5441,
+      "sha256": "48c365b02af001af9ac32a1ed457ddb26dca9f3c75456bbfd14ba39530e3eadf"
+    },
+    {
+      "path": "rtl/vendor/xpm/xpm_cdc.sv",
+      "bytes": 64836,
+      "sha256": "d08434ed5a310c44c13936d6eda5381d64ff0f627a335368c85826a30e8adaa7"
+    },
+    {
+      "path": "rtl/vendor/xpm/xpm_memory.sv",
+      "bytes": 486058,
+      "sha256": "e72758e6794b1f7ad00428feeeacc4f90a38b0500583b2ca93ca2eba12ba01bd"
+    },
+    {
+      "path": "rtl/vendor/xpm/xpm_fifo.sv",
+      "bytes": 230951,
+      "sha256": "d3c1e861cddf00ebc82552c464a46fb5228e68b4d458001d064b99e04134b9d4"
+    },
+    {
+      "path": "sim/vendor/link010r1/xpm_cdc.sv",
+      "bytes": 64836,
+      "sha256": "d08434ed5a310c44c13936d6eda5381d64ff0f627a335368c85826a30e8adaa7"
+    },
+    {
+      "path": "sim/vendor/link010r1/xpm_memory.sv",
+      "bytes": 486058,
+      "sha256": "e72758e6794b1f7ad00428feeeacc4f90a38b0500583b2ca93ca2eba12ba01bd"
+    },
+    {
+      "path": "sim/vendor/link010r1/xpm_fifo.sv",
+      "bytes": 230974,
+      "sha256": "22f40e9f1de08436a6e15808a959d8bbf22916bee3de95ed7d3991bd0c19ff5c"
+    }
+  ]
+}

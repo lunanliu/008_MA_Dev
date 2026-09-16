@@ -1,0 +1,133 @@
+{
+  "job": "OTA002",
+  "revision": "A01",
+  "grant": "SYNC_OTA_OTA002_A01_20260916T221248Z",
+  "review_utc": "2026-09-16T23:00:40.423554+00:00",
+  "manifest_sha256": "f0655da779236dc40026c06e9b63b0a6f8e0b0769447321a0883dd2b1ae4ef95",
+  "frozen_inputs_verified": 41,
+  "stages": [
+    {
+      "stage": "context",
+      "functional_status": "PASS",
+      "process_status": "RECORDED_TREE_CLOSED",
+      "actual_source_count": 12,
+      "result_sha256": "5fff7b51fd50fd4df3d399ea43ac356d2185a0b6f9ba35dc3e3bf1c90d606ff5",
+      "actual_sources_sha256": "ace6d7b53301c69c89840a451f54a3b0c73b383f80f33d78a60957809535a5b4",
+      "binding": "INDEPENDENT_EXACT_BOUNDARY_CHECK_PASS",
+      "simulation_finish": "3146352 ps : File \"D:/008_MA_Dev/Sync_OTA/sim/tb/ota_context_boundary_tb.sv\" Line 71",
+      "logs": [
+        {
+          "path": "work/OTA002/context_a06/native.log",
+          "sha256": "72cd80674cc26f83d5296d586ee71bf9be7a57910d4ad9bd17ccaa496dbd9a22"
+        },
+        {
+          "path": "work/OTA002/context_a06/project/OTA002_context.sim/sim_1/behav/xsim/compile.log",
+          "sha256": "752541e5a126b406253e6a9caccf421d7db0841fb026932ffb5e42a4f139b72a"
+        },
+        {
+          "path": "work/OTA002/context_a06/project/OTA002_context.sim/sim_1/behav/xsim/elaborate.log",
+          "sha256": "0826e1889c2361d02c9c82cc19088942441da03216c24647df9c2b89a4ec836f"
+        },
+        {
+          "path": "work/OTA002/context_a06/project/OTA002_context.sim/sim_1/behav/xsim/simulate.log",
+          "sha256": "17c150aeede0a95231c286b94960d52abc229a8449e1d1679acb922e5dcbf2e7"
+        },
+        {
+          "path": "work/OTA002/context_a06/project/OTA002_context.sim/sim_1/behav/xsim/webtalk.log",
+          "sha256": "3a8f867d42e47d1afd83f67b1f6ead2a0bdde4f691ee6820b38e292815c8491d"
+        },
+        {
+          "path": "work/OTA002/context_a06/project/OTA002_context.sim/sim_1/behav/xsim/webtalk_33588.backup.log",
+          "sha256": "ce808a1f50db25f20d310a753bf8f67201b5603f3c7c447f4800a1b7ccd28c1f"
+        },
+        {
+          "path": "work/OTA002/context_a06/project/OTA002_context.sim/sim_1/behav/xsim/xvlog.log",
+          "sha256": "752541e5a126b406253e6a9caccf421d7db0841fb026932ffb5e42a4f139b72a"
+        }
+      ]
+    },
+    {
+      "stage": "backend74",
+      "functional_status": "PASS",
+      "process_status": "HISTORICAL_TREE_GAP_RETAINED",
+      "actual_source_count": 20,
+      "result_sha256": "be6f3b6a2e18c815894c64f0f26446a1cd9e989d11428678080dfd8f059c9291",
+      "actual_sources_sha256": "158abed373fbba04afdc80e5b4dd85a9176e85494335e8e6a809c8a86a7bac6e",
+      "binding": "INDEPENDENT_EXACT_BOUNDARY_CHECK_PASS",
+      "simulation_finish": "222440 ns : File \"D:/008_MA_Dev/Sync_OTA/sim/tb/ota_backend74_tb.sv\" Line 61",
+      "logs": [
+        {
+          "path": "work/OTA002/backend74_a01/native.log",
+          "sha256": "fc121fb25dbfd056aa487203d3af0310e4d2c0aa3db098ed36a46625370f0502"
+        },
+        {
+          "path": "work/OTA002/backend74_a01/project/OTA002_backend74.sim/sim_1/behav/xsim/compile.log",
+          "sha256": "2972baf4d920b45f97974e280ebea8f97424e0086f25997e2236ed6e350a2901"
+        },
+        {
+          "path": "work/OTA002/backend74_a01/project/OTA002_backend74.sim/sim_1/behav/xsim/elaborate.log",
+          "sha256": "8924fc9ff843e52174dbd571db0dd76cf5498b87dc215f8a06ead1c2c35a8fe2"
+        },
+        {
+          "path": "work/OTA002/backend74_a01/project/OTA002_backend74.sim/sim_1/behav/xsim/simulate.log",
+          "sha256": "6f73a68f1bdb34effa89929449f2dfaa5fcc1fc763abc1f51e21e5fa5b0748ec"
+        },
+        {
+          "path": "work/OTA002/backend74_a01/project/OTA002_backend74.sim/sim_1/behav/xsim/webtalk.log",
+          "sha256": "925a73026fe6751d873eb0fb656be8baefdf7789cedae796779331fc43c9d2d2"
+        },
+        {
+          "path": "work/OTA002/backend74_a01/project/OTA002_backend74.sim/sim_1/behav/xsim/webtalk_44964.backup.log",
+          "sha256": "438e64abdfee8952232bdaf2d4c824d81097e7939be7b1cb9926a823ade78bc7"
+        },
+        {
+          "path": "work/OTA002/backend74_a01/project/OTA002_backend74.sim/sim_1/behav/xsim/xvlog.log",
+          "sha256": "2972baf4d920b45f97974e280ebea8f97424e0086f25997e2236ed6e350a2901"
+        }
+      ]
+    },
+    {
+      "stage": "cfo_control",
+      "functional_status": "PASS",
+      "process_status": "RECORDED_TREE_CLOSED",
+      "actual_source_count": 28,
+      "result_sha256": "0d6e3608e846171a4251ca162dd0df03752758fab3ab1009bfc71428d89ae75f",
+      "actual_sources_sha256": "1abcedfcae9585c5b745acce9e6416081eda5c30d77e7f413bbff73e509b8a4c",
+      "binding": "INDEPENDENT_EXACT_BOUNDARY_CHECK_PASS",
+      "simulation_finish": "4106256 ps : File \"D:/008_MA_Dev/Sync_OTA/sim/tb/ota_cfo_control_tb.sv\" Line 49",
+      "logs": [
+        {
+          "path": "work/OTA002/cfo_control_a01/native.log",
+          "sha256": "eca7022614167f23fbef4de8c8a48d1932717c00d40441f6c1fb0ca2d5ace564"
+        },
+        {
+          "path": "work/OTA002/cfo_control_a01/project/OTA002_cfo_control.sim/sim_1/behav/xsim/compile.log",
+          "sha256": "aad684b835ece82b11da8c776501dd66606cadd3eaede8f6f98afdb361755f9d"
+        },
+        {
+          "path": "work/OTA002/cfo_control_a01/project/OTA002_cfo_control.sim/sim_1/behav/xsim/elaborate.log",
+          "sha256": "54482d2ee2bdbe3727e14ff52d95bcaadc76fef69ccc651dab4134aca7d5b432"
+        },
+        {
+          "path": "work/OTA002/cfo_control_a01/project/OTA002_cfo_control.sim/sim_1/behav/xsim/simulate.log",
+          "sha256": "98b635c6ede3269cf0fbafcae5c128dd01b85ea6e03dd49fac757a4ef9c31a27"
+        },
+        {
+          "path": "work/OTA002/cfo_control_a01/project/OTA002_cfo_control.sim/sim_1/behav/xsim/webtalk.log",
+          "sha256": "4acd2780382fc00b37687a67a00a53bbe9fe372e5ced766b33d0789b4e25ce23"
+        },
+        {
+          "path": "work/OTA002/cfo_control_a01/project/OTA002_cfo_control.sim/sim_1/behav/xsim/webtalk_25984.backup.log",
+          "sha256": "10e622e5a66360060b05cac0d260cf5c000883c517ec6a901e1065b131c621dd"
+        },
+        {
+          "path": "work/OTA002/cfo_control_a01/project/OTA002_cfo_control.sim/sim_1/behav/xsim/xvlog.log",
+          "sha256": "aad684b835ece82b11da8c776501dd66606cadd3eaede8f6f98afdb361755f9d"
+        }
+      ]
+    }
+  ],
+  "repair_review": "Tcl only changed root and verifier path. Parser handles PRJ comments/continuations. Repaired startswith checks are less strict for module suffixes; Astra independently reapplied original exact regex boundaries and all three pass. RTL/TB/input/thresholds unchanged.",
+  "process_limitation": "backend74 lacks full historical subprocess tree because monitor used PowerShell reserved PID variable. Retained, no native rerun. Current zero-tool scan is separate evidence, not proof of historical tree completeness.",
+  "scope": "Directed context/CDC and four complete 74-observation backend groups; true CFO chain elaboration plus three coarse beats/cancel. No full OTA numerical closure, synthesis, implementation, sustained throughput, NI or board claim."
+}

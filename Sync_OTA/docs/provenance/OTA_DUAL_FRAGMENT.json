@@ -1,0 +1,28 @@
+{
+  "source": "D:\\008_MA_Dev\\Sync_CFO\\sim\\vectors\\rot_case0_input.mem",
+  "sha256": "ea3c16d170cf4f0b35342f0d7659ed9826b32b829bd7d1016e000ea05bf7fe8c",
+  "samples": 5120,
+  "symbols": 2,
+  "step1": 268438140,
+  "step2": 268435188,
+  "origin_q28": 805306368,
+  "configs": [
+    {
+      "residual": false,
+      "frequency_code": -38400000,
+      "step": 1288502,
+      "phase0": 3865471
+    },
+    {
+      "residual": true,
+      "frequency_code": 8159232,
+      "step": 4294966227,
+      "phase0": 4294964088
+    }
+  ],
+  "saturations": [
+    0,
+    0
+  ],
+  "scope": "Published two-symbol IQ replay at legal post-SFO boundary; synthetic nonzero coordinate configuration exercises new composition. Not an autonomous SFO estimate or full OTA truth/EVM acceptance."
+}
