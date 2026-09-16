@@ -1,0 +1,125 @@
+{
+  "schema": "CFO_CHAIN_ALGORITHM_CONTRACT_v1",
+  "frozen_after": "RCFO003 independent selection, confirmed RCFO00490case review",
+  "processing_order": [
+    "second_SFO_output",
+    "full_frame_coarse_CFO_rotation",
+    "residual_CFO_estimation",
+    "full_frame_final_CFO_rotation"
+  ],
+  "math_sample_rate_hz": 500000000,
+  "frame_samples": 1336320,
+  "fft_length": 2048,
+  "cp_samples": 512,
+  "payload_symbols": 512,
+  "A128_window_advance": 128,
+  "first_window_sample_zero_based": 25984,
+  "pilot_observations": 74,
+  "pilot_symbol_spacing": 7,
+  "pilot_sample_spacing": 17920,
+  "pilot_subcarriers": 820,
+  "LoS_delay_assumption": "known aligned zero delay; no full delay search or LoS identity detector",
+  "coarse_descriptor": {
+    "frequency": "signed32_F8_nominal_raw_sample_Hz",
+    "step1": "unsigned_Q28",
+    "step2": "unsigned_Q28",
+    "origin": "signed_raw_samples_Q28",
+    "formula": "qRaw=origin+(step1/2^28)*(step2/2^28)*n"
+  },
+  "main_rotator": {
+    "profile": "NCO32_ROM10_C16F14",
+    "phase_bits": 32,
+    "address_bits": 10,
+    "coefficient_bits": 16,
+    "coefficient_fraction_bits": 14,
+    "complex_product": "4 real products and2 add/subtract per sample",
+    "rounding": "nearest ties to even",
+    "output": "signed I16/Q16 with15fractional bits, saturation counted",
+    "control_conversion": "exact signed rational48bit RNE then32bit RNE; no large double integer multiplication"
+  },
+  "observation_front": {
+    "fft_data_bits": 26,
+    "fft_fraction_bits": 21,
+    "input_shift": 6,
+    "fft_stage_scaling": "divide by2 each11stages, RNE/sat",
+    "twiddle_bits": 18,
+    "twiddle_fraction_bits": 17,
+    "pilot_product_bits": 28,
+    "pilot_fraction_bits": 21,
+    "pilot_sum_bits": 38
+  },
+  "estimator": {
+    "quality_fft_points": 256,
+    "quality_fft_data_bits": 20,
+    "fft_stage_scaling": "divide by2 each8stages",
+    "spectrum_min_coherence": 0.2,
+    "secondary_exclusion_bins_each_side": 4,
+    "secondary_max_power_ratio": 0.25,
+    "cordic_cartesian_bits": 40,
+    "cordic_iterations": 24,
+    "phase_angle_fraction_bits": 31,
+    "phase_units": "turns",
+    "ols_observations": 74,
+    "max_centered_phase_error_turns": 0.05,
+    "max_phase_vs_fft_difference_bins": 1,
+    "absolute_capture_guard_hz": 13000,
+    "frequency_output": "signed32_F16_Hz_on_second_SFO_nominal500MHz_grid",
+    "modes": [
+      "MAIN_PHASE",
+      "DEGRADED_FFT",
+      "INVALID"
+    ],
+    "invalid_action": "residual correction0 and valid=false; never count as success"
+  },
+  "nominal_verified": {
+    "residual_and_coarse_pairs_hz": [
+      [
+        -1000,
+        -150000
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1000,
+        150000
+      ]
+    ],
+    "waveform_snr_labels": [
+      "10dB",
+      "20dB",
+      "noiseless"
+    ],
+    "seeds": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110
+    ],
+    "cases": 90,
+    "residual_SFO_ppm": 0,
+    "residual_TO_samples": 0,
+    "phase_mode90": true,
+    "continuous_domain_claim": false
+  },
+  "hardware_scope": {
+    "proposed_clock_hz": 150000000,
+    "lanes": 4,
+    "independent_rotator_channels": 2,
+    "hardware_qualified": false,
+    "fullframe_memory_allocation_closed": false,
+    "official_vendor_bittrue": false
+  },
+  "frequency_grid": {
+    "subcarrier_spacing_hz": 244140.625,
+    "tested_residual_fraction_of_subcarrier_spacing": 0.004096,
+    "capture_guard_is_not_accuracy_qualification": true
+  }
+}

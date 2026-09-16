@@ -1,0 +1,49 @@
+{
+  "job_id": "OTA001",
+  "revision": "A01",
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "scope": "two targeted native tests only; no full-core PASS",
+  "files": [
+    {
+      "path": "rtl/buffer/ota_frame_store.sv",
+      "sha256": "c22e73b80b6e1a9b495e72186baf5bc809375c3370ff14db088b49ba47bf56a8",
+      "bytes": 4667
+    },
+    {
+      "path": "rtl/control/ota_frontend_descriptor.sv",
+      "sha256": "c7a7e244d18c4a108bb3755d164480ab2f4af80d5ccbc87c86da0e3adfba19ad",
+      "bytes": 2839
+    },
+    {
+      "path": "sim/tb/ota_frame_store_tb.sv",
+      "sha256": "1d77d5a4fae934f61210224e265a1d3a6a7e825f786ee634de9960be39720c82",
+      "bytes": 4869
+    },
+    {
+      "path": "sim/tb/ota_frontend_descriptor_tb.sv",
+      "sha256": "d8c7ea2db082e1a49c725f4d12ad9e9028d6aa82e4b941dcf305e884a9f3b96e",
+      "bytes": 2837
+    },
+    {
+      "path": "tools/vivado/run_threads.tcl",
+      "sha256": "68fa434e3bdd884b34922b7eafb1af6787205d7542f7e38bad73e81f140e189e",
+      "bytes": 277
+    },
+    {
+      "path": "tools/vivado/run_ota001.tcl",
+      "sha256": "256b7708220cd02f2a718a21a733e64975276c80116c47726fe6cbae3fa154c8",
+      "bytes": 2861
+    },
+    {
+      "path": "docs/jobs/OTA001_ZH.md",
+      "sha256": "4f110b142146a6fac0fffd0e077a3aecbc6a6fb8060fa289d2fc73d0c4295e43",
+      "bytes": 3989
+    },
+    {
+      "path": "docs/architecture/ARCHITECTURE_A01_ZH.md",
+      "sha256": "648e070338efb9eafb83880ce75e3d16f3993a775400e5a792683af29ad846ee",
+      "bytes": 10166
+    }
+  ]
+}

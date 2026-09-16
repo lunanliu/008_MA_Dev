@@ -1,0 +1,122 @@
+`timescale 1ns / 1ps
+// T06 standalone qualification build: client + one existing T03 FFT service.
+// T14 may replace the exclusive owner with its measured shared-service arbiter.
+module sfo_initial_estimator #(
+    parameter integer MAX_CYCLES = 65024
+) (
+    input  logic                                               clk_125,
+    input  logic                                               clk_500,
+    input  logic                                               rst,
+    input  logic                                               tap_fire,
+    input  logic                                       [127:0] tap_data,
+    input  logic                                       [ 31:0] tap_frame_id,
+    input  logic signed                                [ 31:0] tap_abs,
+    input  logic                                       [  3:0] tap_lane_valid,
+    input  logic                                               s_cfo_valid,
+    output logic                                               s_cfo_ready,
+    input  sfo_stream_pkg::bistatic_estimator_result_t         s_cfo,
+    input  logic                                               s_fine_valid,
+    output logic                                               s_fine_ready,
+    input  sfo_stream_pkg::bistatic_estimator_result_t         s_fine,
+    output logic                                               m_valid,
+    input  logic                                               m_ready,
+    output sfo_stream_pkg::bistatic_estimator_result_t         m_result,
+    output logic signed                                [ 47:0] m_slope,
+    output logic                                       [  7:0] m_error_stage,
+    output logic                                               halted,
+    output logic                                       [ 31:0] elapsed_cycles,
+    output logic                                       [ 31:0] fft_lease_wait_cycles,
+    output logic                                       [ 31:0] fft_input_stall_cycles,
+    output logic                                       [ 31:0] fft_output_stall_cycles,
+    output logic                                       [ 31:0] shared_gain_sample_count,
+    output logic                                       [ 12:0] fft_input_count,
+    output logic                                       [ 12:0] fft_output_count,
+    output logic                                       [ 12:0] observation_count,
+    output logic                                       [ 12:0] weight_count,
+    output logic                                       [  1:0] cfo_context_occupancy,
+    output logic                                       [  1:0] fine_context_occupancy,
+    output logic                                               fft_owned,
+    output logic                                               fft_error
+);
+  logic lease_valid, lease_ready, lease_release, abort_request, abort_done;
+  logic [31:0] lease_frame_id, owner_frame_id;
+  logic fft_s_valid, fft_s_ready, fft_s_last, fft_m_valid, fft_m_ready, fft_m_last;
+  logic [127:0] fft_s_data, fft_m_data;
+  logic [12:0] owner_input_count, owner_output_count;
+  logic [3:0] owner_input_last, owner_output_last;
+  sfo_initial_estimation_service #(
+      .MAX_CYCLES(MAX_CYCLES)
+  ) service (
+      .clk                     (clk_125),
+      .rst                     (rst),
+      .tap_fire                (tap_fire),
+      .tap_data                (tap_data),
+      .tap_frame_id            (tap_frame_id),
+      .tap_abs                 (tap_abs),
+      .tap_lane_valid          (tap_lane_valid),
+      .s_cfo_valid             (s_cfo_valid),
+      .s_cfo_ready             (s_cfo_ready),
+      .s_cfo                   (s_cfo),
+      .s_fine_valid            (s_fine_valid),
+      .s_fine_ready            (s_fine_ready),
+      .s_fine                  (s_fine),
+      .fft_lease_valid         (lease_valid),
+      .fft_lease_ready         (lease_ready),
+      .fft_lease_frame_id      (lease_frame_id),
+      .fft_lease_release       (lease_release),
+      .fft_abort               (abort_request),
+      .fft_abort_done          (abort_done),
+      .fft_s_valid             (fft_s_valid),
+      .fft_s_ready             (fft_s_ready),
+      .fft_s_data              (fft_s_data),
+      .fft_s_last              (fft_s_last),
+      .fft_m_valid             (fft_m_valid),
+      .fft_m_ready             (fft_m_ready),
+      .fft_m_data              (fft_m_data),
+      .fft_m_last              (fft_m_last),
+      .fft_error               (fft_error),
+      .m_valid                 (m_valid),
+      .m_ready                 (m_ready),
+      .m_result                (m_result),
+      .m_slope                 (m_slope),
+      .m_error_stage           (m_error_stage),
+      .halted                  (halted),
+      .elapsed_cycles          (elapsed_cycles),
+      .fft_lease_wait_cycles   (fft_lease_wait_cycles),
+      .fft_input_stall_cycles  (fft_input_stall_cycles),
+      .fft_output_stall_cycles (fft_output_stall_cycles),
+      .shared_gain_sample_count(shared_gain_sample_count),
+      .fft_input_count         (fft_input_count),
+      .fft_output_count        (fft_output_count),
+      .observation_count       (observation_count),
+      .weight_count            (weight_count),
+      .cfo_context_occupancy   (cfo_context_occupancy),
+      .fine_context_occupancy  (fine_context_occupancy)
+  );
+  sfo_initial_fft_arbiter owner (
+      .clk_125              (clk_125),
+      .clk_500              (clk_500),
+      .rst                  (rst),
+      .lease_valid          (lease_valid),
+      .lease_ready          (lease_ready),
+      .lease_frame_id       (lease_frame_id),
+      .lease_release        (lease_release),
+      .abort_request        (abort_request),
+      .abort_done           (abort_done),
+      .s_valid              (fft_s_valid),
+      .s_ready              (fft_s_ready),
+      .s_data               (fft_s_data),
+      .s_last               (fft_s_last),
+      .m_valid              (fft_m_valid),
+      .m_ready              (fft_m_ready),
+      .m_data               (fft_m_data),
+      .m_last               (fft_m_last),
+      .error_sticky         (fft_error),
+      .owned                (fft_owned),
+      .active_frame_id      (owner_frame_id),
+      .accepted_input_beats (owner_input_count),
+      .accepted_output_beats(owner_output_count),
+      .accepted_input_last  (owner_input_last),
+      .accepted_output_last (owner_output_last)
+  );
+endmodule

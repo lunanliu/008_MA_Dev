@@ -1,0 +1,14 @@
+[
+  {
+    "path": "rtl/sfo/first_resampling/sfo_first_resampler.sv",
+    "baseline_sha256": "c77c4e87a1eabf3375b43cbea671aa505b2bb75f01bd1e25ef19e225ce5e23d9",
+    "new_sha256": "36bbac5ad9212f496fe29c8affda08d5eaf8c138c50faf8a9eab5bf01c13c61f",
+    "status": "formal ports implemented; production transport binding and native validation pending"
+  },
+  {
+    "path": "rtl/sfo/second_resampling/sfo_second_resampler.sv",
+    "baseline_sha256": "56da921143eecfb732423dc90fa2ea1d8ceaa6197423d58cb0ee36b503b5e172",
+    "new_sha256": "16e7b2c85b882ab28fdd6f69017f999919833ac6169edcb19a317e08437c954a",
+    "status": "formal ports implemented; production transport binding and native validation pending"
+  }
+]

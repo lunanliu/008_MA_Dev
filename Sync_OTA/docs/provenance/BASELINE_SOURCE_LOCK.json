@@ -1,0 +1,951 @@
+{
+  "parent_git_head": "84b9cd8f968e5f186fe68b31aba5a3a96b6d002d",
+  "files": [
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\common\\bistatic_stream_pkg.sv",
+      "target": "rtl\\frontend\\common\\bistatic_stream_pkg.sv",
+      "sha256": "7c2551aa0d2827fd04515a9e782b6c015a4d26ac050303823f0c69cda49dda83",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\buffering\\coarse_lag1024_beat_ring.sv",
+      "target": "rtl\\frontend\\buffering\\coarse_lag1024_beat_ring.sv",
+      "sha256": "b472db0001918a49488c14511d938adae1a2fe8ba1140c343a9d4d42e6aeb835",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\buffering\\coarse_result_pair_fifo.sv",
+      "target": "rtl\\frontend\\buffering\\coarse_result_pair_fifo.sv",
+      "sha256": "f679891897dab6b5130b8ceae063a9eb088629251dbaee135c6acca5ff4bc0b7",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\buffering\\fine_corrected_local_buffer.sv",
+      "target": "rtl\\frontend\\buffering\\fine_corrected_local_buffer.sv",
+      "sha256": "cc9ed5336b381e37d3d96cdf736ee204893c87a78991da929e9e496029afa7ce",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\buffering\\fine_energy_prefix_buffer.sv",
+      "target": "rtl\\frontend\\buffering\\fine_energy_prefix_buffer.sv",
+      "sha256": "d6fd2ebd9298cb4adc54cf755b40116b9195a25ec2c75e4ef56a393aeafcb816",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\buffering\\fine_local_capture_buffer.sv",
+      "target": "rtl\\frontend\\buffering\\fine_local_capture_buffer.sv",
+      "sha256": "3004161b3e3aaed6a57d0ca431df30953abf94a58cdd88642eb996a65d5735dc",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\carrier\\cfo_coarse_estimator.sv",
+      "target": "rtl\\frontend\\carrier\\cfo_coarse_estimator.sv",
+      "sha256": "f2db928e6f670eabf525d3be2ac3a22e66e182d486970699e8962f14fa5e54a3",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\carrier\\cfo_phase_increment.sv",
+      "target": "rtl\\frontend\\carrier\\cfo_phase_increment.sv",
+      "sha256": "dc39d9ef1cdd9d8033ff22af01c890ba0c8531229acaff4ee5518dda0ae9fcfc",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\carrier\\cfo_preamble_rotator.sv",
+      "target": "rtl\\frontend\\carrier\\cfo_preamble_rotator.sv",
+      "sha256": "da34420ea55fdd60b568f45359c4ce980ac7d0af17fdbe227de9de118ffb2770",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\frontend\\sync_coarse_pair_join.sv",
+      "target": "rtl\\frontend\\frontend\\sync_coarse_pair_join.sv",
+      "sha256": "d6871d0139bb4e044dd49562926c8b3ce8f9d7a847f4a49e710a0dc9a8c35f76",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\coarse_corr_energy_4lane.sv",
+      "target": "rtl\\frontend\\timing\\coarse_corr_energy_4lane.sv",
+      "sha256": "8ee340c535a58e01b4d61bb510a91319e0f578c054ee9dce6c3eba9ffe500c8f",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\coarse_metric_threshold.sv",
+      "target": "rtl\\frontend\\timing\\coarse_metric_threshold.sv",
+      "sha256": "4595ec22de9ba1a11b37eb872d41d85f90b6d29a9fafb6523dac3f09fe24ab26",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\coarse_plateau_selector.sv",
+      "target": "rtl\\frontend\\timing\\coarse_plateau_selector.sv",
+      "sha256": "7a0f4ad291d4b4a85373474b8912e852d0be4b9a2d3a561cf54dd1e277a56727",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\coarse_rolling_sc_accumulator.sv",
+      "target": "rtl\\frontend\\timing\\coarse_rolling_sc_accumulator.sv",
+      "sha256": "c583fb84fae2f295f5381dee6ebd415043c2963680332cbf948c45328f40726d",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\coarse_safe_phase_replay.sv",
+      "target": "rtl\\frontend\\timing\\coarse_safe_phase_replay.sv",
+      "sha256": "c4b6d2bada6ec0d73dc9d82f4a87c8d532a744c7cc69c3d3dd0a14cb954f3b51",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_corr_accumulator.sv",
+      "target": "rtl\\frontend\\timing\\fine_corr_accumulator.sv",
+      "sha256": "36aacca624c16767357f1ec991df416e075c2611ce2ddc831c35f7ac9c906313",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_corr_cmpy_array.sv",
+      "target": "rtl\\frontend\\timing\\fine_corr_cmpy_array.sv",
+      "sha256": "d295ba55dfb1b89a7e10d3de42b9a36b79588666c24519f18b64aa7e4620eef4",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_corr_metric_controller.sv",
+      "target": "rtl\\frontend\\timing\\fine_corr_metric_controller.sv",
+      "sha256": "0181123126e3b0ccecc2bb662015a4174a6230403024c7429f06027dfdd0768c",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_corr_scheduler.sv",
+      "target": "rtl\\frontend\\timing\\fine_corr_scheduler.sv",
+      "sha256": "f5addc8719d8d22994179dba1c449d5a718eacf46b1de417774dbedf31fd1c0b",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_local_window_reader.sv",
+      "target": "rtl\\frontend\\timing\\fine_local_window_reader.sv",
+      "sha256": "89e7e0e9e122602ddffef1c3d9b4f1c4b587463858c6895e0fa5ebec2aaf9599",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_partitioned_corr_engine.sv",
+      "target": "rtl\\frontend\\timing\\fine_partitioned_corr_engine.sv",
+      "sha256": "12986b28f06a1b4b411e7cea3c1d48108c249991fcf550a28e7417a0871b48e3",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_peak_selector.sv",
+      "target": "rtl\\frontend\\timing\\fine_peak_selector.sv",
+      "sha256": "5654d28be6a68e90c2375ef9f0ef27d085d33da09e8cc04fdad1bdea745939e2",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_ps1_reference_rom.sv",
+      "target": "rtl\\frontend\\timing\\fine_ps1_reference_rom.sv",
+      "sha256": "25530e535774a8ebadf89e974dc8097bdb3c74b5456491c250a4cbe64ab5cd72",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_quality_controller.sv",
+      "target": "rtl\\frontend\\timing\\fine_quality_controller.sv",
+      "sha256": "1c03668b31b1638b461e29c2c0682e8fb028b8d73cdcd9c4d0053cb2bccf3f0b",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_quality_vendor_adapters.sv",
+      "target": "rtl\\frontend\\timing\\fine_quality_vendor_adapters.sv",
+      "sha256": "c56615520c2e8a1cf723b1c31791ab40e34d1fd5be88a5c1f53fcfaee5871c93",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\fine_vendor_multiplier_adapters.sv",
+      "target": "rtl\\frontend\\timing\\fine_vendor_multiplier_adapters.sv",
+      "sha256": "50b043e5f0521330024f8ed15280a34e5c5d6d29fbcb742db42f704c1f425140",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\to_coarse_estimator.sv",
+      "target": "rtl\\frontend\\timing\\to_coarse_estimator.sv",
+      "sha256": "6fa5bcd7abd3bbef6480e6300c2591b7b0d0ef61a6450f4d8a9b903ef7d0a024",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\to_coarse_ports.sv",
+      "target": "rtl\\frontend\\timing\\to_coarse_ports.sv",
+      "sha256": "dfdbae1a81ab90911e344ab67a3828f439a7f7d1e93b672f38ca3564e738941d",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\to_fine_core.sv",
+      "target": "rtl\\frontend\\timing\\to_fine_core.sv",
+      "sha256": "e9c1ac3dcf53ccda0c5950d99cf56b8a8b5f580c64a6bc7cecf0731295aea624",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\to_fine_estimator.sv",
+      "target": "rtl\\frontend\\timing\\to_fine_estimator.sv",
+      "sha256": "458f779944756d855068149c531376e065bb8c3b49541246c38ae3a5d8336324",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\buffering\\sync_beat_ram.sv",
+      "target": "rtl\\frontend\\buffering\\sync_beat_ram.sv",
+      "sha256": "ae71385d660e4b8cfa4cb3abb01bf7efe539d9d416ed029363463266da66e787",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\timing\\sync_rolling_metric.sv",
+      "target": "rtl\\frontend\\timing\\sync_rolling_metric.sv",
+      "sha256": "99a7859aa018511b3696eba479956929906f288f07110bdb1d2397df8e9ecd6d",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\frontend\\sync_continuous_detector.sv",
+      "target": "rtl\\frontend\\frontend\\sync_continuous_detector.sv",
+      "sha256": "339603cd9b1d94a13f4c11e35e4c1ddce1cbc003a2d7522ef6c4b1b2bab14a34",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\rtl\\frontend\\sync_frontend_top.sv",
+      "target": "rtl\\frontend\\frontend\\sync_frontend_top.sv",
+      "sha256": "a2fa205eecac5dde1520779a11e83578359b3d97a32199f3f4d29ac00ad17e8e",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\Sync_Frontend.xpr",
+      "target": "docs\\provenance\\Sync_Frontend.xpr.xml",
+      "sha256": "dc57452445c1c0041da26f2d0618534949995282ff44da6ba7eaf20e97c35bb9",
+      "evidence": "read-only provenance, not runnable project"
+    },
+    {
+      "scope": "Sync_Frontend",
+      "source": "D:\\008_MA_Dev\\Sync_Frontend\\tools\\sf003_rtl_sources.txt",
+      "target": "docs\\provenance\\Sync_Frontend_sources.txt",
+      "sha256": "479beb179d623a07dfbd8a613cc4c1e23e5e1be137516eedd7e601f0bf71491f",
+      "evidence": "SF003 core synthesis; SF002 autonomous four frames"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\common\\sfo_stream_pkg.sv",
+      "target": "rtl\\sfo\\common\\sfo_stream_pkg.sv",
+      "sha256": "8678a5ba7788bd69ade1f6f773e1c16932bfadf7ead1a39802cd369848d4a641",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\resampling\\sfo_farrow_arithmetic.sv",
+      "target": "rtl\\sfo\\resampling\\sfo_farrow_arithmetic.sv",
+      "sha256": "869f163ad9fda12ec83c97fee04a901ad9ab096db07ce3b261598084f3788194",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\resampling\\sfo_fir_down15.sv",
+      "target": "rtl\\sfo\\resampling\\sfo_fir_down15.sv",
+      "sha256": "b2baa2ce26e2601a4854bda8075451eff9cf03ee303c9e9e3a9623a3216847f4",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\resampling\\sfo_fir_down47.sv",
+      "target": "rtl\\sfo\\resampling\\sfo_fir_down47.sv",
+      "sha256": "4ca26a24e152ddb091d82761e5594dd1f82fbc7d984cf5c2b1344438f5c98516",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\resampling\\sfo_guarded_farrow_stream.sv",
+      "target": "rtl\\sfo\\resampling\\sfo_guarded_farrow_stream.sv",
+      "sha256": "bdcb509531b84755dad38b7b4ef680721aa3f30a52e4dc75d7ba3ffbc7a92b2a",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\resampling\\sfo_fir_up15.sv",
+      "target": "rtl\\sfo\\resampling\\sfo_fir_up15.sv",
+      "sha256": "09553c72301350d2e6e4d41109792c0608a5466b0e96e3a8f56fd372c3c3b607",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\resampling\\sfo_fir_up47.sv",
+      "target": "rtl\\sfo\\resampling\\sfo_fir_up47.sv",
+      "sha256": "0f3bef82b1ef5094ea86a8c5081154b472c8b028e3982afba8734fb701f3a340",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\fft_service\\sfo_initial_fft_service.sv",
+      "target": "rtl\\sfo\\fft_service\\sfo_initial_fft_service.sv",
+      "sha256": "2c5897407e5dbecb9d7069ad581b6ff99656cff2cfdedab56424a2d5c99d4d6c",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\buffering\\sfo_uram_frame_bank.sv",
+      "target": "rtl\\sfo\\buffering\\sfo_uram_frame_bank.sv",
+      "sha256": "1940b189dc89ce21189d282cf2d89f82bd5566a3715745cf69f2f4e1bf9ed305",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\buffering\\sfo_training_capture_buffer.sv",
+      "target": "rtl\\sfo\\buffering\\sfo_training_capture_buffer.sv",
+      "sha256": "423cd741a2cba96e61459e530b1c974c8d2450bc351f531760b5e2f2d5595834",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_cfo_phase_increment.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_cfo_phase_increment.sv",
+      "sha256": "e83849985be192c8e6f85bc1ca43c83ff8cf5465f6f3a3c5fcd48f539e06dbae",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\common\\sfo_vendor_multiplier_adapters.sv",
+      "target": "rtl\\sfo\\common\\sfo_vendor_multiplier_adapters.sv",
+      "sha256": "13821348a9c69f41f0650770222892f4cac625ec8d00be68d20bdc2b6000bc2e",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_cfo_derotate_s16_4lane.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_cfo_derotate_s16_4lane.sv",
+      "sha256": "b638a6700d093cf588d4eaf4c9d9cacb311843032b56f09b88e63adc2bd8b7b5",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_dds_phase_4lane.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_dds_phase_4lane.sv",
+      "sha256": "f776dec2fb79cf917309a8266c2ea9b6f056db38558d07be9482c9af232fa2ff",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_derotate_wide_4lane.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_derotate_wide_4lane.sv",
+      "sha256": "118524e78b02e56596a4c1e3938a518337142c6b3047140197d6fd3c92d7a073",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_fft_pair_extractor.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_fft_pair_extractor.sv",
+      "sha256": "1562dff421f2ce518762b33e00648b8120da6dfd9c60a37acc5380dfcdcb4de0",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_fft_pair_extractor_fifo.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_fft_pair_extractor_fifo.sv",
+      "sha256": "1653008b86b4b71590384bcd9acd0e7c835564c313fb1b8a41ecf0941117ad57",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_fft_pair_extractor_memory.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_fft_pair_extractor_memory.sv",
+      "sha256": "c6ab014cf596f404dde26c9d74ebea2c198b4a8f3721271bb34f11a9e3c794c9",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_fft_swls_backend.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_fft_swls_backend.sv",
+      "sha256": "bbaac9fb2a6fc693c5fefe01fa7d000dff1173cb2be070b6b1747efc27572197",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_five_sum_accumulator.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_five_sum_accumulator.sv",
+      "sha256": "396319c1768c31eceaf5fa5c2f190022ab3bf11c1bc1c73639bc39292712b19e",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_frame_context_join.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_frame_context_join.sv",
+      "sha256": "4ff4fe28c665b22301b4b88876565a5e6e4927d49bf357441a3b11ac7feaaf57",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_estimation_service.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_estimation_service.sv",
+      "sha256": "052b4f8d20183e5de6cf9ff7911f8dfff1ecad451d45c1e60bf70d0392832eb4",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_estimator.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_estimator.sv",
+      "sha256": "8caafbb42bb4f28dc7cfc404a869df2097c8c8d27faeeff12fb800f7e1bf122c",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\fft_service\\sfo_initial_fft_arbiter.sv",
+      "target": "rtl\\sfo\\fft_service\\sfo_initial_fft_arbiter.sv",
+      "sha256": "2cadb4ff9ce62afd99651569b782f58e014893f7eb03068cd5beb80cd3ecd8bf",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_observation_engine.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_observation_engine.sv",
+      "sha256": "b907f21036eccd303681ea8cce08c7e2683f1faf6e61f8f9bda226f66fce4a0d",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_observation_engine_2lane.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_observation_engine_2lane.sv",
+      "sha256": "92d28855805753d344e6c9c3945fc6b536a844fe1ea9fea92d870811af2c3e69",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_observation_engine_fifo.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_observation_engine_fifo.sv",
+      "sha256": "dcdec60b78fcf42f30355897069ffb52b0f37720a2255da6a4064e7d18e73786",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_observation_store.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_observation_store.sv",
+      "sha256": "717b5d7641878eb1c11f215cf0f9bba6a332afff282ce1bb7e03e3cdcdb06be2",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_observation_store_bank.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_observation_store_bank.sv",
+      "sha256": "063dc83c7b6ea1fc32762a4729dce9d816085084bc539625bf32a6a177aaf45e",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_pair_max_tracker_2lane.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_pair_max_tracker_2lane.sv",
+      "sha256": "b0bcc2ed6354dfb906baaeb783b833eb09b4bfbebefbc9d8959b4095fd6f53ca",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_pair_phasor_bfp.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_pair_phasor_bfp.sv",
+      "sha256": "4611ad123a006ee7da5d68ddce82ca830b3d69f6d94aff7f831caaf5f1b8a9bc",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_ps3_ps10_job_sequencer.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_ps3_ps10_job_sequencer.sv",
+      "sha256": "9c67ec1059bf46f0ddd8d897e6ec68c93f19e12ac0d94430e5236e9bc10444bc",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_raw_reader_4lane.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_raw_reader_4lane.sv",
+      "sha256": "a6b0afb8e8b4cd3331c28817c95b4dc6c941a00ff09392e3236e50981dbcf684",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_raw_reader_local_capture.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_raw_reader_local_capture.sv",
+      "sha256": "019e072c3665b087cda86648cfa4177188cacfcb5b8402a3a83a09fb37d79cbe",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_raw_to_fft_frontend.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_raw_to_fft_frontend.sv",
+      "sha256": "6357e41240d05c891c2ce462602f793c8991f7eb39f2e31783c3c66079a6e00f",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_regression_tail.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_regression_tail.sv",
+      "sha256": "f2392d5ecd1e9769227e7084c4d853c0574022e1f8e807f37774e1ee864ed05e",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_shared_gain_s16_4lane.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_shared_gain_s16_4lane.sv",
+      "sha256": "32e29a316fb10a997ad875fbe7c894abe4d0dfa7e2830e604a147bf0477a91f1",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_shared_gain_s16_lane.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_shared_gain_s16_lane.sv",
+      "sha256": "b0cd6a05d316ca801829c5d84e6f0af9a02a19c949c39c23187f19ffc6d4cb94",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_swls_weighted_backend.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_swls_weighted_backend.sv",
+      "sha256": "4660374a6d0e0f9558a5c0bfd28356cea4830bf7b0eaed4477d267ab58c4e032",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_unsigned_divider_service.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_unsigned_divider_service.sv",
+      "sha256": "5295de48b7b902a12f3fa50153f5cd1ea64c9514f59dd27adaf5f13e8489af6f",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_unsigned_divider_service_fifo.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_unsigned_divider_service_fifo.sv",
+      "sha256": "9dfddec92d88ad8fa60d8d31b761955d8b1684d30924dc0a1010ae18043fd248",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\initial_estimation\\sfo_initial_weight_pack.sv",
+      "target": "rtl\\sfo\\initial_estimation\\sfo_initial_weight_pack.sv",
+      "sha256": "5f20ba7200942ad4b6d21de144dd1a9e6016d81c6d4725db5850b8e08cba82b7",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\resampling\\sfo_guarded_resampling_core.sv",
+      "target": "rtl\\sfo\\resampling\\sfo_guarded_resampling_core.sv",
+      "sha256": "f31f773589b4aba01199bc7d20c4ebf2ec4b2dea8eb3d912a50750d69506eae4",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\resampling\\sfo_nominal_pack4.sv",
+      "target": "rtl\\sfo\\resampling\\sfo_nominal_pack4.sv",
+      "sha256": "6e586f2eae3cafad6deac1873816419b7cb96589c302b342cddd4c98df1fceea",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\buffering\\sfo_sync_fifo.sv",
+      "target": "rtl\\sfo\\buffering\\sfo_sync_fifo.sv",
+      "sha256": "90a98a9d68127e6e4a5b4ed65ff442d4975d401873ef472a5f7eaf620fbd89bf",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\first_resampling\\sfo_first_pass_descriptor.sv",
+      "target": "rtl\\sfo\\first_resampling\\sfo_first_pass_descriptor.sv",
+      "sha256": "08db58888997d797a083ed760c4fe2cfbc0903afd622a84639103d43828c7356",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\first_resampling\\sfo_first_resampler.sv",
+      "target": "rtl\\sfo\\first_resampling\\sfo_first_resampler.sv",
+      "sha256": "c77c4e87a1eabf3375b43cbea671aa505b2bb75f01bd1e25ef19e225ce5e23d9",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\first_resampling\\sfo_first_frame_scheduler.sv",
+      "target": "rtl\\sfo\\first_resampling\\sfo_first_frame_scheduler.sv",
+      "sha256": "96db099600e46fec598fe9d06a9b477baa5be4b40851657bd3d60f87b8928664",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\fft_service\\sfo_residual_ifft_service4.sv",
+      "target": "rtl\\sfo\\fft_service\\sfo_residual_ifft_service4.sv",
+      "sha256": "ec964e2c112a16aac551d5d3d5127fbef12f0ac7575d678ba68e72b7b3fc1053",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_div_u80_u49_rne.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_div_u80_u49_rne.sv",
+      "sha256": "d600f457c3c5821a9b7349fe4aebc2370d02909c4e3a8c171cdba630c4f88d7a",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_delay_backend4.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_delay_backend4.sv",
+      "sha256": "a0265d2db5b210b84e5d7a2a8954479dcc0044818e028570daf5caebf2efe1fc",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_fft_grid_stage4.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_fft_grid_stage4.sv",
+      "sha256": "80505553968a5844d39ce8956598e04d1496a11b62e1b5eb47d073a2b24f4dc9",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_grid_packet_queue2.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_grid_packet_queue2.sv",
+      "sha256": "4ac82a8263d4c033f60c577c7b2abde4247f77a078d116c7d23e81ecd760d209",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\fft_service\\sfo_residual_fft_service4.sv",
+      "target": "rtl\\sfo\\fft_service\\sfo_residual_fft_service4.sv",
+      "sha256": "28b203c8b5f8155425c53a66b91e0e08736f5743cf65fae0e6147e1fe05d3323",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\fft_service\\sfo_residual_fft_window4.sv",
+      "target": "rtl\\sfo\\fft_service\\sfo_residual_fft_window4.sv",
+      "sha256": "aaf51fb7e99c8d9027e6d6d3e1f021aea166ee8a15faad254c25b14bd504c939",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_nominal_window_reader4.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_nominal_window_reader4.sv",
+      "sha256": "8b90a27c44ba9cb745c26879325ffa647158ce956e1e5c3667f71ce41e4f3527",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_peak_interpolate.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_peak_interpolate.sv",
+      "sha256": "7927f058940ac55e5636b630d6fe91009eca315a7c4b4aa205576997783a23a4",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_peak_triplet4.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_peak_triplet4.sv",
+      "sha256": "18705999185f5180fd7d3163e5b3d62953af3cab0b97411defa5ef16f37a0900",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_pilot_front2.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_pilot_front2.sv",
+      "sha256": "6f9364136e02b04ed62281b08f900cd693c83e6a6329962e242a0f519fdf3d4c",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_pilot_grid4.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_pilot_grid4.sv",
+      "sha256": "99ce35be9cf6ffd91a7a8a72c506bda82551226d9fc9505863e1095b83f813d9",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_pilot_rotate2.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_pilot_rotate2.sv",
+      "sha256": "2063f9a926e124b72005b178a979bfd95358669cad7e3d91012668506faf86a7",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_pilot_select_phase4.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_pilot_select_phase4.sv",
+      "sha256": "b497c9c519ea8185e8400c7233342d7dd49851d8a5aa5e2a60090e8d637d936d",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_power4.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_power4.sv",
+      "sha256": "889c7eb157a1e3405c5c296a62649ed1ae4c95a99611a4a37c46d8c181dcc010",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_estimator4.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_estimator4.sv",
+      "sha256": "71c062b16d35284af09c583aabac38d2d8909cc0ceda20d84c68c25fa359a4eb",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\residual_estimation\\sfo_residual_ls74.sv",
+      "target": "rtl\\sfo\\residual_estimation\\sfo_residual_ls74.sv",
+      "sha256": "3936e72836985f7d75d7e6e277ebc96e6c03184dd737f7690ea621cd7323b444",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\buffering\\sfo_record_cdc_fifo.sv",
+      "target": "rtl\\sfo\\buffering\\sfo_record_cdc_fifo.sv",
+      "sha256": "23e2411fde56c2c3659e9e45932ef24ee0157bd4150d015d4f074f6ef3777c35",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\control\\sfo_domain_reset.sv",
+      "target": "rtl\\sfo\\control\\sfo_domain_reset.sv",
+      "sha256": "e74a402b5e8076e2add9b62818c9e3d3ca32d7e49b815f708c0514e52a3378b4",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\buffering\\sfo_output_buffer.sv",
+      "target": "rtl\\sfo\\buffering\\sfo_output_buffer.sv",
+      "sha256": "18058a15f343a0421f15e1db7c07f6afd24b0877a4d642b3802e542a06a06a84",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\buffering\\sfo_intermediate_frame_bank.sv",
+      "target": "rtl\\sfo\\buffering\\sfo_intermediate_frame_bank.sv",
+      "sha256": "ee42f6a9387dab99362c98ab0e1a5dec3968def86ab8f31d592119f382e1316c",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\buffering\\sfo_raw_frame_ring.sv",
+      "target": "rtl\\sfo\\buffering\\sfo_raw_frame_ring.sv",
+      "sha256": "f0cccb4fe557e0c39fc626ffe88899ea5dedd2fec922daa1975bc19ee64170e9",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\second_resampling\\sfo_second_pass_descriptor.sv",
+      "target": "rtl\\sfo\\second_resampling\\sfo_second_pass_descriptor.sv",
+      "sha256": "c29c6806c482e853f893b829d12c6e94d9338a17fc95143de6d445d9c3adb780",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\second_resampling\\sfo_second_resampler.sv",
+      "target": "rtl\\sfo\\second_resampling\\sfo_second_resampler.sv",
+      "sha256": "56da921143eecfb732423dc90fa2ea1d8ceaa6197423d58cb0ee36b503b5e172",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\control\\sync_sfo_top.sv",
+      "target": "rtl\\sfo\\control\\sync_sfo_top.sv",
+      "sha256": "a24b1ccedeb38e5e8e001402c3a1fd38edfba5e7bce007a00d5037597980003f",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\control\\sfo_two_pass_transport.sv",
+      "target": "rtl\\sfo\\control\\sfo_two_pass_transport.sv",
+      "sha256": "c81c3764bb0ebb97b6333e0ed4ed06c6b0a9d37a1f98655ead9c16473c0527d4",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\Sync_SFO.xpr",
+      "target": "docs\\provenance\\Sync_SFO.xpr.xml",
+      "sha256": "647e6b30d931c22d4be8d9eb50456dd95ababf5167d9208ccd0760b481357189",
+      "evidence": "read-only provenance, not runnable project"
+    },
+    {
+      "scope": "Sync_SFO",
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\sources.f",
+      "target": "docs\\provenance\\Sync_SFO_sources.txt",
+      "sha256": "7a3990ab4a1291ccda4040ddd549826f90e19ae3fee4d29b1e9b2c596afc47ff",
+      "evidence": "FN01 compile/elaborate; case6001 prior full-frame behavioral"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_rotate4.sv",
+      "target": "rtl\\cfo\\cfo_rotate4.sv",
+      "sha256": "77cc206f82bcbb0b09583334e14ef7c35fc5aced1562df383b91e80f5aabf916",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_coordinate_control.sv",
+      "target": "rtl\\cfo\\cfo_coordinate_control.sv",
+      "sha256": "398ddef7c34289369e8ddfc345acb49cc22aea0819db83ac4e001b1a7ae414b2",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_front2048_window.sv",
+      "target": "rtl\\cfo\\cfo_front2048_window.sv",
+      "sha256": "8472c3b80d6e188654c31b52cc5b1553c654102c6b83efecf5a606ea45198165",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_fft2048_core.sv",
+      "target": "rtl\\cfo\\cfo_fft2048_core.sv",
+      "sha256": "67b402a1025e53a9691e94a1720968955186c2dacf4c00ce8409cc28532702db",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_estimator_link_v2.sv",
+      "target": "rtl\\cfo\\cfo_estimator_link_v2.sv",
+      "sha256": "7878ce644410d8362dea13154100a8d6db7fea8e48e1a0f94372251d6e599014",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_estimate74_backend.sv",
+      "target": "rtl\\cfo\\cfo_estimate74_backend.sv",
+      "sha256": "11ced857047e438c8375c70e5d952ea54ea14cff533c5cd4b4560bcf684aea5a",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_fft74_quality_v2.sv",
+      "target": "rtl\\cfo\\cfo_fft74_quality_v2.sv",
+      "sha256": "84b39001f074dfb2c08951221a5e801a02457ee7826c7813229f2478068ee3af",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_divide_rne64wide.sv",
+      "target": "rtl\\cfo\\cfo_divide_rne64wide.sv",
+      "sha256": "7f414b65ce687c9724f580848c996542d0ba3360eb7539ab1281835fd35d0d37",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_fft256_core.sv",
+      "target": "rtl\\cfo\\cfo_fft256_core.sv",
+      "sha256": "56a957f34a07ef28041c539d319b24c59fca95d55be16d202c60abeabf501d1d",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_phase74_core_v2.sv",
+      "target": "rtl\\cfo\\cfo_phase74_core_v2.sv",
+      "sha256": "70115d741effaddffa8e1c69767057638cab6f28dbb9fa6bad7c36e40a760028",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\rtl\\cfo_divide_rne64.sv",
+      "target": "rtl\\cfo\\cfo_divide_rne64.sv",
+      "sha256": "3fcce6e2792c706e3f77e7e80d67cda6a5da1b1a6261fe31e643f640957f17ee",
+      "evidence": "rotate/coordinate/front stage source lists; LINK010R1 RTL v2 reset amendment, NOT native reset PASS"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\ip\\cfo_rot_lut.mem",
+      "target": "ip\\cfo\\cfo_rot_lut.mem",
+      "sha256": "72b5cd0673ef0011ccebf8cb4cd89f5406360330e5de8bd0fd62b706cf6fc5fe",
+      "evidence": "explicit stage project ROM dependencies"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\ip\\fft2048_twiddle.mem",
+      "target": "ip\\cfo\\fft2048_twiddle.mem",
+      "sha256": "9a1c8a4363f3b0e7513b8a52ca70b6462a09a3bdfa2a232159d781c57816a276",
+      "evidence": "explicit stage project ROM dependencies"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\ip\\front2048_coefficient_index.mem",
+      "target": "ip\\cfo\\front2048_coefficient_index.mem",
+      "sha256": "d058acdae6cdd2628304fcd73f5579e2c62833bf00d16d0291187b39201d78d4",
+      "evidence": "explicit stage project ROM dependencies"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\ip\\front2048_coefficient_table.mem",
+      "target": "ip\\cfo\\front2048_coefficient_table.mem",
+      "sha256": "ca93ff648c57459891ed7489d38c5f312a2d6969f6f4901130903d16f6403387",
+      "evidence": "explicit stage project ROM dependencies"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\ip\\fft256_twiddle.mem",
+      "target": "ip\\cfo\\fft256_twiddle.mem",
+      "sha256": "aa8802ba8c2f38bddb2350114029bc58e7a58e8d49c746f26246691ee913a93d",
+      "evidence": "explicit stage project ROM dependencies"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\ip\\phase74_atan_q31.mem",
+      "target": "ip\\cfo\\phase74_atan_q31.mem",
+      "sha256": "b058188d4642c069c4dec0028a240e3329fc228b962a3280b45a5b3d98c9f22c",
+      "evidence": "explicit stage project ROM dependencies"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\docs\\CFO_MAIN_CONTRACT.json",
+      "target": "docs\\provenance\\CFO\\CFO_MAIN_CONTRACT.json",
+      "sha256": "aa241740c06e0cf1443d79e46f29a9358a2e67c47f4d17f9d39ea9bbfad5b93e",
+      "evidence": "read-only identity, not executable job"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\docs\\ARCHITECTURE_AND_MEMORY_ZH.md",
+      "target": "docs\\provenance\\CFO\\ARCHITECTURE_AND_MEMORY_ZH.md",
+      "sha256": "4a0c8be3534fa87b358280a677f49abe1e3180504f1c2875dab7bac6be4fa6b5",
+      "evidence": "read-only identity, not executable job"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\vivado\\link010r1_project.tcl",
+      "target": "docs\\provenance\\CFO\\link010r1_project.tcl",
+      "sha256": "a04d3bc4f063779028288b72074696f99abf2287a277171b8dd0947e23718037",
+      "evidence": "read-only identity, not executable job"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\vivado\\front2048_project.tcl",
+      "target": "docs\\provenance\\CFO\\front2048_project.tcl",
+      "sha256": "305d959cd87a029cd9be8cfc31ea692ce658120a8bd48d19fcc5985a08afa2fb",
+      "evidence": "read-only identity, not executable job"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\vivado\\coordinate_project.tcl",
+      "target": "docs\\provenance\\CFO\\coordinate_project.tcl",
+      "sha256": "c993f455f63130789c2089041d717d6935a58cf6728b6a6cf131f74909a09ac9",
+      "evidence": "read-only identity, not executable job"
+    },
+    {
+      "scope": "Sync_CFO",
+      "source": "D:\\008_MA_Dev\\Sync_CFO\\vivado\\create_project.tcl",
+      "target": "docs\\provenance\\CFO\\create_project.tcl",
+      "sha256": "5edec08ed4b17409b6381863438d207485798c766030f1517263b462df3121d4",
+      "evidence": "read-only identity, not executable job"
+    }
+  ],
+  "scope": "RTL plus CFO ROM snapshot. Frontend/SFO vendor IP closure remains required before full-core native compile."
+}

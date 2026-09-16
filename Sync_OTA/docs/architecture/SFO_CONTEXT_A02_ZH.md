@@ -1,0 +1,9 @@
+# 正式SFO配置发布：实现进度 A02（不改变OTA001冻结包）
+
+2026-09-16。仅修改本工程复制的sfo_first_resampler与sfo_second_resampler；原Sync_SFO不变。
+
+两模块增加context_valid/ready、frame/generation、step_q28、phase、raw_first及nominal_first端口。REQUIRE_CONTEXT_ACK=1时，descriptor消耗、engine.cfg_valid握手和context传递被绑定为同一次成功launch；下游背压会延迟算法启动，不会先启动再丢描述符。数据直接来自被算法装载的d_step/d_phase，未使用diagnostic/debug。参数默认0维持旧测试调用时序；正式OTA生产实例必须显式为1，否则源集审查失败。
+
+ota_sfo_context_join接收同帧元数据和E1实际配置；只有frame/generation匹配的E2实际配置才能形成214位上下文并在CFO接收时放行E2启动。identity不符/step零锁存首错，等待取消；不能跨帧复用配置。
+
+当前：正式发布端口与join RTL已实现；尚未接入sfo_two_pass_transport/sync_sfo_top与完整OTA调度，未做本轮native检查。端口修订清单SFO_CONTEXT_PORT_CHANGE.json记录原复制字节指纹和修改后指纹；BASELINE_SOURCE_LOCK永远保留原来源，不回写掩盖变化。下一包在生产连接闭合后做真实descriptor、背压和身份检查。OTA001冻结输入未改。
