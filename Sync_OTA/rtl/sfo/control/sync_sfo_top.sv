@@ -4,6 +4,7 @@
 // Select150 explicitly for the T10-to-CFO output profile; IQ sample rate remains500MS/s.
 module sync_sfo_top #(
     parameter integer REQUIRE_CONTEXT_ACK = 0,
+    parameter integer SHARED_RAW_INPUT = 0,
     parameter integer PROCESSING_LIMIT_CYCLES = 400896,
     parameter integer OUTPUT_CLOCK_MHZ = 150
 ) (
@@ -19,12 +20,17 @@ module sync_sfo_top #(
     input  logic                                               clk500,
     input  logic                                               reset_request,
     input  logic                                               abort125,
+    input wire abort150,
     input  logic                                               s_valid,
     output logic                                               s_ready,
     input  logic                                       [127:0] s_data,
     input  logic                                       [ 31:0] s_frame_id,
     input  logic signed                                [ 31:0] s_absolute_index,
     input  logic                                       [  3:0] s_lane_valid,
+    // V5.1 ordered raw control, clk125. Legacy descriptor ports are disabled
+    // when SHARED_RAW_INPUT=1; records are generated only after training fill.
+    input wire raw_event_valid,output wire raw_event_ready,input wire [208:0] raw_event_record,
+    output wire metadata_valid,input wire metadata_ready,output wire [149:0] metadata_record,
     // Producer's capture descriptor: {frame32,generation32,raw_first_word64,nominal_absolute32,q0Q28}.
     input  logic                                               frame_valid,
     output logic                                               frame_ready,
@@ -59,7 +65,8 @@ module sync_sfo_top #(
   wire [12:0] debug_fft_in, debug_fft_out, debug_obs, debug_weights;
   wire reset125, transport_fault;
   logic control_fault;
-  wire  system_fault = control_fault || transport_fault;
+  wire dispatch_fault;
+  wire system_fault = control_fault || transport_fault || dispatch_fault;
   wire ctx_sr, ctx_v, ctx_r, ctx_busy, ctx_error, fc_sr, fc_v, fc_r, fc_busy, fc_error;
   wire [187:0] ctx_data;
   wire [ 95:0] fc_data;
@@ -69,17 +76,54 @@ module sync_sfo_top #(
   bistatic_estimator_result_t initial_result, stored_fine;
   logic context_history;
   logic [31:0] previous_frame;
+  wire training_cfg_v,training_cfg_r,training_data_v,training_data_r,training_release_v,training_release_r;
+  wire [207:0] training_cfg_w;wire [224:0] training_data_w;wire [63:0] training_release_w;
+  wire generated_fv,generated_cv,generated_tv,selected_fr,selected_cr,selected_tr;
+  wire [187:0] generated_fw;wire [95:0] generated_cw,generated_tw;
+  wire training_tap;wire [127:0] training_iq;wire [31:0] training_frame;wire signed [31:0] training_abs;
+  wire dispatch_done_ready;
+  wire selected_fv=SHARED_RAW_INPUT?generated_fv:frame_valid;
+  wire selected_cv=SHARED_RAW_INPUT?generated_cv:cfo_valid;
+  wire selected_tv=SHARED_RAW_INPUT?generated_tv:fine_valid;
+  wire [187:0] selected_fw=SHARED_RAW_INPUT?generated_fw:frame_record;
+  wire [95:0] selected_cw=SHARED_RAW_INPUT?generated_cw:cfo_record;
+  wire [95:0] selected_tw=SHARED_RAW_INPUT?generated_tw:fine_record;
+  assign frame_ready=SHARED_RAW_INPUT?1'b0:selected_fr;
+  assign cfo_ready=SHARED_RAW_INPUT?1'b0:selected_cr;
+  assign fine_ready=SHARED_RAW_INPUT?1'b0:selected_tr;
+  generate if(SHARED_RAW_INPUT!=0)begin : training_dispatch
+    ota_training_dispatch dispatch(
+      .clk(clk125),.rst(reset125),.poison(control_fault||transport_fault||abort125),
+      .cfg_valid(training_cfg_v),.cfg_ready(training_cfg_r),.cfg_record(training_cfg_w),
+      .s_valid(training_data_v),.s_ready(training_data_r),.s_record(training_data_w),
+      .tap_fire(training_tap),.tap_data(training_iq),.tap_frame(training_frame),.tap_absolute(training_abs),
+      .frame_valid(generated_fv),.frame_ready(selected_fr),.frame_record(generated_fw),
+      .coarse_valid(generated_cv),.coarse_ready(selected_cr),.coarse_record(generated_cw),
+      .fine_valid(generated_tv),.fine_ready(selected_tr),.fine_record(generated_tw),
+      .meta_valid(metadata_valid),.meta_ready(metadata_ready),.meta_record(metadata_record),
+      // Atomic completion fork: consume_join is impossible before this ready.
+      .initial_done_valid(consume_join),.initial_done_ready(dispatch_done_ready),.initial_done_frame(initial_result.frame_id),
+      .release_valid(training_release_v),.release_ready(training_release_r),.release_record(training_release_w),
+      .fault(dispatch_fault),.error_code());
+  end else begin : legacy_training
+    assign dispatch_fault=0;assign dispatch_done_ready=1;
+    assign training_cfg_r=0;assign training_data_r=0;assign training_release_v=0;assign training_release_w=0;
+    assign generated_fv=0;assign generated_cv=0;assign generated_tv=0;
+    assign generated_fw=0;assign generated_cw=0;assign generated_tw=0;
+    assign training_tap=0;assign training_iq=0;assign training_frame=0;assign training_abs=0;
+    assign metadata_valid=0;assign metadata_record=0;
+  end endgenerate
   assign stored_fine = fc_data;
-  assign frame_ready = !reset125 && !system_fault && ctx_sr;
+  assign selected_fr = !reset125 && !system_fault && ctx_sr;
   sfo_sync_fifo #(
       .WIDTH(188),
       .DEPTH(32)
   ) frame_context_fifo (
       .clk         (clk125),
       .rst         (reset125),
-      .s_valid     (frame_valid && !system_fault && !reset125),
+      .s_valid     (selected_fv && !system_fault && !reset125),
       .s_ready     (ctx_sr),
-      .s_data      (frame_record),
+      .s_data      (selected_fw),
       .m_valid     (ctx_v),
       .m_ready     (ctx_r),
       .m_data      (ctx_data),
@@ -89,17 +133,17 @@ module sync_sfo_top #(
       .error_sticky(ctx_error)
   );
   // Atomic fork: T06 and the binding FIFO accept the same fine record together.
-  assign fine_ready = !reset125 && !system_fault && initial_fine_ready && fc_sr;
-  assign initial_fine_valid = fine_valid && !reset125 && !system_fault && fc_sr;
+  assign selected_tr = !reset125 && !system_fault && initial_fine_ready && fc_sr;
+  assign initial_fine_valid = selected_tv && !reset125 && !system_fault && fc_sr;
   sfo_sync_fifo #(
       .WIDTH(96),
       .DEPTH(32)
   ) fine_record_fifo (
       .clk         (clk125),
       .rst         (reset125),
-      .s_valid     (fine_valid && !reset125 && !system_fault && initial_fine_ready),
+      .s_valid     (selected_tv && !reset125 && !system_fault && initial_fine_ready),
       .s_ready     (fc_sr),
-      .s_data      (fine_record),
+      .s_data      (selected_tw),
       .m_valid     (fc_v),
       .m_ready     (fc_r),
       .m_data      (fc_data),
@@ -108,25 +152,25 @@ module sync_sfo_top #(
       .reset_busy  (fc_busy),
       .error_sticky(fc_error)
   );
-  assign cfo_ready = !reset125 && !system_fault && initial_cfo_ready;
-  assign initial_cfo_valid = cfo_valid && !reset125 && !system_fault;
+  assign selected_cr = !reset125 && !system_fault && initial_cfo_ready;
+  assign initial_cfo_valid = selected_cv && !reset125 && !system_fault;
   sfo_initial_estimator #(
       .MAX_CYCLES(65024)
   ) initial_estimator (
       .clk_125                 (clk125),
       .clk_500                 (clk500),
       .rst                     (reset125),
-      .tap_fire                (s_valid && s_ready),
-      .tap_data                (s_data),
-      .tap_frame_id            (s_frame_id),
-      .tap_abs                 (s_absolute_index),
-      .tap_lane_valid          (s_lane_valid),
+      .tap_fire                (SHARED_RAW_INPUT?training_tap:(s_valid && s_ready)),
+      .tap_data                (SHARED_RAW_INPUT?training_iq:s_data),
+      .tap_frame_id            (SHARED_RAW_INPUT?training_frame:s_frame_id),
+      .tap_abs                 (SHARED_RAW_INPUT?training_abs:s_absolute_index),
+      .tap_lane_valid          (SHARED_RAW_INPUT?4'hf:s_lane_valid),
       .s_cfo_valid             (initial_cfo_valid),
       .s_cfo_ready             (initial_cfo_ready),
-      .s_cfo                   (cfo_record),
+      .s_cfo                   (selected_cw),
       .s_fine_valid            (initial_fine_valid),
       .s_fine_ready            (initial_fine_ready),
-      .s_fine                  (fine_record),
+      .s_fine                  (selected_tw),
       .m_valid                 (initial_result_valid),
       .m_ready                 (initial_result_ready),
       .m_result                (initial_result),
@@ -161,7 +205,7 @@ module sync_sfo_top #(
   wire joined = ctx_v && fc_v && initial_result_valid;
   wire transport_ctx_v, transport_ctx_r;
   wire [235:0] transport_ctx_data;
-  assign transport_ctx_v = !reset125 && !system_fault && joined && identity_good && numeric_good;
+  assign transport_ctx_v = !reset125 && !system_fault && joined && identity_good && numeric_good && dispatch_done_ready;
   assign transport_ctx_data = {
     ctx_frame,
     ctx_gen,
@@ -180,11 +224,14 @@ module sync_sfo_top #(
   wire [101:0] qrw;
   wire [234:0] qdw;
   wire [159:0] qmw;
-  sfo_residual_estimator4 residual_estimator (
+  wire progress_v,progress_r,cfg_streaming;
+  wire [99:0] progress_record;
+  sfo_residual_estimator4 #(.PROGRESSIVE_SOURCE(SHARED_RAW_INPUT)) residual_estimator (
       .clk               (clk125),
       .clk500            (clk500),
       .rst               (reset125),
       .abort             (system_fault || abort125),
+      .cfg_streaming(cfg_streaming),.source_progress_valid(progress_v),.source_progress_ready(progress_r),.source_progress_record(progress_record),
       .cfg_valid         (qcv),
       .cfg_ready         (qcr),
       .cfg_descriptor    (qcw),
@@ -207,21 +254,28 @@ module sync_sfo_top #(
   );
   sfo_two_pass_transport #(
       .REQUIRE_CONTEXT_ACK(REQUIRE_CONTEXT_ACK),
+      .SHARED_RAW_INPUT(SHARED_RAW_INPUT),
       .PROCESSING_LIMIT_CYCLES(PROCESSING_LIMIT_CYCLES),
       .OUTPUT_CLOCK_MHZ(OUTPUT_CLOCK_MHZ)
   ) two_pass_transport (
       .first_context_valid(first_context_valid),.first_context_ready(first_context_ready),.first_context_record(first_context_record),
       .second_context_valid(second_context_valid),.second_context_ready(second_context_ready),.second_context_record(second_context_record),
+      .raw_event_valid(raw_event_valid),.raw_event_ready(raw_event_ready),.raw_event_record(raw_event_record),
+      .training_cfg_valid(training_cfg_v),.training_cfg_ready(training_cfg_r),.training_cfg_record(training_cfg_w),
+      .training_data_valid(training_data_v),.training_data_ready(training_data_r),.training_data_record(training_data_w),
+      .training_release_valid(training_release_v),.training_release_ready(training_release_r),.training_release_record(training_release_w),
       .clk125                (clk125),
       .clk150                (clk150),
       .reset_request         (reset_request),
       .abort125              (abort125 || control_fault),
+      .abort150(SHARED_RAW_INPUT?abort150:1'b0),
       .s_valid               (s_valid),
       .s_ready               (s_ready),
       .s_data                (s_data),
       .context_valid         (transport_ctx_v),
       .context_ready         (transport_ctx_r),
       .context_record        (transport_ctx_data),
+      .residual_cfg_streaming(cfg_streaming),.residual_progress_valid(progress_v),.residual_progress_ready(progress_r),.residual_progress_record(progress_record),
       .residual_cfg_valid    (qcv),
       .residual_cfg_ready    (qcr),
       .residual_cfg_record   (qcw),
@@ -257,9 +311,9 @@ module sync_sfo_top #(
       context_history <= 0;
       previous_frame  <= 0;
     end else begin
-      if (frame_valid && frame_ready) begin
+      if (selected_fv && selected_fr) begin
         context_history <= 1;
-        previous_frame  <= frame_record[187:156];
+        previous_frame  <= selected_fw[187:156];
       end
       if (!control_fault) begin
         if (abort125) begin
@@ -268,11 +322,11 @@ module sync_sfo_top #(
         end else if (ctx_error || fc_error) begin
           control_fault <= 1;
           error_code125 <= 2;
-        end else if (s_valid && s_ready && s_lane_valid != 4'hf) begin
+        end else if (SHARED_RAW_INPUT==0 && s_valid && s_ready && s_lane_valid != 4'hf) begin
           control_fault <= 1;
           error_code125 <= 3;
-        end else if (frame_valid && frame_ready && context_history &&
-                     frame_record[187:156] <= previous_frame) begin
+        end else if (selected_fv && selected_fr && context_history &&
+                     selected_fw[187:156] <= previous_frame) begin
           control_fault <= 1;
           error_code125 <= 4;
         end else if (joined && !identity_good) begin
@@ -281,6 +335,9 @@ module sync_sfo_top #(
         end else if (joined && !numeric_good) begin
           control_fault <= 1;
           error_code125 <= 6;
+        end else if (dispatch_fault) begin
+          control_fault <= 1;
+          error_code125 <= 8;
         end else if (initial_halted) begin
           control_fault <= 1;
           error_code125 <= 7;

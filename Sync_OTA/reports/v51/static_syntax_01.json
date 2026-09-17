@@ -1,0 +1,17 @@
+{
+  "tool": "pyslang 11.0.0",
+  "kind": "STATIC_SYNTAX_ONLY_NOT_ELABORATION_OR_SIMULATION",
+  "files": [
+    {
+      "file": "rtl\\buffer\\ota_shared_raw_store.sv",
+      "diagnostic_count": 1,
+      "diagnostics": "Sync_OTA\\rtl\\buffer\\ota_shared_raw_store.sv:131:10: warning: no newline at end of file [-Wnewline-eof]\nendmodule\n         ^\n"
+    },
+    {
+      "file": "rtl\\control\\ota_sfo_context_join.sv",
+      "diagnostic_count": 1,
+      "diagnostics": "Sync_OTA\\rtl\\control\\ota_sfo_context_join.sv:66:10: warning: no newline at end of file [-Wnewline-eof]\nendmodule\n         ^\n"
+    }
+  ],
+  "diagnostic_count": 2
+}

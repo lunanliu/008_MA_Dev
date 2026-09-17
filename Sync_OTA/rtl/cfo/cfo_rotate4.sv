@@ -17,7 +17,7 @@ module cfo_rotate4 #(
  (* rom_style="block" *) logic [31:0] lut_a[0:1023];
  (* rom_style="block" *) logic [31:0] lut_b[0:1023];
  initial begin $readmemh(ROM_FILE,lut_a);$readmemh(ROM_FILE,lut_b);end
- logic active;logic [31:0] frame,generation,phase,step,beat_next,beat_count;
+ logic active;logic [31:0] frame,generation,phase,step,step3,beat_next,beat_count;
  logic [4:0] valid_pipe;logic [96:0] tag_pipe[0:4];
  logic [127:0] data0,data1;logic [9:0] address0[0:3];logic [31:0] coef1[0:3];
  logic signed [31:0] ic2[0:3],qs2[0:3],is2[0:3],qc2[0:3];
@@ -47,14 +47,14 @@ module cfo_rotate4 #(
  integer i;
  always_ff @(posedge clk)begin
   if(clear)begin
-   active<=0;frame<=0;generation<=0;phase<=0;step<=0;beat_next<=0;beat_count<=0;valid_pipe<=0;fault<=0;first_error<=0;
+   active<=0;frame<=0;generation<=0;phase<=0;step<=0;step3<=0;beat_next<=0;beat_count<=0;valid_pipe<=0;fault<=0;first_error<=0;
    data0<=0;data1<=0;output4<=0;saturation4<=0;
    for(i=0;i<5;i=i+1)tag_pipe[i]<=0;
    for(i=0;i<4;i=i+1)begin address0[i]<=0;coef1[i]<=0;ic2[i]<=0;qs2[i]<=0;is2[i]<=0;qc2[i]<=0;sum_i3[i]<=0;sum_q3[i]<=0;end
   end else if(!fault)begin
    if(cfg_valid&&cfg_ready)begin
     if(cfg_sample_count==0||cfg_sample_count[1:0]!=0||cfg_sample_count>1336320)begin fault<=1;first_error<=1;end
-    else begin active<=1;frame<=cfg_frame;generation<=cfg_generation;phase<=cfg_phase0;step<=cfg_step;beat_next<=0;beat_count<=cfg_sample_count>>2;end
+    else begin active<=1;frame<=cfg_frame;generation<=cfg_generation;phase<=cfg_phase0;step<=cfg_step;step3<=cfg_step+(cfg_step<<1);beat_next<=0;beat_count<=cfg_sample_count>>2;end
    end
    if(advance)begin
     valid_pipe<={valid_pipe[3:0],accept};
@@ -63,7 +63,9 @@ module cfo_rotate4 #(
      if(bad_record)begin fault<=1;first_error<=2;active<=0;valid_pipe<=0;end
      else begin
       tag_pipe[0]<=s_record[224:128];data0<=s_record[127:0];
-      for(i=0;i<4;i=i+1)address0[i]<=phase_address(phase+32'(i)*step);
+      // Configuration precomputes 3*step modulo 2^32 so lane 3 does not
+      // cascade two 32-bit adders before ROM-address rounding each sample.
+      for(i=0;i<4;i=i+1)address0[i]<=phase_address(phase+((i==3)?step3:32'(i)*step));
       phase<=phase+(step<<2);beat_next<=beat_next+1;if(s_record[128])active<=0;
      end
     end

@@ -1,12 +1,14 @@
 // One nominal-window owner for the real T03 main FFT arithmetic.
 // Only one window may be live until all output AND official status are observed.
 module sfo_residual_fft_window4 #(
+    parameter integer PROGRESSIVE_SOURCE=0,
     parameter integer TIMEOUT_CYCLES = 30000
 ) (
     input  logic                clk,
     input  logic                clk500,
     input  logic                rst,
     input  logic                abort,
+    input logic cfg_window_granted,
     input  logic                cfg_valid,
     output logic                cfg_ready,
     input  logic        [ 31:0] cfg_frame_id,
@@ -64,6 +66,7 @@ module sfo_residual_fft_window4 #(
   logic [4:0] reset_count;
   logic [31:0] age;
   logic [228:0] cfg_saved;
+  logic saved_grant;
   logic reader_done_seen;
   wire active = state == CONFIG || state == RUN;
   wire child_reset = rst || state == BOOT || state == FLUSH || state == HALT;
@@ -105,12 +108,13 @@ module sfo_residual_fft_window4 #(
   assign m_generation = done_generation;
   assign m_symbol_slot = done_symbol_slot;
   assign done_valid = !rst && state == DONE;
-  sfo_residual_nominal_window_reader4 reader (
+  sfo_residual_nominal_window_reader4 #(.PROGRESSIVE_SOURCE(PROGRESSIVE_SOURCE)) reader (
       .clk                  (clk),
       .rst                  (child_reset),
       .abort                (1'b0),
       .cfg_valid            (state == CONFIG && !cancel),
       .cfg_ready            (r_cfg_ready),
+      .cfg_window_granted(saved_grant),
       .cfg_frame_id         (cfg_saved[228:197]),
       .cfg_generation       (cfg_saved[196:165]),
       .cfg_source_frame_id  (cfg_saved[164:133]),
@@ -194,7 +198,7 @@ module sfo_residual_fft_window4 #(
       state <= BOOT;
       reset_count <= 0;
       age <= 0;
-      cfg_saved <= 0;
+      cfg_saved <= 0;saved_grant<=0;
       reader_done_seen <= 0;
       done_frame_id <= 0;
       done_generation <= 0;
@@ -220,6 +224,7 @@ module sfo_residual_fft_window4 #(
         if (done_ready) state <= done_error == 0 ? IDLE : HALT;
       end else if (state == IDLE) begin
         if (cfg_valid && cfg_ready) begin
+          saved_grant<=PROGRESSIVE_SOURCE&&cfg_window_granted;
           cfg_saved <= {
             cfg_frame_id,
             cfg_generation,

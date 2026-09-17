@@ -1,5 +1,19 @@
 # Sync OTA：完整同步链路开发入口
 
+当前工作分支为 **V5.1_System_Modify**，生产入口 [Sync_OTA.xpr](Sync_OTA.xpr)，top `sync_ota_top`，实际选源 [sources_v51.f](rtl/sources_v51.f)。本轮已接入共享raw环、训练回读、SFO逐窗供数、CFO片内双bank及**最终无背压输出**。最终端口没有ready或中间DDR事务；Target VI接受每个150MHz valid拍。
+
+- [本轮静态交付：架构、周期、缓存、数值与分层资源/时序](docs/v51/STATIC_DELIVERY_ZH.md)
+- [设计选择与备选方案](docs/v51/REFACTOR_DESIGN_ZH.md)
+- [46端口与Target VI合同](docs/v51/INTERFACE_CONTRACT_ZH.md)、[独立VHDL Wrapper](wrapper/sync_ota_wrapper.vhd)
+- [FPGA工程师 agents.md](<FPGA工程师 agents.md>)
+
+129 RTL、3 XPM、45 IP的选源与全工程静态覆盖已完成；实际生产语法与绑定0错误，警告保留。SFO两份和CFO四份算术补丁已获明确批准并应用，输入/IP合同下多帧预算闭合。**未启动仿真/综合/实现；不宣称新版数值、实测持续吞吐或物理时序通过。** 当前证据为reports/v51/full_static_20260918与static_binding_07。 sim_1没有获准的新测试台，旧A06测试台从该源集移出但文件保留。旧DCP/报告均有旧身份。
+
+---
+
+## 历史A07及此前记录（下文不描述当前生产源集/端口）
+
+
 当前工作版本为 A07 静态设计整改版；唯一工程入口 [Sync_OTA.xpr](Sync_OTA.xpr)，真实算法顶层 **sync_ota_top**，Vivado 2021.1，器件 xcvu11p-flgb2104-2-e。保持现有功能目录和 RTL 层级；[统一设计复盘、整改与剩余隐患](docs/SYNC_OTA_REMAINING_20260917_ZH.md)为本轮主入口。**本轮测试暂停，新版尚未编译、仿真或综合，不按旧DCP宣称新版通过。**
 
 在 Vivado 中打开根目录 Sync_OTA.xpr，在 Sources → Hierarchy → Design Sources 下展开 sync_ota_top，即可按 frontend、sfo、cfo、control、ddr 等实例查看完整设计源。生产选源为 [rtl/sources_a07.f](rtl/sources_a07.f)，同名历史版本保留在原目录但不同时加入工程。sim_1只存历史测试台；Wrapper是用户手工NI集成入口，生产top仍为算法核心。查看本轮代码应选择RTL源层级，旧综合结果属于A06。

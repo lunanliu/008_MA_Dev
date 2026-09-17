@@ -59,7 +59,8 @@ module sfo_guarded_farrow_stream #(
       {31'd0, next_write}
   ) - 64'sd64 : 64'sd0;
   reg signed [63:0] min_index, max_index;
-  reg signed [63:0] lane_base, address;
+  reg signed [63:0] lane_base;
+  reg [5:0] ring_base, ring_address;
   reg [27:0] frac;
   reg [ 8:0] rounded_mu;
   reg round_up, windows_available;
@@ -72,7 +73,8 @@ module sfo_guarded_farrow_stream #(
     min_index = 64'sh7fffffffffffffff;
     max_index = -64'sd1;
     lane_base = 64'sd0;
-    address = 64'sd0;
+    ring_base = 6'd0;
+    ring_address = 6'd0;
     frac = 28'd0;
     rounded_mu = 9'd0;
     round_up = 1'b0;
@@ -83,6 +85,9 @@ module sfo_guarded_farrow_stream #(
       frac = lane_phase[lane][27:0];
       round_up = (frac[19:0] > 20'h80000) || ((frac[19:0] == 20'h80000) && frac[20]);
       rounded_mu = {1'b0, frac[27:20]} + {8'd0, round_up};
+      // Data selection needs only the exact modulo-64 ring index. Keep the
+      // full coordinate below for ownership checks, off the 64:1 data mux.
+      ring_base = lane_phase[lane][33:28] + {5'd0,rounded_mu[8]};
       if (rounded_mu == 9'd256) begin
         lane_base  = lane_base + 64'sd1;
         rounded_mu = 9'd0;
@@ -93,16 +98,16 @@ module sfo_guarded_farrow_stream #(
       if (lane == 0) min_index = lane_base - 64'sd1;
       if (lane == 15) max_index = lane_base + 64'sd2;
       for (tap = 0; tap < 4; tap = tap + 1) begin
-        address = lane_base - 64'sd1 + tap;
-        // Only committed, retained samples may appear in an accepted request.
-        if (address < oldest || address >= written || address < 0 || address > 64'shffffffff)
-          windows_available = 1'b0;
-        sample_word = ring[address[5:0]];
+        ring_address = ring_base - 6'd1 + $unsigned(6'(tap));
+        sample_word = ring[ring_address];
         issue_window[((lane*2)*4+tap)*16+:16] = sample_word[15:0];
         issue_window[((lane*2+1)*4+tap)*16+:16] = sample_word[31:16];
       end
-      // Positive phase step and monotone RNE make endpoint bounds exact.
     end
+    // Positive phase step and monotone RNE make endpoint bounds exact for
+    // every lane/tap. Avoid 64 replicated wide range comparators.
+    windows_available = min_index >= oldest && max_index < written &&
+        min_index >= 64'sd0 && max_index <= 64'shffffffff;
   end
   // Conservative on a simultaneous issue/write: protect the old request until
   // its accepting edge. Both core sampling and ring reads see pre-NBA contents.

@@ -81,7 +81,11 @@ module cfo_fft2048_core(
   new_saturations={2'b0,clipped26(half_ai)}+{2'b0,clipped26(half_aq)}+{2'b0,clipped26(half_bi)}+{2'b0,clipped26(half_bq)};
   rd0=0;rd1=0;we0=0;we1=0;raddr0=0;raddr1=0;waddr0=0;waddr1=0;wdata0=0;wdata1=0;
   if(!rst && !abort_sync)begin
-   if(state==LOAD && s_valid && input_error==0)begin
+   // LOAD owns this bank until the whole window passes the control checks.
+   // A malformed record may write disposable RAM, but the higher-priority
+   // ERROR_HOLD transition below prevents RUN and publishes only an error.
+   // Keep wide frame/index comparisons off the 500 MHz RAM write enable.
+   if(state==LOAD && s_valid)begin
     if(^load_address)begin we1=1;waddr1=load_address[9:0];wdata1={s_i,s_q};end
     else begin we0=1;waddr0=load_address[9:0];wdata0={s_i,s_q};end
    end

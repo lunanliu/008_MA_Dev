@@ -1,0 +1,11 @@
+VERSION=2021.1
+UTILITY_SOURCE=C:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/xbip_utils_v3_0/common_tcl/common.tcl STATUS=0 RESULT=
+UTILITY_SOURCE=C:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/xbip_utils_v3_0/common_tcl/iptypes.tcl STATUS=0 RESULT=
+UTILITY_SOURCE=C:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/xbip_utils_v3_0/common_tcl/vip.tcl STATUS=1 RESULT=invalid command name "get_project_property"
+UTILITY_SOURCE=C:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/xbip_utils_v3_0/xgui/xbip_utils_v3_0.tcl STATUS=0 RESULT=
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48e1 ARGS=family
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48e2 ARGS=family
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48a ARGS=family
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48e ARGS=family
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48a1 ARGS=family
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48 ARGS=family

@@ -1,11 +1,14 @@
 `timescale 1ns/1ps
 // Autonomous input: raw IQ plus transport/session controls only.
 module sync_frontend_top #(
+    parameter integer STREAM_BOUNDARIES=0,
     parameter string PS1_MEMORY_INIT_FILE = "fine_ps1_reference_16lane.mem"
 ) (
     input logic clk,
     input logic reset_n,
     input logic session_start, session_abort, stream_gap,
+    // Terminal end of an independent replay segment; not a temporary pause.
+    input wire segment_end,output wire segment_quiescent,
     input logic s_valid,
     output logic s_ready,
     input logic [127:0] s_data,
@@ -17,13 +20,26 @@ module sync_frontend_top #(
     output logic [31:0] candidate_count, rejected_count, capture_drop_count,
     output logic [31:0] duplicate_count, confirmed_count,
     output logic [1:0] snapshot_occupancy, snapshot_peak,
-    output logic [15:0] max_history_age, error_sticky
+    output logic [15:0] max_history_age, error_sticky,
+    // Conservative raw ownership watermark, in accepted SAMPLE coordinates of
+    // retention_epoch. The descriptor converter must retain its own pin until
+    // the frame lease has entered the same ordered FIFO as subsequent floors.
+    output wire retention_valid,
+    output wire [31:0] retention_epoch,
+    output logic [63:0] retention_floor_samples
 );
     import bistatic_stream_pkg::*;
     (* ASYNC_REG="TRUE" *) logic [1:0] reset_release;
     logic rst_n, armed;
     logic [4:0] flush_count;
     logic core_rst_n, sample_fire, boundary;
+    logic end_seen;logic [7:0] end_idle_cycles;
+    always_ff @(posedge clk)begin
+        if(!core_rst_n)begin end_seen<=0;end_idle_cycles<=0;end
+        else if(STREAM_BOUNDARIES&&segment_end)begin end_seen<=1;end_idle_cycles<=0;end
+        else if(sample_fire)begin end_seen<=0;end_idle_cycles<=0;end
+        else if(end_seen&&end_idle_cycles!=255)end_idle_cycles<=end_idle_cycles+1'b1;
+    end
     always_ff @(posedge clk or negedge reset_n) begin
         if (!reset_n) reset_release <= 0;
         else reset_release <= {reset_release[0],1'b1};
@@ -96,8 +112,10 @@ module sync_frontend_top #(
     logic [63:0] last_confirmed_position;
     logic choice;
     logic choice_is_duplicate;
+    // Candidate IDs are modulo-2^32 tags, not chronological sequence numbers.
+    // Accepted-sample anchors retain order across a candidate-counter wrap.
     assign choice = bank_ready[0] && bank_ready[1] ?
-        (bank_candidate[1] < bank_candidate[0]) : !bank_ready[0];
+        (bank_anchor[1] < bank_anchor[0]) : !bank_ready[0];
     assign choice_is_duplicate = last_confirmed_valid &&
         ((bank_anchor[choice] >= last_confirmed_position && bank_anchor[choice]-last_confirmed_position < 4096) ||
          (bank_anchor[choice] < last_confirmed_position && last_confirmed_position-bank_anchor[choice] < 4096));
@@ -206,6 +224,13 @@ module sync_frontend_top #(
                     if (oldest_age > max_history_age) max_history_age <= oldest_age[15:0];
                 end
             end
+            // The caller has closed this independent segment and will not
+            // append future samples. Reject an incomplete snapshot only after
+            // the input detector pipeline has drained; no artificial samples.
+            if(STREAM_BOUNDARIES&&end_seen&&end_idle_cycles==255&&copy_active&&!copy_started&&
+               accepted_samples<bank_anchor[copy_slot]+64'd2920&&!candidate_valid)begin
+                copy_active<=0;bank_used[copy_slot]<=0;capture_drop_count<=capture_drop_count+1'b1;error_sticky[7]<=1;
+            end
             if (history_rd) begin
                 copy_request_count <= copy_request_count+1'b1;
                 if (accepted_samples-history_position >= 8192 || history_position+4 > accepted_samples) error_sticky[5] <= 1;
@@ -256,6 +281,30 @@ module sync_frontend_top #(
                     end
                 end
             endcase
+        end
+    end
+    // Two comparator levels separated by registers. A stale lower bound only
+    // retains extra words; it never grants permission to overwrite a live word.
+    // The 8192-point detector guard covers candidate formation before bank_used.
+    logic [63:0] retention_scan,retention_bank0,retention_bank1,retention_result;
+    logic [63:0] retention_pair0,retention_pair1;
+    wire [63:0] result_nominal={m_result[127:66],2'b00};
+    assign segment_quiescent=STREAM_BOUNDARIES&&core_rst_n&&end_seen&&end_idle_cycles==255&&
+        !copy_active&&bank_used==0&&worker_state==IDLE&&!m_valid&&!candidate_valid&&!history_rsp&&!snapshot_rsp;
+    assign retention_valid=core_rst_n;
+    assign retention_epoch=epoch;
+    always_ff @(posedge clk)begin
+        if(!core_rst_n)begin
+            retention_scan<=0;retention_bank0<=0;retention_bank1<=0;retention_result<=0;
+            retention_pair0<=0;retention_pair1<=0;retention_floor_samples<=0;
+        end else begin
+            retention_scan<=accepted_samples>8192?accepted_samples-64'd8192:64'd0;
+            retention_bank0<=bank_used[0]?(bank_anchor[0]>532?bank_anchor[0]-64'd532:64'd0):64'hffffffffffffffff;
+            retention_bank1<=bank_used[1]?(bank_anchor[1]>532?bank_anchor[1]-64'd532:64'd0):64'hffffffffffffffff;
+            retention_result<=m_valid?(result_nominal>172?result_nominal-64'd172:64'd0):64'hffffffffffffffff;
+            retention_pair0<=retention_scan<retention_bank0?retention_scan:retention_bank0;
+            retention_pair1<=retention_bank1<retention_result?retention_bank1:retention_result;
+            retention_floor_samples<=retention_pair0<retention_pair1?retention_pair0:retention_pair1;
         end
     end
 endmodule

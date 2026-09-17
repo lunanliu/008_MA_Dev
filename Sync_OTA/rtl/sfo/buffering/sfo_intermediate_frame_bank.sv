@@ -3,6 +3,7 @@
 // A replacement writer stays strictly behind issued sequential reads. RAM responses
 // are already reserved in a separate FIFO before any address can be reclaimed.
 module sfo_intermediate_frame_bank #(
+    parameter integer PROGRESSIVE_READ = 0,
     parameter integer FRAME_BEATS = 334098,
     DEPTH_BEATS = 335872,
     AW = 19,
@@ -27,6 +28,9 @@ module sfo_intermediate_frame_bank #(
     input  logic [                31:0] estimate_frame,
     input  logic [                31:0] estimate_generation,
     input  logic                        estimate_good,
+    output logic                        source_valid,
+    output logic [31:0]                  source_frame,source_generation,
+    output logic [18:0]                  source_written_exclusive,
     output logic                        committed,
     output logic [                31:0] committed_frame,
     output logic [                31:0] committed_generation,
@@ -68,7 +72,8 @@ module sfo_intermediate_frame_bank #(
   wire halted = poison || fault;
   wire seq_active = reading && m_sequential;
   wire safe_frontier = !seq_active || write_next < issued;
-  wire writer_allowed = writing || (!filled && !committed);
+  wire completely_free=!source_valid&&!filled&&!committed&&!reading&&!qvalid&&!qbusy&&rv==0;
+  wire writer_allowed = writing || (PROGRESSIVE_READ?completely_free:(!filled && !committed));
   assign s_ready = !rst && !halted && writer_allowed && safe_frontier;
   wire wf = s_valid && s_ready;
   wire write_ok = s_beat == write_next && s_beat < FRAME_BEATS &&
@@ -98,12 +103,15 @@ module sfo_intermediate_frame_bank #(
     else if (ef && (!estimate_good || estimate_frame != committed_frame ||
                     estimate_generation != committed_generation))
       bad = 4;
-    else if (cf && (!committed || req_frame != committed_frame || req_generation !=
-                    committed_generation || req_count == 0 || req_base >= FRAME_BEATS ||
-                    {1'b0, req_base} + {1'b0, req_count} > FRAME_BEATS || (
-                    req_sequential ? (!estimate_seen || req_base != 0 || req_count != FRAME_BEATS) :
-                        (req_count != 512 || req_base < 9 || req_base + 512 > FRAME_BEATS - 9))))
-      bad = 5;
+    else if (cf && (req_count==0||req_base>=FRAME_BEATS||
+                    {1'b0,req_base}+{1'b0,req_count}>FRAME_BEATS ||
+       ((req_sequential||!PROGRESSIVE_READ) ?
+        (!committed||req_frame!=committed_frame||req_generation!=committed_generation||
+         (req_sequential?(!estimate_seen||req_base!=0||req_count!=FRAME_BEATS):
+          (req_count!=512||req_base<9||req_base+512>FRAME_BEATS-9))) :
+        (!source_valid||req_frame!=source_frame||req_generation!=source_generation||
+         req_count!=512||req_base<9||{1'b0,req_base}+{1'b0,req_count}>{14'd0,source_written_exclusive}))))
+      bad=5;
     else if (collision) bad = 6;
     else if (outstanding > FIFO_DEPTH || consumed > returned || returned > issued) bad = 7;
   end
@@ -139,6 +147,7 @@ module sfo_intermediate_frame_bank #(
   );
   always_ff @(posedge clk) begin
     if (rst) begin
+      source_valid<=0;source_frame<=0;source_generation<=0;source_written_exclusive<=0;
       writing <= 0;
       filled <= 0;
       estimate_seen <= 0;
@@ -179,6 +188,8 @@ module sfo_intermediate_frame_bank #(
       if (rv[1] && qready) returned <= returned + 1;
       if (!halted && bad == 0) begin
         if (wf) begin
+          source_valid<=1;source_frame<=s_frame;source_generation<=s_generation;
+          source_written_exclusive<=19'(s_beat+1);
           if (!writing) begin
             write_frame <= s_frame;
             write_gen   <= s_generation;
@@ -222,6 +233,7 @@ module sfo_intermediate_frame_bank #(
           if (m_last) begin
             reading   <= 0;
             read_done <= 1;
+            if(m_sequential&&PROGRESSIVE_READ)begin source_valid<=0;source_written_exclusive<=0;end
           end
         end
       end

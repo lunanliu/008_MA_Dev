@@ -1,0 +1,29 @@
+{
+  "status": "REVIEW_ONLY_NOT_APPLIED",
+  "changes": [
+    {
+      "production_path": "Sync_OTA\\rtl\\cfo\\cfo_phase74_core_v2.sv",
+      "production_sha256": "70115d741effaddffa8e1c69767057638cab6f28dbb9fa6bad7c36e40a760028",
+      "candidate_path": "Sync_OTA\\reports\\v51\\pending_arithmetic\\cfo_phase74_core_v2.sv",
+      "candidate_sha256": "528199229c8b56dcd77ce280339c7614fd6089a55c55b0c6e18e815205413321"
+    },
+    {
+      "production_path": "Sync_OTA\\rtl\\cfo\\cfo_fft74_quality_v2.sv",
+      "production_sha256": "84b39001f074dfb2c08951221a5e801a02457ee7826c7813229f2478068ee3af",
+      "candidate_path": "Sync_OTA\\reports\\v51\\pending_arithmetic\\cfo_fft74_quality_v2.sv",
+      "candidate_sha256": "d2e76955cc010f082f7d18b8d1b059064b770f315d2fe04d72e68af4c5c183e5"
+    },
+    {
+      "production_path": "Sync_OTA\\rtl\\cfo\\cfo_divide_rne64.sv",
+      "production_sha256": "3fcce6e2792c706e3f77e7e80d67cda6a5da1b1a6261fe31e643f640957f17ee",
+      "candidate_path": "Sync_OTA\\reports\\v51\\pending_arithmetic\\cfo_divide_rne64.sv",
+      "candidate_sha256": "d7c3accca6fb5495776ca80de5c8f70bd98ef1a9621cefdbea24ea199ca7fa09"
+    },
+    {
+      "production_path": "Sync_OTA\\rtl\\cfo\\cfo_divide_rne64wide.sv",
+      "production_sha256": "7f414b65ce687c9724f580848c996542d0ba3360eb7539ab1281835fd35d0d37",
+      "candidate_path": "Sync_OTA\\reports\\v51\\pending_arithmetic\\cfo_divide_rne64wide.sv",
+      "candidate_sha256": "b2989e31dba16b4550e33933071b6dbd7b18217f59db1ae5810eb9e346321cce"
+    }
+  ]
+}

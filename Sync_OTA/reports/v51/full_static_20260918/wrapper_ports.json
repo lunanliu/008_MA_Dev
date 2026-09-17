@@ -1,0 +1,239 @@
+{
+  "evidence": "STATIC_PORT_AND_DIRECT_MAPPING_INSPECTION",
+  "top": "sync_ota_top",
+  "port_count": 46,
+  "wrapper_matches": true,
+  "ports": [
+    {
+      "name": "clk125",
+      "direction": "input",
+      "width": 1
+    },
+    {
+      "name": "clk150",
+      "direction": "input",
+      "width": 1
+    },
+    {
+      "name": "clk500",
+      "direction": "input",
+      "width": 1
+    },
+    {
+      "name": "reset_request",
+      "direction": "input",
+      "width": 1
+    },
+    {
+      "name": "cancel",
+      "direction": "input",
+      "width": 1
+    },
+    {
+      "name": "stream_valid",
+      "direction": "input",
+      "width": 1
+    },
+    {
+      "name": "stream_ready",
+      "direction": "output",
+      "width": 1
+    },
+    {
+      "name": "stream_data",
+      "direction": "input",
+      "width": 128
+    },
+    {
+      "name": "stream_first",
+      "direction": "input",
+      "width": 1
+    },
+    {
+      "name": "stream_last",
+      "direction": "input",
+      "width": 1
+    },
+    {
+      "name": "read_done",
+      "direction": "input",
+      "width": 1
+    },
+    {
+      "name": "output_valid",
+      "direction": "output",
+      "width": 1
+    },
+    {
+      "name": "output_data",
+      "direction": "output",
+      "width": 128
+    },
+    {
+      "name": "output_frame",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "output_generation",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "output_beat",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "output_last",
+      "direction": "output",
+      "width": 1
+    },
+    {
+      "name": "busy125",
+      "direction": "output",
+      "width": 1
+    },
+    {
+      "name": "fault125",
+      "direction": "output",
+      "width": 1
+    },
+    {
+      "name": "error125",
+      "direction": "output",
+      "width": 8
+    },
+    {
+      "name": "ingress_stage125",
+      "direction": "output",
+      "width": 3
+    },
+    {
+      "name": "accepted_words125",
+      "direction": "output",
+      "width": 64
+    },
+    {
+      "name": "frames_created125",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "segments_started125",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "segments_completed125",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "frame_done125",
+      "direction": "output",
+      "width": 1
+    },
+    {
+      "name": "done_frame125",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "done_generation125",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "completed_frames125",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "frontend_candidates125",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "frontend_rejected125",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "frontend_dropped125",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "frontend_confirmed125",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "frontend_error125",
+      "direction": "output",
+      "width": 16
+    },
+    {
+      "name": "sfo_error125",
+      "direction": "output",
+      "width": 8
+    },
+    {
+      "name": "sfo_error150",
+      "direction": "output",
+      "width": 8
+    },
+    {
+      "name": "context_error150",
+      "direction": "output",
+      "width": 8
+    },
+    {
+      "name": "cfo_error150",
+      "direction": "output",
+      "width": 8
+    },
+    {
+      "name": "coarse_beats150",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "final_beats150",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "coarse_saturations150",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "final_saturations150",
+      "direction": "output",
+      "width": 32
+    },
+    {
+      "name": "cfo_window_words150",
+      "direction": "output",
+      "width": 13
+    },
+    {
+      "name": "cfo_windows150",
+      "direction": "output",
+      "width": 7
+    },
+    {
+      "name": "cfo_result150",
+      "direction": "output",
+      "width": 499
+    },
+    {
+      "name": "sfo_diagnostic150",
+      "direction": "output",
+      "width": 256
+    }
+  ],
+  "vhdl_compile": "NOT_RUN"
+}

@@ -1,0 +1,75 @@
+{
+  "status": "FULL_STATIC_DESIGN_REVIEW_COMPLETE_UNDER_EXPLICIT_INPUT_AND_VENDOR_CONTRACTS",
+  "architecture": "SHARED_RAW_PROGRESSIVE_SFO_ONCHIP_DUAL_BANK_CFO_NO_OUTPUT_BACKPRESSURE",
+  "branch": "V5.1_System_Modify",
+  "baseline_commit": "f63bca94558ed0a2bf22a63f25e59da9f1c9c631",
+  "checks": {
+    "manifest_xpr": "MATCH",
+    "source_count": 129,
+    "xpm_count": 3,
+    "ip_count": 45,
+    "syntax_errors": 0,
+    "syntax_warnings": 18,
+    "static_binding_errors": 0,
+    "static_binding_diagnostics": 958,
+    "wrapper_ports": 46,
+    "wrapper_mapping": true,
+    "source_coverage": "ALL_SELECTED_OWNED_SOURCE_GROUPS_MAPPED"
+  },
+  "approved_patches": {
+    "sfo": "APPLIED_HASH_MATCH",
+    "cfo": "APPLIED_HASH_MATCH"
+  },
+  "pending_approved_changes": [],
+  "discovered_confirmed_design_findings": "CLOSED_IN_CURRENT_STATIC_REVIEW",
+  "remaining_evidence_boundaries": [
+    "vendor_fixed_service_contract_native_confirmation",
+    "complete_core_resource_and_physical_timing",
+    "native_CDC_and_platform_constraint_validation",
+    "numerical_comparison_and_finite_interface_acceptance",
+    "measured_sustained_throughput_and_board_test"
+  ],
+  "claims_not_made": [
+    "zero_hardware_risk",
+    "formal_equivalence_proven",
+    "native_functional_pass",
+    "timing_pass",
+    "measured_500MSps_pass"
+  ],
+  "key_bounds": {
+    "raw_live_words": 343561,
+    "cfo_windows": 7,
+    "sfo_bank_cycles150": 714180,
+    "sfo_two_bank_margin_cycles150": 87488,
+    "cfo_bank_cycles150": 703634
+  },
+  "major_memory_estimates": {
+    "raw_uram": 192,
+    "sfo_uram": 328,
+    "cfo_uram": 328,
+    "uram_total": 848,
+    "device_uram": 960,
+    "sfo_ring_bram36_expected": 256,
+    "cfo_window_bram36_expected": 16,
+    "qualification": "architectural geometry only, not synthesis or NI platform availability"
+  },
+  "not_run": [
+    "native_vivado_elaboration",
+    "native_vhdl_compile",
+    "new_numerical_comparison",
+    "rtl_simulation",
+    "new_core_synthesis",
+    "implementation",
+    "ni_integration",
+    "board_test",
+    "measured_multiframe_throughput",
+    "measured_memory_high_water"
+  ],
+  "vivado_metadata_invoked": true,
+  "simulator_invoked": false,
+  "matlab_invoked": false,
+  "synthesis_invoked": false,
+  "implementation_invoked": false,
+  "committed": false,
+  "pushed": false
+}

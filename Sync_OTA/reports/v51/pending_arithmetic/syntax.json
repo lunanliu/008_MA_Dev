@@ -1,0 +1,15 @@
+{
+  "kind": "STATIC_SYNTAX_ONLY_NO_RTL_EXECUTION",
+  "files": [
+    {
+      "path": "Sync_OTA\\reports\\v51\\pending_arithmetic\\sfo_residual_div_u80_u49_rne.sv",
+      "errors": 0,
+      "diagnostics": ""
+    },
+    {
+      "path": "Sync_OTA\\reports\\v51\\pending_arithmetic\\sfo_residual_ls74.sv",
+      "errors": 0,
+      "diagnostics": ""
+    }
+  ]
+}

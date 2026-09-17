@@ -1,9 +1,10 @@
 // Real connection of power/peak -> interpolation -> all-74 LS.
 // Accepts already-computed DTP windows; source FFT/window-memory access is a later boundary.
-module sfo_residual_delay_backend4 (
+module sfo_residual_delay_backend4 #(parameter integer ALLOW_SOURCE_WAIT=0) (
     input  logic                clk,
     input  logic                rst,
     input  logic                abort,
+    input wire source_wait,
     input  logic                frame_valid,
     output logic                frame_ready,
     input  logic        [ 31:0] frame_tag,
@@ -135,9 +136,10 @@ module sfo_residual_delay_backend4 (
       .m_quality_valid(point_quality_valid),
       .busy(ip_busy)
   );
-  sfo_residual_ls74 regression (
+  sfo_residual_ls74 #(.ALLOW_SOURCE_WAIT(ALLOW_SOURCE_WAIT)) regression (
       .clk             (clk),
       .rst             (child_reset),
+      .source_wait(ALLOW_SOURCE_WAIT&&source_wait),
       .abort           (abort),
       .cfg_valid       (state == ARM && !abort),
       .cfg_ready       (ls_cfg_ready),

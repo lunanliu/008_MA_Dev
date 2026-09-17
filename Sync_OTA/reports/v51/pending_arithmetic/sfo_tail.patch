@@ -1,0 +1,179 @@
+--- a/Sync_OTA/rtl/sfo/residual_estimation/sfo_residual_ls74.sv
++++ b/Sync_OTA/rtl/sfo/residual_estimation/sfo_residual_ls74.sv
+@@ -32,7 +32,8 @@
+ );
+   localparam [4:0] IDLE = 0, COLLECT = 1, ACCUM = 2, SQUARE_SD = 3, SCALE_SD = 4, SCALE_SWD = 5,
+       SUB_SD = 6, SUB_SWD = 7, PREP_PPM = 8, SET_PPM = 9, PPM_REQ = 10, PPM_WAIT = 11,
+-      PREP_STEP = 12, STEP_REQ = 13, STEP_WAIT = 14, DONE = 15;
++      PREP_STEP = 12, STEP_REQ = 13, STEP_WAIT = 14, DONE = 15,
++      MUL_ITERATE = 16, SQUARE_SWD = 17, SCALE_SD2 = 18;
+   localparam [48:0] BETA_DENOMINATOR = 49'd158603411456000;
+   localparam [99:0] SSE_LIMIT = 100'd198517092830412800;
+   logic [ 4:0] state;
+@@ -66,8 +67,15 @@
+   wire [23:0] first_magnitude = point_delay[23] ? -point_delay : point_delay;
+   wire [39:0] abs_sd = sum_delay[39] ? -sum_delay : sum_delay;
+   wire [39:0] abs_swd = sum_weighted[39] ? -sum_weighted : sum_weighted;
+-  wire [39:0] square_operand = (state == SQUARE_SD) ? abs_sd : abs_swd;
+-  wire [79:0] square_product = square_operand * square_operand;
++  // Tail-only exact multiplier: one local carry chain per clock.
++  // Operands and absolute values are registered before any iteration.
++  localparam [2:0] MUL_SQUARE_SD=0, MUL_TERM_SD=1, MUL_SQUARE_SWD=2,
++      MUL_TERM_SWD=3, MUL_TERM_SD2=4, MUL_PPM=5;
++  logic [2:0] mul_kind;
++  logic [5:0] mul_remaining;
++  logic [40:0] mul_factor;
++  logic [97:0] mul_shift, mul_accumulator;
++  wire [97:0] mul_sum = mul_accumulator + (mul_factor[0] ? mul_shift : 98'd0);
+   logic [79:0] wide_square;
+   logic [97:0] term_sd, term_swd, term_sd2;
+   logic signed [99:0] sse_partial, sse_numerator;
+@@ -149,6 +157,8 @@
+       sum_weighted <= 0;
+       sum_square <= 0;
+       wide_square <= 0;
++      mul_kind <= 0; mul_remaining <= 0; mul_factor <= 0;
++      mul_shift <= 0; mul_accumulator <= 0;
+       term_sd <= 0;
+       term_swd <= 0;
+       term_sd2 <= 0;
+@@ -226,18 +236,44 @@
+           end
+         end
+         SQUARE_SD: begin
+-          wide_square <= square_product;
+-          state <= SCALE_SD;
++          mul_factor <= {1'b0,abs_sd}; mul_shift <= {58'd0,abs_sd};
++          mul_accumulator <= 0; mul_remaining <= 40; mul_kind <= MUL_SQUARE_SD;
++          state <= MUL_ITERATE;
+         end
+         SCALE_SD: begin
+-          term_sd <= wide_square * 18'd135050;
+-          wide_square <= square_product;
+-          state <= SCALE_SWD;
++          mul_factor <= 41'd135050; mul_shift <= {18'd0,wide_square};
++          mul_accumulator <= 0; mul_remaining <= 18; mul_kind <= MUL_TERM_SD;
++          state <= MUL_ITERATE;
++        end
++        SQUARE_SWD: begin
++          mul_factor <= {1'b0,abs_swd}; mul_shift <= {58'd0,abs_swd};
++          mul_accumulator <= 0; mul_remaining <= 40; mul_kind <= MUL_SQUARE_SWD;
++          state <= MUL_ITERATE;
+         end
+         SCALE_SWD: begin
+-          term_swd <= wide_square * 7'd74;
+-          term_sd2 <= sum_square * 24'd9993700;
+-          state <= SUB_SD;
++          mul_factor <= 41'd74; mul_shift <= {18'd0,wide_square};
++          mul_accumulator <= 0; mul_remaining <= 7; mul_kind <= MUL_TERM_SWD;
++          state <= MUL_ITERATE;
++        end
++        SCALE_SD2: begin
++          mul_factor <= 41'd9993700; mul_shift <= {44'd0,sum_square};
++          mul_accumulator <= 0; mul_remaining <= 24; mul_kind <= MUL_TERM_SD2;
++          state <= MUL_ITERATE;
++        end
++        MUL_ITERATE: begin
++          mul_accumulator <= mul_sum; mul_factor <= mul_factor >> 1;
++          mul_shift <= mul_shift << 1; mul_remaining <= mul_remaining - 1'b1;
++          if (mul_remaining == 1) begin
++            case (mul_kind)
++              MUL_SQUARE_SD: begin wide_square <= mul_sum[79:0]; state <= SCALE_SD; end
++              MUL_TERM_SD: begin term_sd <= mul_sum; state <= SQUARE_SWD; end
++              MUL_SQUARE_SWD: begin wide_square <= mul_sum[79:0]; state <= SCALE_SWD; end
++              MUL_TERM_SWD: begin term_swd <= mul_sum; state <= SCALE_SD2; end
++              MUL_TERM_SD2: begin term_sd2 <= mul_sum; state <= SUB_SD; end
++              MUL_PPM: begin ppm_product <= mul_sum[60:0]; state <= SET_PPM; end
++              default: fail_frame(6);
++            endcase
++          end
+         end
+         SUB_SD: begin
+           sse_partial <= $signed({2'b00, term_sd2}) - $signed({2'b00, term_sd});
+@@ -252,13 +288,14 @@
+           else begin
+             rmse_ok <= sse_numerator <= $signed(SSE_LIMIT);
+             negative_ppm <= beta_numerator[40];
+-            ppm_product <= abs_beta * 20'd1000000;
++            mul_factor <= 41'd1000000; mul_shift <= {57'd0,abs_beta};
++            mul_accumulator <= 0; mul_remaining <= 20; mul_kind <= MUL_PPM;
+             denominator_calc <= $signed(
+                 {1'b0, BETA_DENOMINATOR}
+             ) - $signed(
+                 {{9{beta_numerator[40]}}, beta_numerator}
+             );
+-            state <= SET_PPM;
++            state <= MUL_ITERATE;
+           end
+         end
+         SET_PPM: begin
+--- a/Sync_OTA/rtl/sfo/residual_estimation/sfo_residual_div_u80_u49_rne.sv
++++ b/Sync_OTA/rtl/sfo/residual_estimation/sfo_residual_div_u80_u49_rne.sv
+@@ -29,6 +29,8 @@
+   logic [79:0] next_quotient;
+   logic [49:0] twice_remainder;
+   logic round_up;
++  logic round_up_q;
++  logic [1:0] round_phase;
+ 
+   assign s_ready = !rst && !busy && (!m_valid || m_ready);
+   assign trial = {remainder, quotient_shift[79]};
+@@ -36,9 +38,9 @@
+   assign next_remainder_wide = subtract ? trial - {1'b0, divisor} : trial;
+   assign next_remainder = next_remainder_wide[48:0];
+   assign next_quotient = {quotient_shift[78:0], subtract};
+-  assign twice_remainder = {next_remainder, 1'b0};
++  assign twice_remainder = {remainder, 1'b0};
+   assign round_up = (twice_remainder > {1'b0, divisor}) ||
+-      ((twice_remainder == {1'b0, divisor}) && next_quotient[0]);
++      ((twice_remainder == {1'b0, divisor}) && quotient_shift[0]);
+ 
+   always_ff @(posedge clk) begin
+     if (rst) begin
+@@ -48,6 +50,7 @@
+       tag <= '0;
+       remaining <= '0;
+       busy <= 0;
++      round_phase <= 0; round_up_q <= 0;
+       m_valid <= 0;
+       m_quotient <= '0;
+       m_remainder <= '0;
+@@ -57,6 +60,7 @@
+     end else begin
+       if (m_valid && m_ready) m_valid <= 0;
+       if (s_valid && s_ready) begin
++        round_phase <= 0;
+         if (s_denominator == 0) begin
+           m_valid <= 1;
+           m_tag <= s_tag;
+@@ -74,17 +78,20 @@
+           busy <= 1;
+         end
+       end else if (busy) begin
+-        quotient_shift <= next_quotient;
+-        remainder <= next_remainder;
+-        remaining <= remaining - 1'b1;
+-        if (remaining == 1) begin
+-          busy <= 0;
+-          m_valid <= 1;
+-          m_tag <= tag;
+-          m_quotient <= next_quotient;
+-          m_remainder <= next_remainder;
+-          m_rne <= {1'b0, next_quotient} + {{80{1'b0}}, round_up};
++        if (round_phase == 1) begin
++          // Final quotient/remainder are already registered; separate their
++          // RNE comparison from both the divide subtract and 81-bit increment.
++          round_up_q <= round_up; round_phase <= 2;
++        end else if (round_phase == 2) begin
++          busy <= 0; round_phase <= 0;
++          m_valid <= 1; m_tag <= tag;
++          m_quotient <= quotient_shift; m_remainder <= remainder;
++          m_rne <= {1'b0,quotient_shift} + {{80{1'b0}},round_up_q};
+           m_divide_by_zero <= 0;
++        end else begin
++          quotient_shift <= next_quotient; remainder <= next_remainder;
++          remaining <= remaining - 1'b1;
++          if (remaining == 1) round_phase <= 1;
+         end
+       end
+     end

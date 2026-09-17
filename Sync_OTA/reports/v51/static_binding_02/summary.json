@@ -1,0 +1,11 @@
+{
+  "tool": "pyslang 11.0.0",
+  "kind": "STATIC_BINDING_AND_TYPE_INSPECTION_NO_SIMULATION",
+  "top": "sync_ota_top",
+  "diagnostics": 869,
+  "errors": 123,
+  "error_codes": {
+    "DiagCode(UnknownModule)": 123
+  },
+  "vendor_boundary": "XPM and managed vendor IP definitions not loaded; this is not native Vivado elaboration."
+}

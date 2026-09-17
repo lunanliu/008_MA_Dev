@@ -2,11 +2,13 @@
 // then replay continuously into the main-FFT service, subject only to its ready.
 // All coordinates are COMPLEX SAMPLE indices relative to nominal frame origin 0.
 module sfo_residual_nominal_window_reader4 #(
+    parameter integer PROGRESSIVE_SOURCE=0,
     parameter integer TIMEOUT_CYCLES = 20000
 ) (
     input  logic                clk,
     input  logic                rst,
     input  logic                abort,
+    input logic cfg_window_granted,
     input  logic                cfg_valid,
     output logic                cfg_ready,
     input  logic        [ 31:0] cfg_frame_id,
@@ -159,7 +161,7 @@ module sfo_residual_nominal_window_reader4 #(
           raw_valid <= 0;
           out_valid <= 0;
           out_data <= 0;
-          if (!cfg_source_complete || cfg_source_error != 0) begin
+          if (!(cfg_source_complete||(PROGRESSIVE_SOURCE&&cfg_window_granted)) || cfg_source_error != 0) begin
             done_error <= 1;
             state <= DONE;
           end else if (cfg_source_frame_id != cfg_frame_id ||
@@ -172,7 +174,9 @@ module sfo_residual_nominal_window_reader4 #(
           end else if (cfg_nominal_length != 21'd1336320) begin
             done_error <= 4;
             state <= DONE;
-          end else if (cfg_available_first > 32'sd0 || cfg_available_last < 32'sd1336319) begin
+          end else if ((PROGRESSIVE_SOURCE&&cfg_window_granted) ?
+                       (cfg_available_first>$signed(start_calc)||$signed({cfg_available_last[31],cfg_available_last})<$signed({1'b0,start_calc})+33'sd2047) :
+                       (cfg_available_first > 32'sd0 || cfg_available_last < 32'sd1336319)) begin
             done_error <= 5;
             state <= DONE;
           end else begin

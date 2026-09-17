@@ -17,7 +17,7 @@ module cfo_coordinate_control(
  output logic signed [48:0] m_origin_output_q16
 );
  localparam [63:0] FS=64'd500000000, COARSE_DEN=64'd32768000000000;
- typedef enum logic [2:0] {IDLE,MULTIPLY,DIVIDE,ROUND,OUTPUT_RESULT} state_t;
+ typedef enum logic [2:0] {IDLE,MULTIPLY,DIVIDE,ROUND_PRE,ROUND,OUTPUT_RESULT} state_t;
  typedef enum logic [1:0] {RATIO,STEP,PHASE} mul_kind_t;
  typedef enum logic [1:0] {ORIGIN,D_STEP,D_PHASE} div_kind_t;
  state_t state;mul_kind_t mul_kind;div_kind_t div_kind;
@@ -45,7 +45,10 @@ module cfo_coordinate_control(
  // div_den < 2^62, so doubling the remainder fits in 65 bits.
  wire [64:0] twice_rem=div_rem<<1;
  wire round_up=(twice_rem>{1'b0,div_den})||((twice_rem=={1'b0,div_den})&&div_quot[0]);
- wire [47:0] rounded_quot=div_quot+{{47{1'b0}},round_up};
+ // Capture RNE only after the final divide iteration has registered its result.
+ // This separates the remainder comparison / quotient increment from sign
+ // restoration and conversion to the phase word in ROUND.
+ logic [47:0] rounded_quot;
  wire [47:0] phase_word=(f_negative==o_negative)?48'd0-rounded_quot:rounded_quot;
  function automatic [31:0] rne_down16(input logic [47:0] magnitude);
   logic [32:0] q;
@@ -59,7 +62,7 @@ module cfo_coordinate_control(
    state<=IDLE;mul_kind<=RATIO;div_kind<=ORIGIN;
    residual<=0;f_negative<=0;o_negative<=0;f_abs<=0;o_abs<=0;ratio<=0;origin_mag<=0;
    mul_a<=0;mul_b<=0;mul_acc<=0;mul_count<=0;
-   div_num<=0;div_den<=0;div_rem<=0;div_quot<=0;div_count<=0;
+   div_num<=0;div_den<=0;div_rem<=0;div_quot<=0;div_count<=0;rounded_quot<=0;
    m_frame<=0;m_generation<=0;m_residual<=0;m_ok<=0;m_error<=0;
    m_step<=0;m_phase0<=0;m_step48<=0;m_phase48<=0;m_origin_output_q16<=0;
   end else case(state)
@@ -102,8 +105,11 @@ module cfo_coordinate_control(
    end
    DIVIDE: begin
     div_num<=div_num<<1;div_rem<=next_rem;div_quot<=next_quot;
-    if(div_count==7'd111) state<=ROUND;
+    if(div_count==7'd111) state<=ROUND_PRE;
     else div_count<=div_count+1'b1;
+   end
+   ROUND_PRE: begin
+    rounded_quot<=div_quot+{{47{1'b0}},round_up};state<=ROUND;
    end
    ROUND: case(div_kind)
     ORIGIN: begin

@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 module sfo_uram_frame_bank #(
+    parameter string MEMORY_PRIMITIVE="ultra",
     parameter int unsigned BEAT_WIDTH  = 128,
     parameter int unsigned DEPTH_BEATS = 335_872,
     parameter int unsigned ADDR_WIDTH  = 19
@@ -29,7 +30,7 @@ module sfo_uram_frame_bank #(
       .MEMORY_INIT_FILE("none"),
       .MEMORY_INIT_PARAM("0"),
       .MEMORY_OPTIMIZATION("true"),
-      .MEMORY_PRIMITIVE("ultra"),
+      .MEMORY_PRIMITIVE(MEMORY_PRIMITIVE),
       .MEMORY_SIZE(BEAT_WIDTH * DEPTH_BEATS),
       .MESSAGE_CONTROL(0),
       .READ_DATA_WIDTH_B(BEAT_WIDTH),

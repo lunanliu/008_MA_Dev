@@ -1,6 +1,7 @@
 `timescale 1ns/1ps
-// clk150 atomic join. E1/E2 inputs are the formal engine-config handshakes,
-// never diagnostics. E2 cannot launch until the downstream CFO owns this context.
+// V5.1: independent ordered input queues; registered identity-checked output.
+// One frame can wait for E2 without blocking the next frame's E1 context.
+// No downstream combinational ready path reaches either resampler launch.
 module ota_sfo_context_join (
  input logic clk,rst,cancel,
  input logic meta_valid,output logic meta_ready,
@@ -14,30 +15,52 @@ module ota_sfo_context_join (
  output logic m_valid,input logic m_ready,output logic [213:0] m_context,
  output logic [7:0] error_code
 );
- logic have_meta,have_first;
- logic [31:0] frame_id,generation,step1;
- logic signed [31:0] coarse_hz;
- logic signed [53:0] origin;
- wire first_identity_matches=first_frame==frame_id&&first_generation==generation&&first_step_q28!=0;
- wire second_identity_matches=second_frame==frame_id&&second_generation==generation&&second_step_q28!=0;
- assign meta_ready=!rst&&!cancel&&error_code==0&&!have_meta;
- assign first_ready=!rst&&!cancel&&error_code==0&&have_meta&&!have_first&&first_identity_matches;
- assign m_valid=!rst&&!cancel&&error_code==0&&have_meta&&have_first&&second_valid&&second_identity_matches;
- assign second_ready=m_valid&&m_ready;
- assign m_context={frame_id,generation,step1,second_step_q28,origin,coarse_hz};
- always_ff @(posedge clk)begin
-  if(rst||cancel)begin
-   have_meta<=0;have_first<=0;frame_id<=0;generation<=0;step1<=0;coarse_hz<=0;origin<=0;error_code<=0;
-  end else if(error_code==0)begin
-   if(meta_valid&&meta_ready)begin
-    have_meta<=1;frame_id<=meta_frame;generation<=meta_generation;
-    coarse_hz<=meta_coarse_hz_q8;origin<=meta_raw_origin_q28;
-   end
-   if(first_valid&&have_meta&&!have_first&&!first_identity_matches)error_code<=8'h41;
-   if(second_valid&&have_meta&&have_first&&!second_identity_matches)error_code<=8'h42;
-   if(first_valid&&first_ready)begin have_first<=1;step1<=first_step_q28;end
-   if(m_valid&&m_ready)begin have_meta<=0;have_first<=0;end
+ localparam [1:0] WAIT_HEADS=0,CHECK_IDENTITY=1,HOLD_RESULT=2;
+ logic [1:0] state;
+ wire active=!rst&&!cancel&&error_code==0;
+ wire mr,fr,sr,mv,fv,sv,me,fe,se;
+ wire [149:0] md;
+ wire [95:0] fd,sd;
+ logic [149:0] held_meta;
+ logic [95:0] held_first,held_second;
+ wire take=active&&state==WAIT_HEADS&&mv&&fv&&sv;
+ assign meta_ready=active&&mr;
+ assign first_ready=active&&fr;
+ assign second_ready=active&&sr;
+ assign m_valid=active&&state==HOLD_RESULT;
+ sfo_sync_fifo #(.WIDTH(150),.DEPTH(32)) metadata_queue(
+  .clk(clk),.rst(rst||cancel),.s_valid(meta_valid&&active),.s_ready(mr),
+  .s_data({meta_frame,meta_generation,meta_coarse_hz_q8,meta_raw_origin_q28}),
+  .m_valid(mv),.m_ready(take),.m_data(md),.level(),.high_water(),.reset_busy(),.error_sticky(me));
+ sfo_sync_fifo #(.WIDTH(96),.DEPTH(32)) first_queue(
+  .clk(clk),.rst(rst||cancel),.s_valid(first_valid&&active),.s_ready(fr),
+  .s_data({first_frame,first_generation,first_step_q28}),
+  .m_valid(fv),.m_ready(take),.m_data(fd),.level(),.high_water(),.reset_busy(),.error_sticky(fe));
+ sfo_sync_fifo #(.WIDTH(96),.DEPTH(32)) second_queue(
+  .clk(clk),.rst(rst||cancel),.s_valid(second_valid&&active),.s_ready(sr),
+  .s_data({second_frame,second_generation,second_step_q28}),
+  .m_valid(sv),.m_ready(take),.m_data(sd),.level(),.high_water(),.reset_busy(),.error_sticky(se));
+ always_ff @(posedge clk) begin
+  if(rst||cancel) begin
+   state<=WAIT_HEADS;error_code<=0;m_context<=0;
+   held_meta<=0;held_first<=0;held_second<=0;
+  end else if(error_code==0) begin
+   if(me||fe||se) error_code<=8'h43;
+   else case(state)
+    WAIT_HEADS:if(take)begin
+     held_meta<=md;held_first<=fd;held_second<=sd;state<=CHECK_IDENTITY;
+    end
+    CHECK_IDENTITY:begin
+     if(held_first[95:32]!=held_meta[149:86]||held_first[31:0]==0) error_code<=8'h41;
+     else if(held_second[95:32]!=held_meta[149:86]||held_second[31:0]==0) error_code<=8'h42;
+     else begin
+      m_context<={held_meta[149:86],held_first[31:0],held_second[31:0],held_meta[53:0],held_meta[85:54]};
+      state<=HOLD_RESULT;
+     end
+    end
+    HOLD_RESULT:if(m_ready)state<=WAIT_HEADS;
+    default:error_code<=8'h44;
+   endcase
   end
  end
 endmodule
-

@@ -2,6 +2,7 @@
 // Data-only URAM ring plus a FIFO of one complete identity per frame.
 // Arbitrary frame identifiers are preserved; backpressure is legal.
 module sfo_output_buffer #(
+    parameter string MEMORY_PRIMITIVE="ultra",
     parameter integer FRAME_BEATS = 334080,
     DEPTH = 65536,
     AW = $clog2(DEPTH),
@@ -37,7 +38,10 @@ module sfo_output_buffer #(
   wire hr, hv, hbusy, he, qr, qv, qbusy, qe;
   wire [63:0] hd;
   wire [127:0] rd, qd;
-  wire [63:0] outstanding = issued - consumed;
+  // Local credit ends the read-enable path at a small register. The 64-bit
+  // cumulative counters below remain diagnostics, not RAM issue arithmetic.
+  localparam integer CREDIT_WIDTH = $clog2(RESPONSE_DEPTH + 1);
+  logic [CREDIT_WIDTH-1:0] outstanding;
   assign s_ready = !rst && !halted && occupancy < DEPTH && (input_beat != 0 || hr) && !hbusy;
   wire wf = s_valid && s_ready;
   wire valid_input = s_beat == input_beat && s_beat < FRAME_BEATS &&
@@ -51,6 +55,7 @@ module sfo_output_buffer #(
   wire last = output_beat == FRAME_BEATS - 1;
   assign m_record = {hd[63:32], hd[31:0], output_beat, last, qd};
   sfo_uram_frame_bank #(
+      .MEMORY_PRIMITIVE(MEMORY_PRIMITIVE),
       .DEPTH_BEATS(DEPTH),
       .ADDR_WIDTH (AW)
   ) storage (
@@ -125,6 +130,7 @@ module sfo_output_buffer #(
       fault <= 0;
       first_error <= 0;
       outstanding_high_water <= 0;
+      outstanding <= 0;
     end else begin
       rv <= {rv[0], read_command && !collision};
       if (!fault && bad != 0) begin
@@ -135,6 +141,11 @@ module sfo_output_buffer #(
       if (outstanding > outstanding_high_water) outstanding_high_water <= outstanding;
       if (rv[1] && qr) returned <= returned + 1;
       if (!halted && bad == 0) begin
+        case ({read_command, pop})
+          2'b10: outstanding <= outstanding + 1'b1;
+          2'b01: outstanding <= outstanding - 1'b1;
+          default: begin end
+        endcase
         case ({
           wf, read_command
         })

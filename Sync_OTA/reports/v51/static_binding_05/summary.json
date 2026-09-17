@@ -1,0 +1,40 @@
+{
+  "tool": "pyslang 11.0.0",
+  "kind": "STATIC_BINDING_AND_TYPE_INSPECTION_NO_SIMULATION",
+  "top": "sync_ota_top",
+  "diagnostics": 963,
+  "errors": 0,
+  "error_codes": {},
+  "all_diagnostic_codes": {
+    "DiagCode(EmptyOutputPortConn)": 418,
+    "DiagCode(ArithOpMismatch)": 76,
+    "DiagCode(SignConversion)": 296,
+    "DiagCode(SignCompare)": 83,
+    "DiagCode(WidthTruncate)": 27,
+    "DiagCode(UnsignedArithShift)": 4,
+    "DiagCode(CaseRedundantDefault)": 6,
+    "DiagCode(CaseDefault)": 1,
+    "DiagCode(MisleadingIndentation)": 11,
+    "DiagCode(UnconnectedOutputPort)": 9,
+    "DiagCode(PackedArrayConv)": 2,
+    "DiagCode(WidthExpand)": 9,
+    "DiagCode(LogicalOpParentheses)": 1,
+    "DiagCode(UselessCast)": 9,
+    "DiagCode(NewlineEOF)": 11
+  },
+  "vendor_boundary": "Vendor IP black-box stubs and XPM interface declarations only; bodies and primitive mapping are NOT checked.",
+  "xpm_header_sources": [
+    {
+      "path": "rtl\\vendor\\xpm\\xpm_cdc.sv",
+      "sha256": "d08434ed5a310c44c13936d6eda5381d64ff0f627a335368c85826a30e8adaa7"
+    },
+    {
+      "path": "rtl\\vendor\\xpm\\xpm_fifo.sv",
+      "sha256": "d3c1e861cddf00ebc82552c464a46fb5228e68b4d458001d064b99e04134b9d4"
+    },
+    {
+      "path": "rtl\\vendor\\xpm\\xpm_memory.sv",
+      "sha256": "e72758e6794b1f7ad00428feeeacc4f90a38b0500583b2ca93ca2eba12ba01bd"
+    }
+  ]
+}
