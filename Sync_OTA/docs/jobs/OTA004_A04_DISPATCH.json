@@ -1,7 +1,7 @@
 {
   "job": "OTA004",
   "revision": "A04",
-  "state": "FROZEN_AWAITING_CONCRETE_MANAGER_SLOT",
+  "state": "RETURNED_PREPARE_RETAINED_SMOKE_FAILED",
   "manifest": "docs/jobs/OTA004_A04_source_lock.json",
   "manifest_sha256": "1d94a73ad774021113378cd1ea1844de028ae3dd5063d1ff36effd4ad2719559",
   "stages": [
@@ -9,11 +9,20 @@
     "smoke",
     "synth"
   ],
-  "native_started": false,
+  "native_started": true,
   "old_grants_reusable": false,
-  "created_utc": "2026-09-17T01:00:10.484081+00:00",
+  "created_utc": "2026-09-17T03:00:10.484081+02:00",
   "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
   "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
   "first_native_start_utc": "2026-09-17T00:44:33.0452158Z",
-  "whole_job_hard_deadline_utc": "2026-09-17T03:44:33.0452158Z"
+  "whole_job_hard_deadline_utc": "2026-09-17T03:44:33.0452158Z",
+  "commit": "04d691501acda10742657a1b5260c67b1befe375",
+  "dispatched_utc": "2026-09-17T01:03:29.0837978+00:00",
+  "prepare": "LIMITED_PREPARE_PASS",
+  "smoke": "NOT_PASS_XPM_RESET_ASSERTIONS",
+  "synth": "NOT_RUN",
+  "review": "reports/OTA004/A04_STAGE_REVIEW.json",
+  "grant_id": "SYNC_OTA_OTA004_A04_20260917T010624Z",
+  "grant_returned_utc": "2026-09-17T01:41:57.4773415+00:00",
+  "updated_utc": "2026-09-17T01:53:49.374228+00:00"
 }

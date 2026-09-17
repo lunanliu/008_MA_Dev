@@ -1,0 +1,81 @@
+{
+  "stages": {
+    "prepare": {
+      "status": "LIMITED_PREPARE_PASS",
+      "exit_code": 0,
+      "tree_closed_utc": "2026-09-17T01:13:45.6215645Z",
+      "recorded_identities": 55,
+      "native_error_lines": 0,
+      "result_marker": "OTA004_PROJECT_PREPARE_PASS",
+      "evidence": [
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a04\\native.log",
+          "sha256": "7bb504334e52f2c8bb3c57c3b56b7add07f87b7c54422d15c59b76d01e78e674"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a04\\process_summary.json",
+          "sha256": "2ea0c8cc75ba90b08c55a21c539dbf2f61140efb4499b6e0cfdd072db7e3440b"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a04\\process_tree.jsonl",
+          "sha256": "6fba9529b558220770f43592b6424cc90245158be28013157e1c20d6e5ce6692"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a04\\project_identity_verified.json",
+          "sha256": "1ba52cdead4631b1a7a7b5d17de414e560052a3996ccd0da65169c2cea8e622c"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a04\\result.txt",
+          "sha256": "fad6d4d0c336d0f0242ca97842030689559030b49a05755dabaf44da0eb7d05e"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a04\\wrapper_syntax.txt",
+          "sha256": "902884c71857f1e54e162e7a2bba84c9369e9d9ccaf1f8c33f29635f5482dd38"
+        }
+      ]
+    },
+    "smoke": {
+      "status": "NOT_PASS_XPM_RESET_ASSERTIONS",
+      "exit_code": 0,
+      "tree_closed_utc": "2026-09-17T01:26:49.4599453Z",
+      "recorded_identities": 71,
+      "native_error_lines": 18,
+      "result_marker": "OTA004_REAL_TOP_SMOKE_PASS",
+      "evidence": [
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a04\\native.log",
+          "sha256": "590f35ebe9a19e061c11626c85c644b2b0dfb84ae944f67335cee3e5bf953e30"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a04\\process_summary.json",
+          "sha256": "82fe275950b5fc0b38558f934fd5a6a55b49ba55e59d37c6e49fa8e87c8e6861"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a04\\process_tree.jsonl",
+          "sha256": "7b05c375b9f1347411fa52ea3cbe6ac4576d43836e05b40aee7b3260112fa5d1"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a04\\project_identity_verified.json",
+          "sha256": "d486216cf78cc3ef0f435f60cf13d6f363fba2288db04e9d52d13241ada9f547"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a04\\result.txt",
+          "sha256": "a3857e9b8081069a1ec781c8b2bc49e86dbcacbc34301b94304a735884b52ffe"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a04\\simulate.log",
+          "sha256": "205d12806b312dead162fc7f18be12e052abf6bd9e2a9ae8179f248d9284d650"
+        },
+        {
+          "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a04\\binding_verified.json",
+          "sha256": "9871d539a16d5320e9219c664e2627452ddac3d2a3f941c224f0e7a18b1068f6"
+        }
+      ]
+    }
+  },
+  "synth": "NOT_RUN",
+  "full_frame_algorithm": "NOT_RUN",
+  "board": "NOT_RUN",
+  "first_native_start_utc": "2026-09-17T00:44:33.0452158Z",
+  "whole_job_hard_deadline_utc": "2026-09-17T03:44:33.0452158Z"
+}

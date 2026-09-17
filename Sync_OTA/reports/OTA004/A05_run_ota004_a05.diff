@@ -1,0 +1,126 @@
+--- tools/vivado/run_ota004_a04.tcl
++++ tools/vivado/run_ota004_a05.tcl
+@@ -1,9 +1,9 @@
+ # Complete real project, short control smoke, then one core synthesis/export.
+ set root [file normalize [file join [file dirname [info script]] ../..]]
+-if {$argc != 2} {error "usage: -tclargs prepare|smoke|synth <new-attempt-directory>"}
++if {$argc != 2} {error "usage: -tclargs smoke|synth <new-attempt-directory>"}
+ set stage [lindex $argv 0]
+ set out [file normalize [lindex $argv 1]]
+-if {$stage ni {prepare smoke synth} || ![file isdirectory $out]} {error "stage/attempt"}
++if {$stage ni {smoke synth} || ![file isdirectory $out]} {error "stage/attempt"}
+ set xpr [file join $root Sync_OTA.xpr]
+ set hook [file join $root tools/vivado/run_threads.tcl]
+ proc read_lines {p} {
+@@ -62,77 +62,36 @@
+   if {$generated} {foreach file [get_files -compile_order sources -used_in $usage] {puts $cf [file normalize $file]}}
+   close $cf
+  }
+- puts [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_a04_project.py] $out]
++ puts [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_a05_project.py] $out]
+ }
+ set memories {ip/rom/fine_ps1_reference_16lane.mem ip/rom/residual_pilot_phase.mem ip/cfo/cfo_rot_lut.mem ip/cfo/fft2048_twiddle.mem ip/cfo/front2048_coefficient_index.mem ip/cfo/front2048_coefficient_table.mem ip/cfo/fft256_twiddle.mem ip/cfo/phase74_atan_q31.mem}
+-if {$stage eq "prepare" && ![file exists $xpr]} {
+- create_project Sync_OTA $root -part xcvu11p-flgb2104-2-e
+- set_property target_language Verilog [current_project]
+- set_property simulator_language Mixed [current_project]
+- set_property target_simulator XSim [current_project]
+- set_property default_lib ota_xpm [current_project]
+- set_property XPM_LIBRARIES {} [current_project]
+- foreach rel [read_lines [file join $root rtl/sources.f]] {
+-  set p [file join $root $rel];add_files -norecurse $p;set_property LIBRARY ota_xpm [get_files $p]
++if {![file exists $xpr]} {error "reuse of accepted A04 prepare requires the existing root project"}
++open_project $xpr
++if {$stage eq "smoke"} {
++ # Change only these two owned source members; retain all generated IP/MIF targets.
++ foreach spec {{sources_1 rtl/control/sync_ota_top.sv rtl/control/sync_ota_top_a05.sv} {sim_1 sim/tb/sync_ota_smoke_tb.sv sim/tb/sync_ota_smoke_tb_a05.sv}} {
++  lassign $spec fs oldrel newrel
++  set oldp [file join $root $oldrel];set newp [file join $root $newrel]
++  set oldmember [get_files -quiet $oldp]
++  if {[llength $oldmember]} {remove_files $oldmember}
++  if {![llength [get_files -quiet $newp]]} {add_files -fileset $fs -norecurse $newp}
++  set_property LIBRARY ota_xpm [get_files $newp]
+  }
+- foreach rel [read_lines [file join $root rtl/headers_ota004_a02.f]] {
+-  set p [file join $root $rel];add_files -norecurse $p
+-  set_property FILE_TYPE {Verilog Header} [get_files $p]
+-  set_property LIBRARY ota_xpm [get_files $p]
+-  set_property USED_IN_SYNTHESIS true [get_files $p]
+-  set_property USED_IN_SIMULATION true [get_files $p]
+- }
+- foreach fs {sources_1 sim_1} {
+-  set_property INCLUDE_DIRS [list [file join $root rtl/include]] [get_filesets $fs]
+- }
+- foreach n {xpm_cdc xpm_memory xpm_fifo} {
+-  set p [file join $root rtl/vendor/xpm/${n}.sv];add_files -norecurse $p
+-  set_property LIBRARY ota_xpm [get_files $p];set_property USED_IN_SIMULATION false [get_files $p]
+-  set p [file join $root sim/vendor/link010r1/${n}.sv];add_files -fileset sim_1 -norecurse $p
+-  set_property LIBRARY ota_xpm [get_files $p];set_property USED_IN_SYNTHESIS false [get_files $p];set_property USED_IN_IMPLEMENTATION false [get_files $p]
+- }
+- foreach rel $memories {add_files -norecurse [file join $root $rel]}
+- set ipfiles {};foreach rel [read_lines [file join $root ip/sources_a04.f]] {lappend ipfiles [file join $root $rel]}
+- # Official import produces owned managed copies; never mutate frozen baseline XCIs.
+- import_ip -files $ipfiles
+- add_files -fileset constrs_1 -norecurse [file join $root constraints/sync_ota_clocks.xdc]
+- add_files -fileset sim_1 -norecurse [file join $root sim/tb/sync_ota_smoke_tb.sv]
+- set_property LIBRARY ota_xpm [get_files [file join $root sim/tb/sync_ota_smoke_tb.sv]]
+- add_files -fileset utils_1 -norecurse $hook
++ set guard [file join $root rtl/control/ota_algorithm_reset_guard.sv]
++ if {![llength [get_files -quiet $guard]]} {add_files -fileset sources_1 -norecurse $guard}
++ set_property LIBRARY ota_xpm [get_files $guard]
+  set_property top sync_ota_top [get_filesets sources_1]
+  set_property top sync_ota_smoke_tb [get_filesets sim_1]
+- set_property xsim.elaborate.mt_level 16 [get_filesets sim_1]
+- set_property xsim.elaborate.debug_level typical [get_filesets sim_1]
+- set_property xsim.simulate.runtime 0ns [get_filesets sim_1]
+-} else {
+- if {![file exists $xpr]} {error "prepare has not created the project"}
+- if {$stage eq "prepare"} {
+-  puts [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/repair_ota004_a04_managed.py] $out]
+- }
+- open_project $xpr
+ }
++
+ source $hook
+ hooks
+ update_compile_order -fileset sources_1
+ update_compile_order -fileset sim_1
+-if {$stage eq "prepare"} {audit_project 0} else {audit_project}
++audit_project
+ puts "OTA004_IDENTITY stage=$stage vivado=[version -short] part=[get_property PART [current_project]] top=[get_property TOP [get_filesets sources_1]] ip_count=[llength [get_ips]] xelab=[get_property xsim.elaborate.mt_level [get_filesets sim_1]]"
+ set failed [catch {
+ switch -- $stage {
+- prepare {
+-  report_ip_status -file [file join $out ip_status_before.txt]
+-  # No force: completed targets are reused when continuing a failed setup.
+-  generate_target all [get_ips]
+-  export_ip_user_files -of_objects [get_ips] -no_script -sync
+-  update_compile_order -fileset sources_1
+-  update_compile_order -fileset sim_1
+-  audit_project
+-  set cwd [pwd];set checkdir [file join $out wrapper_syntax];file mkdir $checkdir;cd $checkdir
+-  set code [catch {exec C:/NIFPGA/programs/Vivado2021_1/bin/xvhdl.bat --2008 [file join $root wrapper/sync_ota_wrapper.vhd] 2>@1} output]
+-  set f [open [file join $out wrapper_syntax.txt] w];puts $f $output;close $f;puts $output;cd $cwd
+-  if {$code} {error "independent VHDL wrapper syntax failed"}
+-  set marker OTA004_PROJECT_PREPARE_PASS
+- }
+  smoke {
+   set simdir [file join $root Sync_OTA.sim sim_1 behav xsim];file mkdir $simdir
+   foreach rel $memories {
+@@ -140,13 +99,14 @@
+    if {![file exists $dst]} {file copy [file join $root $rel] $dst}
+   }
+   launch_simulation
+-  puts [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_a04_project.py] $out $simdir]
+-  set binding [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_binding.py] $simdir]
++  puts [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_a05_project.py] $out $simdir]
++  set binding [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_a05_binding.py] $simdir]
+   puts $binding;set f [open [file join $out binding_verified.json] w];puts $f $binding;close $f
+   run all
+   set f [open [file join $simdir result.txt] r];set marker [string trim [read $f]];close $f
+   if {$marker ne "OTA004_REAL_TOP_SMOKE_PASS"} {error "real top smoke marker missing"}
+   close_sim
++  puts [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_a05_sim_result.py] $simdir $out]
+  }
+  synth {
+   # Aggregate budget: four simultaneous IP synthesis children at most; each

@@ -1,0 +1,31 @@
+--- rtl/control/sync_ota_top.sv
++++ rtl/control/sync_ota_top_a05.sv
+@@ -69,10 +69,15 @@
+  wire e1v,e1r,e2v,e2r;wire [223:0] e1record,e2record;
+  wire sfo_mv,sfo_mr,sfo_mreset;wire [224:0] sfo_record;
+  wire context_reset150;
+- // Preserve normal completion diagnostics until Host acknowledges done.
+- // The frozen controller requests a reset in COMPLETE; defer that one state
+- // until IDLE. Cancel still asserts immediately and drains DDR independently.
+- wire effective_sfo_reset125=sfo_reset125&&(stage125!=6'd17);
++ // Preserve diagnostics only for an error-free normal completion.
++ // Cancel/reject COMPLETE must keep reset asserted until the next session;
++ // releasing it for one Host-ack cycle creates an illegal XPM reset pulse.
++ wire normal_completion125=(stage125==6'd17)&&(error125==8'h00);
++ wire requested_sfo_reset125=sfo_reset125&&!normal_completion125;
++ wire effective_sfo_reset125,algorithm_reset_stable125;
++ ota_algorithm_reset_guard algorithm_reset_guard(
++  .clk125(clk125),.global_reset(reset_request||rst125),.request_reset(requested_sfo_reset125),
++  .reset_active(effective_sfo_reset125),.reset_stable(algorithm_reset_stable125));
+  wire [7:0] live_sfo_error125,live_sfo_error150,live_context_error150,live_cfo_error150;
+  wire [255:0] live_sfo_diagnostic150;
+  wire [511:0] live_sfo_monitor125,live_sfo_monitor150;
+@@ -123,7 +128,7 @@
+   .frame_valid(frame_v),.frame_ready(frame_r),.frame_record(frame_record),.coarse_valid(coarse_v),.coarse_ready(coarse_r),.coarse_record(coarse_record),
+   .fine_valid(fine_v),.fine_ready(fine_r),.fine_record(fine_record),.meta_valid(meta_sv),.meta_ready(meta_sr),.meta_record(meta_sd),
+   .algorithm_error(sfo_fault||algorithm_fault125),.cfo_cancel(cancel125),.cfo_busy(cfo_busy125),
+-  .cfo_done_valid(completion_v),.cfo_done_ready(completion_r),.cfo_done_error(completion_error),.bridge_idle(ddr_idle125),.bridge_error(ddr_error125),
++  .cfo_done_valid(completion_v),.cfo_done_ready(completion_r),.cfo_done_error(completion_error),.bridge_idle(ddr_idle125&&algorithm_reset_stable125),.bridge_error(ddr_error125),
+   .cmd_valid(raw_cv),.cmd_ready(raw_cr),.cmd_write(raw_cw),.cmd_address(raw_ca),.cmd_tag(raw_ct),.cmd_data(raw_cd),
+   .rsp_valid(raw_rv),.rsp_ready(raw_rr),.rsp_tag(raw_rt),.rsp_data(raw_rd),.rsp_error(raw_re));
+  // 536870912 is an offline scheduling guard (3.58 s at150), not the old

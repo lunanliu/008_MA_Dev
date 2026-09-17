@@ -1,0 +1,14 @@
+{
+  "status": "A05_STATIC_REVIEW_PASS",
+  "unchanged_75_port_interface": true,
+  "verible_top_and_tb": "PASS",
+  "python_ast": "PASS",
+  "tcl_structure": "PASS",
+  "old_smoke_exit_zero_rejected_by_new_gate": true,
+  "old_native_error_lines": 18,
+  "native_a05": "NOT_RUN",
+  "new_reset_guard": "16 assert / 128 release cycles at running 125MHz",
+  "early_cancel_native_probe": "PENDING; 4 real FIFO probes in same smoke",
+  "rtl_count": 128,
+  "module_package_count": 136
+}

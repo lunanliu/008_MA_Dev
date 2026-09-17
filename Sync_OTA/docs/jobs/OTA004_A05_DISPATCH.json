@@ -1,0 +1,45 @@
+{
+  "job": "OTA004",
+  "revision": "A05",
+  "state": "FROZEN_WAITING_CONCRETE_MANAGER_SLOT",
+  "manifest": "docs/jobs/OTA004_A05_source_lock.json",
+  "manifest_sha256": "1108282a6edc129cf4ee0d371f7f163fe7f43a27b50b87ffda4a4a5655b33cc6",
+  "locked_files": 216,
+  "stages": [
+    "smoke",
+    "synth"
+  ],
+  "native_started": false,
+  "old_grants_reusable": false,
+  "prepare_repeat_allowed": false,
+  "created_utc": "2026-09-17T01:53:49.374228+00:00",
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "first_native_start_utc": "2026-09-17T00:44:33.0452158Z",
+  "whole_job_hard_deadline_utc": "2026-09-17T03:44:33.0452158Z",
+  "tools": [
+    {
+      "path": "tools/vivado/run_ota004_a05.tcl",
+      "sha256": "db0a8d99a099f0b705342d5fc0e9821b45eb9af3a8615610b0e93a483f1dde77"
+    },
+    {
+      "path": "tools/monitor_ota004_a03.ps1",
+      "sha256": "7cf6b090511e067f75f14cb6fc22994d666a19da65dd4ea1d934fa5d8a6c1659"
+    },
+    {
+      "path": "tools/verify_ota004_a05_project.py",
+      "sha256": "8ac98262f200c1dab4a1ffdac6ef485fa3bb53193a6d0c5c71d620687b2b70e4"
+    },
+    {
+      "path": "tools/verify_ota004_a05_binding.py",
+      "sha256": "bc7c5a0083a431fb0caf4245d40640c0d9cb3f66bf1cfbaed1443355fc36c66a"
+    },
+    {
+      "path": "tools/verify_ota004_a05_sim_result.py",
+      "sha256": "c220c8cef7284351256e91089c7588d6b84d97fdeb12a3d14f55be00fe82f687"
+    }
+  ],
+  "predecessor_review": "reports/OTA004/A04_STAGE_REVIEW.json",
+  "static_review": "reports/OTA004/A05_STATIC_REVIEW.json",
+  "dependency_review": "reports/OTA004/A05_DEPENDENCY_REVIEW.json"
+}

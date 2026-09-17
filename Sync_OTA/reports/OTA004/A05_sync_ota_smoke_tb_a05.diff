@@ -1,0 +1,75 @@
+--- sim/tb/sync_ota_smoke_tb.sv
++++ sim/tb/sync_ota_smoke_tb_a05.sv
+@@ -156,6 +156,59 @@
+  );
+ 
+  integer cycles=0,commands=0,replies=0,response_delay=0,outfile;
++
++ logic guard_request=1;
++ wire guarded_reset,guard_stable;
++ logic guard_test_armed=0,guard_test_done=0;
++ time guard_release_time;
++ wire [3:0] probe_wr_reset,probe_rd_reset;
++ ota_algorithm_reset_guard guard_probe(
++  .clk125(clk125),.global_reset(reset_request),.request_reset(guard_request),
++  .reset_active(guarded_reset),.reset_stable(guard_stable));
++ for(genvar g=0;g<4;g=g+1)begin:reset_probes
++  wire write_clock=(g<2)?clk125:clk150;
++  wire read_clock=(g<2)?clk150:clk125;
++  sfo_record_cdc_fifo #(.WIDTH(8),.DEPTH((g%2==0)?32:1024)) fifo_probe(
++   .wr_clk(write_clock),.rd_clk(read_clock),.reset_request(guarded_reset),
++   .s_valid(1'b0),.s_ready(),.s_data(8'h00),.m_valid(),.m_ready(1'b0),.m_data(),
++   .wr_level(),.rd_level(),.wr_high_water(),.rd_high_water(),
++   .wr_reset_active(probe_wr_reset[g]),.rd_reset_active(probe_rd_reset[g]),
++   .wr_error(),.rd_error());
++ end
++ always @(posedge guarded_reset)begin
++  if(guard_test_armed)begin
++   if(($time-guard_release_time)<1024)$fatal(1,"early cancel truncated reset recovery interval");
++   if(probe_wr_reset!==4'b0000||probe_rd_reset!==4'b0000)
++    $fatal(1,"early cancel reasserted while representative FIFO reset busy");
++  end
++ end
++ initial begin
++  wait(reset_request===1'b1);wait(reset_request===1'b0);
++  repeat(2)@(negedge clk125);guard_request=0;
++  @(negedge guarded_reset);guard_release_time=$time;guard_test_armed=1;
++  // Cancel at the first half-cycle after reset release.
++  @(negedge clk125);guard_request=1;
++  @(posedge guarded_reset);wait(guard_stable);
++  guard_test_done=1;
++  $display("OTA004_EARLY_CANCEL_RESET_PASS real_fifo_probes=4 clocks_both_directions=1 depths_32_1024=1 all_busy_clear_before_reassert=1");
++ end
++ integer startup_samples=0;
++ // Evidence for the vendor FPO warning at 20ns: its public reset input must
++ // remain asserted throughout these four adjacent startup samples.
++ always @(negedge clk125)begin
++  if(startup_samples<4)begin
++   startup_samples=startup_samples+1;
++   if(reset_request!==1'b1||dut.frontend.estimator_rst_n!==1'b0||accepted_words125!==0)
++    $fatal(1,"startup reset input not held");
++   $display("OTA004_STARTUP_RESET_SAMPLE sample=%0d raw_reset=1 estimator_reset_n=0 accepted_words=0",startup_samples);
++  end
++  if(monitor_enable)begin
++   // This short test cancels during capture and rejects length0; it never
++   // authorizes SFO processing, including COMPLETE and Host acknowledgments.
++   if(dut.effective_sfo_reset125!==1'b1)$fatal(1,"SFO reset released during cancel/reject completion");
++  end
++ end
++
+  logic pending=0,hold_response=0,monitor_enable=0;
+  logic [64:0] held_tag;logic [127:0] held_data;
+  always @(negedge clk125)ddr_cmd_ready=(cycles%5<3)&&!pending;
+@@ -207,6 +260,12 @@
+   if(!start_ready||dut.completion_v||dut.cfo_busy150)$fatal(1,"late duplicate completion or not reusable");
+   start_capture(0);while(!done)@(negedge clk125);
+   if(error125!==8'h10||commands!=3||replies!=3)$fatal(1,"invalid configuration generated traffic");
++  done_ready=1;@(negedge clk125);done_ready=0;
++  repeat(80)@(negedge clk125);
++  if(!start_ready||dut.completion_v||dut.cfo_busy150||dut.effective_sfo_reset125!==1'b1)
++   $fatal(1,"invalid configuration acknowledge did not return reset-held idle");
++  if(!guard_test_done)$fatal(1,"early cancellation reset probe incomplete");
++  $display("OTA004_RESET_GUARD_PASS cancel_completion=1 invalid_completion=1 both_acknowledged=1 reset_continuous=1");
+   outfile=$fopen("result.txt","w");if(!outfile)$fatal(1,"result open");$fdisplay(outfile,"OTA004_REAL_TOP_SMOKE_PASS");$fclose(outfile);
+   $display("OTA004_REAL_TOP_SMOKE_PASS real_algorithms_elaborated=1 pending_ddr_cancel=1 complete_once=1 reusable=1 invalid_config=1");$finish;
+  end
