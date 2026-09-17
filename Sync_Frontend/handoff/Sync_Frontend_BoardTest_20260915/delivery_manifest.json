@@ -1,0 +1,85 @@
+{
+  "package": "Sync_Frontend_BoardTest_20260915",
+  "runtime": "MATLAB R2024a",
+  "baseline_samples": 60324,
+  "result_words_per_record": 9,
+  "validation": "I/Q two-column revision: 60324 rows, exact sample equality and MATLAB generator/waveform reader passed. No board test.",
+  "board_data_tested": false,
+  "files": [
+    {
+      "path": "README_ZH.md",
+      "bytes": 16475,
+      "sha256": "4542156b6175e0e8bd099b86a2e844b215857236e327c104b73df15e031f6d1a"
+    },
+    {
+      "path": "generate_frontend_csv.m",
+      "bytes": 7663,
+      "sha256": "7e4a543be3e1ae785e3168bf6de89f5fcce609a87dfdf8ec4b9e0198358440a0"
+    },
+    {
+      "path": "analyze_frontend_waveform.m",
+      "bytes": 4120,
+      "sha256": "3c909e640bf8856558f163a6c331e2d53f17cf8fc85d5a72027528f2644a7108"
+    },
+    {
+      "path": "analyze_frontend_readback.m",
+      "bytes": 8286,
+      "sha256": "ef32f7cef2421cb6a1dacd329f69deab3dc21c41743ae53a8591661f897cdc68"
+    },
+    {
+      "path": "validate_frontend_boardtest.m",
+      "bytes": 7191,
+      "sha256": "4c672d009637312a5b28a7bc76cec4cbf3a5cece4d9f733e042c2077fc26b0a4"
+    },
+    {
+      "path": "data\\baseline\\expected_truth.csv",
+      "bytes": 216,
+      "sha256": "190ae104c642609af181295889e1782257fbaa2f4344781bda25bff391c38258"
+    },
+    {
+      "path": "data\\baseline\\host_chunks.csv",
+      "bytes": 1401,
+      "sha256": "2f85c04f4bae787a34c40f63bd49e61281e7fdb9739c66562d5d219a4d343d15"
+    },
+    {
+      "path": "reference\\autonomous_stream.mem",
+      "bytes": 512754,
+      "sha256": "98fffec3b2773996e54aa7608b1c2e112bc9f97fd3672f7d27bdc1b614c550d4"
+    },
+    {
+      "path": "reference\\autonomous_manifest.json",
+      "bytes": 1289,
+      "sha256": "091b1e84402eb98fd8dda71c673ce523207da00303f2241198b917c435e18f83"
+    },
+    {
+      "path": "reference\\autonomous_results.csv",
+      "bytes": 230,
+      "sha256": "c1de1e8217fe4cb96597ddf1b019a6b1f0b7bd9e72fe81f6d695fae14297db1e"
+    },
+    {
+      "path": "reference\\example_SIMULATION_readback_u32.csv",
+      "bytes": 196,
+      "sha256": "e65460892afa97bacf4ef410e1359c959f6f5db9d1ddc5243e1792a28c7d293a"
+    },
+    {
+      "path": "validation\\attempt_02\\validation_summary.json",
+      "bytes": 470,
+      "sha256": "509ac669df7c26f6b9542d08985eb4f9fe33eaeea6c65ac18304b4058b9f22fd"
+    },
+    {
+      "path": "data\\baseline\\input_iq.csv",
+      "bytes": 393372,
+      "sha256": "c869ff1082df14b753a165888e8e642832e76501a68da1c5a348f21512b0aeee"
+    },
+    {
+      "path": "data\\baseline\\manifest.json",
+      "bytes": 684,
+      "sha256": "afe43ae80ef35f13f925231ac85ec0f5c1da997973c7bb64acc1a5c8ab0a3d49"
+    },
+    {
+      "path": "validation\\iq_columns_01\\format_check.json",
+      "bytes": 337,
+      "sha256": "7887285ce3b399cb55d3dbe275f37609b5e56396445aa91a0f18dbe525aac104"
+    }
+  ]
+}

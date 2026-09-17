@@ -1,0 +1,43 @@
+{
+  "release": "Sync_Frontend_SF003_20260915_rev02",
+  "core_top": "sync_frontend_top",
+  "clip_top": "sync_frontend_clip",
+  "core_rtl_commit": "2e968f6e33a82a000326be9e6d9c7c97da9342bc",
+  "part": "xcvu11p-flgb2104-2-e",
+  "vivado": "2021.1",
+  "selected_core": {
+    "file": "clip/sync_frontend_top.dcp",
+    "sha256": "553debe94bd9b187f15fb9ee8069ed0258b7976b57ff8e98609588139746cfad",
+    "source": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_DCP_check_20260914T223135Z\\clip_dcp\\sync_frontend_top.dcp",
+    "origin": "OOC relink/export of the complete EDF and 43 EDN from the accepted original core synthesis; no RTL/IP resynthesis; no VHDL wrapper included",
+    "native_reopen": "PASS",
+    "blackboxes": 0,
+    "device_pad_io": 0
+  },
+  "original_synthesis": {
+    "file": "evidence/original_synthesis/sync_frontend_synth_original.dcp",
+    "sha256": "eee1c76628ea07e6d1324fc14d2621f88cef810e046e6f3d83f4ce0011133d89",
+    "reason_not_primary_import": "Contains standalone create_clock and output-delay budgets; retained unchanged for provenance"
+  },
+  "source_edif": {
+    "sha256": "50cb5fb1a286d31a85c478039ff269e4262aa6336ba971bd8df2995de22535ba",
+    "edn_count": 43,
+    "complete_original_package": "D:\\008_MA_Dev\\Sync_Frontend\\release\\Sync_Frontend_SF003_20260915_rev01\\clip_edif"
+  },
+  "wrapper": {
+    "file": "clip/sync_frontend_clip.vhd",
+    "changes": "One explanatory comment only; logic and ports unchanged"
+  },
+  "status": {
+    "core_synthesis": "ACCEPTED",
+    "core_dcp_native_reopen": "PASS",
+    "custom_wrapper_diagnostic": "INCOMPLETE_NOT_RELEASE_GATE",
+    "ni_clip_import": "NOT_RUN",
+    "ni_target_compile": "NOT_RUN",
+    "ni_interface_timing": "NOT_RUN",
+    "board": "NOT_RUN",
+    "sustained_throughput": "NOT_QUALIFIED"
+  },
+  "old_release_manifest_sha256": "d6387d41e64a8969e7d7bcda490ebed4e7dc4fa69ea84f18750231ffe4d0bee3",
+  "native_runs_started_for_rev02": 0
+}

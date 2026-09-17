@@ -1,0 +1,13 @@
+{
+  "job": "SFO-FN01",
+  "status": "DISPATCHED_TO_UNIQUE_LUNA",
+  "dispatched_at": "2026-09-15T17:51:24.7821726+02:00",
+  "grant_id": "SFO_FN01_20260915_OPEN_COMPILE_ELABORATE",
+  "admission_sha256": "1EBDB7340CAD52B564696BD3B462766F76613339C37D1DD76CBCB1EA99333D5E",
+  "request_sha256": "1C035455EB5C4858D3451988B2159E68F2C588D0FAF69714A2D9E7D1A9243EEA",
+  "astra": "01a0a53b-5d75-7e92-9b0b-184308ae662a",
+  "luna": "01a0a592-d143-7770-a6e6-fa45251be664",
+  "native_start_confirmed": false,
+  "next_owner": "Luna preflight and monitored execution",
+  "astra_state": "WAITING_LUNA"
+}

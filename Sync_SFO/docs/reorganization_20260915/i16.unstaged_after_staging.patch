@@ -1,0 +1,158 @@
+diff --git a/README_ZH.md b/README_ZH.md
+index 21bf9ab..cdb25a8 100644
+--- a/README_ZH.md
++++ b/README_ZH.md
+@@ -1,66 +1,59 @@
+-# 双通道 I16 加减一 CLIP
++# 双通道 I16 加减一：Vivado 工程与手工测试
+ 
+-一路 input_plus 加1得到 output_plus；另一路 input_minus 减1得到 output_minus。两路相互独立，均为16位有符号二进制补码。全部设计与测试台使用VHDL，不依赖厂商算术IP。
++一路input_plus加1输出到output_plus，另一路input_minus减1输出到output_minus。两路独立，纯VHDL组合逻辑，无时钟、复位或valid/ready端口；16位有符号补码，溢出回绕，不饱和。
+ 
+-| 同时输入两路的值 | output_plus | output_minus |
+-|---:|---:|---:|
+-| 0 | 1 | -1 |
+-| 100 | 101 | 99 |
+-| -100 | -99 | -101 |
+-| 32767 | -32768 | 32766 |
+-| -32768 | -32767 | 32767 |
++## 交付入口
+ 
+-溢出按16位回绕，不做饱和截断。纯组合逻辑，无时钟、复位、有效信号或内部流水线；输出在组合传播延迟后稳定。LabVIEW的I/O同步或执行调度可能添加拍数，不能把一次框图写入后立即读取当成零延迟保证。
++| 内容 | 路径 |
++|---|---|
++| Vivado 2021.1工程 | vivado/I16_AddSub/I16_AddSub.xpr |
++| 算术核心 | rtl/i16_addsub_core.vhd，综合top必须是i16_addsub_core |
++| 独立VHDL Wrapper | clip/i16_addsub_clip.vhd；entity=i16_addsub_clip，architecture=structural |
++| 行为测试台 | sim/i16_addsub_tb.vhd；本次按用户要求未运行 |
++| 手工测试输入与预期输出 | sim/data/manual_test_vectors.csv |
++| 已有工程创建证据 | reports/PROJECT_CREATION_PASS.txt |
+ 
+-## 在 LabVIEW FPGA 中导入
++器件为xcvu11p-flgb2104-2-e。用户正在打开的GUI工程不由Agent背后改写；若Design Sources当前选中i16_addsub_clip，请在i16_addsub_core上右键Set as Top后再综合。外围Wrapper不作为导出核心网表的综合top。
+ 
+-1. 将交付的整个 clip 文件夹复制到开发机的本地磁盘。不要只取EDF文件。
+-2. 打开PXIe-7903的LabVIEW FPGA工程，在FPGA Target的属性中找到Component-Level IP/CLIP配置，添加clip/I16_AddSub.xml定义，并添加一个用户CLIP实例。不同NI版本的菜单位置可能不同。
+-3. 如果用CLIP向导重新生成定义，选 i16_addsub_clip.vhd 为顶层文件、i16_addsub_clip / structural 为实体/架构，并将 i16_addsub_core.edf 加入实现文件。所有四个端口映射I16；本模块没有时钟端口。
+-4. 两个输入是 input_plus、input_minus；两个输出是 output_plus、output_minus。建议放在同一SCTL时钟域中读写，避免跨域直接连接。本模块不包含跨时钟域电路。
+-5. 初次硬件检查先输入固定值0、100、-100和边界值，等待数据稳定后读回并对照上表。之后再做连续变化输入，并按LabVIEW实际I/O同步延迟对应输入与输出。
+-6. 由LabVIEW完成FPGA全工程编译并部署。这份EDF是用户逻辑子网表，不是可直接下载的整片FPGA bitfile。
++## 用Vivado手动综合
+ 
+-XML已按本机LabVIEW2026官方CLIPDeclaration.xsd核查；仍需用户在实际Target中导入并编译验证。XML将实现文件排除于LabVIEW主机仿真模型，不提供LabVIEW桌面仿真模型；独立行为验证使用Vivado测试台。
++1. 打开上述XPR，审阅核心源码和端口。两条赋值分别执行有符号加1与减1。
++2. 设置核心i16_addsub_core为top，保持已配置的Out-of-Context综合，避免为内部逻辑插入器件引脚缓冲。
++3. 点击Run Synthesis，Launch Runs选择16 jobs；项目PRE钩子请求general/synth各8线程。不要求Run Implementation或运行测试台。
++4. 综合完成后，在工程Tcl Console执行下面命令，导出clip/i16_addsub_core.edf及报告；此脚本只打开已有综合结果，不重新综合：
+ 
+-## 文件导航
++    source D:/008_MA_Dev/I16_AddSub_CLIP/tools/export_netlist.tcl
+ 
+-| 路径 | 内容 |
+-|---|---|
+-| rtl/i16_addsub_core.vhd | 可阅读、修改的算术核心源码 |
+-| clip/i16_addsub_clip.vhd | LabVIEW端口封装；用component实例化EDF核心 |
+-| clip/i16_addsub_core.edf | 本次不生成；由用户完成综合后手动导出 |
+-| clip/I16_AddSub.xml | 四个I16端口的CLIP定义；三个文件放在同一目录 |
+-| vivado/I16_AddSub/I16_AddSub.xpr | Vivado 2021.1工程，双击即可打开 |
+-| sim/i16_addsub_tb.vhd | 每路65536种输入及3次通道独立性检查 |
+-| constraints/i16_addsub_ooc.xdc | 单独核心8ns组合路径预算，不是外部时钟要求 |
+-| tools/create_project.tcl | 只创建工程，不运行仿真或综合 |
+-| tools/run_threads.tcl | Vivado父进程及综合子进程的8线程设置 |
+-| reports/ | 源文件指纹、实际选源、仿真与综合证据 |
+-
+-GUI中hardware top是 i16_addsub_core，simulation top是 i16_addsub_tb，测试台经过 i16_addsub_clip 封装验证核心。CLIP顶层不参与单独核心综合网表导出，它在LabVIEW集成时与EDF一起链接。所有使用的文件显式加入sources_1/sim_1，不扫描其他工程历史版本。
+-
+-## 现在由用户在GUI审阅与综合
+-
+-1. 双击 vivado/I16_AddSub/I16_AddSub.xpr。器件已设置为xcvu11p-flgb2104-2-e。
+-2. Sources的Design Sources中，i16_addsub_core为综合顶层。打开该VHDL，核心仅有两条加减运算语句。i16_addsub_clip是单独的LabVIEW端口封装；它不作为核心综合网表的综合顶层。
+-3. 如需审阅测试台，查看Simulation Sources中的i16_addsub_tb。本次未运行任何仿真，用户可自行选择是否执行。
+-4. 点击Run Synthesis，在Launch Runs选16 jobs。工程已设置Out-of-Context模式，综合PRE脚本会将general/synth线程设置为8。无需Run Implementation。
+-5. 综合完成后，在该工程的Tcl Console执行下面命令，导出EDF及资源/时序报告；该脚本不会重新综合：
++5. 将你导出的核心网表和独立i16_addsub_clip.vhd一起用于LabVIEW手工创建CLIP。定义及XML由你在LabVIEW向导中生成；不要使用目录中旧的I16_AddSub.xml。该旧文件和旧ZIP仅保留历史，新的交付入口不依赖它们。
+ 
+-    source D:/008_MA_Dev/I16_AddSub_CLIP/tools/export_netlist.tcl
++## 端口与数据
+ 
+-6. 确认clip目录新增i16_addsub_core.edf，之后再按前述流程导入LabVIEW。现在XML只通过格式校验，尚不能作为包含完整网表的交付包导入编译。
++方向以FPGA模块为参照。VHDL均为std_logic_vector(15 downto 0)，在LabVIEW手工映射为I16。
+ 
+-如移动了工程目录，将上面命令路径改成新目录即可。create_project.tcl只用于首次创建，遇到已有XPR时拒绝覆盖；日常开发直接用GUI打开XPR。
++| 端口 | 方向 | 含义 |
++|---|---|---|
++| input_plus | 输入 | 要加1的I16数值 |
++| input_minus | 输入 | 要减1的I16数值 |
++| output_plus | 输出 | input_plus+1，16位回绕 |
++| output_minus | 输出 | input_minus-1，16位回绕 |
+ 
+-本核独立综合与网表回读不等同于LabVIEW最终布局布线通过；真正的SCTL频率和跨模块路径由NI全工程编译检查。本模块不要求新增MMCM、PLL或参考时钟。
++| input_plus | input_minus | output_plus预期 | output_minus预期 |
++|---:|---:|---:|---:|
++| 0 | 0 | 1 | -1 |
++| 100 | -100 | 101 | -101 |
++| 32767 | -32768 | -32768 | 32767 |
++| -32768 | 32767 | -32767 | 32766 |
++| -1 | 1 | 0 | 0 |
+ 
+-## NI 官方说明
++## Host与Target怎么测试
+ 
+-- [VHDL封装及Vivado综合网表集成](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000x4G6CAI&l=en-US)
+-- [CLIP端口类型与导入](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q000000x0jiCAA&l=en-US)
++1. 在LabVIEW FPGA Target中手工创建CLIP，选择上述Wrapper及你综合导出的核心网表，四个端口全部映射I16。Wrapper本身没有时钟端口。
++2. Target VI放置两个I16输入控件、两个I16输出指示器。将控件写入对应CLIP输入，从对应CLIP输出读到指示器。在同一个已支持的时钟域中执行这些I/O操作；该小模块不需要DMA。
++3. Host VI打开FPGA VI引用并启动。在Read/Write Control节点同时写入一行input_plus/input_minus；保持这组值稳定，再从两个输出指示器读回。
++4. 因LabVIEW I/O同步可能引入拍延迟，不把写入后的第一次立即读取当成结果。初次手工测试可每行保持100ms后读取，超时/错误则记录，不跳到下一行掩盖错误。这100ms是方便人工观察的Host等待，不是RTL所需延迟或吞吐指标。
++5. 将读回值与CSV该行精确比较。五行均相等即可确认本组加减/回绕及两路独立性；不据此声称NI全平台时序已验收。
++6. 结束时停止VI并关闭引用。若以后改为连续高速输入，需要明确NI实际I/O拍延迟，再把输出与对应输入对齐比较；当前最小测试无需扩展复杂传输。
+ 
+-## 验证状态
++## 验证边界
+ 
+-见 reports/BUILD_STATUS_ZH.md。按用户最新要求，仅创建工程；没有运行行为仿真、综合、实现，也没有生成EDF网表。NI XML格式校验通过不等于网表交付或硬件通过。
++工程曾由Vivado创建并重开；本次未运行仿真、综合、实现或NI编译，未由Agent生成网表。CSV是按源码运算定义给出的预期值，不冒充硬件测量结果。NI Target整体编译、实际I/O同步配置和板测由用户执行。
+diff --git a/vivado/I16_AddSub/I16_AddSub.xpr b/vivado/I16_AddSub/I16_AddSub.xpr
+index c5b5ac3..5b10e71 100644
+--- a/vivado/I16_AddSub/I16_AddSub.xpr
++++ b/vivado/I16_AddSub/I16_AddSub.xpr
+@@ -53,6 +53,7 @@
+     <Option Name="ActiveSimSet" Val="sim_1"/>
+     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+     <Option Name="ProjectType" Val="Default"/>
++    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
+     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
+     <Option Name="IPCachePermission" Val="read"/>
+     <Option Name="IPCachePermission" Val="write"/>
+@@ -99,14 +100,13 @@
+       </File>
+       <File Path="$PPRDIR/../../clip/i16_addsub_clip.vhd">
+         <FileInfo>
+-          <Attr Name="AutoDisabled" Val="1"/>
+           <Attr Name="UsedIn" Val="synthesis"/>
+           <Attr Name="UsedIn" Val="simulation"/>
+         </FileInfo>
+       </File>
+       <Config>
+         <Option Name="DesignMode" Val="RTL"/>
+-        <Option Name="TopModule" Val="i16_addsub_core"/>
++        <Option Name="TopModule" Val="i16_addsub_clip"/>
+       </Config>
+     </FileSet>
+     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+@@ -170,13 +170,14 @@
+     </Simulator>
+   </Simulators>
+   <Runs Version="1" Minor="15">
+-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xcvu11p-flgb2104-2-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
++    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xcvu11p-flgb2104-2-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
+       <Strategy Version="1" Minor="2">
+         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+         <Step Id="synth_design" PreStepTclHook="$PPRDIR/../../tools/run_threads.tcl">
+           <Option Id="MoreOptsStr"><![CDATA[-mode out_of_context]]></Option>
+         </Step>
+       </Strategy>
++      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+       <RQSFiles/>

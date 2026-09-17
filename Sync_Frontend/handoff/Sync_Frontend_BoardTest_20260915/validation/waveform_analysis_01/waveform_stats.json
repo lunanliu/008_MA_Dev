@@ -1,0 +1,10 @@
+{
+  "sample_count": 60324,
+  "sample_rate_hz": 5.0E+8,
+  "signal_duration_us": 120.648,
+  "rms_complex_code": 2745.4556542559758,
+  "peak_complex_code": 17191.387669411681,
+  "component_rail_count": 0,
+  "phase_cfo_unambiguous_magnitude_hz": 244140.625,
+  "note": "Floating visualization only; metric at truth positions is NOT an autonomous detection test."
+}

@@ -1,0 +1,17 @@
+{
+  "mode": "baseline",
+  "sample_rate_hz": 5.0E+8,
+  "fpga_clock_hz": 1.25E+8,
+  "sample_count": 60324,
+  "beat_count": 15081,
+  "expected_results": 4,
+  "input_file": "input_iq.csv",
+  "input_format": "two signed decimal I16 columns: I,Q; comma separated; no header",
+  "result_words_per_record": 9,
+  "default_epoch": 0,
+  "source_sha256": "98fffec3b2773996e54aa7608b1c2e112bc9f97fd3672f7d27bdc1b614c550d4",
+  "schedule": "1024-word Host chunks; wait accepted_samples; then wait at least 1 ms",
+  "note": "Exact frozen input; original RTL timing schedule was 256 beats then 8000 idle clocks.",
+  "new_rtl_simulation_run": false,
+  "board_test_run": false
+}

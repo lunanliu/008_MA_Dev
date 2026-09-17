@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "task": "SYNC_FRONTEND",
+  "stage": "SF002",
+  "status": "PASS_PENDING_ASTRA_REVIEW",
+  "scope": "frozen autonomous continuous-capture short joint simulation only",
+  "completion_utc": "2026-09-14T20:51:26Z",
+  "astra": "01a0a162-c115-7af1-89be-49726f987f84",
+  "luna": "01a0a161-e434-7142-8927-1f5314daafd5",
+  "grant_id": "SYNC_FRONTEND_SHARED_VIVADO_20260914",
+  "part": "xcvu11p-flgb2104-2-e",
+  "hardware_top": "sync_frontend_top",
+  "simulation_top": "sync_frontend_tb",
+  "xpr": "D:\\008_MA_Dev\\Sync_Frontend\\vivado\\Sync_Frontend\\Sync_Frontend.xpr",
+  "xpr_sha256": "68E31A7226E2684ED0F34C2F554ABB2008CB95318CD728A8A6CBE803D2A56364",
+  "actual_sources": "D:\\008_MA_Dev\\Sync_Frontend\\reports\\SF002_actual_sources.txt",
+  "actual_sources_sha256": "6E684F9BBFFD56BF0C868BF4E3335C78118DA1D84CD0EB20C897EEEB142F644D",
+  "ip_status": "D:\\008_MA_Dev\\Sync_Frontend\\reports\\SF002_ip_status.txt",
+  "ip_status_sha256": "742AD2921035D822947E771F0E1869E81720F7408009F2D24BC7F3442B187DAD",
+  "source_set_summary": {
+    "hardware_sv": 34,
+    "managed_xci": 15,
+    "simulation_sv": 2,
+    "constraints": 1,
+    "input_mem_files": 3
+  },
+  "input_summary": {
+    "stream_samples": 60324,
+    "stream_beats": 15081,
+    "frames": 4,
+    "gap_beats": 8000,
+    "unknown_lane_positions": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "to_samples": [
+      -101,
+      -101,
+      0,
+      101
+    ],
+    "cfo_hz": [
+      -150000,
+      0,
+      150000,
+      -150000
+    ]
+  },
+  "marker_summary": {
+    "passive": "SF002_PASSIVE_CHECK_PASS frames=4 accepted_samples=60324 metrics=14570 false_outputs=0 duplicate_outputs=0 fine_sample_errors=0",
+    "frontend_main": "SF002_FRONTEND_MAIN_PASS candidates=13 rejected=1 drops=4 dedup=4 snapshot_peak=2 max_history_age=4336",
+    "session_control": "SF002_SESSION_CONTROL_PASS gap_epoch=1 abort_epoch=2 restart_epoch=3 reset_epoch=0",
+    "autonomous": "SF002_AUTONOMOUS_SHORT_PASS",
+    "wrapper": "SF002_SIMULATION_RETURNED_REQUIRE_PASSIVE_AND_MAIN_AND_SESSION_MARKERS"
+  },
+  "simulation_summary": {
+    "result_csv_rows": 4,
+    "result_csv": "D:\\008_MA_Dev\\Sync_Frontend\\vivado\\Sync_Frontend\\Sync_Frontend.sim\\sim_autonomous\\behav\\xsim\\autonomous_results.csv",
+    "result_csv_sha256": "C1DE1E8217FE4CB96597DDF1B019A6B1F0B7BD9E72FE81F6D695FAE14297DB1E",
+    "sim_time_ns": 5042168,
+    "finish": "normal $finish; XSim completed; exit_code=0",
+    "false_outputs": 0,
+    "duplicate_outputs": 0,
+    "fine_sample_errors": 0,
+    "candidates": 13,
+    "rejected": 1,
+    "drops": 4,
+    "dedup": 4
+  },
+  "attempt_dir": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF002_attempt_20260914T200903Z",
+  "evidence": {
+    "launch_manifest": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF002_attempt_20260914T200903Z\\launch_manifest.json",
+    "run_log": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF002_attempt_20260914T200903Z\\autonomous_short.log",
+    "run_log_sha256": "15120266CC9142BD71DB6DB292D659843EDE6A0C41AA2848969D22D7DE8101B6",
+    "simulate_log": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF002_attempt_20260914T200903Z\\simulate.log",
+    "simulate_log_sha256": "F65B54912B62F8D6710C868BD1AAEE112F0D149ACECBC60CC288A45BDD608A45",
+    "xelab_log": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF002_attempt_20260914T200903Z\\xelab.log",
+    "xelab_log_sha256": "6AC194A2EBBE667A5113A4724C5074AB1F05AEE0005D0C4584B181B7B2EAA515",
+    "xvlog_log": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF002_attempt_20260914T200903Z\\xvlog.log",
+    "xvlog_log_sha256": "C0E690EF453D37D0FB96DF8B1BE06B71AEE84AD06C25FF97E081806C9579C214",
+    "xvhdl_log": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF002_attempt_20260914T200903Z\\xvhdl.log",
+    "xvhdl_log_sha256": "51B5D0B19969DB551CCBE07B3FBEF5ED5C69BA942AAC2EDEF6BB80BF2D8B4B91",
+    "compile_log": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF002_attempt_20260914T200903Z\\compile.log",
+    "compile_log_sha256": "CEB53633392440F8606D954C5B22ADAF9D70FB9888C4F17199BA58A369C67687",
+    "results_csv": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF002_attempt_20260914T200903Z\\autonomous_results.csv",
+    "verify_post": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF002_attempt_20260914T200903Z\\verify_sf002_postrun.log"
+  },
+  "frozen_verification": {
+    "manifest_sha256": "79DF3C720692F760D558DF79310FED3C2C55B5E0D4F1AACB02583726A5423B9D",
+    "rows": 89,
+    "bad": 0,
+    "head": "6755a6e176d133f7259381c4d6067bca7212dbaf",
+    "remote_count": 0,
+    "status": "SF002_FROZEN_FILES_PASS"
+  },
+  "ip_summary": {
+    "status": "15/15 Up-to-date",
+    "target_package": "flgb2104",
+    "original_xci_untouched": true
+  },
+  "post_process": {
+    "sf002_vivado": "completed exit_code=0",
+    "sf002_xsim": "completed normally",
+    "t10_preserved": true,
+    "t10_vivado_pid": 34768,
+    "t10_xsimk_pid": 28856,
+    "matlab_count": 0,
+    "unrelated_gui_vivado_pid": 14300,
+    "unrelated_gui_vivado_touched": false
+  },
+  "warnings": [
+    "Vivado wave display limit for the large words array.",
+    "Dynamic SystemVerilog file objects were not traceable in the wave window.",
+    "Vendor floating-point model reported the existing minimum two-cycle aresetn warning."
+  ],
+  "not_run": [
+    "MATLAB",
+    "synthesis",
+    "implementation timing",
+    "CLIP export",
+    "sustained throughput qualification",
+    "NI/LabVIEW/board validation",
+    "long-run and external frame-marker rejection beyond this frozen short scenario"
+  ],
+  "t10_preserved": true,
+  "remaining_boundary": "This is not full Sync_Frontend PASS, sustained-rate qualification, synthesis/implementation timing closure, CLIP PASS, or board validation."
+}

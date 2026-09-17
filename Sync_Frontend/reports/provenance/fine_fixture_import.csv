@@ -1,0 +1,4 @@
+"role","path","bytes","sha256","categories"
+"input","artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/bundle_contract.json","11574","ee7d2a77e60b8349e43e8e170b11374e89269e3261ad80cae58a472a3e532ea7","bundle;closure_bound"
+"input","artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/oracle/bit_true_case_results.csv","20007","6ef7fe6d7010d6878f2d0251ed816abb888d726c640e1b75f13d72c090c1586b","bundle;bundle_oracle"
+"input","artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_full91_capture_128.mem","2141048","cff0bf345332269899104b99dbdf7ffcca032abaf7103d6292fe85ae3266425d","bundle"

@@ -1,0 +1,29 @@
+{
+  "verdict": "FAIL_OR_INCOMPLETE_CAPTURE",
+  "mode": "baseline",
+  "readback_csv": "validation\\attempt_02\\truncated_input.csv",
+  "word_count": 35,
+  "complete_records": 3,
+  "trailing_words": 8,
+  "expected_epoch": 0,
+  "checks": {
+    "complete_nine_word_records": false,
+    "expected_record_count": false,
+    "epoch_matches": true,
+    "frame_ids_in_order": false,
+    "candidate_ids_increasing": false,
+    "fine_timing_exact": false,
+    "cfo_within_1000_hz": false,
+    "result_status_valid": false,
+    "accepted_samples_checked": true,
+    "accepted_samples_match": true,
+    "error_sticky_checked": true,
+    "error_sticky_clear": true,
+    "strict_original_rtl_fields": false
+  },
+  "strict_rtl_requested": true,
+  "sustained_throughput_qualified": false,
+  "note": "Only supplied finite-replay data checked. No automatic packet realignment or missing-word repair.",
+  "accepted_samples": 60324,
+  "error_sticky": 0
+}

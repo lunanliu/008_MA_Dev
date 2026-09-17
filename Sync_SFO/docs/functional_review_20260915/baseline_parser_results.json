@@ -1,0 +1,458 @@
+[
+  {
+    "path": "rtl/common/bistatic_stream_pkg.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__common__bistatic_stream_pkg.sv.json"
+  },
+  {
+    "path": "rtl/t07/farrow_microbench.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t07__farrow_microbench.sv.json"
+  },
+  {
+    "path": "rtl/t07/g3_down15_top.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t07__g3_down15_top.sv.json"
+  },
+  {
+    "path": "rtl/t07/g3_down47_top.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t07__g3_down47_top.sv.json"
+  },
+  {
+    "path": "rtl/t07/g3_farrow_guard_stream.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t07__g3_farrow_guard_stream.sv.json"
+  },
+  {
+    "path": "rtl/t07/g3_up15_top.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t07__g3_up15_top.sv.json"
+  },
+  {
+    "path": "rtl/t07/g3_up47_top.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t07__g3_up47_top.sv.json"
+  },
+  {
+    "path": "rtl/common/t03_main_fft_service.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__common__t03_main_fft_service.sv.json"
+  },
+  {
+    "path": "rtl/common/t03_uram_frame_bank.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__common__t03_uram_frame_bank.sv.json"
+  },
+  {
+    "path": "rtl/common/t05_local_capture_buffer.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__common__t05_local_capture_buffer.sv.json"
+  },
+  {
+    "path": "rtl/common/t05_phase_increment_controller.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__common__t05_phase_increment_controller.sv.json"
+  },
+  {
+    "path": "rtl/common/t05_vendor_multiplier_adapters.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__common__t05_vendor_multiplier_adapters.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_cfo_derotate_s16_4lane.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_cfo_derotate_s16_4lane.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_dds_phase_4lane.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_dds_phase_4lane.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_derotate_wide_4lane.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_derotate_wide_4lane.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_fft_pair_extractor.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_fft_pair_extractor.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_fft_pair_extractor_fifo.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_fft_pair_extractor_fifo.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_fft_pair_extractor_memory.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_fft_pair_extractor_memory.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_fft_swls_backend.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_fft_swls_backend.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_five_sum_accumulator.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_five_sum_accumulator.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_frame_context_join.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_frame_context_join.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_initial_sfo_service.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_initial_sfo_service.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_initial_sfo_standalone.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_initial_sfo_standalone.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_main_fft_exclusive_owner.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_main_fft_exclusive_owner.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_observation_engine.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_observation_engine.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_observation_engine_2lane.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_observation_engine_2lane.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_observation_engine_fifo.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_observation_engine_fifo.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_observation_store.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_observation_store.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_observation_store_bank.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_observation_store_bank.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_pair_max_tracker_2lane.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_pair_max_tracker_2lane.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_pair_phasor_bfp.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_pair_phasor_bfp.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_ps3_ps10_job_sequencer.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_ps3_ps10_job_sequencer.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_raw_reader_4lane.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_raw_reader_4lane.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_raw_reader_local_capture.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_raw_reader_local_capture.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_raw_to_fft_frontend.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_raw_to_fft_frontend.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_regression_tail.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_regression_tail.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_shared_gain_s16_4lane.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_shared_gain_s16_4lane.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_shared_gain_s16_lane.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_shared_gain_s16_lane.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_swls_weighted_backend.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_swls_weighted_backend.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_unsigned_divider_service.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_unsigned_divider_service.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_unsigned_divider_service_fifo.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_unsigned_divider_service_fifo.sv.json"
+  },
+  {
+    "path": "rtl/t06/t06_weight_pack.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t06__t06_weight_pack.sv.json"
+  },
+  {
+    "path": "rtl/t07/t07_guard_frame_core.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t07__t07_guard_frame_core.sv.json"
+  },
+  {
+    "path": "rtl/t07/t07_nominal_pack4_rev02.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t07__t07_nominal_pack4_rev02.sv.json"
+  },
+  {
+    "path": "rtl/t07/t07_sync_fifo.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t07__t07_sync_fifo.sv.json"
+  },
+  {
+    "path": "rtl/t08/t08_descriptor.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t08__t08_descriptor.sv.json"
+  },
+  {
+    "path": "rtl/t08/t08_first_sfo_resampler.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t08__t08_first_sfo_resampler.sv.json"
+  },
+  {
+    "path": "rtl/t08/t08_frame_engine.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t08__t08_frame_engine.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_aux_ifft_service4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_aux_ifft_service4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_div_u80_u49_rne.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_div_u80_u49_rne.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_dtp_frame_backend4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_dtp_frame_backend4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_fft_grid_stage4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_fft_grid_stage4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_grid_packet_queue2.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_grid_packet_queue2.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_main_fft_service4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_main_fft_service4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_main_fft_window4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_main_fft_window4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_nominal_window_reader4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_nominal_window_reader4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_peak_interpolate.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_peak_interpolate.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_peak_triplet4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_peak_triplet4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_pilot_front2.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_pilot_front2.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_pilot_grid4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_pilot_grid4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_pilot_rotate2.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_pilot_rotate2.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_pilot_select_phase4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_pilot_select_phase4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_power4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_power4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_residual_sfo_pipeline4.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_residual_sfo_pipeline4.sv.json"
+  },
+  {
+    "path": "rtl/t09/t09_sfo_ls74.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t09__t09_sfo_ls74.sv.json"
+  },
+  {
+    "path": "rtl/t10/t10_cdc_fifo.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t10__t10_cdc_fifo.sv.json"
+  },
+  {
+    "path": "rtl/t10/t10_domain_reset.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t10__t10_domain_reset.sv.json"
+  },
+  {
+    "path": "rtl/t10/t10_output_buffer.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t10__t10_output_buffer.sv.json"
+  },
+  {
+    "path": "rtl/t10/t10_r1_bank.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t10__t10_r1_bank.sv.json"
+  },
+  {
+    "path": "rtl/t10/t10_raw_ring.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t10__t10_raw_ring.sv.json"
+  },
+  {
+    "path": "rtl/t10/t10_second_descriptor.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t10__t10_second_descriptor.sv.json"
+  },
+  {
+    "path": "rtl/t10/t10_second_sfo_resampler.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t10__t10_second_sfo_resampler.sv.json"
+  },
+  {
+    "path": "rtl/t10/t10_two_pass_system.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t10__t10_two_pass_system.sv.json"
+  },
+  {
+    "path": "rtl/t10/t10_two_pass_transport.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\rtl__t10__t10_two_pass_transport.sv.json"
+  },
+  {
+    "path": "sim/tb/t10_full023_fifo_observer.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\sim__tb__t10_full023_fifo_observer.sv.json"
+  },
+  {
+    "path": "sim/tb/t10_full023_tb.sv",
+    "exit": 0,
+    "stderr": "",
+    "json": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\baseline_syntax\\sim__tb__t10_full023_tb.sv.json"
+  }
+]

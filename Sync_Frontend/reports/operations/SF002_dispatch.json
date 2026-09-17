@@ -1,0 +1,10 @@
+{
+  "job_id": "SF002",
+  "state": "DISPATCHED",
+  "git_commit": "6755a6e176d133f7259381c4d6067bca7212dbaf",
+  "manifest_sha256": "79df3c720692f760d558df79310fed3c2c55b5e0d4f1aacb02583726a5423b9d",
+  "luna": "01a0a161-e434-7142-8927-1f5314daafd5",
+  "native_execution": "DELEGATED_NOT_YET_VERIFIED",
+  "next": "Review autonomous behavior then FLGB synth/route and CLIP export",
+  "dispatched_utc": "2026-09-14T20:08:18.2564389Z"
+}

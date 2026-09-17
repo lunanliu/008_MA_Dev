@@ -1,0 +1,196 @@
+{
+  "schema_version": 2,
+  "contract_id": "T04_T05_ACQUISITION_DOMAIN_V2_20260901",
+  "decision_id": "T04_T05_MINUS5DB_OUTAGE_DISPOSITION_20260901",
+  "decision_record": "docs/decisions/T04_T05_MINUS5DB_OUTAGE_DISPOSITION_20260901.md",
+  "user_authorized_date": "2026-09-01",
+  "architecture": "ORIGINAL_SC_ONLY_RUN04_PLUS_ORIGINAL_T05_NO_T04_D",
+  "source_attempt_id": "attempt_20260901T153001094Z_34252_76b6cd9d",
+  "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+  "population": {
+    "case_count": 91,
+    "formal_case_count": 88,
+    "deterministic_case_count": 28,
+    "nominal_case_count": 60,
+    "stress_characterization_case_count": 3,
+    "supported_formal_case_count": 78,
+    "minus5db_characterization_case_count": 10,
+    "minus5db_valid_observation_count": 8,
+    "expected_minus5db_outage_count": 2
+  },
+  "acquisition_policy": {
+    "minus5db": {
+      "channel": "tdl_d_los_30ns",
+      "snr_db": -5,
+      "disposition": "ACQUISITION_OUTAGE_CHARACTERIZATION_ONLY",
+      "accuracy_gate": "NONE",
+      "acquisition_success_required": false,
+      "all_cases_must_be_retained": true,
+      "all_outages_must_be_explicit": true,
+      "allowed_outage_case_ids": [
+        "tdld_-05dB_seed_41003",
+        "tdld_-05dB_seed_41005"
+      ],
+      "fail_close": {
+        "effective_t04_acquisition_valid": 0,
+        "t04_ambiguity": 1,
+        "t05_valid": 0,
+        "t05_ambiguity": 1,
+        "t05_error_code": 2,
+        "fabricated_start_forbidden": true
+      },
+      "expected_clipped_case_ids": [
+        "tdld_-05dB_seed_41004"
+      ],
+      "expected_clipped_component_count": 1
+    },
+    "supported_formal": {
+      "exclude": "TDL-D -5 dB only",
+      "case_count": 78,
+      "t04_valid_required": true,
+      "t04_ambiguity_count_required": 0,
+      "t04_start_containment_failure_count_required": 0,
+      "t04_clipped_component_count_required": 0,
+      "maximum_absolute_coarse_start_error_samples": 128,
+      "t05_valid_count_required": 78,
+      "t05_zero_sample_error_count_required": 78,
+      "t05_ambiguity_count_required": 0
+    },
+    "zero_db": {
+      "accuracy_gate": "NONE_UNCHANGED_CHARACTERIZATION",
+      "valid_required": true,
+      "unambiguous_required": true,
+      "maximum_absolute_coarse_start_error_samples": 128,
+      "t05_zero_sample_error_required": true
+    },
+    "deterministic": {
+      "maximum_absolute_cfo_error_hz": 1000
+    },
+    "stress": {
+      "disposition": "CHARACTERIZATION_ONLY",
+      "formal_gate": "NONE",
+      "all_cases_must_be_retained": true
+    }
+  },
+  "cfo_policy": {
+    "paper_fixture": {
+      "channel": "paper_offset_snr_project_grid_fixture",
+      "snr_db": 15,
+      "maximum_rmse_hz": 1000
+    },
+    "user_waived_tdld_groups": {
+      "channel": "tdl_d_los_30ns",
+      "snr_db": [5, 10, 20],
+      "disposition": "WAIVED_BY_USER_DOWNSTREAM_IMPACT_CFO_RMSE_ONLY"
+    }
+  },
+  "claim_boundary": {
+    "gate_claim": "T04_T05_CURRENT_GENERATION_PREDECESSOR_GATE_ONLY",
+    "t04_literal_taskbook_pass": false,
+    "t05_literal_taskbook_pass": false,
+    "pass_with_user_disposition_field_required": true,
+    "canonical_t04_module_acceptance_claimed": false,
+    "canonical_t05_module_acceptance_claimed": false,
+    "algorithm_modified": false,
+    "old_attempt_modified": false,
+    "t04_d_active": false
+  },
+  "source_evidence": [
+    {
+      "role": "t04_case_csv",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t04_current_generation_handoff.csv",
+      "bytes": 23506,
+      "sha256": "72009be965177c007a05cd481762eff9fb61f2de5f031eaf5c16f4ae71728762"
+    },
+    {
+      "role": "t05_case_csv",
+      "path": "reports/T05_fine_timing/original_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t05_current_generation_handoff.csv",
+      "bytes": 14447,
+      "sha256": "24093eb3c52b81f25a5a6db2f12580603729eb883c4e6fe153b9c0c0fff70460"
+    },
+    {
+      "role": "t04_summary",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t04_current_generation_handoff_summary.json",
+      "bytes": 3875,
+      "sha256": "0e0f6f2eecdf7c38cd7a9c504ce5c613dbcc037571929c5e6d27f0d5b852b970"
+    },
+    {
+      "role": "t05_summary",
+      "path": "reports/T05_fine_timing/original_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t05_current_generation_handoff_summary.json",
+      "bytes": 3875,
+      "sha256": "0e0f6f2eecdf7c38cd7a9c504ce5c613dbcc037571929c5e6d27f0d5b852b970"
+    },
+    {
+      "role": "t04_wrapper",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/wrapper_final_status.json",
+      "bytes": 1096,
+      "sha256": "0c33fa46a08277eb087c056079755e1fb3eb94bd0d936bb8475341e8c442de8a"
+    },
+    {
+      "role": "t05_wrapper",
+      "path": "reports/T05_fine_timing/original_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/wrapper_final_status.json",
+      "bytes": 1096,
+      "sha256": "0c33fa46a08277eb087c056079755e1fb3eb94bd0d936bb8475341e8c442de8a"
+    },
+    {
+      "role": "nominal_accuracy_groups",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t04_nominal_accuracy_groups.csv",
+      "bytes": 416,
+      "sha256": "ab7b0fd80500751d196c2dcec62c0bcf5d34c2bbc3c69f4330271e10a7efbadd"
+    },
+    {
+      "role": "acquisition_characterization",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t04_acquisition_characterization.csv",
+      "bytes": 2030,
+      "sha256": "94b844eddf3fb884acaa466c1007a7d3d9e97814f2ea056c4a1343743252e3ad"
+    },
+    {
+      "role": "t04_quantized_vectors",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t04_current_generation_quantized_vectors.mat",
+      "bytes": 4225053,
+      "sha256": "63c1f35dc378cb28a3e8d9bcd512485bde1bf681f027e063cf43c15a97802955"
+    },
+    {
+      "role": "t05_quantized_reference",
+      "path": "reports/T05_fine_timing/original_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t05_current_generation_quantized_ps1_reference.mat",
+      "bytes": 4314,
+      "sha256": "8e7a9f3a940e96cd71179019680adabd2a2a4237397c84146d4444d301ea18ee"
+    },
+    {
+      "role": "t04_selector",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t04_current_generation_selector.json",
+      "bytes": 1057,
+      "sha256": "4a234fb433d5731fb5feef47c23eb20f401e52e344837527ca51f805827a029e"
+    },
+    {
+      "role": "t05_selector",
+      "path": "reports/T05_fine_timing/original_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t05_current_generation_selector.json",
+      "bytes": 590,
+      "sha256": "f289ac4b841a84f8eef5f66e269e27274e6f7eb90610b26110080e93ea27452e"
+    },
+    {
+      "role": "source_manifest_pre",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/source_input_manifest_pre.csv",
+      "bytes": 2314,
+      "sha256": "774de8ebeae0a8ca9600b165df587ad3510df3f5d02f67e2fb28c3d908cd7044"
+    },
+    {
+      "role": "source_manifest_post",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/source_input_manifest_post.csv",
+      "bytes": 2314,
+      "sha256": "774de8ebeae0a8ca9600b165df587ad3510df3f5d02f67e2fb28c3d908cd7044"
+    },
+    {
+      "role": "t04_artifact_manifest",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/artifact_manifest.csv",
+      "bytes": 1295,
+      "sha256": "650557007579ed72d8b99dcd803ac208fc579e09149034a8564cbfe8e8216a45"
+    },
+    {
+      "role": "t05_artifact_manifest",
+      "path": "reports/T05_fine_timing/original_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/artifact_manifest.csv",
+      "bytes": 571,
+      "sha256": "6b941a1a91626d640763244ef66c58df704db6be3b6b016fa0b25b0c31e86dd0"
+    }
+  ]
+}

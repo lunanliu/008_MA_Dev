@@ -1,0 +1,18 @@
+{
+  "schema": "CHECKCODE_WAVEFORM_UTF8_EXPORT_01",
+  "created_utc": "2026-09-15T14:31:04.5460723Z",
+  "matlab_executable": "C:\\Program Files\\MATLAB\\R2024a\\bin\\matlab.exe",
+  "matlab_version": "24.1.0.2508561",
+  "matlab_prefdir": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\matlab_prefdir_checkcode_01",
+  "script": "analyze_frontend_waveform.m",
+  "script_path": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\analyze_frontend_waveform.m",
+  "script_sha256": "7549A485F7EA77B8A9346377A8BBDDD6C8CFA730768DFF2153453430E4D80B9D",
+  "json_output": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\checkcode_analyze_frontend_waveform.json",
+  "log_output": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\checkcode_waveform_01.log",
+  "exit_code_output": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\checkcode_waveform_01.exit_code.txt",
+  "command": "cd('D:/008_MA_Dev/Sync_Frontend/handoff/Sync_Frontend_BoardTest_20260915'); issues=checkcode('analyze_frontend_waveform.m','-id'); fid=fopen('validation/checkcode_analyze_frontend_waveform.json','w','n','UTF-8'); assert(fid>=0); fprintf(fid,'%s\\\\n',jsonencode(issues,'PrettyPrint',true)); fclose(fid);",
+  "scope": "checkcode export only; no function execution, no generation, no readback validation, no RTL/Vivado/board test",
+  "singleCompThread": false,
+  "available_memory_gib": 15.7,
+  "hard_protection_minutes": 5
+}

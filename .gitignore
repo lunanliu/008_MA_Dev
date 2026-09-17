@@ -49,7 +49,6 @@ Thumbs.db
 desktop.ini
 
 # Independent user-authorized synchronization frontend repository.
-/Sync_Frontend/
 
 # Independent I16 CLIP demonstration.
 /I16_AddSub_CLIP/
@@ -96,4 +95,6 @@ desktop.ini
 /Sync_SFO/docs/reorganization_20260915/report_clock.json
 
 # Independent module repository after reorganization.
-/Sync_Frontend/
+
+# Sync_Frontend current files are published in the parent repository.
+# Its independent local .git directory remains local.

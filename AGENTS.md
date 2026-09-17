@@ -1,3 +1,14 @@
+# 2026-09-17 用户新增硬规则：先按真实硬件指标设计RTL
+
+凡RTL/FPGA设计、修改或集成，先明确器件/时钟周期、持续吞吐、延迟与背压、存储带宽和器件资源预算，再规划每级运算、流水寄存器、弹性握手、扇出、CDC/复位及同时事件优先级，完成设计自审后编写RTL。不得把长ready链、复杂地址/判定逻辑直接连成一拍，再等最终综合或板测发现问题。模块边界不是寄存器边界，功能仿真/IP OOC不等于整链时序或持续吞吐通过。
+
+设计前必读 [RTL硬件设计前置规范](<D:/007 Dev/OTA_RTL_0829/docs/engineering/RTL_HARDWARE_DESIGN_STANDARD_ZH.md>)；设计依据写入已有模块文档/任务书，简单变更只记录受影响项，不新增逐项审批。高速结构成形后按已有授权尽早综合/检查真实路径，禁止无依据false_path、降频或放宽指标掩盖问题。原配对、资源准入、安全审批及既有只读/暂停边界保持。
+
+# 2026-09-16 Sync OTA集成授权
+
+用户最新直接要求新增Sync_OTA，与本目录Sync_Frontend、Sync_SFO、Sync_CFO并列。其独立任务书在Sync_OTA/docs/PROJECT_SPEC_ZH.md；Astra 01a0ac17-f298-7201-848c-58d09e90ebb4 与Luna 01a0ac17-4f21-7be3-8690-540c11497b1e唯一配对，负责集成设计、必要短测与真实核心综合交付。原三个工程保持原位只读；Sync_OTA使用本父目录Git，只提交本任务文件。该范围覆盖下方旧“仅三模块整理”的限制，不自动恢复其他配对或旧作业；原生运行仍须总管家具体验证资源准入。模型Astra High/Luna Max、要求Standard禁Fast，后续由用户控制。
+
+
 # 2026-09-15 目录映射补充（原规则全文保留）
 
 本轮用户批准的三模块入口与路径整理按 D:/007 Dev/OTA_RTL_0829/docs/operations/SYNC_SFO_DIRECTORY_REORGANIZATION_AUTHORIZATION_20260915_ZH.md 执行。新增位置见 [PATH_MAPPING_ZH.md](PATH_MAPPING_ZH.md)。下方旧规则中的根目录 docs、tools、rtl、ip、constraints、sim、matlab、vivado、handoff、work 均已归入 Sync_SFO；T11_CFO 对应 Sync_CFO。Sync_Frontend 保持原位，I16 示例在其 examples 内且保持独立身份。
@@ -18,4 +29,5 @@
 7. 工作中的任务每15分钟报告进展、耗时、进程/队列和当前账户周配额；空闲停报。沿用总管家已有调度，不新建重复唤醒链。
 8. 原件及失败证据保留。修改前确认Git状态、来源和依赖；仅提交已审阅的本次文件。本项目仅本地Git，不设置或推送云端remote。
 9. 按[交付规范](docs/RTL_HANDOFF_MANUAL_LABVIEW_ZH.md)只交付算法核心为综合top的GUI工程、独立VHDL Wrapper、测试输入/预期输出及端口/Host操作说明；不生成CLIP XML/配置包，由用户手工创建CLIP。工程能打开、仿真通过、实现时序通过是不同验收。旧FLGC结果保留历史身份；任何新FLGB通过声明必须对应实际工具证据。
+
 

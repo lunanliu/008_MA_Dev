@@ -1,0 +1,15 @@
+{
+  "status": "NEW_MATLAB_SCRIPTS_VERIFIED",
+  "baseline_samples": 60324,
+  "baseline_words": 60324,
+  "example_reference_records": 4,
+  "negative_cases": "duplicate frame; wrong CFO; wrong timing; invalid status; truncated; empty; bad shape",
+  "other_cases": "missing diagnostics; epoch selection; exact uint64; custom fragment preservation",
+  "code_analyzer_issue_counts": [
+    5,
+    2,
+    0
+  ],
+  "new_rtl_simulation_run": false,
+  "board_data_tested": false
+}

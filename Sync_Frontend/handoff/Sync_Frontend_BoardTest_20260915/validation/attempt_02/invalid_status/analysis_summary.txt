@@ -1,0 +1,16 @@
+Verdict: FAIL_OR_INCOMPLETE_CAPTURE
+Words: 36; complete records: 4; tail words: 0
+complete_nine_word_records: 1
+expected_record_count: 1
+epoch_matches: 1
+frame_ids_in_order: 1
+candidate_ids_increasing: 1
+fine_timing_exact: 1
+cfo_within_1000_hz: 1
+result_status_valid: 0
+accepted_samples_checked: 1
+accepted_samples_match: 1
+error_sticky_checked: 1
+error_sticky_clear: 1
+strict_original_rtl_fields: 0
+This is a finite replay check, not sustained ADC/board qualification.

@@ -1,3 +1,36 @@
+# 四工程统一仓库（2026-09-17）
+
+用户已明确授权将 D:/008_MA_Dev 的四个现有工程一并发布到私有 GitHub 仓库 `lunanliu/008_MA_Dev`；该授权覆盖历史“仅本地、不推云端”记录。开发、仿真、综合和测试继续暂停。本次只保存、整理仓库入口及上传当前状态，不代表新增验收。
+
+| 工程 | 首选入口 | 当前状态 |
+|---|---|---|
+| Sync_OTA | [Sync_OTA.xpr](Sync_OTA/Sync_OTA.xpr) · [设计复盘](Sync_OTA/docs/SYNC_OTA_REMAINING_20260917_ZH.md) | A07静态整改；新版未编译/仿真/综合，持续500 MS/s不达标 |
+| Sync_Frontend | [Sync_Frontend.xpr](Sync_Frontend/Sync_Frontend.xpr) · [README](Sync_Frontend/README_ZH.md) | 自主同步前端及现有手工交付资料 |
+| Sync_SFO | [Sync_SFO.xpr](Sync_SFO/Sync_SFO.xpr) · [README](Sync_SFO/README_ZH.md) | 两级SFO工程及现有数据、交付资料 |
+| Sync_CFO | [README](Sync_CFO/README_ZH.md) | CFO各阶段工程；完整集成链位于Sync_OTA |
+
+保留根仓库V5_Final的既有提交历史。前端以当前文件快照直接纳入本仓库，克隆后能取得实际RTL和工程文件，无需另拉子模块；其独立本地Git历史原位保留。版本中包含必要IP配置、系数、参考数据及现有交付证据；可重建工作目录、缓存和未纳入版本的运行现场继续留在本机，不因上传删除。
+
+本仓库用于整体代码审查。历史文档中的工作状态、绝对本机路径及旧交付结论需结合[目录映射](PATH_MAPPING_ZH.md)与各工程当前README解释，不能将历史通过结论套到最新集成版本。旧原生入口不会因发布自动运行。
+
+---
+
+以下为历史入口与迁移记录，原文保留。
+
+# 当前工程入口（2026-09-16）
+
+| 工程 | 入口 | 当前用途 |
+|---|---|---|
+| Sync_OTA | [README](Sync_OTA/README_ZH.md) · [任务书](Sync_OTA/docs/PROJECT_SPEC_ZH.md) | 新授权完整同步系统，正在设计；尚未交付可用XPR或网表 |
+| Sync_Frontend | [工程](Sync_Frontend/Sync_Frontend.xpr) · [README](Sync_Frontend/README_ZH.md) | 自主TO/CFO同步前端 |
+| Sync_SFO | [工程](Sync_SFO/Sync_SFO.xpr) · [README](Sync_SFO/README_ZH.md) | sync_sfo_top，两级SFO |
+| Sync_CFO | [阶段入口](Sync_CFO/README_ZH.md) | 已验证子核与待补全CFO链 |
+
+Sync_OTA是新的并列集成工程；三个原工程及以下历史说明保留。新的状态以各工程README和集成任务书为准。
+
+---
+
+
 # 三模块当前入口（2026-09-15 目录整理）
 
 | 模块 | 日常 GUI / 说明入口 | 实际范围 |
@@ -56,3 +89,4 @@
 本轮先完成安全复制、可维护目录和本地Git。工程创建、IP迁移、仿真、综合和布局布线的实际检查状态分别记录在[迁移验证记录](docs/verification/MIGRATION_CHECKS_ZH.md)，不得把“已经提交Git”或“工程能打开”当成完整硬件验收。
 
 本项目只保证已明确复制的T10范围，不把T00–T11全部历史试验复制进来。原始来源通过文件映射与SHA-256指纹保留；同名不同版本没有混合进同一个源集。
+

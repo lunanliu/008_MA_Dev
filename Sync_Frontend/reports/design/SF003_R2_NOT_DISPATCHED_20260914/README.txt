@@ -1,0 +1,1 @@
+NOT_DISPATCHED / NEVER_RUN. User removed zero-BUFG requirement and requested synthesis delivery; these drafts are inactive evidence only.

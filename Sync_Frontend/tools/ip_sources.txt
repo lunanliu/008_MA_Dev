@@ -1,0 +1,15 @@
+ip/t04_cmpy_17x16/t04_cmpy_17x16.xci
+ip/t04_cordic_translate_48/t04_cordic_translate_48.xci
+ip/t04_div_u63_u47/t04_div_u63_u47.xci
+ip/t04_phase_scale_s48_x_1953125/t04_phase_scale_s48_x_1953125.xci
+ip/t04_square_s43/t04_square_s43.xci
+ip/t04_square_u42/t04_square_u42.xci
+ip/t05_div_quality_s64_s64_f15/t05_div_quality_s64_s64_f15.xci
+ip/t05_mult_cfo_s19_const40_full59/t05_mult_cfo_s19_const40_full59.xci
+ip/t05_mult_quality_u46x36_full82/t05_mult_quality_u46x36_full82.xci
+ip/t05_mult_s18x18_full36/t05_mult_s18x18_full36.xci
+ip/t05_mult_s48x48_full96/t05_mult_s48x48_full96.xci
+ip/t05_cmpy_corr_18x16/t05_cmpy_corr_18x16.xci
+ip/t05_cmpy_rotate_18x18/t05_cmpy_rotate_18x18.xci
+ip/t05_cordic_rotate16_parallel/t05_cordic_rotate16_parallel.xci
+ip/t05_dds_pinc32_sincos18/t05_dds_pinc32_sincos18.xci

@@ -1,0 +1,165 @@
+{
+  "schema_version": 2,
+  "matrix_id": "t01_compact_matrix_v2_statistical_coarse_cfo",
+  "coverage_method": "L9 three-level pairwise array plus all eight nonzero sign corners and named physics/channel cases",
+  "units": {
+    "to": "samples",
+    "fo": "Hz",
+    "sfo": "ppm",
+    "snr": "dB"
+  },
+  "offset_levels": {
+    "to_sync_samples": [-101, 0, 101],
+    "fo_sync_hz": [-150000, 0, 150000],
+    "sfo_ppm": [-150, 0, 150]
+  },
+  "offset_pairwise_rows": [
+    [-101, -150000, -150],
+    [-101, 0, 0],
+    [-101, 150000, 150],
+    [0, -150000, 0],
+    [0, 0, 150],
+    [0, 150000, -150],
+    [101, -150000, 150],
+    [101, 0, -150],
+    [101, 150000, 0]
+  ],
+  "all_nonzero_sign_corners": [
+    [-101, -150000, -150],
+    [-101, -150000, 150],
+    [-101, 150000, -150],
+    [-101, 150000, 150],
+    [101, -150000, -150],
+    [101, -150000, 150],
+    [101, 150000, -150],
+    [101, 150000, 150]
+  ],
+  "truth_decomposition_cases": [
+    {
+      "case_id": "to_positive_components",
+      "to_clock_samples": 91,
+      "los_delay_samples": 10,
+      "to_sync_true_samples": 101,
+      "cfo_oscillator_hz": 0,
+      "los_doppler_hz": 0,
+      "fo_sync_true_hz": 0
+    },
+    {
+      "case_id": "to_negative_components",
+      "to_clock_samples": -96,
+      "los_delay_samples": -5,
+      "to_sync_true_samples": -101,
+      "cfo_oscillator_hz": 0,
+      "los_doppler_hz": 0,
+      "fo_sync_true_hz": 0
+    },
+    {
+      "case_id": "fo_positive_components",
+      "to_clock_samples": 0,
+      "los_delay_samples": 0,
+      "to_sync_true_samples": 0,
+      "cfo_oscillator_hz": 143000,
+      "los_doppler_hz": 7000,
+      "fo_sync_true_hz": 150000
+    },
+    {
+      "case_id": "fo_negative_components",
+      "to_clock_samples": 0,
+      "los_delay_samples": 0,
+      "to_sync_true_samples": 0,
+      "cfo_oscillator_hz": -146000,
+      "los_doppler_hz": -4000,
+      "fo_sync_true_hz": -150000
+    }
+  ],
+  "paper_offset_snr_project_grid_fixture": {
+    "provenance": "paper_derived_partial",
+    "paper_exact": {
+      "to_sync_samples": 67,
+      "fo_sync_hz": 100000,
+      "sfo_ppm": 100,
+      "snr_los_db": 15,
+      "snr_secondary_db": -20,
+      "runs_per_point": 10
+    },
+    "noise_reference": "reference_los_tap",
+    "engineering_assumption": {
+      "secondary_delay_samples": 64,
+      "secondary_relative_doppler_hz": 250,
+      "secondary_initial_phase_rad": 0.7,
+      "project_sample_rate_adaptation": true
+    },
+    "seeds": [31001, 31002, 31003, 31004, 31005, 31006, 31007, 31008, 31009, 31010]
+  },
+  "nominal_los_snr_sweep": {
+    "profile": "tdl_d_los_30ns",
+    "snr_db": [-5, 0, 5, 10, 20],
+    "to_sync_samples": 67,
+    "fo_sync_hz": 100000,
+    "sfo_ppm": 100,
+    "noise_reference": "reference_los_tap",
+    "seeds_per_point": [41001, 41002, 41003, 41004, 41005, 41006, 41007, 41008, 41009, 41010],
+    "acceptance_role": "task_specific_by_snr_and_metric",
+    "coarse_cfo_acceptance": {
+      "decision_id": "T04_NOMINAL_CFO_STATISTICAL_ACCEPTANCE_2026_08_30",
+      "deterministic_metric": "per_case_absolute_error_hz",
+      "deterministic_max_abs_error_hz": 1000,
+      "accuracy_snr_db": [5, 10, 20],
+      "accuracy_metric": "rmse_per_snr_point_hz",
+      "accuracy_max_rmse_hz": 1000,
+      "paper_reference_fixture_accuracy_required": true,
+      "paper_reference_fixture_accuracy_metric": "rmse_per_channel_snr_point_hz",
+      "paper_reference_fixture_accuracy_max_rmse_hz": 1000,
+      "characterization_snr_db": [-5, 0],
+      "characterization_accuracy_gate": false,
+      "require_finite_valid_result_all_deterministic_and_nominal": true,
+      "require_zero_ambiguity_all_deterministic_and_nominal": true,
+      "required_report_metrics": [
+        "mean_error_hz",
+        "absolute_mean_error_hz",
+        "mean_absolute_error_hz",
+        "rmse_hz",
+        "standard_deviation_hz",
+        "percentile_95_absolute_error_hz",
+        "maximum_absolute_error_hz",
+        "outage_probability_absolute_error_gt_1khz"
+      ],
+      "seeds_per_snr_point": 10,
+      "provisional_floating_max_abs_start_error_samples": 512,
+      "final_coarse_start_gate": "inside_T05_frozen_search_range"
+    }
+  },
+  "standardized_profiles": [
+    {
+      "profile": "tdl_d_los_30ns",
+      "source": "ETSI_TR_138_901_V17_Table_7_7_2_4",
+      "delay_spread_ns": 30,
+      "role": "los_acceptance",
+      "within_cp": true,
+      "seeds": [42001, 42002, 42003, 42004, 42005, 42006, 42007, 42008, 42009, 42010]
+    },
+    {
+      "profile": "tdl_a_nlos_100ns",
+      "source": "ETSI_TR_138_901_V17_Table_7_7_2_1",
+      "delay_spread_ns": 100,
+      "role": "nlos_in_cp_stress",
+      "within_cp": true,
+      "seeds": [43001, 43002, 43003, 43004, 43005, 43006, 43007, 43008, 43009, 43010]
+    },
+    {
+      "profile": "tdl_a_beyond_cp_300ns",
+      "source": "ETSI_TR_138_901_V17_Table_7_7_2_1",
+      "delay_spread_ns": 300,
+      "role": "beyond_cp_degradation_only",
+      "within_cp": false,
+      "seeds": [44001, 44002, 44003]
+    }
+  ],
+  "explicit_out_of_range_stress": {
+    "to_sync_samples": 120,
+    "fo_sync_hz": 175000,
+    "sfo_ppm": 180,
+    "acceptance_role": "unsupported_stress_only",
+    "seeds": [45001]
+  }
+}

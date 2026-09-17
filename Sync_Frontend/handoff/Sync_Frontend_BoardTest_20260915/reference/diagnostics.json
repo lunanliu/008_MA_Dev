@@ -1,0 +1,12 @@
+{
+  "accepted_samples": 60324,
+  "confirmed_count": 4,
+  "candidate_count": 13,
+  "rejected_count": 1,
+  "capture_drop_count": 4,
+  "duplicate_count": 4,
+  "snapshot_peak": 2,
+  "max_history_age": 4336,
+  "error_sticky": 0,
+  "required_schedule": "Pause 8000 FPGA clocks after each 256 accepted beats; result stall 128 FPGA clocks; initial reset without session_start"
+}

@@ -1,0 +1,1 @@
+Original manifests describe Luna's immutable export package. This release adds all 43 EDN entries to XML and removes unsupported XDC assertions. The release-level manifest is authoritative for release bytes.

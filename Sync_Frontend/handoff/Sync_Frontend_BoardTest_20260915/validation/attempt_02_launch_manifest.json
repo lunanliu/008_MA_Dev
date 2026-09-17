@@ -1,0 +1,30 @@
+{
+  "schema": "SYNC_FRONTEND_BOARDTEST_VALIDATION_ATTEMPT_02_LAUNCH",
+  "created_utc": "2026-09-15T14:26:14.8775056Z",
+  "handoff": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915",
+  "matlab_executable": "C:\\Program Files\\MATLAB\\R2024a\\bin\\matlab.exe",
+  "matlab_version": "24.1.0.2508561",
+  "matlab_process_count_at_launch": 0,
+  "matlab_prefdir": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\matlab_prefdir_attempt_02",
+  "validation_output": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\attempt_02",
+  "waveform_analysis_output": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\waveform_analysis_01",
+  "log_path": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\matlab_attempt_02.log",
+  "exit_code_path": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\matlab_attempt_02.exit_code.txt",
+  "command": "cd('D:/008_MA_Dev/Sync_Frontend/handoff/Sync_Frontend_BoardTest_20260915'); validate_frontend_boardtest('validation/attempt_02'); s=analyze_frontend_waveform('data/baseline','validation/waveform_analysis_01'); assert(s.sample_count==60324); disp(checkcode('analyze_frontend_waveform.m','-id'));",
+  "singleCompThread": false,
+  "scope": "new corrected MATLAB scripts only; no old algorithm, RTL, Vivado, simulation, or board test",
+  "available_memory_gib": 15.82,
+  "estimated_memory_gib": 4,
+  "hard_protection_minutes": 10,
+  "script_hashes": {
+    "generate_frontend_csv.m": "53A3EA05F69F4E293ECBAC8AB7F35396445A278292769DD6F15167C57BE16DE3",
+    "analyze_frontend_readback.m": "EF32F7CEF2421CB6A1DACD329F69DEAB3DC21C41743AE53A8591661F897CDC68",
+    "validate_frontend_boardtest.m": "AEC276FFFCD324788EE16E2C494ACBB65AB6007025CC9554A9B4D9F0BF3A28E5",
+    "analyze_frontend_waveform.m": "7549A485F7EA77B8A9346377A8BBDDD6C8CFA730768DFF2153453430E4D80B9D",
+    "reference/autonomous_stream.mem": "98FFFEC3B2773996E54AA7608B1C2E112BC9F97FD3672F7D27BDC1B614C550D4"
+  },
+  "source_manifest": "reference/autonomous_manifest.json",
+  "source_manifest_stream_sha256": "98FFFEC3B2773996E54AA7608B1C2E112BC9F97FD3672F7D27BDC1B614C550D4",
+  "previous_attempt": "validation/attempt_01/source_at_failure",
+  "overwrite_policy": "do not delete or overwrite non-empty output"
+}

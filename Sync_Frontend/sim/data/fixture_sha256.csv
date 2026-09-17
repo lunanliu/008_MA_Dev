@@ -1,0 +1,7 @@
+"relative_path","sha256","bytes","lines"
+"stimulus_beats.mem","29427b1fd3ece8558693e843eb3bf15995eb3138b976d0acce114333503cc38f","2306304","69888"
+"expected_metrics.mem","ec5c589f13d1dc34ad94e838af20ea5589615e03c4e7412e5196e2691fffbae4","1894347","23387"
+"expected_results.mem","f570d4c625bfa64177f5cb7e49061257f832c56eb6b61c4444bc03072043f6c1","5915","91"
+"case_index.csv","71ec4b97f5eeee4fa474c9a560e49f949ca5f32c0b0b398179bbcb1bc54d2a7e","15711","92"
+"vendor_oracle_alignment.csv","c8a9e4b466dc9a1db1d33f95dff870b325a391e894639053a603e333fcd43db2","16150","92"
+"fixture_schema.json","e06b3e9d798c6e65247b523116e672626c3b841c9d4660376d73a5f4bc0739fc","6834","235"

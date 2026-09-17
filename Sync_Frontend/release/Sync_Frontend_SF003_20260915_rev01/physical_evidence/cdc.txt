@@ -1,0 +1,16 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date              : Mon Sep 14 23:47:15 2026
+| Host              : ROG-Lunan running 64-bit major release  (build 9200)
+| Command           : report_cdc -details -file D:/008_MA_Dev/Sync_Frontend/work/SF003_attempt_20260914T211953Z/cdc.txt
+| Design            : sync_frontend_top
+| Device            : xcvu11p-flgb2104
+| Speed File        : -2  PRODUCTION 1.27 02-28-2020
+| Temperature Grade : E
+------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+All paths are Safely Timed.
+

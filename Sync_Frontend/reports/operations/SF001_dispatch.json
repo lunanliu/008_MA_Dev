@@ -1,0 +1,10 @@
+{
+  "job_id": "SF001",
+  "state": "DISPATCHED",
+  "git_commit": "51df108eea0938fcc8db124c8c7a1653db635800",
+  "manifest_sha256": "f0df04f022cf24413e53672798e3bbecaff8e2952e3f1fcd1dc2fe1d024022bf",
+  "luna": "01a0a161-e434-7142-8927-1f5314daafd5",
+  "native_execution": "DELEGATED_NOT_YET_VERIFIED",
+  "next": "Review SF001 then implement SF002 continuous capture",
+  "dispatched_utc": "2026-09-14T19:35:22Z"
+}

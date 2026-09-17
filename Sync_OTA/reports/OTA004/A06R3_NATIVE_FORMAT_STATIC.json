@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "actual_wrapped_native_report",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong_command_scope",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong_requirement",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong_source_cell",
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate_destination",
+      "status": "PASS"
+    },
+    {
+      "name": "truncated_numeric_row",
+      "status": "PASS"
+    },
+    {
+      "name": "extra_unparsed_row",
+      "status": "PASS"
+    },
+    {
+      "name": "inconsistent_actual_slack",
+      "status": "PASS"
+    },
+    {
+      "name": "all_116_native_TSV_crosschecks",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong_endpoint",
+      "status": "PASS"
+    },
+    {
+      "name": "truncated_last_path",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong_slack",
+      "status": "PASS"
+    }
+  ],
+  "scientific_gate": "unchanged; rejects wrong scope/sets/numbers/truncated evidence",
+  "native_started": false
+}

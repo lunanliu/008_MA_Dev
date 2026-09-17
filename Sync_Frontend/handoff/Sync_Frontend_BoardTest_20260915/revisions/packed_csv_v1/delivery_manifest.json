@@ -1,0 +1,75 @@
+{
+  "package": "Sync_Frontend_BoardTest_20260915",
+  "runtime": "MATLAB R2024a",
+  "baseline_samples": 60324,
+  "result_words_per_record": 9,
+  "validation": "new MATLAB tools passed; existing simulation reference only",
+  "board_data_tested": false,
+  "files": [
+    {
+      "path": "README_ZH.md",
+      "bytes": 16075,
+      "sha256": "698374067d95acacb9823a79ad918db3edfc6fc8f073488bfd11f6da9fb3a3be"
+    },
+    {
+      "path": "generate_frontend_csv.m",
+      "bytes": 7904,
+      "sha256": "53a3ea05f69f4e293ecbac8ab7f35396445a278292769dd6f15167c57be16de3"
+    },
+    {
+      "path": "analyze_frontend_waveform.m",
+      "bytes": 3703,
+      "sha256": "7549a485f7ea77b8a9346377a8bbddd6c8cfa730768dff2153453430e4d80b9d"
+    },
+    {
+      "path": "analyze_frontend_readback.m",
+      "bytes": 8286,
+      "sha256": "ef32f7cef2421cb6a1dacd329f69deab3dc21c41743ae53a8591661f897cdc68"
+    },
+    {
+      "path": "validate_frontend_boardtest.m",
+      "bytes": 6900,
+      "sha256": "aec276fffcd324788ee16e2c494acbb65ab6007025cc9554a9b4d9f0bf3a28e5"
+    },
+    {
+      "path": "data\\baseline\\input_dma_u32.csv",
+      "bytes": 611747,
+      "sha256": "774ff5d5bd75afe4c047d013980330cb6d0d0e2b1e367365f089dbc85d654ec9"
+    },
+    {
+      "path": "data\\baseline\\expected_truth.csv",
+      "bytes": 216,
+      "sha256": "190ae104c642609af181295889e1782257fbaa2f4344781bda25bff391c38258"
+    },
+    {
+      "path": "data\\baseline\\host_chunks.csv",
+      "bytes": 1401,
+      "sha256": "2f85c04f4bae787a34c40f63bd49e61281e7fdb9739c66562d5d219a4d343d15"
+    },
+    {
+      "path": "reference\\autonomous_stream.mem",
+      "bytes": 512754,
+      "sha256": "98fffec3b2773996e54aa7608b1c2e112bc9f97fd3672f7d27bdc1b614c550d4"
+    },
+    {
+      "path": "reference\\autonomous_manifest.json",
+      "bytes": 1289,
+      "sha256": "091b1e84402eb98fd8dda71c673ce523207da00303f2241198b917c435e18f83"
+    },
+    {
+      "path": "reference\\autonomous_results.csv",
+      "bytes": 230,
+      "sha256": "c1de1e8217fe4cb96597ddf1b019a6b1f0b7bd9e72fe81f6d695fae14297db1e"
+    },
+    {
+      "path": "reference\\example_SIMULATION_readback_u32.csv",
+      "bytes": 196,
+      "sha256": "e65460892afa97bacf4ef410e1359c959f6f5db9d1ddc5243e1792a28c7d293a"
+    },
+    {
+      "path": "validation\\attempt_02\\validation_summary.json",
+      "bytes": 470,
+      "sha256": "509ac669df7c26f6b9542d08985eb4f9fe33eaeea6c65ac18304b4058b9f22fd"
+    }
+  ]
+}

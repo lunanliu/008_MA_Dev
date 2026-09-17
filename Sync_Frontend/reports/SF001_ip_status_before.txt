@@ -1,0 +1,98 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon Sep 14 21:39:09 2026
+| Host         : ROG-Lunan running 64-bit major release  (build 9200)
+| Command      : report_ip_status
+------------------------------------------------------------------------------------
+
+IP Status Summary
+
+1. Project IP Status
+--------------------
+Your project uses 15 IP. Some of these IP may have undergone changes in this release of the software. Please review the recommended actions.
+
+More information on the Xilinx versioning policy is available at www.xilinx.com.
+
+Project IP Instances
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| Instance Name                   | Status         | Recommendation | Change    | IP Name            | IP      | New Version    | New        | Original Part        |
+|                                 |                |                | Log       |                    | Version |                | License    |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t04_cmpy_17x16                  | IP part change | Retarget IP    |  *(1)     | Complex Multiplier | 6.0     | 6.0 (Rev. 20)  | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 20)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t04_cordic_translate_48         | IP part change | Retarget IP    |  *(2)     | CORDIC             | 6.0     | 6.0 (Rev. 17)  | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 17)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t04_div_u63_u47                 | IP part change | Retarget IP    |  *(3)     | Divider Generator  | 5.1     | 5.1 (Rev. 18)  | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 18)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t04_phase_scale_s48_x_1953125   | IP part change | Retarget IP    |  *(4)     | Multiplier         | 12.0    | 12.0 (Rev. 17) | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 17)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t04_square_s43                  | IP part change | Retarget IP    |  *(5)     | Multiplier         | 12.0    | 12.0 (Rev. 17) | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 17)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t04_square_u42                  | IP part change | Retarget IP    |  *(6)     | Multiplier         | 12.0    | 12.0 (Rev. 17) | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 17)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t05_cmpy_corr_18x16             | IP part change | Retarget IP    |  *(7)     | Complex Multiplier | 6.0     | 6.0 (Rev. 20)  | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 20)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t05_cmpy_rotate_18x18           | IP part change | Retarget IP    |  *(8)     | Complex Multiplier | 6.0     | 6.0 (Rev. 20)  | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 20)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t05_cordic_rotate16_parallel    | IP part change | Retarget IP    |  *(9)     | CORDIC             | 6.0     | 6.0 (Rev. 17)  | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 17)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t05_dds_pinc32_sincos18         | IP part change | Retarget IP    |  *(10)    | DDS Compiler       | 6.0     | 6.0 (Rev. 21)  | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 21)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t05_div_quality_s64_s64_f15     | IP part change | Retarget IP    |  *(11)    | Divider Generator  | 5.1     | 5.1 (Rev. 18)  | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 18)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t05_mult_cfo_s19_const40_full59 | IP part change | Retarget IP    |  *(12)    | Multiplier         | 12.0    | 12.0 (Rev. 17) | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 17)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t05_mult_quality_u46x36_full82  | IP part change | Retarget IP    |  *(13)    | Multiplier         | 12.0    | 12.0 (Rev. 17) | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 17)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t05_mult_s18x18_full36          | IP part change | Retarget IP    |  *(14)    | Multiplier         | 12.0    | 12.0 (Rev. 17) | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 17)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+| t05_mult_s48x48_full96          | IP part change | Retarget IP    |  *(15)    | Multiplier         | 12.0    | 12.0 (Rev. 17) | Included   | xcvu11p-flgc2104-2-e |
+|                                 |                |                |           |                    | (Rev.   |                |            |                      |
+|                                 |                |                |           |                    | 17)     |                |            |                      |
++---------------------------------+----------------+----------------+-----------+--------------------+---------+----------------+------------+----------------------+
+*(1) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/cmpy_v6_0/doc/cmpy_v6_0_changelog.txt
+*(2) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/cordic_v6_0/doc/cordic_v6_0_changelog.txt
+*(3) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/div_gen_v5_1/doc/div_gen_v5_1_changelog.txt
+*(4) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/mult_gen_v12_0/doc/mult_gen_v12_0_changelog.txt
+*(5) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/mult_gen_v12_0/doc/mult_gen_v12_0_changelog.txt
+*(6) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/mult_gen_v12_0/doc/mult_gen_v12_0_changelog.txt
+*(7) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/cmpy_v6_0/doc/cmpy_v6_0_changelog.txt
+*(8) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/cmpy_v6_0/doc/cmpy_v6_0_changelog.txt
+*(9) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/cordic_v6_0/doc/cordic_v6_0_changelog.txt
+*(10) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/dds_compiler_v6_0/doc/dds_compiler_v6_0_changelog.txt
+*(11) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/div_gen_v5_1/doc/div_gen_v5_1_changelog.txt
+*(12) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/mult_gen_v12_0/doc/mult_gen_v12_0_changelog.txt
+*(13) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/mult_gen_v12_0/doc/mult_gen_v12_0_changelog.txt
+*(14) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/mult_gen_v12_0/doc/mult_gen_v12_0_changelog.txt
+*(15) c:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/mult_gen_v12_0/doc/mult_gen_v12_0_changelog.txt
+
+

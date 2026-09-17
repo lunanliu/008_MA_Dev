@@ -1,7 +1,7 @@
 {
   "job": "OTA004",
   "revision": "A06R2",
-  "state": "FROZEN_AWAITING_NEW_MANAGER_GRANT",
+  "state": "DISPATCHED_TO_UNIQUE_LUNA_AWAITS_NATIVE_RESULT",
   "created_utc": "2026-09-17T11:10:42.749873+00:00",
   "manifest": "docs/jobs/OTA004_A06R2_source_lock.json",
   "manifest_sha256": "2a3d0a4c78f7b792a93d6c4d22d0cf2b7326022c52357b79e1e59a5436d3dfc3",
@@ -9,8 +9,8 @@
   "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
   "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
   "native_started": false,
-  "new_grant": null,
-  "new_deadline": null,
+  "new_grant": "SYNC_OTA_OTA004_A06R2_20260917T111736Z",
+  "new_deadline": "2026-09-17T12:02:36.8557504+00:00",
   "old_grants_reusable": false,
   "attempt": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2",
   "stage": "report",
@@ -21,5 +21,13 @@
     10,
     20
   ],
-  "commit": null
+  "commit": "e94f5da39bc9502a4721dc9f17bdc72ef468b6e8",
+  "submitted_utc": "2026-09-17T11:13:38.690232+00:00",
+  "grant_path": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A06R2_RESOURCE_GRANT_20260917.json",
+  "grant_sha256": "9CD5D266BC0371C836DA565A4756D46887AD8700FFDA95B45E20F7ACFCA768FF",
+  "first_start_not_after_utc": "2026-09-17T11:32:36.8557504+00:00",
+  "grant_verified_utc": "2026-09-17T11:23:26.771554+00:00",
+  "dispatched_utc": "2026-09-17T11:24:56.981063+00:00",
+  "dispatch_tool_success": true,
+  "native_status": "NOT_YET_OBSERVED_BY_ASTRA"
 }

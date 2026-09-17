@@ -1,0 +1,29 @@
+work/
+vivado/**/*.cache/
+vivado/**/*.gen/
+vivado/**/*.hw/
+vivado/**/*.ip_user_files/
+vivado/**/*.runs/
+vivado/**/*.sim/
+*.jou
+*.log
+.Xil/
+write_probe_astra.txt
+vivado/**/*.srcs/
+vivado/**/*.xpr.backup
+vivado/**/*.wcfg
+
+# New root GUI uses isolated generated products; imported XCI remain versioned.
+/Sync_Frontend.cache/
+/Sync_Frontend.gen/
+/Sync_Frontend.hw/
+/Sync_Frontend.ip_user_files/
+/Sync_Frontend.runs/
+/Sync_Frontend.sim/
+/examples/I16_AddSub_CLIP/
+/examples/archive/
+
+# V5_Final: local MATLAB preferences and live reporting state.
+**/matlab_prefdir*/
+/reports/operations/report_clock.json
+/reports/operations/thread_reports/

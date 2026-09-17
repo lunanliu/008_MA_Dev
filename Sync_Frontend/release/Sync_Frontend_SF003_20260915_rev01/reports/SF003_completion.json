@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "task": "SYNC_FRONTEND",
+  "stage": "SF003",
+  "status": "PASS_PENDING_ASTRA_REVIEW",
+  "scope": "FLGB synthesis and implementation plus independent EDF+same-attempt-EDN core relink and pure VHDL wrapper relink; platform/NI integration remains outside this evidence",
+  "completion_utc": "2026-09-14T22:09:03.6292371Z",
+  "astra": "01a0a162-c115-7af1-89be-49726f987f84",
+  "luna": "01a0a161-e434-7142-8927-1f5314daafd5",
+  "grant_id": "SYNC_FRONTEND_SHARED_VIVADO_20260914",
+  "commit": "2e968f6e33a82a000326be9e6d9c7c97da9342bc",
+  "frozen_manifest": "D:\\008_MA_Dev\\Sync_Frontend\\reports\\design\\SF003_files.csv",
+  "frozen_manifest_sha256": "978B9C12E3660DA8916F056F800E2002098300CF4E7B01E9D51A03271E12ADA2",
+  "frozen_manifest_rows": 78,
+  "xpr": "D:\\008_MA_Dev\\Sync_Frontend\\vivado\\Sync_Frontend\\Sync_Frontend.xpr",
+  "xpr_sha256": "68E31A7226E2684ED0F34C2F554ABB2008CB95318CD728A8A6CBE803D2A56364",
+  "part": "xcvu11p-flgb2104-2-e",
+  "hardware_top": "sync_frontend_top",
+  "attempt_dir": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z",
+  "synthesis": {
+    "status": "PASS",
+    "marker": "SF003_SYNTHESIS_COMPLETE PART=xcvu11p-flgb2104-2-e TOP=sync_frontend_top BLACKBOX=0",
+    "top_blackbox": 0,
+    "ip_ooc_runs": "15/15 complete",
+    "reference_rom_nonzero_init_fields": 208,
+    "artifacts": {
+      "synth_dcp": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\sync_frontend_synth.dcp",
+        "present": true,
+        "bytes": 14508306,
+        "sha256": "EEE1C76628EA07E6D1324FC14D2621F88CEF810E046E6F3D83F4CE0011133D89"
+      },
+      "top_edf": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\sync_frontend_top.edf",
+        "present": true,
+        "bytes": 30064350,
+        "sha256": "50CB5FB1A286D31A85C478039FF269E4262AA6336BA971BD8DF2995DE22535BA"
+      },
+      "reference_rom_init": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\reference_rom_init.txt",
+        "present": true,
+        "bytes": 178546,
+        "sha256": "92A397AE5EF87DA5F6BCCEBCE2C7D06DA678F4EFE45F0C12A64ABB0F14203D72"
+      },
+      "synth_utilization": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\synth_utilization.txt",
+        "present": true,
+        "bytes": 327149,
+        "sha256": "6DB261AAEAA647191E50F8DA997BC6AE14C35FEC9F1A994478646EEEC3B41079"
+      },
+      "synth_timing": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\synth_timing.txt",
+        "present": true,
+        "bytes": 31011,
+        "sha256": "0AAC90B1662E6B0BC307D5F1C6DD088E79D076E828A222666E031D9C34AA976D"
+      },
+      "synthesis_complete": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\synthesis_complete.txt",
+        "present": true,
+        "bytes": 85,
+        "sha256": "1A0EBCB645F7499B9F0F77F2DDABD2C8C2D0E15498270E543EE98DA1F3AAC818"
+      }
+    }
+  },
+  "implementation": {
+    "status": "COMPLETED_PLATFORM_LIMITED",
+    "route_status": "40722/40722 routable nets fully routed; routing errors=0",
+    "clock": "one clk125, 8.000 ns, 125 MHz",
+    "timing": {
+      "WNS_ns": 2.087,
+      "TNS_ns": 0.0,
+      "WHS_ns": 0.024,
+      "THS_ns": 0.0,
+      "failing_endpoints": 0
+    },
+    "resource_summary": {
+      "MMCM_PLL_COUNT": 0,
+      "BUFG_COUNT": 5,
+      "CLOCK_COUNT": 1,
+      "BLACKBOX": 0
+    },
+    "xml_resource_declaration": {
+      "NumberOfDCMsNeeded": 0,
+      "NumberOfMMCMsNeeded": 0,
+      "NumberOfBufGsNeeded": 0,
+      "export_core_clock_resources": 0,
+      "export_wrapper_clock_resources": 0,
+      "physical_route_added_bufg": 5
+    },
+    "platform_verified": 0,
+    "io_budget": "NOT_VALIDATED: standalone_io_budget.xdc used unsupported remove_from_collection and undefined sync_data_inputs; check_timing reports 134 input ports without input delay",
+    "ooc_external_routing": "NOT_VALIDATED: HD.PARTPIN_LOCS absent for OOC ports, so external timing/routing is not a board/NI signoff",
+    "drc": "178 warning violations reported; no route errors; not treated as clean platform signoff",
+    "artifacts": {
+      "routed_dcp": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\sync_frontend_routed.dcp",
+        "present": true,
+        "bytes": 27793927,
+        "sha256": "CD818DD0EC42B136EE8036313AAA4E116857F948686E7CE000B1A2B34113836F"
+      },
+      "physical_summary": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\physical_summary.txt",
+        "present": true,
+        "bytes": 169,
+        "sha256": "06DD20D9FB433387DD3CE7C2B158F1D679E5611BF4CF288046BDCB8C4DCFD854"
+      },
+      "route_timing": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\route_timing.txt",
+        "present": true,
+        "bytes": 718515,
+        "sha256": "B0FCD6AFF1AD9EACB5EFF8F5C35E01964DB9EA8D4E06B44E7F868EB8C6D1D5D8"
+      },
+      "route_status": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\route_status.txt",
+        "present": true,
+        "bytes": 714,
+        "sha256": "65A9C3E3666C89B7C5A6AC3B12A8267ED2081905BC17EF51435B89C3954FFBB7"
+      },
+      "check_timing": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\check_timing.txt",
+        "present": true,
+        "bytes": 4864,
+        "sha256": "75EDA3283BDCD37F59DE529058B1AC3968CD90686BA2B57C70E2790B51B56CB9"
+      },
+      "clocks": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\clocks.txt",
+        "present": true,
+        "bytes": 1459,
+        "sha256": "C970554837CA9537BED45B2E11EEDBE4A898EDDE680DCA5C35127D999A953922"
+      },
+      "cdc": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\cdc.txt",
+        "present": true,
+        "bytes": 841,
+        "sha256": "94309CBB70BDD00CB135E78FAA48B64A9CA4A12DC5E7988D625F3A3A017FC058"
+      },
+      "drc": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\drc.txt",
+        "present": true,
+        "bytes": 96008,
+        "sha256": "3F2A0DEB9D566496164C49D80497EF7B65E6D1E814FE65A8811E8220DADD6688"
+      },
+      "methodology": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\methodology.txt",
+        "present": true,
+        "bytes": 21447,
+        "sha256": "4521B7843FEE3A0E0A7D3DAB973B0DDCEB141DCC6505765A2EA0C12228AF699B"
+      },
+      "high_fanout": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\high_fanout.txt",
+        "present": true,
+        "bytes": 15369,
+        "sha256": "CF32A290EA61A3292753C818827A410DBF02F73041DF6DE09C2722C2AFDCD37F"
+      },
+      "route_run_log": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\vivado\\Sync_Frontend\\Sync_Frontend.runs\\impl_1\\runme.log",
+        "present": true,
+        "bytes": 80522,
+        "sha256": "6DBD9ED9843DAF395D1B0D16E3BE565F01DE734D4BC052A0D5AD7D554D0AD1CF"
+      },
+      "preserved_native_route_log": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\retry1_workspace\\vivado_50776.backup.log",
+        "present": true,
+        "bytes": 616054,
+        "sha256": "7031BA4885B14C4176075B3BCEC6E1C25C18FD934A6AE74CB75098245EC46890"
+      }
+    }
+  },
+  "export_check": {
+    "status": "PASS_EDIF_ROUNDTRIP",
+    "method": "Private wrapper only: copied sync_frontend_top.edf plus all 43 same-attempt EDN byte-for-byte; independently linked core and synthesized/linked pure VHDL wrapper",
+    "frozen_script": "D:\\008_MA_Dev\\Sync_Frontend\\tools\\check_clip_export.tcl",
+    "private_script": {
+      "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\check_clip_export_retry1.tcl",
+      "present": true,
+      "bytes": 5561,
+      "sha256": "CBB2DE7F21875E361F110DC68C916E982302180F9595FD024CA61D077DF086E9"
+    },
+    "same_attempt_edn_count": 43,
+    "same_attempt_edn_manifest": {
+      "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\package\\same_attempt_edn_manifest.txt",
+      "present": true,
+      "bytes": 9445,
+      "sha256": "2AF5EFC658E1F5D5B7556C96BC1701356F9F635DF4E0E866E71BB001725807EC"
+    },
+    "core_blackbox": 0,
+    "wrapper_blackbox": 0,
+    "port_comparison": "PASS: XML=32, ports.json=32, VHDL wrapper=32; VHDL component/core expanded ports=22; directions and widths match",
+    "port_comparison_artifacts": {
+      "text": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\port_comparison.txt",
+        "present": true,
+        "bytes": 374,
+        "sha256": "A8E5CF506F7E44D173626131E171A0096C925CC6D58210798FB0CE83B378FC10"
+      },
+      "json": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\port_comparison.json",
+        "present": true,
+        "bytes": 882,
+        "sha256": "3DE14BCF2D19236EDEDE3D4446D77DE54E2C448CE937FD6784F82CD6FFD3A36E"
+      }
+    },
+    "clock_inheritance": "PASS local check: core clk125=125 MHz and wrapper ni_clk125_check=125 MHz",
+    "clock_resource_check": "PASS for exported core/wrapper netlists: 0 MMCM/PLL/BUFG; physical routed design separately records 5 BUFG inserted by place_design",
+    "artifacts": {
+      "core_relinked_dcp": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\core_relinked.dcp",
+        "present": true,
+        "bytes": 16853043,
+        "sha256": "3036A6A49C5BB2EC32E18490F5DB340D03E7168CDF124D7A1CDE13938C7DE8A5"
+      },
+      "wrapper_linked_dcp": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\wrapper_linked.dcp",
+        "present": true,
+        "bytes": 16759454,
+        "sha256": "6D0FEDA92AF85CBF2EF6C623280187A19E48EAC14B1D0108DDF1CD47167BC4F0"
+      },
+      "export_complete": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\export_check_complete.txt",
+        "present": true,
+        "bytes": 216,
+        "sha256": "8917FB22293619D74D02440D321B772F7253FEAE7355E13FC42AE545ED53B0D7"
+      },
+      "core_utilization": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\core_utilization.txt",
+        "present": true,
+        "bytes": 14882,
+        "sha256": "2F77AF8937E4D340B837C4358C2A185222C1379012AE11CDC7725782A273036D"
+      },
+      "wrapper_utilization": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\wrapper_utilization.txt",
+        "present": true,
+        "bytes": 14796,
+        "sha256": "D22018623E2FC8FAE9602C0490B2CF25BFAD675671B6F10241539235D65D3D25"
+      },
+      "core_ports": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\core_ports.txt",
+        "present": true,
+        "bytes": 14389,
+        "sha256": "2FE785AD49A168B2F9A3D2A5201A72FE4D97ECAACFB30C7CD2E1A9E355145114"
+      },
+      "wrapper_ports": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\wrapper_ports.txt",
+        "present": true,
+        "bytes": 16244,
+        "sha256": "8182C5731B72DA29C319B0D2537E0EDC93C5F5A8C335B1E18A9C50D710086E9F"
+      },
+      "core_clocks": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\core_clocks.txt",
+        "present": true,
+        "bytes": 1564,
+        "sha256": "3435A6E0C98521279F78B1D9F3254219CE7C30A6645E308E8A4885B168D82461"
+      },
+      "wrapper_clocks": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\wrapper_clocks.txt",
+        "present": true,
+        "bytes": 1595,
+        "sha256": "A6C64C6A98E29C2FFA173F7C9746DC3D2462A75D2C11454B304B891BB779B83F"
+      },
+      "resource_comparison": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\xml_resource_declaration_comparison.txt",
+        "present": true,
+        "bytes": 185,
+        "sha256": "18A4C6D844AA4EE947102A5A8F3310E3494D4362C5923327689376B11882B949"
+      },
+      "package_edf": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\package\\sync_frontend_top.edf",
+        "present": true,
+        "bytes": 30064350,
+        "sha256": "50CB5FB1A286D31A85C478039FF269E4262AA6336BA971BD8DF2995DE22535BA"
+      },
+      "package_vhdl": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\package\\sync_frontend_clip.vhd",
+        "present": true,
+        "bytes": 4966,
+        "sha256": "E481AD71C250DE6BAD26D359DD1B8CEA9953E8E3843C60B825798774D5575C9D"
+      },
+      "package_xml": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\package\\sync_frontend_clip.xml",
+        "present": true,
+        "bytes": 18941,
+        "sha256": "64D025A0D59D05A65BEBD9B3FFA04D3B6E6A1B9442354E8C3C8E7E2923A225B5"
+      },
+      "package_xdc": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\package\\sync_frontend_clip.xdc",
+        "present": true,
+        "bytes": 868,
+        "sha256": "78C7836BE9D77AC54A9A2224E2CB7956308CDAEC881821E80D2757EB87A06954"
+      },
+      "package_ports": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\package\\ports.json",
+        "present": true,
+        "bytes": 5770,
+        "sha256": "76EDD52BB5A6AA7980D44F937D916B63E2A295F2FADCE8920BEBB41871BA9760"
+      }
+    }
+  },
+  "retry_history": [
+    {
+      "directory": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z",
+      "phase": "physical_preflight",
+      "status": "FAILED_WRAPPER_PROPERTY_COMPATIBILITY",
+      "evidence": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\first_failure.json",
+        "present": true,
+        "bytes": 1071,
+        "sha256": "23A63EEA3AFA1CF9995FDF224D0B358406FE28034ABC948007E6E3CE8447F0CC"
+      }
+    },
+    {
+      "directory": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis",
+      "phase": "export_package",
+      "status": "FAILED_WRAPPER_SELF_HASH_SHARING_VIOLATION",
+      "evidence": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_retry1_vivado.log",
+        "present": true,
+        "bytes": 1735,
+        "sha256": "BFDF5431B31A04815BBB9C056F30979B8CAB30E5769BAC2106302877388EAA2A"
+      }
+    },
+    {
+      "directory": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry1",
+      "phase": "xml_resource_comparison",
+      "status": "FAILED_PRIVATE_TCL_REGEX_ONLY",
+      "evidence": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_retry2_vivado.log",
+        "present": true,
+        "bytes": 49635,
+        "sha256": "06139C27B95A0E5DA4F3DE901EC21724E2A17C03879EC226F8F74A7988BDFBDE"
+      }
+    },
+    {
+      "directory": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2",
+      "phase": "export_package_core_wrapper",
+      "status": "PASS",
+      "evidence": {
+        "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\export_check_synthesis_retry2\\export_check_complete.txt",
+        "present": true,
+        "bytes": 216,
+        "sha256": "8917FB22293619D74D02440D321B772F7253FEAE7355E13FC42AE545ED53B0D7"
+      }
+    }
+  ],
+  "private_repairs": {
+    "physical_wrapper_guard": {
+      "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\run_physical_retry1.tcl",
+      "present": true,
+      "bytes": 7276,
+      "sha256": "4F7D347909F28B9A7987235FE49B1F4D2717708A47024E8616034A8697C935AE"
+    },
+    "original_physical_script_sha256": "7A08E849C28A0AF9BA53376B582D71627247F35424D1D32CA806FA714006AF84",
+    "io_constraint_patch": {
+      "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\standalone_io_budget_retry1.xdc",
+      "present": true,
+      "bytes": 598,
+      "sha256": "3F896918F25706575EA3AEE0923314084DF089C7791059A30D38656FD444109B"
+    },
+    "io_constraint_patch_note": {
+      "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\retry1_io_constraint_patch.txt",
+      "present": true,
+      "bytes": 713,
+      "sha256": "6C5B0A949283C03CF09690D5F78DF9354B7A8C213BFF76E34503890D09B02B46"
+    },
+    "note": "Private IO correction was saved for evidence only and not rerun; no RTL, algorithm, threshold, clock, or device change"
+  },
+  "launch_manifest": {
+    "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\launch_manifest.json",
+    "present": true,
+    "bytes": 3192,
+    "sha256": "20A4FAFDD640BF8D79D02200F911F2BB7A7B8C46F13E236370A68BA22D9B930D"
+  },
+  "actual_sources": {
+    "path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_attempt_20260914T211953Z\\actual_sources.txt",
+    "present": true,
+    "bytes": 2628,
+    "sha256": "BDDA3EA782C19A538E7B997CDF714E74E7380753415C1D7005D046604BAC1874"
+  },
+  "process_postcheck": {
+    "sf003_native_tree_zero": true,
+    "t10_preserved": true,
+    "t10_vivado_pid": 34768,
+    "t10_xsimk_pid": 28856,
+    "unrelated_user_gui_vivado_pid": 14300,
+    "matlab_count": 0,
+    "free_gib_postcheck": 15.46
+  },
+  "not_run": [
+    "check_clip_export.tcl frozen script verbatim: not used because same-attempt EDN dependencies were required; private equivalent preserved",
+    "NI/LabVIEW target compilation",
+    "board validation",
+    "sustained throughput qualification",
+    "MATLAB",
+    "new IO-corrected implementation rerun"
+  ],
+  "warnings": [
+    "The routed timing numbers are internally positive but cannot be used as external platform/NI signoff because the original standalone IO budget did not apply.",
+    "OOC HD.PARTPIN_LOCS warnings mean external routing/timing at the NI boundary is not verified.",
+    "physical place_design inserted 5 BUFG resources; this is recorded as actual implementation behavior and does not invalidate the exported core/wrapper local resource check under the user-corrected acceptance.",
+    "CLIP XML currently declares 0 DCM/MMCM/BUFG and points to EDF; DCP artifacts are delivery candidates, not proof of LabVIEW Target VI integration."
+  ],
+  "t10_preserved": true,
+  "remaining_boundary": "SF003 artifacts are delivered pending Astra review; no claim of full NI/LabVIEW, board, external IO-budget, sustained-rate, or end-to-end platform qualification."
+}

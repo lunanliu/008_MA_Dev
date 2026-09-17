@@ -1,0 +1,5 @@
+rx_frame_id,case_id,fixture_start_0,fine_absolute_truth,cfo_truth_hz,lane
+0,pairwise_01,23041,23196,-150000,0
+1,pairwise_02,38506,38661,0,1
+2,pairwise_06,53970,54226,150000,2
+3,pairwise_07,69434,69791,-150000,3

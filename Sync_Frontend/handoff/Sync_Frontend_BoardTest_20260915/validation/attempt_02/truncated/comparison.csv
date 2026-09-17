@@ -1,0 +1,4 @@
+rx_frame_id,expected_fine_absolute,actual_fine_absolute,fine_error_samples,expected_cfo_hz,actual_cfo_hz,cfo_error_hz
+0,15004,15004,0,-150000,-150022,-22
+1,26373,26373,0,0,0,0
+2,37842,37842,0,150000,150022,22

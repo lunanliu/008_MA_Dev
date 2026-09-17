@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "task": "SYNC_FRONTEND",
+  "stage": "SF001",
+  "status": "PASS_PENDING_ASTRA_REVIEW",
+  "scope": "frozen coarse baseline short equivalence only",
+  "completion_utc": "2026-09-14T19:50:20.0908356Z",
+  "astra": "01a0a162-c115-7af1-89be-49726f987f84",
+  "luna": "01a0a161-e434-7142-8927-1f5314daafd5",
+  "grant_id": "SYNC_FRONTEND_SHARED_VIVADO_20260914",
+  "part": "xcvu11p-flgb2104-2-e",
+  "hardware_top": "to_coarse_ports",
+  "simulation_top": "coarse_baseline_equivalence_tb",
+  "xpr": "D:\\008_MA_Dev\\Sync_Frontend\\vivado\\Sync_Frontend\\Sync_Frontend.xpr",
+  "xpr_sha256": "1DCFAA380D8002CE4AF4EB3957AA2BFFAE8A1C3B6553D89C61C174FBECE6F5CD",
+  "actual_sources": "D:\\008_MA_Dev\\Sync_Frontend\\reports\\SF001_actual_sources.txt",
+  "actual_sources_sha256": "D0132648EBDB9ECADEE870427EEFBEC2AD2B4B3AAE1749702BD5105B6697C6AC",
+  "source_set_summary": {
+    "hardware_sv": 30,
+    "managed_xci": 15,
+    "simulation_tb": 1,
+    "input_mem_files": 3
+  },
+  "ip_summary": {
+    "status": "15/15 Up-to-date",
+    "target_package": "flgb2104",
+    "generated_product_files": 228,
+    "config_rows_before": 485,
+    "config_rows_after": 485,
+    "config_differences": 0,
+    "original_xci_untouched": true
+  },
+  "native_marker": "T04_CURRENT_GENERATION_V2_SMOKE_PASS cases=3 case0=0 outage_case0=27 outage_case1=29 metrics=771 result_records=6 pair_commits=3 maximum_pair_commit_delta=866 maximum_vendor_phase_difference_lsb=0 maximum_ideal_phase_difference_lsb=3 maximum_magnitude_difference_lsb=0 exact_public_fail_close=1 raw_internal_nodes_checked=1",
+  "native_pass_log": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF001_attempt_20260914T193644Z\\baseline_smoke_retry1.log",
+  "native_simulate_log": "D:\\008_MA_Dev\\Sync_Frontend\\vivado\\Sync_Frontend\\Sync_Frontend.sim\\sim_1\\behav\\xsim\\simulate.log",
+  "native_simulate_log_sha256": "F7FE4B7FB64A35C85877626F5485F4142BA15F43786749AF1ACB8B93FCF64EF4",
+  "verification_post": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF001_attempt_20260914T193644Z\\verify_sf001_post.log",
+  "failed_first_attempt": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF001_attempt_20260914T193644Z\\baseline_smoke_failure.json",
+  "retarget_evidence": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF001_attempt_20260914T193644Z\\retarget_summary.json",
+  "create_evidence": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF001_attempt_20260914T193644Z\\create_project_summary.json",
+  "attempt_dir": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF001_attempt_20260914T193644Z",
+  "repair_notes": [
+    "Initial smoke stopped at XSim elaboration because imported FLGC XCI were locked for FLGB.",
+    "Official upgrade_ip -vlnv retargeted all 15 managed IP copies; external CONFIG.* comparison found zero differences.",
+    "retarget v2 wrapper exited at unsupported Tcl dict equal after upgrade; preserved as execution evidence; no IP/source rollback.",
+    "Baseline smoke retry used the original frozen run_baseline_smoke.tcl and passed."
+  ],
+  "warnings": [
+    "Vivado wave display limit warnings for very large memory arrays.",
+    "Dynamic SystemVerilog path objects were not traceable in wave window."
+  ],
+  "not_run": [
+    "autonomous continuous capture",
+    "external frame-marker rejection tests",
+    "full frontend product control",
+    "MATLAB",
+    "synthesis",
+    "implementation timing",
+    "CLIP export",
+    "NI/LabVIEW/board validation"
+  ],
+  "t10_preserved": true,
+  "remaining_boundary": "This is not autonomous synchronization PASS, full Sync_Frontend PASS, CLIP PASS, throughput qualification, or board validation."
+}

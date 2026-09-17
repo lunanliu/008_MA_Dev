@@ -1,0 +1,13 @@
+
+# Preserve frozen export bytes and SHA manifests across Windows checkouts.
+release/** -text
+tools/check_dcp_release.tcl -text
+docs/SF003_DCP_RELEASE_CHECK_ZH.md -text
+reports/SF003* -text
+reports/design/SF003_DCP_RELEASE_CHECK_files.csv -text
+handoff/** -text
+
+# Preserve bytes of new directory-entry assets.
+Sync_Frontend.srcs/** -text
+Sync_Frontend.xpr -text
+wrapper/sync_frontend_clip.vhd -text

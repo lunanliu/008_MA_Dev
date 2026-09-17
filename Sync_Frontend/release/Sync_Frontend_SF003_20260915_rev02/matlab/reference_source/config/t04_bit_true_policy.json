@@ -1,0 +1,127 @@
+{
+  "schema_version": 2,
+  "policy_id": "t04_bit_true_policy_v2_native_q3_45_20260830",
+  "frozen_at_local": "2026-08-30T12:56:03+02:00",
+  "controlled_reopen": {
+    "reason": "user_approved_global_native_scaled_radians_q3_45",
+    "legacy_q1_47_policy_sha256": "78ac1432d0be6f43db9a1e1e3f0bea87ee5d80fdd772f239cb6482a3b3d02db4",
+    "legacy_report_root": "reports/T04_coarse_to_cfo/bit_true",
+    "legacy_report_root_is_immutable_evidence": true
+  },
+  "active_matlab": {
+    "study_entrypoint": "matlab/tasks/T04_coarse_sync/t04_run_bit_true_study_q3_45.m",
+    "integer_core": "matlab/tasks/T04_coarse_sync/t04_integer_sc_core_q3_45.m",
+    "directed_self_tests": "matlab/tasks/T04_coarse_sync/t04_run_mathematical_self_tests_q3_45.m",
+    "runner": "scripts/t04/run_t04_bit_true_q3_45.m",
+    "runner_sha256": "6b309b9e95c5b13b3e612753bd877227998e706ccaa98325a2948a571d0e9d0e",
+    "default_output_root": "reports/T04_coarse_to_cfo/bit_true_q3_45_run01",
+    "existing_runner_switch_required": false,
+    "existing_runner_must_not_write_legacy_report_root": true
+  },
+  "selected_floating_candidate": "sc_m003_run04_safe_interior_sum_midpoint_minus_half_cp",
+  "selected_frequency_policy": "sc_only",
+  "input_quantizer": {
+    "scope": "one_case_independent_scale_for_all_91_cases",
+    "rounding": "convergent_round_to_nearest_even",
+    "overflow": "explicit_saturation",
+    "per_case_oracle_autoscale_allowed": false,
+    "reference_t02_integer_per_unit": 526806.4038765457,
+    "reference_t02_summary_sha256": "f800940494d20d1abbf2141d018ada076d9e7e3b33d9423e073fa6bd75d49b4b",
+    "candidates": [
+      {
+        "id": "rx_scale_tx_div16",
+        "integer_per_unit": 32925.40024228411
+      },
+      {
+        "id": "rx_scale_tx_div8",
+        "integer_per_unit": 65850.80048456822
+      },
+      {
+        "id": "rx_scale_tx_div4",
+        "integer_per_unit": 131701.60096913643
+      },
+      {
+        "id": "rx_scale_tx_div2",
+        "integer_per_unit": 263403.20193827286
+      },
+      {
+        "id": "rx_scale_tx_equal",
+        "integer_per_unit": 526806.4038765457
+      }
+    ],
+    "eligibility": {
+      "zero_clipped_components_all_91_cases": true,
+      "all_88_acceptance_results_finite_valid_unambiguous": true,
+      "floating_statistical_gate_reapplied_after_quantization": true
+    },
+    "ranking": [
+      "eligible_descending",
+      "integer_per_unit_descending",
+      "candidate_id_lexical_ascending"
+    ]
+  },
+  "integer_core": {
+    "energy_floor_integer": 0,
+    "metric_threshold_exact_numerator": 3,
+    "metric_threshold_exact_denominator": 100,
+    "search_start_samples": -256,
+    "search_stop_samples": 768,
+    "search_step_samples": 4,
+    "minimum_run_beats": 4,
+    "safe_phase_first_offset_samples": 320,
+    "safe_phase_last_offset_samples": 384,
+    "safe_phase_step_samples": 4,
+    "phase_format": "signed_scaled_radians_q3_45",
+    "phase_fractional_bits": 45,
+    "phase_rounding": "convergent_round_to_nearest_even",
+    "phase_mathematical_code": "RNE_ties_even((atan2(p_im,p_re)/pi)*2^45)",
+    "phase_canonical_principal_code_range": [-35184372088832, 35184372088831],
+    "phase_active_valid_scaled_radians_range": "-1_to_plus_1_minus_2^-45",
+    "phase_extra_integer_bits_role": "vendor_container_and_sign_extension_only",
+    "phase_outside_plus_or_minus_1_is_error": true,
+    "phase_positive_pi_endpoint_action": "circular_wrap_to_minus_2^45",
+    "phase_circular_code_period": 70368744177664,
+    "cfo_format": "signed_integer_hz_s32",
+    "cfo_rounding": "convergent_round_to_nearest_even",
+    "cfo_exact_expression": "BigInteger_RNE_ties_even(phase_code_q3_45*1953125/2^48)",
+    "cfo_big_integer_intermediate_required": true,
+    "quality_format": "unsigned_q1_15",
+    "quality_rounding": "truncate",
+    "quality_clamp_one_code": 32768
+  },
+  "declared_node_tolerance_lsb": {
+    "exact_integer_and_control_nodes": 0,
+    "cordic_phase_vendor_bit_accurate_oracle": 0,
+    "cordic_phase_ideal_atan2_current_91_safe_domain": 4,
+    "cordic_magnitude": 1,
+    "cfo_hz": 1,
+    "quality": 1
+  },
+  "t04_t05_handoff": {
+    "fine_search_first_offset_samples": -128,
+    "fine_search_last_offset_samples": 128,
+    "fine_search_step_samples": 1,
+    "candidate_count": 257,
+    "t04_max_abs_coarse_start_error_samples": 128
+  },
+  "warmup": {
+    "first_frame_without_genuine_previous_context_is_invalid": true,
+    "status_bit": 5,
+    "two_explicit_result_records_required": true
+  },
+  "result_service_contract": {
+    "fifo_depth_records": 4,
+    "records_per_valid_frame": 2,
+    "maximum_contiguous_ready_low_cycles": 334080,
+    "minimum_long_term_accepts_per_334080_cycles": 2
+  },
+  "provisional_deadline_cycles_from_frame_start": 1024,
+  "vendor_ip_required": {
+    "complex_multiplier": "xilinx.com:ip:cmpy:6.0",
+    "wide_squares": "xilinx.com:ip:mult_gen:12.0",
+    "phase_magnitude": "xilinx.com:ip:cordic:6.0",
+    "quality_divider": "xilinx.com:ip:div_gen:5.1"
+  },
+  "frame_config_sha256": "ad9f405fa117c6db42fe241981ff7837bc842aca4e9b31e37203eef65dd0830c",
+  "verification_matrix_sha256": "40af334287858933543f91e8ff4dcc1f39c2ee8c2e6de0681270aadb1fce62e4"
+}

@@ -1,0 +1,226 @@
+[
+  {
+    "name": "clk125",
+    "direction": "in",
+    "bits": 1,
+    "datatype": "Boolean",
+    "description": "NI-provided free-running 125 MHz; use this same clock for the SCTL"
+  },
+  {
+    "name": "reset_n",
+    "direction": "in",
+    "bits": 1,
+    "datatype": "Boolean",
+    "description": "Active-low reset, hold at least 4 clocks, wait for input_ready after release"
+  },
+  {
+    "name": "session_start",
+    "direction": "in",
+    "bits": 1,
+    "datatype": "Boolean",
+    "description": "One clock pulse starts a new continuity epoch"
+  },
+  {
+    "name": "session_abort",
+    "direction": "in",
+    "bits": 1,
+    "datatype": "Boolean",
+    "description": "One clock pulse disarms input and discards in-flight state"
+  },
+  {
+    "name": "stream_gap",
+    "direction": "in",
+    "bits": 1,
+    "datatype": "Boolean",
+    "description": "One clock pulse declares real sample loss; discard old epoch; valid pause alone is not sample loss"
+  },
+  {
+    "name": "input_valid",
+    "direction": "in",
+    "bits": 1,
+    "datatype": "Boolean",
+    "description": "Hold all four IQ words until valid and ready"
+  },
+  {
+    "name": "input_ready",
+    "direction": "out",
+    "bits": 1,
+    "datatype": "Boolean",
+    "description": "Accept all four IQ samples on valid and ready"
+  },
+  {
+    "name": "input_data0",
+    "direction": "in",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Lane 0, packed Q16 high / I16 low, lane0 is earliest"
+  },
+  {
+    "name": "input_data1",
+    "direction": "in",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Lane 1, packed Q16 high / I16 low, lane0 is earliest"
+  },
+  {
+    "name": "input_data2",
+    "direction": "in",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Lane 2, packed Q16 high / I16 low, lane0 is earliest"
+  },
+  {
+    "name": "input_data3",
+    "direction": "in",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Lane 3, packed Q16 high / I16 low, lane0 is earliest"
+  },
+  {
+    "name": "result_valid",
+    "direction": "out",
+    "bits": 1,
+    "datatype": "Boolean",
+    "description": "Entire result bundle remains stable until result_ready"
+  },
+  {
+    "name": "result_ready",
+    "direction": "in",
+    "bits": 1,
+    "datatype": "Boolean",
+    "description": "Acknowledge all result fields atomically"
+  },
+  {
+    "name": "result_epoch",
+    "direction": "out",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Continuity epoch of this result"
+  },
+  {
+    "name": "rx_frame_id",
+    "direction": "out",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Local confirmed frame sequence, starts at zero per epoch; not decoded transmitter frame id"
+  },
+  {
+    "name": "candidate_id",
+    "direction": "out",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Internal candidate sequence, including rejected proposals"
+  },
+  {
+    "name": "coarse_absolute",
+    "direction": "out",
+    "bits": 64,
+    "datatype": "U64",
+    "description": "Coarse position in accepted samples since epoch start"
+  },
+  {
+    "name": "fine_absolute",
+    "direction": "out",
+    "bits": 64,
+    "datatype": "U64",
+    "description": "Fine position in accepted samples since epoch start"
+  },
+  {
+    "name": "cfo_hz",
+    "direction": "out",
+    "bits": 32,
+    "datatype": "I32",
+    "description": "Signed coarse CFO Hz; raw payload has not been corrected"
+  },
+  {
+    "name": "quality_q1_15",
+    "direction": "out",
+    "bits": 16,
+    "datatype": "U16",
+    "description": "Fine timing quality code Q1.15"
+  },
+  {
+    "name": "result_status",
+    "direction": "out",
+    "bits": 16,
+    "datatype": "U16",
+    "description": "Kind and validity flags; 0x3800 is a valid fine result"
+  },
+  {
+    "name": "accepted_samples",
+    "direction": "out",
+    "bits": 64,
+    "datatype": "U64",
+    "description": "Live accepted-sample count within current epoch"
+  },
+  {
+    "name": "epoch",
+    "direction": "out",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Live continuity epoch"
+  },
+  {
+    "name": "candidate_count",
+    "direction": "out",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Eligible plateau proposals"
+  },
+  {
+    "name": "rejected_count",
+    "direction": "out",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Candidates rejected by local estimator"
+  },
+  {
+    "name": "capture_drop_count",
+    "direction": "out",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Candidates rejected for copy/slot capacity or stale history"
+  },
+  {
+    "name": "duplicate_count",
+    "direction": "out",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Queued proposals suppressed near the confirmed frame"
+  },
+  {
+    "name": "confirmed_count",
+    "direction": "out",
+    "bits": 32,
+    "datatype": "U32",
+    "description": "Confirmed frames admitted to result holding register"
+  },
+  {
+    "name": "snapshot_occupancy",
+    "direction": "out",
+    "bits": 8,
+    "datatype": "U8",
+    "description": "Number of occupied snapshot slots, 0..2"
+  },
+  {
+    "name": "snapshot_peak",
+    "direction": "out",
+    "bits": 8,
+    "datatype": "U8",
+    "description": "Maximum snapshot occupancy, 0..2"
+  },
+  {
+    "name": "max_history_age",
+    "direction": "out",
+    "bits": 16,
+    "datatype": "U16",
+    "description": "Largest oldest-needed-sample age at copy start"
+  },
+  {
+    "name": "error_sticky",
+    "direction": "out",
+    "bits": 16,
+    "datatype": "U16",
+    "description": "Per-epoch hardware diagnostics; see interface guide"
+  }
+]

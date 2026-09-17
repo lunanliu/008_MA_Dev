@@ -1,0 +1,457 @@
+{
+  "schema_version": 2,
+  "contract_id": "t04_executable_rtl_contract_v2_native_q3_45_20260830",
+  "frozen_at_local": "2026-08-30T12:56:03+02:00",
+  "status": "CONTROLLED_REOPEN_NATIVE_Q3_45_ACCEPTANCE_PENDING",
+  "evidence_boundary": {
+    "floating_candidate_gate": "PASS",
+    "mathematical_bit_true": "NOT_RUN_NATIVE_Q3_45_ACTIVE_MODEL",
+    "vendor_ip_bit_true": "NOT_RUN_ZERO_LSB_VENDOR_ORACLE_GATE",
+    "rtl_behavioral": "NOT_RUN",
+    "ooc_125mhz": "NOT_RUN",
+    "ooc_150mhz": "NOT_RUN",
+    "post_synthesis_functional": "NOT_RUN",
+    "t04_task": "NOT_PASS"
+  },
+  "phase_format_controlled_reopen": {
+    "user_approved_format": "Scaled_Radians",
+    "native_phase_bus": "signed_q3_45",
+    "approval_date": "2026-08-30",
+    "legacy_q1_47_mathematical_evidence_root": "reports/T04_coarse_to_cfo/bit_true",
+    "legacy_evidence_is_immutable_and_not_active_acceptance": true,
+    "active_matlab_entrypoint": "matlab/tasks/T04_coarse_sync/t04_run_bit_true_study_q3_45.m",
+    "active_matlab_runner": "scripts/t04/run_t04_bit_true_q3_45.m",
+    "active_matlab_runner_sha256": "6b309b9e95c5b13b3e612753bd877227998e706ccaa98325a2948a571d0e9d0e",
+    "active_matlab_default_output_root": "reports/T04_coarse_to_cfo/bit_true_q3_45_run01",
+    "existing_script_runner_switch_required": false
+  },
+  "clock_and_stream": {
+    "clock_hz": 125000000,
+    "sample_rate_hz": 500000000,
+    "complex_samples_per_clock": 4,
+    "frame_samples": 1336320,
+    "frame_beats": 334080,
+    "input_components": "signed_i16_q16_twos_complement",
+    "lane_order": "lane_0_is_earliest_sample",
+    "nominal_lane_valid": 15,
+    "nominal_ingress_may_be_backpressured": false,
+    "external_ddr_scratch_allowed": false
+  },
+  "case_scope": {
+    "canonical_case_count": 91,
+    "role_counts": {
+      "deterministic": 28,
+      "nominal": 60,
+      "stress": 3
+    },
+    "cfo_acceptance_case_count": 88,
+    "input_clip_eligibility_case_count": 91,
+    "coarse_start_containment_gate": {
+      "applies_to_case_count": 88,
+      "roles": ["deterministic", "nominal"],
+      "nominal_includes_acquisition_characterization_snr_db": [-5, 0],
+      "maximum_absolute_error_samples": 128,
+      "stress_case_count": 3,
+      "stress_role": "diagnostic_report_only_not_pass_fail",
+      "all_91_cases_are_a_start_gate": false
+    },
+    "run04_observed_max_abs_start_error_samples": {
+      "deterministic_28": 101,
+      "nominal_60": 67,
+      "stress_3": 120
+    }
+  },
+  "receiver_quantizer": {
+    "scale_scope": "one_case_independent_integer_per_unit_for_all_91_cases",
+    "per_case_autoscale_allowed": false,
+    "operation_order": [
+      "multiply_finite_real_or_imag_component_by_integer_per_unit",
+      "round_to_nearest_ties_to_even_in_unbounded_integer_domain",
+      "count_clip_if_rounded_value_is_outside_signed_i16_range",
+      "saturate_to_signed_i16_range"
+    ],
+    "minimum_code": -32768,
+    "maximum_code": 32767,
+    "negative_32768_is_legal_not_clipped": true,
+    "positive_32768_is_clipped": true,
+    "clip_component_predicate": "rounded_value < -32768 || rounded_value > 32767",
+    "eligibility": {
+      "zero_clipped_i_or_q_components_across_all_91_cases": true,
+      "all_88_acceptance_cases_finite_valid_unambiguous": true,
+      "all_88_start_errors_within_128_samples": true,
+      "floating_statistical_gate_reapplied_after_quantization": true
+    },
+    "selection": {
+      "eligible_set_must_be_nonempty": true,
+      "sort_keys": [
+        "integer_per_unit_descending",
+        "candidate_id_lexical_ascending"
+      ],
+      "no_eligible_candidate_result": "FAIL_NO_SELECTION"
+    }
+  },
+  "algorithm": {
+    "candidate_id": "sc_m003_run04_safe_interior_sum_midpoint_minus_half_cp",
+    "frequency_policy": "sc_only",
+    "half_separation_samples": 1024,
+    "search": {
+      "first_start_sample": -256,
+      "last_start_sample": 768,
+      "step_samples": 4,
+      "point_count": 257,
+      "lag_delay_beats": 256,
+      "first_product_beat_from_frame_start": 192,
+      "last_product_beat_from_frame_start": 703,
+      "first_metric_beat_from_frame_start": 447,
+      "last_metric_beat_from_frame_start": 703,
+      "product_beat_count": 512,
+      "rolling_output_count": 257
+    },
+    "correlation_sign": "conjugate_earlier_times_later_positive_cfo_gives_positive_phase",
+    "conjugate": {
+      "input_width_bits": 16,
+      "extended_width_bits": 17,
+      "i_expression": "sign_extend_17(i16)",
+      "q_expression": "-sign_extend_17(q16)",
+      "q_negative_32768_maps_to_positive_32768": true,
+      "negate_before_extension_allowed": false
+    }
+  },
+  "integer_nodes": [
+    {"id":"N00","name":"input_i_q","format":"signed_integer","width_bits":16,"exact":true},
+    {"id":"N01","name":"conjugate_i_q","format":"signed_integer","width_bits":17,"exact":true},
+    {"id":"N02","name":"cmpy_physical_re_im","format":"signed_integer","width_bits":34,"exact":true},
+    {"id":"N03","name":"correlation_re_im","format":"signed_integer","width_bits":33,"exact":true,"narrowing_rule":"discarded_n02_msb_must_equal_retained_sign_bit_else_status_bit_8"},
+    {"id":"N04","name":"energy","format":"unsigned_integer","width_bits":32,"exact":true},
+    {"id":"N05","name":"four_lane_correlation_sum","format":"signed_integer","width_bits":35,"exact":true},
+    {"id":"N06","name":"four_lane_energy_sum","format":"unsigned_integer","width_bits":34,"exact":true},
+    {"id":"N07","name":"rolling_correlation_re_im","format":"signed_integer","width_bits":43,"exact":true},
+    {"id":"N08","name":"rolling_energy","format":"unsigned_integer","width_bits":42,"exact":true},
+    {"id":"N09","name":"correlation_component_squares","format":"unsigned_integer","width_bits":86,"exact":true},
+    {"id":"N10","name":"correlation_magnitude_squared","format":"unsigned_integer","width_bits":87,"exact":true},
+    {"id":"N11","name":"energy_squared","format":"unsigned_integer","width_bits":84,"exact":true},
+    {"id":"N12","name":"threshold_lhs_100_p2","format":"unsigned_integer","width_bits":94,"exact":true},
+    {"id":"N13","name":"threshold_rhs_3_r2","format":"unsigned_integer","width_bits":86,"exact":true},
+    {"id":"N14","name":"qualified","format":"boolean","width_bits":1,"exact":true},
+    {"id":"N15","name":"plateau_length","format":"unsigned_integer","width_bits":9,"exact":true},
+    {"id":"N16","name":"selected_start_sample","format":"signed_integer","width_bits":32,"exact":true},
+    {"id":"N17","name":"safe_correlation_re_im","format":"signed_integer","width_bits":48,"exact":true},
+    {"id":"N18","name":"safe_energy","format":"unsigned_integer","width_bits":47,"exact":true},
+    {"id":"N19","name":"cordic_phase_code","format":"signed_scaled_radians_q3_45","width_bits":48,"exact":false,"vendor_bit_accurate_oracle_maximum_difference_lsb":0,"ideal_atan2_current_91_safe_domain_maximum_difference_lsb":4,"ideal_atan2_accuracy_scope":"current_frozen_91_cases_with_valid_nonzero_safe_correlation_only"},
+    {"id":"N20","name":"cordic_magnitude_code","format":"unsigned_binary_point_47","width_bits":48,"exact":false,"maximum_difference_lsb":1},
+    {"id":"N21","name":"cfo_hz","format":"signed_integer_hz","width_bits":32,"exact":false,"maximum_difference_lsb":1},
+    {"id":"N22","name":"quality","format":"unsigned_q1_15","width_bits":16,"exact":false,"maximum_difference_lsb":1}
+  ],
+  "energy_and_threshold": {
+    "integer_energy_floor": 0,
+    "per_metric_energy_valid_expression": "rolling_energy > 0",
+    "zero_energy_qualifies": false,
+    "threshold_expression": "100 * (rolling_p_re^2 + rolling_p_im^2) >= 3 * rolling_energy^2",
+    "threshold_equality_qualifies": true,
+    "an_individual_zero_energy_metric_sets_frame_status_bit_9": false,
+    "safe_result_valid_expression": "safe_point_count > 0 && safe_energy > 0 && (safe_p_re != 0 || safe_p_im != 0)",
+    "empty_safe_intersection_or_zero_safe_energy_or_zero_safe_correlation": {
+      "algorithm_valid": false,
+      "status_bit_9": true
+    }
+  },
+  "plateau_and_start": {
+    "minimum_run_points": 4,
+    "first_eligible_run_is_selected": true,
+    "second_eligible_run_sets_ambiguity": true,
+    "run_is_closed_by_zero_or_last_search_point": true,
+    "start_expression": "4 * round_half_away_from_zero((leading_beat + trailing_beat - 128) / 2)",
+    "leading_and_trailing_beat_units": "four_sample_beats_on_search_grid",
+    "arithmetic_right_shift_for_negative_odd_midpoint_allowed": false
+  },
+  "safe_phase_sum": {
+    "first_offset_from_selected_start_samples": 320,
+    "last_offset_from_selected_start_samples": 384,
+    "step_samples": 4,
+    "maximum_point_count": 17,
+    "interval_is_inclusive": true,
+    "raw_interval_may_extend_outside_trace": true,
+    "intersect_with_search_trace": true,
+    "trace_address_range_inclusive": [0, 256],
+    "trace_qualification_bit_is_ignored_during_sum": true,
+    "correlation_sum_width_bits": 48,
+    "energy_sum_width_bits": 47
+  },
+  "cordic_boundary": {
+    "required_ip_vlnv": "xilinx.com:ip:cordic:6.0",
+    "function": "Translate_Cartesian_to_polar",
+    "logical_input": {
+      "x": "safe_p_re_signed_48",
+      "y": "safe_p_im_signed_48",
+      "vendor_numeric_interpretation": "signed_fraction_with_binary_point_47",
+      "common_scale": "2^-47",
+      "angle_is_unchanged_by_common_scale": true
+    },
+    "phase_output": {
+      "width_bits": 48,
+      "encoding": "signed_twos_complement_scaled_radians_q3_45",
+      "fractional_bits": 45,
+      "unit": "pi_radians_per_scaled_radian",
+      "mathematical_code": "RNE_ties_even((atan2(y,x)/pi) * 2^45)",
+      "raw_container_minimum_code": -140737488355328,
+      "raw_container_maximum_code": 140737488355327,
+      "raw_container_capacity_is_not_a_legal_phase_range": true,
+      "extra_integer_bits_role": "vendor_container_and_sign_extension_only",
+      "active_valid_minimum_code": -35184372088832,
+      "active_valid_maximum_code": 35184372088831,
+      "active_valid_scaled_radians_range": "-1_to_plus_1_minus_2^-45",
+      "plus_1_and_minus_1_are_circularly_equivalent": true,
+      "canonical_endpoint": "minus_1_code_minus_2^45",
+      "negative_real_axis_convention": "minus_pi_code_minus_2^45_frozen_by_active_official_tb",
+      "signed_zero_axis_details": "must_match_active_official_tb_and_vendor_model",
+      "outside_plus_or_minus_1_is_never_legal_phase": true,
+      "out_of_active_valid_range_policy": "protocol_error_clear_algorithm_valid_set_status_bit_7",
+      "current_91_cases_are_strictly_inside_pi_axis": true
+    },
+    "magnitude_output": {
+      "width_bits": 48,
+      "encoding": "unsigned_binary_point_47",
+      "mathematical_code": "RNE_ties_even(hypot(safe_p_re,safe_p_im))",
+      "required_legal_range": "0 <= magnitude_code < 2^47",
+      "gain_compensation_required": true
+    },
+    "required_configuration_semantics": {
+      "data_format": "SignedFraction",
+      "phase_format": "Scaled_Radians",
+      "coarse_rotation": true,
+      "round_mode": "Nearest_Even",
+      "compensation_scaling": true
+    },
+    "physical_port_packing_and_latency_source": "generated_xci_component_template_and_official_behavioral_model",
+    "physical_port_packing_may_be_assumed_from_catalog_probe": false,
+    "positive_and_negative_real_axis_signed_zero_mapping": "PENDING_OFFICIAL_IP_MEASUREMENT_BEFORE_VENDOR_BIT_TRUE_PASS",
+    "xci_sha256": "PENDING_PRODUCTION_IP_GENERATION",
+    "vendor_bit_accurate_reference_model_zero_lsb_comparison": "NOT_RUN",
+    "ideal_atan2_accuracy": {
+      "maximum_difference_lsb": 4,
+      "scope": "current_frozen_91_cases_valid_nonzero_safe_correlation_domain_only",
+      "case_count": 91,
+      "evidence_csv": "reports/T04_coarse_to_cfo/rtl_behavioral/cordic_case91_bigdecimal_exact_oracle_run04/cordic_case91_bigdecimal_exact_oracle.csv",
+      "evidence_csv_sha256": "2f47e109164d054d3d68d7284ddd72e1b54bf8f16276df00b663071fa39c3e96",
+      "must_not_be_interpreted_as_vendor_bit_accurate_zero_lsb_gate": true
+    }
+  },
+  "cfo_conversion": {
+    "phase_code_fractional_bits": 45,
+    "exact_constant_numerator": 1953125,
+    "exact_power_of_two_denominator": 281474976710656,
+    "denominator_shift_bits": 48,
+    "expression": "RNE_ties_even_signed(phase_code_q3_45 * 1953125 / 2^48)",
+    "signed_product_width_bits": 69,
+    "implementation_strategy": "exact_integer_constant_product_then_power_of_two_rounding_no_reciprocal_approximation",
+    "rounding_algorithm": "take_absolute_value; quotient=abs_product>>48; remainder=abs_product&(2^48-1); increment_if_remainder>2^47_or_equal_and_quotient_is_odd; restore_sign",
+    "output": "signed_s32_integer_hz",
+    "overflow_policy": "saturate_clear_algorithm_valid_set_status_bit_8"
+  },
+  "quality_conversion": {
+    "expression": "min(floor((cordic_magnitude_code << 15) / safe_energy), 32768)",
+    "output_encoding": "unsigned_q1_15",
+    "one_code": 32768,
+    "rounding": "truncate_toward_zero_for_unsigned_division",
+    "divider_ip_vlnv": "xilinx.com:ip:div_gen:5.1",
+    "logical_dividend_width_bits": 63,
+    "logical_divisor_width_bits": 47,
+    "dispatch_when_safe_energy_is_zero": false,
+    "physical_port_packing_latency_and_normalization": "PENDING_PRODUCTION_XCI_AND_OFFICIAL_MODEL_MEASUREMENT"
+  },
+  "result_transport": {
+    "payload_width_bits": 96,
+    "records_per_recognized_frame_under_consumer_contract": 2,
+    "record_order": ["COARSE_START", "COARSE_CFO"],
+    "same_frame_id_required": true,
+    "coarse_start_record": {
+      "result_kind": 1,
+      "value": "signed_s32_sample_index",
+      "quality": 0
+    },
+    "coarse_cfo_record": {
+      "result_kind": 2,
+      "value": "signed_s32_integer_hz",
+      "quality": "unsigned_q1_15"
+    },
+    "invalid_record_values": {
+      "value": 0,
+      "quality": 0
+    },
+    "transport_valid_is_distinct_from_algorithm_valid": true,
+    "fifo": {
+      "depth_records": 4,
+      "capacity_complete_pairs": 2,
+      "enqueue_unit": "one_complete_two_record_pair",
+      "pair_slot_reservation_is_atomic": true,
+      "tail_publication_occurs_only_after_both_records_are_written": true,
+      "full_96_bit_payload_stable_while_valid_and_not_ready": true,
+      "overwrite_unaccepted_record_allowed": false,
+      "interleave_frame_pairs_allowed": false
+    },
+    "status_bits": {
+      "15_12": "result_kind_1_start_2_cfo",
+      "11": "algorithm_result_valid",
+      "10": "ambiguity_more_than_one_eligible_run",
+      "9": "final_energy_or_safe_correlation_invalid",
+      "8": "arithmetic_overflow_or_width_invariant_failure",
+      "7": "arithmetic_ip_overflow_or_protocol_event",
+      "6": "algorithm_completion_deadline_miss",
+      "5": "required_input_context_or_observation_protocol_error",
+      "4": "result_pair_fifo_or_order_error",
+      "3_0": "zero"
+    },
+    "algorithm_valid_requires_status_bits_10_through_4_all_zero": true
+  },
+  "deadline": {
+    "start_event": "rising_edge_with_data_valid_and_data_ready_and_beat_base_sample_index_zero_for_captured_frame_id",
+    "start_edge_has_delta_cycle": 0,
+    "counter_type": "125mhz_wall_clock_cycles_not_paused_by_input_valid_gaps",
+    "last_required_nominal_input_beat_delta": 703,
+    "normal_completion_event": "atomic_fifo_pair_tail_publication_after_second_record_write",
+    "maximum_completion_delta_cycles_inclusive": 1024,
+    "fallback_at_delta_1024": "if_algorithm_result_not_complete_commit_zero_valued_invalid_pair_with_status_bit_6_and_any_known_root_cause_bits",
+    "missing_or_discontinuous_required_input_also_sets_status_bit_5": true,
+    "revision_policy": "controlled_architecture_decision_required_before_acceptance"
+  },
+  "consumer_service_contract": {
+    "interpretation": "frame_aligned_not_arbitrary_sliding_window",
+    "scope": "after_first_recognized_frame_start_while_nominal_full_rate_frames_continue",
+    "frame_window": "[S_k,S_(k+1)) where S_k is the deadline start event and S_(k+1)-S_k=334080 clocks",
+    "boundary_handshake_belongs_to": "window_starting_at_that_boundary",
+    "minimum_estimator_result_handshakes_per_frame_window": 2,
+    "handshake_expression": "estimator_result_valid && estimator_result_ready",
+    "maximum_consecutive_ready_low_rising_edges_inclusive": 334080,
+    "both_conditions_are_required": true,
+    "proof_obligation": "with_two_record_arrival_per_window_atomic_pair_commit_and_both_service_conditions_fifo_occupancy_never_exceeds_four",
+    "sink_violation_behavior": "never_backpressure_nominal_sample_ingress_and_never_overwrite_queued_records; set_sticky_pair_fifo_error; exact_two_record_delivery_is_not_guaranteed_outside_contract; next_deliverable_pair_carries_status_bit_4"
+  },
+  "warmup_and_exception_frames": {
+    "recognized_frame_start": "accepted_beat_with_beat_base_sample_index_zero_captures_frame_id",
+    "required_previous_context_samples": 256,
+    "genuine_previous_context": "either_256_real_pre_frame_samples_explicitly_tagged_as_halo_or_guard_with_contiguous_indices_or_the_last_256_samples_of_a_complete_contiguous_preceding_physical_frame; no_reset_or_protocol_error",
+    "first_frame_after_reset_without_context": {
+      "emit_two_transport_records": true,
+      "algorithm_valid": false,
+      "status_bit_5": true,
+      "values_and_quality_zero": true,
+      "synthetic_zero_or_repeated_halo_allowed": false
+    },
+    "observation_scope": "previous_context_minus_256_through_minus_1_and_current_frame_samples_0_through_2815",
+    "early_protocol_or_arithmetic_exception": "emit_exactly_one_zero_valued_invalid_start_cfo_pair_by_deadline_under_consumer_contract_with_all_applicable_status_bits",
+    "input_gap_or_index_discontinuity_before_required_data_complete": "deadline_counter_does_not_pause_status_bits_5_and_6_apply_if_fallback_is_required",
+    "error_after_observation_scope": "does_not_retroactively_modify_an_already_committed_t04_pair_but_may_invalidate_previous_context_for_the_next_frame",
+    "new_reset_clears_context_valid": true
+  },
+  "artifact_contract": {
+    "root": "reports/T04_coarse_to_cfo/bit_true_q3_45_run01",
+    "legacy_q1_47_root_must_not_be_overwritten": "reports/T04_coarse_to_cfo/bit_true",
+    "hash_algorithm": "SHA-256",
+    "hash_encoding": "lowercase_64_hex",
+    "case_identity": {
+      "bit_true_case_manifest.csv": {
+        "row_count": 91,
+        "source": "t04_build_case_definitions"
+      },
+      "run04_selected_case_manifest.csv": {
+        "row_count": 91,
+        "source": "authoritative_run04_selected_candidate_rows"
+      },
+      "case_identity_assertions.txt": {
+        "must_assert_same_case_id_role_truth_and_seed": true,
+        "required_markers": [
+          "T04_BIT_TRUE_CASE_IDENTITY_PASS=1",
+          "CASE_COUNT=91",
+          "DETERMINISTIC_COUNT=28",
+          "NOMINAL_COUNT=60",
+          "STRESS_COUNT=3"
+        ]
+      }
+    },
+    "bit_true_case_results.csv": {
+      "row_count": 455,
+      "unique_key": ["candidateId", "caseId"],
+      "required_fields": [
+        "caseId","acceptanceRole","candidateId","channelName","frameId",
+        "snrDb","seed","toExpected","foExpected","toTrue","foTrue","sfoPpm",
+        "valid","ambiguity","coarseStart","startError","cfoEstimate","cfoError",
+        "quality","plateauBeats","integerPerUnit","clipICount","clipQCount",
+        "clipComponentCount","phaseCodeQ3_45","magnitudeCodeQ1_47",
+        "qualityCodeQ1_15","safePointCount","errorCode","floatingStart",
+        "floatingCfo","floatingQuality","startDeltaFromFloating",
+        "cfoDeltaFromFloating","qualityDeltaFromFloating",
+        "floatingValid","floatingAmbiguity"
+      ]
+    },
+    "required_summaries": [
+      "bit_true_scale_summary.csv",
+      "bit_true_nominal_group_summary.csv",
+      "bit_true_stress_summary.csv",
+      "mathematical_bit_true_summary.json"
+    ],
+    "selected_scale_artifacts_if_and_only_if_eligible_set_nonempty": {
+      "bit_true_selected_case_results.csv": 91,
+      "floating_to_quantized_delta.csv": 91,
+      "selected_vector_hashes.csv": {
+        "row_count": 91,
+        "required_fields": [
+          "case_id","sample_count","clip_component_count",
+          "sha256","relative_path"
+        ]
+      },
+      "selected_vectors": "91_interleaved_i16_q16_binary_files",
+      "selected_quantized_vectors.mat": "required",
+      "selected_node_trace.csv": {
+        "row_count": 23387,
+        "unique_key": ["scale_id", "case_id", "metric_index"],
+        "required_fields": [
+          "scale_id","case_id","metric_index","start_sample",
+          "rolling_p_re","rolling_p_im","rolling_energy",
+          "threshold_lhs_decimal","threshold_rhs_decimal","qualified"
+        ]
+      },
+      "bit_true_node_format_manifest.json": "required"
+    },
+    "bit_true_artifact_hashes.csv": {
+      "required_fields": ["relative_path", "sha256", "bytes"],
+      "covers_every_stable_artifact_below_root": true,
+      "exclusions": [
+        "bit_true_artifact_hashes.csv_itself",
+        "active_matlab_log_until_process_exit"
+      ],
+      "matlab_log_hash_must_be_added_by_final_t04_evidence_manifest": true
+    },
+    "mathematical_bit_true_summary_required_bindings": [
+      "policy_sha256",
+      "rtl_contract_sha256",
+      "run04_case_manifest_sha256",
+      "five_scale_result_sha256",
+      "selected_scale_id",
+      "selected_vector_bundle_sha256",
+      "selected_node_trace_sha256",
+      "production_ip_verified_false"
+    ],
+    "producer_filename_policy": "filenames_above_are_frozen_camel_case_columns_are_allowed",
+    "missing_duplicate_extra_or_reordered_declared_node_rows": "FAIL",
+    "acceptance_hash_binding_state": "PENDING_SUCCESSFUL_MATLAB_RUN"
+  },
+  "source_sha256": {
+    "taskbook/Codex_RTL_Taskbook_V3/tasks/T04_COARSE_TO_CFO.md": "be7297d64cc6388903afe6ef9d1555401499339681df7161753bdb786eb68cd4",
+    "config/t04_bit_true_policy.json": "11a9a458454308908268d5133592493d1d44f16ea59dab09f43068e661bd29cb",
+    "matlab/tasks/T04_coarse_sync/t04_integer_sc_core_q3_45.m": "22864fc893362e81ae6b255e7838071d138ce2bc9ce3cbcc26af3cbba3b202a5",
+    "matlab/tasks/T04_coarse_sync/t04_run_mathematical_self_tests_q3_45.m": "15ed8a0ae2fe1543abae08ed9620425f6ac1c4d538509264276537aa0e986be3",
+    "matlab/tasks/T04_coarse_sync/t04_run_bit_true_study_q3_45.m": "dbeaeafafe06d5ca77bc7b235d102b88e66ab1cd65006eb879b1617d865400c0",
+    "scripts/t04/run_t04_bit_true_q3_45.m": "6b309b9e95c5b13b3e612753bd877227998e706ccaa98325a2948a571d0e9d0e",
+    "config/frame_config.json": "ad9f405fa117c6db42fe241981ff7837bc842aca4e9b31e37203eef65dd0830c",
+    "config/verification_matrix.json": "40af334287858933543f91e8ff4dcc1f39c2ee8c2e6de0681270aadb1fce62e4",
+    "docs/decisions/T04_RESULT_INTERFACE_AND_CONJUGATE_WIDTH.md": "eed20c76775fb745e8d0d252016b09dfa85631ff5e00f536e8fccef727eb5802",
+    "docs/decisions/T04_T05_COARSE_START_HANDOFF.md": "ce8bebf0235370bcfd00e8f1073b2e44b335be2ecf6999701c3d73058957d846",
+    "docs/research/T04_BIT_TRUE_PRE_FREEZE.md": "5de307835d0ff45b4fac9617303a084b25f064b0eb6301fa71522cc1e3f0cc07",
+    "docs/decisions/T03_COMMON_INTERFACE_SPEC.md": "b79815f87a76841afb3170a863dfa26109ee5682a20d88725017f5f6f486f494",
+    "rtl/common/bistatic_stream_pkg.sv": "7c2551aa0d2827fd04515a9e782b6c015a4d26ac050303823f0c69cda49dda83",
+    "reports/T04_coarse_to_cfo/matlab_floating/floating_study_summary.json": "26c3a2e610439386061ee395af5e9ef77efd94a225d964bf242a2401a878afc5",
+    "reports/T04_coarse_to_cfo/matlab_floating/floating_acceptance_gate.json": "5330816ffd91ccc0c7e32dac451b4b5d4f26e9b7065b0ccb2a93aab65e9ca9d1",
+    "reports/T04_coarse_to_cfo/matlab_floating/floating_case_results.csv": "54a0e244d2791416354933ead3c44c5ee982952eb4ba2e8eb57eaa4e6530fa3b",
+    "reports/T04_coarse_to_cfo/matlab_floating/matlab_t04_floating_stat_gate_20260830_run04.log": "13a582250381b07216bcbc3561eccff85eca97d0ac0eaaae105814234c2dd1b7"
+  }
+}

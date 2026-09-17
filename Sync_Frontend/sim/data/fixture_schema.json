@@ -1,0 +1,235 @@
+{
+  "schema_version": 2,
+  "fixture_id": "T04_FULL_91_CASE_RTL_FIXTURE_Q3_45_V2",
+  "status": "PASS",
+  "source_model": "T04_MATHEMATICAL_BIT_TRUE_Q3_45",
+  "source_scale_id": "rx_scale_tx_div2",
+  "case_count": 91,
+  "case_order": "bit_true_selected_case_results.csv row order; cross-checked against vector, run04, and canonical manifests",
+  "stimulus": {
+    "filename": "stimulus_beats.mem",
+    "word_width_bits": 128,
+    "total_lines": 69888,
+    "lines_per_case": 768,
+    "samples_per_line": 4,
+    "samples_per_case": 3072,
+    "global_first_sample": -256,
+    "global_last_sample": 2815,
+    "halo": {
+      "global_first_sample": -256,
+      "global_last_sample": -1,
+      "sample_count": 256,
+      "line_count": 64
+    },
+    "current": {
+      "global_first_sample": 0,
+      "global_last_sample": 2815,
+      "sample_count": 2816,
+      "line_count": 704
+    },
+    "packing": [
+      {
+        "bits": "31:0",
+        "lane": 0,
+        "value": "{Q[15:0],I[15:0]}",
+        "temporal_order": "earliest"
+      },
+      {
+        "bits": "63:32",
+        "lane": 1,
+        "value": "{Q[15:0],I[15:0]}"
+      },
+      {
+        "bits": "95:64",
+        "lane": 2,
+        "value": "{Q[15:0],I[15:0]}"
+      },
+      {
+        "bits": "127:96",
+        "lane": 3,
+        "value": "{Q[15:0],I[15:0]}",
+        "temporal_order": "latest"
+      }
+    ]
+  },
+  "expected_metrics": {
+    "filename": "expected_metrics.mem",
+    "word_width_bits": 320,
+    "total_lines": 23387,
+    "lines_per_case": 257,
+    "metric_index": "0..256",
+    "start_sample": "-256 + 4*metric_index",
+    "fields": [
+      {
+        "bits": "42:0",
+        "name": "P_RE",
+        "signed": true,
+        "width": 43
+      },
+      {
+        "bits": "85:43",
+        "name": "P_IM",
+        "signed": true,
+        "width": 43
+      },
+      {
+        "bits": "127:86",
+        "name": "R",
+        "signed": false,
+        "width": 42
+      },
+      {
+        "bits": "221:128",
+        "name": "LHS",
+        "signed": false,
+        "width": 94
+      },
+      {
+        "bits": "307:222",
+        "name": "RHS",
+        "signed": false,
+        "width": 86
+      },
+      {
+        "bits": "308",
+        "name": "qualified",
+        "signed": false,
+        "width": 1
+      },
+      {
+        "bits": "319:309",
+        "name": "reserved",
+        "value": 0
+      }
+    ]
+  },
+  "expected_results": {
+    "filename": "expected_results.mem",
+    "word_width_bits": 256,
+    "total_lines": 91,
+    "lines_per_case": 1,
+    "fields": [
+      {
+        "bits": "31:0",
+        "name": "start",
+        "signed": true,
+        "width": 32
+      },
+      {
+        "bits": "63:32",
+        "name": "CFO",
+        "signed": true,
+        "width": 32,
+        "tolerance_lsb": 1
+      },
+      {
+        "bits": "79:64",
+        "name": "quality",
+        "signed": false,
+        "width": 16,
+        "tolerance_lsb": 1
+      },
+      {
+        "bits": "80",
+        "name": "valid",
+        "signed": false,
+        "width": 1
+      },
+      {
+        "bits": "81",
+        "name": "ambiguity",
+        "signed": false,
+        "width": 1
+      },
+      {
+        "bits": "97:82",
+        "name": "errorCode",
+        "signed": false,
+        "width": 16
+      },
+      {
+        "bits": "145:98",
+        "name": "idealPhaseScaledRadiansQ3_45",
+        "signed": true,
+        "width": 48,
+        "circular_tolerance_lsb": 4
+      },
+      {
+        "bits": "193:146",
+        "name": "magnitudeCodeQ1_47",
+        "signed": false,
+        "width": 48,
+        "tolerance_lsb": 1
+      },
+      {
+        "bits": "241:194",
+        "name": "amdOfficialPhaseScaledRadiansQ3_45",
+        "signed": true,
+        "width": 48,
+        "tolerance_lsb": 0
+      },
+      {
+        "bits": "255:242",
+        "name": "reserved",
+        "value": 0
+      }
+    ]
+  },
+  "index": {
+    "filename": "case_index.csv",
+    "offsets_are_zero_based": true
+  },
+  "validation": {
+    "source_hashes_checked": true,
+    "source_vector_hashes_checked_twice": true,
+    "source_case_order_checked": true,
+    "trace_key_order_checked": true,
+    "field_widths_checked": true,
+    "stimulus_full_byte_roundtrip_checked": true,
+    "packed_fields_full_readback_checked": true,
+    "lowercase_hex": true,
+    "line_ending": "LF",
+    "principal_phase_range_checked": true,
+    "vendor_oracle_sha256_checked": true,
+    "base_fixture_low98_matches_current_generation_public_results": true
+  },
+  "source_sha256": {
+    "selected_vector_schema.json": "44df07dc38995df53f471c566967044fb25f4e697ab2fcabace77805a4db5551",
+    "selected_vector_hashes.csv": "6d6b18350a1205feba76388491c0d0733a82c2a741fa9c703c98216b31301b35",
+    "selected_node_trace.csv": "7874b33fad9096f67a0848ebd1f4476cb05f698f7cbc338dfb3ffdebdf7a9752",
+    "bit_true_selected_case_results.csv": "a58beaf8e021645d0087ab08754224747f13e2190c25cb6ab8efeff8690f9526",
+    "run04_selected_case_manifest.csv": "72009be965177c007a05cd481762eff9fb61f2de5f031eaf5c16f4ae71728762",
+    "bit_true_case_manifest.csv": "589965e3bb1ab39afbc30a1bb0eb9d3f30a9185d50d843a74fe8219a656a951f",
+    "bit_true_node_format_manifest.json": "36b6528d2cec1e93fd33e036b5c6892e35dc2178ac4f0e821079f9eb5d3b4f23",
+    "bit_true_artifact_hashes.csv": "4cdd4592b6306c7a50c0300baf5f3d270a9d15d043df9e714457e23be5e8c0de"
+  },
+  "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+  "acquisition_contract_sha256": "2a54710e8b62dc54fe1b1ef94ff637f3c735af4d49a10951f4462e8e0cb26e8d",
+  "architecture": "ORIGINAL_SC_ONLY_RUN04_PLUS_ORIGINAL_T05_NO_T04_D",
+  "t04_d_active": false,
+  "legacy_q1_47_compatibility": "base packer compatibility only; final verification uses native Q3.45",
+  "public_internal_routing": {
+    "public_expected_result_bits": "97:0 from public fail-close fields",
+    "internal_safe_window_start": "rawCoarseStart",
+    "internal_vendor_cfo": "rawCfoEstimate",
+    "internal_phase": "phaseCodeQ3_45",
+    "internal_magnitude": "magnitudeCodeQ1_47"
+  },
+  "current_generation_ideal_semantics": "native bit-true Q3.45 source; direct atan2 Q3.45 delta is checked by the official probe, never by a Q1.47 oracle",
+  "phase_contract": {
+    "format": "signed Q3.45",
+    "units": "Scaled_Radians (phase/pi)",
+    "canonical_principal_range": "[-1,+1)",
+    "positive_one_equivalent": "-1 modulo one full phase turn",
+    "extra_integer_bits": "container/sign extension only",
+    "amd_bit_accurate_tolerance_lsb": 0,
+    "high_precision_atan2_circular_tolerance_lsb": 4,
+    "matlab_double_atan2_to_high_precision_tolerance_lsb": 1,
+    "q3_45_to_q1_47_regrid": "forbidden"
+  },
+  "vendor_oracle": {
+    "filename": "vendor_oracle_alignment.csv",
+    "source_sha256": "59b853532093420db92511b36ddf905e2f143102f9a744fbbd0d668ba9551f17",
+    "alignment": "case_index + case_id + reconstructed safe_p"
+  }
+}

@@ -1,0 +1,55 @@
+# Rebuildable run products belong outside the source history.
+/work/
+/results/
+**/.Xil/
+**/xsim.dir/
+**/__pycache__/
+*.pyc
+*.log
+*.jou
+*.wdb
+*.vcd
+*.dcp
+*.pb
+*.str
+*.backup
+*.bak
+*.lck
+*.tmp
+*.zip
+!/docs/verification/native_project/baseline/original_ip_xci.zip
+!/docs/verification/native_project/astra_review/native_evidence/*.log
+!/docs/verification/native_project/astra_review/native_evidence/*.jou
+/vivado/**/*.cache/
+/vivado/**/*.runs/
+/vivado/**/*.sim/
+/vivado/**/*.gen/
+/vivado/**/*.hw/
+/vivado/**/*.ip_user_files/
+/vivado/**/webtalk*
+/vivado/**/usage_statistics_webtalk*
+# IP output products can be regenerated from tracked XCI and coefficient inputs.
+/ip/**/synth/
+/ip/**/sim/
+/ip/**/hdl/
+/ip/**/doc/
+/ip/**/simulation/
+/ip/**/ipstatic/
+/ip/**/constraints/
+/ip/**/.cache/
+/ip/**/cmodel/
+/ip/**/example_design/
+/ip/**/impl/
+/ip/**/*.veo
+/ip/**/*.vho
+/ip/config/*/*.xml
+/vivado/**/*.lpr
+/vivado/**/*.wpc
+Thumbs.db
+desktop.ini
+
+# Independent user-authorized synchronization frontend repository.
+/Sync_Frontend/
+
+# Independent I16 CLIP demonstration.
+/I16_AddSub_CLIP/

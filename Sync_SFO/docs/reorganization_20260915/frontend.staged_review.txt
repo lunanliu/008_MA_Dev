@@ -1,0 +1,24 @@
+ .gitignore                                         |   10 +
+ README_ZH.md                                       |    6 +
+ .../sources_1/ip/t04_cmpy_17x16/t04_cmpy_17x16.xci |  205 ++++
+ .../t04_cordic_translate_48.xci                    |  187 +++
+ .../ip/t04_div_u63_u47/t04_div_u63_u47.xci         |  183 +++
+ .../t04_phase_scale_s48_x_1953125.xci              |  111 ++
+ .../sources_1/ip/t04_square_s43/t04_square_s43.xci |  112 ++
+ .../sources_1/ip/t04_square_u42/t04_square_u42.xci |  112 ++
+ .../ip/t05_cmpy_corr_18x16/t05_cmpy_corr_18x16.xci |  205 ++++
+ .../t05_cmpy_rotate_18x18.xci                      |  205 ++++
+ .../t05_cordic_rotate16_parallel.xci               |  191 ++++
+ .../t05_dds_pinc32_sincos18.xci                    |  324 ++++++
+ .../t05_div_quality_s64_s64_f15.xci                |  181 +++
+ .../t05_mult_cfo_s19_const40_full59.xci            |  112 ++
+ .../t05_mult_quality_u46x36_full82.xci             |  112 ++
+ .../t05_mult_s18x18_full36.xci                     |  111 ++
+ .../t05_mult_s48x48_full96.xci                     |  112 ++
+ Sync_Frontend.xpr                                  | 1202 ++++++++++++++++++++
+ docs/DIRECTORY_ENTRY_20260915_ZH.md                |   11 +
+ examples/I16_AddSub_CLIP_Source_Project.zip        |  Bin 0 -> 13721 bytes
+ examples/README_ZH.md                              |    5 +
+ tools/open_sync_frontend.tcl                       |    6 +
+ wrapper/sync_frontend_clip.vhd                     |  106 ++
+ 23 files changed, 3809 insertions(+)

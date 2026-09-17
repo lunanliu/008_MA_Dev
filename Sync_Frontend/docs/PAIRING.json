@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task": "SYNC_FRONTEND",
+  "project_root": "D:/008_MA_Dev/Sync_Frontend",
+  "manager": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "astra": "01a0a162-c115-7af1-89be-49726f987f84",
+  "luna": "01a0a161-e434-7142-8927-1f5314daafd5",
+  "astra_title": "同步前端｜Astra设计与复核",
+  "luna_title": "同步前端｜Luna执行与验证",
+  "astra_model": "gpt-6-astra",
+  "astra_effort": "high",
+  "luna_model": "gpt-5.6-luna",
+  "luna_effort": "max",
+  "model_effort_verified_from_turn_context": true,
+  "requested_speed": "Standard",
+  "speed_control_api_available": false,
+  "speed_verified": false,
+  "speed_note": "Creation API has no speed field; both turn_context records omit service_tier. Do not infer disabled Fast from absence.",
+  "authorization": "docs/operations/SYNC_FRONTEND_CLIP_AUTHORIZATION_20260914_ZH.md",
+  "source_user_message_utc": "2026-09-14T19:16:52.750Z",
+  "shared_slot": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_frontend/resource_slot.json",
+  "created_utc": "2026-09-14T19:29:01.0444267Z"
+}

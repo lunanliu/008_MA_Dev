@@ -1,0 +1,223 @@
+{
+  "schema_version": 2,
+  "status": "GENERATION_AWARE_RTL_BUNDLE_READY",
+  "gate_claim": "FIXTURE_AND_ORACLE_ONLY",
+  "t05_overall_pass_claimed": false,
+  "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+  "case_count": 91,
+  "attempt_id": "attempt_20260902T000444510Z_23684_20f70b5e",
+  "attempt_root": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e",
+  "policy_contract_id": "T05_V2_POLICY_AWARE_RTL_BUNDLE_20260901",
+  "policy_contract_path": "config/t05_v2_policy_aware_bundle_contract.json",
+  "policy_contract_sha256": "49e74b42b86329536bc84415970969a2b3e05cfd3d71a33e22f5f9abe2f4c028",
+  "approved_outage_case_ids": [
+    "tdld_-05dB_seed_41003",
+    "tdld_-05dB_seed_41005"
+  ],
+  "non_outage_valid_case_count": 89,
+  "policy_supported_formal_case_count": 78,
+  "minus5_characterization_case_count": 10,
+  "minus5_valid_observation_count": 8,
+  "stress_characterization_case_count": 3,
+  "public_fail_close": {
+    "valid": 0,
+    "ambiguity": 1,
+    "error_code": 2,
+    "fine_start": 0,
+    "fine_error": "NaN",
+    "internal_peak_start_retained": true
+  },
+  "inputs": {
+    "acquisition_contract": {
+      "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+      "path": "config/t04_t05_acquisition_domain_v2.json",
+      "sha256": "2a54710e8b62dc54fe1b1ef94ff637f3c735af4d49a10951f4462e8e0cb26e8d",
+      "case_count": 91
+    },
+    "predecessor_completion": {
+      "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+      "path": "reports/T04_coarse_to_cfo/t04_t05_acquisition_domain_v2_recertification/attempt_20260901T193336065Z_23056_be9c1972/completion.json",
+      "sha256": "1fbd201094f9689f9dd632bcd265d6ba3dd5feae678dce691f9ff2a53b39140f",
+      "case_count": 1
+    },
+    "predecessor_summary": {
+      "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+      "path": "reports/T04_coarse_to_cfo/t04_t05_acquisition_domain_v2_recertification/attempt_20260901T193336065Z_23056_be9c1972/t04_t05_acquisition_domain_v2_summary.json",
+      "sha256": "546a6a2f71f4f5369457687280b2a4fe926a288e4da20d17af1740e381c30018",
+      "case_count": 1
+    },
+    "predecessor_wrapper": {
+      "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+      "path": "reports/T04_coarse_to_cfo/t04_t05_acquisition_domain_v2_recertification/attempt_20260901T193336065Z_23056_be9c1972/wrapper_final_status.json",
+      "sha256": "109b0d21de1862f115512468c4f4c51ae21f80527b4c48b127993f62f9801c5b",
+      "case_count": 1
+    },
+    "predecessor_evidence_manifest": {
+      "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+      "path": "reports/T04_coarse_to_cfo/t04_t05_acquisition_domain_v2_recertification/attempt_20260901T193336065Z_23056_be9c1972/evidence_sha256.csv",
+      "sha256": "d6813acc8dda0d8592edf702ec270084e6c6918044aae8bf2a3f22a4c2f225b1",
+      "case_count": 1
+    },
+    "t04_quantized_vectors": {
+      "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t04_current_generation_quantized_vectors.mat",
+      "sha256": "63c1f35dc378cb28a3e8d9bcd512485bde1bf681f027e063cf43c15a97802955",
+      "bytes": 4.225053E+6,
+      "case_count": 91,
+      "selected_scale_id": "rx_scale_tx_div2",
+      "integer_per_unit": 263403.20193827286
+    },
+    "t04_case_results": {
+      "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+      "path": "reports/T04_coarse_to_cfo/original_sc_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t04_current_generation_handoff.csv",
+      "sha256": "72009be965177c007a05cd481762eff9fb61f2de5f031eaf5c16f4ae71728762",
+      "bytes": 23506,
+      "case_count": 91
+    },
+    "t05_policy_handoff": {
+      "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+      "path": "reports/T05_fine_timing/original_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t05_current_generation_handoff.csv",
+      "sha256": "24093eb3c52b81f25a5a6db2f12580603729eb883c4e6fe153b9c0c0fff70460",
+      "bytes": 14447,
+      "case_count": 91
+    },
+    "t05_reference": {
+      "generation_id": "origsc-3588599b-5a087681-17f975e9-cpowner91",
+      "path": "reports/T05_fine_timing/original_current_generation_handoff/attempt_20260901T153001094Z_34252_76b6cd9d/t05_current_generation_quantized_ps1_reference.mat",
+      "sha256": "8e7a9f3a940e96cd71179019680adabd2a2a4237397c84146d4444d301ea18ee",
+      "bytes": 4314,
+      "case_count": 2048
+    }
+  },
+  "stimulus": {
+    "capture": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_full91_capture_128.mem",
+      "sha256": "cff0bf345332269899104b99dbdf7ffcca032abaf7103d6292fe85ae3266425d",
+      "rows": 62972,
+      "width_bits": 128
+    },
+    "metadata": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_full91_case_metadata_160.mem",
+      "sha256": "9cdcbce92b160e853087fd941aaf2f4aac3acd9a6bca772ff61f367a4426392d",
+      "rows": 91,
+      "width_bits": 160
+    },
+    "phase_increment": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_full91_phase_increment_32.mem",
+      "sha256": "11077636d478df4efc8a93900258884bcdf607bfaec54d51cacc189ac6c3efbd",
+      "rows": 91,
+      "width_bits": 32
+    },
+    "ps1_reference_rom": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_ps1_reference_16lane.mem",
+      "sha256": "4a9c9a60a99497c7f4b50f952fb6433334152521865cdf953d7f2ea7b3486bef",
+      "rows": 128,
+      "width_bits": 512
+    },
+    "capture_first_sample": 152,
+    "capture_last_sample": 2919,
+    "capture_beats_per_case": 692,
+    "global_first_sample": -4096
+  },
+  "oracle": {
+    "results": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/oracle/bit_true_case_results.csv",
+      "sha256": "6ef7fe6d7010d6878f2d0251ed816abb888d726c640e1b75f13d72c090c1586b",
+      "rows": 91
+    },
+    "corrected_trace": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/oracle/bit_true_corrected_trace.csv",
+      "sha256": "5393477b27454750d18bbcac58e0e29d914be73bc78a00c56b1ac50e932ea12c",
+      "rows": 209664
+    },
+    "correlation_trace": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/oracle/bit_true_correlation_trace.csv",
+      "sha256": "dc10e6505ed4f7e5819b46bf6fa57e233f9a0206bd8daf3d2f96d21d746265b9",
+      "rows": 23387
+    },
+    "peak_trace": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/oracle/bit_true_peak_trace.csv",
+      "sha256": "13df3b96b18e546dc5623dd140d4c3193b5de906c3d299f0f21e5135e26c8afa",
+      "rows": 91
+    },
+    "quantized_reference": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/oracle/t05_quantized_reference.mat",
+      "sha256": "5cefc5b330ddd0f05f471e13ae28b00d9200d68fbb0e3b7be41d3f5654422936",
+      "rows": 2048
+    },
+    "node_format": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/oracle/bit_true_node_format_manifest.json",
+      "sha256": "85042f7d30ca1ac9b376d5983502ae7821560a1c8728153a96a347f54a020e44",
+      "rows": 1
+    }
+  },
+  "schema": {
+    "trace_schema": {
+      "path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/schema/trace_schema.json",
+      "sha256": "a23b5c5704bc705783cb61417338b6c30de11b51844c0ca2cbf5404aac78a534",
+      "rows": 1
+    }
+  },
+  "compatibility": {
+    "existing_reference_rom_path": "artifacts/T05_fine_timing/t05_ps1_reference_16lane.mem",
+    "existing_reference_rom_sha256": "4a9c9a60a99497c7f4b50f952fb6433334152521865cdf953d7f2ea7b3486bef",
+    "reference_rom_matches_existing": true,
+    "ooc_requalification_required_if_reference_rom_differs": true,
+    "current_reference_rom_requires_ooc_requalification": false
+  },
+  "explicit_runner_parameters": {
+    "behavioral": {
+      "runner": "scripts/t05/run_t05_full91_official_ip.ps1",
+      "bundle_contract_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/bundle_contract.json",
+      "capture_memory_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_full91_capture_128.mem",
+      "metadata_memory_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_full91_case_metadata_160.mem",
+      "ps1_rom_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_ps1_reference_16lane.mem",
+      "required_new_parameters": [
+        "BundleContractPath",
+        "CaptureMemoryPath",
+        "MetadataMemoryPath",
+        "Ps1RomPath"
+      ]
+    },
+    "post_synthesis": {
+      "runner": "scripts/t05/run_t05_full91_post_synth.ps1",
+      "bundle_contract_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/bundle_contract.json",
+      "capture_memory_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_full91_capture_128.mem",
+      "metadata_memory_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_full91_case_metadata_160.mem",
+      "ps1_rom_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_ps1_reference_16lane.mem",
+      "required_new_parameters": [
+        "BundleContractPath",
+        "CaptureMemoryPath",
+        "MetadataMemoryPath",
+        "Ps1RomPath"
+      ]
+    },
+    "dds_trace": {
+      "runner": "scripts/t05/run_t05_full91_dds_trace.ps1",
+      "bundle_contract_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/bundle_contract.json",
+      "phase_increment_memory_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/stimulus/t05_full91_phase_increment_32.mem",
+      "required_new_parameters": [
+        "BundleContractPath",
+        "PhaseIncrementMemoryPath"
+      ]
+    },
+    "compare": {
+      "runner": "scripts/t05/run_t05_generation_aware_compare.ps1",
+      "bundle_contract_path": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/bundle_contract.json",
+      "oracle_directory": "artifacts/T05_fine_timing/generation_aware_rtl_bundle/attempt_20260902T000444510Z_23684_20f70b5e/oracle",
+      "required_parameters": [
+        "BundleContractPath",
+        "RtlRunDirectory",
+        "SimulationKind",
+        "DdsTraceDirectory_for_behavioral"
+      ]
+    }
+  },
+  "existing_runners_parameterized": true,
+  "execution_permitted_before_runner_parameterization": false,
+  "execution_permitted_before_t04_canonical_pass": false,
+  "producer_executed_rtl_or_ooc_or_psf": false,
+  "behavioral_run": false,
+  "post_synthesis_run": false,
+  "ooc_run": false
+}

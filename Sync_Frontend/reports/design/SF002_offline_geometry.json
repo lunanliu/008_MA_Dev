@@ -1,0 +1,118 @@
+{
+  "status": "OFFLINE_GEOMETRY_ONLY_NOT_RTL_PASS",
+  "candidates": [
+    {
+      "start": 3244,
+      "last": 6652,
+      "beats": 853,
+      "anchor": 4692,
+      "age_at_close_with_64_sample_pipeline_margin": 4332
+    },
+    {
+      "start": 14172,
+      "last": 16456,
+      "beats": 572,
+      "anchor": 15056,
+      "age_at_close_with_64_sample_pipeline_margin": 3772
+    },
+    {
+      "start": 16848,
+      "last": 16884,
+      "beats": 10,
+      "anchor": 16608,
+      "age_at_close_with_64_sample_pipeline_margin": 2648
+    },
+    {
+      "start": 16900,
+      "last": 16964,
+      "beats": 17,
+      "anchor": 16676,
+      "age_at_close_with_64_sample_pipeline_margin": 2660
+    },
+    {
+      "start": 16992,
+      "last": 18024,
+      "beats": 259,
+      "anchor": 17252,
+      "age_at_close_with_64_sample_pipeline_margin": 3144
+    },
+    {
+      "start": 25540,
+      "last": 27832,
+      "beats": 574,
+      "anchor": 26428,
+      "age_at_close_with_64_sample_pipeline_margin": 3776
+    },
+    {
+      "start": 28200,
+      "last": 28336,
+      "beats": 35,
+      "anchor": 28012,
+      "age_at_close_with_64_sample_pipeline_margin": 2696
+    },
+    {
+      "start": 28360,
+      "last": 29392,
+      "beats": 259,
+      "anchor": 28620,
+      "age_at_close_with_64_sample_pipeline_margin": 3144
+    },
+    {
+      "start": 37004,
+      "last": 39332,
+      "beats": 583,
+      "anchor": 37912,
+      "age_at_close_with_64_sample_pipeline_margin": 3792
+    },
+    {
+      "start": 39688,
+      "last": 39720,
+      "beats": 9,
+      "anchor": 39448,
+      "age_at_close_with_64_sample_pipeline_margin": 2644
+    },
+    {
+      "start": 39732,
+      "last": 40760,
+      "beats": 258,
+      "anchor": 39988,
+      "age_at_close_with_64_sample_pipeline_margin": 3144
+    },
+    {
+      "start": 48492,
+      "last": 50812,
+      "beats": 581,
+      "anchor": 49396,
+      "age_at_close_with_64_sample_pipeline_margin": 3788
+    },
+    {
+      "start": 51068,
+      "last": 52116,
+      "beats": 263,
+      "anchor": 51336,
+      "age_at_close_with_64_sample_pipeline_margin": 3152
+    }
+  ],
+  "true_candidate_containment": [
+    {
+      "true_start": 15004,
+      "anchor": 15056,
+      "anchor_error": 52
+    },
+    {
+      "true_start": 26373,
+      "anchor": 26428,
+      "anchor_error": 55
+    },
+    {
+      "true_start": 37842,
+      "anchor": 37912,
+      "anchor_error": 70
+    },
+    {
+      "true_start": 49311,
+      "anchor": 49396,
+      "anchor_error": 85
+    }
+  ]
+}

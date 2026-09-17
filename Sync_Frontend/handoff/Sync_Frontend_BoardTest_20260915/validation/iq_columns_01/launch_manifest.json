@@ -1,0 +1,25 @@
+{
+  "schema": "SYNC_FRONTEND_IQ_COLUMNS_FORMAT_CHECK_01_LAUNCH",
+  "created_utc": "2026-09-15T19:49:32.5370430Z",
+  "handoff": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915",
+  "matlab_executable": "C:\\Program Files\\MATLAB\\R2024a\\bin\\matlab.exe",
+  "matlab_version": "24.1.0.2508561",
+  "matlab_process_count_at_launch": 0,
+  "matlab_prefdir": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\iq_columns_01\\matlab_prefdir_01",
+  "generated_output": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\iq_columns_01\\generated",
+  "waveform_output": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\iq_columns_01\\waveform_analysis",
+  "log_path": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\iq_columns_01\\matlab_iq_columns_01.log",
+  "exit_code_path": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\iq_columns_01\\matlab_iq_columns_01.exit_code.txt",
+  "result_json": "D:\\008_MA_Dev\\Sync_Frontend\\handoff\\Sync_Frontend_BoardTest_20260915\\validation\\iq_columns_01\\format_check.json",
+  "command": "cd('D:/008_MA_Dev/Sync_Frontend/handoff/Sync_Frontend_BoardTest_20260915'); info=generate_frontend_csv('validation/iq_columns_01/generated','baseline'); iq=readmatrix('validation/iq_columns_01/generated/input_iq.csv'); assert(isequal(size(iq),[60324,2])); assert(all(isfinite(iq(:))) && all(iq(:)==fix(iq(:))) && all(iq(:)>=-32768) && all(iq(:)<=32767)); packed=uint64(mod(int64(iq(:,1)),65536))+bitshift(uint64(mod(int64(iq(:,2)),65536)),16); old=uint64(readmatrix('data/baseline/input_dma_u32.csv')); assert(isequal(size(old),[60324,1])); equal=all(packed==old); assert(equal); assert(~isfile('validation/iq_columns_01/generated/input_dma_u32.csv')); assert(~isfile('validation/iq_columns_01/generated/input_iq_view.csv')); assert(~isfile('validation/iq_columns_01/generated/input_four_lanes_view.csv')); s=analyze_frontend_waveform('validation/iq_columns_01/generated','validation/iq_columns_01/waveform_analysis'); assert(s.sample_count==60324); result=struct('status','PASS','row_count',size(iq,1),'column_count',size(iq,2),'all_integer_in_range',true,'packed_equals_data_baseline_input_dma_u32',equal,'legacy_packed_files_absent',true,'waveform_entry_pass',true,'waveform_sample_count',s.sample_count,'new_rtl_simulation_run',false,'board_data_tested',false,'exit_code',0); fid=fopen('validation/iq_columns_01/format_check.json','w','n','UTF-8'); fprintf(fid,'%s\\\\n',jsonencode(result,'PrettyPrint',true)); fclose(fid);",
+  "singleCompThread": false,
+  "scope": "two-column I,Q export plus affected waveform entry only; no algorithm, RTL, old self-test, simulation, or board test",
+  "available_memory_gib": 16.18,
+  "estimated_memory_gib": 4,
+  "hard_protection_minutes": 10,
+  "baseline_input_dma_sha256": "774FF5D5BD75AFE4C047D013980330CB6D0D0E2B1E367365F089DBC85D654EC9",
+  "script_hashes": {
+    "generate_frontend_csv.m": "7E4A543BE3E1AE785E3168BF6DE89F5FCCE609A87DFDF8EC4B9E0198358440A0",
+    "analyze_frontend_waveform.m": "3C909E640BF8856558F163A6C331E2D53F17CF8FC85D5A72027528F2644A7108"
+  }
+}

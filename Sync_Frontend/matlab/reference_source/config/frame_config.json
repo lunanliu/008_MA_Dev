@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "profile_id": "bistatic_ofdm_522_baseline_v1",
+  "artifact_policy": {
+    "preamble_pilot_resolved_by": "T02",
+    "t01_fixture_allowed_for_production": false,
+    "controlled_reopen_if_schema_changes": true,
+    "t02_production_artifact_relative_path": "artifacts/T02_frame_design/t02_production_artifacts.mat"
+  },
+  "signal": {
+    "sample_rate_hz": 500000000,
+    "sample_format": "signed_twos_complement_i16_q16",
+    "complex_components_bits": 16,
+    "subcarrier_spacing_hz": 244140.625
+  },
+  "interface": {
+    "samples_per_clock": 4,
+    "baseline_clock_hz": 125000000,
+    "optimization_clock_hz": 150000000,
+    "lane_zero_is_earliest": true,
+    "beat_data_bits": 128
+  },
+  "frame": {
+    "fft_length": 2048,
+    "cyclic_prefix_samples": 512,
+    "active_subcarriers": 1640,
+    "preamble_symbols": 10,
+    "payload_symbols": 512,
+    "total_symbols": 522,
+    "symbol_samples_with_cp": 2560,
+    "frame_samples": 1336320,
+    "frame_duration_s": 0.00267264,
+    "cycles_per_frame_125mhz": 334080,
+    "cycles_per_frame_150mhz": 400896
+  },
+  "indexing": {
+    "frequency_array_order": "unshifted",
+    "matlab_index_base": 1,
+    "rtl_index_base": 0,
+    "dc_zero_based": 0,
+    "active_positive_zero_based_inclusive": [1, 820],
+    "guard_zero_based_inclusive": [821, 1227],
+    "active_negative_zero_based_inclusive": [1228, 2047],
+    "signed_active_negative_inclusive": [-820, -1],
+    "signed_active_positive_inclusive": [1, 820]
+  },
+  "offset_limits": {
+    "to_sync_samples": 101,
+    "fo_sync_hz": 150000,
+    "sfo_ppm": 150
+  },
+  "continuous_waveform": {
+    "minimum_pre_t07_halo_each_side_samples": 302,
+    "default_halo_each_side_samples": 2048,
+    "halo_source": "true_adjacent_generated_frames",
+    "sfo_sign_convention": "Fs_rx_equals_Fs_tx_times_one_plus_ppm",
+    "fractional_delay_reference": "continuous_absolute_timeline_pchip"
+  },
+  "payload": {
+    "modulation": "deterministic_gray_qpsk",
+    "ldpc_required": false,
+    "pilot_frequency_spacing": 2,
+    "pilot_time_spacing": 7
+  },
+  "rng": {
+    "algorithm": "mt19937ar",
+    "t01_fixture_artifact_seed": 82901,
+    "t01_smoke_waveform_seed": 82902,
+    "t01_smoke_channel_seed": 82903
+  },
+  "t02": {
+    "artifact_schema_version": 1,
+    "artifact_relative_path": "artifacts/T02_frame_design/t02_production_artifacts.mat",
+    "selected_ps1_ps2_candidate_id": "bpsk_p10_3_s1023_equal",
+    "ps1_ps2": {
+      "source_classification": "project_decision_after_matlab_candidate_study",
+      "modulation": "bpsk",
+      "lfsr_polynomial": "x^10+x^3+1",
+      "lfsr_seed": 1023,
+      "normalization": "equal_symbol_energy_sqrt2",
+      "ps1_loaded_signed_bins": "all_nonzero_even_k_with_abs_k_le_820",
+      "ps2_even_differential": true,
+      "ps2_odd_active_known_qpsk": true
+    },
+    "ps3_ps10": {
+      "source_classification": "project_differential_bpsk_candidate",
+      "training_seed": 82921,
+      "pair_cyclic_shifts": [0, 113, 307, 521],
+      "pair_symbols_zero_based": [[2, 3], [4, 5], [6, 7], [8, 9]],
+      "active_bins_per_symbol": 1640,
+      "production_observation_count_selected": false
+    },
+    "observation_candidate_counts": [32, 64, 128, 256, 512, 1640],
+    "payload_pilot": {
+      "source_classification": "project_decision_after_matlab_candidate_study",
+      "lattice": "even",
+      "value_modulation": "qpsk",
+      "sequence_seed": 82943,
+      "time_offset_zero_based": 0,
+      "pilot_bearing_symbols": 74,
+      "pilots_per_bearing_symbol": 820,
+      "total_pilots": 60680,
+      "active_resource_element_fraction": 0.072265625
+    },
+    "rom": {
+      "storage": "ten_useful_symbols_without_cp",
+      "sample_count": 20480,
+      "samples_per_beat": 4,
+      "beat_depth": 5120,
+      "word_bits": 128,
+      "component_bits": 16,
+      "peak_headroom_fraction": 0.9,
+      "packing_msb_to_lsb": "Q3_I3_Q2_I2_Q1_I1_Q0_I0",
+      "lane_zero_is_earliest": true,
+      "cp_policy": "replay_last_512_useful_samples_by_address_not_duplicate_storage"
+    }
+  },
+  "rtl_development": {
+    "standalone_target_part": "xcvu11p-flgc2104-2-e",
+    "resource_planning_percent": 60,
+    "resource_hard_limit_percent": 70,
+    "ni_vi_minimum_reserve_percent": 30
+  }
+}

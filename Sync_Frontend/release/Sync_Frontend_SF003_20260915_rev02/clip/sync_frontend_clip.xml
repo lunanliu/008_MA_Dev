@@ -1,0 +1,426 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CLIPDeclaration Name="Autonomous TO CFO frontend SF003 rev02 125MHz FLGB">
+  <FormatVersion>4.3</FormatVersion>
+  <Description>Core DCP plus independent VHDL wrapper. Raw-IQ autonomous capture, coarse TO/CFO and fine TO. NI Target compile and board qualification pending.</Description>
+  <TopLevelEntityAndArchitecture>
+    <SynthesisModel>
+      <Entity>sync_frontend_clip</Entity>
+      <Architecture>rtl</Architecture>
+    </SynthesisModel>
+  </TopLevelEntityAndArchitecture>
+  <SupportedDeviceFamilies>Unlimited</SupportedDeviceFamilies>
+  <InterfaceList>
+    <Interface Name="LabVIEW">
+      <InterfaceType>LabVIEW</InterfaceType>
+      <SignalList>
+        <Signal Name="clk125">
+          <HDLName>clk125</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <Boolean />
+          </DataType>
+          <Description>NI-provided free-running 125 MHz; use this same clock for the SCTL</Description>
+          <SignalType>clock</SignalType>
+          <FreqInHertz>
+            <Min>125000000</Min>
+            <Max>125000000</Max>
+          </FreqInHertz>
+        </Signal>
+        <Signal Name="reset_n">
+          <HDLName>reset_n</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <Boolean />
+          </DataType>
+          <Description>Active-low reset, hold at least 4 clocks, wait for input_ready after release</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="session_start">
+          <HDLName>session_start</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <Boolean />
+          </DataType>
+          <Description>One clock pulse starts a new continuity epoch</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="session_abort">
+          <HDLName>session_abort</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <Boolean />
+          </DataType>
+          <Description>One clock pulse disarms input and discards in-flight state</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="stream_gap">
+          <HDLName>stream_gap</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <Boolean />
+          </DataType>
+          <Description>One clock pulse declares real sample loss; discard old epoch; valid pause alone is not sample loss</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="input_valid">
+          <HDLName>input_valid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <Boolean />
+          </DataType>
+          <Description>Hold all four IQ words until valid and ready</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="input_ready">
+          <HDLName>input_ready</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <Boolean />
+          </DataType>
+          <Description>Accept all four IQ samples on valid and ready</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="input_data0">
+          <HDLName>input_data0</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Lane 0, packed Q16 high / I16 low, lane0 is earliest</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="input_data1">
+          <HDLName>input_data1</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Lane 1, packed Q16 high / I16 low, lane0 is earliest</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="input_data2">
+          <HDLName>input_data2</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Lane 2, packed Q16 high / I16 low, lane0 is earliest</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="input_data3">
+          <HDLName>input_data3</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Lane 3, packed Q16 high / I16 low, lane0 is earliest</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="result_valid">
+          <HDLName>result_valid</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <Boolean />
+          </DataType>
+          <Description>Entire result bundle remains stable until result_ready</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="result_ready">
+          <HDLName>result_ready</HDLName>
+          <HDLType>std_logic</HDLType>
+          <Direction>ToCLIP</Direction>
+          <DataType>
+            <Boolean />
+          </DataType>
+          <Description>Acknowledge all result fields atomically</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="result_epoch">
+          <HDLName>result_epoch</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Continuity epoch of this result</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="rx_frame_id">
+          <HDLName>rx_frame_id</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Local confirmed frame sequence, starts at zero per epoch; not decoded transmitter frame id</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="candidate_id">
+          <HDLName>candidate_id</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Internal candidate sequence, including rejected proposals</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="coarse_absolute">
+          <HDLName>coarse_absolute</HDLName>
+          <HDLType>std_logic_vector(63 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U64 />
+          </DataType>
+          <Description>Coarse position in accepted samples since epoch start</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="fine_absolute">
+          <HDLName>fine_absolute</HDLName>
+          <HDLType>std_logic_vector(63 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U64 />
+          </DataType>
+          <Description>Fine position in accepted samples since epoch start</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="cfo_hz">
+          <HDLName>cfo_hz</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <I32 />
+          </DataType>
+          <Description>Signed coarse CFO Hz; raw payload has not been corrected</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="quality_q1_15">
+          <HDLName>quality_q1_15</HDLName>
+          <HDLType>std_logic_vector(15 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U16 />
+          </DataType>
+          <Description>Fine timing quality code Q1.15</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="result_status">
+          <HDLName>result_status</HDLName>
+          <HDLType>std_logic_vector(15 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U16 />
+          </DataType>
+          <Description>Kind and validity flags; 0x3800 is a valid fine result</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="accepted_samples">
+          <HDLName>accepted_samples</HDLName>
+          <HDLType>std_logic_vector(63 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U64 />
+          </DataType>
+          <Description>Live accepted-sample count within current epoch</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="epoch">
+          <HDLName>epoch</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Live continuity epoch</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="candidate_count">
+          <HDLName>candidate_count</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Eligible plateau proposals</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="rejected_count">
+          <HDLName>rejected_count</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Candidates rejected by local estimator</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="capture_drop_count">
+          <HDLName>capture_drop_count</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Candidates rejected for copy/slot capacity or stale history</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="duplicate_count">
+          <HDLName>duplicate_count</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Queued proposals suppressed near the confirmed frame</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="confirmed_count">
+          <HDLName>confirmed_count</HDLName>
+          <HDLType>std_logic_vector(31 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U32 />
+          </DataType>
+          <Description>Confirmed frames admitted to result holding register</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="snapshot_occupancy">
+          <HDLName>snapshot_occupancy</HDLName>
+          <HDLType>std_logic_vector(7 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U8 />
+          </DataType>
+          <Description>Number of occupied snapshot slots, 0..2</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="snapshot_peak">
+          <HDLName>snapshot_peak</HDLName>
+          <HDLType>std_logic_vector(7 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U8 />
+          </DataType>
+          <Description>Maximum snapshot occupancy, 0..2</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="max_history_age">
+          <HDLName>max_history_age</HDLName>
+          <HDLType>std_logic_vector(15 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U16 />
+          </DataType>
+          <Description>Largest oldest-needed-sample age at copy start</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+        <Signal Name="error_sticky">
+          <HDLName>error_sticky</HDLName>
+          <HDLType>std_logic_vector(15 downto 0)</HDLType>
+          <Direction>FromCLIP</Direction>
+          <DataType>
+            <U16 />
+          </DataType>
+          <Description>Per-epoch hardware diagnostics; see interface guide</Description>
+          <SignalType>data</SignalType>
+          <RequiredClockDomain>clk125</RequiredClockDomain>
+          <UseInLabVIEWSingleCycleTimedLoop>Required</UseInLabVIEWSingleCycleTimedLoop>
+        </Signal>
+      </SignalList>
+    </Interface>
+  </InterfaceList>
+  <ImplementationList>
+    <Path Name="sync_frontend_clip.vhd">
+      <TopLevel />
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="sync_frontend_top.dcp">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+    <Path Name="sync_frontend_clip.xdc">
+      <SimulationFileList>
+        <SimulationModelType>Exclude from simulation model</SimulationModelType>
+      </SimulationFileList>
+    </Path>
+  </ImplementationList>
+  <NumberOfDCMsNeeded>0</NumberOfDCMsNeeded>
+  <NumberOfMMCMsNeeded>0</NumberOfMMCMsNeeded>
+  <NumberOfBufGsNeeded>0</NumberOfBufGsNeeded>
+</CLIPDeclaration>

@@ -1,0 +1,16 @@
+{
+  "mode": "custom",
+  "sample_rate_hz": 5.0E+8,
+  "fpga_clock_hz": 1.25E+8,
+  "sample_count": 84900,
+  "beat_count": 21225,
+  "expected_results": 4,
+  "input_format": "unsigned decimal U32; low16=I two-complement, high16=Q two-complement",
+  "result_words_per_record": 9,
+  "default_epoch": 0,
+  "source_sha256": "98fffec3b2773996e54aa7608b1c2e112bc9f97fd3672f7d27bdc1b614c550d4",
+  "schedule": "1024-word Host chunks; wait accepted_samples; then wait at least 1 ms",
+  "note": "New MATLAB-assembled stream. Four IQ fragments/CFO values are unchanged; new noise and spacing have NOT been RTL- or board-qualified.",
+  "new_rtl_simulation_run": false,
+  "board_test_run": false
+}

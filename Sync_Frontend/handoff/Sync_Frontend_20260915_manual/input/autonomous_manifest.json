@@ -1,0 +1,47 @@
+{
+  "seed": 9414002,
+  "accepted_samples": 60324,
+  "beats": 15081,
+  "expected_results": 4,
+  "expected": [
+    {
+      "case": 0,
+      "case_id": "pairwise_01",
+      "fixture_start": 14849,
+      "true_start": 15004,
+      "expected_cfo_hz": -150000,
+      "lane": 0
+    },
+    {
+      "case": 1,
+      "case_id": "pairwise_02",
+      "fixture_start": 26218,
+      "true_start": 26373,
+      "expected_cfo_hz": 0,
+      "lane": 1
+    },
+    {
+      "case": 5,
+      "case_id": "pairwise_06",
+      "fixture_start": 37586,
+      "true_start": 37842,
+      "expected_cfo_hz": 150000,
+      "lane": 2
+    },
+    {
+      "case": 6,
+      "case_id": "pairwise_07",
+      "fixture_start": 48954,
+      "true_start": 49311,
+      "expected_cfo_hz": -150000,
+      "lane": 3
+    }
+  ],
+  "fake_preamble": "512+1024+1024 repeated random IQ, not PS1",
+  "block_beats": 256,
+  "pause_cycles": 8000,
+  "scope": "short finite fragments; not sustained ADC qualification",
+  "truth_routing": "autonomous_truth.mem only consumed by passive checker",
+  "autonomous_stream.mem_sha256": "98fffec3b2773996e54aa7608b1c2e112bc9f97fd3672f7d27bdc1b614c550d4",
+  "autonomous_truth.mem_sha256": "0a3d3cc9192d9b48a42657bba0c7ce71251a08993eb3b8ae7aaea5901e49561a"
+}

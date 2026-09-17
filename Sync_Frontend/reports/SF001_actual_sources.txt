@@ -1,0 +1,53 @@
+FILESET sources_1
+TOP to_coarse_ports
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t04_div_u63_u47/t04_div_u63_u47.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t04_phase_scale_s48_x_1953125/t04_phase_scale_s48_x_1953125.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t04_cordic_translate_48/t04_cordic_translate_48.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t04_square_u42/t04_square_u42.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t04_square_s43/t04_square_s43.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t04_cmpy_17x16/t04_cmpy_17x16.xci
+D:/008_MA_Dev/Sync_Frontend/rtl/common/bistatic_stream_pkg.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/carrier/cfo_coarse_estimator.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/coarse_corr_energy_4lane.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/buffering/coarse_lag1024_beat_ring.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/coarse_metric_threshold.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/coarse_plateau_selector.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/buffering/coarse_result_pair_fifo.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/coarse_rolling_sc_accumulator.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/coarse_safe_phase_replay.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/to_coarse_estimator.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/to_coarse_ports.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/buffering/fine_corrected_local_buffer.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/buffering/fine_energy_prefix_buffer.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/buffering/fine_local_capture_buffer.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/carrier/cfo_phase_increment.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/carrier/cfo_preamble_rotator.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/frontend/sync_coarse_pair_join.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_corr_accumulator.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_corr_cmpy_array.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_corr_metric_controller.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_corr_scheduler.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_local_window_reader.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_partitioned_corr_engine.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_peak_selector.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_ps1_reference_rom.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_quality_controller.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_quality_vendor_adapters.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/fine_vendor_multiplier_adapters.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/to_fine_core.sv
+D:/008_MA_Dev/Sync_Frontend/rtl/timing/to_fine_estimator.sv
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t05_div_quality_s64_s64_f15/t05_div_quality_s64_s64_f15.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t05_mult_cfo_s19_const40_full59/t05_mult_cfo_s19_const40_full59.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t05_mult_quality_u46x36_full82/t05_mult_quality_u46x36_full82.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t05_mult_s18x18_full36/t05_mult_s18x18_full36.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t05_mult_s48x48_full96/t05_mult_s48x48_full96.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t05_cmpy_corr_18x16/t05_cmpy_corr_18x16.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t05_cmpy_rotate_18x18/t05_cmpy_rotate_18x18.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t05_cordic_rotate16_parallel/t05_cordic_rotate16_parallel.xci
+D:/008_MA_Dev/Sync_Frontend/vivado/Sync_Frontend/Sync_Frontend.srcs/sources_1/ip/t05_dds_pinc32_sincos18/t05_dds_pinc32_sincos18.xci
+D:/008_MA_Dev/Sync_Frontend/ip/rom/fine_ps1_reference_16lane.mem
+FILESET sim_1
+TOP coarse_baseline_equivalence_tb
+D:/008_MA_Dev/Sync_Frontend/sim/tb/coarse_baseline_equivalence_tb.sv
+FILESET constrs_1
+D:/008_MA_Dev/Sync_Frontend/constraints/clk125.xdc

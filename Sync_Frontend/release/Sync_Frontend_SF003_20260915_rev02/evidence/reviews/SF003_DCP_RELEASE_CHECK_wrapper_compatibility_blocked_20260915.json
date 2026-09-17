@@ -1,0 +1,71 @@
+{
+  "schema": "SF003_DCP_RELEASE_CHECK_BLOCKED_REPORT",
+  "created_utc": "2026-09-14T22:59:56.3980087Z",
+  "status": "BLOCKED_WRAPPER_DCP_IMPORT_COMPATIBILITY_PENDING_ASTRA_REVIEW",
+  "grant_id": "SYNC_FRONTEND_DCP_CLOSEOUT_20260914_REV02",
+  "authorized_job": "SF003_DCP_RELEASE_CHECK",
+  "commit": "d7fa6e3986e8a8bbdfee39e68f7e23f073a8f07b",
+  "part": "xcvu11p-flgb2104-2-e",
+  "release": "D:\\008_MA_Dev\\Sync_Frontend\\release\\Sync_Frontend_SF003_20260915_rev01",
+  "frozen_manifest": "D:\\008_MA_Dev\\Sync_Frontend\\reports\\design\\SF003_DCP_RELEASE_CHECK_files.csv",
+  "frozen_manifest_sha256": "0E05D55F048BD41AEB6BB1A678000AB68C7CED9AD6B1F2DE44F7464B9320193A",
+  "core_dcp_ooc_shape": "PASS: BLACKBOX=0 PAD_IO=0 DSP=206 RAMB36=58 RAMB18=9 FF=18119",
+  "core_dcp_reopen": "PASS",
+  "core_dcp_path": "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_DCP_check_20260914T223135Z\\clip_dcp\\sync_frontend_top.dcp",
+  "core_dcp_sha256": "553DEBE94BD9B187F15FB9EE8069ED0258B7976B57FF8E98609588139746CFAD",
+  "wrapper_shell_synthesis": "PASS with one expected sync_frontend_top blackbox",
+  "retry1": "FAIL before DCP fill: read_checkpoint -cell implementation reached structural-netlist error",
+  "retry2": "FAIL before DCP fill: FULL_NAME/HIERARCHICAL_NAME properties unavailable",
+  "hierarchy_diagnostic": "PASS: CURRENT_DESIGN_TOP=sync_frontend_clip; root report instance=top; blackbox local name=implementation; all_hier=GND implementation; HIERARCHICALNAME property listed but value unavailable",
+  "retry3": "FAIL before DCP fill: read_checkpoint -cell top/implementation reported No cells matched and Invalid option value",
+  "wrapper_dcp_import": "NOT_PASS",
+  "wrapper_dcp_output": false,
+  "completion_marker": false,
+  "ni_platform_verified": false,
+  "implementation_timing_verified": false,
+  "board_or_ni_target_tested": false,
+  "native_processes_after": [
+    {
+      "name": "vivado.exe",
+      "pid": 34768,
+      "parentPid": 40656,
+      "commandLine": "\"C:/NIFPGA/programs/Vivado2021_1/bin/unwrapped/win64.o/vivado.exe\"   -mode batch -notrace -source \"D:/008_MA_Dev/work/t10_fullframe_20260914_run03/run_fullframe_rev03.tcl\" -log \"D:/008_MA_Dev/work/t10_fullframe_20260914_run03/vivado.log\" -journal \"D:/008_MA_Dev/work/t10_fullframe_20260914_run03/vivado.jou\""
+    },
+    {
+      "name": "xsimk.exe",
+      "pid": 28856,
+      "parentPid": 34768,
+      "commandLine": "xsim.dir/t10_full023_tb_behav/xsimk.exe -simmode gui -wdb t10_full023_tb_behav.wdb -simrunnum 0 -socket 5082"
+    },
+    {
+      "name": "vivado.exe",
+      "pid": 14300,
+      "parentPid": 11240,
+      "commandLine": "\"C:/NIFPGA/programs/Vivado2021_1/bin/unwrapped/win64.o/vivado.exe\"  "
+    }
+  ],
+  "protected_t10": {
+    "preserved": true,
+    "vivado_pid": 34768,
+    "xsim_pid": 28856
+  },
+  "protected_user_gui": {
+    "preserved": true,
+    "vivado_pid": 14300
+  },
+  "do_not_continue_native_without_review": true,
+  "next_action": "Static evidence review by SYNC_FRONTEND Astra; shared Vivado slot return to manager/T11; no further hierarchy-name guesses",
+  "evidence_paths": [
+    "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_DCP_check_20260914T223135Z",
+    "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_DCP_check_20260914T224433Z_retry1",
+    "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_DCP_check_20260914T225325Z_retry2",
+    "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_DCP_check_20260914T225617Z_retry3",
+    "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_wrapper_hierarchy_diag_20260914T225111Z"
+  ],
+  "evidence_sha256": {
+    "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_DCP_check_20260914T223135Z\\clip_dcp\\sync_frontend_top.dcp": "553DEBE94BD9B187F15FB9EE8069ED0258B7976B57FF8E98609588139746CFAD",
+    "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_DCP_check_20260914T223135Z\\native_vivado.log": "86EAC9541433FA1E397FF222711AD32EFCC9BE2D36144BEEC00891354F0F21F4",
+    "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_DCP_check_20260914T225617Z_retry3\\wrapper_cell_resolution.txt": "0C2F8D335BAFE56ACD8DD9C14525554D6038BD0D9F3AECD72832857EEE638E6C",
+    "D:\\008_MA_Dev\\Sync_Frontend\\work\\SF003_wrapper_hierarchy_diag_20260914T225111Z\\hierarchy_diagnostic.txt": "B33F8C589F6E1D1B4C56FC7870D8A2D4046B504E5264094F60535855824C2AFD"
+  }
+}

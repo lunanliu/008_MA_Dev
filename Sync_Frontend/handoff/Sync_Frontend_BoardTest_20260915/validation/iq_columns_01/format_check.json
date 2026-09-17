@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "row_count": 60324,
+  "column_count": 2,
+  "all_integer_in_range": true,
+  "packed_equals_data_baseline_input_dma_u32": true,
+  "legacy_packed_files_absent": true,
+  "waveform_entry_pass": true,
+  "waveform_sample_count": 60324,
+  "new_rtl_simulation_run": false,
+  "board_data_tested": false,
+  "exit_code": 0
+}

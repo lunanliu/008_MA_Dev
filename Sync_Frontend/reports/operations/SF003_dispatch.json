@@ -1,0 +1,10 @@
+{
+  "job_id": "SF003",
+  "state": "DISPATCHED",
+  "git_commit": "2e968f6e33a82a000326be9e6d9c7c97da9342bc",
+  "manifest_sha256": "978b9c12e3660da8916f056f800e2002098300cf4e7b01e9d51a03271e12ada2",
+  "luna": "01a0a161-e434-7142-8927-1f5314daafd5",
+  "native_execution": "DELEGATED_NOT_YET_VERIFIED",
+  "next": "Review FLGB physical and EDIF export then release",
+  "dispatched_utc": "2026-09-14T21:16:09.4052358Z"
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "CORE_XPR_INDEPENDENT_VHDL_REPRODUCIBLE_IO_MANUAL_GUIDE",
+  "source_project": "D:/008_MA_Dev/Sync_Frontend",
+  "xpr": "vivado/Sync_Frontend/Sync_Frontend.xpr",
+  "top": "sync_frontend_top",
+  "agent_creates_clip_xml": false,
+  "user_creates_clip_configuration": true,
+  "native_runs_started": 0,
+  "previous_automatic_packages": "PRESERVED_SUPERSEDED"
+}

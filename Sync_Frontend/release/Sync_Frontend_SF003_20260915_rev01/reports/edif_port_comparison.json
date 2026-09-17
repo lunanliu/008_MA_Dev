@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "xml_signal_count": 32,
+  "ports_json_count": 32,
+  "vhdl_wrapper_count": 32,
+  "core_component_count": 22,
+  "actual_wrapper_group_count": 32,
+  "actual_core_group_count": 22,
+  "xml_vs_ports_json": {
+    "status": "PASS",
+    "expected_count": 32,
+    "actual_count": 32,
+    "missing": [],
+    "extra": [],
+    "mismatch": []
+  },
+  "xml_vs_vhdl_entity": {
+    "status": "PASS",
+    "expected_count": 32,
+    "actual_count": 32,
+    "missing": [],
+    "extra": [],
+    "mismatch": []
+  },
+  "vhdl_entity_vs_wrapper": {
+    "status": "PASS",
+    "expected_count": 32,
+    "actual_count": 32,
+    "missing": [],
+    "extra": [],
+    "mismatch": []
+  },
+  "vhdl_component_vs_core": {
+    "status": "PASS",
+    "expected_count": 22,
+    "actual_count": 22,
+    "missing": [],
+    "extra": [],
+    "mismatch": []
+  }
+}

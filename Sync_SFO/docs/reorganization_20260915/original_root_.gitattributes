@@ -1,0 +1,7 @@
+# Preserve copied source and reference bytes, including Windows line endings.
+* -text
+*.mat binary
+*.bin binary
+*.pdf binary
+*.docx binary
+*.mem binary

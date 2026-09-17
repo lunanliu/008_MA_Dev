@@ -1,0 +1,12 @@
+{
+  "status": "PASS_STATIC_EDIF_PACKAGE",
+  "xml_dependency_paths": 46,
+  "same_attempt_edn_count": 43,
+  "edif_vhdl_ports_unchanged": true,
+  "native_edif_wrapper_link": "PASS_PRESERVED",
+  "original_clock_xdc_assertions": "NOT_EXECUTED_UNSUPPORTED_IF",
+  "release_xdc": "NI_clock_ownership_only_no_unsupported_commands",
+  "dcp_direct_wrapper_check": "PENDING_NEW_RESOURCE_GRANT",
+  "ni_target_compile": "NOT_RUN",
+  "source_core_commit": "2e968f6e33a82a000326be9e6d9c7c97da9342bc"
+}

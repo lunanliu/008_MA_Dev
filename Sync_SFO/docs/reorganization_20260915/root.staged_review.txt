@@ -1,0 +1,968 @@
+ .gitignore                                         |    41 +
+ AGENTS.md                                          |     8 +
+ PATH_MAPPING_ZH.md                                 |    31 +
+ README_ZH.md                                       |    16 +
+ {T11_CFO => Sync_CFO}/.gitignore                   |     0
+ {T11_CFO => Sync_CFO}/README_ZH.md                 |    22 +
+ .../constraints/cfo_backend74.xdc                  |     0
+ .../constraints/cfo_coordinate_control.xdc         |     0
+ {T11_CFO => Sync_CFO}/constraints/cfo_fft2048.xdc  |     0
+ {T11_CFO => Sync_CFO}/constraints/cfo_fft256.xdc   |     0
+ .../constraints/cfo_front2048.xdc                  |     0
+ {T11_CFO => Sync_CFO}/constraints/cfo_link010.xdc  |     0
+ {T11_CFO => Sync_CFO}/constraints/cfo_phase74.xdc  |     0
+ {T11_CFO => Sync_CFO}/constraints/cfo_rotate4.xdc  |     0
+ .../docs/ALGORITHM_BASELINE_ZH.md                  |     0
+ .../docs/ARCHITECTURE_AND_MEMORY_ZH.md             |     0
+ .../docs/BACKEND006R1_SOURCE_LOCK.json             |     0
+ .../docs/BACKEND006_SOURCE_LOCK.json               |     0
+ .../docs/BACKEND74_CONTRACT_V1_ZH.md               |     0
+ .../docs/BACKEND74_NATIVE_JOB_006.md               |     0
+ .../docs/BACKEND74_NATIVE_JOB_006R1.md             |     0
+ {T11_CFO => Sync_CFO}/docs/CFO_MAIN_CONTRACT.json  |     0
+ .../docs/CFO_NATIVE_SLOT_HOLD_20260914_ZH.md       |     0
+ .../docs/CFO_STAGE_ENTRY_DATA_20260915_ZH.md       |     8 +-
+ .../docs/COORD003_SOURCE_LOCK.json                 |     0
+ .../docs/COORDINATE_CONTRACT_V1_ZH.md              |     0
+ .../docs/COORDINATE_NATIVE_JOB_003.md              |     0
+ .../docs/DELIVERY_BOUNDARY_20260915_ZH.md          |    14 +-
+ Sync_CFO/docs/DIRECTORY_ENTRY_20260915_ZH.md       |    11 +
+ {T11_CFO => Sync_CFO}/docs/FFT005_SOURCE_LOCK.json |     0
+ {T11_CFO => Sync_CFO}/docs/FFT008_SOURCE_LOCK.json |     0
+ .../docs/FFT2048_CONTRACT_V1_ZH.md                 |     0
+ .../docs/FFT2048_FRONTEND_ARCHITECTURE_PREP_ZH.md  |     0
+ .../docs/FFT2048_NATIVE_JOB_008.md                 |     0
+ .../docs/FFT256_CONTRACT_V1_ZH.md                  |     0
+ .../docs/FFT256_NATIVE_JOB_005.md                  |     0
+ .../docs/FRONT009_SOURCE_LOCK.json                 |     0
+ .../docs/FRONT2048_CONTRACT_V1_ZH.md               |     0
+ .../docs/FRONT2048_NATIVE_JOB_009.md               |     0
+ {T11_CFO => Sync_CFO}/docs/FRONTDATA007_JOB_ZH.md  |     0
+ .../docs/FRONTDATA007_SOURCE_LOCK.json             |     0
+ .../docs/GUARD002_SOURCE_LOCK.json                 |     0
+ {T11_CFO => Sync_CFO}/docs/GUARD_NATIVE_JOB_002.md |     0
+ .../docs/IMPLEMENTATION_GATES_ZH.md                |     0
+ .../docs/LINK010R1_COMPAT1_CONTRACT_ZH.md          |     0
+ .../docs/LINK010R1_COMPAT1_SOURCE_LOCK.json        |     0
+ .../docs/LINK010R1_COMPAT2_CONTRACT_ZH.md          |     0
+ .../docs/LINK010R1_COMPAT2_SOURCE_LOCK.json        |     0
+ .../docs/LINK010R1_CONTRACT_ZH.md                  |     0
+ {T11_CFO => Sync_CFO}/docs/LINK010R1_NATIVE_JOB.md |     0
+ .../docs/LINK010R1_SOURCE_LOCK.json                |     0
+ .../docs/LINK010_CONTRACT_V1_ZH.md                 |     0
+ .../docs/LINK010_NATIVE_JOB_010.md                 |     0
+ .../docs/LINK010_SOURCE_LOCK.json                  |     0
+ {T11_CFO => Sync_CFO}/docs/MIGRATION_SOURCES.json  |     0
+ .../docs/PHASE004R1_SOURCE_LOCK.json               |     0
+ .../docs/PHASE004_SOURCE_LOCK.json                 |     0
+ .../docs/PHASE74_CONTRACT_V1_ZH.md                 |     0
+ .../docs/PHASE74_NATIVE_JOB_004.md                 |     0
+ .../docs/PHASE74_NATIVE_JOB_004R1.md               |     0
+ .../docs/ROTATOR_NATIVE_JOB_001.md                 |     0
+ .../docs/ROTATOR_SOURCE_LOCK.json                  |     0
+ .../docs/provenance/ALGORITHM_DELIVERY_STATUS.json |     0
+ .../provenance/DIRECT_USER_RESUME_20260914_ZH.md   |     0
+ .../docs/provenance/OLD_EVIDENCE_INDEX.json        |     0
+ .../docs/provenance/OLD_RTL_RESOURCE_BUDGET.json   |     0
+ .../provenance/ORIGINAL_DELIVERY_MANIFEST.json     |     0
+ .../RECEIVED_MANAGER_AUTHORIZATION_20260914.txt    |     0
+ .../T10_memory_sources/t10_output_buffer.sv        |     0
+ .../provenance/T10_memory_sources/t10_r1_bank.sv   |     0
+ .../provenance/T10_memory_sources/t10_raw_ring.sv  |     0
+ .../T10_memory_sources/t10_two_pass_transport.sv   |     0
+ .../performance/configure_parallel_jobs.tcl        |     0
+ .../docs/provenance/performance/run_threads.tcl    |     0
+ {T11_CFO => Sync_CFO}/ip/cfo_rot_lut.mem           |   Bin
+ {T11_CFO => Sync_CFO}/ip/fft2048_twiddle.mem       |   Bin
+ {T11_CFO => Sync_CFO}/ip/fft256_twiddle.mem        |   Bin
+ .../ip/front2048_coefficient_index.mem             |   Bin
+ .../ip/front2048_coefficient_table.mem             |   Bin
+ {T11_CFO => Sync_CFO}/ip/phase74_atan_q31.mem      |   Bin
+ .../matlab/bittrue/cfo_chain_arithmetic.m          |     0
+ .../matlab/bittrue/cfo_chain_bittrue.m             |     0
+ .../matlab/golden/cfo_chain_golden.m               |     0
+ {T11_CFO => Sync_CFO}/matlab/setup_cfo_project.m   |     0
+ .../matlab/waveform/cfo_chain_score.m              |     0
+ .../matlab/waveform/payload_pilot_cells.csv        |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../BACKEND006R1_REVIEW_20260914/README_ZH.md      |     0
+ .../CFO_BACKEND74_before_fix.xpr                   |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../README_ZH.md                                   |     0
+ .../failed_compile.log                             |     0
+ .../failed_xvlog.log                               |     0
+ .../rtl_declaration_fix.diff                       |     0
+ .../reports/BACKEND74_VECTOR_CHECK.json            |     0
+ .../reports/CFO_CHAIN_CURRENT_STATUS.json          |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../CFO_COORD003_REVIEW_20260914/README_ZH.md      |     0
+ .../frozen_verifier_output.txt                     |     0
+ .../review_coord003.py                             |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../CFO_GUARD002_REVIEW_20260914/README_ZH.md      |     0
+ .../review_guard002.py                             |     0
+ .../reports/CFO_GUARD003_PARSE_CHECK_20260914.json |     0
+ .../reports/CFO_NATIVE001_HANDOFF_STATUS.json      |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../CFO_NATIVE001_REVIEW_20260914/README_ZH.md     |     0
+ .../frozen_verifier_output.txt                     |     0
+ .../review_native001.py                            |     0
+ .../CFO_STAGE_ENTRY_DATA_AUDIT_20260915.json       |     0
+ .../reports/COORDINATE_VECTOR_CHECK.json           |     0
+ ...VERY_BOUNDARY_DOCUMENTATION_AUDIT_20260915.json |     0
+ .../EXECUTION_DEFECT_AUDIT_20260914T154312Z.json   |     0
+ .../FFT005_REVIEW_20260914/INDEPENDENT_REVIEW.json |     0
+ .../INDEPENDENT_REVIEW_PENDING_ARCHIVE.json        |     0
+ .../reports/FFT005_REVIEW_20260914/README_ZH.md    |     0
+ ...rd_v1_original_frozen_20260914T152722549484Z.py |     0
+ ...ft256_guard_v2_repair_20260914T152722549484Z.py |     0
+ .../reports/FFT008_ADMISSION_PREP.json             |     0
+ .../reports/FFT008_DISPATCH_20260914.json          |     0
+ .../ATTEMPT_ARTIFACT_MANIFEST.json                 |     0
+ .../FFT008_REVIEW_20260914/ATTEMPT_COMPLETION.json |     0
+ .../FFT008_REVIEW_20260914/EXECUTION_FREEZE.json   |     0
+ .../FFT008_REVIEW_20260914/INDEPENDENT_REVIEW.json |     0
+ .../reports/FFT008_REVIEW_20260914/README_ZH.md    |     0
+ .../FFT008_REVIEW_20260914/native_xelab.log        |     0
+ .../reports/FFT008_REVIEW_20260914/native_xsim.log |     0
+ .../FFT008_REVIEW_20260914/native_xvlog.log        |     0
+ .../simulate_actual_sources.csv                    |     0
+ .../simulate_project_identity.txt                  |     0
+ .../FFT008_REVIEW_20260914/simulate_verify.json    |     0
+ .../reports/FFT2048_VECTOR_CHECK.json              |     0
+ .../reports/FFT256_VECTOR_CHECK.json               |     0
+ .../reports/FRONT009_ADMISSION_PREP.json           |     0
+ .../reports/FRONT009_DISPATCH_20260914.json        |     0
+ .../ATTEMPT_ARTIFACT_MANIFEST.json                 |     0
+ .../ATTEMPT_COMPLETION.json                        |     0
+ .../FRONT009_REVIEW_20260914/EXECUTION_FREEZE.json |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../reports/FRONT009_REVIEW_20260914/README_ZH.md  |     0
+ .../FRONT009_REVIEW_20260914/native_xelab.log      |     0
+ .../FRONT009_REVIEW_20260914/native_xsim.log       |     0
+ .../FRONT009_REVIEW_20260914/native_xvlog.log      |     0
+ .../simulate_actual_sources.csv                    |     0
+ .../simulate_project_identity.txt                  |     0
+ .../FRONT009_REVIEW_20260914/simulate_verify.json  |     0
+ .../reports/FRONT2048_VECTOR_CHECK.json            |     0
+ .../DATA_PREP_COMPLETION.json                      |     0
+ .../EXECUTION_FREEZE.json                          |     0
+ .../FINAL_MANIFEST.json                            |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../FRONTDATA007_REVIEW_20260914/README_ZH.md      |     0
+ .../DATA_PREP_COMPLETION.json                      |     0
+ .../EXECUTION_FREEZE.json                          |     0
+ .../EXECUTION_FREEZE.json                          |     0
+ .../earlier_attempts/extract_frontdata007_v1.py    |     0
+ .../extract_frontdata007_v2_repair.py              |     0
+ .../extract_frontdata007_v3_repair.py              |     0
+ .../reports/LINK010R1_ADMISSION_REQUEST.json       |     0
+ .../reports/LINK010R1_BINDING_HELPER_REVIEW.json   |     0
+ .../LINK010R1_COMPAT1_ENTRY_REVIEW_20260915.json   |     0
+ ...LINK010R1_COMPAT1_ENTRY_V2_REVIEW_20260915.json |     0
+ .../reports/LINK010R1_COMPAT1_STATIC_REVIEW.json   |     0
+ .../LINK010R1_COMPAT1_TCL_REVIEW_20260915.json     |     0
+ ...10R1_COMPAT1_V3_ADMISSION_PACKAGE_20260915.json |     0
+ .../LINK010R1_COMPAT1_V3_DISPATCH_20260915.json    |     0
+ .../000_ATTEMPT_COMPLETION.json                    |     0
+ ...cfo_link010r1_compat1_guard_v3_repair_frozen.py |     0
+ .../002_CFO_LINK010R1_post_compat1.xpr             |     0
+ .../003_CFO_LINK010R1_pre_compat1.xpr              |     0
+ .../004_compat1_binding_after.json                 |     0
+ .../005_compat1_binding_after.raw.log              |     0
+ .../006_compat1_binding_before.json                |     0
+ .../007_compat1_binding_before.raw.log             |     0
+ .../008_compat1_source_check_pre_simulate.json     |     0
+ .../009_controller_events.jsonl                    |     0
+ .../010_EXECUTION_FREEZE.json                      |     0
+ .../011_link010r1_reset_audit.txt                  |     0
+ .../012_link010_actual.txt                         |     0
+ .../013_native_cfo_estimator_link_tb_vlog.prj      |     0
+ .../014_native_compile.bat                         |     0
+ .../015_native_compile.log                         |     0
+ .../016_native_elaborate.log                       |     0
+ .../017_native_evidence_copy.json                  |     0
+ .../018_native_link010r1_reset_audit.txt           |     0
+ .../019_native_link010_actual.txt                  |     0
+ .../020_native_simulate.log                        |     0
+ .../021_native_xsim.ini                            |     0
+ .../022_native_xsimkernel.log                      |     0
+ .../023_native_xvlog.log                           |     0
+ .../024_preexisting_simdir_snapshot.json           |     0
+ .../025_PRE_SIMULATE_ADMISSION.json                |     0
+ .../026_report_clock.json                          |     0
+ .../027_simulate.jou                               |     0
+ .../028_simulate.log                               |     0
+ .../029_simulate.samples.jsonl                     |     0
+ .../030_simulate.stderr.log                        |     0
+ .../031_simulate.stdout.log                        |     0
+ .../032_simulate_actual_sources.csv                |     0
+ .../033_simulate_project_identity.txt              |     0
+ .../034_simulate_result.json                       |     0
+ .../035_admission_helper_v2.py                     |     0
+ .../036_base_gui_helper.py                         |     0
+ .../037_binding_checker.py                         |     0
+ .../038_compat1_tcl_v2.tcl                         |     0
+ .../039_compat_checker.py                          |     0
+ .../040_compat_tb.sv                               |     0
+ .../041_entry_runner.py                            |     0
+ .../042_numeric_models.py                          |     0
+ .../043_numeric_verifier.py                        |     0
+ .../044_original_r1_repair.py                      |     0
+ .../045_original_tcl.tcl                           |     0
+ .../046_original_v1_guard.py                       |     0
+ .../047_parallel_tcl.tcl                           |     0
+ .../048_reset_checker.py                           |     0
+ .../049_reused_xpr.xpr                             |     0
+ .../050_source_lock.json                           |     0
+ .../051_submitted_v1_helper.py                     |     0
+ .../052_submitted_v1_runner.py                     |     0
+ .../053_submitted_v1_tcl.tcl                       |     0
+ .../054_cfo_estimator_link_tb_vlog.prj             |     0
+ .../055_compile.bat                                |     0
+ .../056_compile.log                                |     0
+ .../057_elaborate.log                              |     0
+ .../058_xsim.ini                                   |     0
+ .../059_xvlog.log                                  |     0
+ .../060_CFO_LINK010R1.xpr                          |     0
+ .../061_xvlog.log                                  |     0
+ .../062_compile.log                                |     0
+ .../063_elaborate.log                              |     0
+ .../064_simulate.log                               |     0
+ .../ARCHIVED_INPUTS.json                           |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../ORIGINAL_ATTEMPT_ARTIFACT_MANIFEST.json        |     0
+ .../RAW_AUDIT_TIME_CONTRADICTIONS.json             |     0
+ .../README_ZH.md                                   |     0
+ .../REVIEW_ARTIFACT_MANIFEST.json                  |     0
+ .../WDB_PRESERVATION.json                          |     0
+ .../reports/LINK010R1_COMPAT2_STATIC_REVIEW.json   |     0
+ .../reports/LINK010R1_COMPAT2_TB_DRAFT_REVIEW.json |     0
+ .../reports/LINK010R1_DISPATCH_20260915.json       |     0
+ .../000_ATTEMPT_COMPLETION.json                    |     0
+ .../001_CFO_LINK010R1_create.xpr                   |     0
+ .../002_cfo_link010r1_guard_v1_frozen.py           |     0
+ .../003_CFO_LINK010R1_simulate.xpr                 |     0
+ .../004_controller_events.jsonl                    |     0
+ .../LINK010R1_ELAB_REVIEW_20260915/005_create.jou  |     0
+ .../LINK010R1_ELAB_REVIEW_20260915/006_create.log  |     0
+ .../007_create.samples.jsonl                       |     0
+ .../008_create.stderr.log                          |     0
+ .../009_create.stdout.log                          |     0
+ .../010_create_actual_sources.csv                  |     0
+ .../011_create_project_identity.txt                |     0
+ .../012_create_result.json                         |     0
+ .../013_EXECUTION_FREEZE.json                      |     0
+ .../014_link010r1_admission_v2_repair_frozen.py    |     0
+ .../015_native_cfo_estimator_link_tb_vlog.prj      |     0
+ .../016_native_compile.bat                         |     0
+ .../017_native_compile.log                         |     0
+ .../018_native_elaborate.log                       |     0
+ .../019_native_xsim.ini                            |     0
+ .../020_native_xvlog.log                           |     0
+ .../021_POST_NATIVE_INVENTORY.json                 |     0
+ .../022_PRE_CREATE_ADMISSION.json                  |     0
+ .../023_PRE_SIMULATE_ADMISSION.json                |     0
+ .../024_report_clock.json                          |     0
+ .../025_simulate.jou                               |     0
+ .../026_simulate.log                               |     0
+ .../027_simulate.samples.jsonl                     |     0
+ .../028_simulate.stderr.log                        |     0
+ .../029_simulate.stdout.log                        |     0
+ .../030_simulate_actual_sources.csv                |     0
+ .../031_simulate_project_identity.txt              |     0
+ .../032_simulate_result.json                       |     0
+ .../033_CFO_LINK010R1.xpr                          |     0
+ .../LINK010R1_ELAB_REVIEW_20260915/034_README.txt  |     0
+ .../035_cfo_estimator_link_tb_vlog.prj             |     0
+ .../LINK010R1_ELAB_REVIEW_20260915/036_compile.log |     0
+ .../037_elaborate.log                              |     0
+ .../LINK010R1_ELAB_REVIEW_20260915/038_xelab.pb    |   Bin
+ .../LINK010R1_ELAB_REVIEW_20260915/039_xvlog.log   |     0
+ .../LINK010R1_ELAB_REVIEW_20260915/040_xvlog.pb    |   Bin
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../ORIGINAL_ATTEMPT_ARTIFACT_MANIFEST.json        |     0
+ .../LINK010R1_ELAB_REVIEW_20260915/README_ZH.md    |     0
+ .../REVIEW_ARTIFACT_MANIFEST.json                  |     0
+ .../LINK010R1_MODEL_BINDING_STATIC_REVIEW.json     |     0
+ .../LINK010R1_PREFLIGHT_BLOCK_REVIEW_20260915.json |     0
+ .../reports/LINK010R1_PRE_FREEZE_CHECK.json        |     0
+ .../reports/LINK010R1_RESET_FIX_DRAFT_REVIEW.json  |     0
+ .../reports/LINK010R1_STATIC_REVIEW.json           |     0
+ .../reports/LINK010R1_TB_STATIC_REVIEW.json        |     0
+ .../reports/LINK010_ADMISSION_READY_20260915.json  |     0
+ .../reports/LINK010_DISPATCH_20260915.json         |     0
+ .../LINK010_READONLY_ADMISSION_20260915.json       |     0
+ .../CFO_LINK010_after_create.xpr                   |     0
+ .../CFO_LINK010_after_simulate.xpr                 |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../ORIGINAL_ATTEMPT_ARTIFACT_MANIFEST.json        |     0
+ .../ORIGINAL_ATTEMPT_COMPLETION.json               |     0
+ .../POST_NATIVE_EXTERNAL_INTEGRITY.json            |     0
+ .../reports/LINK010_REVIEW_20260915/README_ZH.md   |     0
+ .../REVIEW_ARTIFACT_MANIFEST.json                  |     0
+ .../XPM_ASSERTION_STATIC_REVIEW.json               |     0
+ .../LINK010_REVIEW_20260915/create_native.log      |     0
+ .../LINK010_REVIEW_20260915/create_result.json     |     0
+ .../LINK010_REVIEW_20260915/installed_xpm.rlx      |     0
+ .../LINK010_REVIEW_20260915/link010_actual.txt     |     0
+ .../LINK010_REVIEW_20260915/native_compile.log     |     0
+ .../LINK010_REVIEW_20260915/native_elaborate.log   |     0
+ .../LINK010_REVIEW_20260915/native_simulate.log    |     0
+ .../LINK010_REVIEW_20260915/simulate_result.json   |     0
+ .../reports/LINK010_REVIEW_20260915/xsim.ini       |     0
+ .../reports/LINK010_STATIC_REVIEW_20260915.json    |     0
+ .../reports/LINK010_VECTOR_CHECK.json              |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../PHASE004R1_REVIEW_20260914/README_ZH.md        |     0
+ .../CFO_PHASE74_before_fix.xpr                     |     0
+ .../INDEPENDENT_REVIEW.json                        |     0
+ .../PHASE004_COMPILE_REVIEW_20260914/README_ZH.md  |     0
+ .../failed_compile_sources.prj                     |     0
+ .../failed_xvlog.log                               |     0
+ .../rtl_whitespace_fix.diff                        |     0
+ .../reports/PHASE74_VECTOR_CHECK.json              |     0
+ .../SHARED_SLOT_YIELD_20260914T1927Z.json          |     0
+ .../SHARED_SLOT_YIELD_20260914T2220Z.json          |     0
+ .../rtl/cfo_coordinate_control.sv                  |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_divide_rne64.sv      |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_divide_rne64wide.sv  |     0
+ .../rtl/cfo_estimate74_backend.sv                  |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_estimator_link.sv    |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_estimator_link_v2.sv |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_fft2048_core.sv      |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_fft256_core.sv       |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_fft74_quality.sv     |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_fft74_quality_v2.sv  |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_front2048_window.sv  |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_phase74_core.sv      |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_phase74_core_v2.sv   |     0
+ {T11_CFO => Sync_CFO}/rtl/cfo_rotate4.sv           |     0
+ Sync_CFO/rtl/vendor/vivado_2021_1_xpm/README_ZH.md |     9 +
+ .../rtl/vendor/vivado_2021_1_xpm}/xpm_cdc.sv       |     0
+ .../rtl/vendor/vivado_2021_1_xpm}/xpm_fifo.sv      |     0
+ .../rtl/vendor/vivado_2021_1_xpm}/xpm_memory.sv    |     0
+ .../sim/tb/cfo_coordinate_control_tb.sv            |     0
+ .../sim/tb/cfo_estimate74_backend_tb.sv            |     0
+ .../sim/tb/cfo_estimator_link_r1_compat1_tb.sv     |     0
+ .../sim/tb/cfo_estimator_link_r1_compat2_tb.sv     |     0
+ .../sim/tb/cfo_estimator_link_r1_tb.sv             |     0
+ .../sim/tb/cfo_estimator_link_tb.sv                |     0
+ {T11_CFO => Sync_CFO}/sim/tb/cfo_fft2048_tb.sv     |     0
+ {T11_CFO => Sync_CFO}/sim/tb/cfo_fft256_tb.sv      |     0
+ {T11_CFO => Sync_CFO}/sim/tb/cfo_front2048_tb.sv   |     0
+ {T11_CFO => Sync_CFO}/sim/tb/cfo_phase74_tb.sv     |     0
+ {T11_CFO => Sync_CFO}/sim/tb/cfo_rotate4_tb.sv     |     0
+ .../sim/vectors/ROTATOR_VECTOR_MANIFEST.json       |     0
+ .../sim/vectors/backend74_cases.json               |     0
+ .../sim/vectors/backend74_config.svh               |     0
+ .../sim/vectors/backend74_div_config.svh           |     0
+ .../sim/vectors/backend74_div_input.mem            |   Bin
+ .../sim/vectors/backend74_div_output.mem           |   Bin
+ .../sim/vectors/backend74_fft.mem                  |   Bin
+ .../sim/vectors/backend74_normal.mem               |   Bin
+ .../sim/vectors/backend74_phase.mem                |   Bin
+ .../sim/vectors/backend74_quality.mem              |   Bin
+ .../sim/vectors/backend74_result.mem               |   Bin
+ {T11_CFO => Sync_CFO}/sim/vectors/backend74_z.mem  |   Bin
+ .../sim/vectors/coordinate_cases.json              |     0
+ .../sim/vectors/coordinate_config.svh              |     0
+ .../sim/vectors/coordinate_expected.mem            |   Bin
+ .../sim/vectors/coordinate_input.mem               |   Bin
+ .../sim/vectors/fft2048_butterfly.mem              |   Bin
+ .../sim/vectors/fft2048_cases.json                 |     0
+ .../sim/vectors/fft2048_config.svh                 |     0
+ .../sim/vectors/fft2048_input.mem                  |   Bin
+ .../sim/vectors/fft2048_output.mem                 |   Bin
+ .../sim/vectors/fft2048_saturation.mem             |   Bin
+ .../sim/vectors/fft2048_window.mem                 |   Bin
+ .../sim/vectors/fft256_butterfly.mem               |   Bin
+ .../sim/vectors/fft256_cases.json                  |     0
+ .../sim/vectors/fft256_config.svh                  |     0
+ {T11_CFO => Sync_CFO}/sim/vectors/fft256_input.mem |   Bin
+ .../sim/vectors/fft256_output.mem                  |   Bin
+ .../sim/vectors/fft256_published/manifest.json     |     0
+ .../vectors/fft256_published/rcfo003_case_001.json |     0
+ .../vectors/fft256_published/rcfo003_case_002.json |     0
+ .../vectors/fft256_published/rcfo003_case_003.json |     0
+ .../vectors/fft256_published/rcfo003_case_004.json |     0
+ .../vectors/fft256_published/rcfo003_case_005.json |     0
+ .../vectors/fft256_published/rcfo003_case_006.json |     0
+ .../vectors/fft256_published/rcfo003_case_007.json |     0
+ .../vectors/fft256_published/rcfo003_case_008.json |     0
+ .../vectors/fft256_published/rcfo003_case_009.json |     0
+ .../vectors/fft256_published/rcfo004_case_001.json |     0
+ .../vectors/fft256_published/rcfo004_case_003.json |     0
+ .../vectors/fft256_published/rcfo004_case_011.json |     0
+ .../vectors/fft256_published/rcfo004_case_021.json |     0
+ .../vectors/fft256_published/rcfo004_case_031.json |     0
+ .../vectors/fft256_published/rcfo004_case_041.json |     0
+ .../vectors/fft256_published/rcfo004_case_051.json |     0
+ .../vectors/fft256_published/rcfo004_case_061.json |     0
+ .../vectors/fft256_published/rcfo004_case_071.json |     0
+ .../vectors/fft256_published/rcfo004_case_081.json |     0
+ .../sim/vectors/fft256_saturation.mem              |   Bin
+ .../sim/vectors/fft256_twiddle.mem                 |   Bin
+ .../sim/vectors/front2048_cases.json               |     0
+ .../sim/vectors/front2048_config.svh               |     0
+ .../sim/vectors/front2048_input.mem                |   Bin
+ .../sim/vectors/front2048_metadata.mem             |   Bin
+ .../sim/vectors/front2048_pilot.mem                |   Bin
+ .../sim/vectors/front2048_result.mem               |   Bin
+ .../sim/vectors/link010_cases.json                 |     0
+ .../sim/vectors/link010_config.svh                 |     0
+ .../sim/vectors/link010_error_input.mem            |   Bin
+ .../sim/vectors/link010_error_read.mem             |   Bin
+ .../sim/vectors/link010_error_result.mem           |   Bin
+ .../sim/vectors/link010_input.mem                  |   Bin
+ {T11_CFO => Sync_CFO}/sim/vectors/link010_read.mem |   Bin
+ .../sim/vectors/link010_result.mem                 |   Bin
+ .../sim/vectors/phase74_angle.mem                  |   Bin
+ .../sim/vectors/phase74_cases.json                 |     0
+ .../sim/vectors/phase74_center.mem                 |   Bin
+ .../sim/vectors/phase74_config.svh                 |     0
+ {T11_CFO => Sync_CFO}/sim/vectors/phase74_pred.mem |   Bin
+ .../phase74_published_manifest.json                |     0
+ .../phase74_published/rcfo003_case_001.json        |     0
+ .../phase74_published/rcfo003_case_002.json        |     0
+ .../phase74_published/rcfo003_case_003.json        |     0
+ .../phase74_published/rcfo003_case_004.json        |     0
+ .../phase74_published/rcfo003_case_005.json        |     0
+ .../phase74_published/rcfo003_case_006.json        |     0
+ .../phase74_published/rcfo003_case_007.json        |     0
+ .../phase74_published/rcfo003_case_008.json        |     0
+ .../phase74_published/rcfo003_case_009.json        |     0
+ .../phase74_published/rcfo004_case_001.json        |     0
+ .../phase74_published/rcfo004_case_003.json        |     0
+ .../phase74_published/rcfo004_case_011.json        |     0
+ .../phase74_published/rcfo004_case_021.json        |     0
+ .../phase74_published/rcfo004_case_031.json        |     0
+ .../phase74_published/rcfo004_case_041.json        |     0
+ .../phase74_published/rcfo004_case_051.json        |     0
+ .../phase74_published/rcfo004_case_061.json        |     0
+ .../phase74_published/rcfo004_case_071.json        |     0
+ .../phase74_published/rcfo004_case_081.json        |     0
+ .../sim/vectors/phase74_result.mem                 |   Bin
+ {T11_CFO => Sync_CFO}/sim/vectors/phase74_z.mem    |   Bin
+ .../sim/vectors/rot_case0_expected.mem             |   Bin
+ .../sim/vectors/rot_case0_input.mem                |   Bin
+ .../sim/vectors/rot_case0_sat.mem                  |   Bin
+ .../sim/vectors/rot_case1_expected.mem             |   Bin
+ .../sim/vectors/rot_case1_input.mem                |   Bin
+ .../sim/vectors/rot_case1_sat.mem                  |   Bin
+ .../sim/vectors/rot_case2_expected.mem             |   Bin
+ .../sim/vectors/rot_case2_input.mem                |   Bin
+ .../sim/vectors/rot_case2_sat.mem                  |   Bin
+ .../sim/vectors/rot_case3_expected.mem             |   Bin
+ .../sim/vectors/rot_case3_input.mem                |   Bin
+ .../sim/vectors/rot_case3_sat.mem                  |   Bin
+ .../sim/vectors/rotator_configs.svh                |     0
+ .../sim/vendor/link010r1}/xpm_cdc.sv               |     0
+ .../sim/vendor/link010r1/xpm_fifo.sv               |     0
+ .../sim/vendor/link010r1/xpm_fifo_assertions.diff  |     0
+ .../sim/vendor/link010r1}/xpm_memory.sv            |     0
+ {T11_CFO => Sync_CFO}/tools/backend74_reference.py |     0
+ .../tools/cfo_backend74_fix01_guard_v1.py          |     0
+ .../tools/cfo_backend74_guard_v1.py                |     0
+ .../tools/cfo_coordinate_guard_v1.py               |     0
+ .../tools/cfo_fft2048_guard_v1.py                  |     0
+ {T11_CFO => Sync_CFO}/tools/cfo_fft256_guard_v1.py |     0
+ ...t256_guard_v1_initial_20260914T152722549484Z.py |     0
+ .../tools/cfo_front2048_guard_v1.py                |     0
+ .../tools/cfo_link010_guard_v1.py                  |     0
+ .../tools/cfo_link010r1_compat1_guard.py           |     0
+ .../tools/cfo_link010r1_compat1_guard_v2_repair.py |     0
+ .../tools/cfo_link010r1_compat1_guard_v3_repair.py |     0
+ .../tools/cfo_link010r1_guard_v1.py                |     0
+ {T11_CFO => Sync_CFO}/tools/cfo_native_guard_v2.py |     0
+ {T11_CFO => Sync_CFO}/tools/cfo_native_guard_v3.py |     0
+ .../tools/cfo_phase74_fix01_guard_v1.py            |     0
+ .../tools/cfo_phase74_guard_v1.py                  |     0
+ .../tools/cfo_phase74_resume_v1.py                 |     0
+ .../tools/extract_fft256_published.py              |     0
+ .../tools/extract_frontdata007_v1.py               |     0
+ .../tools/extract_frontdata007_v2_repair.py        |     0
+ .../tools/extract_frontdata007_v3_repair.py        |     0
+ .../tools/extract_phase74_published.py             |     0
+ {T11_CFO => Sync_CFO}/tools/fft2048_reference.py   |     0
+ {T11_CFO => Sync_CFO}/tools/fft256_reference.py    |     0
+ .../tools/fix_link010_retirement_pre_freeze.py     |     0
+ .../tools/freeze_backend006_sources.py             |     0
+ .../tools/freeze_coordinate_vectors.py             |     0
+ .../tools/freeze_fft005_sources.py                 |     0
+ .../tools/freeze_fft008_sources.py                 |     0
+ .../tools/freeze_front009_sources.py               |     0
+ .../tools/freeze_link010_sources.py                |     0
+ .../tools/freeze_link010r1_sources.py              |     0
+ .../tools/freeze_phase74_vectors.py                |     0
+ .../tools/freeze_rotator_vectors.py                |     0
+ {T11_CFO => Sync_CFO}/tools/front2048_reference.py |     0
+ {T11_CFO => Sync_CFO}/tools/link010_admission.py   |     0
+ {T11_CFO => Sync_CFO}/tools/link010_vectors.py     |     0
+ .../tools/link010r1_compat1_admission_repair.py    |     0
+ .../tools/link010r1_compat1_admission_repair_v2.py |     0
+ .../tools/link010r1_compat1_admission_repair_v3.py |     0
+ {T11_CFO => Sync_CFO}/tools/phase74_reference.py   |     0
+ .../tools/prepare_link010_project.py               |     0
+ .../tools/review_front009_saved_evidence.py        |     0
+ {T11_CFO => Sync_CFO}/tools/review_frontdata007.py |     0
+ .../tools/review_link010_saved_evidence.py         |     0
+ {T11_CFO => Sync_CFO}/tools/review_phase004r1.py   |     0
+ {T11_CFO => Sync_CFO}/tools/verify_backend74.py    |     0
+ .../tools/verify_backend74_fix01.py                |     0
+ {T11_CFO => Sync_CFO}/tools/verify_coordinate.py   |     0
+ {T11_CFO => Sync_CFO}/tools/verify_fft2048.py      |     0
+ {T11_CFO => Sync_CFO}/tools/verify_fft256.py       |     0
+ {T11_CFO => Sync_CFO}/tools/verify_front2048.py    |     0
+ {T11_CFO => Sync_CFO}/tools/verify_link010.py      |     0
+ {T11_CFO => Sync_CFO}/tools/verify_link010r1.py    |     0
+ .../tools/verify_link010r1_binding.py              |     0
+ .../tools/verify_link010r1_compat1.py              |     0
+ .../tools/verify_link010r1_compat2.py              |     0
+ .../tools/verify_link010r1_models.py               |     0
+ .../tools/verify_link010r1_reset.py                |     0
+ {T11_CFO => Sync_CFO}/tools/verify_phase74.py      |     0
+ .../tools/verify_phase74_fix01.py                  |     0
+ {T11_CFO => Sync_CFO}/tools/verify_rotator.py      |     0
+ .../vivado/CFO_BACKEND74/CFO_BACKEND74.xpr         |     2 +-
+ .../vivado/CFO_COORD/CFO_COORD.xpr                 |     2 +-
+ .../vivado/CFO_FFT2048/CFO_FFT2048.xpr             |     2 +-
+ .../vivado/CFO_FFT256/CFO_FFT256.xpr               |     2 +-
+ .../vivado/CFO_FRONT2048/CFO_FRONT2048.xpr         |     2 +-
+ Sync_CFO/vivado/CFO_LINK010/CFO_LINK010.xpr        |   340 +
+ Sync_CFO/vivado/CFO_LINK010R1/CFO_LINK010R1.xpr    |   384 +
+ .../vivado/CFO_PHASE74/CFO_PHASE74.xpr             |     2 +-
+ {T11_CFO => Sync_CFO}/vivado/CFO_SYNC/CFO_SYNC.xpr |     2 +-
+ {T11_CFO => Sync_CFO}/vivado/backend74_fix01.tcl   |     0
+ {T11_CFO => Sync_CFO}/vivado/backend74_project.tcl |     0
+ {T11_CFO => Sync_CFO}/vivado/cancel_probe.tcl      |     0
+ .../vivado/configure_parallel_jobs.tcl             |     0
+ .../vivado/coordinate_project.tcl                  |     0
+ {T11_CFO => Sync_CFO}/vivado/create_project.tcl    |     0
+ {T11_CFO => Sync_CFO}/vivado/export_sources.tcl    |     0
+ {T11_CFO => Sync_CFO}/vivado/fft2048_project.tcl   |     0
+ {T11_CFO => Sync_CFO}/vivado/fft256_project.tcl    |     0
+ {T11_CFO => Sync_CFO}/vivado/front2048_project.tcl |     0
+ {T11_CFO => Sync_CFO}/vivado/guard_probe_v2.tcl    |     0
+ {T11_CFO => Sync_CFO}/vivado/link010_project.tcl   |     0
+ .../vivado/link010r1_compat1_project.tcl           |     0
+ .../vivado/link010r1_compat1_project_v2_repair.tcl |     0
+ {T11_CFO => Sync_CFO}/vivado/link010r1_project.tcl |     0
+ {T11_CFO => Sync_CFO}/vivado/phase74_fix01.tcl     |     0
+ {T11_CFO => Sync_CFO}/vivado/phase74_project.tcl   |     0
+ {T11_CFO => Sync_CFO}/vivado/run_rotator.tcl       |     0
+ {T11_CFO => Sync_CFO}/vivado/run_threads.tcl       |     0
+ Sync_CFO/wrapper/README_ZH.md                      |     3 +
+ Sync_SFO/README_ZH.md                              |    20 +
+ Sync_SFO/Sync_SFO.xpr                              |  1372 +
+ {constraints => Sync_SFO/constraints}/README_ZH.md |     0
+ .../reference_synth016/production_clocks.xdc       |     0
+ .../production_crossing_constraints.tcl            |     0
+ .../constraints}/t10_root_clocks.xdc               |     0
+ {docs => Sync_SFO/docs}/AGENT_GUIDE_ZH.md          |     0
+ {docs => Sync_SFO/docs}/LOCAL_GIT_ZH.md            |     0
+ .../docs}/MATLAB_REFERENCE_GUIDE_ZH.md             |     0
+ {docs => Sync_SFO/docs}/MIGRATION_ZH.md            |     0
+ {docs => Sync_SFO/docs}/PROJECT_SPEC_ZH.md         |     0
+ {docs => Sync_SFO/docs}/RTL_MIGRATION_NOTES_ZH.md  |     0
+ Sync_SFO/docs/SFO_SYNC_MODULE_GUI_ZH.md            |    53 +
+ {docs => Sync_SFO/docs}/TOOL_PERFORMANCE_ZH.md     |     0
+ {docs => Sync_SFO/docs}/VIVADO_GUI_GUIDE_ZH.md     |     0
+ .../provenance/CONSTRAINT_REFERENCE_MANIFEST.csv   |     0
+ .../docs}/provenance/MATLAB_COPY_MANIFEST.csv      |     0
+ .../docs}/provenance/MATLAB_RUNTIME_MANIFEST.csv   |     0
+ .../docs}/provenance/NATIVE_PROJECT_INPUTS.json    |     0
+ .../docs}/provenance/RTL_COPY_MANIFEST.csv         |     0
+ .../docs}/provenance/RTL_FINAL_MANIFEST.csv        |     0
+ Sync_SFO/docs/provenance/RUN03_APPROVED_INPUTS.csv |   145 +
+ .../GIT_REORGANIZATION_ZH.md                       |    11 +
+ .../REORGANIZATION_RESULT_ZH.md                    |    38 +
+ .../docs/reorganization_20260915/add_navigation.py |   104 +
+ .../additional_copy_plan.json                      |    18 +
+ .../additive_navigation_edits.json                 |    22 +
+ .../archive_verification.json                      | 23787 +++++++++++
+ .../docs/reorganization_20260915/copy_plan.json    |    54 +
+ .../reorganization_20260915/copy_verification.json | 23791 +++++++++++
+ .../docs/reorganization_20260915/create_entries.py |   101 +
+ .../docs/reorganization_20260915/files_before.json | 42296 +++++++++++++++++++
+ .../final_verification.json                        |  1075 +
+ .../reorganization_20260915/freeze_inventory.py    |    34 +
+ .../docs/reorganization_20260915/git_before.json   |    20 +
+ .../reorganization_20260915/git_staging_plan.json  |  4635 ++
+ .../reorganization_20260915/native_files_1.tsv     |   284 +
+ .../reorganization_20260915/native_files_10.tsv    |    13 +
+ .../reorganization_20260915/native_files_11.tsv    |    18 +
+ .../reorganization_20260915/native_files_12.tsv    |     5 +
+ .../reorganization_20260915/native_files_2.tsv     |    56 +
+ .../reorganization_20260915/native_files_3.tsv     |    22 +
+ .../reorganization_20260915/native_files_4.tsv     |     8 +
+ .../reorganization_20260915/native_files_5.tsv     |    12 +
+ .../reorganization_20260915/native_files_6.tsv     |    11 +
+ .../reorganization_20260915/native_files_7.tsv     |    14 +
+ .../reorganization_20260915/native_files_8.tsv     |    20 +
+ .../reorganization_20260915/native_files_9.tsv     |    26 +
+ .../docs/reorganization_20260915/native_open.jou   |    12 +
+ .../docs/reorganization_20260915/native_open.log   |   199 +
+ .../reorganization_20260915/native_open_check.tcl  |    39 +
+ .../reorganization_20260915/native_open_job.json   |    13 +
+ .../native_open_summary.tsv                        |    13 +
+ .../docs/reorganization_20260915/path_mapping.json |    67 +
+ .../stage_reviewed_changes.py                      |    47 +
+ .../static_entry_checks.json                       |  4229 ++
+ .../reorganization_20260915/switch_checkpoint.json |     9 +
+ .../reorganization_20260915/verify_after_switch.py |    37 +
+ .../verify_entries_before_switch.py                |    57 +
+ .../reorganization_20260915/write_result_notes.py  |    63 +
+ .../docs/reorganization_20260915/xpr_before.json   |  9604 +++++
+ .../reorganization_20260915/xpr_path_changes.json  |   234 +
+ .../docs}/verification/FINAL_STATIC_CHECKS.json    |     0
+ .../docs}/verification/MIGRATION_CHECKS_ZH.md      |     0
+ .../docs}/verification/NATIVE_ADMISSION.json       |     0
+ .../docs}/verification/STATIC_COPY_CHECKS.json     |     0
+ .../native_project/ASTRA_FINAL_REVIEW.json         |     0
+ .../native_project/CONFIG_BASELINE_CORRECTION.json |     0
+ .../native_project/DISPATCH_REVIEW.json            |     0
+ .../docs}/verification/native_project/JOB.json     |     0
+ .../docs}/verification/native_project/README_ZH.md |     0
+ .../verification/native_project/REPORT_CLOCK.json  |     0
+ .../docs}/verification/native_project/REPORT_ZH.md |     0
+ .../verification/native_project/STATIC_REVIEW.json |     0
+ .../astra_review/IDENTITY_REVIEW_DRAFT.json        |     0
+ .../astra_review/RAW_MODEL_VALUE_DIFFERENCES.json  |     0
+ .../astra_review/TCL_ACTUAL_REPAIRED_OUTPUT.json   |     0
+ .../astra_review/TCL_ACTUAL_REPAIR_CHECK.json      |     0
+ .../astra_review/native_evidence/MANIFEST.json     |     0
+ .../native_evidence/TCL_REPAIR_RECORD.json         |     0
+ .../astra_review/native_evidence/config_after.csv  |     0
+ .../astra_review/native_evidence/config_before.csv |     0
+ .../native_evidence/config_reopened.csv            |     0
+ .../astra_review/native_evidence/files_after.csv   |     0
+ .../native_evidence/files_reopened.csv             |     0
+ .../astra_review/native_evidence/ip_after.csv      |     0
+ .../astra_review/native_evidence/ip_reopened.csv   |     0
+ .../astra_review/native_evidence/launch.json       |     0
+ .../native_evidence/luna_review_summary.json       |     0
+ .../native_evidence/native_complete.json           |     0
+ .../native_evidence/native_complete_repaired.json  |     0
+ .../native_evidence/native_retarget.log            |     0
+ .../astra_review/native_evidence/owned_exit.json   |     0
+ .../astra_review/native_evidence/runs_after.csv    |     0
+ .../astra_review/native_evidence/runs_reopened.csv |     0
+ .../astra_review/native_evidence/vivado.jou        |     0
+ .../astra_review/native_evidence/vivado.log        |     0
+ .../native_project/astra_saved_identity_review.py  |     0
+ .../native_project/baseline/IMMUTABLE_INPUTS.json  |     0
+ .../native_project/baseline/IP_BASELINE.json       |     0
+ .../baseline/original_create_project.tcl           |     0
+ .../baseline/original_expected_user_config.json    |     0
+ .../native_project/baseline/original_ip_xci.zip    |   Bin
+ .../baseline/original_native_inputs.json           |     0
+ .../verification/native_project/freeze_review.py   |     0
+ .../native_project/native_project_check.tcl        |     0
+ .../native_project/prepare_native_review.py        |     0
+ .../native_project/review_native_project.py        |     0
+ .../native_project/run_native_project.ps1          |     0
+ .../verification/performance/WORKFLOW_REVIEW_ZH.md |     0
+ .../performance/application_memory_snapshot.json   |     0
+ .../performance/historical_thread_audit.json       |     0
+ .../performance/native_probe_evidence.zip          |   Bin
+ .../performance/native_probe_summary.json          |     0
+ .../performance/tcl_interface_checks.json          |     0
+ .../docs}/verification/prefix_checker_tests.json   |     0
+ .../verification/source_membership_tests.json      |     0
+ {ip => Sync_SFO/ip}/README_ZH.md                   |     0
+ .../ip}/config/farrow_add_18/farrow_add_18.xci     |     0
+ .../ip}/config/farrow_add_28/farrow_add_28.xci     |     0
+ .../ip}/config/farrow_add_32/farrow_add_32.xci     |     0
+ .../ip}/config/farrow_mul_h16/farrow_mul_h16.xci   |     0
+ .../ip}/config/farrow_mul_t16/farrow_mul_t16.xci   |     0
+ .../t03_xfft_16384_aux/t03_xfft_16384_aux.xci      |     0
+ .../t03_xfft_2048_main/t03_xfft_2048_main.xci      |     0
+ .../ip}/config/t04_cmpy_17x16/t04_cmpy_17x16.xci   |     0
+ .../ip}/config/t04_div_u63_u47/t04_div_u63_u47.xci |     0
+ .../t05_cmpy_rotate_18x18.xci                      |     0
+ .../t05_mult_cfo_s19_const40_full59.xci            |     0
+ .../t06_cordic_translate48_parallel.xci            |     0
+ .../t06_dds_phase_s32_sincos18.xci                 |     0
+ .../t06_fs_mult_s29_s11/t06_fs_mult_s29_s11.xci    |     0
+ .../t06_fs_mult_s29_s48/t06_fs_mult_s29_s48.xci    |     0
+ .../t06_fs_mult_u18_s11/t06_fs_mult_u18_s11.xci    |     0
+ .../t06_fs_mult_u18_s48/t06_fs_mult_u18_s48.xci    |     0
+ .../t06_observation_engine_square.xci              |     0
+ .../t06_observation_engine_weight_product.xci      |     0
+ .../t06_pair_max_tracker_2lane_cross.xci           |     0
+ .../t06_rt_mult_s41_s38/t06_rt_mult_s41_s38.xci    |     0
+ .../t06_rt_mult_s41_s41/t06_rt_mult_s41_s41.xci    |     0
+ .../t06_rt_mult_s41_u38/t06_rt_mult_s41_u38.xci    |     0
+ .../t06_rt_mult_u30_s42/t06_rt_mult_u30_s42.xci    |     0
+ .../t06_rt_mult_u30_u43/t06_rt_mult_u30_u43.xci    |     0
+ .../t06_rt_mult_u30_u48/t06_rt_mult_u30_u48.xci    |     0
+ .../t06_rt_mult_u48_u20/t06_rt_mult_u48_u20.xci    |     0
+ .../t06_sg_div_u53_u37/t06_sg_div_u53_u37.xci      |     0
+ .../t06_sg_mult_u37_u16/t06_sg_mult_u37_u16.xci    |     0
+ .../t06_wp_mult_u64_u33/t06_wp_mult_u64_u33.xci    |     0
+ .../ip}/config/t07_g3_down15/t07_g3_down15.xci     |     0
+ .../ip}/config/t07_g3_down47/t07_g3_down47.xci     |     0
+ .../ip}/config/t07_g3_up15/t07_g3_up15.xci         |     0
+ .../ip}/config/t07_g3_up47/t07_g3_up47.xci         |     0
+ {ip => Sync_SFO/ip}/expected_user_config.json      |     0
+ {ip => Sync_SFO/ip}/expected_user_config.tcl       |     0
+ {ip => Sync_SFO/ip}/ip_names.txt                   |     0
+ {matlab => Sync_SFO/matlab}/README_ZH.md           |     0
+ .../matlab}/configure_compute_threads.m            |     0
+ .../matlab}/data/full023_case6001/first_nodes.mat  |   Bin
+ .../full023_case6001/first_resample_complete.json  |     0
+ .../data/full023_case6001/first_resampled.mat      |   Bin
+ .../full023_fixture_provenance.json                |     0
+ .../data/full023_case6001/input_identity.json      |     0
+ .../matlab}/data/full023_case6001/raw_input.mat    |   Bin
+ .../full023_case6001/raw_input_checkpoint.json     |     0
+ .../matlab}/data/full023_case6001/second_z2.mat    |   Bin
+ .../data/full023_case6001/second_z2_complete.json  |     0
+ .../data/full023_case6001/source_descriptor.json   |     0
+ .../data/full023_case6001/source_descriptor.mat    |   Bin
+ .../full023_case6001/t09_fixed007_case006.json     |     0
+ .../matlab}/inspect_full023_reference.m            |     0
+ .../matlab}/provenance/CLOSED002_REVIEW.json       |     0
+ .../provenance/FIXED007_ORIGINAL_MANIFEST.json     |     0
+ .../matlab}/provenance/FIXED007_REVIEW.json        |     0
+ .../matlab}/provenance/FULL023_ORIGINAL_JOB.json   |     0
+ .../provenance/FULL023_ORIGINAL_PROVENANCE.json    |     0
+ {matlab => Sync_SFO/matlab}/setup_t10_reference.m  |     0
+ .../source_snapshots/CLOSED002_rev02/PLAN_ZH.md    |     0
+ .../source_snapshots/CLOSED002_rev02/REPAIR_ZH.md  |     0
+ .../T02_frame_design/t02_production_artifacts.mat  |   Bin
+ .../common/bistatic_active_indices.m               |     0
+ .../common/bistatic_apply_channel.m                |     0
+ .../common/bistatic_apply_cp_ofdm_channel.m        |     0
+ .../common/bistatic_apply_sample_domain_channel.m  |     0
+ .../common/bistatic_artifact_content_identity.m    |     0
+ .../common/bistatic_channel_profile.m              |     0
+ .../common/bistatic_compare_samples.m              |     0
+ .../bistatic_cp_ofdm_interpft8_l128_hybrid_query.m |     0
+ .../common/bistatic_error_statistics.m             |     0
+ .../common/bistatic_export_vector.m                |     0
+ .../common/bistatic_fixture_artifacts.m            |     0
+ .../common/bistatic_generate_continuous_waveform.m |     0
+ .../common/bistatic_generate_frame.m               |     0
+ .../common/bistatic_generate_rtl_package.m         |     0
+ .../CLOSED002_rev02/common/bistatic_gray_qpsk.m    |     0
+ .../common/bistatic_import_vector.m                |     0
+ .../CLOSED002_rev02/common/bistatic_load_config.m  |     0
+ .../common/bistatic_make_cp_ofdm_descriptor.m      |     0
+ .../common/bistatic_production_artifacts.m         |     0
+ .../common/bistatic_queue_summary.m                |     0
+ .../CLOSED002_rev02/common/bistatic_sha256.m       |     0
+ .../common/bistatic_validate_config.m              |     0
+ .../common/bistatic_validate_matrix.m              |     0
+ .../common/bistatic_waveform_numeric_sha256.m      |     0
+ .../CLOSED002_rev02/config/frame_config.json       |     0
+ .../evidence/MATH001_INDEPENDENT_REVIEW.json       |     0
+ .../evidence/T06_C01_C14_SUMMARY.csv               |     0
+ .../CLOSED002_rev02/evidence/T06_C05_DEFERRED.md   |     0
+ .../evidence/T06_ORIGINAL_GENERATOR.m              |     0
+ .../evidence/T06_THEORETICAL_DOMAIN.md             |     0
+ .../evidence/T08_FINAL_ACCEPTANCE.json             |     0
+ .../evidence/T08_INTERFACE_rev02.md                |     0
+ .../evidence/prior_CLOSED002_failure.json          |     0
+ .../evidence/prior_CLOSED002_supervisor_exit.json  |     0
+ .../prior_CLOSED002_upstream_admission.json        |     0
+ .../CLOSED002_rev02/helpers/t02_round_even.m       |     0
+ .../helpers/t04_quantize_receiver_i16.m            |     0
+ .../helpers/t07_fixed_arithmetic_window.m          |     0
+ .../helpers/t07_lagrange_coefficients.m            |     0
+ .../CLOSED002_rev02/helpers/t07_rne_quantize.m     |     0
+ .../source_snapshots/CLOSED002_rev02/manifest.json |     0
+ .../CLOSED002_rev02/private_job_supervisor_v2.py   |     0
+ .../CLOSED002_rev02/run_t09_closed002_rev02.ps1    |     0
+ .../CLOSED002_rev02/t09_closed002_rev02.m          |     0
+ .../CLOSED002_rev02/t09_dtp_float002.m             |     0
+ .../upstream/C01/case_behavioral_done.txt          |     0
+ .../CLOSED002_rev02/upstream/C01/context.json      |     0
+ .../upstream/C01/fixture_summary.json              |     0
+ .../CLOSED002_rev02/upstream/C01/raw_window.mat    |   Bin
+ .../CLOSED002_rev02/upstream/C01/service_raw.csv   |     0
+ .../upstream/C01/service_result.csv                |     0
+ .../upstream/C02/case_behavioral_done.txt          |     0
+ .../CLOSED002_rev02/upstream/C02/context.json      |     0
+ .../upstream/C02/fixture_summary.json              |     0
+ .../CLOSED002_rev02/upstream/C02/raw_window.mat    |   Bin
+ .../CLOSED002_rev02/upstream/C02/service_raw.csv   |     0
+ .../upstream/C02/service_result.csv                |     0
+ .../upstream/C03/case_behavioral_done.txt          |     0
+ .../CLOSED002_rev02/upstream/C03/context.json      |     0
+ .../upstream/C03/fixture_summary.json              |     0
+ .../CLOSED002_rev02/upstream/C03/raw_window.mat    |   Bin
+ .../CLOSED002_rev02/upstream/C03/service_raw.csv   |     0
+ .../upstream/C03/service_result.csv                |     0
+ .../upstream/C04/case_behavioral_done.txt          |     0
+ .../CLOSED002_rev02/upstream/C04/context.json      |     0
+ .../upstream/C04/service_result.csv                |     0
+ .../source_snapshots/T09_FIXED007/PLAN_ZH.md       |     0
+ .../T09_FIXED007/controls/aux_frame_0.npz          |   Bin
+ .../T09_FIXED007/controls/aux_frame_1.npz          |   Bin
+ .../T09_FIXED007/controls/aux_frame_2.npz          |   Bin
+ .../T09_FIXED007/controls/aux_frame_3.npz          |   Bin
+ .../T09_FIXED007/controls/aux_frame_4.npz          |   Bin
+ .../T09_FIXED007/controls/aux_frame_5.npz          |   Bin
+ .../T09_FIXED007/controls/aux_frame_6.npz          |   Bin
+ .../T09_FIXED007/controls/aux_frame_7.npz          |   Bin
+ .../T09_FIXED007/controls/controls.json            |     0
+ .../T09_FIXED007/controls/main_job_0.npz           |   Bin
+ .../T09_FIXED007/controls/main_job_355.npz         |   Bin
+ .../T09_FIXED007/controls/main_job_7.npz           |   Bin
+ .../T09_FIXED007/controls/main_job_711.npz         |   Bin
+ .../evidence/STATS006_INDEPENDENT_REVIEW.json      |     0
+ .../T09_FIXED007/evidence/STATS006_REVIEW_ZH.md    |     0
+ .../evidence/T06_ARTIFACT_MANIFEST.csv             |     0
+ .../evidence/T06_OFFICIAL_FFT_COMPLETION.json      |     0
+ .../evidence/accepted_wrapper_probe_exit.json      |     0
+ .../aux_T03_AUX_XFFT_MATLAB_RTL_COMPARE_PASS.txt   |     0
+ .../evidence/aux_automatic_final_gate.txt          |     0
+ .../aux_auxiliary_fft_matlab_rtl_metrics.csv       |     0
+ .../evidence/aux_auxiliary_fft_vector_manifest.csv |     0
+ .../evidence/build_t09_fixed007_package.py         |     0
+ .../T09_FIXED007/evidence/main_fft.xci             |     0
+ .../T09_FIXED007/evidence/review_t09_stats006.py   |     0
+ .../T09_FIXED007/inputs/frame_6001_nodes.mat       |   Bin
+ .../T09_FIXED007/inputs/frame_6001_result.json     |     0
+ .../T09_FIXED007/inputs/frame_6006_nodes.mat       |   Bin
+ .../T09_FIXED007/inputs/frame_6006_result.json     |     0
+ .../T09_FIXED007/inputs/frame_6010_nodes.mat       |   Bin
+ .../T09_FIXED007/inputs/frame_6010_result.json     |     0
+ .../T09_FIXED007/inputs/frame_6011_nodes.mat       |   Bin
+ .../T09_FIXED007/inputs/frame_6011_result.json     |     0
+ .../T09_FIXED007/inputs/pilot_contract.mat         |   Bin
+ .../T09_FIXED007/inputs/stats_041_nodes.mat        |   Bin
+ .../T09_FIXED007/inputs/stats_041_result.json      |     0
+ .../T09_FIXED007/inputs/stats_091_nodes.mat        |   Bin
+ .../T09_FIXED007/inputs/stats_091_result.json      |     0
+ .../T09_FIXED007/inputs/stats_271_nodes.mat        |   Bin
+ .../T09_FIXED007/inputs/stats_271_result.json      |     0
+ .../T09_FIXED007/inputs/stats_291_nodes.mat        |   Bin
+ .../T09_FIXED007/inputs/stats_291_result.json      |     0
+ .../source_snapshots/T09_FIXED007/manifest.json    |     0
+ .../T09_FIXED007/private_job_supervisor_t09_v3.py  |     0
+ .../T09_FIXED007/run_t09_fixed007.ps1              |     0
+ .../source_snapshots/T09_FIXED007/study.json       |     0
+ .../source_snapshots/T09_FIXED007/t09_fixed007.py  |     0
+ .../T09_FIXED007/t09_xfft_cmodel007.py             |     0
+ .../source_snapshots/T09_FIXED007/vendor/gmp.h     |     0
+ .../vendor/libIp_xfft_v9_1_bitacc_cmodel.dll       |   Bin
+ .../vendor/libIp_xfft_v9_1_bitacc_cmodel.lib       |   Bin
+ .../T09_FIXED007/vendor/libgmp.dll                 |   Bin
+ .../T09_FIXED007/vendor/libgmp.lib                 |   Bin
+ .../T09_FIXED007/vendor/make_xfft_v9_1_mex.m       |     0
+ .../T09_FIXED007/vendor/run_bitacc_cmodel.c        |     0
+ .../T09_FIXED007/vendor/run_xfft_v9_1_mex.m        |     0
+ .../T09_FIXED007/vendor/xfft_v9_1_bitacc_cmodel.h  |     0
+ .../T09_FIXED007/vendor/xfft_v9_1_bitacc_mex.cpp   |     0
+ .../rtl}/common/bistatic_stream_pkg.sv             |     0
+ .../rtl}/common/t03_main_fft_service.sv            |     0
+ .../rtl}/common/t03_uram_frame_bank.sv             |     0
+ .../rtl}/common/t05_local_capture_buffer.sv        |     0
+ .../rtl}/common/t05_phase_increment_controller.sv  |     0
+ .../rtl}/common/t05_vendor_multiplier_adapters.sv  |     0
+ .../include/t06_observation_engine_ip_config.svh   |     0
+ .../t06_pair_max_tracker_2lane_ip_config.svh       |     0
+ .../rtl}/include/t06_shared_gain_ip_config.svh     |     0
+ {rtl => Sync_SFO/rtl}/sources.f                    |     0
+ .../rtl}/t06/t06_cfo_derotate_s16_4lane.sv         |     0
+ {rtl => Sync_SFO/rtl}/t06/t06_dds_phase_4lane.sv   |     0
+ .../rtl}/t06/t06_derotate_wide_4lane.sv            |     0
+ .../rtl}/t06/t06_fft_pair_extractor.sv             |     0
+ .../rtl}/t06/t06_fft_pair_extractor_fifo.sv        |     0
+ .../rtl}/t06/t06_fft_pair_extractor_memory.sv      |     0
+ {rtl => Sync_SFO/rtl}/t06/t06_fft_swls_backend.sv  |     0
+ .../rtl}/t06/t06_five_sum_accumulator.sv           |     0
+ .../rtl}/t06/t06_frame_context_join.sv             |     0
+ .../rtl}/t06/t06_initial_sfo_service.sv            |     0
+ .../rtl}/t06/t06_initial_sfo_standalone.sv         |     0
+ .../rtl}/t06/t06_main_fft_exclusive_owner.sv       |     0
+ .../rtl}/t06/t06_observation_engine.sv             |     0
+ .../rtl}/t06/t06_observation_engine_2lane.sv       |     0
+ .../rtl}/t06/t06_observation_engine_fifo.sv        |     0
+ {rtl => Sync_SFO/rtl}/t06/t06_observation_store.sv |     0
+ .../rtl}/t06/t06_observation_store_bank.sv         |     0
+ .../rtl}/t06/t06_pair_max_tracker_2lane.sv         |     0
+ {rtl => Sync_SFO/rtl}/t06/t06_pair_phasor_bfp.sv   |     0
+ .../rtl}/t06/t06_ps3_ps10_job_sequencer.sv         |     0
+ {rtl => Sync_SFO/rtl}/t06/t06_raw_reader_4lane.sv  |     0
+ .../rtl}/t06/t06_raw_reader_local_capture.sv       |     0
+ .../rtl}/t06/t06_raw_to_fft_frontend.sv            |     0
+ {rtl => Sync_SFO/rtl}/t06/t06_regression_tail.sv   |     0
+ .../rtl}/t06/t06_shared_gain_s16_4lane.sv          |     0
+ .../rtl}/t06/t06_shared_gain_s16_lane.sv           |     0
+ .../rtl}/t06/t06_swls_weighted_backend.sv          |     0
+ .../rtl}/t06/t06_unsigned_divider_service.sv       |     0
+ .../rtl}/t06/t06_unsigned_divider_service_fifo.sv  |     0
+ {rtl => Sync_SFO/rtl}/t06/t06_weight_pack.sv       |     0
+ {rtl => Sync_SFO/rtl}/t07/farrow_microbench.sv     |     0
+ {rtl => Sync_SFO/rtl}/t07/g3_down15_top.sv         |     0
+ {rtl => Sync_SFO/rtl}/t07/g3_down47_top.sv         |     0
+ .../rtl}/t07/g3_farrow_guard_stream.sv             |     0
+ {rtl => Sync_SFO/rtl}/t07/g3_up15_top.sv           |     0
+ {rtl => Sync_SFO/rtl}/t07/g3_up47_top.sv           |     0
+ {rtl => Sync_SFO/rtl}/t07/t07_guard_frame_core.sv  |     0
+ .../rtl}/t07/t07_nominal_pack4_rev02.sv            |     0
+ {rtl => Sync_SFO/rtl}/t07/t07_sync_fifo.sv         |     0
+ {rtl => Sync_SFO/rtl}/t08/t08_descriptor.sv        |     0
+ .../rtl}/t08/t08_first_sfo_resampler.sv            |     0
+ {rtl => Sync_SFO/rtl}/t08/t08_frame_engine.sv      |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_aux_ifft_service4.sv |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_div_u80_u49_rne.sv   |     0
+ .../rtl}/t09/t09_dtp_frame_backend4.sv             |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_fft_grid_stage4.sv   |     0
+ .../rtl}/t09/t09_grid_packet_queue2.sv             |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_main_fft_service4.sv |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_main_fft_window4.sv  |     0
+ .../rtl}/t09/t09_nominal_window_reader4.sv         |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_peak_interpolate.sv  |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_peak_triplet4.sv     |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_pilot_front2.sv      |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_pilot_grid4.sv       |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_pilot_rotate2.sv     |     0
+ .../rtl}/t09/t09_pilot_select_phase4.sv            |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_power4.sv            |     0
+ .../rtl}/t09/t09_residual_sfo_pipeline4.sv         |     0
+ {rtl => Sync_SFO/rtl}/t09/t09_sfo_ls74.sv          |     0
+ {rtl => Sync_SFO/rtl}/t10/t10_cdc_fifo.sv          |     0
+ {rtl => Sync_SFO/rtl}/t10/t10_domain_reset.sv      |     0
+ {rtl => Sync_SFO/rtl}/t10/t10_output_buffer.sv     |     0
+ {rtl => Sync_SFO/rtl}/t10/t10_r1_bank.sv           |     0
+ {rtl => Sync_SFO/rtl}/t10/t10_raw_ring.sv          |     0
+ {rtl => Sync_SFO/rtl}/t10/t10_second_descriptor.sv |     0
+ .../rtl}/t10/t10_second_sfo_resampler.sv           |     0
+ {rtl => Sync_SFO/rtl}/t10/t10_two_pass_system.sv   |     0
+ .../rtl}/t10/t10_two_pass_transport.sv             |     0
+ {rtl => Sync_SFO/rtl}/vendor/xpm/README_ZH.md      |     0
+ Sync_SFO/rtl/vendor/xpm/xpm_cdc.sv                 |  1491 +
+ Sync_SFO/rtl/vendor/xpm/xpm_fifo.sv                |  5082 +++
+ Sync_SFO/rtl/vendor/xpm/xpm_memory.sv              |  9090 ++++
+ {sim => Sync_SFO/sim}/data/delay.mem               |   Bin
+ {sim => Sync_SFO/sim}/data/delta.mem               |   Bin
+ {sim => Sync_SFO/sim}/data/provenance.json         |     0
+ {sim => Sync_SFO/sim}/data/r1.mem                  |   Bin
+ {sim => Sync_SFO/sim}/data/r2.mem                  |   Bin
+ {sim => Sync_SFO/sim}/data/raw.mem                 |   Bin
+ {sim => Sync_SFO/sim}/data/t09_pilot_phase.mem     |   Bin
+ .../sim}/tb/t10_full023_fifo_observer.sv           |     0
+ {sim => Sync_SFO/sim}/tb/t10_full023_tb.sv         |     0
+ {tools => Sync_SFO/tools}/analysis/README_ZH.md    |     0
+ {tools => Sync_SFO/tools}/analysis/check_prefix.py |     0
+ .../analysis/evidence/expected_fifo_bindings.json  |     0
+ .../analysis/evidence/t09_fixed007_case006.json    |     0
+ .../tools}/analysis/migration_diff.patch           |     0
+ .../tools}/analysis/report_evm_gui.py              |     0
+ {tools => Sync_SFO/tools}/analysis/validate_gui.py |     0
+ .../tools}/vivado/configure_parallel_jobs.tcl      |     0
+ .../tools}/vivado/create_project.tcl               |     0
+ Sync_SFO/tools/vivado/open_sync_sfo.tcl            |     7 +
+ {tools => Sync_SFO/tools}/vivado/run_threads.tcl   |     0
+ {tools => Sync_SFO/tools}/vivado/setup_waves.tcl   |     0
+ .../tools}/vivado/start_simulation_0ns.tcl         |     0
+ {vivado => Sync_SFO/vivado}/T10_SFO/T10_SFO.xpr    |     0
+ Sync_SFO/wrapper/interface_contract.json           |  1662 +
+ Sync_SFO/wrapper/ports.csv                         |   103 +
+ Sync_SFO/wrapper/t10_sfo_manual_wrapper.vhd        |   261 +
+ 967 files changed, 131267 insertions(+), 18 deletions(-)
