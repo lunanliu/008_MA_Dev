@@ -1,0 +1,43 @@
+{
+  "status": "BYTE_IDENTICAL_TO_PUBLISHED_SYNC_SFO_HEADERS",
+  "source_project": "D:\\008_MA_Dev\\Sync_SFO\\Sync_SFO.xpr",
+  "source_project_sha256": "647e6b30d931c22d4be8d9eb50456dd95ababf5167d9208ccd0760b481357189",
+  "saved_source_project_sha256": "647e6b30d931c22d4be8d9eb50456dd95ababf5167d9208ccd0760b481357189",
+  "published_manifest": "D:\\008_MA_Dev\\Sync_SFO\\docs\\functional_review_20260915\\current_input_manifest.csv",
+  "published_manifest_sha256": "107b78d5bf50433ba297fa3cb743ec560fe4581d0ec46a364f7883986c73c72c",
+  "files": [
+    {
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\include\\initial_pair_max_tracker_ip_config.svh",
+      "destination": "rtl/include/initial_pair_max_tracker_ip_config.svh",
+      "bytes": 45,
+      "sha256": "ab1639082fb011e05f380c40b911fa5423a756c0019f39d01e4af97a8e146cc4",
+      "published_manifest_row": {
+        "destination_relative": "rtl/include/initial_pair_max_tracker_ip_config.svh",
+        "destination_sha256": "AB1639082FB011E05F380C40B911FA5423A756C0019F39D01E4AF97A8E146CC4",
+        "bytes": "45"
+      }
+    },
+    {
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\include\\initial_observation_ip_config.svh",
+      "destination": "rtl/include/initial_observation_ip_config.svh",
+      "bytes": 82,
+      "sha256": "c90433e03094775b3abe8d35c0d22c8c3a496469f03952a3bccceed13705c39e",
+      "published_manifest_row": {
+        "destination_relative": "rtl/include/initial_observation_ip_config.svh",
+        "destination_sha256": "C90433E03094775B3ABE8D35C0D22C8C3A496469F03952A3BCCCEED13705C39E",
+        "bytes": "82"
+      }
+    },
+    {
+      "source": "D:\\008_MA_Dev\\Sync_SFO\\rtl\\include\\initial_shared_gain_ip_config.svh",
+      "destination": "rtl/include/initial_shared_gain_ip_config.svh",
+      "bytes": 243,
+      "sha256": "2ae11d6f814c126495adffd675153a5a36d8bc6ee8dbf64dc3d817b66063bd54",
+      "published_manifest_row": {
+        "destination_relative": "rtl/include/initial_shared_gain_ip_config.svh",
+        "destination_sha256": "2AE11D6F814C126495ADFFD675153A5A36D8BC6EE8DBF64DC3D817B66063BD54",
+        "bytes": "243"
+      }
+    }
+  ]
+}

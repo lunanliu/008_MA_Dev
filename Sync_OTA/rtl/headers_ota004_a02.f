@@ -1,0 +1,3 @@
+rtl/include/initial_pair_max_tracker_ip_config.svh
+rtl/include/initial_observation_ip_config.svh
+rtl/include/initial_shared_gain_ip_config.svh

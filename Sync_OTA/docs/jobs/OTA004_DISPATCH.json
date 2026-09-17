@@ -1,7 +1,7 @@
 {
   "job": "OTA004",
   "revision": "A01",
-  "state": "FROZEN_AWAITING_CONCRETE_MANAGER_SLOT",
+  "state": "HOLD_MISSING_INCLUDE_DEPENDENCIES_SUPERSEDED_BY_A02",
   "manifest": "docs/jobs/OTA004_source_lock.json",
   "manifest_sha256": "ea6b157f15b502ce72b8f7ba655b2c1c5a818153cb856cd761c29131936de6f2",
   "stages": [
@@ -11,5 +11,11 @@
   ],
   "native_started": false,
   "old_grants_reusable": false,
-  "created_utc": "2026-09-17T00:15:40.181610+00:00"
+  "created_utc": "2026-09-17T02:15:40.18161+02:00",
+  "commit": "32b3858dc221292e77176ab09673404653dc1423",
+  "dispatched_utc": "2026-09-17T00:22:22.6712452+00:00",
+  "manager_thread_id": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "luna_thread_id": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "superseded_by": "docs/jobs/OTA004_A02_DISPATCH.json",
+  "hold_receipt": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A01_ADMISSION_HOLD_20260917.json"
 }

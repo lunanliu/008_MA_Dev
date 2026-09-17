@@ -17,4 +17,4 @@
 
 - [OTA003限定接收](reports/OTA003/ASTRA_REVIEW_ZH.md)：三项专项通过，资源已归还。
 - [独立VHDL Wrapper](wrapper/sync_ota_wrapper.vhd)与[完整端口合同](docs/PORTS_AND_RECORDS_ZH.md)：75个核心端口/111个Wrapper端口，等待原生语法核验。
-- [OTA004冻结包](docs/jobs/OTA004_ZH.md)：完整真实工程/短冒烟/一次核心综合，待新具体资源授权。
+- [OTA004/A02冻结包](docs/jobs/OTA004_A02_ZH.md)：补齐三份已发布SFO头文件及工程依赖审计，完整真实工程/短冒烟/一次核心综合仍待新具体资源授权。A01缺依赖而未准入、未启动，原冻结包保留。
