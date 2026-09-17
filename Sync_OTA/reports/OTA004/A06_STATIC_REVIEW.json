@@ -1,0 +1,25 @@
+{
+  "status": "A06_STATIC_REVIEW_PASS_NATIVE_NOT_RUN",
+  "reviewed_utc": "2026-09-17T03:30:27.184186+00:00",
+  "rtl_and_tb_verible": "PASS",
+  "python_ast": "PASS",
+  "powershell_ast": "PASS",
+  "tcl_structure": "PASS",
+  "port_interface": "75_CORE_111_WRAPPER_UNCHANGED",
+  "production_rtl_files": 128,
+  "unique_module_package_definitions": 136,
+  "static_dependencies": {
+    "status": "OTA004_A06_STATIC_DEPENDENCIES_PASS",
+    "locked_files": 285,
+    "scanned_files": 138,
+    "headers": 3,
+    "byte_preserved_ip_boundaries": 45
+  },
+  "old_A05_critical_warnings_rejected_by_strict_synth_checker": true,
+  "old_A05_files_unchanged": 216,
+  "native_A06": "NOT_RUN",
+  "monitor_cancellation_runtime_test": "NOT_RUN",
+  "absolute_budget": "REQUIRES_MANAGER_EXPLICIT_RESOLUTION_NO_AUTOMATIC_EXTENSION",
+  "monitor_function_fixture": "reports/OTA004/A06_MONITOR_FUNCTION_REVIEW.json",
+  "fixture_scope": "Synthetic process records only: root exit, orphan, PID reuse, invalid parent birth ordering; no real process start/stop"
+}

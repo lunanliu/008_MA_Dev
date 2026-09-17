@@ -1,0 +1,45 @@
+--- rtl/cfo/ota_cfo_chain_a02.sv
++++ rtl/cfo/ota_cfo_chain_a06.sv
+@@ -1,5 +1,6 @@
+ `timescale 1ns/1ps
+-// A02: preserve failed backend result and export existing FIFO diagnostics.
++// A06: register the local cancellation decode before all cross-domain resets.
++// A02 backend-failure result and FIFO diagnostics are retained.
+ // Complete offline CFO chain. Memory is a transactional NI-owned external region.
+ // All ports except the FFT service clock/reset operate at clk150.
+ module ota_cfo_chain (
+@@ -27,10 +28,15 @@
+   WINDOW_REQUEST=6,WINDOW_STREAM=7,ESTIMATE=8,RESIDUAL_COORD=9,RESIDUAL_CFG=10,
+   FINAL_REQUEST=11,FINAL_STREAM=12,FINAL_DRAIN=13,RELEASE=14,COMPLETE=15,FAIL=16,CANCEL_DRAIN=17;
+  wire rst150,rst500;
++ logic compute_cancel150;
++ always_ff @(posedge clk150)begin
++  if(rst150)compute_cancel150<=1'b0;
++  else compute_cancel150<=cancel150||(stage==CANCEL_DRAIN);
++ end
+  xpm_cdc_async_rst #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.RST_ACTIVE_HIGH(1))
+   reset150(.src_arst(reset_request),.dest_clk(clk150),.dest_arst(rst150));
+  xpm_cdc_async_rst #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.RST_ACTIVE_HIGH(1))
+-  reset500(.src_arst(reset_request||cancel150),.dest_clk(clk500),.dest_arst(rst500));
++  reset500(.src_arst(reset_request||compute_cancel150),.dest_clk(clk500),.dest_arst(rst500));
+  logic [31:0] frame_id,generation,step1,step2;
+  logic signed [53:0] origin;
+  logic signed [31:0] coarse_frequency,residual_frequency;
+@@ -98,7 +104,7 @@
+  wire [134:0] input_packet={frame_id,generation,window_number,memory_index[8:0],lane,
+                           (memory_last&&lane==3),{{4{sample_i[15]}},sample_i,6'd0},{{4{sample_q[15]}},sample_q,6'd0}};
+  ota_async_fifo #(.WIDTH(135),.DEPTH(32)) window_samples(
+-  .wr_clk(clk150),.rd_clk(clk500),.reset_request(reset_request||cancel150||stage==CANCEL_DRAIN),
++  .wr_clk(clk150),.rd_clk(clk500),.reset_request(reset_request||compute_cancel150),
+   .s_valid(stage==WINDOW_STREAM&&memory_mv&&!fail),.s_ready(sample_fifo_ready),.s_data(input_packet),
+   .m_valid(sample_fifo_valid),.m_ready(sample_fifo_pop),.m_data(sample_packet),
+   .wr_busy(fw_busy),.rd_busy(fr_busy),.wr_count(window_fifo_level150),.rd_count(),.overflow(fw_over),.underflow(fr_under)
+@@ -132,7 +138,7 @@
+   .pilot_audit_valid(),.pilot_audit_index(),.pilot_audit_value(),.fft_butterfly_audit_valid(),.fft_butterfly_audit_stage(),.fft_butterfly_audit_index()
+  );
+  cfo_estimator_link observation_backend(
+-  .clk_fast(clk500),.clk_slow(clk150),.reset_async(reset_request),.abort_async(cancel150||stage==CANCEL_DRAIN),
++  .clk_fast(clk500),.clk_slow(clk150),.reset_async(reset_request),.abort_async(compute_cancel150),
+   .s_valid(front_valid),.s_ready(front_ready),.s_frame(obs_frame),.s_generation(obs_generation),.s_window(obs_window),
+   .s_z_i(obs_i),.s_z_q(obs_q),.s_pilot_count(obs_pilots),.s_fft_saturations(obs_saturations),.s_front_error(front_error),
+   .m_valid(link_valid),.m_ready(stage==ESTIMATE),.m_backend_word(backend_word),.m_link_error(link_error),.m_front_error(link_front_error),

@@ -1,0 +1,58 @@
+{
+  "job": "OTA004",
+  "revision": "A06",
+  "state": "FROZEN_NO_NATIVE_ADMISSION_BUDGET_INSUFFICIENT",
+  "created_utc": "2026-09-17T03:30:27.184186+00:00",
+  "manifest": "docs/jobs/OTA004_A06_source_lock.json",
+  "manifest_sha256": "e0ccf6d506b538fd044b3cd10b88c2da6f165da0b6d774992740c61768158494",
+  "files": 285,
+  "stages": [
+    "smoke",
+    "synth"
+  ],
+  "native_started": false,
+  "old_grants_reusable": false,
+  "original_whole_job_hard_deadline_utc": "2026-09-17T03:44:33.0452158Z",
+  "new_deadline": null,
+  "estimated_smoke_minutes": [
+    10,
+    20
+  ],
+  "estimated_core_and_reports_minutes": [
+    25,
+    45
+  ],
+  "reused_completed_ip_ooc": 45,
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "tools": [
+    {
+      "path": "tools/vivado/run_ota004_a06.tcl",
+      "sha256": "e1c291c2588f6e734624b301f93d1038012c2e4dbc7aa1c089fe86879f31c3fb"
+    },
+    {
+      "path": "tools/monitor_ota004_a06.ps1",
+      "sha256": "bd2a063211d2ffdd6c8f2ade66885597329681c6f71878ad01d8949d8ad8c194"
+    },
+    {
+      "path": "tools/verify_ota004_a06_project.py",
+      "sha256": "d4e609259715d62120bbd1694ff208f11b4dc3b2e22de43f3ef4d60feae9ea4f"
+    },
+    {
+      "path": "tools/verify_ota004_a06_binding.py",
+      "sha256": "d85356ff10295903b969f8425c4ad34e9a28463d7276de27024e420ba86efc06"
+    },
+    {
+      "path": "tools/verify_ota004_a06_sim_result.py",
+      "sha256": "1d5bb8bcf0754124a93fe64692c93954a392b2269e5e5ea1f4d59f076d9d05d5"
+    },
+    {
+      "path": "tools/verify_ota004_a06_synth_result.py",
+      "sha256": "cdb46304fbd78bc186ebdcf1cd254648a98d61c8c41f5853b91cebeccaff320f"
+    },
+    {
+      "path": "tools/archive_ota004_a06_previous_core.py",
+      "sha256": "dc7d004926c7bc651a151f64a6f7d0bf6472d4f19abb823caae04593a350019e"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "status": "A05_REAL_TOP_CONTROL_SMOKE_LIMITED_PASS",
+  "reviewed_utc": "2026-09-17T02:18:47.128055+00:00",
+  "reviewer": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "grant_id": "SYNC_OTA_OTA004_A05_20260917T015904Z",
+  "manifest_sha256": "1108282a6edc129cf4ee0d371f7f163fe7f43a27b50b87ffda4a4a5655b33cc6",
+  "locked_files": 216,
+  "rtl_files": 128,
+  "module_package_definitions": 136,
+  "managed_ips": 45,
+  "actual_source_sha256": "cec2b0d3fecb92762c81cf9a4188043e8e9149c81879cd3b7df030bdd7550db4",
+  "compile_order_current_identity": [
+    {
+      "usage": "simulation",
+      "count": 200,
+      "all_current_hashes_match": true
+    },
+    {
+      "usage": "synthesis",
+      "count": 130,
+      "all_current_hashes_match": true
+    }
+  ],
+  "mif_count": 4,
+  "mif_unchanged_from_prepare": true,
+  "native_error_count": 0,
+  "previous_runtime_xpm_errors": 18,
+  "current_runtime_xpm_errors": 0,
+  "real_fifo_probes": 4,
+  "probe_scope": "125->150/150->125; depth32/1024; cancel at first half-cycle after release; reassert only after >=1024ns and all probe reset_busy cleared",
+  "simulation_finish_ns": 4120,
+  "completion_scope": "capture with third DDR response held, cancellation/drain, done acknowledgment, invalid-length completion/acknowledgment, 80-cycle late-result observation",
+  "startup_fpo_warning": {
+    "count": 1,
+    "time_ns": 20,
+    "qualification": "Frozen internal initialization boundary only; public reset asserted at four surrounding samples and zero accepted words"
+  },
+  "process": {
+    "start_utc": "2026-09-17T02:03:25.9872024Z",
+    "end_utc": "2026-09-17T02:14:32.4371594Z",
+    "tree_closed_utc": "2026-09-17T02:14:32.9379575Z",
+    "recorded_identities": 66,
+    "last_tree_empty": true,
+    "launcher_exit_code": 0,
+    "timed_out": false
+  },
+  "evidence": [
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a05\\process_summary.json",
+      "sha256": "3009a7613fc7619d336fe14ed07401950ef6b4094a8bca9cc67f92e89b397cfc"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a05\\process_tree.jsonl",
+      "sha256": "819814394ac24259f6364c0b3e120381abec37dd60fa39cf7769c83c97e002e2"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a05\\native.log",
+      "sha256": "9af9e07f954c23e69e8a88c2ed695d06f6beebb4313379000c3ef0afff09aa95"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a05\\simulate.log",
+      "sha256": "e488bbb7f675a1a22e71058146ed12c4d5be00a5f84cc1d2e6a179a7f8804a46"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a05\\project_identity_verified.json",
+      "sha256": "821d95e85980df88fad7ff7192071f771449c3db04b02fc82d7e30302ad41007"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a05\\binding_verified.json",
+      "sha256": "e567debf1edcd0d7920f8fbe6d8ad2c10d1f0dcef8a066e92062731238c6a597"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a05\\strict_smoke_review.json",
+      "sha256": "56aa9322253b0e614610895c28e1c5155c88ae553441080335a84a855875e16c"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a05\\result.txt",
+      "sha256": "a3857e9b8081069a1ec781c8b2bc49e86dbcacbc34301b94304a735884b52ffe"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a05\\actual_sources.tsv",
+      "sha256": "cec2b0d3fecb92762c81cf9a4188043e8e9149c81879cd3b7df030bdd7550db4"
+    }
+  ],
+  "next": "Continue existing authorized synth_a05; do not launch a duplicate, repeat prepare/smoke, or regenerate unchanged IP",
+  "whole_job_hard_deadline_utc": "2026-09-17T03:44:33.0452158Z",
+  "full_frame_algorithm": "NOT_RUN",
+  "physical_timing": "NOT_RUN",
+  "sustained_throughput": "NOT_RUN",
+  "ni_integration": "NOT_RUN",
+  "board": "NOT_RUN"
+}

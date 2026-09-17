@@ -1,0 +1,20 @@
+--- rtl/cfo/cfo_estimator_link_v2.sv
++++ rtl/cfo/cfo_estimator_link_a06.sv
+@@ -51,12 +51,13 @@
+   reset_ready_to_fast(.src_clk(clk_slow),.src_in(slow_reset_ready),.dest_clk(clk_fast),.dest_out(slow_reset_ready_fast));
+ 
+  // No FIFO IO, backend work, output promise or frame-credit release is allowed
+- // until the reset handshake completes. common_reset is the asynchronous mask;
+- // the four-edge local reset tails flush both two-FF reset-handshake CDC paths.
++ // until the reset handshake completes. The local async-assert/sync-release
++ // tails supply the masks; raw common_reset never enters data or CE logic.
++ // These four-edge tails flush both two-FF reset-handshake CDC paths.
+  // As required by XPM, clocks run continuously and a new reset is issued only
+  // after both reset-busy outputs deassert; an asserted reset may remain held.
+- assign fast_reset_busy=common_reset||rst_fast||fifo_reset||wr_busy||!fifo_reset_done||!slow_reset_ready_fast;
+- assign slow_reset_busy=common_reset||rst_slow||rd_busy||!slow_reset_ready;
++ assign fast_reset_busy=rst_fast||fifo_reset||wr_busy||!fifo_reset_done||!slow_reset_ready_fast;
++ assign slow_reset_busy=rst_slow||rd_busy||!slow_reset_ready;
+  logic closed_fast;
+  logic [6:0] expected_window;
+  logic [31:0] locked_frame,locked_generation;

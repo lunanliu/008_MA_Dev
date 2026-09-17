@@ -1,0 +1,101 @@
+{
+  "vivado": "2021.1",
+  "files": [
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\hdl\\xpm_cdc.sv",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_cdc/hdl/xpm_cdc.sv",
+      "bytes": 64836,
+      "sha256": "d08434ed5a310c44c13936d6eda5381d64ff0f627a335368c85826a30e8adaa7"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\tcl\\xpm_cdc_array_single.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_cdc/tcl/xpm_cdc_array_single.tcl",
+      "bytes": 831,
+      "sha256": "4d01668bfad361693c2fdc8c419cec03961b01d5e77c4ceec3564aaf1bcdbfe9"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\tcl\\xpm_cdc_async_rst.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_cdc/tcl/xpm_cdc_async_rst.tcl",
+      "bytes": 103,
+      "sha256": "f78c9fa41315b6c522913ee47bf0869d70f2e47b238886a423f08980813d1ccf"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\tcl\\xpm_cdc_gray.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_cdc/tcl/xpm_cdc_gray.tcl",
+      "bytes": 1544,
+      "sha256": "959506384eaae090cb8ef0ec0ff8b289d6bf7fa7ffc7811a1be5a562b15425d4"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\tcl\\xpm_cdc_handshake.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_cdc/tcl/xpm_cdc_handshake.tcl",
+      "bytes": 2001,
+      "sha256": "0e7069dc29b660577da8032d4e9329753574cee2de4f972ce045f524d6b9e69f"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\tcl\\xpm_cdc_low_latency_handshake.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_cdc/tcl/xpm_cdc_low_latency_handshake.tcl",
+      "bytes": 2037,
+      "sha256": "5543662b77d3013a3febb676aa5268ec3005d1e7bcf3251b7800f5952271d6a9"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\tcl\\xpm_cdc_single.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_cdc/tcl/xpm_cdc_single.tcl",
+      "bytes": 818,
+      "sha256": "56c75e3fef7eec135cecc1ac291736b80d16b5eb9238482be49ab4b7d8062bf0"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\tcl\\xpm_cdc_sync_rst.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl",
+      "bytes": 94,
+      "sha256": "aec10b712e9acecc5239d9377f02c6343fc4922b8fd3fa4fc81d95098cdd94bd"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\hdl\\xpm_fifo.sv",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_fifo/hdl/xpm_fifo.sv",
+      "bytes": 230951,
+      "sha256": "d3c1e861cddf00ebc82552c464a46fb5228e68b4d458001d064b99e04134b9d4"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\simulation\\xpm_fifo_tb.sv",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_fifo/simulation/xpm_fifo_tb.sv",
+      "bytes": 40559,
+      "sha256": "10b7e6ed1743bac72a5b49c8f6cd2b2f74f529103646a0a3d275d1108de0878b"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\tcl\\xpm_fifo_rst.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_fifo/tcl/xpm_fifo_rst.tcl",
+      "bytes": 871,
+      "sha256": "61cf8abdbd16aeac9b7e5e03d605d579938b254e8264c0c66595fb077db9ca9e"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\tcl\\xpm_fifo_rst_axif.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_fifo/tcl/xpm_fifo_rst_axif.tcl",
+      "bytes": 3171,
+      "sha256": "db1d72cb0dff8d61eace86cb024854dcac31831467b6d711808e3876fda33ead"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\tcl\\xpm_fifo_rst_axil.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_fifo/tcl/xpm_fifo_rst_axil.tcl",
+      "bytes": 2790,
+      "sha256": "9914b7df710b1511e61249bff78319df959aefb8f7d254252d9a8370dadf1ff7"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\tcl\\xpm_fifo_rst_axis.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl",
+      "bytes": 871,
+      "sha256": "df5f6bb69ca4633ee8ecdf31f8bd6ca266fb430eed72442af62f71106a5ac50b"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_memory\\hdl\\xpm_memory.sv",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_memory/hdl/xpm_memory.sv",
+      "bytes": 486058,
+      "sha256": "e72758e6794b1f7ad00428feeeacc4f90a38b0500583b2ca93ca2eba12ba01bd"
+    },
+    {
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_memory\\tcl\\xpm_memory_xdc.tcl",
+      "copy": "docs/provenance/xpm_runtime_2021_1/xpm_memory/tcl/xpm_memory_xdc.tcl",
+      "bytes": 915,
+      "sha256": "f3fb4f9b0a4792709c3a701f14f4224ca868224466c5c8cec6bc45c5d01924c6"
+    }
+  ]
+}

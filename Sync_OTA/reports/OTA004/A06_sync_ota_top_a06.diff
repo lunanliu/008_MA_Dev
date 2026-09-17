@@ -1,0 +1,25 @@
+--- rtl/control/sync_ota_top_a05.sv
++++ rtl/control/sync_ota_top_a06.sv
+@@ -109,12 +109,19 @@
+  end
+  xpm_cdc_async_rst #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.RST_ACTIVE_HIGH(1))
+  context_reset(.src_arst(reset_request||effective_sfo_reset125),.dest_clk(clk150),.dest_arst(context_reset150));
++ // Register the binary-state decode before it can asynchronously assert a
++ // destination reset. The controller already blocks ingress while cancelling.
++ logic cancel_request125;
++ always_ff @(posedge clk125)begin
++  if(rst125)cancel_request125<=1'b0;
++  else cancel_request125<=cancel125;
++ end
+  xpm_cdc_async_rst #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.RST_ACTIVE_HIGH(1))
+- cancel_sync(.src_arst(cancel125),.dest_clk(clk150),.dest_arst(cancel150));
+- xpm_cdc_single #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.SRC_INPUT_REG(0))
++ cancel_sync(.src_arst(cancel_request125),.dest_clk(clk150),.dest_arst(cancel150));
++ xpm_cdc_single #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.SRC_INPUT_REG(1))
+  busy_sync(.src_clk(clk150),.src_in(cfo_busy150),.dest_clk(clk125),.dest_out(cfo_busy125));
+  assign algorithm_fault150=(live_context_error150!=0)||(cfo_fifo_error150!=0)||sfo_mfault||(live_cfo_error150!=0&&cfo_busy150);
+- xpm_cdc_single #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.SRC_INPUT_REG(0))
++ xpm_cdc_single #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.SRC_INPUT_REG(1))
+  fault_sync(.src_clk(clk150),.src_in(algorithm_fault150),.dest_clk(clk125),.dest_out(algorithm_fault125));
+  ota_capture_controller control(
+   .clk125(clk125),.rst125(rst125),.cancel(cancel),

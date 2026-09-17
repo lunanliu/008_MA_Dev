@@ -1,0 +1,11 @@
+{
+  "status": "A06_MONITOR_FUNCTION_FIXTURE_PASS",
+  "used_synthetic_process_records": true,
+  "initial_ancestry": true,
+  "orphan_after_root_exit": true,
+  "reused_root_and_child_pids_rejected": true,
+  "child_birth_before_parent_rejected": true,
+  "final_empty": true,
+  "native_start_stop_exercised": false,
+  "observed_identities": 4
+}

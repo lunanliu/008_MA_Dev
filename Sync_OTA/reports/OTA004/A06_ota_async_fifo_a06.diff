@@ -1,0 +1,22 @@
+--- rtl/common/ota_async_fifo.sv
++++ rtl/common/ota_async_fifo_a06.sv
+@@ -1,6 +1,7 @@
+ `timescale 1ns/1ps
+ // Record FIFO with writer-synchronous XPM reset and two-domain reset completion.
+-// Both clocks must run. Reset/abort assertion masks transfers immediately.
++// Both clocks must run. Local async-assert/sync-release reset tails mask
++// transfers immediately; raw requests never bypass these domain boundaries.
+ module ota_async_fifo #(
+  parameter integer WIDTH=128,DEPTH=32,CW=$clog2(DEPTH)+1
+ )(
+@@ -34,8 +35,8 @@
+  end
+  xpm_cdc_single #(.DEST_SYNC_FF(2),.INIT_SYNC_FF(1),.SRC_INPUT_REG(0))
+   ready_to_writer(.src_clk(rd_clk),.src_in(reader_ready),.dest_clk(wr_clk),.dest_out(reader_ready_wr));
+- assign wr_busy=reset_request||rw||fifo_reset||wb||!complete||!reader_ready_wr;
+- assign rd_busy=reset_request||rr||rb||!reader_ready;
++ assign wr_busy=rw||fifo_reset||wb||!complete||!reader_ready_wr;
++ assign rd_busy=rr||rb||!reader_ready;
+  assign s_ready=!wr_busy&&!full;
+  assign m_valid=!rd_busy&&!empty&&dv;
+  xpm_fifo_async #(

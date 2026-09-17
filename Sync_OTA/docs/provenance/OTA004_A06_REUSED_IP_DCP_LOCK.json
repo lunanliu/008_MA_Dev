@@ -1,0 +1,275 @@
+{
+  "status": "45_COMPLETED_IP_OOC_REUSE_ONLY",
+  "files": [
+    {
+      "ip": "t04_cmpy_17x16",
+      "path": "Sync_OTA.runs/t04_cmpy_17x16_synth_1/t04_cmpy_17x16.dcp",
+      "bytes": 90822,
+      "sha256": "3eb2eb98baa4555e76529b695a6eb91e787b7a64090bd268ac82a9ccc576caac"
+    },
+    {
+      "ip": "t04_cordic_translate_48",
+      "path": "Sync_OTA.runs/t04_cordic_translate_48_synth_1/t04_cordic_translate_48.dcp",
+      "bytes": 977419,
+      "sha256": "27cfb7792641b44b78fbe3f55f6c6da8d3b919e31adae80c7e474a472740b2dc"
+    },
+    {
+      "ip": "t04_div_u63_u47",
+      "path": "Sync_OTA.runs/t04_div_u63_u47_synth_1/t04_div_u63_u47.dcp",
+      "bytes": 668787,
+      "sha256": "4f7b41c5e62204c6ffca821c116fe07d611b505256f4639b5027665ea1d82db0"
+    },
+    {
+      "ip": "t04_phase_scale_s48_x_1953125",
+      "path": "Sync_OTA.runs/t04_phase_scale_s48_x_1953125_synth_1/t04_phase_scale_s48_x_1953125.dcp",
+      "bytes": 205560,
+      "sha256": "53b377388a60ea7a1059bbd8f7436cf47d13f2085566d10c09f40aa0e7b72369"
+    },
+    {
+      "ip": "t04_square_s43",
+      "path": "Sync_OTA.runs/t04_square_s43_synth_1/t04_square_s43.dcp",
+      "bytes": 122799,
+      "sha256": "f504a9358a970ed90d9ff62f6f5476b629e27b6d31616c67987c00799b237b75"
+    },
+    {
+      "ip": "t04_square_u42",
+      "path": "Sync_OTA.runs/t04_square_u42_synth_1/t04_square_u42.dcp",
+      "bytes": 122219,
+      "sha256": "18b0af28db923dbc24ebffb210b156763da359e0478e62195d47b928d0cd0954"
+    },
+    {
+      "ip": "t05_cmpy_corr_18x16",
+      "path": "Sync_OTA.runs/t05_cmpy_corr_18x16_synth_1/t05_cmpy_corr_18x16.dcp",
+      "bytes": 91715,
+      "sha256": "61dd7989c152656108f83f5a10526c2d821a54bb4ab74e322e05cd8cc0e6f0e9"
+    },
+    {
+      "ip": "t05_cmpy_rotate_18x18",
+      "path": "Sync_OTA.runs/t05_cmpy_rotate_18x18_synth_1/t05_cmpy_rotate_18x18.dcp",
+      "bytes": 93714,
+      "sha256": "edbeca5841cc7e744552b6dd602557976bcb2da65a9f4316f44e58f8c01e5a39"
+    },
+    {
+      "ip": "t05_cordic_rotate16_parallel",
+      "path": "Sync_OTA.runs/t05_cordic_rotate16_parallel_synth_1/t05_cordic_rotate16_parallel.dcp",
+      "bytes": 1068389,
+      "sha256": "c84b8df464dccfec6e546c585c0e1b7f2dd4377b448530cb5f977f3bf7f15bb9"
+    },
+    {
+      "ip": "t05_dds_pinc32_sincos18",
+      "path": "Sync_OTA.runs/t05_dds_pinc32_sincos18_synth_1/t05_dds_pinc32_sincos18.dcp",
+      "bytes": 204514,
+      "sha256": "fd6642889459d1be6e6c6f336ca634ac3f65244ce0f380e07d2513ba2f8eb683"
+    },
+    {
+      "ip": "t05_div_quality_s64_s64_f15",
+      "path": "Sync_OTA.runs/t05_div_quality_s64_s64_f15_synth_1/t05_div_quality_s64_s64_f15.dcp",
+      "bytes": 1364233,
+      "sha256": "5fc5583c7c54557f2d5ba60aba04d061d06588c965ba340447f879c13623e0f7"
+    },
+    {
+      "ip": "t05_mult_cfo_s19_const40_full59",
+      "path": "Sync_OTA.runs/t05_mult_cfo_s19_const40_full59_synth_1/t05_mult_cfo_s19_const40_full59.dcp",
+      "bytes": 91192,
+      "sha256": "83c87c194dbbc4cf48a1815d2403127f04917b8b2ad5172186354a193049f878"
+    },
+    {
+      "ip": "t05_mult_quality_u46x36_full82",
+      "path": "Sync_OTA.runs/t05_mult_quality_u46x36_full82_synth_1/t05_mult_quality_u46x36_full82.dcp",
+      "bytes": 134339,
+      "sha256": "e96b2be2a1ba12fb31c622cd605af2427aacb5901bb1dff0ab1e57844e2cc95d"
+    },
+    {
+      "ip": "t05_mult_s18x18_full36",
+      "path": "Sync_OTA.runs/t05_mult_s18x18_full36_synth_1/t05_mult_s18x18_full36.dcp",
+      "bytes": 46069,
+      "sha256": "4ff3d8274604b22a60baaf3bc2ca022c11b5b049794c6a6da69edc63fa58e240"
+    },
+    {
+      "ip": "t05_mult_s48x48_full96",
+      "path": "Sync_OTA.runs/t05_mult_s48x48_full96_synth_1/t05_mult_s48x48_full96.dcp",
+      "bytes": 167269,
+      "sha256": "1cc8916aa9f20dde361369b9f4f8094898d71b8c76331ba76346b611e0c46106"
+    },
+    {
+      "ip": "t07_g3_up47",
+      "path": "Sync_OTA.runs/t07_g3_up47_synth_1/t07_g3_up47.dcp",
+      "bytes": 2109321,
+      "sha256": "81fb666f2e8060da2c896491c3d86d7a93d35db7d077895362610b138d21e253"
+    },
+    {
+      "ip": "t03_xfft_2048_main",
+      "path": "Sync_OTA.runs/t03_xfft_2048_main_synth_1/t03_xfft_2048_main.dcp",
+      "bytes": 3095626,
+      "sha256": "79cb5c78cada602a8fb3cab1136bc8802ec40b86f10b967eb90e3fa052b2dbb8"
+    },
+    {
+      "ip": "t06_rt_mult_u48_u20",
+      "path": "Sync_OTA.runs/t06_rt_mult_u48_u20_synth_1/t06_rt_mult_u48_u20.dcp",
+      "bytes": 83982,
+      "sha256": "23d6d3f18c0e335286c6b46b668a9c294acd382643b763f0930ffafcefa87c64"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s38",
+      "path": "Sync_OTA.runs/t06_rt_mult_s41_s38_synth_1/t06_rt_mult_s41_s38.dcp",
+      "bytes": 107182,
+      "sha256": "733dd938cae8320b0bb1c09864451f112e757cdded92b246820879081a11c9e4"
+    },
+    {
+      "ip": "t06_rt_mult_s41_u38",
+      "path": "Sync_OTA.runs/t06_rt_mult_s41_u38_synth_1/t06_rt_mult_s41_u38.dcp",
+      "bytes": 107151,
+      "sha256": "340617322b9bfd88fea5ff26c168fb8f29f09aee0eb118f4436cac9354ae6ebe"
+    },
+    {
+      "ip": "t06_rt_mult_u30_s42",
+      "path": "Sync_OTA.runs/t06_rt_mult_u30_s42_synth_1/t06_rt_mult_u30_s42.dcp",
+      "bytes": 94689,
+      "sha256": "d57d74eb4d6af3b470eab9d6b8acee026757edf322f600adccdf1697cab32c84"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u43",
+      "path": "Sync_OTA.runs/t06_rt_mult_u30_u43_synth_1/t06_rt_mult_u30_u43.dcp",
+      "bytes": 94711,
+      "sha256": "3a5382a32dedd2b7e8c42488491ecd4f35945d2a1ae25accc4c1492b756f20cd"
+    },
+    {
+      "ip": "t06_rt_mult_s41_s41",
+      "path": "Sync_OTA.runs/t06_rt_mult_s41_s41_synth_1/t06_rt_mult_s41_s41.dcp",
+      "bytes": 108619,
+      "sha256": "c56807d276fdfb57494592aa5358948216b203996c572b95b0788ec3957af401"
+    },
+    {
+      "ip": "t06_rt_mult_u30_u48",
+      "path": "Sync_OTA.runs/t06_rt_mult_u30_u48_synth_1/t06_rt_mult_u30_u48.dcp",
+      "bytes": 115408,
+      "sha256": "c2c70c0550c8a2b92c0180959d7ca2a7d4331f6e872059f306874146e3f27884"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s48",
+      "path": "Sync_OTA.runs/t06_fs_mult_s29_s48_synth_1/t06_fs_mult_s29_s48.dcp",
+      "bytes": 107877,
+      "sha256": "dd66d1581438c683958872b3e8d6256c3b98ed5898d11c760e37249aaf5c6a40"
+    },
+    {
+      "ip": "t06_fs_mult_s29_s11",
+      "path": "Sync_OTA.runs/t06_fs_mult_s29_s11_synth_1/t06_fs_mult_s29_s11.dcp",
+      "bytes": 61754,
+      "sha256": "40a6a5ecac4529c53b20705834e4d63769ce84c31d0cd2f2d44231e0a3c492ca"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s48",
+      "path": "Sync_OTA.runs/t06_fs_mult_u18_s48_synth_1/t06_fs_mult_u18_s48.dcp",
+      "bytes": 79061,
+      "sha256": "7c8b8d5463da9a8d4e48f0980c2d8e3b30868599cdc52c6b150cbcb9af118861"
+    },
+    {
+      "ip": "t06_fs_mult_u18_s11",
+      "path": "Sync_OTA.runs/t06_fs_mult_u18_s11_synth_1/t06_fs_mult_u18_s11.dcp",
+      "bytes": 44569,
+      "sha256": "9841ca386ce9c94b1c88ef256c976740159e492f010a272706e0b19dc447b517"
+    },
+    {
+      "ip": "t06_wp_mult_u64_u33",
+      "path": "Sync_OTA.runs/t06_wp_mult_u64_u33_synth_1/t06_wp_mult_u64_u33.dcp",
+      "bytes": 139780,
+      "sha256": "49c6ad42009d46bab72d183c5645637bcb7dc9490fef3d30899668ef1b0a27a0"
+    },
+    {
+      "ip": "t06_pair_max_tracker_2lane_cross",
+      "path": "Sync_OTA.runs/t06_pair_max_tracker_2lane_cross_synth_1/t06_pair_max_tracker_2lane_cross.dcp",
+      "bytes": 146752,
+      "sha256": "c22aa29b8c5dbe6eb49afc87054d35356c66b41b911234f3dd1b84dce02077b0"
+    },
+    {
+      "ip": "t06_observation_engine_weight_product",
+      "path": "Sync_OTA.runs/t06_observation_engine_weight_product_synth_1/t06_observation_engine_weight_product.dcp",
+      "bytes": 95089,
+      "sha256": "a65bcb30d6ef70676c91fe20911a089edca6294150d4bd28fc4373fd1bb23b6d"
+    },
+    {
+      "ip": "t06_observation_engine_square",
+      "path": "Sync_OTA.runs/t06_observation_engine_square_synth_1/t06_observation_engine_square.dcp",
+      "bytes": 45302,
+      "sha256": "cb075c05a275ab0588aba3d364bbd631f335213e6849df521936a4c65fcf36a4"
+    },
+    {
+      "ip": "t06_cordic_translate48_parallel",
+      "path": "Sync_OTA.runs/t06_cordic_translate48_parallel_synth_1/t06_cordic_translate48_parallel.dcp",
+      "bytes": 6596775,
+      "sha256": "2375b741b91f7a2ade80742d10cbfbe0852783bfd06599af96f7b6cc749a158f"
+    },
+    {
+      "ip": "t06_sg_div_u53_u37",
+      "path": "Sync_OTA.runs/t06_sg_div_u53_u37_synth_1/t06_sg_div_u53_u37.dcp",
+      "bytes": 2525800,
+      "sha256": "a7a9e2816bbc58f10c2982fa75bd54a4674f7e2e61ff338ed83404ad946de97d"
+    },
+    {
+      "ip": "t06_sg_mult_u37_u16",
+      "path": "Sync_OTA.runs/t06_sg_mult_u37_u16_synth_1/t06_sg_mult_u37_u16.dcp",
+      "bytes": 64430,
+      "sha256": "c53e4e701e630e8fd532cefd48693053c7cda257256511491734377d4795eac0"
+    },
+    {
+      "ip": "t06_dds_phase_s32_sincos18",
+      "path": "Sync_OTA.runs/t06_dds_phase_s32_sincos18_synth_1/t06_dds_phase_s32_sincos18.dcp",
+      "bytes": 309241,
+      "sha256": "8727b2b952efe44f5a473bb04429dbf0751d086e13681bf82e029f174c88f2f3"
+    },
+    {
+      "ip": "t07_g3_down47",
+      "path": "Sync_OTA.runs/t07_g3_down47_synth_1/t07_g3_down47.dcp",
+      "bytes": 2819233,
+      "sha256": "be7a2a376d8bc66026561c123fea83c54149f0d6b6f03962eae7ede05fd8ae16"
+    },
+    {
+      "ip": "t07_g3_down15",
+      "path": "Sync_OTA.runs/t07_g3_down15_synth_1/t07_g3_down15.dcp",
+      "bytes": 1890425,
+      "sha256": "7f3844ba2544485728f55a5912949d72d3143c1052a2b66e73278a464178d8ad"
+    },
+    {
+      "ip": "farrow_mul_t16",
+      "path": "Sync_OTA.runs/farrow_mul_t16_synth_1/farrow_mul_t16.dcp",
+      "bytes": 43446,
+      "sha256": "cc6d0b06f40091c3f8629ef6f14e3c3d561efa9189e07c73c3ebe5481181ed98"
+    },
+    {
+      "ip": "farrow_mul_h16",
+      "path": "Sync_OTA.runs/farrow_mul_h16_synth_1/farrow_mul_h16.dcp",
+      "bytes": 43515,
+      "sha256": "ef97a999fc97685a36ab20c9841ee4e54475a263bc13d2c81ab34c4ed8dd3b7d"
+    },
+    {
+      "ip": "farrow_add_32",
+      "path": "Sync_OTA.runs/farrow_add_32_synth_1/farrow_add_32.dcp",
+      "bytes": 57335,
+      "sha256": "1794a678742cb2c3c5f6d5cf0e1bf54854ae227ab1ea8582365172626816b5af"
+    },
+    {
+      "ip": "farrow_add_18",
+      "path": "Sync_OTA.runs/farrow_add_18_synth_1/farrow_add_18.dcp",
+      "bytes": 45619,
+      "sha256": "93b178676473781c29318b94d2249f0c6193bde45be0450f94de5ed70b899fb1"
+    },
+    {
+      "ip": "farrow_add_28",
+      "path": "Sync_OTA.runs/farrow_add_28_synth_1/farrow_add_28.dcp",
+      "bytes": 53849,
+      "sha256": "59aa574840e60458de7343d70785c3c3bee85b426c1647823fa138b34f6a5aa4"
+    },
+    {
+      "ip": "t07_g3_up15",
+      "path": "Sync_OTA.runs/t07_g3_up15_synth_1/t07_g3_up15.dcp",
+      "bytes": 1465313,
+      "sha256": "e0331a29466f3d6011be78c0aa81a5229a61044f6a3ed1976241e79bd0ccd008"
+    },
+    {
+      "ip": "t03_xfft_16384_aux",
+      "path": "Sync_OTA.runs/t03_xfft_16384_aux_synth_1/t03_xfft_16384_aux.dcp",
+      "bytes": 4548789,
+      "sha256": "b7b6126548cff579ea7ae553db213dde1c0ae58a64c50b6e24ba32bdfb692310"
+    }
+  ]
+}

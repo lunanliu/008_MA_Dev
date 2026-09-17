@@ -1,7 +1,7 @@
 {
   "job": "OTA004",
   "revision": "A05",
-  "state": "FROZEN_WAITING_CONCRETE_MANAGER_SLOT",
+  "state": "RETURNED_SYNTH_COMPLETE_HANDOFF_HOLD_CDC_REPAIR",
   "manifest": "docs/jobs/OTA004_A05_source_lock.json",
   "manifest_sha256": "1108282a6edc129cf4ee0d371f7f163fe7f43a27b50b87ffda4a4a5655b33cc6",
   "locked_files": 216,
@@ -9,7 +9,7 @@
     "smoke",
     "synth"
   ],
-  "native_started": false,
+  "native_started": true,
   "old_grants_reusable": false,
   "prepare_repeat_allowed": false,
   "created_utc": "2026-09-17T01:53:49.374228+00:00",
@@ -41,5 +41,14 @@
   ],
   "predecessor_review": "reports/OTA004/A04_STAGE_REVIEW.json",
   "static_review": "reports/OTA004/A05_STATIC_REVIEW.json",
-  "dependency_review": "reports/OTA004/A05_DEPENDENCY_REVIEW.json"
+  "dependency_review": "reports/OTA004/A05_DEPENDENCY_REVIEW.json",
+  "commit": "3420bd8f9e6f41e7aea0b324ca96c5273bd4468d",
+  "dispatched_utc": "2026-09-17T01:55:51.771107+00:00",
+  "grant_id": "SYNC_OTA_OTA004_A05_20260917T015904Z",
+  "smoke_review": "reports/OTA004/A05_SMOKE_ASTRA_REVIEW.json",
+  "smoke": "LIMITED_PASS",
+  "synth": "OOC_COMPLETE",
+  "updated_utc": "2026-09-17T02:18:47.128055+00:00",
+  "final_review": "reports/OTA004/A05_SYNTH_ASTRA_REVIEW.json",
+  "resource_return": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A05_RESOURCE_RETURN_20260917.json"
 }

@@ -1,0 +1,194 @@
+{
+  "status": "CORE_OOC_SYNTHESIS_COMPLETE_HANDOFF_HOLD_CDC_REPAIR_REQUIRED",
+  "reviewed_utc": "2026-09-17T03:13:59.831007+00:00",
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "grant_id": "SYNC_OTA_OTA004_A05_20260917T015904Z",
+  "source_manifest_sha256": "1108282a6edc129cf4ee0d371f7f163fe7f43a27b50b87ffda4a4a5655b33cc6",
+  "all_216_inputs_match": true,
+  "actual_compile_input_hashes_match": true,
+  "blackboxes": 0,
+  "part": "xcvu11p-flgb2104-2-e",
+  "top": "sync_ota_top",
+  "rtl_files": 128,
+  "managed_ips": 45,
+  "mif_count": 4,
+  "resources": {
+    "lut": 307097,
+    "ff": 239219,
+    "bram_tiles": 302,
+    "uram": 552,
+    "dsp": 2049,
+    "lut_pct": 23.7,
+    "ff_pct": 9.23,
+    "bram_pct": 14.98,
+    "uram_pct": 57.5,
+    "dsp_pct": 22.23
+  },
+  "synthesis_timing": {
+    "wns_ns": -2.357,
+    "tns_ns": -4826.837,
+    "failing_endpoints": 5387,
+    "clk125_wns_ns": 2.41,
+    "clk150_wns_ns": -2.357,
+    "clk500_wns_ns": -1.279,
+    "physical_qualification": false
+  },
+  "checks": {
+    "no_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "no_input_delay": 426,
+    "no_output_delay": 3351,
+    "latches": 0
+  },
+  "native_errors": 0,
+  "critical_redefinition_warnings": [
+    "CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module xpm_memory_base [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]",
+    "CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module asym_bwe_bb [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8067]",
+    "CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module xpm_memory_dpdistram [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8128]",
+    "CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module xpm_memory_dprom [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8270]",
+    "CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module xpm_memory_sdpram [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]",
+    "CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module xpm_memory_spram [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8603]",
+    "CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module xpm_memory_sprom [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8760]",
+    "CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module xpm_memory_tdpram [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8905]"
+  ],
+  "official_xpm_identity": [
+    {
+      "stem": "xpm_cdc",
+      "copy": "D:\\008_MA_Dev\\Sync_OTA\\rtl\\vendor\\xpm\\xpm_cdc.sv",
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_cdc\\hdl\\xpm_cdc.sv",
+      "sha256": "d08434ed5a310c44c13936d6eda5381d64ff0f627a335368c85826a30e8adaa7",
+      "byte_equal": true
+    },
+    {
+      "stem": "xpm_fifo",
+      "copy": "D:\\008_MA_Dev\\Sync_OTA\\rtl\\vendor\\xpm\\xpm_fifo.sv",
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_fifo\\hdl\\xpm_fifo.sv",
+      "sha256": "d3c1e861cddf00ebc82552c464a46fb5228e68b4d458001d064b99e04134b9d4",
+      "byte_equal": true
+    },
+    {
+      "stem": "xpm_memory",
+      "copy": "D:\\008_MA_Dev\\Sync_OTA\\rtl\\vendor\\xpm\\xpm_memory.sv",
+      "installed": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_memory\\hdl\\xpm_memory.sv",
+      "sha256": "e72758e6794b1f7ad00428feeeacc4f90a38b0500583b2ca93ca2eba12ba01bd",
+      "byte_equal": true
+    }
+  ],
+  "redefinition_conclusion": "Official byte-identical xpm_memory was supplied explicitly and also auto-loaded by XPM_LIBRARIES=XPM_MEMORY; eight duplicate definitions, no private simulation model in synthesis. Remove duplicate source registration in followup; retain this evidence.",
+  "cdc_counts": {
+    "CDC-1": 855,
+    "CDC-10": 15,
+    "CDC-13": 414,
+    "CDC-6": 73,
+    "CDC-15": 1007
+  },
+  "cdc_findings": [
+    {
+      "id": "CDC-A",
+      "classification": "REPAIR_REQUIRED",
+      "detail": "Top cancel125 is a combinational binary state decode fed to async-reset CDC; busy/fault are combinational inputs to SRC_INPUT_REG=0 CDC. Source register these controls to remove possible combinational hazards; preserve held cancellation and done drain."
+    },
+    {
+      "id": "CDC-B",
+      "classification": "REPAIR_REQUIRED",
+      "detail": "ota_async_fifo and cfo_estimator_link include raw reset_request/common_reset in data handshake/busy masks, bypassing their already instantiated destination-domain reset tails. These raw masks feed fast FFT reset/CE and FIFO control; replace with corresponding local async-assert/sync-release resets. Register the local CFO cancellation decode before cross-domain reset requests."
+    },
+    {
+      "id": "CDC-C",
+      "classification": "SCOPED_CONSTRAINT_REVIEW_REQUIRED",
+      "detail": "Explicit copied XPM sources do not show automatic XPM_CDC/XPM_FIFO library registration in synth run (only XPM_MEMORY). Use exactly one official synthesis source mechanism and confirm vendor-scoped CDC constraints/gray skew are present; no global clock-group or broad false path."
+    },
+    {
+      "id": "CDC-D",
+      "classification": "PLATFORM_INTEGRATION_BOUNDARY",
+      "detail": "NI must provide clk125/clk150/clk500 and all external timing/interface constraints. No input/output delays fabricated for unknown platform. Negative intra-domain OOC slack remains unqualified and no implementation is authorized."
+    }
+  ],
+  "tree": {
+    "start_utc": "2026-09-17T02:17:25.2869816Z",
+    "end_utc": "2026-09-17T03:03:06.3110148Z",
+    "tree_closed_utc": "2026-09-17T03:03:06.8119959Z",
+    "identities": 352,
+    "summary_equals_history": true,
+    "last_tree_empty": true,
+    "timed_out": false
+  },
+  "evidence": [
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\sync_ota_synth.dcp",
+      "bytes": 187767187,
+      "sha256": "55cab3969087cef3995491ed835229874b27da82f7184fb89228ef125938127b"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\sync_ota_top.edf",
+      "bytes": 412612414,
+      "sha256": "0fe29900139cc70855c58f155582fb2c3790721926601fb263fa7a9d6360fd58"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\synth_utilization.txt",
+      "bytes": 16572,
+      "sha256": "0ff104154fd0e871f13c7b3649605be432e16d1258f968dfa370cdf3ee66b122"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\synth_utilization_hierarchical.txt",
+      "bytes": 10497761,
+      "sha256": "cee099ede94ec3de252359ee04f429fa1ce59c6c11f41c0533c504b557b350e1"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\synth_timing.txt",
+      "bytes": 199142,
+      "sha256": "4795a4be8d2a53ddf6d3fb8d040e6a3e765833c5533a624626d56a2007f32aeb"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\synth_clocks.txt",
+      "bytes": 1532,
+      "sha256": "d8f0a010546f0d0b87c0b5a23d99e32d8df5018c10fc97ee1569b6d6f8809fbc"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\synth_cdc.txt",
+      "bytes": 747970,
+      "sha256": "53da7130ce29283440c021102da9679da4460c77368ab9d6d2df6713b6fb2c39"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\synth_check_timing.txt",
+      "bytes": 80822,
+      "sha256": "bbafb73da663e435956194ebf0e329fc1d529b82bc9af062022445df9bbbd5ea"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\synth_identity.txt",
+      "bytes": 121,
+      "sha256": "c7edaff23994d1d9eaeeb45ed8d4f0459d6cf7baf1794bde3cf1a0f7b8dd241c"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\process_summary.json",
+      "bytes": 183302,
+      "sha256": "9bbfee65663fb4ac83a166faf271260326a5652df3f2a05da75854cad06e9701"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\process_tree.jsonl",
+      "bytes": 14771186,
+      "sha256": "335676e80135a9ce25020515655b50caf929c3647fd34e12d023a4c6e4ce321a"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\native.log",
+      "bytes": 2159495,
+      "sha256": "e30f6b2900f89451d584ae485ac1a68de912e8b407abab12288b3a1cc88aa15a"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\project_identity_verified.json",
+      "bytes": 94726,
+      "sha256": "821d95e85980df88fad7ff7192071f771449c3db04b02fc82d7e30302ad41007"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a05\\result.txt",
+      "bytes": 37,
+      "sha256": "159f765a7b70d7f3f769cd2350b88c1bc7a6e6ac2e6cdf1fa2b8c4fe9aeecfd6"
+    }
+  ],
+  "next": "Preserve A05 DCP/EDIF and successful IP OOC. Freeze minimum CDC revision; separate manager admission required, do not reuse A05 grant or extend its deadline.",
+  "full_frame": "NOT_RUN",
+  "implementation": "NOT_RUN",
+  "sustained_rate": "NOT_RUN",
+  "ni": "NOT_RUN",
+  "board": "NOT_RUN"
+}
