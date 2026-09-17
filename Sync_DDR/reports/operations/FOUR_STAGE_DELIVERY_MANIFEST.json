@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-09-17T18:55:36.328673+00:00",
+  "zip": "D:\\008_MA_Dev\\Sync_DDR\\delivery\\Sync_DDR_Four_Controllers_20260917.zip",
+  "zip_sha256": "21BE5DD685349DF5F0D7F71FCD297E5BCC951AF56A963441EA2F4CF3EFDE504F",
+  "zip_bytes": 26986,
+  "rtl_files": [
+    "rtl/ddr_upload_ctrl.vhd",
+    "rtl/ddr_read_ctrl.vhd",
+    "rtl/ddr_capture_ctrl.vhd",
+    "rtl/ddr_download_ctrl.vhd"
+  ],
+  "resource_closed_utc": "2026-09-17T18:51:39.146387+00:00",
+  "frozen_inputs_unchanged": true,
+  "original_rtl_tb_unchanged": true,
+  "functional_tests": "CAPTURE_DOWNLOAD_PASS",
+  "physical_timing_and_sustained_rate": "NOT_VERIFIED",
+  "root": "D:/008_MA_Dev/Sync_DDR"
+}

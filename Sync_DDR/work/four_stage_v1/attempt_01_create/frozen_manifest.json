@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "created_utc": "2026-09-17T18:41:27.983448+00:00",
+  "root": "D:\\008_MA_Dev\\Sync_DDR",
+  "files": [
+    {
+      "path": "rtl/ddr_upload_ctrl.vhd",
+      "bytes": 12586,
+      "sha256": "B70495D20F01D3C1CBD96F6614572393EEB929664BAC44D426830491DEF36A2D"
+    },
+    {
+      "path": "rtl/ddr_read_ctrl.vhd",
+      "bytes": 18662,
+      "sha256": "1FE6EEEBE61B3137A17316C5662ADC055E323BEAF100086F831DE05EC2842BA1"
+    },
+    {
+      "path": "rtl/ddr_capture_ctrl.vhd",
+      "bytes": 4761,
+      "sha256": "E0DE90E702BA992B94AE0615D92EDDE2CC6072A5ABBDF46610D41CF3F9E2F5E5"
+    },
+    {
+      "path": "rtl/ddr_download_ctrl.vhd",
+      "bytes": 6871,
+      "sha256": "7BB762D042920F437DE7E4521CA0DB2B816FB786E43CCDB121F5A4A7BCE3F1B2"
+    },
+    {
+      "path": "sim/tb_ddr_upload_ctrl.vhd",
+      "bytes": 14540,
+      "sha256": "15575C5389D1BA213320AB0466D35DE077538A692C72D3B6621BB7CFFD273114"
+    },
+    {
+      "path": "sim/tb_ddr_read_ctrl.vhd",
+      "bytes": 32862,
+      "sha256": "987F77FA82E6ADC1D99E866A54E7F342B11D84ECC3847CEA2FBA4181D25FF7EB"
+    },
+    {
+      "path": "sim/tb_ddr_capture_ctrl.vhd",
+      "bytes": 9954,
+      "sha256": "322EEBFD24B7F7818593FE2958C100938493DCAE2265D29677BE82B523D783A1"
+    },
+    {
+      "path": "sim/tb_ddr_download_ctrl.vhd",
+      "bytes": 27116,
+      "sha256": "D921FDCED07A6256B2F9C9D5377F19775EB6BB056B352BE86B22260ED682D5B3"
+    },
+    {
+      "path": "constraints/controller_150mhz.xdc",
+      "bytes": 215,
+      "sha256": "D6F68A6ED0C8AA667AC5632198E52E93095184C1410529E3FBB0C55225AC08C3"
+    },
+    {
+      "path": "constraints/controller_125mhz.xdc",
+      "bytes": 204,
+      "sha256": "39525CBE6A806C659358C3C509F9488BB0EB3A2AB541E2CA5ED4EF272BAB741C"
+    },
+    {
+      "path": "scripts/create_four_stage_project.tcl",
+      "bytes": 2098,
+      "sha256": "200AA2F02A92EC57B34CFEFD6331435F42923042EAA1643910AEBFB9887758BE"
+    },
+    {
+      "path": "scripts/simulate_reverse.tcl",
+      "bytes": 537,
+      "sha256": "45EBCA7CE271437FDE8BD056E1BA00B668299DCD16D6212AEAEB25EA2DE67549"
+    },
+    {
+      "path": "scripts/threads_pre.tcl",
+      "bytes": 60,
+      "sha256": "1B9ABD6CC8A8D8F78297FB5E95DAF4A40BEBA931E2A89EE5DDAB3B012A731482"
+    },
+    {
+      "path": "scripts/run_reverse.ps1",
+      "bytes": 10806,
+      "sha256": "E35CB25E9FF2AB47520F99D22D724E3938239E2F8733BBB39C88B229F400E20F"
+    },
+    {
+      "path": "scripts/DdrJobGuard.cs",
+      "bytes": 14697,
+      "sha256": "F8751748BCDE6BA39D7FF286C9FC07AEA87374FDF56049E9F3AA85E1E655E41A"
+    },
+    {
+      "path": "docs/DDR_FOUR_STAGE_DESIGN_ZH.md",
+      "bytes": 6425,
+      "sha256": "AD5FDD50A71E0E2DC0E20B51CA84B4CBDB65D4EB695C9B3CD588523D573904DD"
+    }
+  ],
+  "tools": [
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+      "bytes": 1263,
+      "sha256": "5D97B4C31CA191CA304DA1D466857A65470C21EC6E9718F47537A49DA40634F7"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+      "bytes": 182784,
+      "sha256": "179B24F2214C528C2749F77FC3A7BAF7C1578F1A47726AD441052F3A6AFCD2AA"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\xvhdl.exe",
+      "bytes": 44929536,
+      "sha256": "DA44DFFD3E2122369D4220C793EA7CCEF1191B5A157971A96B557D1B09FF79CE"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\xelab.exe",
+      "bytes": 47242240,
+      "sha256": "609AA52A1BC6E1E72B96D0A8F759FF76A98765C13FCCF915908A547728FE8275"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\xsim.exe",
+      "bytes": 222720,
+      "sha256": "88FC302E3204191B57E13EB78D38AB38C7A5A5B01568525B93C53FA61E92C913"
+    }
+  ],
+  "source_memberships": [
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_upload_ctrl.vhd"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_read_ctrl.vhd"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_capture_ctrl.vhd"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_download_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_write",
+      "path": "sim/tb_ddr_upload_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_read",
+      "path": "sim/tb_ddr_read_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_capture",
+      "path": "sim/tb_ddr_capture_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_download",
+      "path": "sim/tb_ddr_download_ctrl.vhd"
+    },
+    {
+      "fileset": "constrs_1",
+      "path": "constraints/controller_150mhz.xdc"
+    },
+    {
+      "fileset": "constrs_read_125",
+      "path": "constraints/controller_125mhz.xdc"
+    }
+  ],
+  "tops": {
+    "sources_1": "ddr_capture_ctrl",
+    "sim_write": "tb_ddr_upload_ctrl",
+    "sim_read": "tb_ddr_read_ctrl",
+    "sim_capture": "tb_ddr_capture_ctrl",
+    "sim_download": "tb_ddr_download_ctrl"
+  },
+  "part": "xcvu11p-flgb2104-2-e",
+  "clocks_mhz": {
+    "ddr_upload_ctrl": 150,
+    "ddr_read_ctrl": 125,
+    "ddr_capture_ctrl": 150,
+    "ddr_download_ctrl": 150
+  },
+  "constraints_note": "Default capture 150 MHz; separate constrs_read_125 for read top. No synth/implementation. Original sim_write/sim_read present but not rerun."
+}

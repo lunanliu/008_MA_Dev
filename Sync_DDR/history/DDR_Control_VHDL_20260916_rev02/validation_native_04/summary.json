@@ -1,0 +1,41 @@
+{
+  "job": "DDR_VHDL_CTRL_NATIVE_20260916_REV02",
+  "grant_id": "DDR_REV02_REV03_FUNCTIONAL_20260917T143558Z",
+  "status": "FAIL",
+  "started_utc": "2026-09-17T14:46:48.7460311Z",
+  "native_deadline_utc": "2026-09-17T14:52:47.6387679Z",
+  "stages": [
+    {
+      "stage": "create",
+      "status": "FAIL",
+      "started_utc": "2026-09-17T14:46:48.7479128Z",
+      "exit_code": 1,
+      "ended_utc": "2026-09-17T14:46:59.8094177Z",
+      "root_pid": 33656,
+      "logs": [],
+      "cleanup": null,
+      "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /s /c \"\"C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat\" \"-mode\" \"batch\" \"-source\" \"D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\ddr_control\\astra_execution_20260917_rev04\\create_project_retry.tcl\" \"-log\" \"D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_04\\create.log\" \"-journal\" \"D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_04\\create.jou\" > \"D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_04\\create.launcher.log\" 2>&1\""
+    }
+  ],
+  "error": "Native stage exit 1",
+  "cleanup": {
+    "closed": true,
+    "empty_checks": 3,
+    "cancel_identities": [],
+    "observations": [
+      {
+        "utc": "2026-09-17T14:46:59.8237920Z",
+        "live_ids": []
+      },
+      {
+        "utc": "2026-09-17T14:47:00.8434430Z",
+        "live_ids": []
+      },
+      {
+        "utc": "2026-09-17T14:47:01.8515205Z",
+        "live_ids": []
+      }
+    ]
+  },
+  "finished_utc": "2026-09-17T14:47:01.8531802Z"
+}

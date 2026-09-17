@@ -1,0 +1,19 @@
+{
+  "status": "FINAL_INPUT_AUDIT_PASS",
+  "changed_existing_files": [
+    "README_ZH.md",
+    "docs\\PROJECT_SPEC_ZH.md",
+    "docs\\tutorial\\LABVIEW_TARGET_VI_STEP_BY_STEP_ZH.md",
+    "rtl\\ddr_read_ctrl.vhd",
+    "rtl\\ddr_upload_ctrl.vhd",
+    "scripts\\create_project.tcl",
+    "scripts\\simulate.tcl",
+    "sim\\tb_ddr_read_ctrl.vhd",
+    "sim\\tb_ddr_upload_ctrl.vhd"
+  ],
+  "protected_files_changed": [],
+  "port_counts": {
+    "ddr_upload_ctrl": 33,
+    "ddr_read_ctrl": 57
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-09-17T18:41:27.983448+00:00",
+  "level": "STATIC_SOURCE_AUDIT_NOT_EDA",
+  "roles": {
+    "ddr_capture_ctrl": {
+      "ports": 33,
+      "core": "ddr_upload_ctrl",
+      "all_core_ports_mapped_once": true,
+      "all_exposed_ports_used": true,
+      "no_new_latency": true
+    },
+    "ddr_download_ctrl": {
+      "ports": 46,
+      "core": "ddr_read_ctrl",
+      "all_core_ports_mapped_once": true,
+      "all_exposed_ports_used": true,
+      "no_new_latency": true
+    }
+  },
+  "baseline_changed": []
+}

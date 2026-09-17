@@ -1,0 +1,55 @@
+{
+  "request_id": "SYNC_DDR_RUNTIME_CONFIG_V1_20260917",
+  "status": "REQUESTED_NOT_GRANTED",
+  "owner_thread_id": "01a0afdf-cd3a-7e91-afc8-6a947ec3cc71",
+  "manager_thread_id": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "root": "D:\\008_MA_Dev\\Sync_DDR",
+  "manifest": "reports/operations/FROZEN_INPUTS_V1.json",
+  "manifest_sha256": "802CAA8E0134A10A1FA64900E457860AD487D570BC7AD82C400EC066E02F5AAB",
+  "executable": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+  "entry": "scripts/run_functional.ps1",
+  "output": "work/runtime_config_v1",
+  "scope": "create_project, required xvhdl/xelab, two bounded write/read XSim behavioral tests only",
+  "stages": [
+    "create",
+    "write",
+    "read"
+  ],
+  "stage_seconds": {
+    "create": 180,
+    "write": 300,
+    "read": 300
+  },
+  "whole_budget_seconds": 900,
+  "requested_first_start_not_after_utc": "2026-09-17T17:45:00Z",
+  "requested_absolute_deadline_utc": "2026-09-17T18:00:00Z",
+  "resources": {
+    "vivado_main_processes": 1,
+    "general_threads": 8,
+    "xelab_threads": 16,
+    "expected_peak_gib": 4,
+    "observed_free_gib": 16.45,
+    "memory_warning_gib": 8,
+    "memory_estimate_is_not_kill_limit": true
+  },
+  "abort_policy": "stage/whole deadline, explicit tool/scoreboard error; terminate only owned kernel Job; retain logs and require three empty checks",
+  "retry_policy": "preserve attempt evidence; only failed/unrun stage; fixed original deadline; changed frozen inputs need manager acknowledgement",
+  "test_scope": {
+    "write": "existing protocol checks + N=1336860/M=33422, U32 high-bit config accept/abort; 640-bit short smoke",
+    "read": "existing protocol checks + first/last/tail stalls + 65537 sequential word requests; 640-bit short smoke"
+  },
+  "grant_schema": {
+    "grant_id": "manager chosen NEW identity",
+    "owner_thread_id": "same as request",
+    "root": "same as request",
+    "frozen_manifest_sha256": "same as request",
+    "stages": [
+      "create",
+      "write",
+      "read"
+    ],
+    "first_start_not_after_utc": "manager UTC",
+    "absolute_deadline_utc": "manager UTC"
+  },
+  "central_resource_writer": "manager only"
+}

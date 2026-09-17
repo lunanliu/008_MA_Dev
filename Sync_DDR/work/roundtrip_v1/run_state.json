@@ -1,0 +1,13 @@
+{
+  "project": "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_01_create\\project\\DDR_Control.xpr",
+  "attempts": [
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_01_create",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip"
+  ],
+  "first_native_utc": "2026-09-17T19:15:38.3635811Z",
+  "deadline_utc": "2026-09-17T19:25:38.3635811Z",
+  "passed": [
+    "create",
+    "roundtrip"
+  ]
+}

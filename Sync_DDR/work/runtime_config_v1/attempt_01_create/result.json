@@ -1,0 +1,32 @@
+{
+  "stage": "create",
+  "status": "PASS",
+  "directory": "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_01_create",
+  "grant_id": "SYNC_DDR_RUNTIME_CONFIG_V1_20260917T172951Z",
+  "manifest_sha256": "802CAA8E0134A10A1FA64900E457860AD487D570BC7AD82C400EC066E02F5AAB",
+  "started_utc": "2026-09-17T17:31:29.1012072Z",
+  "exit_code": 0,
+  "root_pid": 34580,
+  "cleanup": {
+    "checks": [
+      {
+        "utc": "2026-09-17T17:31:45.6928968Z",
+        "ids": []
+      },
+      {
+        "utc": "2026-09-17T17:31:46.1993681Z",
+        "ids": []
+      },
+      {
+        "utc": "2026-09-17T17:31:46.7116021Z",
+        "ids": []
+      }
+    ],
+    "closed": true
+  },
+  "error": null,
+  "logs": [],
+  "finished_utc": "2026-09-17T17:31:46.7451140Z",
+  "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /s /c \"\"C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat\" \"-mode\" \"batch\" \"-source\" \"D:\\008_MA_Dev\\Sync_DDR\\scripts\\create_project.tcl\" \"-log\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_01_create\\vivado.log\" \"-journal\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_01_create\\vivado.jou\" \"-tclargs\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_01_create\" > \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_01_create\\launcher.log\" 2>&1\"",
+  "deadline_utc": "2026-09-17T17:46:29.0916392Z"
+}

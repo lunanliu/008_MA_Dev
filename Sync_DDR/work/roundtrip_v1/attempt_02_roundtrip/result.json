@@ -1,0 +1,47 @@
+{
+  "stage": "roundtrip",
+  "status": "PASS",
+  "directory": "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip",
+  "grant_id": "SYNC_DDR_ROUNDTRIP_V1_20260917T191413Z",
+  "manifest_sha256": "0321A20E7FBBA9FE57D787FEFDF30BD9F763E64DB061912C3AAC59B1645DD83D",
+  "started_utc": "2026-09-17T19:16:30.2671198Z",
+  "exit_code": 0,
+  "root_pid": 16772,
+  "cleanup": {
+    "closed": true,
+    "checks": [
+      {
+        "ids": [],
+        "utc": "2026-09-17T19:16:58.5659116Z"
+      },
+      {
+        "ids": [],
+        "utc": "2026-09-17T19:16:59.0713702Z"
+      },
+      {
+        "ids": [],
+        "utc": "2026-09-17T19:16:59.5858290Z"
+      }
+    ]
+  },
+  "error": null,
+  "logs": [
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\compile.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\compile.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\elaborate.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\elaborate.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\host_received_u32.csv",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\simulate.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\simulate.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\tb_ddr_roundtrip_vhdl.prj",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\tb_ddr_roundtrip.tcl",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\webtalk_956.backup.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\webtalk.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\xvhdl.log"
+  ],
+  "finished_utc": "2026-09-17T19:16:59.6851395Z",
+  "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /s /c \"\"C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat\" \"-mode\" \"batch\" \"-source\" \"D:\\008_MA_Dev\\Sync_DDR\\scripts\\simulate_roundtrip.tcl\" \"-log\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\vivado.log\" \"-journal\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\vivado.jou\" \"-tclargs\" \"roundtrip\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_01_create\\project\\DDR_Control.xpr\" > \"D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\launcher.log\" 2>&1\"",
+  "deadline_utc": "2026-09-17T19:25:38.3635811Z",
+  "host_count": 604,
+  "host_mismatch_count": 0
+}

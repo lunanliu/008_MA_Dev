@@ -1,0 +1,44 @@
+{
+  "stage": "write",
+  "status": "PASS",
+  "directory": "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write",
+  "grant_id": "SYNC_DDR_RUNTIME_CONFIG_V1_20260917T172951Z",
+  "manifest_sha256": "6A6565EBF9735B13D485AD21F7F3B526EDD46D4D450E97A54EFBAD8EF1B7661B",
+  "started_utc": "2026-09-17T17:39:46.9999183Z",
+  "exit_code": 0,
+  "root_pid": 30768,
+  "cleanup": {
+    "checks": [
+      {
+        "ids": [],
+        "utc": "2026-09-17T17:40:16.6751115Z"
+      },
+      {
+        "ids": [],
+        "utc": "2026-09-17T17:40:17.1836878Z"
+      },
+      {
+        "ids": [],
+        "utc": "2026-09-17T17:40:17.7014208Z"
+      }
+    ],
+    "closed": true
+  },
+  "error": null,
+  "logs": [
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\compile.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\compile.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\elaborate.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\elaborate.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\simulate.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\simulate.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\tb_ddr_upload_ctrl_vhdl.prj",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\tb_ddr_upload_ctrl.tcl",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\webtalk_30436.backup.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\webtalk.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\native_logs\\xvhdl.log"
+  ],
+  "finished_utc": "2026-09-17T17:40:17.7766531Z",
+  "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /s /c \"\"C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat\" \"-mode\" \"batch\" \"-source\" \"D:\\008_MA_Dev\\Sync_DDR\\scripts\\simulate.tcl\" \"-log\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\vivado.log\" \"-journal\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\vivado.jou\" \"-tclargs\" \"write\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_01_create\\project\\DDR_Control.xpr\" > \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write\\launcher.log\" 2>&1\"",
+  "deadline_utc": "2026-09-17T17:46:29.0916392Z"
+}

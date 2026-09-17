@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "grant_id": "SYNC_DDR_FOUR_STAGE_V1_20260917T184529Z",
+  "status": "ADMITTED_NEW_SCOPE",
+  "grant_usable": true,
+  "owner_thread_id": "01a0afdf-cd3a-7e91-afc8-6a947ec3cc71",
+  "manager_thread_id": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "root": "D:\\008_MA_Dev\\Sync_DDR",
+  "request_id": "SYNC_DDR_FOUR_STAGE_V1_20260917",
+  "frozen_manifest_sha256": "BF0F47EE82245915D79E240B7E3C196CD34F32FD7A6D69521869578609144801",
+  "stages": [
+    "create",
+    "capture",
+    "download"
+  ],
+  "admitted_utc": "2026-09-17T18:45:29.808253+00:00",
+  "first_start_not_after_utc": "2026-09-17T18:56:28.079319+00:00",
+  "absolute_deadline_utc": "2026-09-17T19:11:28.079319+00:00",
+  "whole_budget_seconds": 900,
+  "budget_rule": "Use the first persisted launch-budget timestamp once: at most 900 seconds and no later than absolute_deadline_utc. Preserve run_state across attempts. Actual first native PID+creation must also meet first_start_not_after_utc; no retry reset.",
+  "stage_seconds": {
+    "create": 180,
+    "capture": 300,
+    "download": 300
+  },
+  "output": "work/four_stage_v1",
+  "resources": {
+    "vivado_main_processes": 1,
+    "matlab_processes": 0,
+    "general_threads": 8,
+    "xelab_threads": 16,
+    "ip_jobs": 0,
+    "expected_peak_gib": 4,
+    "physical_free_warning_gib": 8,
+    "physical_memory_is_warning_only": true
+  },
+  "scope": "Four-source GUI project creation, required xvhdl/xelab and two bounded XSim capture/download behavior tests only; previously passed upload/read are not rerun.",
+  "forbidden": [
+    "synthesis",
+    "implementation",
+    "NI compile",
+    "board test",
+    "MATLAB",
+    "CLIP XML",
+    "other project writes",
+    "rerun passed stages",
+    "automatic push"
+  ],
+  "project_expected": "work/four_stage_v1/attempt_01_create/project/DDR_Control.xpr",
+  "part": "xcvu11p-flgb2104-2-e",
+  "expected_tops": {
+    "sources_1": "ddr_capture_ctrl",
+    "sim_write": "tb_ddr_upload_ctrl",
+    "sim_read": "tb_ddr_read_ctrl",
+    "sim_capture": "tb_ddr_capture_ctrl",
+    "sim_download": "tb_ddr_download_ctrl"
+  },
+  "expected_source_memberships": [
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_upload_ctrl.vhd"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_read_ctrl.vhd"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_capture_ctrl.vhd"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_download_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_write",
+      "path": "sim/tb_ddr_upload_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_read",
+      "path": "sim/tb_ddr_read_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_capture",
+      "path": "sim/tb_ddr_capture_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_download",
+      "path": "sim/tb_ddr_download_ctrl.vhd"
+    },
+    {
+      "fileset": "constrs_1",
+      "path": "constraints/controller_150mhz.xdc"
+    },
+    {
+      "fileset": "constrs_read_125",
+      "path": "constraints/controller_125mhz.xdc"
+    }
+  ],
+  "repair_rule": "Sole task versions ordinary execution repairs, retains all evidence, and retries only failed/unrun stages within the same fixed deadline. Changed frozen inputs require manager acknowledgement; no relaxation of acceptance.",
+  "closeout_rule": "Record root exit and three consecutive complete empty owned Job observations, execution and self-review; manager checks scope and resource closure. No automatic next grant.",
+  "scientific_boundary": "Behavioral tests only. Design peak/ideal throughput is not sustained DDR/PCIe throughput, physical timing or NI/board acceptance."
+}

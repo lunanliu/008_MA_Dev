@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "created_utc": "2026-09-17T19:07:21.679621+00:00",
+  "root": "D:\\008_MA_Dev\\Sync_DDR",
+  "files": [
+    {
+      "path": "rtl/ddr_upload_ctrl.vhd",
+      "bytes": 12586,
+      "sha256": "B70495D20F01D3C1CBD96F6614572393EEB929664BAC44D426830491DEF36A2D"
+    },
+    {
+      "path": "rtl/ddr_read_ctrl.vhd",
+      "bytes": 18662,
+      "sha256": "1FE6EEEBE61B3137A17316C5662ADC055E323BEAF100086F831DE05EC2842BA1"
+    },
+    {
+      "path": "rtl/ddr_capture_ctrl.vhd",
+      "bytes": 4761,
+      "sha256": "E0DE90E702BA992B94AE0615D92EDDE2CC6072A5ABBDF46610D41CF3F9E2F5E5"
+    },
+    {
+      "path": "rtl/ddr_download_ctrl.vhd",
+      "bytes": 6871,
+      "sha256": "7BB762D042920F437DE7E4521CA0DB2B816FB786E43CCDB121F5A4A7BCE3F1B2"
+    },
+    {
+      "path": "sim/tb_ddr_upload_ctrl.vhd",
+      "bytes": 14540,
+      "sha256": "15575C5389D1BA213320AB0466D35DE077538A692C72D3B6621BB7CFFD273114"
+    },
+    {
+      "path": "sim/tb_ddr_read_ctrl.vhd",
+      "bytes": 32862,
+      "sha256": "987F77FA82E6ADC1D99E866A54E7F342B11D84ECC3847CEA2FBA4181D25FF7EB"
+    },
+    {
+      "path": "sim/tb_ddr_capture_ctrl.vhd",
+      "bytes": 9954,
+      "sha256": "322EEBFD24B7F7818593FE2958C100938493DCAE2265D29677BE82B523D783A1"
+    },
+    {
+      "path": "sim/tb_ddr_download_ctrl.vhd",
+      "bytes": 27116,
+      "sha256": "D921FDCED07A6256B2F9C9D5377F19775EB6BB056B352BE86B22260ED682D5B3"
+    },
+    {
+      "path": "sim/tb_ddr_roundtrip.vhd",
+      "bytes": 36098,
+      "sha256": "A5A85C71BCB2AC0626F3D6A1B820E295D8C8180C0AD5660C1AB2297F92605956"
+    },
+    {
+      "path": "constraints/controller_150mhz.xdc",
+      "bytes": 215,
+      "sha256": "D6F68A6ED0C8AA667AC5632198E52E93095184C1410529E3FBB0C55225AC08C3"
+    },
+    {
+      "path": "constraints/controller_125mhz.xdc",
+      "bytes": 204,
+      "sha256": "39525CBE6A806C659358C3C509F9488BB0EB3A2AB541E2CA5ED4EF272BAB741C"
+    },
+    {
+      "path": "scripts/create_roundtrip_project.tcl",
+      "bytes": 2152,
+      "sha256": "D934E96A085088E51C8FF20812414823F4C9A6BF15E4AC1ECC77DC01926945FE"
+    },
+    {
+      "path": "scripts/simulate_roundtrip.tcl",
+      "bytes": 523,
+      "sha256": "5EE446EB716E72CF49738986E8FE262EFD617EA9AF170CF7B1454DD9D397C343"
+    },
+    {
+      "path": "scripts/run_roundtrip.ps1",
+      "bytes": 11222,
+      "sha256": "30F6200671C49839DE3FB69D470BA3B6C4966855F7D393838E61D06DAB25B8EB"
+    },
+    {
+      "path": "scripts/DdrJobGuard.cs",
+      "bytes": 14697,
+      "sha256": "F8751748BCDE6BA39D7FF286C9FC07AEA87374FDF56049E9F3AA85E1E655E41A"
+    },
+    {
+      "path": "scripts/threads_pre.tcl",
+      "bytes": 60,
+      "sha256": "1B9ABD6CC8A8D8F78297FB5E95DAF4A40BEBA931E2A89EE5DDAB3B012A731482"
+    },
+    {
+      "path": "docs/DDR_ROUNDTRIP_DESIGN_ZH.md",
+      "bytes": 2633,
+      "sha256": "7C98819A419F76541BB668F811CAE745879847F5B8CCD7304AFDB5F6AD342A65"
+    },
+    {
+      "path": "examples/roundtrip_604/input_u32.csv",
+      "bytes": 6644,
+      "sha256": "FEC8B6B5054368F51E59041E6FEC1730B6F897695F067F832D63D78A7CDF0DA2"
+    },
+    {
+      "path": "examples/roundtrip_604/expected_u32.csv",
+      "bytes": 6644,
+      "sha256": "FEC8B6B5054368F51E59041E6FEC1730B6F897695F067F832D63D78A7CDF0DA2"
+    },
+    {
+      "path": "examples/roundtrip_604/input_iq_i16.csv",
+      "bytes": 5930,
+      "sha256": "8431555AA57E0D1A76D6476BD304CD0E922FEA688ECEC01DA912367CBF58C639"
+    },
+    {
+      "path": "examples/roundtrip_604/metadata.json",
+      "bytes": 630,
+      "sha256": "C1F37E6E1A5923EEADE2B197BE5DD24D4570886356BF8A5E163621B62BE3CB82"
+    }
+  ],
+  "tools": [
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+      "bytes": 1263,
+      "sha256": "5D97B4C31CA191CA304DA1D466857A65470C21EC6E9718F47537A49DA40634F7"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+      "bytes": 182784,
+      "sha256": "179B24F2214C528C2749F77FC3A7BAF7C1578F1A47726AD441052F3A6AFCD2AA"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\xvhdl.exe",
+      "bytes": 44929536,
+      "sha256": "DA44DFFD3E2122369D4220C793EA7CCEF1191B5A157971A96B557D1B09FF79CE"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\xelab.exe",
+      "bytes": 47242240,
+      "sha256": "609AA52A1BC6E1E72B96D0A8F759FF76A98765C13FCCF915908A547728FE8275"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\xsim.exe",
+      "bytes": 222720,
+      "sha256": "88FC302E3204191B57E13EB78D38AB38C7A5A5B01568525B93C53FA61E92C913"
+    }
+  ],
+  "source_memberships": [
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_upload_ctrl.vhd"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_read_ctrl.vhd"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_capture_ctrl.vhd"
+    },
+    {
+      "fileset": "sources_1",
+      "path": "rtl/ddr_download_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_write",
+      "path": "sim/tb_ddr_upload_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_read",
+      "path": "sim/tb_ddr_read_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_capture",
+      "path": "sim/tb_ddr_capture_ctrl.vhd"
+    },
+    {
+      "fileset": "sim_download",
+      "path": "sim/tb_ddr_download_ctrl.vhd"
+    },
+    {
+      "fileset": "constrs_1",
+      "path": "constraints/controller_150mhz.xdc"
+    },
+    {
+      "fileset": "constrs_read_125",
+      "path": "constraints/controller_125mhz.xdc"
+    },
+    {
+      "fileset": "sim_roundtrip",
+      "path": "sim/tb_ddr_roundtrip.vhd"
+    }
+  ],
+  "tops": {
+    "sources_1": "ddr_capture_ctrl",
+    "sim_write": "tb_ddr_upload_ctrl",
+    "sim_read": "tb_ddr_read_ctrl",
+    "sim_capture": "tb_ddr_capture_ctrl",
+    "sim_download": "tb_ddr_download_ctrl",
+    "sim_roundtrip": "tb_ddr_roundtrip"
+  },
+  "part": "xcvu11p-flgb2104-2-e",
+  "clock_roles_mhz": [
+    150,
+    125,
+    150,
+    150
+  ],
+  "test_scope": "One 604-point transparent four-controller roundtrip; 2 actual model memories, finite result/DMA queues and independent Host comparison. No physical CDC/NI/board proof."
+}

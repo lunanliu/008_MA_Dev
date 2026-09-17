@@ -1,0 +1,129 @@
+{
+  "status": "FUNCTIONAL_BEHAVIOR_PASS",
+  "created_utc": "2026-09-17T17:42:20.000216+00:00",
+  "root": "D:\\008_MA_Dev\\Sync_DDR",
+  "manifest": "reports/operations/FROZEN_INPUTS_V2.json",
+  "manifest_sha256": "6A6565EBF9735B13D485AD21F7F3B526EDD46D4D450E97A54EFBAD8EF1B7661B",
+  "stage_attempts": [
+    {
+      "attempt": "attempt_01_create",
+      "stage": "create",
+      "status": "PASS",
+      "exit_code": 0,
+      "job_closed": true,
+      "started_utc": "2026-09-17T17:31:29.1012072Z",
+      "finished_utc": "2026-09-17T17:31:46.7451140Z"
+    },
+    {
+      "attempt": "attempt_02_write",
+      "stage": "write",
+      "status": "FAIL",
+      "exit_code": 1,
+      "job_closed": true,
+      "started_utc": "2026-09-17T17:32:27.6606866Z",
+      "finished_utc": "2026-09-17T17:32:48.9470815Z"
+    },
+    {
+      "attempt": "attempt_03_write",
+      "stage": "write",
+      "status": "PASS",
+      "exit_code": 0,
+      "job_closed": true,
+      "started_utc": "2026-09-17T17:39:46.9999183Z",
+      "finished_utc": "2026-09-17T17:40:17.7766531Z"
+    },
+    {
+      "attempt": "attempt_04_read",
+      "stage": "read",
+      "status": "PASS",
+      "exit_code": 0,
+      "job_closed": true,
+      "started_utc": "2026-09-17T17:40:28.7023428Z",
+      "finished_utc": "2026-09-17T17:41:11.6662211Z"
+    }
+  ],
+  "checks": {
+    "write": {
+      "marker_count": 1,
+      "extra_markers": [
+        "UPLOAD_ALT_WIDTH_CASE_PASS",
+        "UPLOAD_FULL_FRAME_1336860_PASS"
+      ],
+      "actual_elaborate_command": "call xelab  -wto 446bf661291a41a799bb133cbd29b5ea --incr --debug typical --relax --mt 16 -L xil_defaultlib -L secureip --snapshot tb_ddr_upload_ctrl_behav xil_defaultlib.tb_ddr_upload_ctrl -log elaborate.log",
+      "errors": [],
+      "warnings": [
+        [
+          "launcher.log",
+          "WARNING: Default location for XILINX_VIVADO_HLS not found: "
+        ],
+        [
+          "launcher.log",
+          "WARNING: Default location for XILINX_HLS not found: "
+        ],
+        [
+          "launcher.log",
+          "WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/008_MA_Dev/Sync_DDR/work/runtime_config_v1/attempt_01_create/project/DDR_Control.gen/sources_1'."
+        ],
+        [
+          "vivado.log",
+          "WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/008_MA_Dev/Sync_DDR/work/runtime_config_v1/attempt_01_create/project/DDR_Control.gen/sources_1'."
+        ]
+      ],
+      "started_utc": "2026-09-17T17:39:46.9999183Z",
+      "finished_utc": "2026-09-17T17:40:17.7766531Z",
+      "job_closed": true
+    },
+    "read": {
+      "marker_count": 1,
+      "extra_markers": [
+        "READ_ALT_WIDTH_CASE_PASS",
+        "READ_OVER_65536_WORDS_PASS"
+      ],
+      "actual_elaborate_command": "call xelab  -wto 446bf661291a41a799bb133cbd29b5ea --incr --debug typical --relax --mt 16 -L xil_defaultlib -L secureip --snapshot tb_ddr_read_ctrl_behav xil_defaultlib.tb_ddr_read_ctrl -log elaborate.log",
+      "errors": [],
+      "warnings": [
+        [
+          "launcher.log",
+          "WARNING: Default location for XILINX_VIVADO_HLS not found: "
+        ],
+        [
+          "launcher.log",
+          "WARNING: Default location for XILINX_HLS not found: "
+        ],
+        [
+          "launcher.log",
+          "WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/008_MA_Dev/Sync_DDR/work/runtime_config_v1/attempt_01_create/project/DDR_Control.gen/sources_1'."
+        ],
+        [
+          "vivado.log",
+          "WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/008_MA_Dev/Sync_DDR/work/runtime_config_v1/attempt_01_create/project/DDR_Control.gen/sources_1'."
+        ]
+      ],
+      "started_utc": "2026-09-17T17:40:28.7023428Z",
+      "finished_utc": "2026-09-17T17:41:11.6662211Z",
+      "job_closed": true
+    }
+  },
+  "boundaries": {
+    "synthesis": "NOT_RUN",
+    "implementation": "NOT_RUN",
+    "NI_compile": "NOT_RUN",
+    "board": "NOT_RUN",
+    "sustained_throughput": "NOT_QUALIFIED",
+    "remote_VI_CDC": "NOT_VERIFIED",
+    "NI_write_read_visibility": "UNCONFIRMED",
+    "physical_width_mapping": "UNCONFIRMED"
+  },
+  "validation_counts": {
+    "write_sample_count": 1336860,
+    "write_word_count": 33422,
+    "write_tail_real_samples": 20,
+    "write_tail_zero_samples": 20,
+    "read_large_word_count": 65537,
+    "read_large_sample_count": 2621480,
+    "read_large_last_address": 65536,
+    "read_large_transfer_cycles": 655370
+  },
+  "old_failed_history": "unchanged",
+  "tests_are": "two independent control/datapath models, not a real NI or combined hardware roundtrip"
+}

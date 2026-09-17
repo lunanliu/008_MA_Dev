@@ -1,0 +1,5 @@
+sources_1	D:/008_MA_Dev/Sync_DDR/rtl/ddr_upload_ctrl.vhd
+sources_1	D:/008_MA_Dev/Sync_DDR/rtl/ddr_read_ctrl.vhd
+sim_write	D:/008_MA_Dev/Sync_DDR/sim/tb_ddr_upload_ctrl.vhd
+sim_read	D:/008_MA_Dev/Sync_DDR/sim/tb_ddr_read_ctrl.vhd
+constrs_1	D:/008_MA_Dev/Sync_DDR/constraints/upload_150mhz.xdc

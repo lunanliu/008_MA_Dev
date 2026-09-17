@@ -1,0 +1,6 @@
+sources_1	ddr_capture_ctrl
+sim_write	tb_ddr_upload_ctrl
+sim_read	tb_ddr_read_ctrl
+sim_capture	tb_ddr_capture_ctrl
+sim_download	tb_ddr_download_ctrl
+sim_roundtrip	tb_ddr_roundtrip

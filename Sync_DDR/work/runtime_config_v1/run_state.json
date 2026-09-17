@@ -1,0 +1,16 @@
+{
+  "project": "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_01_create\\project\\DDR_Control.xpr",
+  "deadline_utc": "2026-09-17T17:46:29.0916392Z",
+  "first_native_utc": "2026-09-17T17:31:29.0916392Z",
+  "attempts": [
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_01_create",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_02_write",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_03_write",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_04_read"
+  ],
+  "passed": [
+    "create",
+    "write",
+    "read"
+  ]
+}

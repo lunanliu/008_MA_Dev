@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "created_utc": "2026-09-17T17:26:08.373958+00:00",
+  "root": "D:\\008_MA_Dev\\Sync_DDR",
+  "files": [
+    {
+      "path": "rtl/ddr_upload_ctrl.vhd",
+      "bytes": 12586,
+      "sha256": "B70495D20F01D3C1CBD96F6614572393EEB929664BAC44D426830491DEF36A2D"
+    },
+    {
+      "path": "rtl/ddr_read_ctrl.vhd",
+      "bytes": 18662,
+      "sha256": "1FE6EEEBE61B3137A17316C5662ADC055E323BEAF100086F831DE05EC2842BA1"
+    },
+    {
+      "path": "sim/tb_ddr_upload_ctrl.vhd",
+      "bytes": 14540,
+      "sha256": "15575C5389D1BA213320AB0466D35DE077538A692C72D3B6621BB7CFFD273114"
+    },
+    {
+      "path": "sim/tb_ddr_read_ctrl.vhd",
+      "bytes": 32862,
+      "sha256": "987F77FA82E6ADC1D99E866A54E7F342B11D84ECC3847CEA2FBA4181D25FF7EB"
+    },
+    {
+      "path": "constraints/upload_150mhz.xdc",
+      "bytes": 152,
+      "sha256": "53E720A13C1E45FF0F2A195A7166A62420DBB7B0CBA189D7913D724C03D4389D"
+    },
+    {
+      "path": "scripts/create_project.tcl",
+      "bytes": 1799,
+      "sha256": "19A24D7A1C7F2A56F6EC731DD6B6015FB5F3A0B8A277AC79C1336DF7368288A1"
+    },
+    {
+      "path": "scripts/simulate.tcl",
+      "bytes": 502,
+      "sha256": "C79746FE31313ACCB5072B9D14E4EF6FB9B9F373C0AC098E396FB3932A5E510F"
+    },
+    {
+      "path": "scripts/threads_pre.tcl",
+      "bytes": 60,
+      "sha256": "1B9ABD6CC8A8D8F78297FB5E95DAF4A40BEBA931E2A89EE5DDAB3B012A731482"
+    },
+    {
+      "path": "scripts/run_functional.ps1",
+      "bytes": 11040,
+      "sha256": "9BAC3B336FDD1B798DA024E7005279E9A90B8B5E6FE27DB6C5A0834AFC3E6D67"
+    },
+    {
+      "path": "scripts/DdrJobGuard.cs",
+      "bytes": 14697,
+      "sha256": "F8751748BCDE6BA39D7FF286C9FC07AEA87374FDF56049E9F3AA85E1E655E41A"
+    }
+  ],
+  "tools": [
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+      "bytes": 1263,
+      "sha256": "5D97B4C31CA191CA304DA1D466857A65470C21EC6E9718F47537A49DA40634F7"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\vivado.exe",
+      "bytes": 182784,
+      "sha256": "179B24F2214C528C2749F77FC3A7BAF7C1578F1A47726AD441052F3A6AFCD2AA"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\xvhdl.exe",
+      "bytes": 44929536,
+      "sha256": "DA44DFFD3E2122369D4220C793EA7CCEF1191B5A157971A96B557D1B09FF79CE"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\xelab.exe",
+      "bytes": 47242240,
+      "sha256": "609AA52A1BC6E1E72B96D0A8F759FF76A98765C13FCCF915908A547728FE8275"
+    },
+    {
+      "path": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\unwrapped\\win64.o\\xsim.exe",
+      "bytes": 222720,
+      "sha256": "88FC302E3204191B57E13EB78D38AB38C7A5A5B01568525B93C53FA61E92C913"
+    }
+  ],
+  "top": "ddr_upload_ctrl",
+  "simulation_tops": {
+    "sim_write": "tb_ddr_upload_ctrl",
+    "sim_read": "tb_ddr_read_ctrl"
+  },
+  "source_set": [
+    "rtl/ddr_upload_ctrl.vhd",
+    "rtl/ddr_read_ctrl.vhd",
+    "sim/tb_ddr_upload_ctrl.vhd",
+    "sim/tb_ddr_read_ctrl.vhd",
+    "constraints/upload_150mhz.xdc"
+  ],
+  "part": "xcvu11p-flgb2104-2-e",
+  "constraints_note": "Standalone upload reference 150 MHz; read TB 125 MHz; no NI integration timing evidence."
+}

@@ -1,0 +1,359 @@
+--- baseline/rtl/ddr_upload_ctrl.vhd
++++ current/rtl/ddr_upload_ctrl.vhd
+@@ -1,4 +1,6 @@
+--- Pure VHDL-93 control-only CLIP. The 40 x U32 data array stays in LabVIEW.
++-- VHDL-93 control-only CLIP. The K x U32 data array stays in LabVIEW.
++-- DDR_WIDTH_BITS is compile-time; ddr_capacity_words is a runtime word count.
++-- load_done means all writes accepted, not a physical DDR write fence.
+ -- NI DDR Write Ready for Input MUST be delayed once in LabVIEW before
+ -- connecting ddr_write_ready_now. Do not add another delay inside this core.
+ -- All CLIP I/O in this contract uses the SAME clock as the SCTL, with no
+@@ -8,6 +10,7 @@
+ use ieee.numeric_std.all;
+ 
+ entity ddr_upload_ctrl is
++  generic (DDR_WIDTH_BITS : positive := 1280);
+   port (
+     clk                   : in  std_logic;
+     reset                 : in  std_logic;
+@@ -19,6 +22,7 @@
+     dram_ready            : in  std_logic;
+     sample_count          : in  std_logic_vector(31 downto 0);
+     ddr_word_count        : in  std_logic_vector(31 downto 0);
++    ddr_capacity_words        : in  std_logic_vector(31 downto 0);
+     fifo_output_valid     : in  std_logic;
+     ddr_write_ready_now   : in  std_logic;
+     fifo_read_enable      : out std_logic;
+@@ -45,9 +49,18 @@
+ end entity;
+ 
+ architecture rtl of ddr_upload_ctrl is
+-  type state_t is (WAIT_LOAD, LOADING, DONE, FAULT);
++  function group_bits(groups : positive) return positive is
++    variable v : natural := groups - 1;
++    variable bits : positive := 1;
++  begin
++    while v > 1 loop v := v / 2; bits := bits + 1; end loop;
++    return bits;
++  end function;
++  constant SAMPLES_PER_WORD : positive := DDR_WIDTH_BITS / 32;
++  constant GROUPS_PER_WORD : positive := SAMPLES_PER_WORD / 4;
++  type state_t is (WAIT_LOAD, LOADING, DONE, FAULT, CONFIG_CALC, CONFIG_CHECK);
+   signal state_q       : state_t := WAIT_LOAD;
+-  signal group_q       : unsigned(3 downto 0) := (others => '0');
++  signal group_q       : unsigned(group_bits(GROUPS_PER_WORD)-1 downto 0) := (others => '0');
+   signal loaded_q      : unsigned(31 downto 0) := (others => '0');
+   signal address_q     : unsigned(31 downto 0) := (others => '0');
+   signal samples_q     : unsigned(31 downto 0) := (others => '0');
+@@ -61,21 +74,20 @@
+   signal load_edge, rearm_edge, params_ok : std_logic;
+   signal load_context, start_accept, rearm_accept : std_logic;
+   signal read_enable_i, read_fire, write_fire : std_logic;
+-  signal n64, m40 : unsigned(63 downto 0);
++  signal capacity_q : unsigned(31 downto 0) := (others => '0');
++  signal end_sample_q, word_samples_q : unsigned(63 downto 0) := (others => '0');
+   signal load_cycles_q, window_q, receive_q, write_q, empty_q, stall_q, pause_q :
+     unsigned(63 downto 0) := (others => '0');
+   signal first_read_q : std_logic := '0';
+ begin
+-  -- Runtime limit matches the existing DDR_Waveform allocation: 2048 words.
+-  -- No general divider is required; multiplication by 40 is shifts plus add.
+-  n64 <= resize(unsigned(sample_count), 64);
+-  m40 <= shift_left(resize(unsigned(ddr_word_count), 64), 5) +
+-         shift_left(resize(unsigned(ddr_word_count), 64), 3);
+-  params_ok <= '1' when unsigned(sample_count) /= 0 and
+-                        sample_count(1 downto 0) = "00" and
+-                        unsigned(ddr_word_count) /= 0 and
+-                        unsigned(ddr_word_count) <= 2048 and
+-                        n64 <= m40 and n64 + 39 >= m40 else '0';
++  assert DDR_WIDTH_BITS mod 128 = 0
++    report "DDR_WIDTH_BITS must be a positive multiple of 128" severity failure;
++  -- Checks use the immutable command snapshot. The constant product and
++  -- upper sample bound are registered in CONFIG_CALC before comparison.
++  params_ok <= '1' when samples_q /= 0 and samples_q(1 downto 0) = "00" and
++                        capacity_q /= 0 and words_q /= 0 and words_q <= capacity_q and
++                        resize(samples_q,64) <= word_samples_q and
++                        end_sample_q >= word_samples_q else '0';
+   load_edge  <= load_command and not prev_load_q;
+   rearm_edge <= rearm_command and not prev_rearm_q;
+ 
+@@ -86,11 +98,11 @@
+                           rearm_edge = '0' and new_session_safe = '1' and
+                           dram_ready = '1' and
+                           (state_q = WAIT_LOAD or state_q = DONE) else '0';
+-  start_accept <= load_context and params_ok;
++  start_accept <= load_context;
+   rearm_accept <= '1' when reset = '0' and run_enable = '1' and
+                           abort_command = '0' and rearm_edge = '1' and
+                           load_edge = '0' and new_session_safe = '1' and
+-                          state_q /= LOADING else '0';
++                          (state_q = WAIT_LOAD or state_q = DONE or state_q = FAULT) else '0';
+ 
+   read_enable_i <= '1' when reset = '0' and run_enable = '1' and
+                           abort_command = '0' and state_q = LOADING and
+@@ -110,7 +122,7 @@
+   ddr_write_valid   <= write_fire;
+   ddr_write_address <= std_logic_vector(address_q);
+   loaded_samples   <= std_logic_vector(loaded_q);
+-  load_busy        <= '1' when state_q = LOADING else '0';
++  load_busy        <= '1' when state_q = LOADING or state_q = CONFIG_CALC or state_q = CONFIG_CHECK else '0';
+   load_done        <= '1' when state_q = DONE else '0';
+   load_fault       <= '1' when state_q = FAULT else '0';
+   fault_code       <= fault_q;
+@@ -125,7 +137,8 @@
+   pause_cycles <= std_logic_vector(pause_q);
+   with state_q select load_state <=
+     x"00" when WAIT_LOAD, x"01" when LOADING,
+-    x"02" when DONE, x"03" when FAULT;
++    x"02" when DONE, x"03" when FAULT,
++    x"04" when CONFIG_CALC, x"05" when CONFIG_CHECK;
+ 
+   -- Hardware cycle counters; Host polls only held results after DONE/FAULT.
+   -- data_window excludes the initial wait for the first DMA sample.
+@@ -170,6 +183,7 @@
+         address_q    <= (others => '0');
+         samples_q    <= (others => '0');
+         words_q      <= (others => '0');
++        capacity_q <= (others => '0'); end_sample_q <= (others => '0'); word_samples_q <= (others => '0');
+         pending_q    <= '0';
+         fault_q      <= x"00";
+         generation_q <= (others => '0');
+@@ -180,15 +194,15 @@
+           rejected_q <= '1';
+         end if;
+         if start_accept = '1' then
+-          state_q      <= LOADING;
++          state_q      <= CONFIG_CALC;
+           group_q      <= (others => '0');
+           loaded_q     <= (others => '0');
+           address_q    <= (others => '0');
+           pending_q    <= '0';
+           samples_q    <= unsigned(sample_count);
+           words_q      <= unsigned(ddr_word_count);
++          capacity_q   <= unsigned(ddr_capacity_words);
+           fault_q      <= x"00";
+-          generation_q <= generation_q + 1;
+           rejected_q   <= '0';
+         elsif rearm_accept = '1' then
+           state_q    <= WAIT_LOAD;
+@@ -197,12 +211,26 @@
+           address_q  <= (others => '0');
+           samples_q  <= (others => '0');
+           words_q    <= (others => '0');
++          capacity_q <= (others => '0'); end_sample_q <= (others => '0'); word_samples_q <= (others => '0');
+           pending_q  <= '0';
+           fault_q    <= x"00";
+           rejected_q <= '0';
+-        elsif load_context = '1' and params_ok = '0' then
+-          state_q <= FAULT;
+-          fault_q <= x"01";
++        elsif state_q = CONFIG_CALC or state_q = CONFIG_CHECK then
++          if abort_command = '1' then
++            state_q <= FAULT; fault_q <= x"03";
++          elsif dram_ready = '0' then
++            state_q <= FAULT; fault_q <= x"02";
++          elsif run_enable = '1' then
++            if state_q = CONFIG_CALC then
++              word_samples_q <= words_q * to_unsigned(SAMPLES_PER_WORD,32);
++              end_sample_q <= resize(samples_q,64) + to_unsigned(SAMPLES_PER_WORD-1,64);
++              state_q <= CONFIG_CHECK;
++            elsif params_ok = '1' then
++              state_q <= LOADING; generation_q <= generation_q + 1;
++            else
++              state_q <= FAULT; fault_q <= x"01"; rejected_q <= '1';
++            end if;
++          end if;
+         elsif state_q = LOADING then
+           -- Abort and loss of DRAM readiness invalidate the upload even if
+           -- run_enable=0. Pausing must not hide a DRAM reset/recalibration.
+@@ -221,7 +249,7 @@
+             end if;
+           elsif read_fire = '1' then
+             loaded_q <= loaded_q + 4;
+-            if group_q = 9 or loaded_q + 4 = samples_q then
++            if group_q = GROUPS_PER_WORD-1 or loaded_q + 4 = samples_q then
+               pending_q <= '1';
+             else
+               group_q <= group_q + 1;
+
+--- baseline/rtl/ddr_read_ctrl.vhd
++++ current/rtl/ddr_read_ctrl.vhd
+@@ -1,4 +1,5 @@
+--- VHDL-93 DDR1280 read/replay controller. Data stays in LabVIEW.
++-- VHDL-93 configurable-word read/replay controller. Data stays in LabVIEW.
++-- DDR_WIDTH_BITS is compile-time; ddr_capacity_words is a runtime word count.
+ -- All ports use the same clock as the 125 MHz SCTL. NI write/request
+ -- Ready for Input is delayed ONCE in LabVIEW before the *_ready_now ports.
+ -- reset is synchronous active HIGH; it does not flush NI memory/FIFOs.
+@@ -7,6 +8,7 @@
+ use ieee.numeric_std.all;
+ 
+ entity ddr_read_ctrl is
++  generic (DDR_WIDTH_BITS : positive := 1280);
+   port (
+     clk                       : in  std_logic;
+     reset                     : in  std_logic;
+@@ -18,6 +20,7 @@
+     dram_ready                : in  std_logic;
+     sample_count              : in  std_logic_vector(31 downto 0);
+     ddr_word_count            : in  std_logic_vector(31 downto 0);
++    ddr_capacity_words        : in  std_logic_vector(31 downto 0);
+     pattern_check_enable      : in  std_logic;
+     pattern_seed              : in  std_logic_vector(31 downto 0);
+     ddr_request_ready_now     : in  std_logic;
+@@ -39,6 +42,8 @@
+     stream_offset             : out std_logic_vector(31 downto 0);
+     stream_valid              : out std_logic;
+     stream_fire               : out std_logic;
++    stream_first              : out std_logic;
++    stream_last               : out std_logic;
+     read_state                : out std_logic_vector(7 downto 0);
+     read_busy                 : out std_logic;
+     read_done                 : out std_logic;
+@@ -66,12 +71,21 @@
+ end entity;
+ 
+ architecture rtl of ddr_read_ctrl is
+-  type state_t is (WAIT_READ, PREFETCH, PRIME, STREAMING, DRAIN, DONE, FAULT);
++  function group_bits(groups : positive) return positive is
++    variable v : natural := groups - 1;
++    variable bits : positive := 1;
++  begin
++    while v > 1 loop v := v / 2; bits := bits + 1; end loop;
++    return bits;
++  end function;
++  constant SAMPLES_PER_WORD : positive := DDR_WIDTH_BITS / 32;
++  constant GROUPS_PER_WORD : positive := SAMPLES_PER_WORD / 4;
++  type state_t is (WAIT_READ, PREFETCH, PRIME, STREAMING, DRAIN, DONE, FAULT, CONFIG_CALC, CONFIG_CHECK);
+   signal state_q : state_t := WAIT_READ;
+   signal prev_read_q, prev_rearm_q : std_logic := '0';
+   signal samples_q, words_q, threshold_q : unsigned(31 downto 0) := (others=>'0');
+   signal requested_q, returned_q, enqueued_q, popped_q, sent_q : unsigned(31 downto 0) := (others=>'0');
+-  signal group_q : unsigned(3 downto 0) := (others=>'0');
++  signal group_q : unsigned(group_bits(GROUPS_PER_WORD)-1 downto 0) := (others=>'0');
+   signal current_valid_q, replay_started_q : std_logic := '0';
+   signal check_q : std_logic := '0';
+   signal seed_q, generation_q : unsigned(31 downto 0) := (others=>'0');
+@@ -79,25 +93,28 @@
+   signal fault_q : std_logic_vector(7 downto 0) := x"00";
+   signal total_q, replay_q, transfer_q, no_data_q, sink_stall_q, pause_q : unsigned(63 downto 0) := (others=>'0');
+   signal checked_q, mismatch_q, first_index_q, first_expected_q, first_actual_q : unsigned(31 downto 0) := (others=>'0');
+-  signal n64, m40 : unsigned(63 downto 0);
++  signal capacity_q : unsigned(31 downto 0) := (others => '0');
++  signal end_sample_q, word_samples_q : unsigned(63 downto 0) := (others => '0');
+   signal params_ok, read_edge, rearm_edge, read_context, start_accept, rearm_accept : std_logic;
+   signal normal_active, any_active, drain_now : std_logic;
+   signal request_fire_i, retrieve_ready_i, retrieve_fire_i, enqueue_fire_i : std_logic;
+   signal fifo_read_i, pop_fire_i, current_load_i : std_logic;
+   signal stream_valid_i, stream_fire_i, last_four_i : std_logic;
+ begin
+-  n64 <= resize(unsigned(sample_count),64);
+-  m40 <= shift_left(resize(unsigned(ddr_word_count),64),5) +
+-         shift_left(resize(unsigned(ddr_word_count),64),3);
+-  params_ok <= '1' when unsigned(sample_count)/=0 and sample_count(1 downto 0)="00" and
+-                        unsigned(ddr_word_count)/=0 and unsigned(ddr_word_count)<=2048 and
+-                        n64<=m40 and n64+39>=m40 else '0';
++  assert DDR_WIDTH_BITS mod 128 = 0
++    report "DDR_WIDTH_BITS must be a positive multiple of 128" severity failure;
++  -- Checks use the immutable command snapshot. The constant product and
++  -- upper sample bound are registered in CONFIG_CALC before comparison.
++  params_ok <= '1' when samples_q /= 0 and samples_q(1 downto 0) = "00" and
++                        capacity_q /= 0 and words_q /= 0 and words_q <= capacity_q and
++                        resize(samples_q,64) <= word_samples_q and
++                        end_sample_q >= word_samples_q else '0';
+   read_edge <= read_command and not prev_read_q;
+   rearm_edge <= rearm_command and not prev_rearm_q;
+   read_context <= '1' when reset='0' and run_enable='1' and abort_command='0' and
+                           read_edge='1' and rearm_edge='0' and new_session_safe='1' and
+                           dram_ready='1' and (state_q=WAIT_READ or state_q=DONE) else '0';
+-  start_accept <= read_context and params_ok;
++  start_accept <= read_context;
+   rearm_accept <= '1' when reset='0' and run_enable='1' and abort_command='0' and
+                           rearm_edge='1' and read_edge='0' and new_session_safe='1' and
+                           (state_q=WAIT_READ or state_q=DONE or state_q=FAULT) else '0';
+@@ -127,7 +144,7 @@
+                         (drain_now='1' or
+                          (run_enable='1' and abort_command='0' and dram_ready='1' and
+                           (state_q=PRIME or (state_q=STREAMING and stream_fire_i='1' and
+-                           group_q=9 and last_four_i='0')))) else '0';
++                           group_q=GROUPS_PER_WORD-1 and last_four_i='0')))) else '0';
+   pop_fire_i <= fifo_read_i and prefetch_read_valid;
+   current_load_i <= pop_fire_i and normal_active and not abort_command;
+ 
+@@ -143,7 +160,10 @@
+   stream_offset <= std_logic_vector(shift_left(resize(group_q,32),2));
+   stream_valid <= stream_valid_i;
+   stream_fire <= stream_fire_i;
+-  read_busy <= any_active;
++  -- Metadata describes the currently offered group, NOT a one-cycle pulse.
++  stream_first <= '1' when stream_valid_i='1' and sent_q=0 else '0';
++  stream_last <= stream_valid_i and last_four_i;
++  read_busy <= '1' when any_active='1' or state_q=CONFIG_CALC or state_q=CONFIG_CHECK else '0';
+   read_done <= '1' when state_q=DONE else '0';
+   read_fault <= '1' when state_q=FAULT else '0';
+   fault_code <= fault_q;
+@@ -167,7 +187,8 @@
+   first_error_actual <= std_logic_vector(first_actual_q);
+   with state_q select read_state <=
+     x"00" when WAIT_READ, x"01" when PREFETCH, x"02" when PRIME,
+-    x"03" when STREAMING, x"04" when DRAIN, x"05" when DONE, x"06" when FAULT;
++    x"03" when STREAMING, x"04" when DRAIN, x"05" when DONE, x"06" when FAULT,
++    x"07" when CONFIG_CALC, x"08" when CONFIG_CHECK;
+ 
+   process(clk)
+     variable rq, rt, enq, pop, sent_next : unsigned(31 downto 0);
+@@ -180,6 +201,7 @@
+       if reset='1' then
+         state_q<=WAIT_READ; group_q<=(others=>'0'); current_valid_q<='0'; replay_started_q<='0';
+         samples_q<=(others=>'0'); words_q<=(others=>'0'); threshold_q<=(others=>'0');
++        capacity_q<=(others=>'0'); end_sample_q<=(others=>'0'); word_samples_q<=(others=>'0');
+         requested_q<=(others=>'0'); returned_q<=(others=>'0'); enqueued_q<=(others=>'0');
+         popped_q<=(others=>'0'); sent_q<=(others=>'0');
+         check_q<='0'; seed_q<=(others=>'0'); generation_q<=(others=>'0'); rejected_q<='0'; fault_q<=x"00";
+@@ -199,17 +221,33 @@
+           first_expected_q<=(others=>'0'); first_actual_q<=(others=>'0');
+           rejected_q<='0'; fault_q<=x"00";
+           if start_accept='1' then
+-            state_q<=PREFETCH; samples_q<=unsigned(sample_count); words_q<=unsigned(ddr_word_count);
++            state_q<=CONFIG_CALC; samples_q<=unsigned(sample_count); words_q<=unsigned(ddr_word_count);
++            capacity_q<=unsigned(ddr_capacity_words);
+             if unsigned(ddr_word_count)<128 then threshold_q<=unsigned(ddr_word_count);
+             else threshold_q<=to_unsigned(128,32); end if;
+             check_q<=pattern_check_enable; seed_q<=unsigned(pattern_seed);
+-            generation_q<=generation_q+1;
+           else
+             state_q<=WAIT_READ; samples_q<=(others=>'0'); words_q<=(others=>'0'); threshold_q<=(others=>'0');
++            capacity_q<=(others=>'0'); end_sample_q<=(others=>'0'); word_samples_q<=(others=>'0');
+             check_q<='0'; seed_q<=(others=>'0');
+           end if;
+-        elsif read_context='1' and params_ok='0' then
+-          state_q<=FAULT; fault_q<=x"01";
++        elsif state_q=CONFIG_CALC or state_q=CONFIG_CHECK then
++          if dram_ready='0' then
++            state_q<=FAULT; fault_q<=x"02";
++          elsif abort_command='1' then
++            -- Configuration has issued no requests, so no drain is needed.
++            state_q<=FAULT; fault_q<=x"03";
++          elsif run_enable='1' then
++            if state_q=CONFIG_CALC then
++              word_samples_q<=words_q * to_unsigned(SAMPLES_PER_WORD,32);
++              end_sample_q<=resize(samples_q,64) + to_unsigned(SAMPLES_PER_WORD-1,64);
++              state_q<=CONFIG_CHECK;
++            elsif params_ok='1' then
++              state_q<=PREFETCH; generation_q<=generation_q+1;
++            else
++              state_q<=FAULT; fault_q<=x"01"; rejected_q<='1';
++            end if;
++          end if;
+         else
+           -- Record physical handshakes even on the first abort cycle. Never
+           -- clear these counters before all old responses/FIFO data drain.
+@@ -274,7 +312,7 @@
+                 if stream_fire_i='1' then
+                   if last_four_i='1' then
+                     state_q<=DONE; current_valid_q<='0'; group_q<=(others=>'0');
+-                  elsif group_q=9 then
++                  elsif group_q=GROUPS_PER_WORD-1 then
+                     group_q<=(others=>'0');
+                     if current_load_i='1' then current_valid_q<='1';
+                     else current_valid_q<='0'; state_q<=PRIME; end if;

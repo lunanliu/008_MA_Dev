@@ -1,0 +1,66 @@
+{
+  "request_id": "SYNC_DDR_FOUR_STAGE_V1_20260917",
+  "status": "COMPLETED_RESOURCE_CLOSED",
+  "owner_thread_id": "01a0afdf-cd3a-7e91-afc8-6a947ec3cc71",
+  "manager_thread_id": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "root": "D:\\008_MA_Dev\\Sync_DDR",
+  "manifest": "reports/operations/FROZEN_FOUR_STAGE_V1.json",
+  "manifest_sha256": "BF0F47EE82245915D79E240B7E3C196CD34F32FD7A6D69521869578609144801",
+  "executable": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+  "entry": "scripts/run_reverse.ps1",
+  "output": "work/four_stage_v1",
+  "scope": "Four-source create, xvhdl/xelab, two short capture/download XSim only; original successful upload/read tests not rerun",
+  "stages": [
+    "create",
+    "capture",
+    "download"
+  ],
+  "stage_seconds": {
+    "create": 180,
+    "capture": 300,
+    "download": 300
+  },
+  "whole_budget_seconds": 900,
+  "requested_first_start_not_after_utc": "2026-09-17T18:56:28.079319+00:00",
+  "requested_absolute_deadline_utc": "2026-09-17T19:11:28.079319+00:00",
+  "resources": {
+    "vivado_main_processes": 1,
+    "general_threads": 8,
+    "xelab_threads": 16,
+    "expected_peak_gib": 4,
+    "observed_free_gib": 18.0,
+    "memory_warning_gib": 8,
+    "memory_estimate_is_not_kill_limit": true
+  },
+  "abort_policy": "Stage/whole fixed deadline or explicit native error. Kill only owned Job and require three empty checks; preserve attempts.",
+  "retry_policy": "Only failed/unrun stages; no deadline reset; changed freeze needs manager acknowledgement.",
+  "test_scope": {
+    "capture": "4000 points/1100 no-stall data cycles, tail padding, pause/snapshot/capacity guard, pending abort/recovery",
+    "download": "4000 points/1000 ideal playback cycles at150MHz, finite DMA/Host stalls, tail/first/last, Host order/count, abort drain, invalid capacity"
+  },
+  "grant_schema": {
+    "grant_id": "NEW manager identity, no RUNTIME_CONFIG reuse",
+    "owner_thread_id": "same as request",
+    "root": "same as request",
+    "frozen_manifest_sha256": "same as request",
+    "stages": [
+      "create",
+      "capture",
+      "download"
+    ],
+    "first_start_not_after_utc": "manager UTC",
+    "absolute_deadline_utc": "manager UTC"
+  },
+  "central_resource_writer": "manager only",
+  "grant_path_requested": "D:\\008_MA_Dev\\Sync_DDR\\reports\\operations\\MANAGER_GRANT_FOUR_STAGE_V1.json",
+  "result": "reports/operations/FOUR_STAGE_VALIDATION_RESULT_20260917.json",
+  "fixed_deadline_utc": "2026-09-17T19:01:37.9312527Z",
+  "completed_utc": "2026-09-17T18:48:41.2646649Z",
+  "further_eda_planned": false,
+  "resource_status": "CLOSED_BY_MANAGER",
+  "resource_closed_utc": "2026-09-17T18:51:39.146387+00:00",
+  "resource_closed_local": "2026-09-17T20:51:39.146387+02:00",
+  "central_owner_after_close": "NONE",
+  "old_grants_reusable": false,
+  "resource_return_receipt": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\sync_ddr\\SYNC_DDR_FOUR_STAGE_V1_RESOURCE_RETURN_20260917.json"
+}

@@ -1,0 +1,22 @@
+{
+  "mode": "transparent_data_transport_bypass_sync",
+  "sample_count_in": 604,
+  "sample_count_out": 604,
+  "ddr_width_bits": 1280,
+  "samples_per_ddr_word": 40,
+  "ddr_word_count_in": 16,
+  "ddr_word_count_out": 16,
+  "capacity_words": "use actual allocation >=16, e.g. 65536",
+  "groups_of_four": 151,
+  "host_bytes": 2416,
+  "tail_real_samples": 4,
+  "tail_zero_samples": 36,
+  "pattern_seed_u32": 305397760,
+  "first_hex": "12340000",
+  "last_hex": "1234025B",
+  "i_low16": true,
+  "q_high16": true,
+  "iq_scale": "raw I16 no normalization",
+  "expected_mismatch_count": 0,
+  "expected_host_count": 604
+}

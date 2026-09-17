@@ -1,0 +1,29 @@
+{
+  "recorded_utc": "2026-09-17T14:45:21.0178486Z",
+  "scope": "Previously approved functional simulation only",
+  "grant_id": "DDR_REV02_REV03_FUNCTIONAL_20260917T143558Z",
+  "absolute_native_deadline_utc": "2026-09-17T14:52:47.6387679Z",
+  "budget_reset": false,
+  "root_cause": "Vivado add_files interpreted a single spaced path as Tcl file list; batch launch was correct",
+  "changes": [
+    "Wrap all three add_files file arguments in list",
+    "Explicit original frozen package root",
+    "New project_retry04 and actual_sources_retry04.txt",
+    "New validation_native_04",
+    "Inherit exact prior absolute deadline using DateTime ticks"
+  ],
+  "preserved": [
+    "All 16 frozen inputs",
+    "RTL and testbench scientific meaning",
+    "Prior failed attempts and partial project",
+    "Job Object process protection"
+  ],
+  "preflight": "PASS",
+  "script_sha256": "1B5CE08A58F9D2467EF21E7BDAFE6E64D9F9FDD96F0E1D89BAD6C01CB3AB1D14",
+  "create_tcl_sha256": "4DB6D153E5A4DAD5CFF1637B9FBE1587B054551A3771B2BC16CA76705108123E",
+  "simulate_tcl_sha256": "17FAF146BF8CBADD977726E8FE5F9C69393529EB0C1A420EB1BEA694713D3982",
+  "helper_sha256": "F8751748BCDE6BA39D7FF286C9FC07AEA87374FDF56049E9F3AA85E1E655E41A",
+  "manager_confirmation": "Same existing grant execution repair permitted; no extension",
+  "independent_review": "PASS: exact four hashes, 3 Tcl list fixes, new paths, exact inherited deadline, no new blocker",
+  "dispatched_utc": "2026-09-17T14:46:07.6538359Z"
+}

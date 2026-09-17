@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-09-17T14:29:21.9233877Z",
+  "source": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\ddr_control\\astra_execution_20260917_rev03\\DdrJobGuard.cs",
+  "source_sha256": "F8751748BCDE6BA39D7FF286C9FC07AEA87374FDF56049E9F3AA85E1E655E41A",
+  "interpreter": "7.6.5",
+  "root_pid": 29132,
+  "root_creation_utc": "2026-09-17T14:29:22.7995905Z",
+  "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /c exit 0",
+  "observations": [
+    {
+      "utc": "2026-09-17T14:29:22.8329595Z",
+      "live_ids": [
+        29132,
+        17984
+      ],
+      "live_count": 2,
+      "root_exit_code": null
+    },
+    {
+      "utc": "2026-09-17T14:29:23.0909572Z",
+      "live_ids": [],
+      "live_count": 0,
+      "root_exit_code": 0
+    },
+    {
+      "utc": "2026-09-17T14:29:23.3559676Z",
+      "live_ids": [],
+      "live_count": 0,
+      "root_exit_code": 0
+    },
+    {
+      "utc": "2026-09-17T14:29:23.6095538Z",
+      "live_ids": [],
+      "live_count": 0,
+      "root_exit_code": 0
+    }
+  ],
+  "observed_processes": [
+    {
+      "pid": 29132,
+      "creation_utc": "2026-09-17T14:29:22.7995905Z"
+    }
+  ],
+  "exit_code": 0,
+  "empty_member_queries": 3,
+  "cleanup": {
+    "requested": false,
+    "disposed": true
+  },
+  "error": null,
+  "finished_utc": "2026-09-17T14:29:23.6174781Z"
+}
