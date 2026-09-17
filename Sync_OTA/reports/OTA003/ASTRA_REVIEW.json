@@ -1,0 +1,138 @@
+{
+  "job": "OTA003",
+  "revision": "A01",
+  "grant": "SYNC_OTA_OTA003_A01_20260916T232929Z",
+  "review_utc": "2026-09-16T23:49:12.848950+00:00",
+  "manifest_sha256": "e3ea6d3fe2ee0dec000082050e44fafe77df30eb920aff98562d984c77cddcf9",
+  "frozen_inputs_verified": 28,
+  "stages": [
+    {
+      "stage": "bridge",
+      "functional_status": "PASS",
+      "process_status": "RECORDED_TREE_CLOSED",
+      "process_identities": 16,
+      "process_summary_sha256": "4856de2e577e2db9193fb8cb91d3fc2f61d03cb584bfd76e19d707a44608c35b",
+      "actual_source_count": 10,
+      "result_sha256": "9fa29ebab236955151cd97c96127dbdc28753edbc88c66e48dbd9a38addb269d",
+      "actual_sources_sha256": "a3942935742c3ae065413e0d49146fd20558f412b03fa497d63abdb0762ccafd",
+      "binding": "INDEPENDENT_EXACT_BOUNDARY_CHECK_PASS",
+      "simulation_finish": "1152 ns : File \"D:/008_MA_Dev/Sync_OTA/sim/tb/ota_ddr_bridge_tb.sv\" Line 84",
+      "logs": [
+        {
+          "path": "work/OTA003/bridge_a01/native.log",
+          "sha256": "fd6e1a2de49826383b28f8a69e5a66e3e11bfd9c9cbd2af4b5395d83ac5a5bf4"
+        },
+        {
+          "path": "work/OTA003/bridge_a01/project/OTA003_bridge.sim/sim_1/behav/xsim/compile.log",
+          "sha256": "30d3a847898ef1daadcbde3682f12be447bccb0a125b8630e1d3f18992ad367b"
+        },
+        {
+          "path": "work/OTA003/bridge_a01/project/OTA003_bridge.sim/sim_1/behav/xsim/elaborate.log",
+          "sha256": "e449ad0d37b473b81a6734a44272b91a7f4541ba35e487db61aabf2e4a7f1a4b"
+        },
+        {
+          "path": "work/OTA003/bridge_a01/project/OTA003_bridge.sim/sim_1/behav/xsim/simulate.log",
+          "sha256": "1d9f842ebfe17e9f35e0433bfe07dabf528edaf495734129ed39521bd809796e"
+        },
+        {
+          "path": "work/OTA003/bridge_a01/project/OTA003_bridge.sim/sim_1/behav/xsim/webtalk.log",
+          "sha256": "dee5321686438d2b210a322148d9e6f8f7599e8c312081f9b90fe98b95a5c55d"
+        },
+        {
+          "path": "work/OTA003/bridge_a01/project/OTA003_bridge.sim/sim_1/behav/xsim/webtalk_22632.backup.log",
+          "sha256": "1510e0f209993349fa666453f9fba8f7a885e3a5c39e0858599de13474e03747"
+        },
+        {
+          "path": "work/OTA003/bridge_a01/project/OTA003_bridge.sim/sim_1/behav/xsim/xvlog.log",
+          "sha256": "30d3a847898ef1daadcbde3682f12be447bccb0a125b8630e1d3f18992ad367b"
+        }
+      ]
+    },
+    {
+      "stage": "capture",
+      "functional_status": "PASS",
+      "process_status": "RECORDED_TREE_CLOSED",
+      "process_identities": 19,
+      "process_summary_sha256": "c9aedea2b6a490733f6c35cdcf001dfc475fce5a61fcfcff86ab579de50b7bcb",
+      "actual_source_count": 11,
+      "result_sha256": "c1d9585cd664836a8c4f7970e57ed4d997d43a46c7f907936198bd317b5a7c3e",
+      "actual_sources_sha256": "6fbff4688b8eafa5c1d03b4a86984335f87ffc320f1fda7b82673779ce207cd4",
+      "binding": "INDEPENDENT_EXACT_BOUNDARY_CHECK_PASS",
+      "simulation_finish": "45454776 ns : File \"D:/008_MA_Dev/Sync_OTA/sim/tb/ota_capture_controller_tb.sv\" Line 116",
+      "logs": [
+        {
+          "path": "work/OTA003/capture_a06/native.log",
+          "sha256": "562ac0e137a7e9604743d98af123f2f1398d67a41669d2ec02a39435f5803799"
+        },
+        {
+          "path": "work/OTA003/capture_a06/project/OTA003_capture.sim/sim_1/behav/xsim/compile.log",
+          "sha256": "6dc75797ccf7c4934a1361521fbfd3465d7f73b572919e766308490905016051"
+        },
+        {
+          "path": "work/OTA003/capture_a06/project/OTA003_capture.sim/sim_1/behav/xsim/elaborate.log",
+          "sha256": "2524e588ba57290e10369658311701ed35d25bf971a5c28d2caa053d9a15c6e4"
+        },
+        {
+          "path": "work/OTA003/capture_a06/project/OTA003_capture.sim/sim_1/behav/xsim/simulate.log",
+          "sha256": "5f0ce0c47cc15183c0566ddd88037061273727a834dfc4bce20cf62fcff355b5"
+        },
+        {
+          "path": "work/OTA003/capture_a06/project/OTA003_capture.sim/sim_1/behav/xsim/webtalk.log",
+          "sha256": "a878195a2fb2a55dade399d6dcd54507729b4772421e0fb767ddd0cfb175cc05"
+        },
+        {
+          "path": "work/OTA003/capture_a06/project/OTA003_capture.sim/sim_1/behav/xsim/webtalk_33536.backup.log",
+          "sha256": "7b68c9242aafa8154892f27bd39ea20a2fceeae55359a18c5a946a6ad60879e1"
+        },
+        {
+          "path": "work/OTA003/capture_a06/project/OTA003_capture.sim/sim_1/behav/xsim/xvlog.log",
+          "sha256": "6dc75797ccf7c4934a1361521fbfd3465d7f73b572919e766308490905016051"
+        }
+      ]
+    },
+    {
+      "stage": "dual_rotation",
+      "functional_status": "PASS",
+      "process_status": "RECORDED_TREE_CLOSED",
+      "process_identities": 21,
+      "process_summary_sha256": "36124dfd1fcd4cc11f5bbdfb167fd2cac63d507e8447369cbe40ba351fc094a9",
+      "actual_source_count": 15,
+      "result_sha256": "15ccce9ecc298730bde7f9ced30fa09abcfa50104ec53362535ff434bae3d77a",
+      "actual_sources_sha256": "67809d95520fe97b2eaa8a21446ef2daca3262dab2c3711eba67c35608785ba9",
+      "binding": "INDEPENDENT_EXACT_BOUNDARY_CHECK_PASS",
+      "simulation_finish": "18211512 ps : File \"D:/008_MA_Dev/Sync_OTA/sim/tb/ota_dual_rotation_tb.sv\" Line 59",
+      "logs": [
+        {
+          "path": "work/OTA003/dual_rotation_a01/native.log",
+          "sha256": "8d5735ac488dc2e281c79643d4e7aa28fd5aff7e37fe37631796c64a697321d8"
+        },
+        {
+          "path": "work/OTA003/dual_rotation_a01/project/OTA003_dual_rotation.sim/sim_1/behav/xsim/compile.log",
+          "sha256": "ce77636a8284a4ae3b52146039e49b383202fc7550f5a2bd815a9923d9a4952d"
+        },
+        {
+          "path": "work/OTA003/dual_rotation_a01/project/OTA003_dual_rotation.sim/sim_1/behav/xsim/elaborate.log",
+          "sha256": "3bc6b8b9e64c4c32b2bc998fa54ad9482029a2bf674e6f02db1670b7076921c0"
+        },
+        {
+          "path": "work/OTA003/dual_rotation_a01/project/OTA003_dual_rotation.sim/sim_1/behav/xsim/simulate.log",
+          "sha256": "0993a0cd5516bb439d5f17aacdee52584e3d2b8cd259b99e50975f1a07b708e4"
+        },
+        {
+          "path": "work/OTA003/dual_rotation_a01/project/OTA003_dual_rotation.sim/sim_1/behav/xsim/webtalk.log",
+          "sha256": "39fe845605d1b2ff0077e7b497fa09bd418faf4ce9d9c0b2ef757068c00f265e"
+        },
+        {
+          "path": "work/OTA003/dual_rotation_a01/project/OTA003_dual_rotation.sim/sim_1/behav/xsim/webtalk_43100.backup.log",
+          "sha256": "6ccc43c032091cc5d2523e0ea9d3f85319a4c0a8cea5cad6225fbc5f9bf3b39f"
+        },
+        {
+          "path": "work/OTA003/dual_rotation_a01/project/OTA003_dual_rotation.sim/sim_1/behav/xsim/xvlog.log",
+          "sha256": "ce77636a8284a4ae3b52146039e49b383202fc7550f5a2bd815a9923d9a4952d"
+        }
+      ]
+    }
+  ],
+  "repair_review": "Tcl changed only root and verifier paths. Verifier none mode now requires ZERO compiled XPM files for designs with no XPM instances; exact installed-XPM exclusion and fifo mode boundaries remain. Independently checked PRJs, source sets, logs and process summaries. No RTL/TB/vector/threshold change.",
+  "scope": "Bridge protocol/CDC; full-range finite scheduler using labelled algorithm services; two-symbol real coordinate plus two distinct rotations. Not whole OTA algorithm/continuous rate/synthesis/NI/board acceptance."
+}

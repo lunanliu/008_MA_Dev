@@ -1,0 +1,15 @@
+{
+  "job": "OTA004",
+  "revision": "A01",
+  "state": "FROZEN_AWAITING_CONCRETE_MANAGER_SLOT",
+  "manifest": "docs/jobs/OTA004_source_lock.json",
+  "manifest_sha256": "ea6b157f15b502ce72b8f7ba655b2c1c5a818153cb856cd761c29131936de6f2",
+  "stages": [
+    "prepare",
+    "smoke",
+    "synth"
+  ],
+  "native_started": false,
+  "old_grants_reusable": false,
+  "created_utc": "2026-09-17T00:15:40.181610+00:00"
+}

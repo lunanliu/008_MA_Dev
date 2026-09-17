@@ -26,8 +26,10 @@ module sync_ota_top (
  output wire [31:0] coarse_beats150,final_beats150,coarse_saturations150,final_saturations150,
  output wire [6:0] observation_windows150,output wire [498:0] cfo_result150,
  output wire [31:0] cfo_committed150,cfo_read150,cfo_stalls150,
+ output wire [5:0] cfo_window_fifo_level150,output wire [4:0] cfo_observation_fifo_level150,output wire [3:0] cfo_fifo_error150,
  output wire [7:0] sfo_error125,sfo_error150,context_error150,
- output wire [255:0] sfo_diagnostic125,
+ output wire [255:0] sfo_diagnostic150,
+ output wire [511:0] sfo_monitor125,sfo_monitor150,
  output wire [31:0] first_step150,second_step150,
  output wire [63:0] frontend_accepted_samples125,
  output wire [31:0] frontend_candidates125,frontend_rejected125,frontend_drop125,frontend_duplicate125,frontend_confirmed125,
@@ -67,13 +69,46 @@ module sync_ota_top (
  wire e1v,e1r,e2v,e2r;wire [223:0] e1record,e2record;
  wire sfo_mv,sfo_mr,sfo_mreset;wire [224:0] sfo_record;
  wire context_reset150;
+ // Preserve normal completion diagnostics until Host acknowledges done.
+ // The frozen controller requests a reset in COMPLETE; defer that one state
+ // until IDLE. Cancel still asserts immediately and drains DDR independently.
+ wire effective_sfo_reset125=sfo_reset125&&(stage125!=6'd17);
+ wire [7:0] live_sfo_error125,live_sfo_error150,live_context_error150,live_cfo_error150;
+ wire [255:0] live_sfo_diagnostic150;
+ wire [511:0] live_sfo_monitor125,live_sfo_monitor150;
+ logic [7:0] held_sfo_error125,held_sfo_error150,held_context_error150,held_cfo_error150;
+ logic [255:0] held_sfo_diagnostic150;
+ logic [511:0] held_sfo_monitor125,held_sfo_monitor150;
+ assign cfo_error150=held_cfo_error150;
+ assign sfo_error125=held_sfo_error125;assign sfo_error150=held_sfo_error150;assign context_error150=held_context_error150;
+ assign sfo_diagnostic150=held_sfo_diagnostic150;
+ assign sfo_monitor125=held_sfo_monitor125;assign sfo_monitor150=held_sfo_monitor150;
+ always_ff @(posedge clk125)begin
+  if(rst125||(start_valid&&start_ready))begin held_sfo_error125<=0;held_sfo_monitor125<=0;end
+  else begin
+   if(live_sfo_error125!=0&&held_sfo_error125==0)held_sfo_error125<=live_sfo_error125;
+   if(!effective_sfo_reset125)held_sfo_monitor125<=live_sfo_monitor125;
+  end
+ end
+ always_ff @(posedge clk150)begin
+  if(rst150)begin held_cfo_error150<=0;held_sfo_error150<=0;held_context_error150<=0;held_sfo_monitor150<=0;held_sfo_diagnostic150<=0;end
+  else begin
+   if(meta_mv&&meta_mr)begin held_cfo_error150<=0;held_sfo_error150<=0;held_context_error150<=0;end
+   else begin
+    if(live_cfo_error150!=0&&held_cfo_error150==0)held_cfo_error150<=live_cfo_error150;
+    if(live_sfo_error150!=0&&held_sfo_error150==0)held_sfo_error150<=live_sfo_error150;
+    if(live_context_error150!=0&&held_context_error150==0)held_context_error150<=live_context_error150;
+   end
+   if(!context_reset150)begin held_sfo_monitor150<=live_sfo_monitor150;held_sfo_diagnostic150<=live_sfo_diagnostic150;end
+  end
+ end
  xpm_cdc_async_rst #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.RST_ACTIVE_HIGH(1))
- context_reset(.src_arst(reset_request||sfo_reset125),.dest_clk(clk150),.dest_arst(context_reset150));
+ context_reset(.src_arst(reset_request||effective_sfo_reset125),.dest_clk(clk150),.dest_arst(context_reset150));
  xpm_cdc_async_rst #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.RST_ACTIVE_HIGH(1))
  cancel_sync(.src_arst(cancel125),.dest_clk(clk150),.dest_arst(cancel150));
  xpm_cdc_single #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.SRC_INPUT_REG(0))
  busy_sync(.src_clk(clk150),.src_in(cfo_busy150),.dest_clk(clk125),.dest_out(cfo_busy125));
- assign algorithm_fault150=(context_error150!=0)||sfo_mfault||(cfo_error150!=0&&cfo_busy150);
+ assign algorithm_fault150=(live_context_error150!=0)||(cfo_fifo_error150!=0)||sfo_mfault||(live_cfo_error150!=0&&cfo_busy150);
  xpm_cdc_single #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(0),.SRC_INPUT_REG(0))
  fault_sync(.src_clk(clk150),.src_in(algorithm_fault150),.dest_clk(clk125),.dest_out(algorithm_fault125));
  ota_capture_controller control(
@@ -96,15 +131,15 @@ module sync_ota_top (
  sync_sfo_top #(.REQUIRE_CONTEXT_ACK(1),.PROCESSING_LIMIT_CYCLES(536870912),.OUTPUT_CLOCK_MHZ(150)) sfo(
   .first_context_valid(e1v),.first_context_ready(e1r),.first_context_record(e1record),
   .second_context_valid(e2v),.second_context_ready(e2r),.second_context_record(e2record),
-  .clk125(clk125),.clk150(clk150),.clk500(clk500),.reset_request(reset_request||sfo_reset125),.abort125(cancel125),
+  .clk125(clk125),.clk150(clk150),.clk500(clk500),.reset_request(reset_request||effective_sfo_reset125),.abort125(cancel125),
   .s_valid(sfo_sv),.s_ready(sfo_sr),.s_data(sfo_sd),.s_frame_id(frame125),.s_absolute_index(sfo_abs),.s_lane_valid(4'hf),
   .frame_valid(frame_v),.frame_ready(frame_r),.frame_record(frame_record),.cfo_valid(coarse_v),.cfo_ready(coarse_r),.cfo_record(coarse_record),
   .fine_valid(fine_v),.fine_ready(fine_r),.fine_record(fine_record),
   .m_valid(sfo_mv),.m_ready(sfo_mr),.m_record(sfo_record),.m_reset(sfo_mreset),.m_fault(sfo_mfault),
-  .fault(sfo_fault),.error_code125(sfo_error125),.error_code150(sfo_error150),.diagnostic(sfo_diagnostic125),
-  .residual_point_valid(),.residual_point_record(),.debug125(),.debug150(),.debug_e1_valid(),.debug_e1_data(),.debug_e1_beat(),.debug_e1_last());
+  .fault(sfo_fault),.error_code125(live_sfo_error125),.error_code150(live_sfo_error150),.diagnostic(live_sfo_diagnostic150),
+  .residual_point_valid(),.residual_point_record(),.debug125(live_sfo_monitor125),.debug150(live_sfo_monitor150),.debug_e1_valid(),.debug_e1_data(),.debug_e1_beat(),.debug_e1_last());
  ota_async_fifo #(.WIDTH(214)) metadata(
-  .wr_clk(clk125),.rd_clk(clk150),.reset_request(reset_request||sfo_reset125),
+  .wr_clk(clk125),.rd_clk(clk150),.reset_request(reset_request||effective_sfo_reset125),
   .s_valid(meta_sv),.s_ready(meta_sr),.s_data(meta_sd),.m_valid(meta_mv),.m_ready(meta_mr),.m_data(meta_md),
   .wr_busy(),.rd_busy(),.wr_count(),.rd_count(),.overflow(),.underflow());
  wire context_valid,context_ready;wire [213:0] joined_context;
@@ -124,16 +159,17 @@ module sync_ota_top (
   .meta_frame(meta_md[149:118]),.meta_generation(meta_md[117:86]),.meta_coarse_hz_q8(meta_md[85:54]),.meta_raw_origin_q28(meta_md[53:0]),
   .first_valid(e1v),.first_ready(e1r),.first_frame(e1record[223:192]),.first_generation(e1record[191:160]),.first_step_q28(e1record[159:128]),
   .second_valid(e2v),.second_ready(e2r),.second_frame(e2record[223:192]),.second_generation(e2record[191:160]),.second_step_q28(e2record[159:128]),
-  .m_valid(context_valid),.m_ready(context_ready),.m_context(joined_context),.error_code(context_error150));
+  .m_valid(context_valid),.m_ready(context_ready),.m_context(joined_context),.error_code(live_context_error150));
  ota_cfo_chain cfo(
   .clk150(clk150),.clk500(clk500),.reset_request(reset_request),.cancel150(cancel150),
   .context_valid(context_valid),.context_ready(context_ready),.context_record({cfo_base,joined_context}),
   .s_valid(sfo_mv),.s_ready(sfo_mr),.s_record(sfo_record),.m_valid(m_valid),.m_ready(m_ready),.m_record(m_record),
   .cmd_valid(cfo_cv),.cmd_ready(cfo_cr),.cmd_write(cfo_cw),.cmd_address(cfo_ca),.cmd_tag(cfo_ct),.cmd_data(cfo_cd),
   .rsp_valid(cfo_rv),.rsp_ready(cfo_rr),.rsp_tag(cfo_rt),.rsp_data(cfo_rd),.rsp_error(cfo_re),
-  .busy(cfo_busy150),.done(done150),.done_ready(done_ready150),.error_code(cfo_error150),.stage(cfo_stage150),
+  .busy(cfo_busy150),.done(done150),.done_ready(done_ready150),.error_code(live_cfo_error150),.stage(cfo_stage150),
   .coarse_beats(coarse_beats150),.final_beats(final_beats150),.coarse_saturations(coarse_saturations150),.final_saturations(final_saturations150),
   .observations_sent(observation_windows150),.estimator_result(cfo_result150),
+  .window_fifo_level150(cfo_window_fifo_level150),.observation_fifo_level150(cfo_observation_fifo_level150),.fifo_error150(cfo_fifo_error150),
   .memory_committed(cfo_committed150),.memory_read(cfo_read150),.memory_stalls(cfo_stalls150));
  wire completion_space;
  logic completion_sent;
@@ -144,7 +180,7 @@ module sync_ota_top (
  assign done_ready150=completion_sent&&!cancel150;
  ota_async_fifo #(.WIDTH(8)) completion(
   .wr_clk(clk150),.rd_clk(clk125),.reset_request(reset_request),
-  .s_valid(done150&&!completion_sent),.s_ready(completion_space),.s_data(cfo_error150),
+  .s_valid(done150&&!completion_sent),.s_ready(completion_space),.s_data(live_cfo_error150),
   .m_valid(completion_v),.m_ready(completion_r),.m_data(completion_error),
   .wr_busy(),.rd_busy(),.wr_count(),.rd_count(),.overflow(),.underflow());
 endmodule

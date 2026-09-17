@@ -117,7 +117,7 @@ rtl/cfo/cfo_divide_rne64wide.sv
 rtl/cfo/cfo_fft256_core.sv
 rtl/cfo/cfo_phase74_core_v2.sv
 rtl/cfo/cfo_divide_rne64.sv
-rtl/cfo/ota_cfo_chain.sv
+rtl/cfo/ota_cfo_chain_a02.sv
 rtl/common/ota_async_fifo.sv
 rtl/buffer/ota_frame_store.sv
 rtl/buffer/ota_ddr_bridge.sv

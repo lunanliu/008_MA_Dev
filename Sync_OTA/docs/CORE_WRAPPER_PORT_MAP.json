@@ -1,0 +1,1272 @@
+{
+  "core": "sync_ota_top",
+  "wrapper": "sync_ota_wrapper",
+  "ports": [
+    {
+      "name": "clk125",
+      "direction": "input",
+      "width": 1,
+      "domain": "clock",
+      "wrapper": [
+        {
+          "name": "clk125",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "clk150",
+      "direction": "input",
+      "width": 1,
+      "domain": "clock",
+      "wrapper": [
+        {
+          "name": "clk150",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "clk500",
+      "direction": "input",
+      "width": 1,
+      "domain": "clock",
+      "wrapper": [
+        {
+          "name": "clk500",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "reset_request",
+      "direction": "input",
+      "width": 1,
+      "domain": "platform async assertion; local synchronous release",
+      "wrapper": [
+        {
+          "name": "reset_request",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "start_valid",
+      "direction": "input",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "start_valid",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "start_ready",
+      "direction": "output",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "start_ready",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "capture_base_word",
+      "direction": "input",
+      "width": 64,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "capture_base_word",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "capture_words",
+      "direction": "input",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "capture_words",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "cancel",
+      "direction": "input",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "cancel",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "s_valid",
+      "direction": "input",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "s_valid",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "s_ready",
+      "direction": "output",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "s_ready",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "s_data",
+      "direction": "input",
+      "width": 128,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "s_data_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "s_data_w1",
+          "width": 64,
+          "core_bits": "127:64",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "done",
+      "direction": "output",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "done",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "done_ready",
+      "direction": "input",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "done_ready",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "busy",
+      "direction": "output",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "busy",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "stage125",
+      "direction": "output",
+      "width": 6,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "stage125",
+          "width": 8,
+          "core_bits": "5:0",
+          "upper_padding": 2
+        }
+      ]
+    },
+    {
+      "name": "error125",
+      "direction": "output",
+      "width": 8,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "error125",
+          "width": 8,
+          "core_bits": "7:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "accepted_words125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "accepted_words125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "committed_words125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "committed_words125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "replay_words125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "replay_words125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "raw_stalls125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "raw_stalls125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "frame125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "frame125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "generation125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "generation125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "nominal_absolute125",
+      "direction": "output",
+      "width": 64,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "nominal_absolute125",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "frontend_record125",
+      "direction": "output",
+      "width": 288,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "frontend_record125_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "frontend_record125_w1",
+          "width": 64,
+          "core_bits": "127:64",
+          "upper_padding": 0
+        },
+        {
+          "name": "frontend_record125_w2",
+          "width": 64,
+          "core_bits": "191:128",
+          "upper_padding": 0
+        },
+        {
+          "name": "frontend_record125_w3",
+          "width": 64,
+          "core_bits": "255:192",
+          "upper_padding": 0
+        },
+        {
+          "name": "frontend_record125_w4",
+          "width": 32,
+          "core_bits": "287:256",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_cmd_valid",
+      "direction": "output",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_cmd_valid",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_cmd_ready",
+      "direction": "input",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_cmd_ready",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_cmd_write",
+      "direction": "output",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_cmd_write",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_cmd_address",
+      "direction": "output",
+      "width": 64,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_cmd_address",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_cmd_tag",
+      "direction": "output",
+      "width": 65,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_cmd_tag_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "ddr_cmd_tag_w1",
+          "width": 8,
+          "core_bits": "64:64",
+          "upper_padding": 7
+        }
+      ]
+    },
+    {
+      "name": "ddr_cmd_data",
+      "direction": "output",
+      "width": 128,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_cmd_data_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "ddr_cmd_data_w1",
+          "width": 64,
+          "core_bits": "127:64",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_rsp_valid",
+      "direction": "input",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_rsp_valid",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_rsp_ready",
+      "direction": "output",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_rsp_ready",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_rsp_tag",
+      "direction": "input",
+      "width": 65,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_rsp_tag_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "ddr_rsp_tag_w1",
+          "width": 8,
+          "core_bits": "64:64",
+          "upper_padding": 7
+        }
+      ]
+    },
+    {
+      "name": "ddr_rsp_data",
+      "direction": "input",
+      "width": 128,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_rsp_data_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "ddr_rsp_data_w1",
+          "width": 64,
+          "core_bits": "127:64",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_rsp_error",
+      "direction": "input",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_rsp_error",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_idle125",
+      "direction": "output",
+      "width": 1,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_idle125",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_error125",
+      "direction": "output",
+      "width": 8,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_error125",
+          "width": 8,
+          "core_bits": "7:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_commands125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_commands125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_responses125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_responses125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_stale125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_stale125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "ddr_request_level125",
+      "direction": "output",
+      "width": 6,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_request_level125",
+          "width": 8,
+          "core_bits": "5:0",
+          "upper_padding": 2
+        }
+      ]
+    },
+    {
+      "name": "ddr_response_level125",
+      "direction": "output",
+      "width": 6,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "ddr_response_level125",
+          "width": 8,
+          "core_bits": "5:0",
+          "upper_padding": 2
+        }
+      ]
+    },
+    {
+      "name": "m_valid",
+      "direction": "output",
+      "width": 1,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "m_valid",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "m_ready",
+      "direction": "input",
+      "width": 1,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "m_ready",
+          "width": 1,
+          "core_bits": "0:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "m_record",
+      "direction": "output",
+      "width": 225,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "m_record_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "m_record_w1",
+          "width": 64,
+          "core_bits": "127:64",
+          "upper_padding": 0
+        },
+        {
+          "name": "m_record_w2",
+          "width": 64,
+          "core_bits": "191:128",
+          "upper_padding": 0
+        },
+        {
+          "name": "m_record_w3",
+          "width": 64,
+          "core_bits": "224:192",
+          "upper_padding": 31
+        }
+      ]
+    },
+    {
+      "name": "cfo_stage150",
+      "direction": "output",
+      "width": 5,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "cfo_stage150",
+          "width": 8,
+          "core_bits": "4:0",
+          "upper_padding": 3
+        }
+      ]
+    },
+    {
+      "name": "cfo_error150",
+      "direction": "output",
+      "width": 8,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "cfo_error150",
+          "width": 8,
+          "core_bits": "7:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "coarse_beats150",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "coarse_beats150",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "final_beats150",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "final_beats150",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "coarse_saturations150",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "coarse_saturations150",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "final_saturations150",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "final_saturations150",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "observation_windows150",
+      "direction": "output",
+      "width": 7,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "observation_windows150",
+          "width": 8,
+          "core_bits": "6:0",
+          "upper_padding": 1
+        }
+      ]
+    },
+    {
+      "name": "cfo_result150",
+      "direction": "output",
+      "width": 499,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "cfo_result150_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "cfo_result150_w1",
+          "width": 64,
+          "core_bits": "127:64",
+          "upper_padding": 0
+        },
+        {
+          "name": "cfo_result150_w2",
+          "width": 64,
+          "core_bits": "191:128",
+          "upper_padding": 0
+        },
+        {
+          "name": "cfo_result150_w3",
+          "width": 64,
+          "core_bits": "255:192",
+          "upper_padding": 0
+        },
+        {
+          "name": "cfo_result150_w4",
+          "width": 64,
+          "core_bits": "319:256",
+          "upper_padding": 0
+        },
+        {
+          "name": "cfo_result150_w5",
+          "width": 64,
+          "core_bits": "383:320",
+          "upper_padding": 0
+        },
+        {
+          "name": "cfo_result150_w6",
+          "width": 64,
+          "core_bits": "447:384",
+          "upper_padding": 0
+        },
+        {
+          "name": "cfo_result150_w7",
+          "width": 64,
+          "core_bits": "498:448",
+          "upper_padding": 13
+        }
+      ]
+    },
+    {
+      "name": "cfo_committed150",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "cfo_committed150",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "cfo_read150",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "cfo_read150",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "cfo_stalls150",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "cfo_stalls150",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "cfo_window_fifo_level150",
+      "direction": "output",
+      "width": 6,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "cfo_window_fifo_level150",
+          "width": 8,
+          "core_bits": "5:0",
+          "upper_padding": 2
+        }
+      ]
+    },
+    {
+      "name": "cfo_observation_fifo_level150",
+      "direction": "output",
+      "width": 5,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "cfo_observation_fifo_level150",
+          "width": 8,
+          "core_bits": "4:0",
+          "upper_padding": 3
+        }
+      ]
+    },
+    {
+      "name": "cfo_fifo_error150",
+      "direction": "output",
+      "width": 4,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "cfo_fifo_error150",
+          "width": 8,
+          "core_bits": "3:0",
+          "upper_padding": 4
+        }
+      ]
+    },
+    {
+      "name": "sfo_error125",
+      "direction": "output",
+      "width": 8,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "sfo_error125",
+          "width": 8,
+          "core_bits": "7:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "sfo_error150",
+      "direction": "output",
+      "width": 8,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "sfo_error150",
+          "width": 8,
+          "core_bits": "7:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "context_error150",
+      "direction": "output",
+      "width": 8,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "context_error150",
+          "width": 8,
+          "core_bits": "7:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "sfo_diagnostic150",
+      "direction": "output",
+      "width": 256,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "sfo_diagnostic150_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_diagnostic150_w1",
+          "width": 64,
+          "core_bits": "127:64",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_diagnostic150_w2",
+          "width": 64,
+          "core_bits": "191:128",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_diagnostic150_w3",
+          "width": 64,
+          "core_bits": "255:192",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "sfo_monitor125",
+      "direction": "output",
+      "width": 512,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "sfo_monitor125_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor125_w1",
+          "width": 64,
+          "core_bits": "127:64",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor125_w2",
+          "width": 64,
+          "core_bits": "191:128",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor125_w3",
+          "width": 64,
+          "core_bits": "255:192",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor125_w4",
+          "width": 64,
+          "core_bits": "319:256",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor125_w5",
+          "width": 64,
+          "core_bits": "383:320",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor125_w6",
+          "width": 64,
+          "core_bits": "447:384",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor125_w7",
+          "width": 64,
+          "core_bits": "511:448",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "sfo_monitor150",
+      "direction": "output",
+      "width": 512,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "sfo_monitor150_w0",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor150_w1",
+          "width": 64,
+          "core_bits": "127:64",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor150_w2",
+          "width": 64,
+          "core_bits": "191:128",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor150_w3",
+          "width": 64,
+          "core_bits": "255:192",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor150_w4",
+          "width": 64,
+          "core_bits": "319:256",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor150_w5",
+          "width": 64,
+          "core_bits": "383:320",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor150_w6",
+          "width": 64,
+          "core_bits": "447:384",
+          "upper_padding": 0
+        },
+        {
+          "name": "sfo_monitor150_w7",
+          "width": 64,
+          "core_bits": "511:448",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "first_step150",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "first_step150",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "second_step150",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk150",
+      "wrapper": [
+        {
+          "name": "second_step150",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "frontend_accepted_samples125",
+      "direction": "output",
+      "width": 64,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "frontend_accepted_samples125",
+          "width": 64,
+          "core_bits": "63:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "frontend_candidates125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "frontend_candidates125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "frontend_rejected125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "frontend_rejected125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "frontend_drop125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "frontend_drop125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "frontend_duplicate125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "frontend_duplicate125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "frontend_confirmed125",
+      "direction": "output",
+      "width": 32,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "frontend_confirmed125",
+          "width": 32,
+          "core_bits": "31:0",
+          "upper_padding": 0
+        }
+      ]
+    },
+    {
+      "name": "frontend_error125",
+      "direction": "output",
+      "width": 16,
+      "domain": "clk125",
+      "wrapper": [
+        {
+          "name": "frontend_error125",
+          "width": 16,
+          "core_bits": "15:0",
+          "upper_padding": 0
+        }
+      ]
+    }
+  ]
+}
