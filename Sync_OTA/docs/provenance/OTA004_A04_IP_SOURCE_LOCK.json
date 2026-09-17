@@ -1,0 +1,666 @@
+{
+  "policy": "Preserve all original XCI bytes except exact OUTPUTDIR/PREFHDL scalar text; no XML parse/write round trip.",
+  "files": [
+    {
+      "module": "t04_cmpy_17x16",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t04_cmpy_17x16.xci",
+      "original_sha256": "3b5f97e08d80086c107a49149c49d6ef65b97c955f1431218a1db85479071b42",
+      "target": "ip/config_a04/t04_cmpy_17x16/t04_cmpy_17x16.xci",
+      "target_sha256": "3b5f97e08d80086c107a49149c49d6ef65b97c955f1431218a1db85479071b42",
+      "bytes": 47563,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "ca620200d3cd43fb336c31e97eebd1c147d66d47ead7e0e6d39637700983d990",
+      "decoded_boundary_json_sha256": "97152610dd6839d29f7150345a3d466724f01c28e2883333196d5f28de67e50a",
+      "boundary_physical_newlines": 13
+    },
+    {
+      "module": "t04_cordic_translate_48",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t04_cordic_translate_48.xci",
+      "original_sha256": "a43a89b4266f7d199d34815d595432c677cbb243d99248c138db22b86bb556e0",
+      "target": "ip/config_a04/t04_cordic_translate_48/t04_cordic_translate_48.xci",
+      "target_sha256": "76a55c2bf94355877b2a5d1dde2a006b6abe6a5bf04fae129a97659a68eb2608",
+      "bytes": 39986,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t04_cordic_translate_48",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "0067d21642aacd64d98a2ae220f0468498521cef4b4ae8488a9d31c24001e988",
+      "decoded_boundary_json_sha256": "4e9b41e12119a0dd342aad17a4873126d89c9e40a232c761bc67aac423c0d1d9",
+      "boundary_physical_newlines": 10
+    },
+    {
+      "module": "t04_div_u63_u47",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t04_div_u63_u47.xci",
+      "original_sha256": "5284131bd9865656e0f4ce8778acc3a5bef5e5e09be22773c84c8108bd453c00",
+      "target": "ip/config_a04/t04_div_u63_u47/t04_div_u63_u47.xci",
+      "target_sha256": "5284131bd9865656e0f4ce8778acc3a5bef5e5e09be22773c84c8108bd453c00",
+      "bytes": 45744,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "1bd25b955a7489a9ae12955eaba4a65fd6266c8c821fb8fbf47cf794ea42031c",
+      "decoded_boundary_json_sha256": "0a445a96c3141dc3533c5b50e947cb3c703bfc6ee24409547cdfa90106720a35",
+      "boundary_physical_newlines": 14
+    },
+    {
+      "module": "t04_phase_scale_s48_x_1953125",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t04_phase_scale_s48_x_1953125.xci",
+      "original_sha256": "99b19121d001c70d838f67d3a8ec2b3316a77e023506bed2d89c777f37d5417e",
+      "target": "ip/config_a04/t04_phase_scale_s48_x_1953125/t04_phase_scale_s48_x_1953125.xci",
+      "target_sha256": "036d871ffd815530d1d7f33c908fff4c125591e582b2390955d6061b02d0c68b",
+      "bytes": 19979,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t04_phase_scale_s48_x_1953125",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "fd874b56b1bc3c8440d22be49b1debdc5f6bf5696ea4205d9f57239dd32ccdf5",
+      "decoded_boundary_json_sha256": "2a66cd30272fcad5658ae9a78a8e0f23fc06c63521575546cc4e176ce867b35b",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t04_square_s43",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t04_square_s43.xci",
+      "original_sha256": "e40f8b8204625f40f4cc62b24694126ff267c601e3d0d0a18dada7b66171b182",
+      "target": "ip/config_a04/t04_square_s43/t04_square_s43.xci",
+      "target_sha256": "057d6b5d8e00e61f2deae2954b43cfa112882c9c26509d39eebc8c4b4ecdf501",
+      "bytes": 20223,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t04_square_s43",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "5cab564fa37c392df2858c415a28272cac6fa6862b16b62fc16250958916ba4c",
+      "decoded_boundary_json_sha256": "7240b4ad9521216d2b90d1776346ab923fd4116bd44d24a9c1357ce9c3a2d6d4",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t04_square_u42",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t04_square_u42.xci",
+      "original_sha256": "052042d45c6f52b82fdd268cd46d2fd82b7c24e0519f4109bf61758a2bf9ba8d",
+      "target": "ip/config_a04/t04_square_u42/t04_square_u42.xci",
+      "target_sha256": "4a58208ba1d4458ab8d3c3152fdc3902527481a3c3cf0fcd619e8c0965903fc4",
+      "bytes": 20227,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t04_square_u42",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "6782c6aff27d6c531869ca09ce1ec12d05bc1b8d81aca20722317a6ee3853b7a",
+      "decoded_boundary_json_sha256": "5debf45c3a7cb819f2fa755ca5cad0191cb97564b45e5bbd2e273ca02f4fd9d5",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t05_cmpy_corr_18x16",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t05_cmpy_corr_18x16.xci",
+      "original_sha256": "7f88a590618a75e58d4d63f842d3941dc2878dafc30cd522b4b5bc36f9a73560",
+      "target": "ip/config_a04/t05_cmpy_corr_18x16/t05_cmpy_corr_18x16.xci",
+      "target_sha256": "d9ff929c1aa3c111f9c88d8e104a7b9af129323ce81716d411057e934cdbf363",
+      "bytes": 47573,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t05_cmpy_corr_18x16",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "3fd3bf448a6276e9b5206028a36865581420edf6764c215c81589135088276b4",
+      "decoded_boundary_json_sha256": "07a2162baaca0cecabc9211b5b336eab61314695447df9721dff0d17f5e50367",
+      "boundary_physical_newlines": 13
+    },
+    {
+      "module": "t05_cmpy_rotate_18x18",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t05_cmpy_rotate_18x18.xci",
+      "original_sha256": "4be6339fbc2848b3fd4b2b4ccec7a74517872411f7377c748229ff548a746832",
+      "target": "ip/config_a04/t05_cmpy_rotate_18x18/t05_cmpy_rotate_18x18.xci",
+      "target_sha256": "4be6339fbc2848b3fd4b2b4ccec7a74517872411f7377c748229ff548a746832",
+      "bytes": 47577,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "d96005c5395f1622998c3d5c6ff23b75ae77574a6aef8714ee181fb2c005f6c6",
+      "decoded_boundary_json_sha256": "c4b10d69bdc989ba007799d8e34b6379959fbe6fe29ae2943751d7cf37da859f",
+      "boundary_physical_newlines": 13
+    },
+    {
+      "module": "t05_cordic_rotate16_parallel",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t05_cordic_rotate16_parallel.xci",
+      "original_sha256": "5d3a03483e52487670fc2f431200745849e4b93ae7f02b7b33946f9221955e56",
+      "target": "ip/config_a04/t05_cordic_rotate16_parallel/t05_cordic_rotate16_parallel.xci",
+      "target_sha256": "ff06b34c4cceafabd494397cf59ed71d40dbadfc8e5f90bd444496329deb728d",
+      "bytes": 46323,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t05_cordic_rotate16_parallel",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "18ee7b9951f0c54ab56a82a5ca9c6a7e63bde0cfd5f7fa9bea3529d7b8e1c54e",
+      "decoded_boundary_json_sha256": "4d01e9182ad337e239dca11bb10f898c79dafd6d1475fe057bddbb61cdb94b8e",
+      "boundary_physical_newlines": 13
+    },
+    {
+      "module": "t05_dds_pinc32_sincos18",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t05_dds_pinc32_sincos18.xci",
+      "original_sha256": "0d7665bac06f9b4770c9eb49852b62a888bf761f5c05c029a39f365b6b8d3968",
+      "target": "ip/config_a04/t05_dds_pinc32_sincos18/t05_dds_pinc32_sincos18.xci",
+      "target_sha256": "eb02b272de919a1cb1869dc4a71a5d69d715e4a2c2507fa16cdb8746390517ba",
+      "bytes": 66304,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t05_dds_pinc32_sincos18",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "fdcc9f9899c85e70bdf39fed0f9c38b97787b8382ddd3200db37458873b5dac4",
+      "decoded_boundary_json_sha256": "e1e0635e382bd977d4fc13d12bb555dc27260f4b1254b35d74fd9ea42fd658e3",
+      "boundary_physical_newlines": 15
+    },
+    {
+      "module": "t05_div_quality_s64_s64_f15",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t05_div_quality_s64_s64_f15.xci",
+      "original_sha256": "f35fd18036d7a5be772402000ac3d16f4fb7950926815e50a7b3a757cb6ff01e",
+      "target": "ip/config_a04/t05_div_quality_s64_s64_f15/t05_div_quality_s64_s64_f15.xci",
+      "target_sha256": "d2a92604439a959ba0561290329b89f19451489cfb004342aa97aa1d37f84b4b",
+      "bytes": 45332,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t05_div_quality_s64_s64_f15",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "637cfa85901735d9eecd673c6bd46426ea22759c55f86f4f3c558e33a7ffd0cf",
+      "decoded_boundary_json_sha256": "ef3fc25720f53a119fca260fb4a5aa8138bb8034a95412499d5d1f7193041546",
+      "boundary_physical_newlines": 14
+    },
+    {
+      "module": "t05_mult_cfo_s19_const40_full59",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t05_mult_cfo_s19_const40_full59.xci",
+      "original_sha256": "0d3686353db05c6b15eddf35b5839284297249a205d6b562c901716a46559815",
+      "target": "ip/config_a04/t05_mult_cfo_s19_const40_full59/t05_mult_cfo_s19_const40_full59.xci",
+      "target_sha256": "0d3686353db05c6b15eddf35b5839284297249a205d6b562c901716a46559815",
+      "bytes": 20257,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "c442c8cb18a9ea9e03b19055ee65d3c30b17e3a91559bfdfc2d272f2905d962e",
+      "decoded_boundary_json_sha256": "841dc892d23ec99a3fbd4a74df388635434791b0b154ac651f4d74b1bd9b33e6",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t05_mult_quality_u46x36_full82",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t05_mult_quality_u46x36_full82.xci",
+      "original_sha256": "5284b626745eb7a4856c7a2d53c93a620f38700cfba51b9c3b1cb749ae4cd266",
+      "target": "ip/config_a04/t05_mult_quality_u46x36_full82/t05_mult_quality_u46x36_full82.xci",
+      "target_sha256": "b1e9f4aecba07c067d94b3742ade0de8ddc11b24e2f801706d9b4c2d03d530e3",
+      "bytes": 20259,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t05_mult_quality_u46x36_full82",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "1ba85117938f781ac74f35ad30ed8d630e4a88ba691f1252ed658ff479fc4183",
+      "decoded_boundary_json_sha256": "2e7801dc850cf1fd0102686b2e219b233ca7b6699f68bba24be96b1bac16b9cd",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t05_mult_s18x18_full36",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t05_mult_s18x18_full36.xci",
+      "original_sha256": "3e7f32c19a04faaf59b09c62952381fb81c6182b37c32e8aa76640683dfbe1b0",
+      "target": "ip/config_a04/t05_mult_s18x18_full36/t05_mult_s18x18_full36.xci",
+      "target_sha256": "949ede08bd77f18deb296861ed3e78589197800dc6afad88ec83ec12090fe40f",
+      "bytes": 20124,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t05_mult_s18x18_full36",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "96b85b1e0f2f766b80a131dbfa2cda554d1e036edb084c1c527202061ccc401c",
+      "decoded_boundary_json_sha256": "8fafc0ad413fe2b8ff038f29ad5e4302f5db774f4e099c537bf8acbc98eb9ecb",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t05_mult_s48x48_full96",
+      "original": "docs/provenance/ip_originals/Sync_Frontend/t05_mult_s48x48_full96.xci",
+      "original_sha256": "432d91c6cdaac407940caf12ec1a31baa0700ae59b7aa64cf93823003d7d8565",
+      "target": "ip/config_a04/t05_mult_s48x48_full96/t05_mult_s48x48_full96.xci",
+      "target_sha256": "577c92201ed58872dbf869a7c645c690a7c89544761938dc9a781f4636b6432f",
+      "bytes": 20239,
+      "scalar_changes": [
+        {
+          "key": "RUNTIME_PARAM.OUTPUTDIR",
+          "before": "../../../../Sync_Frontend.gen/sources_1/ip/t05_mult_s48x48_full96",
+          "after": "."
+        },
+        {
+          "key": "PROJECT_PARAM.PREFHDL",
+          "before": "VHDL",
+          "after": "VERILOG"
+        }
+      ],
+      "original_boundary_bytes_sha256": "d8672fcee83e19f10f96e1d2c517edd43e86b574b3691acc5aa3cd76ec565da8",
+      "decoded_boundary_json_sha256": "7ce063aab959bd83403f0de649389d54047ddaf7cb49856f6693ba1d879e8964",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t07_g3_up47",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t07_g3_up47.xci",
+      "original_sha256": "3d3f04b8886359e0491152c77afb1b8d649880ac8b2dd6c4037a90525c3157ed",
+      "target": "ip/config_a04/t07_g3_up47/t07_g3_up47.xci",
+      "target_sha256": "3d3f04b8886359e0491152c77afb1b8d649880ac8b2dd6c4037a90525c3157ed",
+      "bytes": 66477,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "3f53b7f997f2e6b686e134bb5ec9cd9bb78713f4b4c01ec3653ff8e38ffdb815",
+      "decoded_boundary_json_sha256": "73bc82c30268dd2afdf0b685f8086c82cb7df0ba38624227203ec384748b69b3",
+      "boundary_physical_newlines": 15
+    },
+    {
+      "module": "t03_xfft_2048_main",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t03_xfft_2048_main.xci",
+      "original_sha256": "762fdce0e56fd831f7f3d4f8fcb037856407ff9429c8b946b825c3324bbfcaec",
+      "target": "ip/config_a04/t03_xfft_2048_main/t03_xfft_2048_main.xci",
+      "target_sha256": "762fdce0e56fd831f7f3d4f8fcb037856407ff9429c8b946b825c3324bbfcaec",
+      "bytes": 67051,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "52d68e631f368971163bd59e900a1889e9ac086594877ff0568cc060b5487286",
+      "decoded_boundary_json_sha256": "aa82f1b1f7f01f62208c0c01a8bfdfb4de411a5b3f36567295c8725e404459bb",
+      "boundary_physical_newlines": 22
+    },
+    {
+      "module": "t06_rt_mult_u48_u20",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_rt_mult_u48_u20.xci",
+      "original_sha256": "8753021e311a6e7e4419f95019f550519498659e25575335d9f84b6a250d3c9e",
+      "target": "ip/config_a04/t06_rt_mult_u48_u20/t06_rt_mult_u48_u20.xci",
+      "target_sha256": "8753021e311a6e7e4419f95019f550519498659e25575335d9f84b6a250d3c9e",
+      "bytes": 20415,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "313ddbf816acebfbadd05cdb766c18ced391a7a3ef3e7cf4056753e94104d054",
+      "decoded_boundary_json_sha256": "b958f1350e7b0df5116acc6f729ca2e07cb77f7f2e434649f26f4048b7bab77c",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_rt_mult_s41_s38",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_rt_mult_s41_s38.xci",
+      "original_sha256": "b677f184e7b9f9c26bcb085bb8ef03adb920f6bee1486ac1b6d4b4c822f96424",
+      "target": "ip/config_a04/t06_rt_mult_s41_s38/t06_rt_mult_s41_s38.xci",
+      "target_sha256": "b677f184e7b9f9c26bcb085bb8ef03adb920f6bee1486ac1b6d4b4c822f96424",
+      "bytes": 20411,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "02a6c7493c20ee5411bcdbf4ee19912deae672a7bdca2314e7c6af85183e8017",
+      "decoded_boundary_json_sha256": "841d436ae307c9bd4f76c95be290913bc1e10df4d51afa94e367710e121fa8e4",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_rt_mult_s41_u38",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_rt_mult_s41_u38.xci",
+      "original_sha256": "b1f6c1a01d83a155974947b02c276e607a0d55fd0c7dc14bf0204ef6b7edb6e7",
+      "target": "ip/config_a04/t06_rt_mult_s41_u38/t06_rt_mult_s41_u38.xci",
+      "target_sha256": "b1f6c1a01d83a155974947b02c276e607a0d55fd0c7dc14bf0204ef6b7edb6e7",
+      "bytes": 20413,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "02a6c7493c20ee5411bcdbf4ee19912deae672a7bdca2314e7c6af85183e8017",
+      "decoded_boundary_json_sha256": "841d436ae307c9bd4f76c95be290913bc1e10df4d51afa94e367710e121fa8e4",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_rt_mult_u30_s42",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_rt_mult_u30_s42.xci",
+      "original_sha256": "1116393ddd55593755cb1ffc9b3ff277ffb6541a0a4d8821c817941571c11075",
+      "target": "ip/config_a04/t06_rt_mult_u30_s42/t06_rt_mult_u30_s42.xci",
+      "target_sha256": "1116393ddd55593755cb1ffc9b3ff277ffb6541a0a4d8821c817941571c11075",
+      "bytes": 20413,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "374a299eb1ef86164fba9a4c24e21a184b887af358a47ba96a90a838cf3be2e6",
+      "decoded_boundary_json_sha256": "9ac0f6505113be3bc1ba28d67bec5d4c2a4299fd91f1d557742dbd1739da1f9b",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_rt_mult_u30_u43",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_rt_mult_u30_u43.xci",
+      "original_sha256": "6093bb16dfb172ec11cad0043d4cdf0ecf79b14f789fecf29a0195cc56060670",
+      "target": "ip/config_a04/t06_rt_mult_u30_u43/t06_rt_mult_u30_u43.xci",
+      "target_sha256": "6093bb16dfb172ec11cad0043d4cdf0ecf79b14f789fecf29a0195cc56060670",
+      "bytes": 20415,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "ccf4a7a8a198f2387a3872929d24070d38f507e3cd65b31f217c4290c1727448",
+      "decoded_boundary_json_sha256": "dda779ac1470de75de72cd59bc54b68a1c7b42395d363259e4853c3c5a77c4c6",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_rt_mult_s41_s41",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_rt_mult_s41_s41.xci",
+      "original_sha256": "601ef1b7aa9ed64448b17a53b7109cdc4e07d985f5f7f9221cc9e06b1dc89898",
+      "target": "ip/config_a04/t06_rt_mult_s41_s41/t06_rt_mult_s41_s41.xci",
+      "target_sha256": "601ef1b7aa9ed64448b17a53b7109cdc4e07d985f5f7f9221cc9e06b1dc89898",
+      "bytes": 20411,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "0a2b12c748ebc6bd9eb2e3e591f8ed19497d9ac4a609be61c84752510b4e5a97",
+      "decoded_boundary_json_sha256": "5bc7e6de1c50ee29a098d227374f385fc926301a7073cf05f9566fe3e685805b",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_rt_mult_u30_u48",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_rt_mult_u30_u48.xci",
+      "original_sha256": "740242938119eaee8a8ab7a830bb7211bce183e180b171a7e7f8603ffc4a49b1",
+      "target": "ip/config_a04/t06_rt_mult_u30_u48/t06_rt_mult_u30_u48.xci",
+      "target_sha256": "740242938119eaee8a8ab7a830bb7211bce183e180b171a7e7f8603ffc4a49b1",
+      "bytes": 20415,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "76f8415791f32ec4e5ef0e0edcbb1a3b9fde1117921cb70d1e0e54d4629fe6a7",
+      "decoded_boundary_json_sha256": "858e1a99910d9f4180b5c3a7ef1f73c93d28b27d73ec07f11e97fb4ffac9b6fe",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_fs_mult_s29_s48",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_fs_mult_s29_s48.xci",
+      "original_sha256": "b58292e3d232d06ab631ff2b78a32914a61182a13cd01fd513f9619b9780d69e",
+      "target": "ip/config_a04/t06_fs_mult_s29_s48/t06_fs_mult_s29_s48.xci",
+      "target_sha256": "b58292e3d232d06ab631ff2b78a32914a61182a13cd01fd513f9619b9780d69e",
+      "bytes": 20411,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "9c941338bcd091d84e5c9d37c3f646321187a64ae8534551c946877fcd8a031a",
+      "decoded_boundary_json_sha256": "2017eb1e937b77bda8bc7f40fdbd0bbbb417cedd328fe3b0551977dc31fd9547",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_fs_mult_s29_s11",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_fs_mult_s29_s11.xci",
+      "original_sha256": "be0efe276e4f442a0792981cba88fc7273104375219ae8e2d6c445136d3860d6",
+      "target": "ip/config_a04/t06_fs_mult_s29_s11/t06_fs_mult_s29_s11.xci",
+      "target_sha256": "be0efe276e4f442a0792981cba88fc7273104375219ae8e2d6c445136d3860d6",
+      "bytes": 20411,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "f371b1c492f4d80a6cacfb00dd4cde30c9a4e2eb2349334d592bf3cd4ca54d51",
+      "decoded_boundary_json_sha256": "e9c11d56d84afa54477a0ce7edaa12655ab5fbaa1ccbeedfea62f29806308eee",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_fs_mult_u18_s48",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_fs_mult_u18_s48.xci",
+      "original_sha256": "1a3e9e46fd46ed3f0009d62f1383593211ad25ae83a329b6ca33437a6a48f2f2",
+      "target": "ip/config_a04/t06_fs_mult_u18_s48/t06_fs_mult_u18_s48.xci",
+      "target_sha256": "1a3e9e46fd46ed3f0009d62f1383593211ad25ae83a329b6ca33437a6a48f2f2",
+      "bytes": 20413,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "523aa6be53e0ffa3888757ec83da62180c3069cf6a9f13548212ffceb73b621c",
+      "decoded_boundary_json_sha256": "cabab21af7faab2c4f2370959f2ed449c797cc9e8f0e74215a39b4814efe1a7b",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_fs_mult_u18_s11",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_fs_mult_u18_s11.xci",
+      "original_sha256": "5933dbcb00b1e0956ee11a916730aba44670165893810635d2263b4374393049",
+      "target": "ip/config_a04/t06_fs_mult_u18_s11/t06_fs_mult_u18_s11.xci",
+      "target_sha256": "5933dbcb00b1e0956ee11a916730aba44670165893810635d2263b4374393049",
+      "bytes": 20413,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "740206e3d68ef060813b13a32b130ad5aaacc1c482e9e80097fca3e74b6d9e9c",
+      "decoded_boundary_json_sha256": "42a1380575e28f0b71c872fe8441a5e017ade7b6c35621453dcaf34affa29453",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_wp_mult_u64_u33",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_wp_mult_u64_u33.xci",
+      "original_sha256": "4c1516082903f9d93ebc600d629f4a5af8ac0562ab9fe31875b3c3037ce2ad97",
+      "target": "ip/config_a04/t06_wp_mult_u64_u33/t06_wp_mult_u64_u33.xci",
+      "target_sha256": "4c1516082903f9d93ebc600d629f4a5af8ac0562ab9fe31875b3c3037ce2ad97",
+      "bytes": 20705,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "1e02169f5c09882211cad679cb135698f8652aa0e394b41638dd8ae70a47def7",
+      "decoded_boundary_json_sha256": "1c3f17cb94da1115e619897bce3cf25cd2d4182e74a0448e4cc027d2ea148a7e",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_pair_max_tracker_2lane_cross",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_pair_max_tracker_2lane_cross.xci",
+      "original_sha256": "98b6150104895f84c3fb55831e80a6605147082fa7405b8df31234806d0fa6ce",
+      "target": "ip/config_a04/t06_pair_max_tracker_2lane_cross/t06_pair_max_tracker_2lane_cross.xci",
+      "target_sha256": "98b6150104895f84c3fb55831e80a6605147082fa7405b8df31234806d0fa6ce",
+      "bytes": 20263,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "34c7b3b9f84ae31915fedf37b3c7fb3cd1f75d1e360bf80486a5ab2f14dd73b1",
+      "decoded_boundary_json_sha256": "586415977173c57ba755549238088ca1c8ac2b5aea31596726e901a98ac2c185",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_observation_engine_weight_product",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_observation_engine_weight_product.xci",
+      "original_sha256": "dc927825ebf7bb9ca6f491315ca0b436a3eeb77675e5abf8b27015374779217d",
+      "target": "ip/config_a04/t06_observation_engine_weight_product/t06_observation_engine_weight_product.xci",
+      "target_sha256": "dc927825ebf7bb9ca6f491315ca0b436a3eeb77675e5abf8b27015374779217d",
+      "bytes": 20273,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "785ee81bdcbc6d836be7b99006f82020610a04139fcfb24c16b2aaf46418a4b1",
+      "decoded_boundary_json_sha256": "403ba4d3fbc8c11996323add510a905564f493a49806a250efc731da687bef7c",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_observation_engine_square",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_observation_engine_square.xci",
+      "original_sha256": "13e43e8c85e7231fd0ede5a3b09e8917d9419c90d8b4e04fa78fe0282e0bf1d4",
+      "target": "ip/config_a04/t06_observation_engine_square/t06_observation_engine_square.xci",
+      "target_sha256": "13e43e8c85e7231fd0ede5a3b09e8917d9419c90d8b4e04fa78fe0282e0bf1d4",
+      "bytes": 20253,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "a1b679f198100e6b6e3c05b8dba4f336dc48d3e5e78a20bbc150254de40b580d",
+      "decoded_boundary_json_sha256": "02809dcc999d5c8cfa06650189b0a04e24f30d23001589ab76d1c942cc27fa5c",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_cordic_translate48_parallel",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_cordic_translate48_parallel.xci",
+      "original_sha256": "9a3f252b67bb28fb7d157e8bbab7896f966396b62bfdff94d02470f7f6c7ecc1",
+      "target": "ip/config_a04/t06_cordic_translate48_parallel/t06_cordic_translate48_parallel.xci",
+      "target_sha256": "9a3f252b67bb28fb7d157e8bbab7896f966396b62bfdff94d02470f7f6c7ecc1",
+      "bytes": 39929,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "a8344fbc1c22897de426b628d55a8e75c02fa9d6fae6963a323db4e1c04e1645",
+      "decoded_boundary_json_sha256": "bca5f02c9e2dde8a4dc38481667c7bf5f61f2ce21cb75adf55f784670a95ffc9",
+      "boundary_physical_newlines": 10
+    },
+    {
+      "module": "t06_sg_div_u53_u37",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_sg_div_u53_u37.xci",
+      "original_sha256": "903947a2caabaebb2ca5cfc87bec43ce193273ab324ba73dd186283e5e72ba4d",
+      "target": "ip/config_a04/t06_sg_div_u53_u37/t06_sg_div_u53_u37.xci",
+      "target_sha256": "903947a2caabaebb2ca5cfc87bec43ce193273ab324ba73dd186283e5e72ba4d",
+      "bytes": 46491,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "2558ede5075c56cf8c83f99045d540bd16c518634fa4f924d46bde88abe4fd49",
+      "decoded_boundary_json_sha256": "ee9f5691b0042b0d9fb31d801f47f8c9567c18d12188f8ce710b078b1cf5e330",
+      "boundary_physical_newlines": 14
+    },
+    {
+      "module": "t06_sg_mult_u37_u16",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_sg_mult_u37_u16.xci",
+      "original_sha256": "00e9b88807d212719de7b7858dd361ba6e9886dc821d16204d043c463ea576cd",
+      "target": "ip/config_a04/t06_sg_mult_u37_u16/t06_sg_mult_u37_u16.xci",
+      "target_sha256": "00e9b88807d212719de7b7858dd361ba6e9886dc821d16204d043c463ea576cd",
+      "bytes": 20705,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "7bc1a58575c76e3aa4014664df49ee2aa06e436650c0042d9c9a7ea4ed8a8a16",
+      "decoded_boundary_json_sha256": "90106fb93bfca0fd33ad095fcbbec93562b5c1c6358db8c538915ea3008eb182",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "t06_dds_phase_s32_sincos18",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t06_dds_phase_s32_sincos18.xci",
+      "original_sha256": "474fdda03a39065af86879234777345db23d6c828341d5a02201f720cbc0099c",
+      "target": "ip/config_a04/t06_dds_phase_s32_sincos18/t06_dds_phase_s32_sincos18.xci",
+      "target_sha256": "474fdda03a39065af86879234777345db23d6c828341d5a02201f720cbc0099c",
+      "bytes": 67686,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "230fe09775db0bf8dfc231f5060b816cfa0854d0dc41aac0fd7871813eab321d",
+      "decoded_boundary_json_sha256": "f2f497f1f284737827ed7e34cd402aaa2c883d25d71f6e57b6bec6fabb1c26f8",
+      "boundary_physical_newlines": 16
+    },
+    {
+      "module": "t07_g3_down47",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t07_g3_down47.xci",
+      "original_sha256": "a5070390646ee6d102c4f427de7eccdbf1395f820e6636163428a4b816962517",
+      "target": "ip/config_a04/t07_g3_down47/t07_g3_down47.xci",
+      "target_sha256": "a5070390646ee6d102c4f427de7eccdbf1395f820e6636163428a4b816962517",
+      "bytes": 66537,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "94a2c36b67ae5ffdc3efd2d22ceb33f92622b2848af7acb22683d8227d14d47f",
+      "decoded_boundary_json_sha256": "3055eba688c5fc03f1d3f348b57191a8a64d01015f78bb2c8194a4bca2b10cfe",
+      "boundary_physical_newlines": 15
+    },
+    {
+      "module": "t07_g3_down15",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t07_g3_down15.xci",
+      "original_sha256": "72191452e7c3482e22af05c2f1472b07fb67f788c598dabbdff55a764baf201d",
+      "target": "ip/config_a04/t07_g3_down15/t07_g3_down15.xci",
+      "target_sha256": "72191452e7c3482e22af05c2f1472b07fb67f788c598dabbdff55a764baf201d",
+      "bytes": 67417,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "9e3d24bfab24ced05d83bed7d89f763735523314d0dd6324b6a8ff739a9f5a4b",
+      "decoded_boundary_json_sha256": "b4843ba34a7da57e6048086906cd2a1cf616dec290d22c8e234166ab4e66849f",
+      "boundary_physical_newlines": 15
+    },
+    {
+      "module": "farrow_mul_t16",
+      "original": "docs/provenance/ip_originals/Sync_SFO/farrow_mul_t16.xci",
+      "original_sha256": "6fe20f2014dc030cb04538cec8558b799ccc9f398b6abdb77c0301f08917475f",
+      "target": "ip/config_a04/farrow_mul_t16/farrow_mul_t16.xci",
+      "target_sha256": "6fe20f2014dc030cb04538cec8558b799ccc9f398b6abdb77c0301f08917475f",
+      "bytes": 20400,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "ea179a769f923588d85b9135ef4f78371de07b54b73b4d6a618934807fe0562a",
+      "decoded_boundary_json_sha256": "277bf659a3841c52d1bc7f3584dc962c0d58fa3cd23847091995c79b750bdf15",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "farrow_mul_h16",
+      "original": "docs/provenance/ip_originals/Sync_SFO/farrow_mul_h16.xci",
+      "original_sha256": "9b260ba5b07d0c9317cccc7dfdd06dba2aa65680689bb649b1470e26c8dab8da",
+      "target": "ip/config_a04/farrow_mul_h16/farrow_mul_h16.xci",
+      "target_sha256": "9b260ba5b07d0c9317cccc7dfdd06dba2aa65680689bb649b1470e26c8dab8da",
+      "bytes": 20398,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "fc6c1db24f077acc63af1d4d91b729eac9fb472d9bfb2b15a1ffd1a1f3f615cb",
+      "decoded_boundary_json_sha256": "9284f1a01b86d7e211f2ab0d8900d6fcbce4d340654916cbc084719312295a5e",
+      "boundary_physical_newlines": 4
+    },
+    {
+      "module": "farrow_add_32",
+      "original": "docs/provenance/ip_originals/Sync_SFO/farrow_add_32.xci",
+      "original_sha256": "a731cd261dbd8ac20695db75e0993abbbe7566187a8d51d29fa4a7ffea9834b7",
+      "target": "ip/config_a04/farrow_add_32/farrow_add_32.xci",
+      "target_sha256": "a731cd261dbd8ac20695db75e0993abbbe7566187a8d51d29fa4a7ffea9834b7",
+      "bytes": 28320,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "d8557d10d9e92a4077ee1ce25e685c74b6c57bf7745b4280424bfd9ec613a2fb",
+      "decoded_boundary_json_sha256": "ec8b98c261e8210a343cdc011f2e1b5188e7c9c54324c6b4a39813e1fa7bccbb",
+      "boundary_physical_newlines": 7
+    },
+    {
+      "module": "farrow_add_18",
+      "original": "docs/provenance/ip_originals/Sync_SFO/farrow_add_18.xci",
+      "original_sha256": "c59b56a551ec4c824e695646b4a2f757cd3df1e030341eb5a6ef5f452710c49f",
+      "target": "ip/config_a04/farrow_add_18/farrow_add_18.xci",
+      "target_sha256": "c59b56a551ec4c824e695646b4a2f757cd3df1e030341eb5a6ef5f452710c49f",
+      "bytes": 28292,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "2fda69eb212bbd261f1db4dd01c0803db30db038ac77da2ec44bfadaef2227e2",
+      "decoded_boundary_json_sha256": "3e5ed0f35ebee2659360775f85bc2c8a25e1cd960875b38505e0e6d2e596d28d",
+      "boundary_physical_newlines": 7
+    },
+    {
+      "module": "farrow_add_28",
+      "original": "docs/provenance/ip_originals/Sync_SFO/farrow_add_28.xci",
+      "original_sha256": "090f076b7ce244908188cf51d5f410c56c74c8b453a1278a17a699172b69569b",
+      "target": "ip/config_a04/farrow_add_28/farrow_add_28.xci",
+      "target_sha256": "090f076b7ce244908188cf51d5f410c56c74c8b453a1278a17a699172b69569b",
+      "bytes": 28312,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "19982b62a224d5f82d04d69d13e82b0b349b38c44464ba0931c41ee6ed2f3a1b",
+      "decoded_boundary_json_sha256": "e074f231ac4604f51c443d19ff7ac0e7d460d7ab185566c05d64b487973e971b",
+      "boundary_physical_newlines": 7
+    },
+    {
+      "module": "t07_g3_up15",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t07_g3_up15.xci",
+      "original_sha256": "7ad4dbac8e0c96796c4bc6b8de7687e77aef12c8a408e0ed6b924e7d9da759f7",
+      "target": "ip/config_a04/t07_g3_up15/t07_g3_up15.xci",
+      "target_sha256": "7ad4dbac8e0c96796c4bc6b8de7687e77aef12c8a408e0ed6b924e7d9da759f7",
+      "bytes": 67122,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "6069fae2c127fc1f36779ad6ec7546c060ca28d3b9f482517bd39c354812cf06",
+      "decoded_boundary_json_sha256": "4efbdecd227f762625a2d0e8540828648081ddd8b8b501062cde1b5018955f75",
+      "boundary_physical_newlines": 15
+    },
+    {
+      "module": "t03_xfft_16384_aux",
+      "original": "docs/provenance/ip_originals/Sync_SFO/t03_xfft_16384_aux.xci",
+      "original_sha256": "6f63f1bea9d2890a98e2e49d948e3a30ac75a7c5518c899b0c50faab46ae1e49",
+      "target": "ip/config_a04/t03_xfft_16384_aux/t03_xfft_16384_aux.xci",
+      "target_sha256": "6f63f1bea9d2890a98e2e49d948e3a30ac75a7c5518c899b0c50faab46ae1e49",
+      "bytes": 67189,
+      "scalar_changes": [],
+      "original_boundary_bytes_sha256": "ebd2179149fa3d68e2046ed2aeda74a2be2701a318db33bc09a6f59450a2e436",
+      "decoded_boundary_json_sha256": "1fb6c8af826304e8c5c834db4c015540033dfb3413729856167587e23924d147",
+      "boundary_physical_newlines": 22
+    }
+  ]
+}

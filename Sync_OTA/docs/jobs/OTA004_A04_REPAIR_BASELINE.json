@@ -1,0 +1,327 @@
+{
+  "xpr": {
+    "path": "Sync_OTA.xpr",
+    "bytes": 80350,
+    "sha256": "1b63efc27baf001d82e4da5048a798418db41746677141d7d91e18e5866ee556"
+  },
+  "managed_xci": [
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t04_cmpy_17x16/t04_cmpy_17x16.xci",
+      "bytes": 47645,
+      "sha256": "3bd8d6e2e73aebcc3b92c4f44ccbb76c1707a9e1128330646adf615af8f7f916",
+      "replacement": "ip/config_a04/t04_cmpy_17x16/t04_cmpy_17x16.xci",
+      "replacement_sha256": "3b5f97e08d80086c107a49149c49d6ef65b97c955f1431218a1db85479071b42"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t04_cordic_translate_48/t04_cordic_translate_48.xci",
+      "bytes": 40150,
+      "sha256": "7d8cd63dcd2c76f1fa4ebbc7a279e09fc1b1bb79069bd06b087650ffd403efb9",
+      "replacement": "ip/config_a04/t04_cordic_translate_48/t04_cordic_translate_48.xci",
+      "replacement_sha256": "76a55c2bf94355877b2a5d1dde2a006b6abe6a5bf04fae129a97659a68eb2608"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t04_div_u63_u47/t04_div_u63_u47.xci",
+      "bytes": 45900,
+      "sha256": "972b04c7ec2f72c8e2e3121353a39db19fd8104145a0c28399873e433110309e",
+      "replacement": "ip/config_a04/t04_div_u63_u47/t04_div_u63_u47.xci",
+      "replacement_sha256": "5284131bd9865656e0f4ce8778acc3a5bef5e5e09be22773c84c8108bd453c00"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t04_phase_scale_s48_x_1953125/t04_phase_scale_s48_x_1953125.xci",
+      "bytes": 20045,
+      "sha256": "6b0651266f3b97d507722f0bb8bbd3b8605026b20dd81e0c44cabc5004205945",
+      "replacement": "ip/config_a04/t04_phase_scale_s48_x_1953125/t04_phase_scale_s48_x_1953125.xci",
+      "replacement_sha256": "036d871ffd815530d1d7f33c908fff4c125591e582b2390955d6061b02d0c68b"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t04_square_s43/t04_square_s43.xci",
+      "bytes": 20603,
+      "sha256": "ef2c9f307d88eee42b83d59e1d9ff614649b6c33ba9916e2c228675e90d1260b",
+      "replacement": "ip/config_a04/t04_square_s43/t04_square_s43.xci",
+      "replacement_sha256": "057d6b5d8e00e61f2deae2954b43cfa112882c9c26509d39eebc8c4b4ecdf501"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t04_square_u42/t04_square_u42.xci",
+      "bytes": 20607,
+      "sha256": "e0b4179ab14ad84eadadea66deebd50ebd061e055161717e548ca858cb9aa3ed",
+      "replacement": "ip/config_a04/t04_square_u42/t04_square_u42.xci",
+      "replacement_sha256": "4a58208ba1d4458ab8d3c3152fdc3902527481a3c3cf0fcd619e8c0965903fc4"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t05_cmpy_corr_18x16/t05_cmpy_corr_18x16.xci",
+      "bytes": 47660,
+      "sha256": "a1fd09ffef0046738ab9290f426b4c310e8746fad7e1493ae2afc128a76a32b8",
+      "replacement": "ip/config_a04/t05_cmpy_corr_18x16/t05_cmpy_corr_18x16.xci",
+      "replacement_sha256": "d9ff929c1aa3c111f9c88d8e104a7b9af129323ce81716d411057e934cdbf363"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t05_cmpy_rotate_18x18/t05_cmpy_rotate_18x18.xci",
+      "bytes": 47666,
+      "sha256": "8935d5c9e382805008ebd00f8b562095950bd9a6cbaf238117be2c31e7cf9230",
+      "replacement": "ip/config_a04/t05_cmpy_rotate_18x18/t05_cmpy_rotate_18x18.xci",
+      "replacement_sha256": "4be6339fbc2848b3fd4b2b4ccec7a74517872411f7377c748229ff548a746832"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t05_cordic_rotate16_parallel/t05_cordic_rotate16_parallel.xci",
+      "bytes": 46489,
+      "sha256": "04c527473ec97eda2650fc2d26acc106f0b1e11ee4c2182e2994205dabafb458",
+      "replacement": "ip/config_a04/t05_cordic_rotate16_parallel/t05_cordic_rotate16_parallel.xci",
+      "replacement_sha256": "ff06b34c4cceafabd494397cf59ed71d40dbadfc8e5f90bd444496329deb728d"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t05_dds_pinc32_sincos18/t05_dds_pinc32_sincos18.xci",
+      "bytes": 66617,
+      "sha256": "d45486914663e857e6c63c7635d5fcfffcfc0a90b324c7716770a1f7fad534c3",
+      "replacement": "ip/config_a04/t05_dds_pinc32_sincos18/t05_dds_pinc32_sincos18.xci",
+      "replacement_sha256": "eb02b272de919a1cb1869dc4a71a5d69d715e4a2c2507fa16cdb8746390517ba"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t05_div_quality_s64_s64_f15/t05_div_quality_s64_s64_f15.xci",
+      "bytes": 45484,
+      "sha256": "c972fd46bb255eaf1ef9dfdc27c524cec0fadc8fcff93e01cda603ec65f6dcc9",
+      "replacement": "ip/config_a04/t05_div_quality_s64_s64_f15/t05_div_quality_s64_s64_f15.xci",
+      "replacement_sha256": "d2a92604439a959ba0561290329b89f19451489cfb004342aa97aa1d37f84b4b"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t05_mult_cfo_s19_const40_full59/t05_mult_cfo_s19_const40_full59.xci",
+      "bytes": 20654,
+      "sha256": "cc7972dfb69fefb9715062c0c33f794eb36e7ac332d9d65b3fdfcca1b90511bc",
+      "replacement": "ip/config_a04/t05_mult_cfo_s19_const40_full59/t05_mult_cfo_s19_const40_full59.xci",
+      "replacement_sha256": "0d3686353db05c6b15eddf35b5839284297249a205d6b562c901716a46559815"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t05_mult_quality_u46x36_full82/t05_mult_quality_u46x36_full82.xci",
+      "bytes": 20655,
+      "sha256": "a9070ad9241ea438853c8a77a861102aa31ee8320b67652271bd6565c0110f38",
+      "replacement": "ip/config_a04/t05_mult_quality_u46x36_full82/t05_mult_quality_u46x36_full82.xci",
+      "replacement_sha256": "b1e9f4aecba07c067d94b3742ade0de8ddc11b24e2f801706d9b4c2d03d530e3"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t05_mult_s18x18_full36/t05_mult_s18x18_full36.xci",
+      "bytes": 20512,
+      "sha256": "e1bee9cc289aa8c76e90415cca846f27b3813307bdca8733de22b351336df672",
+      "replacement": "ip/config_a04/t05_mult_s18x18_full36/t05_mult_s18x18_full36.xci",
+      "replacement_sha256": "949ede08bd77f18deb296861ed3e78589197800dc6afad88ec83ec12090fe40f"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t05_mult_s48x48_full96/t05_mult_s48x48_full96.xci",
+      "bytes": 20627,
+      "sha256": "20f05458bbf0d1d60950c855d5c661e337ba22a38ed593f07c7373e6dbd159dc",
+      "replacement": "ip/config_a04/t05_mult_s48x48_full96/t05_mult_s48x48_full96.xci",
+      "replacement_sha256": "577c92201ed58872dbf869a7c645c690a7c89544761938dc9a781f4636b6432f"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t07_g3_up47/t07_g3_up47.xci",
+      "bytes": 66688,
+      "sha256": "19b492ac26b3357c0fecbd4dabed4f1a491f9e4ff1cddfe5dcd011d587d09f49",
+      "replacement": "ip/config_a04/t07_g3_up47/t07_g3_up47.xci",
+      "replacement_sha256": "3d3f04b8886359e0491152c77afb1b8d649880ac8b2dd6c4037a90525c3157ed"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t03_xfft_2048_main/t03_xfft_2048_main.xci",
+      "bytes": 33016,
+      "sha256": "d833fef1563b91235075e01d971684562ebfc28880a46e0636dee7991ae2e685",
+      "replacement": "ip/config_a04/t03_xfft_2048_main/t03_xfft_2048_main.xci",
+      "replacement_sha256": "762fdce0e56fd831f7f3d4f8fcb037856407ff9429c8b946b825c3324bbfcaec"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_rt_mult_u48_u20/t06_rt_mult_u48_u20.xci",
+      "bytes": 12317,
+      "sha256": "9d5085c9bb424fd3e11570c8f37af51d71a6c58e405375a3189a8e8af31e11cd",
+      "replacement": "ip/config_a04/t06_rt_mult_u48_u20/t06_rt_mult_u48_u20.xci",
+      "replacement_sha256": "8753021e311a6e7e4419f95019f550519498659e25575335d9f84b6a250d3c9e"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_rt_mult_s41_s38/t06_rt_mult_s41_s38.xci",
+      "bytes": 12313,
+      "sha256": "9fef949858ea2475a7f6c20f195a16113766ab0556468b23b99806db302c2b4a",
+      "replacement": "ip/config_a04/t06_rt_mult_s41_s38/t06_rt_mult_s41_s38.xci",
+      "replacement_sha256": "b677f184e7b9f9c26bcb085bb8ef03adb920f6bee1486ac1b6d4b4c822f96424"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_rt_mult_s41_u38/t06_rt_mult_s41_u38.xci",
+      "bytes": 12315,
+      "sha256": "3172ecc80945cf201f21f9f26364608a1af0b9c6e17789e7946207087811671f",
+      "replacement": "ip/config_a04/t06_rt_mult_s41_u38/t06_rt_mult_s41_u38.xci",
+      "replacement_sha256": "b1f6c1a01d83a155974947b02c276e607a0d55fd0c7dc14bf0204ef6b7edb6e7"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_rt_mult_u30_s42/t06_rt_mult_u30_s42.xci",
+      "bytes": 12315,
+      "sha256": "c8d7ce64ed9939cb67bfd0a88983863aaae75ca9db898041b41ccfe3f2b19031",
+      "replacement": "ip/config_a04/t06_rt_mult_u30_s42/t06_rt_mult_u30_s42.xci",
+      "replacement_sha256": "1116393ddd55593755cb1ffc9b3ff277ffb6541a0a4d8821c817941571c11075"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_rt_mult_u30_u43/t06_rt_mult_u30_u43.xci",
+      "bytes": 12317,
+      "sha256": "d09fd33d020516cef35034f1a3c3665ee3f1ec434af64339da407c097c8c7198",
+      "replacement": "ip/config_a04/t06_rt_mult_u30_u43/t06_rt_mult_u30_u43.xci",
+      "replacement_sha256": "6093bb16dfb172ec11cad0043d4cdf0ecf79b14f789fecf29a0195cc56060670"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_rt_mult_s41_s41/t06_rt_mult_s41_s41.xci",
+      "bytes": 12313,
+      "sha256": "1c9a68bddb6f056057b15461bfaf68fa1f41ef94d70b75e1a823b47038bc75a9",
+      "replacement": "ip/config_a04/t06_rt_mult_s41_s41/t06_rt_mult_s41_s41.xci",
+      "replacement_sha256": "601ef1b7aa9ed64448b17a53b7109cdc4e07d985f5f7f9221cc9e06b1dc89898"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_rt_mult_u30_u48/t06_rt_mult_u30_u48.xci",
+      "bytes": 12317,
+      "sha256": "4cff8fd123da37011f84a0b21b9f1bc7250a82bcec5ff6bd71af3a255713f808",
+      "replacement": "ip/config_a04/t06_rt_mult_u30_u48/t06_rt_mult_u30_u48.xci",
+      "replacement_sha256": "740242938119eaee8a8ab7a830bb7211bce183e180b171a7e7f8603ffc4a49b1"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_fs_mult_s29_s48/t06_fs_mult_s29_s48.xci",
+      "bytes": 12313,
+      "sha256": "9c98a5fefe692812fd0382d831656d8755c61634e4450a37f40c7b4f13ac687b",
+      "replacement": "ip/config_a04/t06_fs_mult_s29_s48/t06_fs_mult_s29_s48.xci",
+      "replacement_sha256": "b58292e3d232d06ab631ff2b78a32914a61182a13cd01fd513f9619b9780d69e"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_fs_mult_s29_s11/t06_fs_mult_s29_s11.xci",
+      "bytes": 12313,
+      "sha256": "ea44afb6cb42ebfb7014678cb9efb645c492bb404fc9a952bb5c0be274f30823",
+      "replacement": "ip/config_a04/t06_fs_mult_s29_s11/t06_fs_mult_s29_s11.xci",
+      "replacement_sha256": "be0efe276e4f442a0792981cba88fc7273104375219ae8e2d6c445136d3860d6"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_fs_mult_u18_s48/t06_fs_mult_u18_s48.xci",
+      "bytes": 12315,
+      "sha256": "2dae9c3f573e0989d25a3bc51c117fda814b0293e1138bb5b4efddc68015fd81",
+      "replacement": "ip/config_a04/t06_fs_mult_u18_s48/t06_fs_mult_u18_s48.xci",
+      "replacement_sha256": "1a3e9e46fd46ed3f0009d62f1383593211ad25ae83a329b6ca33437a6a48f2f2"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_fs_mult_u18_s11/t06_fs_mult_u18_s11.xci",
+      "bytes": 12315,
+      "sha256": "b663635b208917b6b3636543b982e684c9db9747c3a11d975fcdf4e827ea4382",
+      "replacement": "ip/config_a04/t06_fs_mult_u18_s11/t06_fs_mult_u18_s11.xci",
+      "replacement_sha256": "5933dbcb00b1e0956ee11a916730aba44670165893810635d2263b4374393049"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_wp_mult_u64_u33/t06_wp_mult_u64_u33.xci",
+      "bytes": 20761,
+      "sha256": "117fbc439ae5bbb5a263a16c2d5c48894c2ba6b37db75edf97aa7e01b857282e",
+      "replacement": "ip/config_a04/t06_wp_mult_u64_u33/t06_wp_mult_u64_u33.xci",
+      "replacement_sha256": "4c1516082903f9d93ebc600d629f4a5af8ac0562ab9fe31875b3c3037ce2ad97"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_pair_max_tracker_2lane_cross/t06_pair_max_tracker_2lane_cross.xci",
+      "bytes": 20661,
+      "sha256": "342a1c73441349b13bf9cfee5e566eb4614330bab7842964ea3c044d74113190",
+      "replacement": "ip/config_a04/t06_pair_max_tracker_2lane_cross/t06_pair_max_tracker_2lane_cross.xci",
+      "replacement_sha256": "98b6150104895f84c3fb55831e80a6605147082fa7405b8df31234806d0fa6ce"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_observation_engine_weight_product/t06_observation_engine_weight_product.xci",
+      "bytes": 20676,
+      "sha256": "0acc00b1aced05621e532c2137e44442af61d02f846bae3d8abbf74783a2d2ed",
+      "replacement": "ip/config_a04/t06_observation_engine_weight_product/t06_observation_engine_weight_product.xci",
+      "replacement_sha256": "dc927825ebf7bb9ca6f491315ca0b436a3eeb77675e5abf8b27015374779217d"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_observation_engine_square/t06_observation_engine_square.xci",
+      "bytes": 20648,
+      "sha256": "cb9d1753d30e6342a9fdfaf84bccdb1df932e67cf147538f303b4622003314db",
+      "replacement": "ip/config_a04/t06_observation_engine_square/t06_observation_engine_square.xci",
+      "replacement_sha256": "13e43e8c85e7231fd0ede5a3b09e8917d9419c90d8b4e04fa78fe0282e0bf1d4"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_cordic_translate48_parallel/t06_cordic_translate48_parallel.xci",
+      "bytes": 28285,
+      "sha256": "802a256fd0bbf5e382cecf61691c85dcd959ccc729060c098bad570de7240deb",
+      "replacement": "ip/config_a04/t06_cordic_translate48_parallel/t06_cordic_translate48_parallel.xci",
+      "replacement_sha256": "9a3f252b67bb28fb7d157e8bbab7896f966396b62bfdff94d02470f7f6c7ecc1"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_sg_div_u53_u37/t06_sg_div_u53_u37.xci",
+      "bytes": 21973,
+      "sha256": "65d155ed829064893328f0984f19f95ebc1a7bb85cd18b5e3cbf19a74288fab2",
+      "replacement": "ip/config_a04/t06_sg_div_u53_u37/t06_sg_div_u53_u37.xci",
+      "replacement_sha256": "903947a2caabaebb2ca5cfc87bec43ce193273ab324ba73dd186283e5e72ba4d"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_sg_mult_u37_u16/t06_sg_mult_u37_u16.xci",
+      "bytes": 20761,
+      "sha256": "557cdbda0612782abe2b38c6e85a618e5a6c1c270df90ef59df52640e9c09f34",
+      "replacement": "ip/config_a04/t06_sg_mult_u37_u16/t06_sg_mult_u37_u16.xci",
+      "replacement_sha256": "00e9b88807d212719de7b7858dd361ba6e9886dc821d16204d043c463ea576cd"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t06_dds_phase_s32_sincos18/t06_dds_phase_s32_sincos18.xci",
+      "bytes": 52318,
+      "sha256": "0fe10e92a2383dbb3d07411100d50b1cfc86a686c1473b92e165e6cd2abe1b07",
+      "replacement": "ip/config_a04/t06_dds_phase_s32_sincos18/t06_dds_phase_s32_sincos18.xci",
+      "replacement_sha256": "474fdda03a39065af86879234777345db23d6c828341d5a02201f720cbc0099c"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t07_g3_down47/t07_g3_down47.xci",
+      "bytes": 66749,
+      "sha256": "9d211c142e65bad52050ae30599c569106230f35455d9928dec09f3eaef2c1f2",
+      "replacement": "ip/config_a04/t07_g3_down47/t07_g3_down47.xci",
+      "replacement_sha256": "a5070390646ee6d102c4f427de7eccdbf1395f820e6636163428a4b816962517"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t07_g3_down15/t07_g3_down15.xci",
+      "bytes": 67629,
+      "sha256": "439e9d7c408bf5051372a311954a4f822f2f431e49a32e2c7c5dc4258f9b4936",
+      "replacement": "ip/config_a04/t07_g3_down15/t07_g3_down15.xci",
+      "replacement_sha256": "72191452e7c3482e22af05c2f1472b07fb67f788c598dabbdff55a764baf201d"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/farrow_mul_t16/farrow_mul_t16.xci",
+      "bytes": 20451,
+      "sha256": "4314f38bcb8d79f976be0b6309a44dedc5db50fed8b3ee808a996d192328d63e",
+      "replacement": "ip/config_a04/farrow_mul_t16/farrow_mul_t16.xci",
+      "replacement_sha256": "6fe20f2014dc030cb04538cec8558b799ccc9f398b6abdb77c0301f08917475f"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/farrow_mul_h16/farrow_mul_h16.xci",
+      "bytes": 20449,
+      "sha256": "1cf9f76fb30aad663276fcfe28e304325c50458829656b98e6e592040767a859",
+      "replacement": "ip/config_a04/farrow_mul_h16/farrow_mul_h16.xci",
+      "replacement_sha256": "9b260ba5b07d0c9317cccc7dfdd06dba2aa65680689bb649b1470e26c8dab8da"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/farrow_add_32/farrow_add_32.xci",
+      "bytes": 28651,
+      "sha256": "5479316b01d25b3145471069d74d44ca3f1c00156caf258af3bf1984b37f86d3",
+      "replacement": "ip/config_a04/farrow_add_32/farrow_add_32.xci",
+      "replacement_sha256": "a731cd261dbd8ac20695db75e0993abbbe7566187a8d51d29fa4a7ffea9834b7"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/farrow_add_18/farrow_add_18.xci",
+      "bytes": 28623,
+      "sha256": "ff1a8a8fd0d3672a3f47bb7b4f0e8459cf30ac4ee2635733a0466bc3bc308220",
+      "replacement": "ip/config_a04/farrow_add_18/farrow_add_18.xci",
+      "replacement_sha256": "c59b56a551ec4c824e695646b4a2f757cd3df1e030341eb5a6ef5f452710c49f"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/farrow_add_28/farrow_add_28.xci",
+      "bytes": 28643,
+      "sha256": "2f4c187352b258be801ca3ff7acf9a806c15b6aa90da2775e6069c411aa0e54b",
+      "replacement": "ip/config_a04/farrow_add_28/farrow_add_28.xci",
+      "replacement_sha256": "090f076b7ce244908188cf51d5f410c56c74c8b453a1278a17a699172b69569b"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t07_g3_up15/t07_g3_up15.xci",
+      "bytes": 67332,
+      "sha256": "451803f30748a723e11cee4d3f07752656482874c1eac675b25f5c8f9e73f8d9",
+      "replacement": "ip/config_a04/t07_g3_up15/t07_g3_up15.xci",
+      "replacement_sha256": "7ad4dbac8e0c96796c4bc6b8de7687e77aef12c8a408e0ed6b924e7d9da759f7"
+    },
+    {
+      "path": "Sync_OTA.srcs/sources_1/ip/t03_xfft_16384_aux/t03_xfft_16384_aux.xci",
+      "bytes": 33154,
+      "sha256": "2212c2762ad2238a419ddc2347c640df3fe0a92e6913871cd27953041ea661c4",
+      "replacement": "ip/config_a04/t03_xfft_16384_aux/t03_xfft_16384_aux.xci",
+      "replacement_sha256": "6f63f1bea9d2890a98e2e49d948e3a30ac75a7c5518c899b0c50faab46ae1e49"
+    }
+  ],
+  "no_native_targets_generated": true,
+  "first_native_start_utc": "2026-09-17T00:44:33.0452158Z",
+  "whole_job_hard_deadline_utc": "2026-09-17T03:44:33.0452158Z"
+}

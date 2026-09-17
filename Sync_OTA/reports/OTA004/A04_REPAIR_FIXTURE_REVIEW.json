@@ -1,0 +1,12 @@
+{
+  "status": "A04_FILESYSTEM_REPAIR_FIXTURE_PASS",
+  "fixture_only": true,
+  "native_launched": false,
+  "real_managed_xci_unchanged": true,
+  "archived_original_files": 46,
+  "repaired_fixture_xci": 45,
+  "xpr_unchanged": true,
+  "reentry_preserves_simulated_native_state": true,
+  "first_stdout": "OTA004_A04_MANAGED_XCI_REPAIR_COMPLETE archived=46 repaired=45 project_preserved=1\n",
+  "second_stdout": "OTA004_A04_REPAIR_ALREADY_COMPLETE; preserve native-generated targets\n"
+}

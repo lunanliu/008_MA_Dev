@@ -1,0 +1,19 @@
+{
+  "job": "OTA004",
+  "revision": "A04",
+  "state": "FROZEN_AWAITING_CONCRETE_MANAGER_SLOT",
+  "manifest": "docs/jobs/OTA004_A04_source_lock.json",
+  "manifest_sha256": "1d94a73ad774021113378cd1ea1844de028ae3dd5063d1ff36effd4ad2719559",
+  "stages": [
+    "prepare",
+    "smoke",
+    "synth"
+  ],
+  "native_started": false,
+  "old_grants_reusable": false,
+  "created_utc": "2026-09-17T01:00:10.484081+00:00",
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "first_native_start_utc": "2026-09-17T00:44:33.0452158Z",
+  "whole_job_hard_deadline_utc": "2026-09-17T03:44:33.0452158Z"
+}

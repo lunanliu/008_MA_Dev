@@ -17,4 +17,4 @@
 
 - [OTA003限定接收](reports/OTA003/ASTRA_REVIEW_ZH.md)：三项专项通过，资源已归还。
 - [独立VHDL Wrapper](wrapper/sync_ota_wrapper.vhd)与[完整端口合同](docs/PORTS_AND_RECORDS_ZH.md)：75个核心端口/111个Wrapper端口，等待原生语法核验。
-- [OTA004/A03冻结包](docs/jobs/OTA004_A03_ZH.md)：补齐三份已发布SFO头文件及工程依赖审计，完整真实工程/短冒烟/一次核心综合仍待新具体资源授权。A01缺依赖而未准入；A02修复依赖后按用户最新内存策略另出A03，12GiB只告警。旧冻结包均保留且未启动。
+- [OTA004/A04冻结包](docs/jobs/OTA004_A04_ZH.md)：补齐三份已发布SFO头文件及工程依赖审计，完整真实工程/短冒烟/一次核心综合仍待新具体资源授权。A01/A02未准入；A03 prepare因XCI移植元数据损坏与TSV尾空列解析失败，旧grant已归还；A04只修复未完成阶段，旧输入与失败证据保留，12GiB仍只告警。

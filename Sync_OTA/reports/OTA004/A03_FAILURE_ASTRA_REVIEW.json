@@ -1,0 +1,45 @@
+{
+  "status": "NOT_PASS_PREPARE_FAILED",
+  "reason": "ET XML attribute whitespace normalization corrupts wrapped vendor boundaryDescriptionJSON; independent TSV trailing empty column bug",
+  "failed_ip_count": 5,
+  "registered_ip_count": 40,
+  "expected_ip_count": 45,
+  "all_45_metadata_at_risk": true,
+  "first_native_start_utc": "2026-09-17T00:44:33.0452158Z",
+  "tree_closed_utc": "2026-09-17T00:45:05.1133386Z",
+  "recorded_identities": 6,
+  "last_tree_empty": true,
+  "timed_out": false,
+  "smoke": "NOT_RUN",
+  "synth": "NOT_RUN",
+  "evidence": [
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a03\\native.log",
+      "sha256": "3e3a02a29e90bfe12ce3f3c6a351ab5feae49bb941b2932d7b71ef571f820e0d"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a03\\wrapper_stdout.log",
+      "sha256": "58e19fc619d3e7b67a4e3dbee19d34c1d58fb3d63bab5602191a934d059fc57c"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a03\\wrapper_stderr.log",
+      "sha256": "e8a16f3a60a7cc5bae33b98000ae572503ef7ff79949dc50b7c0f1fa7b2d5be5"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a03\\actual_ips.tsv",
+      "sha256": "cdc77ccc16459ef0a22d9e2f89a7f3a30840aec96ded0bad8731462ae6b8fe81"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a03\\actual_sources.tsv",
+      "sha256": "23383bfb01cfd0b4d1d7467cd8e6e632480655c99e8c33096e3bf06535ccac24"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a03\\process_summary.json",
+      "sha256": "20cc44db1d8b5591e147d9ea48323b4fd3f352c77bce1a39f469be52909ca3f0"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\prepare_a03\\process_tree.jsonl",
+      "sha256": "27a8c099ec1b849ab6a6e239a56965ccd63120f5661e6a7fe517ee6a2d9e610d"
+    }
+  ]
+}

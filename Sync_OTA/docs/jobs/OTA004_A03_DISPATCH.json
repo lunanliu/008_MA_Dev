@@ -1,7 +1,7 @@
 {
   "job": "OTA004",
   "revision": "A03",
-  "state": "FROZEN_AWAITING_CONCRETE_MANAGER_SLOT",
+  "state": "FAILED_PREPARE_GRANT_RETURNED",
   "manifest": "docs/jobs/OTA004_A03_source_lock.json",
   "manifest_sha256": "82a35928c428662968592e8e9de9ee620504a30de9d7cf980e0c5a52014cb870",
   "stages": [
@@ -9,9 +9,15 @@
     "smoke",
     "synth"
   ],
-  "native_started": false,
+  "native_started": true,
   "old_grants_reusable": false,
-  "created_utc": "2026-09-17T00:38:40.970325+00:00",
+  "created_utc": "2026-09-17T02:38:40.970325+02:00",
   "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
-  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e"
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "commit": "5c302a3def89c37e45d76ba31d95e18751159523",
+  "dispatched_utc": "2026-09-17T00:40:10.3871936+00:00",
+  "prepare_exit_code": 1,
+  "tree_closed_utc": "2026-09-17T00:45:05.1133386Z",
+  "return_receipt": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A03_FAILED_PREPARE_RETURN_20260917.json",
+  "next_revision": "OTA004/A04"
 }

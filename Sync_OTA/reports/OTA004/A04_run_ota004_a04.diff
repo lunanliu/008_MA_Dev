@@ -1,0 +1,53 @@
+--- tools/vivado/run_ota004_a03.tcl
++++ tools/vivado/run_ota004_a04.tcl
+@@ -46,6 +46,14 @@
+   }
+  }
+  close $f
++ set f [open [file join $out audit_generation_state.txt] w];puts $f $generated;close $f
++ set f [open [file join $out actual_mif_files.txt] w]
++ if {$generated} {
++  foreach p [get_files -all] {
++   if {[string tolower [file extension $p]] eq ".mif"} {puts $f [file normalize $p]}
++  }
++ }
++ close $f
+  set f [open [file join $out actual_ips.tsv] w]
+  foreach ip [lsort [get_ips]] {puts $f "[get_property NAME $ip]\t[file normalize [get_property IP_FILE $ip]]\t[get_property IS_LOCKED $ip]"}
+  close $f
+@@ -54,7 +62,7 @@
+   if {$generated} {foreach file [get_files -compile_order sources -used_in $usage] {puts $cf [file normalize $file]}}
+   close $cf
+  }
+- puts [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_a03_project.py] $out]
++ puts [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_a04_project.py] $out]
+ }
+ set memories {ip/rom/fine_ps1_reference_16lane.mem ip/rom/residual_pilot_phase.mem ip/cfo/cfo_rot_lut.mem ip/cfo/fft2048_twiddle.mem ip/cfo/front2048_coefficient_index.mem ip/cfo/front2048_coefficient_table.mem ip/cfo/fft256_twiddle.mem ip/cfo/phase74_atan_q31.mem}
+ if {$stage eq "prepare" && ![file exists $xpr]} {
+@@ -84,7 +92,7 @@
+   set_property LIBRARY ota_xpm [get_files $p];set_property USED_IN_SYNTHESIS false [get_files $p];set_property USED_IN_IMPLEMENTATION false [get_files $p]
+  }
+  foreach rel $memories {add_files -norecurse [file join $root $rel]}
+- set ipfiles {};foreach rel [read_lines [file join $root ip/sources.f]] {lappend ipfiles [file join $root $rel]}
++ set ipfiles {};foreach rel [read_lines [file join $root ip/sources_a04.f]] {lappend ipfiles [file join $root $rel]}
+  # Official import produces owned managed copies; never mutate frozen baseline XCIs.
+  import_ip -files $ipfiles
+  add_files -fileset constrs_1 -norecurse [file join $root constraints/sync_ota_clocks.xdc]
+@@ -98,6 +106,9 @@
+  set_property xsim.simulate.runtime 0ns [get_filesets sim_1]
+ } else {
+  if {![file exists $xpr]} {error "prepare has not created the project"}
++ if {$stage eq "prepare"} {
++  puts [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/repair_ota004_a04_managed.py] $out]
++ }
+  open_project $xpr
+ }
+ source $hook
+@@ -129,6 +140,7 @@
+    if {![file exists $dst]} {file copy [file join $root $rel] $dst}
+   }
+   launch_simulation
++  puts [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_a04_project.py] $out $simdir]
+   set binding [exec C:/Python314/python.exe -I -B -X utf8 [file join $root tools/verify_ota004_binding.py] $simdir]
+   puts $binding;set f [open [file join $out binding_verified.json] w];puts $f $binding;close $f
+   run all
