@@ -2,7 +2,7 @@
   "job": "OTA004",
   "revision": "A06R3",
   "created_utc": "2026-09-17T12:25:28.310685+00:00",
-  "state": "DISPATCH_RETRACTED_NO_USABLE_GRANT",
+  "state": "DISPATCHED_TO_ORIGINAL_LUNA_125723Z",
   "replacement_of": [
     "A06R2 recovery",
     "A06R2I1 unexecuted diagnostic"
@@ -16,8 +16,8 @@
   "offline_checks": 33,
   "native_started": false,
   "old_grants_reusable": false,
-  "new_grant": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A06R3_RESOURCE_GRANT_20260917.json",
-  "absolute_deadline_utc": null,
+  "new_grant": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A06R3_RESOURCE_READMISSION_20260917T125723Z.json",
+  "absolute_deadline_utc": "2026-09-17T14:27:23.8516734Z",
   "proposed_native_hard_seconds": 2700,
   "proposed_total_window_seconds": 5400,
   "estimated_initial_minutes": [
@@ -31,18 +31,27 @@
   "tool_denial_retry_performed": false,
   "platform_approval_not_overridden_by_taskbook": true,
   "commit": "5fc4d2d03b37f445e36cd057cd7fe49383130c81",
-  "updated_utc": "2026-09-17T12:55:56.960218+00:00",
+  "updated_utc": "2026-09-17T12:59:56.675099+00:00",
   "continuation": "docs/jobs/OTA004_A06R3_CONTINUATION_ZH.md",
   "communication_preflight_is_local_start_gate": false,
   "safety_approval_unchanged": true,
   "scientific_criteria_unchanged": true,
   "initial_execution_files_unchanged": true,
-  "new_grant_sha256": "0c6716d8cb0425a4227053d5d037e1529b8047a7bf4be73417c128c7f8b1a37d",
-  "grant_id": null,
-  "first_start_not_after_utc": null,
-  "grant_usable": false,
-  "grant_retracted_by_manager": true,
+  "new_grant_sha256": "f869baf18d0c6ae21392e778ca2f71487e93229792ac91dff44a0bb97b729acc",
+  "grant_id": "SYNC_OTA_OTA004_A06R3_20260917T125723Z",
+  "first_start_not_after_utc": "2026-09-17T13:12:23.8516734Z",
+  "grant_usable": true,
+  "grant_retracted_by_manager": false,
   "retraction_reason": "Manager reports concrete grant dispatch rejected by tool; no usable authorization; no retry or alternative retrieval",
-  "native_start_observation": "No tracked native processes or initial attempt output observed at retraction; executor confirmation pending",
-  "retracted_grant_id": "SYNC_OTA_OTA004_A06R3_20260917T125152Z"
+  "native_start_observation": "New window dispatched; launch not yet observed",
+  "retracted_grant_id": "SYNC_OTA_OTA004_A06R3_20260917T125152Z",
+  "retracted_grant": {
+    "path": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A06R3_RESOURCE_GRANT_20260917.json",
+    "sha256": "0c6716d8cb0425a4227053d5d037e1529b8047a7bf4be73417c128c7f8b1a37d",
+    "grant_id": "SYNC_OTA_OTA004_A06R3_20260917T125152Z",
+    "usable": false
+  },
+  "current_user_approval": "明确批准这次具体派单与原配对回传",
+  "dispatch_sent_utc": "2026-09-17T13:00:43.789828+00:00",
+  "dispatch_tool_success": true
 }
