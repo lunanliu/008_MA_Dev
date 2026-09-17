@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Checkpoint Version="16" Minor="0">
+	<BUILD_NUMBER Name="3247384"/>
+	<FULL_BUILD Name="SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021"/>
+	<PRODUCT Name="Vivado v2021.1 (64-bit)"/>
+	<Part Name="xcvu11p-flgb2104-2-e"/>
+	<Top Name="sync_ota_top"/>
+	<DisableAutoIOBuffers Name="1"/>
+	<OutOfContext Name="1"/>
+	<HDPlatform Name="0"/>
+	<File Type="VERILOG_STUB" Name="sync_ota_top_stub.v" ModTime="1789623345"/>
+	<File Type="VHDL_STUB" Name="sync_ota_top_stub.vhdl" ModTime="1789623345"/>
+	<File Type="XDC_EARLY" Name="sync_ota_top_early.xdc" ModTime="1789623345"/>
+	<File Type="XDC" Name="sync_ota_top.xdc" ModTime="1789623345"/>
+	<File Type="XDC_LATE" Name="sync_ota_top_late.xdc" ModTime="1789623345"/>
+	<File Type="XDC_IN_CONTEXT" Name="sync_ota_top_in_context.xdc" ModTime="1789623345"/>
+	<File Type="SHAPE" Name="sync_ota_top.shape" ModTime="1789623345"/>
+	<File Type="XBDC" Name="sync_ota_top.xbdc" ModTime="1789623345"/>
+	<File Type="STA" Name="sync_ota_top.sta" ModTime="1789623345"/>
+	<File Type="EDIF" Name="sync_ota_top.edf" ModTime="1789623345"/>
+	<File Type="XN" Name="sync_ota_top.xn" ModTime="1789623345"/>
+	<File Type="INCR" Name="sync_ota_top.incr" ModTime="1789623345"/>
+	<File Type="RDA" Name="sync_ota_top.rda" ModTime="1789623345"/>
+	<File Type="JSON_RDA" Name="sync_ota_top_rda.json" ModTime="1789623345"/>
+	<File Type="WDF" Name="sync_ota_top.wdf" ModTime="1789623345"/>
+</Checkpoint>
+

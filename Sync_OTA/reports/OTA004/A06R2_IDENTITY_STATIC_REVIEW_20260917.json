@@ -1,0 +1,132 @@
+{
+  "status": "STATIC_REVIEW_COMPLETE_NATIVE_ATTRIBUTE_VALUES_UNRESOLVED",
+  "reviewed_utc": "2026-09-17T11:54:32.176055+00:00",
+  "native_started_by_review": false,
+  "receipt_sha256": "d629551eaba08ba0a39bb9d0d46bf4b3281e915fb7b2e9ad85725399cf0cd7b4",
+  "receipt_artifacts_verified": 15,
+  "artifacts": [
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/docs/jobs/OTA004_A06R2_DISPATCH.json",
+      "sha256": "03bcbdd6081764dd068d9a88b26a734852e9e44b581d6584fd8d30b72df21994",
+      "match": true
+    },
+    {
+      "path": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A06R2_RESOURCE_GRANT_20260917.json",
+      "sha256": "9cd5d266bc0371c836da565a4756d46887ad8700ffda95b45e20f7acfca768ff",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/docs/jobs/OTA004_A06R2_source_lock.json",
+      "sha256": "2a3d0a4c78f7b792a93d6c4d22d0cf2b7326022c52357b79e1e59a5436d3dfc3",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/tools/monitor_ota004_a06r2.ps1",
+      "sha256": "7e18a5dbc01475c4514d8ac44a8bb017aea67b44492f4c5a5c7790ee6e2d71d1",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/tools/vivado/run_ota004_a06r2.tcl",
+      "sha256": "5625828e0e81f7dc12b33c0248513d561dffb24e482ff7997e4582f1d9251041",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1/sync_ota_synth.dcp",
+      "sha256": "ac2e40a1b04cee538f76bc5028cc8e2c3836459742d260488e231d6dd436f33e",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/precheck_verified.json",
+      "sha256": "b8e1aba9f9a9eb17298742591e68093e3b244e80f6786fb291dd5af9c817a648",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/runtime_identity.txt",
+      "sha256": "606fe47f6e81034df06038327ece02c526a4ec288922823218559e515ea1785a",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/native.log",
+      "sha256": "043d74450f3c73c2dbad2a39d738568529e81cda5224c6cb694b535aedd33925",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/native.jou",
+      "sha256": "725e68f0aae62692c9c9a0abf2497a6134f99f4b313f713cd78f635becd61e5e",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/wrapper_stdout.log",
+      "sha256": "d70f3910e69b33ab25d95f71cc7606bc6fc28e8b52441f1fb8f123e5ab5efdff",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/wrapper_stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/process_summary.json",
+      "sha256": "d5f0a465cd1030c0a1ce73a3b6179b93f89897f7d138ad85bdda517085e5b458",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/process_tree.jsonl",
+      "sha256": "d427757a50403adc1d4cfe67fe4f1a5e51c0b41fb6b374d2b53a734048081fe3",
+      "match": true
+    },
+    {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/failure.txt",
+      "sha256": "f9d279c3c4ea712cb4cd55ebbce6e21eb9f7506a43bfdd1ea0f71c5731a498c6",
+      "match": true
+    }
+  ],
+  "frozen_inputs_verified": 339,
+  "tools_verified": 5,
+  "process_closure": {
+    "records": 132,
+    "pid_creation_identities": 3,
+    "identity_sets_equal": true,
+    "last_three_empty": true,
+    "exit_code": 1,
+    "timed_out": false
+  },
+  "line16": {
+    "text": " if {[get_property NAME [current_design]] ne \"sync_ota_top\" || [get_property PART [current_design]] ne \"xcvu11p-flgb2104-2-e\"} {error \"wrong existing DCP design identity\"}",
+    "NAME_query_object": "current_design",
+    "PART_query_object": "current_design",
+    "expected_NAME": "sync_ota_top",
+    "expected_PART": "xcvu11p-flgb2104-2-e",
+    "NAME_expected_origin": "Hardcoded A06R2 literal; copied RTL TOP identity, no observed design NAME binding",
+    "PART_expected_origin": "Hardcoded fixed target from project contract and A06R1 current_project PART",
+    "name_equals_rtl_top_assumption_present": true,
+    "short_circuit_mock": {
+      "tcl_version": "9.0.4",
+      "NAME_mismatch_query_calls": [
+        "NAME"
+      ],
+      "native_property_behavior_tested": false
+    }
+  },
+  "dcp_metadata": {
+    "BUILD_NUMBER": {
+      "Name": "3247384"
+    },
+    "PRODUCT": {
+      "Name": "Vivado v2021.1 (64-bit)"
+    },
+    "Part": {
+      "Name": "xcvu11p-flgb2104-2-e"
+    },
+    "Top": {
+      "Name": "sync_ota_top"
+    },
+    "OutOfContext": {
+      "Name": "1"
+    }
+  },
+  "dcp_metadata_member_sha256": "fad183d0c055c3e63d54fa1687dabbb0659a73f97df6ad1b87bc2cd835380057",
+  "actual_design_NAME": "NOT_RECORDED",
+  "actual_design_PART": "NOT_RECORDED; log loaded expected device but get_property result absent",
+  "conclusion": "Design NAME was conflated with RTL top. DCP hashes/metadata/generation provenance agree, but exact failed operand requires separate read-only native diagnosis. No gate changed and no source/DCP selection corrected."
+}

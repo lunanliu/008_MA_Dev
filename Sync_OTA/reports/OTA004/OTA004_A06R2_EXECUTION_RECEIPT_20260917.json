@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "kind": "OTA004_A06R2_REPORT_EXECUTION_RECEIPT",
+  "closeout_date": "2026-09-17",
+  "job": "OTA004",
+  "revision": "A06R2",
+  "status": "REPORT_RECOVERY_BLOCKED_DCP_IDENTITY_CHECK",
+  "scope": "仅执行一次获准的 report-only DCP 打开和报告恢复入口；未进行综合、implementation、仿真、prepare、IP 重生成或 RTL/TB/数学/时钟/端口修改。",
+  "dispatch": {
+    "path": "D:/008_MA_Dev/Sync_OTA/docs/jobs/OTA004_A06R2_DISPATCH.json",
+    "sha256": "03BCBDD6081764DD068D9A88B26A734852E9E44B581D6584FD8D30B72DF21994",
+    "fixed_commit": "e94f5da39bc9502a4721dc9f17bdc72ef468b6e8",
+    "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+    "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e"
+  },
+  "grant": {
+    "path": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A06R2_RESOURCE_GRANT_20260917.json",
+    "sha256": "9CD5D266BC0371C836DA565A4756D46887AD8700FFDA95B45E20F7ACFCA768FF",
+    "grant_id": "SYNC_OTA_OTA004_A06R2_20260917T111736Z",
+    "first_start_not_after_utc": "2026-09-17T11:32:36.8557504+00:00",
+    "absolute_deadline_utc": "2026-09-17T12:02:36.8557504+00:00",
+    "hard_seconds": 1800,
+    "native_started_after_first_window": false,
+    "old_grant_reused": false
+  },
+  "frozen_inputs": {
+    "source_lock": {
+      "path": "D:/008_MA_Dev/Sync_OTA/docs/jobs/OTA004_A06R2_source_lock.json",
+      "sha256": "2A3D0A4C78F7B792A93D6C4D22D0CF2B7326022C52357B79E1E59A5436D3DFC3",
+      "input_count": 339,
+      "tool_count": 5
+    },
+    "monitor": {
+      "path": "D:/008_MA_Dev/Sync_OTA/tools/monitor_ota004_a06r2.ps1",
+      "sha256": "7E18A5DBC01475C4514D8AC44A8BB017AEA67B44492F4C5A5C7790EE6E2D71D1"
+    },
+    "tcl": {
+      "path": "D:/008_MA_Dev/Sync_OTA/tools/vivado/run_ota004_a06r2.tcl",
+      "sha256": "5625828E0E81F7DC12B33C0248513D561DFFB24E482FF7997E4582F1D9251041"
+    },
+    "dcp": {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1/sync_ota_synth.dcp",
+      "sha256": "AC2E40A1B04CEE538F76BC5028CC8E2C3836459742D260488E231D6DD436F33E",
+      "opened_by_this_run": true,
+      "rewritten": false
+    },
+    "top": "sync_ota_top",
+    "part": "xcvu11p-flgb2104-2-e"
+  },
+  "execution": {
+    "attempt": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2",
+    "stage": "report",
+    "frozen_command": "& 'C:/Users/lunan/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe' -NoProfile -ExecutionPolicy Bypass -File 'D:/008_MA_Dev/Sync_OTA/tools/monitor_ota004_a06r2.ps1' -Stage report -Attempt 'D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2' -Source 'D:/008_MA_Dev/Sync_OTA/tools/vivado/run_ota004_a06r2.tcl' -AbsoluteDeadlineUtc '2026-09-17T12:02:36.8557504+00:00' -HardSeconds 1800",
+    "precheck": {
+      "status": "A06R2_RECOVERY_PRECHECK_PASS",
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/precheck_verified.json",
+      "sha256": "B8E1ABA9F9A9EB17298742591E68093E3B244E80F6786FB291DD5AF9C817A648",
+      "files": 339,
+      "manifest_sha256": "2a3d0a4c78f7b792a93d6c4d22d0cf2b7326022c52357b79e1e59a5436d3dfc3",
+      "dcp_sha256": "ac2e40a1b04cee538f76bc5028cc8e2c3836459742d260488e231d6dd436f33e"
+    },
+    "runtime_identity": {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/runtime_identity.txt",
+      "sha256": "606FE47F6E81034DF06038327ECE02C526A4EC288922823218559E515EA1785A",
+      "text": "VERSION=2021.1 GENERAL_THREADS=8 SYNTH_THREADS=8 MODE=REPORT_ONLY NEW_SYNTH=0 IP_JOBS=0"
+    },
+    "launcher_pid": 17940,
+    "launcher_creation_utc": "2026-09-17T11:27:54.82222Z",
+    "start_utc": "2026-09-17T11:27:54.7992913Z",
+    "end_utc": "2026-09-17T11:31:17.6402618Z",
+    "launcher_exit_code": 1,
+    "timed_out": false,
+    "effective_deadline_utc": "2026-09-17T11:57:54.7992913Z"
+  },
+  "native_result": {
+    "dcp_open": "SUCCESS: Vivado 2021.1 loaded the DCP, reported part xcvu11p-flgb2104-2-e, restored timing/constraints, and completed open_checkpoint.",
+    "failed_operation": "DCP identity guard in run_ota004_a06r2.tcl:16",
+    "failure_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/failure.txt",
+    "failure_sha256": "F9D279C3C4EA712CB4CD55EBBCE6E21EB9F7506A43BFDD1EA0F71C5731A498C6",
+    "failure": "wrong existing DCP design identity",
+    "diagnosis_boundary": "The frozen guard compares NAME and PART with OR but does not print either actual property value; the retained log therefore cannot decompose whether NAME, PART, or both caused the failure. No identity acceptance is claimed.",
+    "report_commands_reached": false,
+    "report_identity_generated": false,
+    "blackbox_check_reached": false,
+    "timing_coverage_queries_reached": false,
+    "gray_audit_reached": false,
+    "cdc_report_generated": false
+  },
+  "outputs": {
+    "native_log": {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/native.log",
+      "bytes": 6069,
+      "sha256": "043D74450F3C73C2DBAD2A39D738568529E81CDA5224C6CB694B535AEDD33925"
+    },
+    "native_journal": {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/native.jou",
+      "bytes": 874,
+      "sha256": "725E68F0AAE62692C9C9A0ABF2497A6134F99F4B313F713CD78F635BECD61E5E"
+    },
+    "wrapper_stdout": {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/wrapper_stdout.log",
+      "bytes": 5664,
+      "sha256": "D70F3910E69B33AB25D95F71CC7606BC6FC28E8B52441F1FB8F123E5AB5EFDFF"
+    },
+    "wrapper_stderr": {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/wrapper_stderr.log",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "required_reports": {
+      "present": [],
+      "not_generated": [
+        "report_identity.txt",
+        "cdc_report_completed.txt",
+        "synth_clocks.txt",
+        "synth_cdc.txt",
+        "synth_timing.txt",
+        "synth_applied_constraints.xdc",
+        "paths.tsv",
+        "queries.tsv",
+        "strict_report_review.json",
+        "result.txt"
+      ]
+    }
+  },
+  "process_closure": {
+    "summary_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/process_summary.json",
+    "summary_sha256": "D5F0A465CD1030C0A1CE73A3B6179B93F89897F7D138AD85BDDA517085E5B458",
+    "tree_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2/process_tree.jsonl",
+    "tree_sha256": "D427757A50403ADC1D4CFE67FE4F1A5E51C0B41FB6B374D2B53A734048081FE3",
+    "tree_records": 132,
+    "root_pid": 17940,
+    "root_creation_utc": "2026-09-17T11:27:54.82222Z",
+    "seen_identity_count": 3,
+    "tree_unique_pid_creation_count": 3,
+    "summary_tree_identity_set_equal": true,
+    "last_three_snapshots": [
+      {
+        "timestamp_utc": "2026-09-17T11:31:14.569258Z",
+        "root_alive": false,
+        "known_pid_count": 3,
+        "process_count": 0
+      },
+      {
+        "timestamp_utc": "2026-09-17T11:31:16.1060851Z",
+        "root_alive": false,
+        "known_pid_count": 3,
+        "process_count": 0
+      },
+      {
+        "timestamp_utc": "2026-09-17T11:31:17.637827Z",
+        "root_alive": false,
+        "known_pid_count": 3,
+        "process_count": 0
+      }
+    ],
+    "stable_empty_scans": 3,
+    "cancellation_passes": 0,
+    "timed_out": false,
+    "final_processes": [],
+    "current_native_inventory_after_close": [],
+    "initial_free_physical_kib": 20124252,
+    "minimum_sampled_free_physical_kib": 12553936
+  },
+  "acceptance": {
+    "report_recovery": "NOT_COMPLETED",
+    "dcp_identity_acceptance": "NOT_PROVEN",
+    "blackbox_gate": "NOT_REACHED",
+    "cdc_report_recovery": "NOT_RUN",
+    "bounded_timing_coverage": "NOT_RUN",
+    "gray_report_recovery": "NOT_RUN",
+    "post_implementation_timing": "NOT_RUN",
+    "continuous_throughput": "NOT_RUN",
+    "NI_integration": "NOT_RUN",
+    "board_and_LabVIEW": "NOT_RUN",
+    "final_OTA004_A06R2_qualification": "NOT_QUALIFIED"
+  },
+  "preservation_and_next_state": {
+    "frozen_scripts_modified": false,
+    "frozen_source_lock_modified": false,
+    "rtl_tb_algorithm_clock_port_modified": false,
+    "dcp_or_edif_rewritten": false,
+    "successful_A06R1_artifacts_preserved": true,
+    "failed_attempt_preserved": true,
+    "native_rerun": false,
+    "new_native_admission_requested": false,
+    "next_state": "Return missing DCP identity evidence to original Astra; any corrected report entry or further native action requires separate explicit review/authorization. Do not rerun this attempt automatically."
+  }
+}

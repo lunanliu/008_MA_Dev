@@ -1,0 +1,46 @@
+{
+  "status": "A06R2I1_OFFLINE_FIXTURES_PASS",
+  "checks": [
+    {
+      "name": "both_exact",
+      "result": "PASS",
+      "guard_exit": 0
+    },
+    {
+      "name": "NAME_differs_TOP_matches",
+      "result": "PASS",
+      "guard_exit": 1
+    },
+    {
+      "name": "PART_wrong",
+      "result": "PASS",
+      "guard_exit": 1
+    },
+    {
+      "name": "both_wrong",
+      "result": "PASS",
+      "guard_exit": 1
+    },
+    {
+      "name": "NAME_query_error",
+      "result": "PASS",
+      "guard_exit": 1
+    },
+    {
+      "name": "PART_query_error",
+      "result": "PASS",
+      "guard_exit": 1
+    },
+    {
+      "name": "empty_design",
+      "result": "PASS",
+      "guard_exit": 1
+    },
+    {
+      "name": "syntax_readonly_single_open_monitor_runtime",
+      "result": "PASS"
+    }
+  ],
+  "tcl_version": "9.0.4",
+  "scope": "Synthetic Tcl API objects only; no Vivado and no actual NAME/PART acceptance"
+}

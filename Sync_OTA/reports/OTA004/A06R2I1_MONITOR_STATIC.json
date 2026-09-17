@@ -1,0 +1,59 @@
+{
+  "fixture_attempt": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\identity_a06r2i1_static-baf2fff31de44c2693a3dc3a72568ad5",
+  "checks": [
+    {
+      "result": "PASS",
+      "name": "report_exact_entry_empty_attempt"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "smoke_forbidden"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "synth_forbidden"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "stage_injection"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "old_entry"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "source_injection"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "outside_attempt"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "nested_attempt"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "traversal"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "too_long"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "invalid_budget"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "wrong_hash"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "nonempty_attempt"
+    }
+  ],
+  "scope": "AST and preflight function; manifest fixture only; no native launched",
+  "status": "A06R2I1_MONITOR_STATIC_PASS"
+}

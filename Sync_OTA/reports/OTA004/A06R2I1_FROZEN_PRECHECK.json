@@ -1,0 +1,13 @@
+{
+  "status": "A06R2I1_FROZEN_OFFLINE_PRECHECK_PASS",
+  "checked_utc": "2026-09-17T12:01:47.0970595Z",
+  "scope": "Only AST-isolated preflight and Python file hashing; no monitor runtime or Vivado executed",
+  "validated": {
+    "attempt": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\identity_a06r2i1_offline-91bc270cfc444950adc20975127d430d",
+    "source": "D:\\008_MA_Dev\\Sync_OTA\\tools\\vivado\\run_ota004_a06r2i1.tcl",
+    "stage": "identity",
+    "stage_cap_seconds": 600
+  },
+  "records": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\identity_a06r2i1_offline-91bc270cfc444950adc20975127d430d",
+  "native_started": false
+}

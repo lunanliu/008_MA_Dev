@@ -1,0 +1,31 @@
+{
+  "job": "OTA004",
+  "revision": "A06R2I1",
+  "state": "PROPOSAL_SUBMITTED_AWAITING_SEPARATE_USER_AUTHORIZATION_AND_MANAGER_GRANT",
+  "prepared_utc": "2026-09-17T12:01:05.465093+00:00",
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "manifest": "docs/jobs/OTA004_A06R2I1_source_lock.json",
+  "manifest_sha256": "ecdd90f136c9e1dacc1e9a38619a2600dca17b882fcdb18502de6e2a0a721979",
+  "files": 363,
+  "installed_tools": 5,
+  "native_started": false,
+  "user_native_authorization": null,
+  "new_grant": null,
+  "absolute_deadline_utc": null,
+  "first_start_not_after_utc": null,
+  "attempt": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\identity_a06r2i1",
+  "stage": "identity",
+  "hard_seconds": 600,
+  "expected_minutes": [
+    4,
+    6
+  ],
+  "old_grants_reusable": false,
+  "monitor_sha256": "380eaf3f1224fcf7432652c274cec842b4ca83990e0fc632fc2500fd79bbadff",
+  "source_sha256": "61e9d6923fe4e98fbd1e9554752bbd5068e71d6fcb3a8017f3398493c8ac3de4",
+  "offline_checks": {
+    "identity_and_syntax": 8,
+    "monitor_preflight": 13
+  }
+}
