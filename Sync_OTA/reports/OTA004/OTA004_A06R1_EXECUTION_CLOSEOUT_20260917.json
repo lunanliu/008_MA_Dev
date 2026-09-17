@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "kind": "OTA004_A06R1_EXECUTION_CLOSEOUT",
+  "closeout_date": "2026-09-17",
+  "task": "OTA004",
+  "revision": "A06R1",
+  "scope": "仅收口已经完成的严格 smoke、core synthesis 和失败的 Gray 报告门；不启动新原生作业，不修改冻结输入，不重跑成功阶段。",
+  "status": "CORE_PRESERVED_OUTER_REPORT_GATE_FAILED",
+  "admission": {
+    "grant_path": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A06R1_RESOURCE_GRANT_20260917.json",
+    "grant_sha256": "6B4C8A3DF9133C5C1C48176B5CC260B72BAB2A4F8914FFE7C0C634752ED36C81",
+    "grant_id": "SYNC_OTA_OTA004_A06R1_20260917T041823Z",
+    "absolute_deadline_utc": "2026-09-17T05:48:23.0353247Z",
+    "deadline_expired_at_closeout": true,
+    "native_started_after_deadline": false,
+    "new_native_authorization": false,
+    "prohibited_retries": [
+      "Vivado/MATLAB native rerun",
+      "re-synthesis only to repair report formatting",
+      "smoke/IP/prepare rerun",
+      "CDC or Gray acceptance relaxation"
+    ]
+  },
+  "source_lock_and_identity": {
+    "source_lock_path": "D:/008_MA_Dev/Sync_OTA/docs/jobs/OTA004_A06R1_source_lock.json",
+    "source_lock_sha256": "2B5476B054422872AC5F61B73021CB48F15983717E83B311B20A923B76D6C38D",
+    "source_lock_revision": "A06R1",
+    "locked_file_count": 302,
+    "reused_ip_dcp_count": 45,
+    "static_reuse_gate": "PASS: all four A06 source inputs plus exact 127 generated production sources and compile order",
+    "project": "D:/008_MA_Dev/Sync_OTA/Sync_OTA.xpr",
+    "top": "sync_ota_top",
+    "part": "xcvu11p-flgb2104-2-e",
+    "source_set_sha256": "2b7b028a3867a6685857770dbc038ef757cbf7afef0fccf99a9da96af5601429",
+    "managed_ip_count": 45,
+    "vendor_ip_boundary": "45/45 Complete, NEEDS_REFRESH=false, unlocked",
+    "smoke_identity": {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/smoke_a06r1/project_identity_verified.json",
+      "sha256": "F32DECA1CD7ADEE60D28ABAB2711D2818288E1A0FD95701F34A36ACC8DF9EE07",
+      "status": "OTA004_PROJECT_IDENTITY_PASS"
+    },
+    "synth_identity": {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1/project_identity_verified.json",
+      "sha256": "06E23C0E927831FE5712CECD6E4B94CB2ADAA0311653F4867B4CA92D3EB3328D",
+      "status": "OTA004_PROJECT_IDENTITY_PASS"
+    }
+  },
+  "smoke": {
+    "status": "OTA004_REAL_SMOKE_STRICT_PASS",
+    "result_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/smoke_a06r1/result.txt",
+    "result": "OTA004_REAL_TOP_SMOKE_PASS",
+    "strict_review_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/smoke_a06r1/strict_smoke_review.json",
+    "strict_review_sha256": "18BFEEC10AD3757721C7CC7DEB82E11D360379B65E669705664C69A9A44C4E7F",
+    "native_errors": 0,
+    "reset_guard": true,
+    "early_cancel_real_fifo_probes": 4,
+    "local_reset_fifo_probes": 4,
+    "startup_reset_samples": 4,
+    "startup_fpo_warning_count": 1,
+    "startup_warning_boundary": "Only 20ns internal FPO initialization; public reset held at 8/16/24/32ns and no accepted data",
+    "process": {
+      "summary_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/smoke_a06r1/process_summary.json",
+      "summary_sha256": "CA1B163EB4356F545C7F76FE1FAFA4613C32B13E4DEFCEAACC594CB8E89E29D4",
+      "tree_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/smoke_a06r1/process_tree.jsonl",
+      "tree_sha256": "C8E772FCEFE88982FDC1EFA7BB76CB68F643198C79AF1009D13D187C7C79E06C",
+      "tree_records": 1037,
+      "root_pid": 26068,
+      "root_creation_utc": "2026-09-17T04:28:04.1676710Z",
+      "start_utc": "2026-09-17T04:28:04.1449928Z",
+      "end_utc": "2026-09-17T04:54:24.2860114Z",
+      "tree_closed_utc": "2026-09-17T04:54:24.2837701Z",
+      "launcher_exit_code": 0,
+      "timed_out": false,
+      "stable_empty_scans": 3,
+      "seen_identity_count": 111,
+      "final_known_pid_count": 109,
+      "final_processes": [],
+      "full_pid_creation_tree_retained": true
+    }
+  },
+  "synthesis": {
+    "core_status": "SUCCESS",
+    "core_evidence": "synth_design completed successfully; Synthesis finished with 0 errors, 0 critical warnings and 846 warnings",
+    "native_log_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1/native.log",
+    "dcp": {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1/sync_ota_synth.dcp",
+      "bytes": 187800130,
+      "sha256": "AC2E40A1B04CEE538F76BC5028CC8E2C3836459742D260488E231D6DD436F33E"
+    },
+    "edif": {
+      "path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1/sync_ota_top.edf",
+      "bytes": 412555663,
+      "sha256": "636882516C625C955831D90133F52BF3687A57DFE527D1BCFE70D2F20A888ADA"
+    },
+    "generated_reports": [
+      "synth_cdc.txt",
+      "synth_timing.txt",
+      "synth_clocks.txt",
+      "synth_check_timing.txt",
+      "synth_exceptions.txt",
+      "synth_applied_constraints.xdc",
+      "synth_utilization.txt",
+      "synth_utilization_hierarchical.txt"
+    ],
+    "outer_stage": {
+      "status": "NOT_PASS_REPORT_GATE",
+      "failure_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1/failure.txt",
+      "failure_sha256": "F02CDDD533583922E92F5693A5085C21F53F10FD3C8750E9EBEB346032A125A2",
+      "launcher_exit_code": 1,
+      "timed_out": false
+    },
+    "process": {
+      "summary_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1/process_summary.json",
+      "summary_sha256": "DB713B934C7BA967834BED0E393D86E6AB7A1971215A8E2AEA629EF24090168E",
+      "tree_path": "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1/process_tree.jsonl",
+      "tree_sha256": "80FD285B868127C57A7A1E5865DFA33A6080C7BBB398B10251F75AA16D1D8E01",
+      "tree_records": 1915,
+      "root_pid": 15272,
+      "root_creation_utc": "2026-09-17T04:56:01.6956610Z",
+      "start_utc": "2026-09-17T04:56:01.6729693Z",
+      "end_utc": "2026-09-17T05:44:46.9761212Z",
+      "tree_closed_utc": "2026-09-17T05:44:46.9741228Z",
+      "launcher_exit_code": 1,
+      "timed_out": false,
+      "stable_empty_scans": 3,
+      "seen_identity_count": 121,
+      "final_known_pid_count": 118,
+      "final_processes": [],
+      "full_pid_creation_tree_retained": true
+    }
+  },
+  "gray_audit": {
+    "status": "FAILED_BEFORE_GRAY_GROUP_AUDIT",
+    "first_failure": "unresolved exported Gray constraint: get_cells src_gray_ff_reg*",
+    "completed_gray_groups": "0/24",
+    "destination_bits_audited": "0/128",
+    "bus_skew_audit": "NOT_RUN",
+    "valid_exceptions_audit": "NOT_REACHED_AFTER_FIRST_FAILURE",
+    "exported_constraint_input": "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1/synth_applied_constraints.xdc",
+    "exported_constraint_lines": [223, 225],
+    "auditor": "D:/008_MA_Dev/Sync_OTA/tools/vivado/audit_ota004_a06r1_gray.tcl",
+    "auditor_lines": [46, 49],
+    "diagnosis": "导出的 XDC 在 current_instance 下使用相对 get_cells；安全解释器未保留 current_instance，查询退回 design root，因而把存在的 Gray 约束报告为 unresolved。该失败发生在报告适配/审计层，不等于硬件 Gray 约束已通过。",
+    "secondary_static_finding": "valid_exceptions.xdc 的 max_delay 使用源 C/目的 D 引脚，而审计器后续 matcher 直接与 cell 名比较；修复 scope 后仍须按真实 C/D pin 所属 cell 归一化并保留原始 pin 证据。",
+    "hardware_constraint_acceptance": "NOT_PROVEN",
+    "minimum_recovery_direction": "严格跟踪 current_instance、解析相对对象、仅归一化已验证的 C/D pin owning cell；未知构造继续 fail-closed，并保留 24 宏、128 bit、effective max_delay 与 native bus-skew 门槛。"
+  },
+  "acceptance": {
+    "strict_real_top_smoke": "PASS",
+    "core_synthesis": "SUCCESS_ONLY; not a final A06R1 native qualification",
+    "45_ip_ooc_reuse_gate": "PASS before core launch and preserved",
+    "native_cdc_gate": "NOT_ACCEPTED as a final gate; synth_cdc.txt is retained",
+    "24_gray_macro_128_bit_constraint_audit": "NOT_COMPLETED",
+    "gray_bus_skew_and_effective_max_delay": "NOT_PROVEN",
+    "post_implementation_timing": "NOT_RUN",
+    "continuous_throughput": "NOT_RUN",
+    "NI_integration": "NOT_RUN",
+    "board_and_LabVIEW": "NOT_RUN",
+    "CLIP_XML_or_configuration_pack": "NOT_RUN and prohibited in this scope",
+    "final_A06R1_native_qualification": "NOT_QUALIFIED"
+  },
+  "handoff": {
+    "original_astra_thread": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+    "requested_review": "仅静态复核和最小报告恢复方案；报告恢复需要新的明确时间/资源授权。",
+    "prior_detailed_delivery": "REJECTED_BY_SAFETY_POLICY",
+    "rejection_reason": "向未验证外部线程发送包含敏感项目路径、哈希、失败证据和运行状态的详细载荷被安全策略拒绝。",
+    "retry": false,
+    "workaround_or_channel_change": false,
+    "local_failure_receipt": {
+      "path": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A06R1_REPORT_FAILURE_PATROL_20260917T055808Z.json",
+      "sha256": "73AAA4C8979DD51CA7DC7C4946BE8C92CD6102B25AE15BC9BCAEA40BB58F9AF7"
+    },
+    "local_gray_diagnosis": {
+      "path": "D:/007 Dev/OTA_RTL_0829/reports/operations/sync_ota/OTA004_A06R1_GRAY_DIAGNOSIS_AND_HANDOFF_20260917.json",
+      "sha256": "82C5895132DE4E97BCFEA72680DCDA73B437149502BA7A187F3A126F82AB9F18"
+    },
+    "astra_confirmation": "NOT_CONFIRMED"
+  },
+  "preservation": {
+    "successful_core_preserved": true,
+    "frozen_inputs_modified": false,
+    "successful_stage_rerun": false,
+    "native_processes_after_closure": 0,
+    "all_failed_and_successful_attempt_evidence_retained": true,
+    "resource_state": "No new native admission; old A06R1 grant expired and is unusable."
+  }
+}

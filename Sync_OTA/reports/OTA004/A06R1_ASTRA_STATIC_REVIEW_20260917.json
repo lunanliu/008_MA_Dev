@@ -1,0 +1,123 @@
+{
+  "status": "A06R1_STATIC_REVIEW_COMPLETE_REPORT_AND_TIMING_HOLD",
+  "reviewed_utc": "2026-09-17T11:02:22.785245+00:00",
+  "closeout_sha256": "35d6fcb039074beb71bc3396633ec78ed2c00d7f522bfefa2743c3453ae1da6e",
+  "frozen_inputs_verified": 302,
+  "verified_artifacts": [
+    {
+      "path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\sync_ota\\OTA004_A06R1_RESOURCE_GRANT_20260917.json",
+      "sha256": "6b4c8a3df9133c5c1c48176b5cc260b72bab2a4f8914ffe7c0c634752ed36c81"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\docs\\jobs\\OTA004_A06R1_source_lock.json",
+      "sha256": "2b5476b054422872ac5f61b73021cb48f15983717e83b311b20a923b76d6c38d"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a06r1\\project_identity_verified.json",
+      "sha256": "f32deca1cd7adee60d28abab2711d2818288e1a0fd95701f34a36acc8df9ee07"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a06r1\\project_identity_verified.json",
+      "sha256": "06e23c0e927831fe5712cecd6e4b94cb2adaa0311653f4867b4ca92d3eb3328d"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a06r1\\strict_smoke_review.json",
+      "sha256": "18bfeec10ad3757721c7cc7deb82e11d360379b65e669705664c69a9a44c4e7f"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a06r1\\process_summary.json",
+      "sha256": "ca1b163eb4356f545c7f76fe1fafa4613c32b13e4defceaacc594cb8e89e29d4"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a06r1\\process_tree.jsonl",
+      "sha256": "c8e772fcefe88982fdc1efa7bb76cb68f643198c79af1009d13d187c7c79e06c"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a06r1\\sync_ota_synth.dcp",
+      "sha256": "ac2e40a1b04cee538f76bc5028cc8e2c3836459742d260488e231d6dd436f33e"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a06r1\\sync_ota_top.edf",
+      "sha256": "636882516c625c955831d90133f52bf3687a57dfe527d1bcfe70d2f20a888ada"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a06r1\\failure.txt",
+      "sha256": "f02cddd533583922e92f5693a5085c21f53f10fd3c8750e9ebeb346032a125a2"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a06r1\\process_summary.json",
+      "sha256": "db713b934c7ba967834bed0e393d86e6ab7a1971215a8e2aea629ef24090168e"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a06r1\\process_tree.jsonl",
+      "sha256": "80fd285b868127c57a7a1e5865dfa33a6080c7bbb398b10251f75aa16d1d8e01"
+    },
+    {
+      "path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\sync_ota\\OTA004_A06R1_REPORT_FAILURE_PATROL_20260917T055808Z.json",
+      "sha256": "73aaa4c8979dd51ca7dc7c4946be8c92cd6102b25ae15bc9bcaea40bb58f9af7"
+    },
+    {
+      "path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\sync_ota\\OTA004_A06R1_GRAY_DIAGNOSIS_AND_HANDOFF_20260917.json",
+      "sha256": "82c5895132de4e97bcfea72680dcda73b437149502ba7a187f3a126f82ab9f18"
+    }
+  ],
+  "process_trees": {
+    "smoke": {
+      "identities": 111,
+      "last_three_empty": true,
+      "start": "2026-09-17T04:28:04.1449928Z",
+      "end": "2026-09-17T04:54:24.2860114Z",
+      "exit_code": 0
+    },
+    "synth": {
+      "identities": 121,
+      "last_three_empty": true,
+      "start": "2026-09-17T04:56:01.6729693Z",
+      "end": "2026-09-17T05:44:46.9761212Z",
+      "exit_code": 1
+    }
+  },
+  "smoke": "STRICT_PASS",
+  "core_synthesis": "SUCCESS; zero errors and zero critical warnings",
+  "gray_gate": "NOT_COMPLETED; fix report scope and C/D owning-cell normalization only",
+  "timing": {
+    "clk125": {
+      "wns_ns": 2.41,
+      "failed_endpoints": 0
+    },
+    "clk150": {
+      "wns_ns": -2.358,
+      "failed_endpoints": 2240
+    },
+    "clk500": {
+      "wns_ns": -1.279,
+      "failed_endpoints": 347
+    }
+  },
+  "timing_scope": "synthesized/unplaced estimates; two representative worst paths, not all failing endpoints explained",
+  "cdc_observed_counts": {
+    "CDC-3": 94,
+    "CDC-6": 1,
+    "CDC-9": 11,
+    "CDC-10": 12,
+    "CDC-15": 171,
+    "CDC-26": 10
+  },
+  "cdc_warning_acceptance": "OPEN; report restoration must retain all 182 warning rows without new waivers",
+  "candidate_consistency_comparison_proof": {
+    "signed_inputs_bits": 32,
+    "max_abs_difference": 4294967295,
+    "max_product": 19703248365158400,
+    "u64_no_overflow": true,
+    "threshold": 32768000000000,
+    "multiplier": 4587520,
+    "quotient": 7142857,
+    "remainder": 655360,
+    "equivalent_comparison": "abs_difference <= 7142857",
+    "rtl_changed": false
+  },
+  "next": "A06R2: existing-DCP reports only with bounded timing coverage; requires new manager time/resource grant",
+  "physical_timing": "NOT_RUN",
+  "continuous_throughput": "NOT_RUN",
+  "NI_board": "NOT_RUN"
+}

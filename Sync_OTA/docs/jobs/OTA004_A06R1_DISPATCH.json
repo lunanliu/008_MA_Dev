@@ -1,18 +1,18 @@
 {
   "job": "OTA004",
   "revision": "A06R1",
-  "state": "FROZEN_SUBMITTED_FOR_SCRIPT_REVIEW_AND_NEW_NATIVE_ADMISSION",
-  "created_utc": "2026-09-17T04:14:26.483117+00:00",
+  "state": "CLOSED_CORE_PRESERVED_REPORT_GATE_FAILED",
+  "created_utc": "2026-09-17T06:14:26.483117+02:00",
   "manifest": "docs/jobs/OTA004_A06R1_source_lock.json",
   "manifest_sha256": "2b5476b054422872ac5f61b73021cb48f15983717e83b311b20a923b76d6c38d",
   "files": 302,
   "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
   "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
-  "native_started": false,
+  "native_started": true,
   "old_grants_reusable": false,
   "legacy_absolute_deadline_utc": "2026-09-17T03:44:33.0452158Z",
-  "new_grant": null,
-  "new_deadline": null,
+  "new_grant": "SYNC_OTA_OTA004_A06R1_20260917T041823Z",
+  "new_deadline": "2026-09-17T05:48:23.0353247Z",
   "estimated_smoke_minutes": [
     10,
     20
@@ -26,5 +26,70 @@
     "smoke": 2400,
     "synth": 3600
   },
-  "commit": null
+  "commit": "c275bf14b56d8bba4617013280d10d4e789837fb",
+  "submitted_for_admission_utc": "2026-09-17T04:15:53.0020339Z",
+  "grant_receipt": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\sync_ota\\OTA004_A06R1_RESOURCE_GRANT_20260917.json",
+  "grant_receipt_sha256": "6b4c8a3df9133c5c1c48176b5cc260b72bab2a4f8914ffe7c0c634752ed36c81",
+  "first_start_not_after_utc": "2026-09-17T04:33:23.0353247Z",
+  "astra_grant_verified_utc": "2026-09-17T04:20:12.698230+00:00",
+  "commands": [
+    {
+      "stage": "smoke",
+      "executable": "C:/Users/lunan/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "D:/008_MA_Dev/Sync_OTA/tools/monitor_ota004_a06r1.ps1",
+        "-Stage",
+        "smoke",
+        "-Attempt",
+        "D:/008_MA_Dev/Sync_OTA/work/OTA004/smoke_a06r1",
+        "-Source",
+        "D:/008_MA_Dev/Sync_OTA/tools/vivado/run_ota004_a06r1.tcl",
+        "-AbsoluteDeadlineUtc",
+        "2026-09-17T05:48:23.0353247Z",
+        "-HardSeconds",
+        "2400"
+      ],
+      "launcher_outputs": "outside new empty attempt directory",
+      "expected_minutes": [
+        10,
+        20
+      ]
+    },
+    {
+      "stage": "synth",
+      "executable": "C:/Users/lunan/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "D:/008_MA_Dev/Sync_OTA/tools/monitor_ota004_a06r1.ps1",
+        "-Stage",
+        "synth",
+        "-Attempt",
+        "D:/008_MA_Dev/Sync_OTA/work/OTA004/synth_a06r1",
+        "-Source",
+        "D:/008_MA_Dev/Sync_OTA/tools/vivado/run_ota004_a06r1.tcl",
+        "-AbsoluteDeadlineUtc",
+        "2026-09-17T05:48:23.0353247Z",
+        "-HardSeconds",
+        "3600"
+      ],
+      "launcher_outputs": "outside new empty attempt directory",
+      "expected_minutes": [
+        25,
+        45
+      ]
+    }
+  ],
+  "dispatched_utc": "2026-09-17T04:21:56.481647+00:00",
+  "native_start_receipt": "PENDING_LUNA; dispatch is not evidence of native start",
+  "native_closed": true,
+  "grant_expired": true,
+  "astra_review": "reports/OTA004/A06R1_ASTRA_STATIC_REVIEW_20260917.json",
+  "closeout": "reports/OTA004/OTA004_A06R1_EXECUTION_CLOSEOUT_20260917.json"
 }

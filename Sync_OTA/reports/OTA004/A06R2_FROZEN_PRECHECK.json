@@ -1,0 +1,1 @@
+{"status": "A06R2_RECOVERY_PRECHECK_PASS", "files": 339, "manifest_sha256": "2a3d0a4c78f7b792a93d6c4d22d0cf2b7326022c52357b79e1e59a5436d3dfc3", "dcp_sha256": "ac2e40a1b04cee538f76bc5028cc8e2c3836459742d260488e231d6dd436f33e", "scope": "report-only; existing DCP opened without source rebuild"}

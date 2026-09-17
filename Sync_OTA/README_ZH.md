@@ -1,6 +1,6 @@
 # Sync OTA：完整同步链路开发入口
 
-目标：Sync_OTA.xpr / sync_ota_top，Vivado2021.1，xcvu11p-flgb2104-2-e。真实核心工程、Wrapper原生语法、A05短冒烟和核心OOC综合已完成；因CDC控制风险暂缓最终上板交付。A06 RTL/TB修订保持冻结；A06R1仅修订执行与审计脚本，待新原生准入。
+目标：Sync_OTA.xpr / sync_ota_top，Vivado2021.1，xcvu11p-flgb2104-2-e。A06R1真实短测严格通过、核心综合成功；Gray报告适配和真实综合时序仍待修复，尚未完成上板交付。A06R2只读现有DCP的报告恢复包已冻结，等待新准入。
 
 - [冻结任务书](docs/PROJECT_SPEC_ZH.md)
 - [统一存储生命周期、坐标和时钟合同](docs/architecture/ARCHITECTURE_A01_ZH.md)
@@ -13,7 +13,7 @@
 
 有限离线回放统一DDR区域先保存RAW，再在最后raw读者退出后复用于粗CFO整帧；SFO原内部bank保持所有权。两次CFO旋转各自保留S16舍入饱和。NI提供125/150/500MHz时钟和DDR物理控制器，RTL提供事务口；不生成CLIP XML/NI工程，不推云端。
 
-剩余交付：A06 CDC修订的原生核验和更新网表、稳定的GUI工程/依赖封装，以及上板波形、预期记录/比较脚本、完整Host/Target操作资料。独立明文VHDL Wrapper和端口表已具备。没有整链PASS、持续吞吐或板测通过结论。
+剩余交付：A06R2报告恢复、真实时序最小RTL修复及受影响短验证/更新核心综合、稳定GUI工程依赖封装，以及上板波形、预期记录/比较脚本和Host/Target资料。独立VHDL Wrapper和端口表已具备。实现时序、持续吞吐和板测仍未验证。
 
 - [OTA003限定接收](reports/OTA003/ASTRA_REVIEW_ZH.md)：三项专项通过，资源已归还。
 - [独立VHDL Wrapper](wrapper/sync_ota_wrapper.vhd)与[完整端口合同](docs/PORTS_AND_RECORDS_ZH.md)：75个核心端口/111个Wrapper端口，A04原生VHDL语法通过；A05接口保持不变。
@@ -24,3 +24,6 @@
 - [A06最小CDC修订冻结包](docs/jobs/OTA004_A06_ZH.md)：4份RTL与同一短TB的定向扩充、单一官方XPM综合注册、绝对截止监管；285项锁定输入含45个已成功IP DCP。无新时间/资源准入，不能复用A05旧grant。
 
 - [A06R1脚本修订冻结包](docs/jobs/OTA004_A06R1_ZH.md)：严格启动参数、45 IP完成且NEEDS_REFRESH=false、CDC摘要/明细闭合、24个Gray宏逐位有效约束。原A06 285项和A05 216项输入未变；离线检查不代替原生验证，仍待总管家新grant。
+
+- [A06R1静态接收与时序边界](reports/OTA004/A06R1_ASTRA_STATIC_REVIEW_20260917.json)：成功smoke/core保留，完整进程树已关闭；150/500MHz综合时序仍失败。
+- [A06R2报告恢复冻结包](docs/jobs/OTA004_A06R2_ZH.md)：只读已有DCP，严格保留scope与C/D pin证据，24宏/128位Gray审计以及最多116条有界时序路径；不重跑成功smoke/IP/核心。

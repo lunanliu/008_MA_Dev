@@ -1,0 +1,25 @@
+{
+  "job": "OTA004",
+  "revision": "A06R2",
+  "state": "FROZEN_AWAITING_NEW_MANAGER_GRANT",
+  "created_utc": "2026-09-17T11:10:42.749873+00:00",
+  "manifest": "docs/jobs/OTA004_A06R2_source_lock.json",
+  "manifest_sha256": "2a3d0a4c78f7b792a93d6c4d22d0cf2b7326022c52357b79e1e59a5436d3dfc3",
+  "files": 339,
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "native_started": false,
+  "new_grant": null,
+  "new_deadline": null,
+  "old_grants_reusable": false,
+  "attempt": "D:/008_MA_Dev/Sync_OTA/work/OTA004/report_a06r2",
+  "stage": "report",
+  "source": "D:/008_MA_Dev/Sync_OTA/tools/vivado/run_ota004_a06r2.tcl",
+  "monitor": "D:/008_MA_Dev/Sync_OTA/tools/monitor_ota004_a06r2.ps1",
+  "hard_seconds": 1800,
+  "estimated_minutes": [
+    10,
+    20
+  ],
+  "commit": null
+}

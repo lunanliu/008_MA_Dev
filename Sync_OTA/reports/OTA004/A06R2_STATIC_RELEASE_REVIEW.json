@@ -1,0 +1,46 @@
+{
+  "status": "A06R2_STATIC_RELEASE_REVIEW_PASS_NATIVE_NOT_STARTED",
+  "created_utc": "2026-09-17T11:08:34.781156+00:00",
+  "input_artifact": "A06R1 saved synthesized DCP only",
+  "native_rebuild_calls": 0,
+  "rtl_tb_changed": false,
+  "monitor_runtime": "identical text to A06R1 after preflight",
+  "tests": {
+    "actual_export_fixtures": 15,
+    "monitor_preflight": 13
+  },
+  "gray_required_macros": 24,
+  "gray_destination_bits": 128,
+  "raw_endpoint_objects": 512,
+  "bounded_timing_queries": 9,
+  "bounded_timing_max_paths": 116,
+  "baseline_cdc_rows": 299,
+  "unwaived_warning_rows": 182,
+  "new_native_grant": null,
+  "files": [
+    {
+      "path": "tools/vivado/run_ota004_a06r2.tcl",
+      "sha256": "5625828e0e81f7dc12b33c0248513d561dffb24e482ff7997e4582f1d9251041"
+    },
+    {
+      "path": "tools/vivado/report_ota004_a06r2_timing.tcl",
+      "sha256": "03db49cebf7dd952fc733cde23f9a0fceab417237f41c9a8f99438f62b220a8d"
+    },
+    {
+      "path": "tools/vivado/audit_ota004_a06r2_gray.tcl",
+      "sha256": "6fcdb5720fa40ef63cd96d665d0295571a31040103dd70f7ba3f1a406156db21"
+    },
+    {
+      "path": "tools/verify_ota004_a06r2_report.py",
+      "sha256": "831de8f0fc6a2aceb1a014249dfeb048485377619cd962539dd8b62fcb0faa19"
+    },
+    {
+      "path": "tools/monitor_ota004_a06r2.ps1",
+      "sha256": "7e18a5dbc01475c4514d8ac44a8bb017aea67b44492f4c5a5c7790ee6e2d71d1"
+    },
+    {
+      "path": "docs/jobs/OTA004_A06R2_ZH.md",
+      "sha256": "cbde9d585cf8ce098e79859c4fc43fe0830d98fe2cc17a3185582cc17ce051a5"
+    }
+  ]
+}

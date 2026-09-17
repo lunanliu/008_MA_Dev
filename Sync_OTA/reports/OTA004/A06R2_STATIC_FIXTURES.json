@@ -1,0 +1,85 @@
+{
+  "status": "A06R2_REAL_EXPORT_STATIC_FIXTURES_PASS",
+  "scope": "actual frozen XDC/valid_exceptions parsed using synthetic object APIs; no native tool started",
+  "checks": [
+    {
+      "name": "actual_scoped_XDC_and_C_D_pin_export_to_24_macro_128_bit_mock_audit",
+      "result": "PASS"
+    },
+    {
+      "name": "preserves_256_original_C_D_pins_and_256_scoped_cells",
+      "result": "PASS"
+    },
+    {
+      "name": "lost_scope",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "unresolved_scope",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "wrong_source_pin",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "unknown_command_substitution",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "truncated_scope",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "unknown_scope_switch",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "auditor_rejects_tampered_original_pin",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "real_CDC_299_rows_9_blocks_12_exact_resets",
+      "result": "PASS"
+    },
+    {
+      "name": "empty_CDC",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "truncated_CDC",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "unknown_CDC_rule",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "missing_input_clock_block",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "bad_summary_count",
+      "result": "EXPECTED_REJECTION"
+    }
+  ],
+  "gray_macros": 24,
+  "destination_bits": 128,
+  "raw_objects": 512,
+  "native_object_existence": "NOT_YET_VERIFIED",
+  "native_bus_report_format": "NOT_YET_OBSERVED",
+  "source_files": [
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a06r1\\gray_constraints\\valid_exceptions.xdc",
+      "sha256": "3d3c5f6af3e7d7dd7d3eba47ad746db8c92fbbca2bad75fcd65375a0477abb07"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a06r1\\synth_applied_constraints.xdc",
+      "sha256": "79de7772c34ea3037dbac560218d1ea70ae75867ec807e74babc7868effa3875"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\synth_a06r1\\synth_cdc.txt",
+      "sha256": "fdca6b3e0df39c6b0e06f729ee43b4edebeeb4ab06638c214872a7436e37e454"
+    }
+  ]
+}
