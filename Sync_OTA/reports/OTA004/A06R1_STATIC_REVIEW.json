@@ -1,0 +1,51 @@
+{
+  "status": "A06R1_STATIC_REVIEW_PASS_NATIVE_NOT_STARTED",
+  "created_utc": "2026-09-17T04:07:56.405415+00:00",
+  "a06_preserved_files": 285,
+  "a05_preserved_files": 216,
+  "rtl_tb_changed": false,
+  "monitor_runtime_after_preflight": "BYTE_EQUIVALENT_TEXT_TO_A06",
+  "auditor_fixtures": 27,
+  "monitor_preflight_fixtures": 17,
+  "full_mock_gray_groups": 24,
+  "full_mock_destination_bits": 128,
+  "actual_a05_cdc_rows": 2444,
+  "actual_a05_gray_identity_clock_widths": 24,
+  "native_api_execution": "NOT_RUN",
+  "native_report_format": "NOT_YET_OBSERVED_FOR_A06R1; UNKNOWN_FORMAT_FAILS_CLOSED",
+  "legacy_absolute_deadline_utc": "2026-09-17T03:44:33.0452158Z",
+  "new_native_admission": "NOT_GRANTED",
+  "scope": "script-only successor; no algorithm, RTL, test scenario, IP configuration or acceptance relaxation",
+  "files": [
+    {
+      "path": "tools/monitor_ota004_a06r1.ps1",
+      "bytes": 14481,
+      "sha256": "7901c5ac4d53c5be62ff2553637cddf04e5634025e5283c678a5a2839e29be2b"
+    },
+    {
+      "path": "tools/verify_ota004_a06r1_project.py",
+      "bytes": 10465,
+      "sha256": "ade04fad3b692e1c1812bded1f9c6b93876400e3a17532e7ae8f1acce01d8d88"
+    },
+    {
+      "path": "tools/verify_ota004_a06r1_synth_result.py",
+      "bytes": 13989,
+      "sha256": "7c283e974ae16f7ece4b4f8069f983355110f7d36dbc97e7574419ad704ca8de"
+    },
+    {
+      "path": "tools/vivado/run_ota004_a06r1.tcl",
+      "bytes": 11469,
+      "sha256": "a5e383efad9aa4c0d2f13a35711194d5aac7254b4dcbcab04ab26877775f483b"
+    },
+    {
+      "path": "tools/vivado/audit_ota004_a06r1_gray.tcl",
+      "bytes": 8411,
+      "sha256": "b7a768fecac798f826e9322f5e5895d55bc16819dc72aacd26f36276cbcf21ab"
+    },
+    {
+      "path": "docs/jobs/OTA004_A06R1_ZH.md",
+      "bytes": 7199,
+      "sha256": "0785cd0376d2c341747afe57955b8265e5d219f9e6e31992500f94d0934f954f"
+    }
+  ]
+}

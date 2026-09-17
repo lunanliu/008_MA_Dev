@@ -1,0 +1,23 @@
+proc audit_reused_ips {phase} {
+ global out
+ set f [open [file join $out reused_ip_runs_${phase}.tsv] w]
+ puts $f "ip\trun\tstatus\tneeds_refresh\tip_locked"
+ set problems {};set count 0
+ foreach ip [lsort [get_ips]] {
+  incr count
+  set name [get_property NAME $ip];set run ${name}_synth_1
+  set locked [get_property IS_LOCKED $ip]
+  set status MISSING;set refresh UNKNOWN
+  set obj [get_runs -quiet $run]
+  if {[llength $obj]==1} {
+   set status [get_property STATUS $obj]
+   if {"NEEDS_REFRESH" in [list_property $obj]} {set refresh [get_property NEEDS_REFRESH $obj]}
+  }
+  puts $f "$name\t$run\t$status\t$refresh\t$locked";flush $f
+  if {![string match "*synth_design Complete*" $status] || [string tolower $refresh] ni {0 false} || [string tolower $locked] ni {0 false}} {lappend problems $run}
+ }
+ close $f
+ if {$count!=45 || [llength $problems]} {error "45 unchanged completed IPs required; phase=$phase count=$count invalid=$problems; no dependency rebuild authorized"}
+ puts "OTA004_A06R1_REUSED_IPS_READY phase=$phase count=45 needs_refresh=false"
+}
+

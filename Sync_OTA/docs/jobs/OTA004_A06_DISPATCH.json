@@ -1,7 +1,7 @@
 {
   "job": "OTA004",
   "revision": "A06",
-  "state": "FROZEN_NO_NATIVE_ADMISSION_BUDGET_INSUFFICIENT",
+  "state": "SUBMITTED_NO_NATIVE_ADMISSION_BUDGET_INSUFFICIENT",
   "created_utc": "2026-09-17T03:30:27.184186+00:00",
   "manifest": "docs/jobs/OTA004_A06_source_lock.json",
   "manifest_sha256": "e0ccf6d506b538fd044b3cd10b88c2da6f165da0b6d774992740c61768158494",
@@ -54,5 +54,7 @@
       "path": "tools/archive_ota004_a06_previous_core.py",
       "sha256": "dc7d004926c7bc651a151f64a6f7d0bf6472d4f19abb823caae04593a350019e"
     }
-  ]
+  ],
+  "commit": "797f87ac4f781aae2d0d689342dc35c26d82609e",
+  "submitted_for_admission_utc": "2026-09-17T03:34:59.756406+00:00"
 }

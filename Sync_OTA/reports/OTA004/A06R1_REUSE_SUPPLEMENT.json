@@ -1,0 +1,67 @@
+{
+  "status": "A06R1_FINAL_STATIC_REVIEW_PASS_PENDING_NEW_NATIVE_GRANT",
+  "created_utc": "2026-09-17T04:13:56.480572+00:00",
+  "supplements": "reports/OTA004/A06R1_STATIC_REVIEW.json; authoritative final script hashes below supersede that earlier draft hash list",
+  "luna_read_only_review": "four-source reuse fingerprint concern resolved with all four files plus exact 127 generated production sources and compile order",
+  "tests": [
+    {
+      "name": "127_generated_production_sources_and_order",
+      "result": "PASS"
+    },
+    {
+      "name": "one_old_FIFO_source",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "compile_order_changed",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "additional_unreviewed_RTL",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "truncated_script",
+      "result": "EXPECTED_REJECTION"
+    }
+  ],
+  "existing_tests": {
+    "auditor": 27,
+    "monitor": 17,
+    "gray_macros": 24,
+    "gray_destination_bits": 128
+  },
+  "native_started": false,
+  "files": [
+    {
+      "path": "tools/vivado/run_ota004_a06r1.tcl",
+      "bytes": 14012,
+      "sha256": "bfc3ae87df0de7a1687ce1a9c835a845b73a6b5dbd6b59a850fe3e1b6359287d"
+    },
+    {
+      "path": "tools/vivado/audit_ota004_a06r1_gray.tcl",
+      "bytes": 8411,
+      "sha256": "b7a768fecac798f826e9322f5e5895d55bc16819dc72aacd26f36276cbcf21ab"
+    },
+    {
+      "path": "tools/verify_ota004_a06r1_synth_result.py",
+      "bytes": 13989,
+      "sha256": "7c283e974ae16f7ece4b4f8069f983355110f7d36dbc97e7574419ad704ca8de"
+    },
+    {
+      "path": "tools/verify_ota004_a06r1_project.py",
+      "bytes": 10465,
+      "sha256": "ade04fad3b692e1c1812bded1f9c6b93876400e3a17532e7ae8f1acce01d8d88"
+    },
+    {
+      "path": "tools/monitor_ota004_a06r1.ps1",
+      "bytes": 14481,
+      "sha256": "7901c5ac4d53c5be62ff2553637cddf04e5634025e5283c678a5a2839e29be2b"
+    },
+    {
+      "path": "docs/jobs/OTA004_A06R1_ZH.md",
+      "bytes": 7656,
+      "sha256": "c9c1f1b857be78ed72352887141e1f75ac2d69bf10f697dcdab7462c6f3d56c7"
+    }
+  ]
+}

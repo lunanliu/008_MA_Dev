@@ -1,0 +1,114 @@
+{
+  "status": "A06R1_OFFLINE_AUDIT_TESTS_PASS",
+  "scope": "Python/Tcl synthetic fixtures and existing A05 report only; no native experiment",
+  "checks": [
+    {
+      "name": "A05_actual_report_2444_rows_six_blocks_closed",
+      "result": "PASS"
+    },
+    {
+      "name": "A05_unsafe_CDC_NOT_accepted",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "synthetic_complete_CDC_and_exact_reset_pair",
+      "result": "PASS"
+    },
+    {
+      "name": "CDC_empty",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "CDC_truncated",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "CDC_wrong_identity",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "CDC_summary_mismatch",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "CDC_unknown_rule",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "CDC_missing_block",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "CDC_missing_row",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "CDC_bad_UTF8",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "CDC10_unreviewed_reset_substring",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "CDC10_prefix_only_source",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "synthetic_24_Gray_macros_all_bits_both_directions",
+      "result": "PASS"
+    },
+    {
+      "name": "Gray_missing_bus_skew",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "Gray_unrelated_FIFO_constraint",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "Gray_overridden_max_delay",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "Gray_missing_effective_bit_path",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "Gray_empty_native_bus_report",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "Gray_wrong_active_skew_value",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "safe_Tcl_capture_expanded_exact_endpoints",
+      "result": "PASS"
+    },
+    {
+      "name": "safe_Tcl_capture_rejects_exec",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "45_IP_complete_refresh_false",
+      "result": "PASS"
+    },
+    {
+      "name": "IP_refresh_'true'",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "IP_refresh_'1'",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "IP_refresh_''",
+      "result": "EXPECTED_REJECTION"
+    },
+    {
+      "name": "IP_refresh_'UNKNOWN'",
+      "result": "EXPECTED_REJECTION"
+    }
+  ]
+}

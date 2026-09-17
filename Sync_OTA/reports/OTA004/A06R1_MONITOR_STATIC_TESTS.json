@@ -1,0 +1,92 @@
+{
+  "status": "A06R1_MONITOR_STATIC_TESTS_PASS",
+  "scope": "AST and isolated preflight function only; frozen manifest and one reparse attribute are synthetic; process-tree runtime unchanged from A06",
+  "native_processes_started": 0,
+  "checks": [
+    {
+      "name": "valid_exact_entry_empty_direct_child",
+      "result": "PASS"
+    },
+    {
+      "reason": "stage must be exactly smoke or synth",
+      "result": "EXPECTED_REJECTION",
+      "name": "stage_metachar"
+    },
+    {
+      "reason": "stage must be exactly smoke or synth",
+      "result": "EXPECTED_REJECTION",
+      "name": "stage_unknown"
+    },
+    {
+      "reason": "stage must be exactly smoke or synth",
+      "result": "EXPECTED_REJECTION",
+      "name": "stage_wrong_case"
+    },
+    {
+      "reason": "attempt stage/name does not match frozen revision",
+      "result": "EXPECTED_REJECTION",
+      "name": "stage_path_mismatch"
+    },
+    {
+      "reason": "source is not the frozen A06R1 entry",
+      "result": "EXPECTED_REJECTION",
+      "name": "wrong_entry"
+    },
+    {
+      "reason": "unsafe launch path",
+      "result": "EXPECTED_REJECTION",
+      "name": "source_command_separator"
+    },
+    {
+      "reason": "unsafe launch path",
+      "result": "EXPECTED_REJECTION",
+      "name": "attempt_command_separator"
+    },
+    {
+      "reason": "unsafe launch path",
+      "result": "EXPECTED_REJECTION",
+      "name": "environment_expansion"
+    },
+    {
+      "reason": "attempt must be a direct child of work/OTA004",
+      "result": "EXPECTED_REJECTION",
+      "name": "attempt_outside_root"
+    },
+    {
+      "reason": "attempt must be a direct child of work/OTA004",
+      "result": "EXPECTED_REJECTION",
+      "name": "attempt_nested"
+    },
+    {
+      "reason": "unsafe launch path",
+      "result": "EXPECTED_REJECTION",
+      "name": "path_traversal"
+    },
+    {
+      "reason": "duration outside frozen stage cap",
+      "result": "EXPECTED_REJECTION",
+      "name": "stage_budget_over_cap"
+    },
+    {
+      "reason": "duration outside frozen stage cap",
+      "result": "EXPECTED_REJECTION",
+      "name": "stage_budget_nonpositive"
+    },
+    {
+      "reason": "entry does not match the frozen source lock",
+      "result": "EXPECTED_REJECTION",
+      "name": "entry_hash_mismatch"
+    },
+    {
+      "reason": "reparse path is forbidden",
+      "result": "EXPECTED_REJECTION",
+      "name": "attempt_reparse_point"
+    },
+    {
+      "reason": "attempt must be new and empty; keep admission/launcher logs outside it",
+      "result": "EXPECTED_REJECTION",
+      "name": "nonempty_attempt"
+    }
+  ],
+  "fixture_directory": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\smoke_a06r1_static-e20f597609e341fb99c78a073aac36b4"
+}

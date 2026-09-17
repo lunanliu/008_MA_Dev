@@ -1,0 +1,30 @@
+{
+  "job": "OTA004",
+  "revision": "A06R1",
+  "state": "FROZEN_SUBMITTED_FOR_SCRIPT_REVIEW_AND_NEW_NATIVE_ADMISSION",
+  "created_utc": "2026-09-17T04:14:26.483117+00:00",
+  "manifest": "docs/jobs/OTA004_A06R1_source_lock.json",
+  "manifest_sha256": "2b5476b054422872ac5f61b73021cb48f15983717e83b311b20a923b76d6c38d",
+  "files": 302,
+  "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "native_started": false,
+  "old_grants_reusable": false,
+  "legacy_absolute_deadline_utc": "2026-09-17T03:44:33.0452158Z",
+  "new_grant": null,
+  "new_deadline": null,
+  "estimated_smoke_minutes": [
+    10,
+    20
+  ],
+  "estimated_core_and_reports_minutes": [
+    25,
+    45
+  ],
+  "reused_completed_ip_ooc": 45,
+  "stage_hard_caps_seconds": {
+    "smoke": 2400,
+    "synth": 3600
+  },
+  "commit": null
+}

@@ -1,0 +1,7 @@
+{
+  "status": "A06R1_GRAY_TCL_PYTHON_MOCK_PASS",
+  "scope": "full helper with synthetic Tcl APIs then strict Python auditor; not a Vivado run",
+  "positive_macros": 24,
+  "positive_bits": 128,
+  "unknown_actual_macro": "EXPECTED_REJECTION"
+}

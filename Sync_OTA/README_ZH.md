@@ -1,6 +1,6 @@
 # Sync OTA：完整同步链路开发入口
 
-目标：Sync_OTA.xpr / sync_ota_top，Vivado2021.1，xcvu11p-flgb2104-2-e。真实核心工程、Wrapper原生语法、A05短冒烟和核心OOC综合已完成；因CDC控制风险暂缓最终上板交付。A06最小修订已冻结，未获新原生准入。
+目标：Sync_OTA.xpr / sync_ota_top，Vivado2021.1，xcvu11p-flgb2104-2-e。真实核心工程、Wrapper原生语法、A05短冒烟和核心OOC综合已完成；因CDC控制风险暂缓最终上板交付。A06 RTL/TB修订保持冻结；A06R1仅修订执行与审计脚本，待新原生准入。
 
 - [冻结任务书](docs/PROJECT_SPEC_ZH.md)
 - [统一存储生命周期、坐标和时钟合同](docs/architecture/ARCHITECTURE_A01_ZH.md)
@@ -22,3 +22,5 @@
 
 - [A05完整核心综合复核](reports/OTA004/A05_SYNTH_ASTRA_REVIEW_ZH.md)：0黑盒、DCP/EDIF完整；LUT 23.70%、URAM 57.50%、DSP 22.23%。综合WNS -2.357ns，CDC风险需修，非时序或板测通过。
 - [A06最小CDC修订冻结包](docs/jobs/OTA004_A06_ZH.md)：4份RTL与同一短TB的定向扩充、单一官方XPM综合注册、绝对截止监管；285项锁定输入含45个已成功IP DCP。无新时间/资源准入，不能复用A05旧grant。
+
+- [A06R1脚本修订冻结包](docs/jobs/OTA004_A06R1_ZH.md)：严格启动参数、45 IP完成且NEEDS_REFRESH=false、CDC摘要/明细闭合、24个Gray宏逐位有效约束。原A06 285项和A05 216项输入未变；离线检查不代替原生验证，仍待总管家新grant。
