@@ -1,7 +1,7 @@
 {
   "job": "OTA004",
   "revision": "A02",
-  "state": "FROZEN_AWAITING_CONCRETE_MANAGER_SLOT",
+  "state": "SUPERSEDED_BY_A03_USER_MEMORY_POLICY",
   "manifest": "docs/jobs/OTA004_A02_source_lock.json",
   "manifest_sha256": "69ce119539d787ffc4fdff22026bee285ec69d69396c0d78432e2a0000345d34",
   "stages": [
@@ -13,5 +13,7 @@
   "old_grants_reusable": false,
   "created_utc": "2026-09-17T00:33:01.776107+00:00",
   "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
-  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e"
+  "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "commit": "63d1cf3d66966dc7a988c486d223e540cdd39dc2",
+  "superseded_by": "docs/jobs/OTA004_A03_DISPATCH.json"
 }

@@ -1,0 +1,25 @@
+{
+  "status": "A03_MONITOR_STATIC_POLICY_PASS",
+  "parser_errors": 0,
+  "advisory_test_free_gib": 10,
+  "below_12gib_continued": true,
+  "native_launched": false,
+  "actual_read_only_memory_sample": {
+    "timestamp_utc": "2026-09-17T00:37:35.3456344Z",
+    "available_bytes": 23129792512,
+    "committed_bytes": 12827770880,
+    "commit_limit_bytes": 102457384960,
+    "commit_headroom_bytes": 89629614080,
+    "pages_input_per_second": 0,
+    "pages_output_per_second": 0,
+    "pagefiles": [
+      {
+        "Name": "C:\\pagefile.sys",
+        "AllocatedBaseSize": 65536,
+        "CurrentUsage": 0,
+        "PeakUsage": 0
+      }
+    ],
+    "observation_errors": []
+  }
+}

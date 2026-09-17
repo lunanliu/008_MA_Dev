@@ -1,0 +1,84 @@
+--- tools/monitor_ota004.ps1
++++ tools/monitor_ota004_a03.ps1
+@@ -17,8 +17,35 @@
+  [System.IO.File]::WriteAllText((Join-Path $attempt 'precheck_processes.json'),(($preExisting|Select-Object Name,ProcessId,ParentProcessId,CreationDate,CommandLine|ConvertTo-Json -Depth 8)),$utf8Pre)
+  throw 'tracked native .exe process exists; refusing launch'
+ }
++function Get-MemorySnapshot {
++ $memoryErrors=@()
++ $perf=$null
++ $pagefiles=@()
++ try {$perf=Get-CimInstance Win32_PerfFormattedData_PerfOS_Memory -ErrorAction Stop} catch {$memoryErrors+=('performance counters: '+$_.Exception.Message)}
++ try {$pagefiles=@(Get-CimInstance Win32_PageFileUsage -ErrorAction Stop | Select-Object Name,AllocatedBaseSize,CurrentUsage,PeakUsage)} catch {$memoryErrors+=('pagefile counters: '+$_.Exception.Message)}
++ $headroom=$null
++ if($null -ne $perf -and $null -ne $perf.CommitLimit -and $null -ne $perf.CommittedBytes){$headroom=[int64]$perf.CommitLimit-[int64]$perf.CommittedBytes}
++ [PSCustomObject]@{
++  timestamp_utc=[DateTime]::UtcNow.ToString('o')
++  available_bytes=if($null -ne $perf){[int64]$perf.AvailableBytes}else{$null}
++  committed_bytes=if($null -ne $perf){[int64]$perf.CommittedBytes}else{$null}
++  commit_limit_bytes=if($null -ne $perf){[int64]$perf.CommitLimit}else{$null}
++  commit_headroom_bytes=$headroom
++  pages_input_per_second=if($null -ne $perf){[int64]$perf.PagesInputPersec}else{$null}
++  pages_output_per_second=if($null -ne $perf){[int64]$perf.PagesOutputPersec}else{$null}
++  pagefiles=$pagefiles
++  observation_errors=$memoryErrors
++ }
++}
+ $freeStart=[int64](Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory
+-if($freeStart -lt 12582912){throw ('free memory below 12 GiB: '+$freeStart)}
++$memoryStart=Get-MemorySnapshot
++# User policy 2026-09-17: 12 GiB is advisory only. Commit/pagefile capacity,
++# real paging, full tree memory and actual tool progress govern pressure review.
++if($freeStart -lt 12582912){Write-Warning ('available physical memory below advisory 12 GiB; launch is not refused: '+$freeStart+' KiB')}
++$memoryStartPath=Join-Path $attempt 'initial_memory_snapshot.json'
++if(Test-Path -LiteralPath $memoryStartPath){throw 'preserve prior memory record'}
++[System.IO.File]::WriteAllText($memoryStartPath,($memoryStart|ConvertTo-Json -Depth 8),(New-Object System.Text.UTF8Encoding($false)))
++
+ $tree=Join-Path $attempt 'process_tree.jsonl'
+ if(Test-Path -LiteralPath $tree){throw 'preserve prior process record'}
+ $summary=Join-Path $attempt 'process_summary.json'
+@@ -62,13 +89,16 @@
+  $records=@($all|Where-Object{$ids.Contains([int]$_.ProcessId)}|ForEach-Object{
+   $c=$currentByPid[[int]$_.ProcessId]
+   if(-not $knownCreation.ContainsKey([int]$_.ProcessId)){$knownCreation[[int]$_.ProcessId]=$c}
+-  $record=[PSCustomObject]@{pid=[int]$_.ProcessId;parent_pid=[int]$_.ParentProcessId;name=$_.Name;creation_utc=$c;command_line=$_.CommandLine;working_set_bytes=if($_.WorkingSetSize){[int64]$_.WorkingSetSize}else{$null}}
++  $record=[PSCustomObject]@{pid=[int]$_.ProcessId;parent_pid=[int]$_.ParentProcessId;name=$_.Name;creation_utc=$c;command_line=$_.CommandLine;working_set_bytes=if($_.WorkingSetSize){[int64]$_.WorkingSetSize}else{$null};private_page_count_bytes=if($null -ne $_.PrivatePageCount){[int64]$_.PrivatePageCount}else{$null};cpu_time_100ns=([int64]$_.KernelModeTime+[int64]$_.UserModeTime);read_transfer_bytes=[int64]$_.ReadTransferCount;write_transfer_bytes=[int64]$_.WriteTransferCount}
+   $seen[('{0}:{1}' -f $record.pid,$record.creation_utc)]=$record
+   $record
+  })
+  $aggregateWorkingSet=[int64](($records | Measure-Object -Property working_set_bytes -Sum).Sum)
+  $freeNow=[int64](Get-CimInstance Win32_OperatingSystem).FreePhysicalMemory
+- [PSCustomObject]@{timestamp_utc=[DateTime]::UtcNow.ToString('o');root_pid=$RootPid;root_alive=($records.pid -contains $RootPid);known_pid_count=$knownCreation.Count;aggregate_working_set_bytes=$aggregateWorkingSet;free_physical_kib=$freeNow;processes=$records}
++ $memoryNow=Get-MemorySnapshot
++ $progressLog=Get-Item -LiteralPath $log -ErrorAction SilentlyContinue
++ $pressureReview=($freeNow -lt 1048576 -or ($null -ne $memoryNow.commit_headroom_bytes -and $memoryNow.commit_headroom_bytes -lt 1073741824))
++ [PSCustomObject]@{memory=$memoryNow;advisory_below_12gib=($freeNow -lt 12582912);memory_pressure_requires_review=$pressureReview;native_log_bytes=if($progressLog){$progressLog.Length}else{$null};native_log_write_utc=if($progressLog){$progressLog.LastWriteTimeUtc.ToString('o')}else{$null};timestamp_utc=[DateTime]::UtcNow.ToString('o');root_pid=$RootPid;root_alive=($records.pid -contains $RootPid);known_pid_count=$knownCreation.Count;aggregate_working_set_bytes=$aggregateWorkingSet;free_physical_kib=$freeNow;processes=$records}
+ }
+ function Write-Record{param($Record);[System.IO.File]::AppendAllText($tree,(($Record|ConvertTo-Json -Depth 12 -Compress)+[Environment]::NewLine),$utf8)}
+ $first=Get-TreeSnapshot -RootPid $rootPid
+@@ -80,12 +110,14 @@
+ $lastReport=$startUtc
+ $timedOut=$false
+ $minFree=$freeStart
++$minimumCommitHeadroom=$memoryStart.commit_headroom_bytes
+ while($true){
+  $snap=Get-TreeSnapshot -RootPid $rootPid
+  Write-Record $snap
+  if($snap.free_physical_kib -lt $minFree){$minFree=$snap.free_physical_kib}
++ if($null -ne $snap.memory.commit_headroom_bytes -and ($null -eq $minimumCommitHeadroom -or $snap.memory.commit_headroom_bytes -lt $minimumCommitHeadroom)){$minimumCommitHeadroom=$snap.memory.commit_headroom_bytes}
+  $now=[DateTime]::UtcNow
+- if(($now-$lastReport).TotalSeconds -ge 30){Write-Output ($Stage+'_elapsed_s='+[int]($now-$startUtc).TotalSeconds+' tree_count='+@($snap.processes).Count+' known_pid_count='+$snap.known_pid_count+' free_kib='+$snap.free_physical_kib);$lastReport=$now}
++ if(($now-$lastReport).TotalSeconds -ge 30){Write-Output ($Stage+'_elapsed_s='+[int]($now-$startUtc).TotalSeconds+' tree_count='+@($snap.processes).Count+' known_pid_count='+$snap.known_pid_count+' free_kib='+$snap.free_physical_kib+' commit_headroom_bytes='+$snap.memory.commit_headroom_bytes+' pages_in_per_s='+$snap.memory.pages_input_per_second+' pages_out_per_s='+$snap.memory.pages_output_per_second+' pressure_review='+$snap.memory_pressure_requires_review);$lastReport=$now}
+  if($launcher.HasExited){break}
+  if($now -ge $deadline){
+   $timedOut=$true
+@@ -127,6 +159,9 @@
+  timed_out=$timedOut
+  initial_free_physical_kib=$freeStart
+  minimum_sampled_free_physical_kib=$minFree
++ initial_memory=$memoryStart
++ minimum_sampled_commit_headroom_bytes=$minimumCommitHeadroom
++ memory_policy='12GiB advisory only; no memory-estimate auto-kill; Luna reviews actual paging, commit headroom, tool progress and full owned tree'
+  tree_closed_utc=$treeClosed
+  tree_record='process_tree.jsonl'
+  seen_identities=@($seen.Values|Sort-Object pid,creation_utc)

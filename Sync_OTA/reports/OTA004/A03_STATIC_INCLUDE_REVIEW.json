@@ -1,0 +1,45 @@
+{
+  "status": "OTA004_A03_STATIC_DEPENDENCIES_PASS",
+  "header_files": [
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\rtl\\include\\initial_observation_ip_config.svh",
+      "bytes": 82,
+      "sha256": "c90433e03094775b3abe8d35c0d22c8c3a496469f03952a3bccceed13705c39e"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\rtl\\include\\initial_pair_max_tracker_ip_config.svh",
+      "bytes": 45,
+      "sha256": "ab1639082fb011e05f380c40b911fa5423a756c0019f39d01e4af97a8e146cc4"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\rtl\\include\\initial_shared_gain_ip_config.svh",
+      "bytes": 243,
+      "sha256": "2ae11d6f814c126495adffd675153a5a36d8bc6ee8dbf64dc3d817b66063bd54"
+    }
+  ],
+  "resolved_include_edges": [
+    {
+      "source": "rtl/sfo/initial_estimation/sfo_initial_shared_gain_s16_lane.sv",
+      "include": "initial_shared_gain_ip_config.svh",
+      "resolved": "rtl/include/initial_shared_gain_ip_config.svh",
+      "bytes": 243,
+      "sha256": "2ae11d6f814c126495adffd675153a5a36d8bc6ee8dbf64dc3d817b66063bd54"
+    },
+    {
+      "source": "rtl/sfo/initial_estimation/sfo_initial_pair_max_tracker_2lane.sv",
+      "include": "initial_pair_max_tracker_ip_config.svh",
+      "resolved": "rtl/include/initial_pair_max_tracker_ip_config.svh",
+      "bytes": 45,
+      "sha256": "ab1639082fb011e05f380c40b911fa5423a756c0019f39d01e4af97a8e146cc4"
+    },
+    {
+      "source": "rtl/sfo/initial_estimation/sfo_initial_observation_engine.sv",
+      "include": "initial_observation_ip_config.svh",
+      "resolved": "rtl/include/initial_observation_ip_config.svh",
+      "bytes": 82,
+      "sha256": "c90433e03094775b3abe8d35c0d22c8c3a496469f03952a3bccceed13705c39e"
+    }
+  ],
+  "scanned_files": 137,
+  "locked_files": 210
+}
