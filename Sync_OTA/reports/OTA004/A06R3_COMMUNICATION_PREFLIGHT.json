@@ -1,0 +1,14 @@
+{
+  "job": "OTA004 A06R3",
+  "basic_roundtrip": "PASS; actual original Luna ACK received by original Astra",
+  "new_task_preflight": "BLOCKED_BY_PLATFORM_AUTO_REVIEW",
+  "rejected_utc": "2026-09-17T12:13:56.162Z",
+  "call_id": "call_4z8ryMlknYYdFCO5F6K81be6",
+  "source_thread": "01a0ac17-4f21-7be3-8690-540c11497b1e",
+  "destination_thread": "01a0ac17-f298-7201-848c-58d09e90ebb4",
+  "reason": "该消息虽非旧回执，但仍向未验证线程披露项目路径及内部执行计划；当前可信用户内容未授权这组具体信息发送至该目的地。",
+  "user_requested_scope": "new original-function job, routine execution repairs and complete receipt reception",
+  "retry_or_workaround_performed": false,
+  "native_started": false,
+  "next": "Resolve actual tool approval for original pair; do not claim complete receipt channel is working"
+}

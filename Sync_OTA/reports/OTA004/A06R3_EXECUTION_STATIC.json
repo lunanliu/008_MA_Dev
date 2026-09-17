@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "design_label_differs_top",
+      "result": "PASS"
+    },
+    {
+      "name": "design_label_same_top",
+      "result": "PASS"
+    },
+    {
+      "name": "wrong_project_part",
+      "result": "PASS"
+    },
+    {
+      "name": "conflicting_design_part",
+      "result": "PASS"
+    },
+    {
+      "name": "missing_core_hierarchy",
+      "result": "PASS"
+    },
+    {
+      "name": "blackbox",
+      "result": "PASS"
+    },
+    {
+      "name": "partial_failure_preserves_independent_progress",
+      "result": "PASS"
+    },
+    {
+      "name": "syntax_and_unchanged_monitor_runtime",
+      "result": "PASS"
+    }
+  ],
+  "scope": "Offline synthetic API objects; not native DCP acceptance"
+}

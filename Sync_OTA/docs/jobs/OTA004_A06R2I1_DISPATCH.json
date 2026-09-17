@@ -1,7 +1,7 @@
 {
   "job": "OTA004",
   "revision": "A06R2I1",
-  "state": "PROPOSAL_SUBMITTED_AWAITING_SEPARATE_USER_AUTHORIZATION_AND_MANAGER_GRANT",
+  "state": "SUPERSEDED_BY_USER_NEW_ORIGINAL_SCOPE_VERIFICATION",
   "prepared_utc": "2026-09-17T12:01:05.465093+00:00",
   "astra": "01a0ac17-f298-7201-848c-58d09e90ebb4",
   "luna": "01a0ac17-4f21-7be3-8690-540c11497b1e",
@@ -27,5 +27,8 @@
   "offline_checks": {
     "identity_and_syntax": 8,
     "monitor_preflight": 13
-  }
+  },
+  "commit": "0dca8686664fda94e01ee9a559fa000aaeba0958",
+  "superseded_utc": "2026-09-17T12:17:20.615384+00:00",
+  "replacement": "OTA004 A06R3"
 }

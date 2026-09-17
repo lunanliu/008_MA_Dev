@@ -1,0 +1,48 @@
+{
+  "scope": "AST-isolated preflight, initial and changed revision bundle, no native",
+  "checks": [
+    {
+      "result": "PASS",
+      "name": "initial_entry"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "synth_forbidden"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "old_entry"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "outside_attempt"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "traversal"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "injection"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "excessive_budget"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "zero_budget"
+    },
+    {
+      "result": "PASS",
+      "name": "scoped_changed_execution_revision_accepted_and_hashed"
+    },
+    {
+      "result": "EXPECTED_REJECTION",
+      "name": "nonempty_attempt"
+    }
+  ],
+  "fixture_attempt": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\report_a06r3_static-0701aa653a6249ef8554f251625011ef",
+  "fixture_revision": "D:\\008_MA_Dev\\Sync_OTA\\work\\OTA004\\a06r3_repairs\\static_5d1e4bdc71fa486c9fec46c4e2baf98b",
+  "status": "A06R3_MONITOR_STATIC_PASS"
+}

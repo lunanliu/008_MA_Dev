@@ -1,0 +1,86 @@
+{
+  "job": "OTA004",
+  "revision": "A06R3",
+  "created_utc": "2026-09-17T12:25:28.310685+00:00",
+  "scientific_manifest_sha256": "8ae15d545aac69b96a9c0288e97060c43750046416355d05c3e6a744048ba106",
+  "execution_repair_policy": "Initial baseline preserved. Scoped equivalent execution revisions allowed without per-edit Astra approval; actual files/commands/hashes and reasons retained. Changed execution hash alone is not rejection.",
+  "execution_files": [
+    {
+      "path": "tools/monitor_ota004_a06r3.ps1",
+      "bytes": 16587,
+      "sha256": "ad9e2c596ca69da926e1199f3f86381b6d9116c5bc6eeb591266498f959e1952"
+    },
+    {
+      "path": "tools/vivado/run_ota004_a06r3.tcl",
+      "bytes": 3549,
+      "sha256": "80a0b2531b26961404ecdf417591dafe843328cb6061aef7102b44b222fd809a"
+    },
+    {
+      "path": "tools/vivado/audit_ota004_a06r3_identity.tcl",
+      "bytes": 2389,
+      "sha256": "420bd23fa8f33bbe24d77693d9abb070807abcc15ffe6226661c73ef8cfe5fc6"
+    },
+    {
+      "path": "tools/vivado/audit_ota004_a06r3_gray.tcl",
+      "bytes": 12490,
+      "sha256": "75728e0c78f84dbf8ca241c33d8c9d9ba1f3623d6c2214e2ba9c66db552037d2"
+    },
+    {
+      "path": "tools/vivado/report_ota004_a06r3_timing.tcl",
+      "bytes": 1986,
+      "sha256": "7b256120fffababc22086bb3400dc786be533152201846678bb0ed6974a4ec02"
+    },
+    {
+      "path": "tools/verify_ota004_a06r3_report.py",
+      "bytes": 20593,
+      "sha256": "244d30269009d2b08bf883033723b29c843c31b25dc176a2b7c9bb3856dfd37f"
+    }
+  ],
+  "review_files": [
+    {
+      "path": "docs/jobs/OTA004_A06R3_ZH.md",
+      "bytes": 9254,
+      "sha256": "d0f662f01295cdffc34ae1a1f4b286d04555b96360f5ad8fcb8e194b9e3ba097"
+    },
+    {
+      "path": "tools/tests/ota004_a06r3/gray_static.py",
+      "bytes": 7470,
+      "sha256": "3e276c96dbe991b2c05cf96c8aee16e13f284e8b2e98402aeccbc10dd903c37a"
+    },
+    {
+      "path": "tools/tests/ota004_a06r3/execution_static.py",
+      "bytes": 3750,
+      "sha256": "dd6ab877b5b6decf88ccce65157a9d888683bb470e69ade3a793c2920281291b"
+    },
+    {
+      "path": "tools/tests/ota004_a06r3/monitor_static.ps1",
+      "bytes": 2916,
+      "sha256": "1e2cfcc00029516d7c2d6be7c0b807cd0cdd5432137a528624741291035d01ff"
+    },
+    {
+      "path": "reports/OTA004/A06R3_STATIC_FIXTURES.json",
+      "bytes": 2403,
+      "sha256": "b77172b3b30963973d3bdf871b4825adc390c1ad6e7620a56efb015a4216415c"
+    },
+    {
+      "path": "reports/OTA004/A06R3_EXECUTION_STATIC.json",
+      "bytes": 780,
+      "sha256": "1725cab8a33beb67bcc99d76fbddb0504cffa13da401b3dc32d4f8d923d926d6"
+    },
+    {
+      "path": "reports/OTA004/A06R3_MONITOR_STATIC.json",
+      "bytes": 1250,
+      "sha256": "2ca7d9becedc7f352a9ea790dae31f6f5373ada3d3ba71280546cd0d72b75848"
+    },
+    {
+      "path": "reports/OTA004/A06R3_FINAL_STATIC_REVIEW.json",
+      "bytes": 522,
+      "sha256": "c443d937c2cb55a00d773850d79d7abfe0775e5c873d6a951e63c34755369a84"
+    },
+    {
+      "path": "reports/OTA004/A06R3_COMMUNICATION_PREFLIGHT.json",
+      "bytes": 874,
+      "sha256": "9527c12fa9eea8e67bec413e9758888ae6c956006c9f6da2dc9cf94e5405191d"
+    }
+  ]
+}

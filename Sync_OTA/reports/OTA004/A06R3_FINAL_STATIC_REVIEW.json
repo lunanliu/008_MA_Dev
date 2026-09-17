@@ -1,0 +1,15 @@
+{
+  "status": "STATIC_READY_COMMUNICATION_APPROVAL_BLOCKED",
+  "checked_utc": "2026-09-17T12:24:12.492542+00:00",
+  "scientific_inputs": 340,
+  "tools": 5,
+  "gray_cdc_and_bus_auditor_logic_same_as_A06R2_except_revision_markers": true,
+  "actual_old_clock_format_parsed": true,
+  "offline_checks": {
+    "gray_fixtures": 15,
+    "identity_and_progress": 8,
+    "monitor_including_changed_execution_bundle": 10
+  },
+  "native_started": false,
+  "communication_full_payload": "BLOCKED_PLATFORM_AUTO_REVIEW"
+}
