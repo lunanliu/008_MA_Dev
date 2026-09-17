@@ -1,6 +1,6 @@
 # Sync OTA：完整同步链路开发入口
 
-目标：Sync_OTA.xpr / sync_ota_top，Vivado2021.1，xcvu11p-flgb2104-2-e。A06R1真实短测严格通过、核心综合成功；Gray报告适配和真实综合时序仍待修复，尚未完成上板交付。按用户最新要求，A06R3重新验证原Gray/CDC与关键时序路径功能，允许原Luna执行自修并完整交回；旧R2和未执行I1保留历史。新作业已静态就绪，但完整资料回传预检遭平台审批拒绝，尚未启动。
+目标：Sync_OTA.xpr / sync_ota_top，Vivado2021.1，xcvu11p-flgb2104-2-e。A06R1真实短测严格通过、核心综合成功；Gray报告适配和真实综合时序仍待修复，尚未完成上板交付。按用户最新要求，A06R3重新验证原Gray/CDC与关键时序路径功能，允许原Luna执行自修并完整交回；旧R2和未执行I1保留历史。新作业已静态就绪，按用户最新要求由原 Luna 先取得真实本地报告和严格检查结果；本次90分钟整体/单次45分钟报告准入已由总管家发出，正在交原Luna执行。安全审批和科学门槛保持，既有消息拒绝不重试。
 
 - [冻结任务书](docs/PROJECT_SPEC_ZH.md)
 - [统一存储生命周期、坐标和时钟合同](docs/architecture/ARCHITECTURE_A01_ZH.md)
@@ -29,3 +29,5 @@
 - [A06R2报告恢复冻结包](docs/jobs/OTA004_A06R2_ZH.md)：只读已有DCP，严格保留scope与C/D pin证据，24宏/128位Gray审计以及最多116条有界时序路径；不重跑成功smoke/IP/核心。
 
 - [A06R3新验证任务](docs/jobs/OTA004_A06R3_ZH.md)：科学输入与执行修订分开；各报告阶段独立留证；完整、部分及失败回执均先接收再科学复核。[通信实际状态](reports/OTA004/A06R3_COMMUNICATION_PREFLIGHT.json)。
+
+- [本次 A06R3 执行补充](docs/jobs/OTA004_A06R3_CONTINUATION_ZH.md)与[剩余设计/验证/交付清单](docs/SYNC_OTA_REMAINING_20260917_ZH.md)：本地报告、科学验收、消息审批分别记录；普通执行修复保留版本与成功阶段。
