@@ -32,7 +32,10 @@ module sfo_initial_dds_phase_4lane (
   // not logical requests and their coefficients never leave this wrapper.
   // Hold a stalled dummy transaction even if a real request arrives later.
   assign launch_dummy = held_dummy || (!s_valid && outstanding_real != 0);
-  assign s_ready = ip_aresetn && !protocol_error_sticky && (&ready_lane) && !launch_dummy;
+  // When s_valid=1, launch_dummy equals held_dummy. Omitting the
+  // valid-dependent term preserves every real handshake and cuts the
+  // upstream valid -> DDS ready -> reader FIFO enable combinational path.
+  assign s_ready = ip_aresetn && !protocol_error_sticky && (&ready_lane) && !held_dummy;
   // AXI valid must not wait for ready, and output ready must not wait for
   // valid: the official core may stall its pipeline while output ready=0.
   // Uniform-lane guards fail closed on a lane-control disagreement.

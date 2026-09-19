@@ -2,7 +2,8 @@
 // Data-only URAM ring plus a FIFO of one complete identity per frame.
 // Arbitrary frame identifiers are preserved; backpressure is legal.
 module sfo_output_buffer #(
-    parameter string MEMORY_PRIMITIVE="ultra",
+    // Keep packed literal inference for Vivado 2021.1 XPM numeric/string dispatch.
+    parameter MEMORY_PRIMITIVE="ultra",
     parameter integer FRAME_BEATS = 334080,
     DEPTH = 65536,
     AW = $clog2(DEPTH),
@@ -32,7 +33,8 @@ module sfo_output_buffer #(
     output logic [  7:0] first_error
 );
   logic [AW-1:0] wp, rp;
-  logic [1:0] rv;
+  logic [4:0] rv;
+  wire memory_read_valid;
   logic [31:0] input_beat, input_frame, input_gen, output_beat;
   wire halted = poison || fault;
   wire hr, hv, hbusy, he, qr, qv, qbusy, qe;
@@ -56,6 +58,7 @@ module sfo_output_buffer #(
   assign m_record = {hd[63:32], hd[31:0], output_beat, last, qd};
   sfo_uram_frame_bank #(
       .MEMORY_PRIMITIVE(MEMORY_PRIMITIVE),
+      .SEGMENTED(1'b1),
       .DEPTH_BEATS(DEPTH),
       .ADDR_WIDTH (AW)
   ) storage (
@@ -66,7 +69,8 @@ module sfo_output_buffer #(
       .wr_data(s_data),
       .rd_en  (read_command && !collision),
       .rd_addr(rp),
-      .rd_data(rd)
+      .rd_data(rd),
+      .rd_valid(memory_read_valid),.wr_commit(),.wr_commit_addr()
   );
   sfo_sync_fifo #(
       .WIDTH(64),
@@ -91,7 +95,7 @@ module sfo_output_buffer #(
   ) responses (
       .clk         (clk),
       .rst         (rst),
-      .s_valid     (rv[1]),
+      .s_valid     (memory_read_valid),
       .s_ready     (qr),
       .s_data      (rd),
       .m_valid     (qv),
@@ -105,7 +109,7 @@ module sfo_output_buffer #(
   logic [7:0] bad;
   always_comb begin
     bad = 0;
-    if (he || qe || (rv[1] && !qr)) bad = 1;
+    if (he || qe || (memory_read_valid && !qr)) bad = 1;
     else if (wf && !valid_input) bad = 2;
     else if (collision) bad = 3;
     else if (occupancy > DEPTH || consumed > returned || returned > issued || issued > accepted ||
@@ -132,14 +136,14 @@ module sfo_output_buffer #(
       outstanding_high_water <= 0;
       outstanding <= 0;
     end else begin
-      rv <= {rv[0], read_command && !collision};
+      rv <= {rv[3:0], read_command && !collision};
       if (!fault && bad != 0) begin
         fault <= 1;
         first_error <= bad;
       end
       if (occupancy > high_water) high_water <= occupancy;
       if (outstanding > outstanding_high_water) outstanding_high_water <= outstanding;
-      if (rv[1] && qr) returned <= returned + 1;
+      if (memory_read_valid && qr) returned <= returned + 1;
       if (!halted && bad == 0) begin
         case ({read_command, pop})
           2'b10: outstanding <= outstanding + 1'b1;

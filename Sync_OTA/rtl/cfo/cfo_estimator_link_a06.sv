@@ -78,15 +78,31 @@ module cfo_estimator_link(
  end
  wire [170:0] fifo_in={packet_frame,packet_generation,s_window,s_z_i,s_z_q,s_fft_saturations,input_link_error,s_front_error};
  wire [170:0] fifo_out;
+ logic mailbox_valid,mailbox_run;
+ logic [170:0] mailbox_data;
  wire write_fire=s_valid&&s_ready;
+ wire mailbox_write=mailbox_valid&&!fifo_full;
+ always_ff @(posedge clk_fast or posedge rst_fast)begin
+  if(rst_fast)begin mailbox_valid<=0;mailbox_run<=0;end
+  else begin
+   mailbox_run<=!fast_reset_busy;
+   if(fast_reset_busy)mailbox_valid<=0;
+   else begin
+    if(mailbox_write)mailbox_valid<=0;
+    if(write_fire)mailbox_valid<=1;
+   end
+  end
+ end
+ // Unowned payload may change; pending valid holds the accepted packet.
+ always_ff @(posedge clk_fast)if(!mailbox_valid)mailbox_data<=fifo_in;
  wire read_fire;
- assign s_ready=!fast_reset_busy&&!closed_fast&&!fifo_full;
+ assign s_ready=mailbox_run&&!rst_fast&&!closed_fast&&!mailbox_valid;
  xpm_fifo_async #(
-  .FIFO_MEMORY_TYPE("distributed"),.ECC_MODE("no_ecc"),.RELATED_CLOCKS(0),.SIM_ASSERT_CHK(1),
+  .FIFO_MEMORY_TYPE("block"),.ECC_MODE("no_ecc"),.RELATED_CLOCKS(0),.SIM_ASSERT_CHK(1),
   .FIFO_WRITE_DEPTH(16),.WRITE_DATA_WIDTH(171),.WR_DATA_COUNT_WIDTH(5),.PROG_FULL_THRESH(10),.FULL_RESET_VALUE(0),.USE_ADV_FEATURES("0707"),
   .READ_MODE("fwft"),.FIFO_READ_LATENCY(0),.READ_DATA_WIDTH(171),.RD_DATA_COUNT_WIDTH(5),.PROG_EMPTY_THRESH(10),.DOUT_RESET_VALUE("0"),.CDC_SYNC_STAGES(2)
  ) observation_fifo(
-  .sleep(1'b0),.rst(fifo_reset),.wr_clk(clk_fast),.wr_en(write_fire),.din(fifo_in),.full(fifo_full),.prog_full(),.wr_data_count(fifo_write_count),.overflow(fifo_overflow),.wr_rst_busy(wr_busy),.almost_full(),.wr_ack(),
+  .sleep(1'b0),.rst(fifo_reset),.wr_clk(clk_fast),.wr_en(mailbox_write),.din(mailbox_data),.full(fifo_full),.prog_full(),.wr_data_count(fifo_write_count),.overflow(fifo_overflow),.wr_rst_busy(wr_busy),.almost_full(),.wr_ack(),
   .rd_clk(clk_slow),.rd_en(read_fire),.dout(fifo_out),.empty(fifo_empty),.prog_empty(),.rd_data_count(fifo_read_count),.underflow(fifo_underflow),.rd_rst_busy(rd_busy),.almost_empty(),.data_valid(),
   .injectsbiterr(1'b0),.injectdbiterr(1'b0),.sbiterr(),.dbiterr()
  );

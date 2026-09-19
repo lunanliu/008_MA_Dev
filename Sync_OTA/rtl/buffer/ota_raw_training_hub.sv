@@ -37,11 +37,29 @@ module ota_raw_training_hub #(
  wire fault125_sync;
  xpm_cdc_single #(.DEST_SYNC_FF(4),.SRC_INPUT_REG(1),.INIT_SYNC_FF(0)) local_fault_sync(
   .src_clk(clk125),.src_in(local_fault125),.dest_clk(clk150),.dest_out(fault125_sync));
- assign s_ready=!stopped125&&raw_sr;assign event_ready=!stopped125&&ev_sr;
+ logic [1:0] raw_qcount;
+ logic [127:0] raw_qhead,raw_qtail;
+ wire raw_qv=!rst125&&raw_qcount!=0;
+ wire raw_qpush=s_valid&&s_ready,raw_qpop=raw_qv&&raw_sr;
+ assign s_ready=!stopped125&&raw_qcount<2;
+ assign event_ready=!stopped125&&ev_sr;
+ always_ff @(posedge clk125)begin
+  if(stopped125)raw_qcount<=0;
+  else case({raw_qpush,raw_qpop})
+   2'b10:raw_qcount<=raw_qcount+1'b1;
+   2'b01:raw_qcount<=raw_qcount-1'b1;
+   default:begin end
+  endcase
+  if(raw_qpush)begin
+   if(raw_qcount==0||(raw_qcount==1&&raw_qpop))raw_qhead<=s_data;
+   else raw_qtail<=s_data;
+  end
+  if(raw_qpop&&raw_qcount==2)raw_qhead<=raw_qtail;
+ end
  assign train_release_ready=!stopped125&&ack_sr;
  sfo_record_cdc_fifo #(.WIDTH(128),.DEPTH(1024)) raw_cdc(
   .wr_clk(clk125),.rd_clk(clk150),.reset_request(reset_request),
-  .s_valid(s_valid&&!stopped125),.s_ready(raw_sr),.s_data(s_data),
+  .s_valid(raw_qv),.s_ready(raw_sr),.s_data(raw_qhead),
   .m_valid(raw_v),.m_ready(raw_r),.m_data(raw_d),.wr_level(),.rd_level(),.wr_high_water(),.rd_high_water(),
   .wr_reset_active(),.rd_reset_active(),.wr_error(wr_error[0]),.rd_error(rd_error[0]));
  sfo_record_cdc_fifo #(.WIDTH(209),.DEPTH(32)) events_cdc(

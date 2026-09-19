@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-// A07: index decode -> registered address -> ROM read; data/tags follow valid.
+// A07: index decode -> registered row/page command -> ROM read; no added cycle.
 // One already-coarse-corrected 2048-point window -> one S38 pilot sum.
 module cfo_front2048_window(
  input logic clk,rst,abort_sync,
@@ -27,32 +27,55 @@ module cfo_front2048_window(
   .m_index(f_index),.m_last(f_last),.m_i(f_i),.m_q(f_q),.m_saturations(f_saturations),.m_error(f_error),
   .butterfly_audit_valid(fft_butterfly_audit_valid),.butterfly_audit_stage(fft_butterfly_audit_stage),.butterfly_audit_index(fft_butterfly_audit_index),.butterfly_audit_value()
  );
- (* rom_style="block" *) logic [2:0] coefficient_index_rom[0:60679];
+ // Two power-of-two pages keep page decode out of the BRAM enable path.
+ // The canonical 60680 entries are split without changing any coefficient.
+ (* rom_style="block" *) logic [2:0] coefficient_page0[0:32767];
+ (* rom_style="block" *) logic [2:0] coefficient_page1[0:32767];
  (* rom_style="distributed" *) logic [35:0] coefficient_table[0:7];
- initial begin $readmemh("front2048_coefficient_index.mem",coefficient_index_rom);$readmemh("front2048_coefficient_table.mem",coefficient_table);end
+ initial begin
+  $readmemh("front2048_coefficient_page0.mem",coefficient_page0);
+  $readmemh("front2048_coefficient_page1.mem",coefficient_page1);
+  $readmemh("front2048_coefficient_table.mem",coefficient_table);
+ end
  logic first_pending,fft_done,sum_done;
  logic [16:0] coefficient_base,index_base;
- (* use_dsp="no" *) logic [16:0] coefficient_address;
+ // Preserve only the 17 local command/address FFs, not the ROM data FFs.
+ // These are the existing address stage, not an added pipeline stage.
+ (* dont_touch="true" *) logic [14:0] coefficient_row;
+ (* dont_touch="true" *) logic [1:0] coefficient_read_command;
+ logic coefficient_return_page,coefficient_return_page_q;
+ logic [2:0] coefficient_page0_q,coefficient_page1_q;
+ logic [2:0] coefficient_page0_data,coefficient_page1_data;
  logic [1:0] address_valid;
  logic [9:0] index_stage,address_index;
  logic [51:0] index_iq,address_iq;
  logic [9:0] selected_index,pilot_count;
  logic selected;
- logic [2:0] coefficient_index0;
+ (* use_dsp="no" *) wire [16:0] coefficient_address_sum=index_base+{7'd0,index_stage};
+ wire [2:0] coefficient_index_q=coefficient_return_page_q ? coefficient_page1_q : coefficient_page0_q;
+ wire [35:0] coefficient_value_q=coefficient_table[coefficient_index_q];
  logic [5:0] v;
  logic [9:0] index_pipe[0:5];
  logic [51:0] f_pipe[0:5];
- logic [35:0] c_pipe[1:5];
+ logic [35:0] c_pipe[2:5];
  logic signed [25:0] ar2,ai2;
  logic signed [17:0] cr2,ci2;
  logic signed [43:0] rr3,ii3,ri3,ir3;
  logic signed [44:0] pr4,pi4;
  logic signed [27:0] h_i5,h_q5;
  logic signed [37:0] sum_i,sum_q,next_sum_i,next_sum_q;
+ logic sum_commit_q;
  integer data_j,control_j;
  function automatic signed [27:0] rne17(input logic signed [44:0] x);
-  logic signed [44:0] q;begin
-   q=x>>>17;if(x[16] && ((|x[15:0]) || q[0]))q=q+45'sd1;rne17=q[27:0];
+  logic [27:0] q;logic inc;logic [3:0] carry_in;
+  begin
+   // Exact modulo-2^28 RNE; parallel carry lookahead limits each add to 7 bits.
+   q=x[44:17];inc=x[16]&&((|x[15:0])||x[17]);
+   carry_in={inc&&(&q[20:0]),inc&&(&q[13:0]),inc&&(&q[6:0]),inc};
+   rne17[6:0]=q[6:0]+{6'd0,carry_in[0]};
+   rne17[13:7]=q[13:7]+{6'd0,carry_in[1]};
+   rne17[20:14]=q[20:14]+{6'd0,carry_in[2]};
+   rne17[27:21]=q[27:21]+{6'd0,carry_in[3]};
   end
  endfunction
  always_comb begin
@@ -67,36 +90,51 @@ module cfo_front2048_window(
  // Every legal S26 * S18 complex product rounded by /2^17 fits S28.
  // Thus MATLAB's S28 saturation is the identity for this complete input range.
  always_ff @(posedge clk)begin
-  if(selected)begin
-   index_stage<=selected_index;index_base<=coefficient_base;index_iq<={f_i,f_q};
-  end
-  if(address_valid[0])begin
-   coefficient_address<=index_base+{7'd0,index_stage};
+  // Free-running payload registers: selected controls only the valid pipeline.
+  // Avoid reset/ready/error decode on 79 payload clock enables at 500 MHz.
+  index_stage<=selected_index;index_base<=coefficient_base;index_iq<={f_i,f_q};
+  begin
+   coefficient_row<=coefficient_address_sum[14:0];
    address_index<=index_stage;address_iq<=index_iq;
   end
-  if(address_valid[1])begin
-   coefficient_index0<=coefficient_index_rom[coefficient_address];f_pipe[0]<=address_iq;
-  end
-  for(data_j=1;data_j<6;data_j=data_j+1)if(v[data_j-1])f_pipe[data_j]<=f_pipe[data_j-1];
-  if(v[0])c_pipe[1]<=coefficient_table[coefficient_index0];
-  for(data_j=2;data_j<6;data_j=data_j+1)if(v[data_j-1])c_pipe[data_j]<=c_pipe[data_j-1];
-  if(v[1])begin {ar2,ai2}<=f_pipe[1];{cr2,ci2}<=c_pipe[1];end
-  if(v[2])begin rr3<=ar2*cr2;ii3<=ai2*ci2;ri3<=ar2*ci2;ir3<=ai2*cr2;end
-  if(v[3])begin pr4<=$signed({rr3[43],rr3})-$signed({ii3[43],ii3});pi4<=$signed({ri3[43],ri3})+$signed({ir3[43],ir3});end
-  if(v[4])begin h_i5<=rne17(pr4);h_q5<=rne17(pi4);end
+  // Commands alone drive RAM EN. A cancelled in-flight read is harmless:
+  // the control block clears valid, so its payload can never be committed.
+  if(coefficient_read_command[0])coefficient_page0_data<=coefficient_page0[coefficient_row];
+  if(coefficient_read_command[1])coefficient_page1_data<=coefficient_page1[coefficient_row];
+  coefficient_return_page<=coefficient_read_command[1];
+  f_pipe[0]<=address_iq;
+  for(data_j=1;data_j<6;data_j=data_j+1)f_pipe[data_j]<=f_pipe[data_j-1];
+  // E3 is the BRAM output-register boundary (allow DO_REG absorption).
+  // Page select + 8-entry lookup move to existing E4; E5 products and
+  // E8 valid/index/IQ/coefficient audit retain their original edge.
+  coefficient_page0_q<=coefficient_page0_data;
+  coefficient_page1_q<=coefficient_page1_data;
+  coefficient_return_page_q<=coefficient_return_page;
+  c_pipe[2]<=coefficient_value_q;
+  for(data_j=3;data_j<6;data_j=data_j+1)c_pipe[data_j]<=c_pipe[data_j-1];
+  begin {ar2,ai2}<=f_pipe[1];{cr2,ci2}<=coefficient_value_q;end
+  begin rr3<=ar2*cr2;ii3<=ai2*ci2;ri3<=ar2*ci2;ir3<=ai2*cr2;end
+  begin pr4<=$signed({rr3[43],rr3})-$signed({ii3[43],ii3});pi4<=$signed({ri3[43],ri3})+$signed({ir3[43],ir3});end
+  begin h_i5<=rne17(pr4);h_q5<=rne17(pi4);end
+ end
+ always_ff @(posedge clk)begin
+  index_pipe[0]<=address_index;
+  for(control_j=1;control_j<6;control_j=control_j+1)index_pipe[control_j]<=index_pipe[control_j-1];
  end
  always_ff @(posedge clk)begin
   pilot_audit_valid<=0;
   if(rst || abort_sync)begin
-   state<=FEED;first_pending<=1;coefficient_base<=0;address_valid<=0;v<=0;fft_done<=0;sum_done<=0;sum_i<=0;sum_q<=0;pilot_count<=0;
+   state<=FEED;first_pending<=1;coefficient_base<=0;address_valid<=0;coefficient_read_command<=0;v<=0;sum_commit_q<=0;fft_done<=0;sum_done<=0;sum_i<=0;sum_q<=0;pilot_count<=0;
    m_frame<=0;m_generation<=0;m_window<=0;m_z_i<=0;m_z_q<=0;m_pilot_count<=0;m_fft_saturations<=0;m_error<=0;
    pilot_audit_index<=0;pilot_audit_value<=0;
-   for(control_j=0;control_j<6;control_j=control_j+1)index_pipe[control_j]<=0;
   end else begin
    address_valid<={address_valid[0],selected};
+   // The legal address range is 0..60679: row and page use the SAME new sum.
+   // cmd!=0 follows address_valid[1], including reset/error/HOLD flushes.
+   coefficient_read_command<=address_valid[0] ?
+       (coefficient_address_sum[15] ? 2'b10 : 2'b01) : 2'b00;
    v<={v[4:0],address_valid[1]};
-   if(address_valid[1])index_pipe[0]<=address_index;
-   for(control_j=1;control_j<6;control_j=control_j+1)if(v[control_j-1])index_pipe[control_j]<=index_pipe[control_j-1];
+   sum_commit_q<=v[4] && index_pipe[4]==10'd819;
    if(s_valid && s_ready)begin
     if(first_pending)begin coefficient_base<=s_window*17'd820;first_pending<=0;end
     if(s_last)state<=WAIT_SUM;
@@ -108,14 +146,14 @@ module cfo_front2048_window(
    if(v[5])begin
     sum_i<=next_sum_i;sum_q<=next_sum_q;pilot_count<=pilot_count+10'd1;
     pilot_audit_valid<=1;pilot_audit_index<=index_pipe[5];pilot_audit_value<={f_pipe[5],c_pipe[5],h_i5,h_q5};
-    if(index_pipe[5]==10'd819)begin m_z_i<=next_sum_i;m_z_q<=next_sum_q;m_pilot_count<=pilot_count+10'd1;sum_done<=1;end
    end
+   if(sum_commit_q)begin m_z_i<=next_sum_i;m_z_q<=next_sum_q;m_pilot_count<=pilot_count+10'd1;sum_done<=1;end
    if(sum_done && fft_done && state==WAIT_SUM)begin state<=HOLD;m_error<=0;end
    if(fft_m_valid && fft_m_ready && f_error!=0)begin
-    state<=HOLD;pilot_audit_valid<=0;m_error<=f_error;m_z_i<=0;m_z_q<=0;m_pilot_count<=0;m_fft_saturations<=0;address_valid<=0;v<=0;
+    state<=HOLD;pilot_audit_valid<=0;m_error<=f_error;m_z_i<=0;m_z_q<=0;m_pilot_count<=0;m_fft_saturations<=0;address_valid<=0;coefficient_read_command<=0;v<=0;sum_commit_q<=0;
    end
    if(state==HOLD && m_ready)begin
-    state<=FEED;first_pending<=1;address_valid<=0;v<=0;fft_done<=0;sum_done<=0;sum_i<=0;sum_q<=0;pilot_count<=0;
+    state<=FEED;first_pending<=1;address_valid<=0;coefficient_read_command<=0;v<=0;sum_commit_q<=0;fft_done<=0;sum_done<=0;sum_i<=0;sum_q<=0;pilot_count<=0;
    end
   end
  end

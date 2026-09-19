@@ -1,0 +1,6 @@
+{
+  "check": "TCL_SOURCE_DEFINES_PROCEDURE_ONLY",
+  "procedure": "('ota_optimize_fft_controls',)",
+  "vivado_commands_executed": false,
+  "physical_optimization": "NOT_RUN"
+}

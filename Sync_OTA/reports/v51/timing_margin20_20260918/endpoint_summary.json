@@ -1,0 +1,53 @@
+{
+  "evidence": "OLD_ROUTED_DCP_ONLY",
+  "precision": "CSV slack/requirement rounded to 0.001ns; exact near-boundary status requires new native report. Worst endpoint per clock-group is triage, not proof over mixed-requirement paths.",
+  "summary": [
+    {
+      "clock": "clk125",
+      "original_exported_endpoints": 33276,
+      "below_actual_margin_rounded_csv": 33238,
+      "excluded_due_to_actual_requirement": 38,
+      "requirements": {
+        "8.000": 33241,
+        "2.000": 35
+      },
+      "old_WNS_ns": 0.153,
+      "old_TNS_ns": 0,
+      "below_margin_deficit_ns": 10307.316,
+      "rounding_boundary_review": 3,
+      "actual_requirement_pass_clearly_excluded": 35,
+      "old_TNS_note": "Sum of rounded CSV endpoint slack; not the authoritative full-precision Vivado TNS."
+    },
+    {
+      "clock": "clk150",
+      "original_exported_endpoints": 17137,
+      "below_actual_margin_rounded_csv": 17136,
+      "excluded_due_to_actual_requirement": 1,
+      "requirements": {
+        "6.667": 17136,
+        "2.000": 1
+      },
+      "old_WNS_ns": 0.009,
+      "old_TNS_ns": 0,
+      "below_margin_deficit_ns": 7236.887994288,
+      "rounding_boundary_review": 21,
+      "actual_requirement_pass_clearly_excluded": 1,
+      "old_TNS_note": "Sum of rounded CSV endpoint slack; not the authoritative full-precision Vivado TNS."
+    },
+    {
+      "clock": "clk500",
+      "original_exported_endpoints": 3623,
+      "below_actual_margin_rounded_csv": 3621,
+      "excluded_due_to_actual_requirement": 2,
+      "requirements": {
+        "2.000": 3623
+      },
+      "old_WNS_ns": -0.199,
+      "old_TNS_ns": -25.99,
+      "below_margin_deficit_ns": 722.534,
+      "rounding_boundary_review": 2,
+      "actual_requirement_pass_clearly_excluded": 0,
+      "old_TNS_note": "Sum of rounded CSV endpoint slack; not the authoritative full-precision Vivado TNS."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "completed_at": "2026-09-18T18:39:40.175965+02:00",
+  "kind": "PLAN_A_STATIC_DELIVERY_NO_EDA",
+  "branch": "V5.1_System_Modify",
+  "files": [
+    {
+      "path": "rtl/cfo/cfo_front2048_window_a07.sv",
+      "sha256": "bcf26a462fee38fbd93a5d6056f649000ec47fd22c9e9d792ffb5304c269371e"
+    },
+    {
+      "path": "Sync_OTA.xpr",
+      "sha256": "2efd114a0fe3d34e26c18b0ef001bd964b0cbe8b882348c4a184bf9b6099b6b0"
+    },
+    {
+      "path": "README_ZH.md",
+      "sha256": "3c7f5d56f8e107e2fb364cc890311e7a3e3d87bfe2337db396cd94955c7b161c"
+    },
+    {
+      "path": "docs/v51/CFO_COEFFICIENT_ROM_PLAN_A_ZH.md",
+      "sha256": "bea1be43c0f2bcee968f966449a87ad149ab6cbf2b4ac017a994baa76b772a6b"
+    },
+    {
+      "path": "tools/v51/prepare_cfo_coefficient_pages.py",
+      "sha256": "19449f92d64fc071bc6c49fad2a8f0f1ccb2f373e1f78adf7a1baa97ab058dc3"
+    },
+    {
+      "path": "tools/v51/register_cfo_coefficient_pages.tcl",
+      "sha256": "aeb5bb620aa43c6105c8c2bb0d670ac62e8c4a1b3a43ee6e7ee990d17138a309"
+    },
+    {
+      "path": "tools/v51/static_design_audit.py",
+      "sha256": "84787bf4953cfc509073563a2c86b4ef4282b1af0d4336fe0e5998afbc522d99"
+    },
+    {
+      "path": "ip/cfo/front2048_coefficient_index.mem",
+      "sha256": "d058acdae6cdd2628304fcd73f5579e2c62833bf00d16d0291187b39201d78d4"
+    },
+    {
+      "path": "ip/cfo/front2048_coefficient_table.mem",
+      "sha256": "ca93ff648c57459891ed7489d38c5f312a2d6969f6f4901130903d16f6403387"
+    },
+    {
+      "path": "ip/cfo/front2048_coefficient_page0.mem",
+      "sha256": "cae9b338bb2af3079cc2f3eae6bf771423f1b08fdec1d4945eb1a10ac6e89fc5"
+    },
+    {
+      "path": "ip/cfo/front2048_coefficient_page1.mem",
+      "sha256": "f2f72b38af0023bba3ea3a266e084142b9b15328c96359d46e266853f9d1baf1"
+    }
+  ],
+  "rtl_semantic_errors": 0,
+  "rtl_semantic_diagnostics": 954,
+  "production_sources": 129,
+  "coefficient_valid_entries": 60680,
+  "coefficient_mismatches": 0,
+  "added_cycles500": 0,
+  "feedback_margin_cycles150": 174,
+  "reviewers": {
+    "frontend_static_review": "RTL pipeline, cancel/flush priorities, cross-page alignment and coefficient mapping: no blocking finding. Reviewed RTL hash matches delivered revision.",
+    "sfo_static_review": "XPR memory registration and GUI helper: no blocking dependency finding. Missing-parent-contract guard recommended and applied; affected source/budget audit passed."
+  },
+  "simulation": "NOT_RUN",
+  "synthesis": "NOT_RUN",
+  "implementation": "NOT_RUN",
+  "commit_push": "NOT_REQUESTED",
+  "prior_timing_report": "reports/v51/routed_review_20260918_1748/sync_ota_top_timing_summary_routed.rpt",
+  "physical_result_for_paged_revision": "NOT_AVAILABLE"
+}

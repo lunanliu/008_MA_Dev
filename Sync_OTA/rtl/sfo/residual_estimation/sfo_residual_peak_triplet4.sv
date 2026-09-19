@@ -34,8 +34,8 @@ module sfo_residual_peak_triplet4 #(
     output logic        [ 31:0] m_competing_power,
     output logic                busy
 );
-  localparam [1:0] IDLE = 0, FILL = 1, SCAN = 2, DONE = 3;
-  logic [1:0] state;
+  localparam [2:0] IDLE=0,FILL=1,SCAN=2,DONE=3,PEAK_DRAIN=4,SCAN_DRAIN=5;
+  logic [2:0] state;
   logic [31:0] age;
   logic [9:0] issued_count;
   logic raw_valid;
@@ -45,7 +45,7 @@ module sfo_residual_peak_triplet4 #(
   logic p_valid, p_ready, p_busy;
   logic [127:0] p_power;
   logic [41:0] p_meta;
-  wire timing_active = (state == FILL || state == SCAN);
+  wire timing_active = (state==FILL || state==SCAN || state==PEAK_DRAIN || state==SCAN_DRAIN);
   wire timeout_now = timing_active && age >= TIMEOUT_CYCLES - 1;
   wire field_bad = (s_symbol_slot != m_symbol_slot || s_tag != m_tag ||
                     s_beat != m_input_count[8:0]);
@@ -56,8 +56,20 @@ module sfo_residual_peak_triplet4 #(
   wire write_fire = !rst && !abort && !timeout_now && state == FILL && !input_bad_accept &&
       p_valid && !p_meta_bad;
   wire [10:0] prev_bin = m_peak_bin - 11'd1, next_bin = m_peak_bin + 11'd1;
-  logic [10:0] peak_bin_next, index_bin, scan_index, distance_bin;
-  logic [31:0] peak_power_next, value, previous_next, following_next, competing_next, scan_value;
+  logic [10:0] scan_index,distance_bin;
+  logic [31:0] previous_next,following_next,scan_value;
+  logic [42:0] peak_lane[0:3],peak_pair0,peak_pair1,peak_beat;
+  logic [31:0] competitor_lane[0:3],competitor_pair0,competitor_pair1,competitor_beat;
+  logic peak_pair_valid,peak_beat_valid,peak_pair_last,peak_beat_last;
+  logic competitor_pair_valid,competitor_beat_valid,competitor_pair_last,competitor_beat_last;
+  function automatic [42:0] better_peak(input logic [42:0] a,b);
+    if(a[42:11]>b[42:11] || (a[42:11]==b[42:11] && $signed(a[10:0])<$signed(b[10:0])))
+      better_peak=a;
+    else better_peak=b;
+  endfunction
+  function automatic [31:0] max_power(input logic [31:0] a,b);
+    max_power=a>b?a:b;
+  endfunction
   function automatic signed [11:0] offset_of(input logic [10:0] bin);
     offset_of = bin[10] ? $signed({1'b0, bin}) - 12'sd2048 : $signed({1'b0, bin});
   endfunction
@@ -81,28 +93,35 @@ module sfo_residual_peak_triplet4 #(
       .busy   (p_busy)
   );
   always_comb begin
-    peak_bin_next = m_peak_bin;
-    peak_power_next = m_peak_power;
-    index_bin = 0;
-    value = 0;
-    for (integer l = 0; l < 4; l = l + 1) begin
-      index_bin = {m_power_count[8:0], 2'b00} + l;
-      value = p_power[l*32+:32];
-      if ((index_bin <= 48 || index_bin >= 2000) &&
-          (value > peak_power_next || (value == peak_power_next && offset_of(
-              index_bin
-          ) < offset_of(
-              peak_bin_next
-          )))) begin
-        peak_power_next = value;
-        peak_bin_next   = index_bin;
-      end
+    for(integer l=0;l<4;l=l+1)begin
+      peak_lane[l]={32'd0,11'd2000};
+      if(({m_power_count[8:0],2'b00}+11'(l))<=48 ||
+         ({m_power_count[8:0],2'b00}+11'(l))>=2000)
+        peak_lane[l]={p_power[l*32+:32],({m_power_count[8:0],2'b00}+11'(l))};
+    end
+  end
+  always_ff @(posedge clk)begin
+    peak_pair0<=better_peak(peak_lane[0],peak_lane[1]);
+    peak_pair1<=better_peak(peak_lane[2],peak_lane[3]);
+    peak_beat<=better_peak(peak_pair0,peak_pair1);
+    competitor_pair0<=max_power(competitor_lane[0],competitor_lane[1]);
+    competitor_pair1<=max_power(competitor_lane[2],competitor_lane[3]);
+    competitor_beat<=max_power(competitor_pair0,competitor_pair1);
+    peak_pair_last<=m_power_count==511;peak_beat_last<=peak_pair_last;
+    competitor_pair_last<=raw_beat==511;competitor_beat_last<=competitor_pair_last;
+    if(rst || abort || timeout_now || state==IDLE || state==DONE)begin
+      peak_pair_valid<=0;peak_beat_valid<=0;
+      competitor_pair_valid<=0;competitor_beat_valid<=0;
+    end else begin
+      peak_pair_valid<=write_fire;peak_beat_valid<=peak_pair_valid;
+      competitor_pair_valid<=state==SCAN && raw_valid;
+      competitor_beat_valid<=competitor_pair_valid;
     end
   end
   always_comb begin
     previous_next = m_prev_power;
     following_next = m_next_power;
-    competing_next = m_competing_power;
+    for(integer l=0;l<4;l=l+1)competitor_lane[l]=0;
     scan_index = 0;
     distance_bin = 0;
     scan_value = 0;
@@ -117,8 +136,7 @@ module sfo_residual_peak_triplet4 #(
       if (scan_index == prev_bin) previous_next = scan_value;
       if (scan_index == next_bin) following_next = scan_value;
       distance_bin = scan_index - m_peak_bin;
-      if (distance_bin > 8 && distance_bin < 2040 && scan_value > competing_next)
-        competing_next = scan_value;
+      if (distance_bin > 8 && distance_bin < 2040) competitor_lane[l]=scan_value;
     end
   end
   always_ff @(posedge clk) begin
@@ -189,15 +207,15 @@ module sfo_residual_peak_triplet4 #(
             bank2[m_power_count[8:0]] <= p_power[95:64];
             bank3[m_power_count[8:0]] <= p_power[127:96];
             m_power_count <= m_power_count + 1;
-            m_peak_bin <= peak_bin_next;
-            m_peak_power <= peak_power_next;
             if (m_power_count == 511) begin
-              state <= SCAN;
+              state <= PEAK_DRAIN;
               issued_count <= 0;
               raw_valid <= 0;
             end
           end
         end
+      end else if(state==PEAK_DRAIN)begin
+        if(peak_beat_valid && peak_beat_last)state<=SCAN;
       end else if (state == SCAN) begin
         raw_valid <= issued_count < 512;
         if (issued_count < 512) begin
@@ -211,12 +229,21 @@ module sfo_residual_peak_triplet4 #(
         if (raw_valid) begin
           m_prev_power <= previous_next;
           m_next_power <= following_next;
-          m_competing_power <= competing_next;
           if (raw_beat == 511) begin
-            state <= DONE;
+            state <= SCAN_DRAIN;
             raw_valid <= 0;
           end
         end
+      end else if(state==SCAN_DRAIN)begin
+        if(competitor_beat_valid && competitor_beat_last)state<=DONE;
+      end
+      // Each clock now contains one 32-bit maximum comparison, not four in series.
+      if(!abort && !timeout_now)begin
+        if(peak_beat_valid && (state==PEAK_DRAIN ||
+           (state==FILL && !input_bad_accept && !(p_valid && (p_meta_bad || m_power_count>=512 || !p_ready)))))
+          {m_peak_power,m_peak_bin}<=better_peak(peak_beat,{m_peak_power,m_peak_bin});
+        if(competitor_beat_valid && (state==SCAN || state==SCAN_DRAIN))
+          m_competing_power<=max_power(competitor_beat,m_competing_power);
       end
     end
   end

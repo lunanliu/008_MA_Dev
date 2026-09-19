@@ -1,0 +1,20 @@
+{
+  "tool": "pyslang 11.0.0",
+  "kind": "STATIC_SYNTAX_ONLY_NOT_ELABORATION_OR_SIMULATION",
+  "files": [
+    {
+      "file": "rtl\\sfo\\buffering\\sfo_uram_frame_bank.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\buffering\\sfo_output_buffer.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    }
+  ],
+  "diagnostic_count": 0,
+  "error_count": 0
+}

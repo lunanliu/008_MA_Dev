@@ -1,0 +1,42 @@
+{
+  "reviewed_at": "2026-09-18T18:03:24.727835+02:00",
+  "new_eda_started": false,
+  "rtl_modified": false,
+  "timing_phase": "Fully Routed",
+  "utilization_phase": "Fully Placed",
+  "clocks": {
+    "clk125": {
+      "wns_ns": 0.135,
+      "tns_ns": 0,
+      "failing_endpoints": 0
+    },
+    "clk150": {
+      "wns_ns": 0.013,
+      "tns_ns": 0,
+      "failing_endpoints": 0
+    },
+    "clk500": {
+      "wns_ns": -0.057,
+      "tns_ns": -0.057,
+      "failing_endpoints": 1
+    }
+  },
+  "whs_ns": 0.007,
+  "hold_failing_endpoints": 0,
+  "bus_skew_constraints": 50,
+  "bus_skew_min_slack_ns": 0.766,
+  "placed_resources": {
+    "lut": 238616,
+    "ff": 231762,
+    "bram_tiles": 570,
+    "dsp": 2021,
+    "uram": 848
+  },
+  "unique_setup_failure": {
+    "source": "cfo/observation_front/coefficient_address_reg_0_0_i_6_psdsp/C",
+    "destination": "cfo/observation_front/coefficient_address_reg_1_0/ENARDEN",
+    "logic_ns": 0.285,
+    "routing_ns": 1.404,
+    "slack_ns": -0.057
+  }
+}

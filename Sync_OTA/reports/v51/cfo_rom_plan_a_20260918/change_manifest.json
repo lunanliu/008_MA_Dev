@@ -1,0 +1,35 @@
+{
+  "kind": "CFO_COEFFICIENT_ROM_PAGING_ZERO_LATENCY",
+  "clock_mhz": 500,
+  "added_cycles_per_window": 0,
+  "initiating_interval_change": 0,
+  "rtl_change": {
+    "path": "rtl/cfo/cfo_front2048_window_a07.sv",
+    "before_sha256": "d771394e1dca169e65a2384890724c990eef796fdbc3ca1f87b6d21f08d3806d",
+    "after_sha256": "bcf26a462fee38fbd93a5d6056f649000ec47fd22c9e9d792ffb5304c269371e"
+  },
+  "coefficient_files": [
+    {
+      "path": "ip/cfo/front2048_coefficient_index.mem",
+      "sha256": "d058acdae6cdd2628304fcd73f5579e2c62833bf00d16d0291187b39201d78d4"
+    },
+    {
+      "path": "ip/cfo/front2048_coefficient_table.mem",
+      "sha256": "ca93ff648c57459891ed7489d38c5f312a2d6969f6f4901130903d16f6403387"
+    },
+    {
+      "path": "ip/cfo/front2048_coefficient_page0.mem",
+      "sha256": "cae9b338bb2af3079cc2f3eae6bf771423f1b08fdec1d4945eb1a10ac6e89fc5"
+    },
+    {
+      "path": "ip/cfo/front2048_coefficient_page1.mem",
+      "sha256": "f2f72b38af0023bba3ea3a266e084142b9b15328c96359d46e266853f9d1baf1"
+    }
+  ],
+  "prior_contract": "reports/v51/routed_redesign_20260918/change_manifest.json",
+  "static_review": "independent RTL review: no blocking finding; physical mapping/timing NOT_RUN",
+  "declaration_order_fix": {
+    "previous_sha256": "6472494fa93164dfb06b807b272abc17cf36c50b15e8a4474fea008ad2c16dc9",
+    "reason": "Move initialized wire after index_stage declaration; no logic or cycle change."
+  }
+}

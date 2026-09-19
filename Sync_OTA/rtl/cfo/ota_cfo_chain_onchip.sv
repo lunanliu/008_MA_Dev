@@ -14,7 +14,7 @@ module ota_cfo_chain_onchip(
  output logic [498:0] estimator_result
 );
  localparam [2:0] FREE=0,FILL=1,SEALED=2,READING=3;
- localparam [2:0] C_IDLE=0,C_COORD=1,C_WAIT=2,C_FEED=3,C_CFG=4;
+ localparam [2:0] C_IDLE=0,C_COORD=1,C_WAIT=2,C_FEED=3,C_CFG=4,C_DRAIN=5;
  localparam [2:0] F_IDLE=0,F_COORD=1,F_WAIT=2,F_READ=3,F_CFG=4;
  wire rst150,rst500;
  logic compute_cancel;
@@ -115,20 +115,37 @@ module ota_cfo_chain_onchip(
  // r2. These counters are local to the final job and independent of coarse IQ.
  logic [31:0] issued,returned,consumed;
  logic [18:0] emitted_in_job;
- logic [1:0] rv;
+ logic [5:0] rv;
+ wire [1:0] memory_write_commit,memory_read_valid;
+ wire [18:0] memory_commit_address[0:1];
  wire fq_sr,fq_v,fq_busy,fq_error;wire [127:0] fq_data;
  logic [6:0] outstanding;
  wire issue=!stopped&&fs==F_READ&&issued<334080&&outstanding<64&&fq_sr&&!fq_busy;
  wire pop=!stopped&&fs==F_READ&&fq_v&&r2_sr;
  wire [127:0] bank_data[0:1];
+ logic [1:0] ram_write;
+ logic ram_write_bank,ram_write_last;
+ logic [18:0] ram_write_address;
+ logic [127:0] ram_write_data;
+ // A registered command ends global poison/rotation/queue control before URAM.
+ // SEALED is published at physical last-write commit, never at acceptance.
+ always_ff @(posedge clk150)begin
+  if(rst150)begin ram_write<=0;ram_write_bank<=0;ram_write_last<=0;end
+  else begin
+   ram_write<={coarse_fire&&wb,coarse_fire&&!wb};
+   ram_write_bank<=wb;ram_write_last<=r1_record[128];
+  end
+  ram_write_address<=r1_record[147:129];ram_write_data<=r1_record[127:0];
+ end
  genvar b;
  generate for(b=0;b<2;b=b+1)begin : coarse_banks
-  sfo_uram_frame_bank #(.DEPTH_BEATS(335872),.ADDR_WIDTH(19)) memory(
-   .clk(clk150),.rst(rst150),.wr_en(coarse_fire&&wb==b),.wr_addr(r1_record[147:129]),.wr_data(r1_record[127:0]),
-   .rd_en(issue&&fb==b),.rd_addr(issued[18:0]),.rd_data(bank_data[b]));
+  sfo_uram_frame_bank #(.SEGMENTED(1'b1),.DEPTH_BEATS(335872),.ADDR_WIDTH(19)) memory(
+   .clk(clk150),.rst(rst150),.wr_en(ram_write[b]),.wr_addr(ram_write_address),.wr_data(ram_write_data),
+   .rd_en(issue&&fb==b),.rd_addr(issued[18:0]),.rd_data(bank_data[b]),
+   .rd_valid(memory_read_valid[b]),.wr_commit(memory_write_commit[b]),.wr_commit_addr(memory_commit_address[b]));
  end endgenerate
  sfo_sync_fifo #(.WIDTH(128),.DEPTH(64)) final_responses(
-  .clk(clk150),.rst(rst150),.s_valid(rv[1]),.s_ready(fq_sr),.s_data(bank_data[fb]),
+  .clk(clk150),.rst(rst150),.s_valid(memory_read_valid[fb]),.s_ready(fq_sr),.s_data(bank_data[fb]),
   .m_valid(fq_v),.m_ready(pop),.m_data(fq_data),.level(),.high_water(),.reset_busy(fq_busy),.error_sticky(fq_error));
  wire [224:0] final_input={bank_frame[fb],bank_gen[fb],consumed,(consumed==334079),fq_data};
  cfo_rotate4 final_rotation(
@@ -151,7 +168,7 @@ module ota_cfo_chain_onchip(
   if(cancel150)detected_error=8'h01;
   else if(r1_fault||r2_fault)detected_error=r1_fault?8'h30:8'h31;
   else if(qfault)detected_error=8'h40;
-  else if(fq_error||(rv[1]&&!fq_sr)||outstanding>64||consumed>returned||returned>issued)detected_error=8'h50;
+  else if(fq_error||(memory_read_valid[fb]&&!fq_sr)||outstanding>64||consumed>returned||returned>issued)detected_error=8'h50;
   else if(coord_v&&coord_r&&(!coord_ok||!coord_identity))detected_error=8'h60;
   else if(link_v&&!backend_good)detected_error=8'h70;
   else if(coarse_fire&&bank_state[wb]!=FILL)detected_error=8'h71;
@@ -159,6 +176,18 @@ module ota_cfo_chain_onchip(
  end
  assign busy=cs!=C_IDLE||fs!=F_IDLE||bank_state[0]!=FREE||bank_state[1]!=FREE;
  function automatic [3:0] pop8(input [7:0] v);integer j;begin pop8=0;for(j=0;j<8;j=j+1)pop8=pop8+v[j];end endfunction
+ // Diagnostic snapshot: authorized capture is isolated from its 499-bit CE bank.
+ // Core bank_estimated/residual behavior below remains at the original edge.
+ logic [498:0] estimator_shadow;
+ logic estimator_capture;
+ always_ff @(posedge clk150)begin
+  estimator_shadow<=link_record;
+  if(rst150)begin estimator_capture<=0;estimator_result<=0;end
+  else begin
+   estimator_capture<=link_v&&!stopped;
+   if(estimator_capture)estimator_result<=estimator_shadow;
+  end
+ end
  integer k;
  always_ff @(posedge clk150)begin
   if(rst150)begin
@@ -172,10 +201,10 @@ module ota_cfo_chain_onchip(
    issued<=0;returned<=0;consumed<=0;outstanding<=0;emitted_in_job<=0;rv<=0;output_valid<=0;
    done_q<=0;done_frame<=0;done_generation<=0;
    fault<=0;error_code<=0;completed_frames<=0;coarse_beats<=0;final_beats<=0;
-   coarse_saturations<=0;final_saturations<=0;estimator_result<=0;
+   coarse_saturations<=0;final_saturations<=0;
   end else begin
    done_q<=0;
-   rv<={rv[0],issue};
+   rv<={rv[4:0],issue};
    if(stopped)output_valid<=0;
    else begin
     output_valid<={output_valid[0],r2_v};
@@ -202,15 +231,17 @@ module ota_cfo_chain_onchip(
     if(final_cfg&&r2_cfg_ready)fs<=F_READ;
     if(coarse_fire)begin
      coarse_beats<=coarse_beats+1'b1;coarse_saturations<=coarse_saturations+pop8(sat1);
-     if(r1_record[128])begin bank_state[wb]<=SEALED;cs<=C_IDLE;end
+     if(r1_record[128])cs<=C_DRAIN;
+    end
+    for(k=0;k<2;k=k+1)begin
+     if(memory_write_commit[k]&&memory_commit_address[k]==19'd334079)begin bank_state[k]<=SEALED;cs<=C_IDLE;end
     end
     if(link_v)begin
-     estimator_result<=link_record;
      if(backend_good)begin bank_estimated[match1]<=1;bank_residual[match1]<=link_record[427:396];end
     end
     case({issue,pop})2'b10:outstanding<=outstanding+1'b1;2'b01:outstanding<=outstanding-1'b1;default:begin end endcase
     if(issue)issued<=issued+1'b1;
-    if(rv[1])returned<=returned+1'b1;
+    if(memory_read_valid[fb])returned<=returned+1'b1;
     if(pop)consumed<=consumed+1'b1;
     if(m_valid)begin emitted_in_job<=emitted_in_job+1'b1;final_beats<=final_beats+1'b1;final_saturations<=final_saturations+pop8(saturation1);end
     if(tail_event&&detected_error==0)begin

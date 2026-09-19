@@ -389,11 +389,53 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/rtl/cfo/ota_cfo_chain_onchip.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/rtl/buffer/ota_cfo_window_queue.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/rtl/control/ota_raw_lease_scheduler.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/rtl/buffer/ota_raw_training_hub.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/rtl/control/ota_sfo_context_join.sv">
         <FileInfo>
           <Attr Name="Library" Val="ota_xpm"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/rtl/buffer/ota_shared_raw_store.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/rtl/control/ota_stream_ingress.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/rtl/control/ota_training_dispatch.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -1074,6 +1116,12 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/rtl/control/sync_ota_top_v51.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/rtl/vendor/xpm/xpm_cdc.sv">
         <FileInfo>
           <Attr Name="Library" Val="ota_xpm"/>
@@ -1134,6 +1182,18 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/ip/cfo/front2048_coefficient_page0.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ip/cfo/front2048_coefficient_page1.mem">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/ip/cfo/front2048_coefficient_table.mem">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -1148,54 +1208,6 @@
       </File>
       <File Path="$PPRDIR/ip/cfo/phase74_atan_q31.mem">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/rtl/buffer/ota_shared_raw_store.sv">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/rtl/control/ota_raw_lease_scheduler.sv">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/rtl/control/ota_training_dispatch.sv">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/rtl/buffer/ota_raw_training_hub.sv">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/rtl/buffer/ota_cfo_window_queue.sv">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/rtl/cfo/ota_cfo_chain_onchip.sv">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/rtl/control/ota_stream_ingress.sv">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/rtl/control/sync_ota_top_v51.sv">
-        <FileInfo SFType="SVerilog">
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -1220,7 +1232,6 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
-      <!-- V5.1 has no authorized simulation bench. Historical benches remain on disk. -->
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="sync_ota_top"/>
@@ -1295,8 +1306,6 @@
           <Attr Name="UsedInSteps" Val="farrow_mul_t16_impl_1;WRITE_BITSTREAM;TCL.PRE"/>
           <Attr Name="UsedInSteps" Val="farrow_mul_t16_synth_1;SYNTH_DESIGN;TCL.PRE"/>
           <Attr Name="UsedInSteps" Val="impl_1;INIT_DESIGN;TCL.PRE"/>
-          <Attr Name="UsedInSteps" Val="impl_1;OPT_DESIGN;TCL.PRE"/>
-          <Attr Name="UsedInSteps" Val="impl_1;PHYS_OPT_DESIGN;TCL.PRE"/>
           <Attr Name="UsedInSteps" Val="impl_1;PLACE_DESIGN;TCL.PRE"/>
           <Attr Name="UsedInSteps" Val="impl_1;POST_PLACE_POWER_OPT_DESIGN;TCL.PRE"/>
           <Attr Name="UsedInSteps" Val="impl_1;POST_ROUTE_PHYS_OPT_DESIGN;TCL.PRE"/>
@@ -2914,16 +2923,22 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcvu11p-flgb2104-2-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcvu11p-flgb2104-2-e" ConstrsSet="constrs_1" Description="Includes alternate algorithms for timing-driven optimization" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <StratHandle Name="Performance_ExtraTimingOpt" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl"/>
-        <Step Id="opt_design" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl"/>
+        <Step Id="opt_design" PreStepTclHook="$PPRDIR/tools/v51/pre_impl_margin20.tcl"/>
         <Step Id="power_opt_design" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl"/>
-        <Step Id="place_design" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl"/>
+        <Step Id="place_design" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl">
+          <Option Id="Directive">8</Option>
+        </Step>
         <Step Id="post_place_power_opt_design" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl"/>
-        <Step Id="phys_opt_design" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl"/>
-        <Step Id="route_design" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl"/>
+        <Step Id="phys_opt_design" PreStepTclHook="$PPRDIR/tools/v51/pre_physopt_margin20.tcl">
+          <Option Id="Directive">0</Option>
+        </Step>
+        <Step Id="route_design" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl" PostStepTclHook="$PPRDIR/tools/v51/post_route_margin20.tcl">
+          <Option Id="Directive">1</Option>
+        </Step>
         <Step Id="post_route_phys_opt_design" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl"/>
         <Step Id="write_bitstream" PreStepTclHook="$PPRDIR/tools/vivado/run_threads.tcl"/>
       </Strategy>

@@ -1,0 +1,28 @@
+{
+  "kind": "STATIC_COEFFICIENT_FILE_IDENTITY_NOT_RTL_SIMULATION",
+  "canonical_path": "ip/cfo/front2048_coefficient_index.mem",
+  "canonical_sha256": "d058acdae6cdd2628304fcd73f5579e2c62833bf00d16d0291187b39201d78d4",
+  "valid_entries_compared": 60680,
+  "mismatches": 0,
+  "padding_entries": 4856,
+  "pages": [
+    {
+      "path": "ip/cfo/front2048_coefficient_page0.mem",
+      "sha256": "cae9b338bb2af3079cc2f3eae6bf771423f1b08fdec1d4945eb1a10ac6e89fc5",
+      "entries": 32768,
+      "valid_entries": 32768
+    },
+    {
+      "path": "ip/cfo/front2048_coefficient_page1.mem",
+      "sha256": "f2f72b38af0023bba3ea3a266e084142b9b15328c96359d46e266853f9d1baf1",
+      "entries": 32768,
+      "valid_entries": 27912
+    }
+  ],
+  "boundary": {
+    "last_page0_address": 32767,
+    "first_page1_address": 32768,
+    "window_zero_based": 39,
+    "first_page1_pilot_zero_based": 788
+  }
+}

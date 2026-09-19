@@ -1,0 +1,14 @@
+invalid command name "redirect"
+invalid command name "redirect"
+    while executing
+"redirect -file [file join $out timing_path_properties.txt] {report_property -all $p}"
+    invoked from within
+"if {$i==0} {redirect -file [file join $out timing_path_properties.txt] {report_property -all $p}}"
+    ("foreach" body line 3)
+    invoked from within
+"foreach p $paths {
+    set available [list_property $p]
+    if {$i==0} {redirect -file [file join $out timing_path_properties.txt] {report_property -a..."
+    (procedure "main" line 16)
+    invoked from within
+"main $out $dcp"

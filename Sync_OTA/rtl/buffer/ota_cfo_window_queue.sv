@@ -44,7 +44,7 @@ module ota_cfo_window_queue(
  wire sample_good=s_record[224:193]==frame&&s_record[192:161]==generation&&
   s_record[160:129]==expected_beat&&s_record[128]==(expected_beat==334079);
  wire write_window=take&&selected&&sample_good;
- ota_async_fifo #(.WIDTH(128),.DEPTH(4096)) packed_windows(
+ ota_async_fifo #(.WIDTH(128),.DEPTH(4096),.CASCADE_HEIGHT(2)) packed_windows(
   .wr_clk(clk150),.rd_clk(clk500),.reset_request(reset_request),
   .s_valid(write_window),.s_ready(dq_sr),.s_data(s_record[127:0]),
   .m_valid(dq_v),.m_ready(dq_r),.m_data(dq_data),
@@ -60,31 +60,56 @@ module ota_cfo_window_queue(
  logic [70:0] fast_header;
  logic [10:0] sample_index;
  logic [134:0] output_record;
+ logic packed_head_valid,packed_tail_valid;
+ logic [127:0] packed_head,packed_tail;
+ wire packed_push_candidate=dq_v&&!packed_tail_valid;
  wire advance=!output_valid||m_ready;
- wire issue=!fast_stop&&header_active&&dq_v&&advance&&
+ // Candidates control local unobservable payload. Only actual side effects
+ // (FIFO reads, output valid and returned credits) carry immediate stop gating.
+ wire issue_candidate=header_active&&packed_head_valid&&advance&&
             (sample_index!=2047||return_ready);
+ wire issue=!fast_stop&&issue_candidate;
+ wire packed_pop_candidate=issue_candidate&&sample_index[1:0]==3;
+ wire head_can_load=!packed_head_valid||packed_pop_candidate;
+ wire packed_move=packed_tail_valid&&head_can_load;
  ota_async_fifo #(.WIDTH(1),.DEPTH(32)) window_credits(
   .wr_clk(clk500),.rd_clk(clk150),.reset_request(reset_request),
   .s_valid(issue&&sample_index==2047),.s_ready(return_ready),.s_data(1'b1),
   .m_valid(return_valid),.m_ready(!slow_stop),.m_data(),
   .wr_busy(),.rd_busy(),.wr_count(),.rd_count(),.overflow(return_over),.underflow(return_under));
- wire [31:0] lane_data=dq_data[32*sample_index[1:0]+:32];
+ wire [31:0] lane_data=packed_head[32*sample_index[1:0]+:32];
  wire signed [15:0] lane_i=lane_data[15:0],lane_q=lane_data[31:16];
  assign hq_r=!fast_stop&&!header_active;
- assign dq_r=issue&&sample_index[1:0]==3;
+ // Prefetch does not release a window credit. That still belongs to last IQ.
+ assign dq_r=!fast_stop&&!packed_tail_valid;
  assign m_valid=!fast_stop&&output_valid;
  assign m_record=output_record;
  always_ff @(posedge clk500)begin
-  if(rst500)begin header_active<=0;output_valid<=0;fast_header<=0;sample_index<=0;fast_fault<=0;end
+  if(fast_stop)begin packed_head_valid<=0;packed_tail_valid<=0;end
+  else begin
+   if(head_can_load)packed_head_valid<=packed_tail_valid;
+   if(packed_move)packed_tail_valid<=0;
+   if(packed_push_candidate)packed_tail_valid<=1;
+  end
+  // BRAM drives only tail; tail->head is a separate local stage.
+  // Two-word capacity; one fetch per two clocks exceeds one word per four IQ.
+  if(packed_push_candidate)packed_tail<=dq_data;
+  if(packed_move)packed_head<=packed_tail;
+  if(hq_v&&!header_active)fast_header<=hq_data;
+  // Hold an advertised word across backpressure; otherwise the next payload
+  // may be sampled on bubbles without committing a transaction.
+  if(advance)output_record<={fast_header,sample_index,(sample_index==2047),
+       {{4{lane_i[15]}},lane_i,6'd0},{{4{lane_q[15]}},lane_q,6'd0}};
+ end
+ always_ff @(posedge clk500)begin
+  if(rst500)begin header_active<=0;output_valid<=0;sample_index<=0;fast_fault<=0;end
   else if(fast_stop)begin header_active<=0;output_valid<=0;if(poison500)fast_fault<=1;end
   else begin
    if(dq_under||hq_under||return_over)fast_fault<=1;
-   if(hq_v&&hq_r)begin fast_header<=hq_data;sample_index<=0;header_active<=1;end
+   if(hq_v&&hq_r)begin sample_index<=0;header_active<=1;end
    if(advance)begin
-    output_valid<=issue;
-    if(issue)begin
-     output_record<={fast_header,sample_index,(sample_index==2047),
-       {{4{lane_i[15]}},lane_i,6'd0},{{4{lane_q[15]}},lane_q,6'd0}};
+    output_valid<=issue_candidate;
+    if(issue_candidate)begin
      sample_index<=sample_index+1'b1;
      if(sample_index==2047)header_active<=0;
     end

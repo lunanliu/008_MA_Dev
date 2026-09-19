@@ -1,0 +1,16 @@
+﻿clock,module,endpoints,quantized_tns_ns,wns_ns
+clk150,SFO first resampler,560,-80.448,-0.548
+clk150,SFO intermediate banks,312,-59.28,-0.766
+clk150,CFO coarse banks,268,-25.196,-0.384
+clk150,SFO second resampler,223,-22.945,-0.6
+clk150,Shared raw store,89,-6.612,-0.29
+clk150,SFO output ring,30,-1.796,-0.131
+clk150,CFO backend,4,-0.277,-0.121
+clk500,CFO FFT2048,707,-227.838,-0.727
+clk500,SFO main FFT service,258,-52.805,-0.537
+clk500,CFO pilot front,250,-51.783,-0.544
+clk500,SFO auxiliary FFT service,296,-46.171,-0.544
+clk500,SFO initial FFT owner,146,-37.323,-0.512
+clk500,CFO window queue,120,-23.569,-0.649
+clk500,CFO observation FIFO,59,-8.944,-0.215
+clk500,CFO estimator link,14,-1.605,-0.181

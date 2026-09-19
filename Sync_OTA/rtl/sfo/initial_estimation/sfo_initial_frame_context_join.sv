@@ -165,8 +165,6 @@ module sfo_initial_frame_context_join #(
       age <= 0;
       m_valid <= 0;
       m_result <= '0;
-      m_coarse_cfo_hz <= 0;
-      m_fine_start <= 0;
       m_numeric_valid <= 0;
       m_fail_close <= 0;
       m_approved_outage <= 0;
@@ -186,8 +184,6 @@ module sfo_initial_frame_context_join #(
       if (fault_pending && slot_free) begin
         m_valid <= 1;
         m_result <= {32'd0, 16'd0, pending_fault_status, pending_fault_id};
-        m_coarse_cfo_hz <= 0;
-        m_fine_start <= 0;
         m_numeric_valid <= 0;
         m_fail_close <= 1;
         m_approved_outage <= 0;
@@ -253,8 +249,6 @@ module sfo_initial_frame_context_join #(
             next_join <= next_join + 32'd1;
             m_valid <= 1;
             m_result <= {32'd0, 16'd0, joined_status, next_join};
-            m_coarse_cfo_hz <= normal_pair ? cfo_head.value : 32'sd0;
-            m_fine_start <= normal_pair ? fine_head.value : 32'sd0;
             m_numeric_valid <= normal_pair;
             m_fail_close <= !normal_pair;
             m_approved_outage <= approved_pair;
@@ -262,6 +256,13 @@ module sfo_initial_frame_context_join #(
           end
         end
       end
+    end
+  end
+  always_ff @(posedge clk)begin
+    if(rst)begin m_coarse_cfo_hz<=0;m_fine_start<=0;end
+    else if(slot_free)begin
+      m_coarse_cfo_hz<=(!fault_pending&&normal_pair)?cfo_head.value:32'sd0;
+      m_fine_start<=(!fault_pending&&normal_pair)?fine_head.value:32'sd0;
     end
   end
 endmodule

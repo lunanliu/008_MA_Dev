@@ -1,0 +1,12 @@
+﻿group,endpoints,tns_ns,wns_ns
+clk500:cfo/windows/poison_sync -> cfo/windows,163,-10.738,-0.199
+clk500:cfo/windows/poison_sync -> cfo/observation_front/fft_core,87,-6.68,-0.174
+clk500:cfo/observation_front -> cfo/observation_front,20,-2.056,-0.169
+clk500:cfo/windows -> cfo/observation_front/fft_core,18,-1.745,-0.138
+clk500:cfo/observation_front/fft_core -> cfo/observation_front/fft_core,34,-1.602,-0.151
+clk500:cfo/windows/poison_sync -> cfo/windows/window_credits,15,-1.397,-0.131
+clk500:sfo/residual_estimator/front_stage -> sfo/residual_estimator/front_stage,15,-0.768,-0.064
+clk500:cfo/windows/poison_sync -> cfo/windows/packed_windows,15,-0.651,-0.132
+clk500:sfo/residual_estimator/aux_service -> sfo/residual_estimator/aux_service,7,-0.151,-0.048
+clk500:cfo/windows/packed_windows -> cfo/windows,5,-0.111,-0.065
+clk500:cfo/windows -> cfo/windows/complete_windows,2,-0.091,-0.068

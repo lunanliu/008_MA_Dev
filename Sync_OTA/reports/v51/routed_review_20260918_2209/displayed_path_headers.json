@@ -1,0 +1,1902 @@
+[
+  {
+    "line": 225,
+    "slack": "0.153",
+    "source": "sfo/initial_estimator/service/fatal_latched_reg/C",
+    "destination": "sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][172]/CE",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "7.742ns  (logic 1.669ns (21.558%)  route 6.073ns (78.442%))",
+    "levels": "17  (CARRY8=1 LUT2=1 LUT3=4 LUT4=3 LUT5=2 LUT6=6)"
+  },
+  {
+    "line": 323,
+    "slack": "0.153",
+    "source": "sfo/initial_estimator/service/fatal_latched_reg/C",
+    "destination": "sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][177]/CE",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "7.742ns  (logic 1.669ns (21.558%)  route 6.073ns (78.442%))",
+    "levels": "17  (CARRY8=1 LUT2=1 LUT3=4 LUT4=3 LUT5=2 LUT6=6)"
+  },
+  {
+    "line": 421,
+    "slack": "0.155",
+    "source": "sfo/initial_estimator/service/fatal_latched_reg/C",
+    "destination": "sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][170]/CE",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "7.740ns  (logic 1.669ns (21.563%)  route 6.071ns (78.437%))",
+    "levels": "17  (CARRY8=1 LUT2=1 LUT3=4 LUT4=3 LUT5=2 LUT6=6)"
+  },
+  {
+    "line": 519,
+    "slack": "0.155",
+    "source": "sfo/initial_estimator/service/fatal_latched_reg/C",
+    "destination": "sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][171]/CE",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "7.740ns  (logic 1.669ns (21.563%)  route 6.071ns (78.437%))",
+    "levels": "17  (CARRY8=1 LUT2=1 LUT3=4 LUT4=3 LUT5=2 LUT6=6)"
+  },
+  {
+    "line": 617,
+    "slack": "0.171",
+    "source": "sfo/initial_estimator/service/fatal_latched_reg/C",
+    "destination": "sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.doutb_reg_reg[176]/CE",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "7.724ns  (logic 1.667ns (21.582%)  route 6.057ns (78.418%))",
+    "levels": "17  (CARRY8=1 LUT2=1 LUT3=3 LUT4=4 LUT5=2 LUT6=6)"
+  },
+  {
+    "line": 715,
+    "slack": "0.171",
+    "source": "sfo/initial_estimator/service/fatal_latched_reg/C",
+    "destination": "sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.doutb_reg_reg[178]/CE",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "7.724ns  (logic 1.667ns (21.582%)  route 6.057ns (78.418%))",
+    "levels": "17  (CARRY8=1 LUT2=1 LUT3=3 LUT4=4 LUT5=2 LUT6=6)"
+  },
+  {
+    "line": 813,
+    "slack": "0.171",
+    "source": "sfo/initial_estimator/service/fatal_latched_reg/C",
+    "destination": "sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.doutb_reg_reg[180]/CE",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "7.724ns  (logic 1.667ns (21.582%)  route 6.057ns (78.418%))",
+    "levels": "17  (CARRY8=1 LUT2=1 LUT3=3 LUT4=4 LUT5=2 LUT6=6)"
+  },
+  {
+    "line": 911,
+    "slack": "0.172",
+    "source": "sfo/initial_estimator/service/fatal_latched_reg/C",
+    "destination": "sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.doutb_reg_reg[177]/CE",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "7.723ns  (logic 1.667ns (21.585%)  route 6.056ns (78.415%))",
+    "levels": "17  (CARRY8=1 LUT2=1 LUT3=3 LUT4=4 LUT5=2 LUT6=6)"
+  },
+  {
+    "line": 1009,
+    "slack": "0.172",
+    "source": "sfo/initial_estimator/service/fatal_latched_reg/C",
+    "destination": "sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.doutb_reg_reg[179]/CE",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "7.723ns  (logic 1.667ns (21.585%)  route 6.056ns (78.415%))",
+    "levels": "17  (CARRY8=1 LUT2=1 LUT3=3 LUT4=4 LUT5=2 LUT6=6)"
+  },
+  {
+    "line": 1107,
+    "slack": "0.172",
+    "source": "sfo/initial_estimator/service/fatal_latched_reg/C",
+    "destination": "sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.doutb_reg_reg[181]/CE",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "7.723ns  (logic 1.667ns (21.585%)  route 6.056ns (78.415%))",
+    "levels": "17  (CARRY8=1 LUT2=1 LUT3=3 LUT4=4 LUT5=2 LUT6=6)"
+  },
+  {
+    "line": 1211,
+    "slack": "0.019",
+    "source": "sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].inv_not_gen.inv_thr/opt_has_pipe.first_q_reg[0]/C",
+    "destination": "sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[16].quot_gen.quot_reg.i_div_n1.quot_out/opt_has_pipe.first_q_reg[5]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.072ns  (logic 0.039ns (54.167%)  route 0.033ns (45.833%))",
+    "levels": "0"
+  },
+  {
+    "line": 1252,
+    "slack": "0.023",
+    "source": "sfo/initial_estimator/service/frontend/correction/u_gain/g_lane[0].u_lane/u_ratio/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[12].divisor_gen.divisor_dc1.del_divisor_msbs/opt_has_pipe.first_q_reg[5]/C",
+    "destination": "sfo/initial_estimator/service/frontend/correction/u_gain/g_lane[0].u_lane/u_ratio/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].divisor_gen.divisor_dc1.del_divisor_msbs/opt_has_pipe.first_q_reg[5]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.076ns  (logic 0.039ns (51.316%)  route 0.037ns (48.684%))",
+    "levels": "0"
+  },
+  {
+    "line": 1293,
+    "slack": "0.023",
+    "source": "sfo/initial_estimator/service/frontend/correction/u_gain/g_lane[1].u_lane/u_ratio/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[28].divisor_gen.divisor_dc1.del_divisor_msbs/opt_has_pipe.first_q_reg[1]/C",
+    "destination": "sfo/initial_estimator/service/frontend/correction/u_gain/g_lane[1].u_lane/u_ratio/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[29].divisor_gen.divisor_dc1.del_divisor_msbs/opt_has_pipe.first_q_reg[1]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.076ns  (logic 0.039ns (51.316%)  route 0.037ns (48.684%))",
+    "levels": "0"
+  },
+  {
+    "line": 1334,
+    "slack": "0.023",
+    "source": "sfo/initial_estimator/service/frontend/correction/u_gain/g_lane[2].u_lane/u_ratio/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[41].divisor_gen.divisor_dc1.del_divisor_msbs/opt_has_pipe.first_q_reg[13]/C",
+    "destination": "sfo/initial_estimator/service/frontend/correction/u_gain/g_lane[2].u_lane/u_ratio/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[42].divisor_gen.divisor_dc1.del_divisor_msbs/opt_has_pipe.first_q_reg[13]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.076ns  (logic 0.039ns (51.316%)  route 0.037ns (48.684%))",
+    "levels": "0"
+  },
+  {
+    "line": 1375,
+    "slack": "0.023",
+    "source": "sfo/initial_estimator/service/frontend/correction/u_gain/g_lane[3].u_lane/u_ratio/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[10].divisor_gen.divisor_dc1.del_divisor_msbs/opt_has_pipe.first_q_reg[25]/C",
+    "destination": "sfo/initial_estimator/service/frontend/correction/u_gain/g_lane[3].u_lane/u_ratio/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[11].divisor_gen.divisor_dc1.del_divisor_msbs/opt_has_pipe.first_q_reg[25]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.076ns  (logic 0.039ns (51.316%)  route 0.037ns (48.684%))",
+    "levels": "0"
+  },
+  {
+    "line": 1416,
+    "slack": "0.023",
+    "source": "sfo/initial_estimator/service/frontend/correction/u_gain/g_lane[2].u_lane/u_ratio/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[19].divisor_gen.divisor_dc1.del_divisor_msbs/opt_has_pipe.first_q_reg[12]/C",
+    "destination": "sfo/initial_estimator/service/frontend/correction/u_gain/g_lane[2].u_lane/u_ratio/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[20].divisor_gen.divisor_dc1.del_divisor_msbs/opt_has_pipe.first_q_reg[12]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.076ns  (logic 0.039ns (51.316%)  route 0.037ns (48.684%))",
+    "levels": "0"
+  },
+  {
+    "line": 1457,
+    "slack": "0.024",
+    "source": "frontend/fine_confirmation/u_quality_divider_vendor_adapter/u_quality_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_quotient_collector/i_typical_case.i_addsub/i_vx5_sp3.i_casc_dsp48.i_lower_p_balance/opt_has_pipe.first_q_reg[37]/C",
+    "destination": "frontend/fine_confirmation/u_quality_divider_vendor_adapter/u_quality_divider/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_quotient_collector/i_typical_case.i_quot_carousel_balance/opt_has_pipe.first_q_reg[37]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.077ns  (logic 0.039ns (50.649%)  route 0.038ns (49.351%))",
+    "levels": "0"
+  },
+  {
+    "line": 1498,
+    "slack": "0.026",
+    "source": "sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[38].inv_not_gen.inv_thr/opt_has_pipe.first_q_reg[0]/C",
+    "destination": "sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[40].quot_gen.quot_reg.i_div_n1.quot_out/opt_has_pipe.first_q_reg[6]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.079ns  (logic 0.038ns (48.101%)  route 0.041ns (51.899%))",
+    "levels": "0"
+  },
+  {
+    "line": 1539,
+    "slack": "0.028",
+    "source": "sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[10].inv_not_gen.inv_thr/opt_has_pipe.first_q_reg[0]/C",
+    "destination": "sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[16].quot_gen.quot_reg.i_div_n1.quot_out/opt_has_pipe.first_q_reg[2]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.081ns  (logic 0.039ns (48.148%)  route 0.042ns (51.852%))",
+    "levels": "0"
+  },
+  {
+    "line": 1580,
+    "slack": "0.030",
+    "source": "frontend/coarse_confirmation/u_phase_quality/u_phase_magnitude_cordic/U0/i_synth/i_synth/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_cr/inst/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[15]/C",
+    "destination": "frontend/coarse_confirmation/u_phase_quality/u_phase_magnitude_cordic/U0/i_synth/i_synth/gen_cordic.output_stage/gen_scaling.gen_phase.gen_delay/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[3][14]_srl4/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.095ns  (logic 0.039ns (41.053%)  route 0.056ns (58.947%))",
+    "levels": "0"
+  },
+  {
+    "line": 1678,
+    "slack": "0.009",
+    "source": "sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_8/CLK",
+    "destination": "sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][63]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "6.585ns  (logic 2.990ns (45.406%)  route 3.595ns (54.594%))",
+    "levels": "13  (LUT5=6 URAM288=7)"
+  },
+  {
+    "line": 1764,
+    "slack": "0.015",
+    "source": "sfo/two_pass_transport/intermediate[0].intermediate_bank/ram_wa_reg[0]/C",
+    "destination": "sfo/two_pass_transport/intermediate[0].intermediate_bank/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_31/CAS_IN_ADDR_B[0]",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "6.334ns  (logic 1.275ns (20.129%)  route 5.059ns (79.871%))",
+    "levels": "7  (URAM288=7)"
+  },
+  {
+    "line": 1837,
+    "slack": "0.017",
+    "source": "sfo/two_pass_transport/intermediate[1].intermediate_bank/ram_ra_reg[8]/C",
+    "destination": "sfo/two_pass_transport/intermediate[1].intermediate_bank/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_31/CAS_IN_ADDR_A[8]",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "6.218ns  (logic 1.148ns (18.463%)  route 5.070ns (81.537%))",
+    "levels": "7  (URAM288=7)"
+  },
+  {
+    "line": 1910,
+    "slack": "0.019",
+    "source": "sfo/two_pass_transport/intermediate[0].intermediate_bank/ram_wa_reg[7]/C",
+    "destination": "sfo/two_pass_transport/intermediate[0].intermediate_bank/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_39/CAS_IN_ADDR_B[7]",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "6.325ns  (logic 1.263ns (19.968%)  route 5.062ns (80.032%))",
+    "levels": "7  (URAM288=7)"
+  },
+  {
+    "line": 1983,
+    "slack": "0.020",
+    "source": "sfo/two_pass_transport/intermediate[1].intermediate_bank/ram_we_reg_replica/C",
+    "destination": "sfo/two_pass_transport/intermediate[1].intermediate_bank/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_113/CAS_IN_BWE_B[4]",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "6.243ns  (logic 1.241ns (19.878%)  route 5.002ns (80.122%))",
+    "levels": "7  (URAM288=7)"
+  },
+  {
+    "line": 2056,
+    "slack": "0.022",
+    "source": "sfo/two_pass_transport/intermediate[1].intermediate_bank/ram_we_reg_replica/C",
+    "destination": "sfo/two_pass_transport/intermediate[1].intermediate_bank/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_113/CAS_IN_BWE_B[2]",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "6.338ns  (logic 1.337ns (21.095%)  route 5.001ns (78.905%))",
+    "levels": "7  (URAM288=7)"
+  },
+  {
+    "line": 2129,
+    "slack": "0.024",
+    "source": "cfo/issued_reg[5]_replica/C",
+    "destination": "cfo/coarse_banks[0].memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_47/CAS_IN_ADDR_A[5]",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "6.177ns  (logic 1.248ns (20.204%)  route 4.929ns (79.796%))",
+    "levels": "7  (URAM288=7)"
+  },
+  {
+    "line": 2197,
+    "slack": "0.026",
+    "source": "cfo/issued_reg[11]_replica/C",
+    "destination": "cfo/coarse_banks[0].memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_153/CAS_IN_ADDR_A[11]",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "6.185ns  (logic 1.110ns (17.947%)  route 5.075ns (82.053%))",
+    "levels": "7  (URAM288=7)"
+  },
+  {
+    "line": 2265,
+    "slack": "0.036",
+    "source": "cfo/coarse_banks[0].memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_90/CLK",
+    "destination": "cfo/coarse_banks[0].memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][89]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "6.555ns  (logic 2.945ns (44.928%)  route 3.610ns (55.072%))",
+    "levels": "12  (LUT5=5 URAM288=7)"
+  },
+  {
+    "line": 2353,
+    "slack": "0.039",
+    "source": "sfo/two_pass_transport/intermediate[0].intermediate_bank/ram_wa_reg[7]/C",
+    "destination": "sfo/two_pass_transport/intermediate[0].intermediate_bank/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_7/CAS_IN_ADDR_B[7]",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "6.305ns  (logic 1.263ns (20.032%)  route 5.042ns (79.968%))",
+    "levels": "7  (URAM288=7)"
+  },
+  {
+    "line": 2432,
+    "slack": "0.022",
+    "source": "sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.i_data_in/gen_reg.d_reg_reg[10]/C",
+    "destination": "sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[3].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[6][10]_srl7/D",
+    "group": "clk150",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.094ns  (logic 0.040ns (42.553%)  route 0.054ns (57.447%))",
+    "levels": "0"
+  },
+  {
+    "line": 2473,
+    "slack": "0.023",
+    "source": "sfo/two_pass_transport/first_resampling/engine/core/fir15_decimator/i_core/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_data_in/gen_reg.d_reg_reg[248]/C",
+    "destination": "sfo/two_pass_transport/first_resampling/engine/core/fir15_decimator/i_core/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[15].g_symmetric.g_data_array.g_data[0].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[5][8]_srl6/D",
+    "group": "clk150",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.095ns  (logic 0.040ns (42.105%)  route 0.055ns (57.895%))",
+    "levels": "0"
+  },
+  {
+    "line": 2514,
+    "slack": "0.025",
+    "source": "sfo/two_pass_transport/second_resampling/engine/core/fir47_decimator/i_core/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[3].g_symmetric.g_data_array.g_data[12].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[13]/C",
+    "destination": "sfo/two_pass_transport/second_resampling/engine/core/fir47_decimator/i_core/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[3].g_symmetric.g_data_array.g_data[20].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][13]_srl2/D",
+    "group": "clk150",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.097ns  (logic 0.039ns (40.206%)  route 0.058ns (59.794%))",
+    "levels": "0"
+  },
+  {
+    "line": 2555,
+    "slack": "0.027",
+    "source": "sfo/two_pass_transport/first_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[3].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[10]/C",
+    "destination": "sfo/two_pass_transport/first_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[7].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][10]_srl3/D",
+    "group": "clk150",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.099ns  (logic 0.038ns (38.384%)  route 0.061ns (61.616%))",
+    "levels": "0"
+  },
+  {
+    "line": 2596,
+    "slack": "0.027",
+    "source": "sfo/two_pass_transport/first_resampling/engine/core/fir47_decimator/q_core/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_data_in/gen_reg.d_reg_reg[98]/C",
+    "destination": "sfo/two_pass_transport/first_resampling/engine/core/fir47_decimator/q_core/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[6].g_symmetric.g_data_array.g_data[1].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][2]_srl21/D",
+    "group": "clk150",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.099ns  (logic 0.039ns (39.394%)  route 0.060ns (60.606%))",
+    "levels": "0"
+  },
+  {
+    "line": 2637,
+    "slack": "0.027",
+    "source": "sfo/two_pass_transport/first_resampling/engine/core/fir47_decimator/q_core/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_data_in/gen_reg.d_reg_reg[122]/C",
+    "destination": "sfo/two_pass_transport/first_resampling/engine/core/fir47_decimator/q_core/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[7].g_symmetric.g_data_array.g_data[0].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[21][10]_srl22/D",
+    "group": "clk150",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.099ns  (logic 0.039ns (39.394%)  route 0.060ns (60.606%))",
+    "levels": "0"
+  },
+  {
+    "line": 2678,
+    "slack": "0.027",
+    "source": "sfo/two_pass_transport/first_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[4].g_symmetric.g_data_array.g_data[1].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[12]/C",
+    "destination": "sfo/two_pass_transport/first_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[4].g_symmetric.g_data_array.g_data[5].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[4][12]_srl5/D",
+    "group": "clk150",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.097ns  (logic 0.040ns (41.237%)  route 0.057ns (58.763%))",
+    "levels": "0"
+  },
+  {
+    "line": 2719,
+    "slack": "0.027",
+    "source": "sfo/two_pass_transport/second_resampling/engine/core/fir47_decimator/q_core/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[13].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[9][9]/C",
+    "destination": "sfo/two_pass_transport/second_resampling/engine/core/fir47_decimator/q_core/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[11].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[10][9]_srl1/D",
+    "group": "clk150",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.098ns  (logic 0.040ns (40.816%)  route 0.058ns (59.184%))",
+    "levels": "0"
+  },
+  {
+    "line": 2760,
+    "slack": "0.027",
+    "source": "sfo/two_pass_transport/second_resampling/engine/core/stream/arithmetic/real_channel[4].u_real/branch_reg[2][14]/C",
+    "destination": "sfo/two_pass_transport/second_resampling/engine/core/stream/arithmetic/real_channel[4].u_real/hstage2/bp_reg[1][14]_srl2/D",
+    "group": "clk150",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.092ns  (logic 0.037ns (40.217%)  route 0.055ns (59.783%))",
+    "levels": "0"
+  },
+  {
+    "line": 2801,
+    "slack": "0.028",
+    "source": "sfo/two_pass_transport/first_resampling/engine/core/fir15_interpolator/i_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo_wr_data_1_reg[62]/C",
+    "destination": "sfo/two_pass_transport/first_resampling/engine/core/fir15_interpolator/i_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_s_data_chan_fifo.i_s_data_chan_fifo/fifo0/fifo_1_reg[15][62]_srl16/D",
+    "group": "clk150",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.093ns  (logic 0.040ns (43.011%)  route 0.053ns (56.989%))",
+    "levels": "0"
+  },
+  {
+    "line": 2899,
+    "slack": "-0.199",
+    "source": "cfo/windows/poison_sync/syncstages_ff_reg[3]/C",
+    "destination": "cfo/windows/packed_count_reg[1]/CE",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "2.097ns  (logic 0.346ns (16.500%)  route 1.751ns (83.500%))",
+    "levels": "4  (LUT3=1 LUT4=1 LUT6=2)"
+  },
+  {
+    "line": 2958,
+    "slack": "-0.178",
+    "source": "cfo/windows/poison_sync/syncstages_ff_reg[3]/C",
+    "destination": "cfo/windows/output_record_reg[105]/CE",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "2.075ns  (logic 0.435ns (20.964%)  route 1.640ns (79.036%))",
+    "levels": "4  (LUT3=1 LUT5=1 LUT6=2)"
+  },
+  {
+    "line": 3017,
+    "slack": "-0.175",
+    "source": "cfo/windows/poison_sync/syncstages_ff_reg[3]/C",
+    "destination": "cfo/windows/output_record_reg[117]/CE",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "2.072ns  (logic 0.435ns (20.994%)  route 1.637ns (79.006%))",
+    "levels": "4  (LUT3=1 LUT5=1 LUT6=2)"
+  },
+  {
+    "line": 3076,
+    "slack": "-0.174",
+    "source": "cfo/windows/poison_sync/syncstages_ff_reg[3]/C",
+    "destination": "cfo/observation_front/fft_core/bank1_reg_bram_1/DINADIN[5]",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.902ns  (logic 0.234ns (12.303%)  route 1.668ns (87.697%))",
+    "levels": "3  (LUT4=1 LUT6=2)"
+  },
+  {
+    "line": 3132,
+    "slack": "-0.172",
+    "source": "cfo/windows/poison_sync/syncstages_ff_reg[3]/C",
+    "destination": "cfo/observation_front/fft_core/bank1_reg_bram_0/DINADIN[8]",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.887ns  (logic 0.306ns (16.216%)  route 1.581ns (83.784%))",
+    "levels": "3  (LUT4=1 LUT6=2)"
+  },
+  {
+    "line": 3188,
+    "slack": "-0.169",
+    "source": "cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK",
+    "destination": "cfo/observation_front/pr4_reg_i_5_psdsp_1/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "2.103ns  (logic 1.161ns (55.207%)  route 0.942ns (44.793%))",
+    "levels": "2  (LUT3=1 LUT6=1)"
+  },
+  {
+    "line": 3241,
+    "slack": "-0.165",
+    "source": "cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK",
+    "destination": "cfo/observation_front/rr3_reg_i_5_psdsp/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "2.100ns  (logic 1.123ns (53.476%)  route 0.977ns (46.524%))",
+    "levels": "2  (LUT3=1 LUT6=1)"
+  },
+  {
+    "line": 3294,
+    "slack": "-0.164",
+    "source": "cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK",
+    "destination": "cfo/observation_front/rr3_reg_i_5_psdsp_1/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "2.099ns  (logic 1.123ns (53.502%)  route 0.976ns (46.498%))",
+    "levels": "2  (LUT3=1 LUT6=1)"
+  },
+  {
+    "line": 3347,
+    "slack": "-0.159",
+    "source": "cfo/windows/poison_sync/syncstages_ff_reg[3]/C",
+    "destination": "cfo/windows/output_record_reg[17]/CE",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "2.056ns  (logic 0.435ns (21.158%)  route 1.621ns (78.842%))",
+    "levels": "4  (LUT3=1 LUT5=1 LUT6=2)"
+  },
+  {
+    "line": 3406,
+    "slack": "-0.159",
+    "source": "cfo/windows/poison_sync/syncstages_ff_reg[3]/C",
+    "destination": "cfo/windows/output_record_reg[34]/CE",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "2.056ns  (logic 0.435ns (21.158%)  route 1.621ns (78.842%))",
+    "levels": "4  (LUT3=1 LUT5=1 LUT6=2)"
+  },
+  {
+    "line": 3471,
+    "slack": "0.020",
+    "source": "sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/bypass_muxes.din_im_mux_gen[13].reg/C",
+    "destination": "sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/FB_1.BF_1/no_twos_cmp.REG_lower_im/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_srl16e1/D",
+    "group": "clk500",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.091ns  (logic 0.039ns (42.857%)  route 0.052ns (57.143%))",
+    "levels": "0"
+  },
+  {
+    "line": 3512,
+    "slack": "0.021",
+    "source": "sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/bypass_muxes.din_re_mux_gen[5].reg/C",
+    "destination": "sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/FB_1.BF_1/no_twos_cmp.REG_lower_re/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_srl16e1/D",
+    "group": "clk500",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.093ns  (logic 0.039ns (41.935%)  route 0.054ns (58.065%))",
+    "levels": "0"
+  },
+  {
+    "line": 3553,
+    "slack": "0.024",
+    "source": "sfo/initial_estimator/owner/fft/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/hasbf2.FW_2.BF_2/mux_in_A/use_lut6_2.latency1.Q_reg[1]/C",
+    "destination": "sfo/initial_estimator/owner/fft/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/hasbf2.FW_2.BF_2/in_commutator_A/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_srl16e1/D",
+    "group": "clk500",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.096ns  (logic 0.039ns (40.625%)  route 0.057ns (59.375%))",
+    "levels": "0"
+  },
+  {
+    "line": 3594,
+    "slack": "0.027",
+    "source": "sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/first_bypass_mux_nfft.use_register.din_re_mux_gen[7].reg/C",
+    "destination": "sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/FB_1.BF_1/mem_mux_and_reg_upper_re/slicel_slicem_implementation.delay_line/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_srl16e1/D",
+    "group": "clk500",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.099ns  (logic 0.039ns (39.394%)  route 0.060ns (60.606%))",
+    "levels": "0"
+  },
+  {
+    "line": 3635,
+    "slack": "0.027",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/FB_1.BF_1/BTFLY0/logic_bfly_byp.add_i/adder/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[16]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/hasbf2.FB_2.BF_2/mem_mux_and_reg_upper_im/slicel_slicem_implementation.delay_line/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[7].i_srl16e1/D",
+    "group": "clk500",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.115ns  (logic 0.039ns (33.913%)  route 0.076ns (66.087%))",
+    "levels": "0"
+  },
+  {
+    "line": 3676,
+    "slack": "0.028",
+    "source": "sfo/initial_estimator/owner/fft/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[10].latency1.reg/C",
+    "destination": "sfo/initial_estimator/owner/fft/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/rounding.ROUND_1/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_srl16e1/D",
+    "group": "clk500",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.101ns  (logic 0.039ns (38.614%)  route 0.062ns (61.386%))",
+    "levels": "0"
+  },
+  {
+    "line": 3717,
+    "slack": "0.028",
+    "source": "sfo/initial_estimator/owner/fft/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg/C",
+    "destination": "sfo/initial_estimator/owner/fft/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/rounding.ROUND_1/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[7].i_srl16e1/D",
+    "group": "clk500",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.116ns  (logic 0.038ns (32.759%)  route 0.078ns (67.241%))",
+    "levels": "0"
+  },
+  {
+    "line": 3758,
+    "slack": "0.029",
+    "source": "sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[5].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[14].latency1.reg/C",
+    "destination": "sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[5].natural_order_input.PE/rounding.ROUND_0/reg_gate.delay_d_2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_srl16e1/D",
+    "group": "clk500",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.094ns  (logic 0.037ns (39.362%)  route 0.057ns (60.638%))",
+    "levels": "0"
+  },
+  {
+    "line": 3799,
+    "slack": "0.030",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/rounding.ROUND_1/gated_incr_regs[3].ff/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/FB_1.BF_1/mem_mux_and_reg_upper_im/slicel_slicem_implementation.delay_line/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_srl16e1/D",
+    "group": "clk500",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.102ns  (logic 0.039ns (38.235%)  route 0.063ns (61.765%))",
+    "levels": "0"
+  },
+  {
+    "line": 3840,
+    "slack": "0.032",
+    "source": "sfo/initial_estimator/owner/fft/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/FB_1.BF_1/mem_mux_and_reg_upper_im/slicel_slicem_implementation.mux/use_lut6_2.latency1.Q_reg[16]/C",
+    "destination": "sfo/initial_estimator/owner/fft/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/FB_1.BF_1/MEM/dist_ram.srlram.ram/fixed_length.shift_ram/i_bb_inst/f1.only_clb.srl_sig_reg[31][16]_srl32/D",
+    "group": "clk500",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.120ns  (logic 0.038ns (31.667%)  route 0.082ns (68.333%))",
+    "levels": "0"
+  },
+  {
+    "line": 3937,
+    "slack": "5.297",
+    "source": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C",
+    "destination": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.395ns  (logic 0.076ns (5.448%)  route 1.319ns (94.552%))",
+    "levels": "0"
+  },
+  {
+    "line": 3967,
+    "slack": "5.536",
+    "source": "sfo/two_pass_transport/residual_request_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]/C",
+    "destination": "sfo/two_pass_transport/residual_request_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.156ns  (logic 0.079ns (6.834%)  route 1.077ns (93.166%))",
+    "levels": "0"
+  },
+  {
+    "line": 3997,
+    "slack": "5.750",
+    "source": "sfo/two_pass_transport/residual_data_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[5]/C",
+    "destination": "sfo/two_pass_transport/residual_data_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.942ns  (logic 0.080ns (8.493%)  route 0.862ns (91.507%))",
+    "levels": "0"
+  },
+  {
+    "line": 4027,
+    "slack": "5.801",
+    "source": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]/C",
+    "destination": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.891ns  (logic 0.078ns (8.754%)  route 0.813ns (91.246%))",
+    "levels": "0"
+  },
+  {
+    "line": 4057,
+    "slack": "5.861",
+    "source": "sfo/two_pass_transport/residual_result_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C",
+    "destination": "sfo/two_pass_transport/residual_result_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.831ns  (logic 0.081ns (9.747%)  route 0.750ns (90.253%))",
+    "levels": "0"
+  },
+  {
+    "line": 4087,
+    "slack": "5.894",
+    "source": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C",
+    "destination": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.798ns  (logic 0.079ns (9.900%)  route 0.719ns (90.100%))",
+    "levels": "0"
+  },
+  {
+    "line": 4117,
+    "slack": "5.894",
+    "source": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C",
+    "destination": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.798ns  (logic 0.079ns (9.900%)  route 0.719ns (90.100%))",
+    "levels": "0"
+  },
+  {
+    "line": 4147,
+    "slack": "5.896",
+    "source": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.796ns  (logic 0.078ns (9.799%)  route 0.718ns (90.201%))",
+    "levels": "0"
+  },
+  {
+    "line": 4177,
+    "slack": "5.909",
+    "source": "sfo/two_pass_transport/residual_data_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[8]/C",
+    "destination": "sfo/two_pass_transport/residual_data_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.783ns  (logic 0.079ns (10.089%)  route 0.704ns (89.911%))",
+    "levels": "0"
+  },
+  {
+    "line": 4207,
+    "slack": "5.955",
+    "source": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[5]/C",
+    "destination": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.737ns  (logic 0.079ns (10.719%)  route 0.658ns (89.281%))",
+    "levels": "0"
+  },
+  {
+    "line": 4252,
+    "slack": "0.721",
+    "source": "sfo/residual_estimator/aux_service/xfft_protocol_error_500_reg/C",
+    "destination": "sfo/residual_estimator/aux_service/errors_meta_reg[1]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.260ns  (logic 0.079ns (6.270%)  route 1.181ns (93.730%))",
+    "levels": "0"
+  },
+  {
+    "line": 4300,
+    "slack": "0.774",
+    "source": "sfo/residual_estimator/aux_service/xfft_overflow_500_reg/C",
+    "destination": "sfo/residual_estimator/aux_service/errors_meta_reg[0]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.209ns  (logic 0.079ns (6.534%)  route 1.130ns (93.466%))",
+    "levels": "0"
+  },
+  {
+    "line": 4348,
+    "slack": "0.955",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.070ns  (logic 0.081ns (7.570%)  route 0.989ns (92.430%))",
+    "levels": "0"
+  },
+  {
+    "line": 4378,
+    "slack": "0.990",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[5]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.035ns  (logic 0.079ns (7.633%)  route 0.956ns (92.367%))",
+    "levels": "0"
+  },
+  {
+    "line": 4408,
+    "slack": "1.001",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.024ns  (logic 0.079ns (7.715%)  route 0.945ns (92.285%))",
+    "levels": "0"
+  },
+  {
+    "line": 4438,
+    "slack": "1.075",
+    "source": "sfo/residual_estimator/aux_service/status_toggle_reg/C",
+    "destination": "sfo/residual_estimator/aux_service/status_sync_reg[0]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.906ns  (logic 0.079ns (8.720%)  route 0.827ns (91.280%))",
+    "levels": "0"
+  },
+  {
+    "line": 4486,
+    "slack": "1.239",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[10]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.786ns  (logic 0.079ns (10.051%)  route 0.707ns (89.949%))",
+    "levels": "0"
+  },
+  {
+    "line": 4516,
+    "slack": "1.251",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.774ns  (logic 0.080ns (10.336%)  route 0.694ns (89.664%))",
+    "levels": "0"
+  },
+  {
+    "line": 4546,
+    "slack": "1.331",
+    "source": "sfo/residual_estimator/aux_service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]/C",
+    "destination": "sfo/residual_estimator/aux_service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.694ns  (logic 0.077ns (11.095%)  route 0.617ns (88.905%))",
+    "levels": "0"
+  },
+  {
+    "line": 4576,
+    "slack": "1.350",
+    "source": "sfo/initial_estimator/owner/fft/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C",
+    "destination": "sfo/initial_estimator/owner/fft/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D",
+    "group": "clk125",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.675ns  (logic 0.079ns (11.704%)  route 0.596ns (88.296%))",
+    "levels": "0"
+  },
+  {
+    "line": 4612,
+    "slack": "0.056",
+    "source": "sfo/residual_estimator/front_stage/main/service/xfft_overflow_500_reg/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/errors_meta_reg[0]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.143ns  (logic 0.038ns (26.573%)  route 0.105ns (73.427%))",
+    "levels": "0"
+  },
+  {
+    "line": 4660,
+    "slack": "0.063",
+    "source": "sfo/residual_estimator/front_stage/main/service/ingress_underflow_500_reg/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/errors_meta_reg[2]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.151ns  (logic 0.039ns (25.828%)  route 0.112ns (74.172%))",
+    "levels": "0"
+  },
+  {
+    "line": 4708,
+    "slack": "0.071",
+    "source": "sfo/residual_estimator/front_stage/main/service/status_toggle_reg/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/status_sync_reg[0]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.159ns  (logic 0.039ns (24.528%)  route 0.120ns (75.472%))",
+    "levels": "0"
+  },
+  {
+    "line": 4756,
+    "slack": "0.072",
+    "source": "sfo/residual_estimator/front_stage/main/service/xfft_protocol_error_500_reg/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/errors_meta_reg[1]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.160ns  (logic 0.038ns (23.750%)  route 0.122ns (76.250%))",
+    "levels": "0"
+  },
+  {
+    "line": 4804,
+    "slack": "0.082",
+    "source": "sfo/residual_estimator/front_stage/main/service/egress_overflow_500_reg/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/errors_meta_reg[3]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.169ns  (logic 0.039ns (23.077%)  route 0.130ns (76.923%))",
+    "levels": "0"
+  },
+  {
+    "line": 4852,
+    "slack": "0.083",
+    "source": "sfo/residual_estimator/aux_service/ingress_underflow_500_reg/C",
+    "destination": "sfo/residual_estimator/aux_service/errors_meta_reg[2]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.171ns  (logic 0.039ns (22.807%)  route 0.132ns (77.193%))",
+    "levels": "0"
+  },
+  {
+    "line": 4900,
+    "slack": "0.184",
+    "source": "sfo/residual_estimator/aux_service/egress_overflow_500_reg/C",
+    "destination": "sfo/residual_estimator/aux_service/errors_meta_reg[3]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.272ns  (logic 0.039ns (14.338%)  route 0.233ns (85.662%))",
+    "levels": "0"
+  },
+  {
+    "line": 4948,
+    "slack": "0.344",
+    "source": "sfo/residual_estimator/aux_service/status_toggle_reg/C",
+    "destination": "sfo/residual_estimator/aux_service/status_sync_reg[0]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.432ns  (logic 0.039ns (9.028%)  route 0.393ns (90.972%))",
+    "levels": "0"
+  },
+  {
+    "line": 4996,
+    "slack": "0.504",
+    "source": "sfo/residual_estimator/aux_service/xfft_overflow_500_reg/C",
+    "destination": "sfo/residual_estimator/aux_service/errors_meta_reg[0]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.593ns  (logic 0.039ns (6.577%)  route 0.554ns (93.423%))",
+    "levels": "0"
+  },
+  {
+    "line": 5044,
+    "slack": "0.538",
+    "source": "sfo/residual_estimator/aux_service/xfft_protocol_error_500_reg/C",
+    "destination": "sfo/residual_estimator/aux_service/errors_meta_reg[1]/D",
+    "group": "clk125",
+    "type": "Hold (Min at Fast Process Corner)",
+    "delay": "0.626ns  (logic 0.039ns (6.230%)  route 0.587ns (93.770%))",
+    "levels": "0"
+  },
+  {
+    "line": 5107,
+    "slack": "6.775",
+    "source": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]/C",
+    "destination": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.250ns  (logic 0.080ns (6.400%)  route 1.170ns (93.600%))",
+    "levels": "0"
+  },
+  {
+    "line": 5137,
+    "slack": "6.885",
+    "source": "sfo/two_pass_transport/shared_raw.hub/training_data/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[9]/C",
+    "destination": "sfo/two_pass_transport/shared_raw.hub/training_data/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.140ns  (logic 0.079ns (6.930%)  route 1.061ns (93.070%))",
+    "levels": "0"
+  },
+  {
+    "line": 5167,
+    "slack": "7.189",
+    "source": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C",
+    "destination": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.836ns  (logic 0.079ns (9.450%)  route 0.757ns (90.550%))",
+    "levels": "0"
+  },
+  {
+    "line": 5197,
+    "slack": "7.204",
+    "source": "sfo/two_pass_transport/residual_result_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C",
+    "destination": "sfo/two_pass_transport/residual_result_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.821ns  (logic 0.079ns (9.622%)  route 0.742ns (90.378%))",
+    "levels": "0"
+  },
+  {
+    "line": 5227,
+    "slack": "7.210",
+    "source": "metadata/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C",
+    "destination": "metadata/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.815ns  (logic 0.078ns (9.571%)  route 0.737ns (90.429%))",
+    "levels": "0"
+  },
+  {
+    "line": 5257,
+    "slack": "7.257",
+    "source": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C",
+    "destination": "sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.768ns  (logic 0.079ns (10.286%)  route 0.689ns (89.714%))",
+    "levels": "0"
+  },
+  {
+    "line": 5287,
+    "slack": "7.479",
+    "source": "sfo/two_pass_transport/shared_raw.hub/training_data/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]/C",
+    "destination": "sfo/two_pass_transport/shared_raw.hub/training_data/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.546ns  (logic 0.080ns (14.652%)  route 0.466ns (85.348%))",
+    "levels": "0"
+  },
+  {
+    "line": 5317,
+    "slack": "7.491",
+    "source": "sfo/two_pass_transport/shared_raw.hub/raw_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C",
+    "destination": "sfo/two_pass_transport/shared_raw.hub/raw_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.534ns  (logic 0.081ns (15.169%)  route 0.453ns (84.831%))",
+    "levels": "0"
+  },
+  {
+    "line": 5347,
+    "slack": "7.501",
+    "source": "sfo/two_pass_transport/shared_raw.hub/training_data/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]/C",
+    "destination": "sfo/two_pass_transport/shared_raw.hub/training_data/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.524ns  (logic 0.080ns (15.267%)  route 0.444ns (84.733%))",
+    "levels": "0"
+  },
+  {
+    "line": 5377,
+    "slack": "7.506",
+    "source": "sfo/two_pass_transport/residual_config_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C",
+    "destination": "sfo/two_pass_transport/residual_config_cdc/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.519ns  (logic 0.079ns (15.222%)  route 0.440ns (84.778%))",
+    "levels": "0"
+  },
+  {
+    "line": 5422,
+    "slack": "1.302",
+    "source": "cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C",
+    "destination": "cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.723ns  (logic 0.079ns (10.927%)  route 0.644ns (89.073%))",
+    "levels": "0"
+  },
+  {
+    "line": 5452,
+    "slack": "1.438",
+    "source": "cfo/windows/complete_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C",
+    "destination": "cfo/windows/complete_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.587ns  (logic 0.079ns (13.458%)  route 0.508ns (86.542%))",
+    "levels": "0"
+  },
+  {
+    "line": 5482,
+    "slack": "1.461",
+    "source": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[6]/C",
+    "destination": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][6]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.564ns  (logic 0.079ns (14.007%)  route 0.485ns (85.993%))",
+    "levels": "0"
+  },
+  {
+    "line": 5512,
+    "slack": "1.470",
+    "source": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[5]/C",
+    "destination": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.555ns  (logic 0.079ns (14.234%)  route 0.476ns (85.766%))",
+    "levels": "0"
+  },
+  {
+    "line": 5542,
+    "slack": "1.493",
+    "source": "cfo/windows/complete_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C",
+    "destination": "cfo/windows/complete_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.532ns  (logic 0.080ns (15.038%)  route 0.452ns (84.962%))",
+    "levels": "0"
+  },
+  {
+    "line": 5572,
+    "slack": "1.500",
+    "source": "cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C",
+    "destination": "cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.525ns  (logic 0.079ns (15.048%)  route 0.446ns (84.952%))",
+    "levels": "0"
+  },
+  {
+    "line": 5602,
+    "slack": "1.502",
+    "source": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[9]/C",
+    "destination": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][9]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.523ns  (logic 0.079ns (15.105%)  route 0.444ns (84.895%))",
+    "levels": "0"
+  },
+  {
+    "line": 5632,
+    "slack": "1.506",
+    "source": "cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C",
+    "destination": "cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.519ns  (logic 0.081ns (15.607%)  route 0.438ns (84.393%))",
+    "levels": "0"
+  },
+  {
+    "line": 5662,
+    "slack": "1.515",
+    "source": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[10]/C",
+    "destination": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][10]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.510ns  (logic 0.079ns (15.490%)  route 0.431ns (84.510%))",
+    "levels": "0"
+  },
+  {
+    "line": 5692,
+    "slack": "1.520",
+    "source": "cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C",
+    "destination": "cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D",
+    "group": "clk150",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.505ns  (logic 0.079ns (15.644%)  route 0.426ns (84.356%))",
+    "levels": "0"
+  },
+  {
+    "line": 5737,
+    "slack": "6.782",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.243ns  (logic 0.078ns (6.275%)  route 1.165ns (93.725%))",
+    "levels": "0"
+  },
+  {
+    "line": 5767,
+    "slack": "6.923",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_ingress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/src_gray_ff_reg[2]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_ingress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.102ns  (logic 0.078ns (7.078%)  route 1.024ns (92.922%))",
+    "levels": "0"
+  },
+  {
+    "line": 5797,
+    "slack": "6.982",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.043ns  (logic 0.079ns (7.574%)  route 0.964ns (92.426%))",
+    "levels": "0"
+  },
+  {
+    "line": 5827,
+    "slack": "6.995",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "1.030ns  (logic 0.081ns (7.864%)  route 0.949ns (92.136%))",
+    "levels": "0"
+  },
+  {
+    "line": 5857,
+    "slack": "7.100",
+    "source": "sfo/residual_estimator/aux_service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]/C",
+    "destination": "sfo/residual_estimator/aux_service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.925ns  (logic 0.079ns (8.541%)  route 0.846ns (91.459%))",
+    "levels": "0"
+  },
+  {
+    "line": 5887,
+    "slack": "7.129",
+    "source": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]/C",
+    "destination": "sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.896ns  (logic 0.079ns (8.817%)  route 0.817ns (91.183%))",
+    "levels": "0"
+  },
+  {
+    "line": 5917,
+    "slack": "7.154",
+    "source": "sfo/residual_estimator/aux_service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C",
+    "destination": "sfo/residual_estimator/aux_service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.871ns  (logic 0.081ns (9.300%)  route 0.790ns (90.700%))",
+    "levels": "0"
+  },
+  {
+    "line": 5947,
+    "slack": "7.313",
+    "source": "sfo/initial_estimator/owner/fft/u_ingress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C",
+    "destination": "sfo/initial_estimator/owner/fft/u_ingress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.712ns  (logic 0.079ns (11.096%)  route 0.633ns (88.904%))",
+    "levels": "0"
+  },
+  {
+    "line": 5977,
+    "slack": "7.398",
+    "source": "sfo/initial_estimator/owner/fft/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]/C",
+    "destination": "sfo/initial_estimator/owner/fft/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.627ns  (logic 0.076ns (12.121%)  route 0.551ns (87.879%))",
+    "levels": "0"
+  },
+  {
+    "line": 6007,
+    "slack": "7.443",
+    "source": "sfo/initial_estimator/owner/fft/u_ingress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C",
+    "destination": "sfo/initial_estimator/owner/fft/u_ingress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.582ns  (logic 0.079ns (13.574%)  route 0.503ns (86.426%))",
+    "levels": "0"
+  },
+  {
+    "line": 6052,
+    "slack": "6.162",
+    "source": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C",
+    "destination": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.530ns  (logic 0.080ns (15.094%)  route 0.450ns (84.906%))",
+    "levels": "0"
+  },
+  {
+    "line": 6082,
+    "slack": "6.193",
+    "source": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[11]/C",
+    "destination": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.499ns  (logic 0.076ns (15.230%)  route 0.423ns (84.770%))",
+    "levels": "0"
+  },
+  {
+    "line": 6112,
+    "slack": "6.212",
+    "source": "cfo/windows/complete_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C",
+    "destination": "cfo/windows/complete_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.480ns  (logic 0.081ns (16.875%)  route 0.399ns (83.125%))",
+    "levels": "0"
+  },
+  {
+    "line": 6142,
+    "slack": "6.233",
+    "source": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[5]/C",
+    "destination": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.459ns  (logic 0.080ns (17.429%)  route 0.379ns (82.571%))",
+    "levels": "0"
+  },
+  {
+    "line": 6172,
+    "slack": "6.244",
+    "source": "cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]/C",
+    "destination": "cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.448ns  (logic 0.079ns (17.634%)  route 0.369ns (82.366%))",
+    "levels": "0"
+  },
+  {
+    "line": 6202,
+    "slack": "6.249",
+    "source": "cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C",
+    "destination": "cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.443ns  (logic 0.079ns (17.833%)  route 0.364ns (82.167%))",
+    "levels": "0"
+  },
+  {
+    "line": 6232,
+    "slack": "6.257",
+    "source": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C",
+    "destination": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.435ns  (logic 0.079ns (18.161%)  route 0.356ns (81.839%))",
+    "levels": "0"
+  },
+  {
+    "line": 6262,
+    "slack": "6.258",
+    "source": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]/C",
+    "destination": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.434ns  (logic 0.080ns (18.433%)  route 0.354ns (81.567%))",
+    "levels": "0"
+  },
+  {
+    "line": 6292,
+    "slack": "6.273",
+    "source": "cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C",
+    "destination": "cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.419ns  (logic 0.080ns (19.093%)  route 0.339ns (80.907%))",
+    "levels": "0"
+  },
+  {
+    "line": 6322,
+    "slack": "6.279",
+    "source": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C",
+    "destination": "cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D",
+    "group": "clk500",
+    "type": "Setup (Max at Slow Process Corner)",
+    "delay": "0.413ns  (logic 0.079ns (19.128%)  route 0.334ns (80.872%))",
+    "levels": "0"
+  },
+  {
+    "line": 6368,
+    "slack": "4.958",
+    "source": "sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_125/reset_active_reg_replica_7/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.931ns  (logic 0.079ns (2.695%)  route 2.852ns (97.305%))",
+    "levels": "0"
+  },
+  {
+    "line": 6415,
+    "slack": "5.118",
+    "source": "sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_125/reset_active_reg_replica/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.771ns  (logic 0.079ns (2.851%)  route 2.692ns (97.149%))",
+    "levels": "0"
+  },
+  {
+    "line": 6462,
+    "slack": "5.329",
+    "source": "sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_125/reset_active_reg_replica_5/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.560ns  (logic 0.079ns (3.086%)  route 2.481ns (96.914%))",
+    "levels": "0"
+  },
+  {
+    "line": 6509,
+    "slack": "5.522",
+    "source": "sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_125/reset_active_reg_replica_3/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.368ns  (logic 0.079ns (3.336%)  route 2.289ns (96.664%))",
+    "levels": "0"
+  },
+  {
+    "line": 6556,
+    "slack": "5.594",
+    "source": "sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_125/reset_active_reg_replica_2/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.295ns  (logic 0.079ns (3.442%)  route 2.216ns (96.558%))",
+    "levels": "0"
+  },
+  {
+    "line": 6603,
+    "slack": "5.939",
+    "source": "sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_125/reset_active_reg_replica_4/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "1.950ns  (logic 0.079ns (4.051%)  route 1.871ns (95.949%))",
+    "levels": "0"
+  },
+  {
+    "line": 6650,
+    "slack": "6.777",
+    "source": "reset_a/reset_active_reg_replica_5/C",
+    "destination": "frontend/reset_release_reg[0]/CLR",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "1.115ns  (logic 0.079ns (7.085%)  route 1.036ns (92.915%))",
+    "levels": "0"
+  },
+  {
+    "line": 6697,
+    "slack": "6.777",
+    "source": "reset_a/reset_active_reg_replica_5/C",
+    "destination": "frontend/reset_release_reg[1]/CLR",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "1.115ns  (logic 0.079ns (7.085%)  route 1.036ns (92.915%))",
+    "levels": "0"
+  },
+  {
+    "line": 6744,
+    "slack": "6.794",
+    "source": "sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_125/reset_active_reg_replica_6/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "1.096ns  (logic 0.079ns (7.208%)  route 1.017ns (92.792%))",
+    "levels": "0"
+  },
+  {
+    "line": 6791,
+    "slack": "6.853",
+    "source": "reset_a/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_a/reset_active_reg_replica_1/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "1.036ns  (logic 0.077ns (7.432%)  route 0.959ns (92.568%))",
+    "levels": "0"
+  },
+  {
+    "line": 6844,
+    "slack": "0.176",
+    "source": "reset_a/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_a/reset_active_reg/PRE",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.162ns  (logic 0.039ns (24.074%)  route 0.123ns (75.926%))",
+    "levels": "0"
+  },
+  {
+    "line": 6885,
+    "slack": "0.238",
+    "source": "sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_125/reset_active_reg/PRE",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.224ns  (logic 0.039ns (17.411%)  route 0.185ns (82.589%))",
+    "levels": "0"
+  },
+  {
+    "line": 6926,
+    "slack": "0.291",
+    "source": "reset_a/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_a/reset_active_reg_replica_5/PRE",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.276ns  (logic 0.039ns (14.130%)  route 0.237ns (85.870%))",
+    "levels": "0"
+  },
+  {
+    "line": 6967,
+    "slack": "0.304",
+    "source": "reset_a/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_a/hold_count_reg[0]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.290ns  (logic 0.039ns (13.448%)  route 0.251ns (86.552%))",
+    "levels": "0"
+  },
+  {
+    "line": 7008,
+    "slack": "0.305",
+    "source": "reset_a/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_a/hold_count_reg[1]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.291ns  (logic 0.039ns (13.402%)  route 0.252ns (86.598%))",
+    "levels": "0"
+  },
+  {
+    "line": 7049,
+    "slack": "0.305",
+    "source": "reset_a/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_a/hold_count_reg[2]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.291ns  (logic 0.039ns (13.402%)  route 0.252ns (86.598%))",
+    "levels": "0"
+  },
+  {
+    "line": 7090,
+    "slack": "0.305",
+    "source": "reset_a/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_a/hold_count_reg[3]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.291ns  (logic 0.039ns (13.402%)  route 0.252ns (86.598%))",
+    "levels": "0"
+  },
+  {
+    "line": 7131,
+    "slack": "0.305",
+    "source": "reset_a/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_a/hold_count_reg[4]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.291ns  (logic 0.039ns (13.402%)  route 0.252ns (86.598%))",
+    "levels": "0"
+  },
+  {
+    "line": 7172,
+    "slack": "0.305",
+    "source": "reset_a/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_a/hold_count_reg[5]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.291ns  (logic 0.039ns (13.402%)  route 0.252ns (86.598%))",
+    "levels": "0"
+  },
+  {
+    "line": 7213,
+    "slack": "0.305",
+    "source": "reset_a/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_a/hold_count_reg[6]_inv/PRE",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.291ns  (logic 0.039ns (13.402%)  route 0.252ns (86.598%))",
+    "levels": "0"
+  },
+  {
+    "line": 7270,
+    "slack": "3.129",
+    "source": "sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_150/reset_active_reg_replica_1/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "3.426ns  (logic 0.080ns (2.335%)  route 3.346ns (97.665%))",
+    "levels": "0"
+  },
+  {
+    "line": 7322,
+    "slack": "3.235",
+    "source": "cfo/reset_slow/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/reset_slow/reset_active_reg_replica_6/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "3.322ns  (logic 0.081ns (2.438%)  route 3.241ns (97.562%))",
+    "levels": "0"
+  },
+  {
+    "line": 7369,
+    "slack": "3.694",
+    "source": "cfo/reset_slow/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/reset_slow/reset_active_reg_replica_5/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.863ns  (logic 0.081ns (2.829%)  route 2.782ns (97.171%))",
+    "levels": "0"
+  },
+  {
+    "line": 7416,
+    "slack": "3.919",
+    "source": "sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_150/reset_active_reg_replica_16/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.640ns  (logic 0.080ns (3.030%)  route 2.560ns (96.970%))",
+    "levels": "0"
+  },
+  {
+    "line": 7463,
+    "slack": "3.947",
+    "source": "sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_150/reset_active_reg_replica_23/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.611ns  (logic 0.080ns (3.064%)  route 2.531ns (96.936%))",
+    "levels": "0"
+  },
+  {
+    "line": 7510,
+    "slack": "3.999",
+    "source": "sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_150/reset_active_reg_replica_27/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.559ns  (logic 0.080ns (3.126%)  route 2.479ns (96.874%))",
+    "levels": "0"
+  },
+  {
+    "line": 7557,
+    "slack": "4.146",
+    "source": "sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_150/reset_active_reg_replica_14/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.413ns  (logic 0.080ns (3.315%)  route 2.333ns (96.685%))",
+    "levels": "0"
+  },
+  {
+    "line": 7604,
+    "slack": "4.146",
+    "source": "sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_150/reset_active_reg_replica_28/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.413ns  (logic 0.080ns (3.315%)  route 2.333ns (96.685%))",
+    "levels": "0"
+  },
+  {
+    "line": 7651,
+    "slack": "4.162",
+    "source": "sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_150/reset_active_reg_replica_29/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.396ns  (logic 0.080ns (3.339%)  route 2.316ns (96.661%))",
+    "levels": "0"
+  },
+  {
+    "line": 7698,
+    "slack": "4.213",
+    "source": "sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "sfo/two_pass_transport/reset_150/reset_active_reg_replica_26/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "2.345ns  (logic 0.080ns (3.412%)  route 2.265ns (96.588%))",
+    "levels": "0"
+  },
+  {
+    "line": 7751,
+    "slack": "0.152",
+    "source": "reset_b/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_b/hold_count_reg[0]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.139ns  (logic 0.040ns (28.777%)  route 0.099ns (71.223%))",
+    "levels": "0"
+  },
+  {
+    "line": 7792,
+    "slack": "0.152",
+    "source": "reset_b/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_b/reset_active_reg/PRE",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.139ns  (logic 0.040ns (28.777%)  route 0.099ns (71.223%))",
+    "levels": "0"
+  },
+  {
+    "line": 7833,
+    "slack": "0.153",
+    "source": "reset_b/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_b/hold_count_reg[1]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.139ns  (logic 0.040ns (28.777%)  route 0.099ns (71.223%))",
+    "levels": "0"
+  },
+  {
+    "line": 7874,
+    "slack": "0.153",
+    "source": "reset_b/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_b/hold_count_reg[2]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.139ns  (logic 0.040ns (28.777%)  route 0.099ns (71.223%))",
+    "levels": "0"
+  },
+  {
+    "line": 7915,
+    "slack": "0.153",
+    "source": "reset_b/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_b/hold_count_reg[3]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.139ns  (logic 0.040ns (28.777%)  route 0.099ns (71.223%))",
+    "levels": "0"
+  },
+  {
+    "line": 7956,
+    "slack": "0.153",
+    "source": "reset_b/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_b/hold_count_reg[4]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.139ns  (logic 0.040ns (28.777%)  route 0.099ns (71.223%))",
+    "levels": "0"
+  },
+  {
+    "line": 7997,
+    "slack": "0.153",
+    "source": "reset_b/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_b/hold_count_reg[5]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.139ns  (logic 0.040ns (28.777%)  route 0.099ns (71.223%))",
+    "levels": "0"
+  },
+  {
+    "line": 8038,
+    "slack": "0.153",
+    "source": "reset_b/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "reset_b/hold_count_reg[6]_inv/PRE",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.139ns  (logic 0.040ns (28.777%)  route 0.099ns (71.223%))",
+    "levels": "0"
+  },
+  {
+    "line": 8079,
+    "slack": "0.154",
+    "source": "cfo/windows/reset_slow/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_slow/hold_count_reg[0]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.141ns  (logic 0.040ns (28.369%)  route 0.101ns (71.631%))",
+    "levels": "0"
+  },
+  {
+    "line": 8120,
+    "slack": "0.154",
+    "source": "cfo/windows/reset_slow/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_slow/reset_active_reg/PRE",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.141ns  (logic 0.040ns (28.369%)  route 0.101ns (71.631%))",
+    "levels": "0"
+  },
+  {
+    "line": 8177,
+    "slack": "0.162",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/reset_active_reg_replica_1/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "1.728ns  (logic 0.081ns (4.688%)  route 1.647ns (95.312%))",
+    "levels": "0"
+  },
+  {
+    "line": 8224,
+    "slack": "0.478",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/reset_active_reg/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "1.412ns  (logic 0.081ns (5.737%)  route 1.331ns (94.263%))",
+    "levels": "0"
+  },
+  {
+    "line": 8271,
+    "slack": "0.874",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/reset_active_reg_replica_3/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "1.016ns  (logic 0.081ns (7.972%)  route 0.935ns (92.028%))",
+    "levels": "0"
+  },
+  {
+    "line": 8318,
+    "slack": "1.156",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/hold_count_reg[0]/CLR",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "0.735ns  (logic 0.081ns (11.020%)  route 0.654ns (88.980%))",
+    "levels": "0"
+  },
+  {
+    "line": 8365,
+    "slack": "1.169",
+    "source": "cfo/estimator/reset_fast_sync/arststages_ff_reg[3]/C",
+    "destination": "cfo/estimator/expected_window_reg[0]/CLR",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "0.723ns  (logic 0.081ns (11.203%)  route 0.642ns (88.797%))",
+    "levels": "0"
+  },
+  {
+    "line": 8412,
+    "slack": "1.169",
+    "source": "cfo/estimator/reset_fast_sync/arststages_ff_reg[3]/C",
+    "destination": "cfo/estimator/locked_generation_reg[0]/CLR",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "0.723ns  (logic 0.081ns (11.203%)  route 0.642ns (88.797%))",
+    "levels": "0"
+  },
+  {
+    "line": 8459,
+    "slack": "1.169",
+    "source": "cfo/estimator/reset_fast_sync/arststages_ff_reg[3]/C",
+    "destination": "cfo/estimator/locked_generation_reg[1]/CLR",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "0.723ns  (logic 0.081ns (11.203%)  route 0.642ns (88.797%))",
+    "levels": "0"
+  },
+  {
+    "line": 8506,
+    "slack": "1.169",
+    "source": "cfo/estimator/reset_fast_sync/arststages_ff_reg[3]/C",
+    "destination": "cfo/estimator/locked_generation_reg[21]/CLR",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "0.723ns  (logic 0.081ns (11.203%)  route 0.642ns (88.797%))",
+    "levels": "0"
+  },
+  {
+    "line": 8553,
+    "slack": "1.169",
+    "source": "cfo/estimator/reset_fast_sync/arststages_ff_reg[3]/C",
+    "destination": "cfo/estimator/locked_generation_reg[2]/CLR",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "0.723ns  (logic 0.081ns (11.203%)  route 0.642ns (88.797%))",
+    "levels": "0"
+  },
+  {
+    "line": 8600,
+    "slack": "1.231",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/reset_active_reg_replica/PRE",
+    "group": "**async_default**",
+    "type": "Recovery (Max at Slow Process Corner)",
+    "delay": "0.659ns  (logic 0.081ns (12.291%)  route 0.578ns (87.709%))",
+    "levels": "0"
+  },
+  {
+    "line": 8653,
+    "slack": "0.156",
+    "source": "cfo/windows/window_credits/wr_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/window_credits/complete_reg/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.142ns  (logic 0.041ns (28.873%)  route 0.101ns (71.127%))",
+    "levels": "0"
+  },
+  {
+    "line": 8694,
+    "slack": "0.156",
+    "source": "cfo/windows/window_credits/wr_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/window_credits/seen_reg/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.142ns  (logic 0.041ns (28.873%)  route 0.101ns (71.127%))",
+    "levels": "0"
+  },
+  {
+    "line": 8735,
+    "slack": "0.177",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/hold_count_reg[1]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.162ns  (logic 0.040ns (24.691%)  route 0.122ns (75.309%))",
+    "levels": "0"
+  },
+  {
+    "line": 8776,
+    "slack": "0.177",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/hold_count_reg[2]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.162ns  (logic 0.040ns (24.691%)  route 0.122ns (75.309%))",
+    "levels": "0"
+  },
+  {
+    "line": 8817,
+    "slack": "0.177",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/hold_count_reg[3]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.162ns  (logic 0.040ns (24.691%)  route 0.122ns (75.309%))",
+    "levels": "0"
+  },
+  {
+    "line": 8858,
+    "slack": "0.177",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/hold_count_reg[4]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.162ns  (logic 0.040ns (24.691%)  route 0.122ns (75.309%))",
+    "levels": "0"
+  },
+  {
+    "line": 8899,
+    "slack": "0.177",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/hold_count_reg[5]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.162ns  (logic 0.040ns (24.691%)  route 0.122ns (75.309%))",
+    "levels": "0"
+  },
+  {
+    "line": 8940,
+    "slack": "0.177",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/hold_count_reg[6]_inv/PRE",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.162ns  (logic 0.040ns (24.691%)  route 0.122ns (75.309%))",
+    "levels": "0"
+  },
+  {
+    "line": 8981,
+    "slack": "0.181",
+    "source": "cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C",
+    "destination": "cfo/windows/reset_fast/reset_active_reg_replica_2/PRE",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.166ns  (logic 0.040ns (24.096%)  route 0.126ns (75.904%))",
+    "levels": "0"
+  },
+  {
+    "line": 9022,
+    "slack": "0.186",
+    "source": "cfo/estimator/reset_fast_sync/arststages_ff_reg[3]/C",
+    "destination": "cfo/estimator/locked_frame_reg[19]/CLR",
+    "group": "**async_default**",
+    "type": "Removal (Min at Fast Process Corner)",
+    "delay": "0.173ns  (logic 0.041ns (23.699%)  route 0.132ns (76.301%))",
+    "levels": "0"
+  }
+]

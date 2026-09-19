@@ -18,7 +18,7 @@ module ota_training_dispatch(
  output wire release_valid,input wire release_ready,output wire [63:0] release_record,
  output logic fault,output logic [7:0] error_code
 );
- localparam [2:0] IDLE=0,FILL=1,PUBLISH=2,WAIT_RESULT=3,RELEASE=4;
+ localparam [2:0] IDLE=0,FILL=1,PUBLISH=2,WAIT_RESULT=3,RELEASE=4,DRAIN_TAP=5;
  logic [2:0] state;
  logic [207:0] context_record;
  logic [12:0] expected_beat;
@@ -32,9 +32,18 @@ module ota_training_dispatch(
                 s_record[160:129]=={19'd0,expected_beat}&&s_record[128]==(expected_beat==5171);
  assign cfg_ready=!stopped&&state==IDLE;
  assign s_ready=!stopped&&state==FILL;
- assign tap_fire=take&&data_good;
- assign tap_data=s_record[127:0];assign tap_frame=frame;
- assign tap_absolute=32'sd5272+$signed({17'd0,expected_beat,2'b00});
+ logic tap_fire_q;
+ logic [127:0] tap_data_q;
+ logic [31:0] tap_frame_q;
+ logic signed [31:0] tap_absolute_q;
+ assign tap_fire=tap_fire_q;
+ assign tap_data=tap_data_q;assign tap_frame=tap_frame_q;
+ assign tap_absolute=tap_absolute_q;
+ always_ff @(posedge clk)begin
+  tap_data_q<=s_record[127:0];tap_frame_q<=frame;
+  tap_absolute_q<=32'sd5272+$signed({17'd0,expected_beat,2'b00});
+  if(stopped)tap_fire_q<=0;else tap_fire_q<=take&&data_good;
+ end
  assign frame_valid=!stopped&&state==PUBLISH&&pending[0];
  assign coarse_valid=!stopped&&state==PUBLISH&&pending[1];
  assign fine_valid=!stopped&&state==PUBLISH&&pending[2];
@@ -59,9 +68,10 @@ module ota_training_dispatch(
     end
     FILL:if(take)begin
      if(!data_good)begin fault<=1;error_code<=8'h03;end
-     else if(expected_beat==5171)begin pending<=4'b1111;state<=PUBLISH;end
+     else if(expected_beat==5171)begin pending<=4'b1111;state<=DRAIN_TAP;end
      else expected_beat<=expected_beat+1'b1;
     end
+    DRAIN_TAP:state<=PUBLISH;
     PUBLISH:begin pending<=pending&~sent;if((pending&~sent)==0)state<=WAIT_RESULT;end
     WAIT_RESULT:if(initial_done_valid&&initial_done_ready)begin
      if(initial_done_frame!=frame)begin fault<=1;error_code<=8'h04;end

@@ -38,7 +38,7 @@ module sfo_residual_pilot_grid4 #(
     output logic        [  9:0] done_pilot_count,
     output logic                busy
 );
-  localparam [2:0] IDLE = 0, FILL = 1, GAIN = 2, DRAIN = 3, DONE = 4;
+  localparam [2:0] IDLE = 0, FILL = 1, GAIN = 2, DRAIN = 3, DONE = 4, WRITE_DRAIN = 5;
   logic [2:0] state;
   logic [6:0] active_slot;
   logic [31:0] active_tag, age;
@@ -63,17 +63,15 @@ module sfo_residual_pilot_grid4 #(
   function automatic [30:0] positive_scale(input logic [17:0] value,
                                            input logic signed [4:0] shift);
     logic [30:0] quotient;
-    logic [17:0] remainder, half;
-    integer n;
     begin
-      if (shift >= 0) positive_scale = {13'd0, value} << shift;
-      else begin
-        n = -shift;
-        quotient = value >> n;
-        remainder = value & ((18'd1 << n) - 18'd1);
-        half = 18'd1 << (n - 1);
-        if (remainder > half || (remainder == half && quotient[0])) quotient = quotient + 31'd1;
-        positive_scale = quotient;
+      // gain_probe starts at 12 and stops at -2; these are the only right shifts.
+      if(shift>=0)positive_scale={13'd0,value}<<shift;
+      else if(shift==-5'sd1)begin
+        quotient={14'd0,value[17:1]};
+        positive_scale=quotient+{30'd0,(value[0]&&value[1])};
+      end else begin
+        quotient={15'd0,value[17:2]};
+        positive_scale=quotient+{30'd0,(value[1]&&(value[0]||value[2]))};
       end
     end
   endfunction
@@ -111,7 +109,7 @@ module sfo_residual_pilot_grid4 #(
       input_error = 3;
     else if (beat_maximum > 18'd46341) input_error = 5;
   end
-  wire expired = (state == FILL || state == GAIN || state == DRAIN) && age >= TIMEOUT_CYCLES - 1;
+  wire expired = (state == FILL || state == WRITE_DRAIN || state == GAIN || state == DRAIN) && age >= TIMEOUT_CYCLES - 1;
   wire advance = !m_valid || m_ready;
   wire write_enable = s_valid && s_ready && input_error == 0 && !expired;
   wire read_issue = state == DRAIN && advance && issued_count < 10'd512 && !abort && !rst &&
@@ -130,15 +128,22 @@ module sfo_residual_pilot_grid4 #(
   assign done_input_beats = input_count;
   assign done_output_beats = output_count;
   assign done_pilot_count = pilot_count;
-  // Writes use adjacent banks 0/1 or 2/3. There is no reset loop over RAM.
-  always_ff @(posedge clk) begin
-    if (write_enable) begin
-      if (!q0[1]) begin
-        if (s_mask[0]) bank0[q0[10:2]] <= s_data[35:0];
-        if (s_mask[1]) bank1[q1[10:2]] <= s_data[71:36];
+  logic write_command_valid;
+  logic [71:0] write_command_data;
+  logic [1:0] write_command_mask;
+  logic [10:0] write_command_q0;
+  // Complete validated private-RAM command; cancellation suppresses publication.
+  always_ff @(posedge clk)begin
+    write_command_data<=s_data;write_command_mask<=s_mask;write_command_q0<=q0;
+    if(rst || abort || expired)write_command_valid<=0;
+    else write_command_valid<=write_enable;
+    if(write_command_valid)begin
+      if(!write_command_q0[1])begin
+        if(write_command_mask[0])bank0[write_command_q0[10:2]]<=write_command_data[35:0];
+        if(write_command_mask[1])bank1[write_command_q0[10:2]]<=write_command_data[71:36];
       end else begin
-        if (s_mask[0]) bank2[q0[10:2]] <= s_data[35:0];
-        if (s_mask[1]) bank3[q1[10:2]] <= s_data[71:36];
+        if(write_command_mask[0])bank2[write_command_q0[10:2]]<=write_command_data[35:0];
+        if(write_command_mask[1])bank3[write_command_q0[10:2]]<=write_command_data[71:36];
       end
     end
     if (read_issue) begin
@@ -213,9 +218,10 @@ module sfo_residual_pilot_grid4 #(
           end else begin
             pilot_count <= pilot_count + {9'd0, s_mask[0]} + {9'd0, s_mask[1]};
             if (beat_maximum > maximum) maximum <= beat_maximum;
-            if (input_count == 511) state <= GAIN;
+            if (input_count == 511) state <= WRITE_DRAIN;
           end
         end
+        WRITE_DRAIN:state<=GAIN;
         GAIN: begin
           if (positive_scale(maximum, gain_probe) <= 31'd16383) begin
             gain_selected <= gain_probe;

@@ -56,6 +56,7 @@ module sfo_guarded_resampling_core #(
       .debug_guarded_data(),
       .saturation        ()
   );
+  wire farrow_input_empty;
   sfo_guarded_farrow_stream #(
       .NOMINAL_SAMPLES(NOMINAL_SAMPLES)
   ) stream (
@@ -82,6 +83,7 @@ module sfo_guarded_resampling_core #(
       .fifo_count       (observed_fifo),
       .inflight         (observed_inflight),
       .write_count      (),
+      .input_pipeline_empty(farrow_input_empty),
       .done             ()
   );
   sfo_fir_down15 fir15_decimator (
@@ -118,7 +120,7 @@ module sfo_guarded_resampling_core #(
     s_valid && s_ready
   };
   assign observed_arithmetic_empty = (observed_credit == 0) && (observed_fifo == 0) &&
-      (observed_inflight == 0);
+      (observed_inflight == 0) && farrow_input_empty;
   integer lane;
   reg [63:0] physical;
   always @* begin

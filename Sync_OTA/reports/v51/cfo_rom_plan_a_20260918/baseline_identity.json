@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-09-18T18:22:22.565777+02:00",
+  "files": [
+    {
+      "path": "rtl/cfo/cfo_front2048_window_a07.sv",
+      "sha256": "d771394e1dca169e65a2384890724c990eef796fdbc3ca1f87b6d21f08d3806d"
+    },
+    {
+      "path": "Sync_OTA.xpr",
+      "sha256": "e028ec9fd782a2a3c70a9bc9ef201102453ae5d442599feb12eee73fca6d2b46"
+    },
+    {
+      "path": "tools/v51/static_design_audit.py",
+      "sha256": "a80b709a483eb3e902fa028318b3ae3d09575fbc93cb83ceca72109bb2f1273f"
+    },
+    {
+      "path": "README_ZH.md",
+      "sha256": "bcf2475fb81fc4d780e2a09d59e53770961aeb1da5bb89239bbbb19a2b67ba39"
+    }
+  ]
+}

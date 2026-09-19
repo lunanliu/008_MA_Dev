@@ -38,7 +38,8 @@ module ota_shared_raw_store #(
  logic ram_we,ram_re;
  logic [AW-1:0] ram_wa,ram_ra;
  logic [127:0] ram_wd;
- logic [2:0] rv,owner;
+ logic [6:0] rv,owner;
+ wire memory_write_commit,memory_read_valid;
  wire pf=frame_valid&&frame_ready,tf=train_valid&&train_ready;
  wire wf=s_valid&&s_ready;
  wire ppop=f_valid&&f_ready,tpop=t_valid&&t_ready;
@@ -58,11 +59,12 @@ module ota_shared_raw_store #(
  wire issue=t_issue||p_issue;
  wire [AW-1:0] issue_address=t_issue?tp:pp;
  wire collision=wf&&issue&&wp==issue_address;
- wire preturn=rv[2]&&!owner[2],treturn=rv[2]&&owner[2];
+ wire preturn=memory_read_valid&&!owner[6],treturn=memory_read_valid&&owner[6];
  // Every response already owns capacity before the RAM request is issued.
- sfo_uram_frame_bank #(.DEPTH_BEATS(DEPTH),.ADDR_WIDTH(AW)) memory(
+ sfo_uram_frame_bank #(.SEGMENTED(1'b1),.DEPTH_BEATS(DEPTH),.ADDR_WIDTH(AW)) memory(
   .clk(clk),.rst(rst),.wr_en(ram_we),.wr_addr(ram_wa),.wr_data(ram_wd),
-  .rd_en(ram_re),.rd_addr(ram_ra),.rd_data(ram_data));
+  .rd_en(ram_re),.rd_addr(ram_ra),.rd_data(ram_data),
+  .rd_valid(memory_read_valid),.wr_commit(memory_write_commit),.wr_commit_addr());
  sfo_sync_fifo #(.WIDTH(128),.DEPTH(RESPONSE_DEPTH)) frame_responses(
   .clk(clk),.rst(rst),.s_valid(preturn),.s_ready(pqready),.s_data(ram_data),
   .m_valid(pqvalid),.m_ready(ppop),.m_data(pqdata),.level(),.high_water(),.reset_busy(pqbusy),.error_sticky(pqerror));
@@ -78,7 +80,7 @@ module ota_shared_raw_store #(
  wire [63:0] retirement_delta=retirement_candidate>retired_words?retirement_candidate-retired_words:64'd0;
  wire [63:0] p_end=pfirst+FRAME_WORDS,t_end=tfirst+TRAIN_WORDS;
  // Accepted ordinal and wp refer to the same boundary; written_words is one
- // command register behind and is the admission watermark for memory reads.
+ // outer plus local command registers behind; it is the physical admission watermark.
  wire [63:0] pgap=accepted_words-pfirst,tgap=accepted_words-tfirst;
  logic [7:0] bad;
  always_comb begin
@@ -102,8 +104,8 @@ module ota_shared_raw_store #(
   end else begin
    ram_we<=wf&&!collision;ram_re<=issue&&!collision;
    ram_wa<=wp;ram_ra<=issue_address;ram_wd<=s_data;
-   rv<={rv[1:0],issue&&!collision};owner<={owner[1:0],t_issue};
-   if(ram_we)written_words<=written_words+1'b1;
+   rv<={rv[5:0],issue&&!collision};owner<={owner[5:0],t_issue};
+   if(memory_write_commit)written_words<=written_words+1'b1;
    if(!fault&&(bad!=0||poison))begin fault<=1;error_code<=poison?8'h09:bad;end
    if(occupancy>high_water)high_water<=occupancy;
    // Already advertised handshakes are counted on a newly detected fault edge.

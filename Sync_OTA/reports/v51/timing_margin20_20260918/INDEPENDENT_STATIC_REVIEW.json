@@ -1,0 +1,49 @@
+{
+  "created_at": "2026-09-18T23:56:45.955354+02:00",
+  "author": "root; sole RTL writer",
+  "reviews": [
+    {
+      "reviewer": "frontend_static_review",
+      "scope": "DDS/gain, fine RNE, pair MSB, regression, frontend ownership, raw/tap/join; implementation hook safety and revision chain",
+      "result": "No remaining mandatory static correction; native command execution and physical results not checked"
+    },
+    {
+      "reviewer": "sfo_static_review",
+      "scope": "segmented URAM/BRAM commit and responses, Farrow reservation/steady II, FFT services, peak/grid/reader and complete cycle budget",
+      "result": "No remaining mandatory functional static correction; resource and timing mapping remain unverified"
+    },
+    {
+      "reviewer": "cfo_margin_design",
+      "scope": "ROM/FFT LOAD/START, packed tail/head, mailbox, RNE, terminal pilot commit and diagnostic shadow",
+      "result": "No remaining mandatory functional static correction; physical-only endpoint families retained"
+    }
+  ],
+  "binding": {
+    "active_files": 129,
+    "changed_files": 27,
+    "errors": 0,
+    "diagnostics_retained": 964,
+    "vendor_boundary": "original stubs and XPM interfaces only"
+  },
+  "corrections_retained_in_evidence": [
+    "stage2 declaration ordering errors corrected before final binding",
+    "Farrow old-head protection replaced by safe post-capture lower bound before final review",
+    "FFT service startup allowance conservatively raised from 3 to 5 clk500",
+    "non-active FIFO same-name file restored; active a06 changed and source binding checked"
+  ],
+  "unchanged": {
+    "frequencies_MHz": [
+      125,
+      150,
+      500
+    ],
+    "final_backpressure": false,
+    "CDC_max_delay": "original",
+    "hold": "original",
+    "precision_and_algorithm": "original"
+  },
+  "numerical_test": "NOT_RUN; algebraic equivalence review only",
+  "new_timing": "NOT_RUN",
+  "git_diff_check": "PASS",
+  "live_native_processes": "Only pre-existing user Vivado GUI PID 28960 at 23:55 CEST; no new native job remains"
+}

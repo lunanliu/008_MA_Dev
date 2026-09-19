@@ -1,0 +1,1353 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date              : Fri Sep 18 22:29:07 2026
+| Host              : ROG-Lunan running 64-bit major release  (build 9200)
+| Command           : report_timing_summary -max_paths 1 -file D:/008_MA_Dev/Sync_OTA/reports/v51/routed_review_20260918_2209/checkpoint_export/timing_summary_checkpoint.rpt
+| Design            : sync_ota_top
+| Device            : xcvu11p-flgb2104
+| Speed File        : -2  PRODUCTION 1.27 02-28-2020
+| Temperature Grade : E
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (133)
+6. checking no_output_delay (1536)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (133)
+--------------------------------
+ There are 133 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (1536)
+----------------------------------
+ There are 1536 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -0.199      -26.125                    381              1110821        0.019        0.000                      0              1110481        0.431        0.000                       0                269701  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)         Period(ns)      Frequency(MHz)
+-----   ------------         ----------      --------------
+clk125  {0.000 4.000}        8.000           125.000         
+clk150  {0.000 3.333}        6.667           149.992         
+clk500  {0.000 1.000}        2.000           500.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk125              0.153        0.000                      0               303751        0.019        0.000                      0               303751        3.458        0.000                       0                 93609  
+clk150              0.009        0.000                      0               753761        0.022        0.000                      0               753761        2.633        0.000                       0                149054  
+clk500             -0.199      -26.125                    381                52648        0.020        0.000                      0                52648        0.431        0.000                       0                 27038  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+clk150        clk125              5.297        0.000                      0                   83                                                                        
+clk500        clk125              0.721        0.000                      0                   54        0.056        0.000                      0                   10  
+clk125        clk150              6.775        0.000                      0                   83                                                                        
+clk500        clk150              1.302        0.000                      0                   39                                                                        
+clk125        clk500              6.782        0.000                      0                   65                                                                        
+clk150        clk500              6.162        0.000                      0                   26                                                                        
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  clk125             clk125                   4.958        0.000                      0                   40        0.176        0.000                      0                   40  
+**async_default**  clk150             clk150                   3.129        0.000                      0                  178        0.152        0.000                      0                  178  
+**async_default**  clk500             clk500                   0.162        0.000                      0                   93        0.156        0.000                      0                   93  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk125
+  To Clock:  clk125
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.153ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.019ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.458ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.153ns  (required time - arrival time)
+  Source:                 sfo/initial_estimator/service/fatal_latched_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][172]/CE
+                            (rising edge-triggered cell FDRE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk125
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk125 rise@8.000ns - clk125 rise@0.000ns)
+  Data Path Delay:        7.742ns  (logic 1.669ns (21.558%)  route 6.073ns (78.442%))
+  Logic Levels:           17  (CARRY8=1 LUT2=1 LUT3=4 LUT4=3 LUT5=2 LUT6=6)
+  Clock Path Skew:        -0.010ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 8.020 - 8.000 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk125 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk125 (IN)
+                         net (fo=95401, unset)        0.030     0.030    sfo/initial_estimator/service/clk
+    SLICE_X81Y78         FDRE                                         r  sfo/initial_estimator/service/fatal_latched_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X81Y78         FDRE (Prop_DFF_SLICEM_C_Q)
+                                                      0.078     0.108 f  sfo/initial_estimator/service/fatal_latched_reg/Q
+                         net (fo=18, routed)          0.564     0.672    sfo/initial_estimator/service/fatal_latched_reg_n_0
+    SLICE_X97Y73         LUT3 (Prop_D5LUT_SLICEM_I1_O)
+                                                      0.097     0.769 f  sfo/initial_estimator/service/frontend_i_1/O
+                         net (fo=38, routed)          0.591     1.360    sfo/initial_estimator/service/frontend/capture/rst0_bufg_place
+    SLICE_X105Y70        LUT5 (Prop_D5LUT_SLICEL_I2_O)
+                                                      0.066     1.426 r  sfo/initial_estimator/service/frontend/capture/u_reader_i_1/O
+                         net (fo=4, routed)           0.327     1.753    sfo/initial_estimator/service/frontend/capture/u_reader/context_valid
+    SLICE_X109Y64        LUT6 (Prop_F6LUT_SLICEM_I3_O)
+                                                      0.123     1.876 r  sfo/initial_estimator/service/frontend/capture/u_reader/bank_req_addr[0]_INST_0_i_5/O
+                         net (fo=1, routed)           0.022     1.898    sfo/initial_estimator/service/frontend/capture/u_reader/bank_req_addr[0]_INST_0_i_5_n_0
+    SLICE_X109Y64        CARRY8 (Prop_CARRY8_SLICEM_S[5]_CO[5])
+                                                      0.105     2.003 f  sfo/initial_estimator/service/frontend/capture/u_reader/bank_req_addr[0]_INST_0_i_2/CO[5]
+                         net (fo=4, routed)           0.323     2.326    sfo/initial_estimator/service/frontend/capture/u_reader/bank_req_addr[0]_INST_0_i_2_n_2
+    SLICE_X105Y68        LUT6 (Prop_H6LUT_SLICEL_I5_O)
+                                                      0.036     2.362 f  sfo/initial_estimator/service/frontend/capture/u_reader/s_ready_INST_0_i_5/O
+                         net (fo=2, routed)           0.044     2.406    sfo/initial_estimator/service/frontend/capture/u_reader/busy_context_fault
+    SLICE_X105Y68        LUT5 (Prop_G6LUT_SLICEL_I2_O)
+                                                      0.050     2.456 r  sfo/initial_estimator/service/frontend/capture/u_reader/s_ready_INST_0_i_1/O
+                         net (fo=5, routed)           0.397     2.853    sfo/initial_estimator/service/frontend/capture/u_reader/p_38_in
+    SLICE_X100Y68        LUT3 (Prop_C6LUT_SLICEM_I1_O)
+                                                      0.098     2.951 r  sfo/initial_estimator/service/frontend/capture/u_reader/m_valid_INST_0/O
+                         net (fo=1, routed)           0.367     3.318    sfo/initial_estimator/service/frontend/capture/reader_valid
+    SLICE_X105Y70        LUT3 (Prop_C6LUT_SLICEL_I2_O)
+                                                      0.088     3.406 r  sfo/initial_estimator/service/frontend/capture/m_valid_INST_0/O
+                         net (fo=4, routed)           0.604     4.010    sfo/initial_estimator/service/frontend/raw_valid
+    SLICE_X91Y67         LUT6 (Prop_F6LUT_SLICEM_I1_O)
+                                                      0.123     4.133 r  sfo/initial_estimator/service/frontend/correction_i_2/O
+                         net (fo=3, routed)           0.145     4.278    sfo/initial_estimator/service/frontend/correction/s_valid
+    SLICE_X91Y64         LUT6 (Prop_E6LUT_SLICEM_I2_O)
+                                                      0.037     4.315 r  sfo/initial_estimator/service/frontend/correction/u_dds_i_2/O
+                         net (fo=6, routed)           0.372     4.687    sfo/initial_estimator/service/frontend/correction/u_dds/s_valid
+    SLICE_X79Y62         LUT4 (Prop_A5LUT_SLICEL_I0_O)
+                                                      0.100     4.787 r  sfo/initial_estimator/service/frontend/correction/u_dds/s_ready_INST_0_i_2/O
+                         net (fo=145, routed)         0.152     4.939    sfo/initial_estimator/service/frontend/correction/u_dds/s_ready_INST_0_i_2_n_0
+    SLICE_X79Y61         LUT6 (Prop_A6LUT_SLICEL_I1_O)
+                                                      0.149     5.088 r  sfo/initial_estimator/service/frontend/correction/u_dds/s_ready_INST_0/O
+                         net (fo=3, routed)           0.322     5.410    sfo/initial_estimator/service/frontend/correction/dds_s_ready
+    SLICE_X91Y64         LUT6 (Prop_F6LUT_SLICEM_I1_O)
+                                                      0.098     5.508 r  sfo/initial_estimator/service/frontend/correction/s_ready_INST_0/O
+                         net (fo=2, routed)           0.255     5.763    sfo/initial_estimator/service/frontend/cfo_ready
+    SLICE_X93Y68         LUT4 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.050     5.813 r  sfo/initial_estimator/service/frontend/capture_i_7/O
+                         net (fo=1, routed)           0.262     6.075    sfo/initial_estimator/service/frontend/capture/m_ready
+    SLICE_X100Y68        LUT2 (Prop_D5LUT_SLICEM_I0_O)
+                                                      0.135     6.210 r  sfo/initial_estimator/service/frontend/capture/u_reader_i_3/O
+                         net (fo=1, routed)           0.218     6.428    sfo/initial_estimator/service/frontend/capture/u_reader/m_ready
+    SLICE_X100Y68        LUT4 (Prop_C5LUT_SLICEM_I0_O)
+                                                      0.099     6.527 r  sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo_i_130/O
+                         net (fo=8, routed)           0.364     6.891    sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/rd_en
+    SLICE_X94Y66         LUT3 (Prop_C5LUT_SLICEM_I2_O)
+                                                      0.137     7.028 r  sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst_i_3/O
+                         net (fo=346, routed)         0.744     7.772    sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/regceb
+    SLICE_X84Y57         FDRE                                         r  sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][172]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk125 rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  clk125 (IN)
+                         net (fo=95401, unset)        0.020     8.020    sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/clka
+    SLICE_X84Y57         FDRE                                         r  sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][172]/C
+                         clock pessimism              0.000     8.020    
+                         clock uncertainty           -0.035     7.985    
+    SLICE_X84Y57         FDRE (Setup_EFF2_SLICEL_C_CE)
+                                                     -0.060     7.925    sfo/initial_estimator/service/frontend/capture/u_reader/u_output_fifo/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][172]
+  -------------------------------------------------------------------
+                         required time                          7.925    
+                         arrival time                          -7.772    
+  -------------------------------------------------------------------
+                         slack                                  0.153    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.019ns  (arrival time - required time)
+  Source:                 sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].inv_not_gen.inv_thr/opt_has_pipe.first_q_reg[0]/C
+                            (rising edge-triggered cell FDSE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[16].quot_gen.quot_reg.i_div_n1.quot_out/opt_has_pipe.first_q_reg[5]/D
+                            (rising edge-triggered cell FDSE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk125
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk125 rise@0.000ns - clk125 rise@0.000ns)
+  Data Path Delay:        0.072ns  (logic 0.039ns (54.167%)  route 0.033ns (45.833%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.012ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk125 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk125 (IN)
+                         net (fo=95401, unset)        0.012     0.012    sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].inv_not_gen.inv_thr/aclk
+    SLICE_X3Y33          FDSE                                         r  sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].inv_not_gen.inv_thr/opt_has_pipe.first_q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y33          FDSE (Prop_BFF_SLICEL_C_Q)
+                                                      0.039     0.051 r  sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[13].inv_not_gen.inv_thr/opt_has_pipe.first_q_reg[0]/Q
+                         net (fo=2, routed)           0.033     0.084    sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[16].quot_gen.quot_reg.i_div_n1.quot_out/opt_has_pipe.first_q_reg[15]_0[5]
+    SLICE_X3Y33          FDSE                                         r  sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[16].quot_gen.quot_reg.i_div_n1.quot_out/opt_has_pipe.first_q_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk125 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk125 (IN)
+                         net (fo=95401, unset)        0.018     0.018    sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[16].quot_gen.quot_reg.i_div_n1.quot_out/aclk
+    SLICE_X3Y33          FDSE                                         r  sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[16].quot_gen.quot_reg.i_div_n1.quot_out/opt_has_pipe.first_q_reg[5]/C
+                         clock pessimism              0.000     0.018    
+    SLICE_X3Y33          FDSE (Hold_CFF2_SLICEL_C_D)
+                                                      0.047     0.065    sfo/initial_estimator/service/backend/backend/divider/divider/U0/i_synth/i_nonzero_fract.i_synth/i_algo_r2_or_lutmult.i_nonzero_fract.i_sdivider/i_sdivider.divider_blk/div_loop[16].quot_gen.quot_reg.i_div_n1.quot_out/opt_has_pipe.first_q_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -0.065    
+                         arrival time                           0.084    
+  -------------------------------------------------------------------
+                         slack                                  0.019    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk125
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { clk125 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.569         8.000       6.431      RAMB36_X12Y28  frontend/acquisition/lag_history/memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/CLKARDCLK
+Low Pulse Width   Slow    RAMB36E2/CLKARDCLK  n/a            0.542         4.000       3.458      RAMB36_X8Y43   completions/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+High Pulse Width  Slow    RAMB36E2/CLKARDCLK  n/a            0.542         4.000       3.458      RAMB36_X8Y43   completions/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk150
+  To Clock:  clk150
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.009ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.022ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        2.633ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.009ns  (required time - arrival time)
+  Source:                 sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_8/CLK
+                            (rising edge-triggered cell URAM288 clocked by clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][63]/D
+                            (rising edge-triggered cell FDRE clocked by clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             clk150
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (clk150 rise@6.667ns - clk150 rise@0.000ns)
+  Data Path Delay:        6.585ns  (logic 2.990ns (45.406%)  route 3.595ns (54.594%))
+  Logic Levels:           13  (LUT5=6 URAM288=7)
+  Clock Path Skew:        -0.063ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 6.687 - 6.667 ) 
+    Source Clock Delay      (SCD):    0.083ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk150 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk150 (IN)
+                         net (fo=156902, unset)       0.083     0.083    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/clka
+    URAM288_X1Y36        URAM288                                      r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_8/CLK
+  -------------------------------------------------------------------    -------------------
+    URAM288_X1Y36        URAM288 (Prop_URAM_288K_INST_URAM288_CLK_CAS_OUT_DOUT_A[63])
+                                                      1.284     1.367 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_8/CAS_OUT_DOUT_A[63]
+                         net (fo=1, routed)           0.001     1.368    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_9_Cas_DoutA_1[63]
+    URAM288_X1Y37        URAM288 (Prop_URAM_288K_INST_URAM288_CAS_IN_DOUT_A[63]_CAS_OUT_DOUT_A[63])
+                                                      0.183     1.551 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_9/CAS_OUT_DOUT_A[63]
+                         net (fo=1, routed)           0.001     1.552    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_10_Cas_DoutA_2[63]
+    URAM288_X1Y38        URAM288 (Prop_URAM_288K_INST_URAM288_CAS_IN_DOUT_A[63]_CAS_OUT_DOUT_A[63])
+                                                      0.183     1.735 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_10/CAS_OUT_DOUT_A[63]
+                         net (fo=1, routed)           0.001     1.736    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_11_Cas_DoutA_3[63]
+    URAM288_X1Y39        URAM288 (Prop_URAM_288K_INST_URAM288_CAS_IN_DOUT_A[63]_CAS_OUT_DOUT_A[63])
+                                                      0.183     1.919 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_11/CAS_OUT_DOUT_A[63]
+                         net (fo=1, routed)           0.014     1.933    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_12_Cas_DoutA_4[63]
+    URAM288_X1Y40        URAM288 (Prop_URAM_288K_INST_URAM288_CAS_IN_DOUT_A[63]_CAS_OUT_DOUT_A[63])
+                                                      0.183     2.116 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_12/CAS_OUT_DOUT_A[63]
+                         net (fo=1, routed)           0.001     2.117    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_13_Cas_DoutA_5[63]
+    URAM288_X1Y41        URAM288 (Prop_URAM_288K_INST_URAM288_CAS_IN_DOUT_A[63]_CAS_OUT_DOUT_A[63])
+                                                      0.183     2.300 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_13/CAS_OUT_DOUT_A[63]
+                         net (fo=1, routed)           0.001     2.301    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_14_Cas_DoutA_6[63]
+    URAM288_X1Y42        URAM288 (Prop_URAM_288K_INST_URAM288_CAS_IN_DOUT_A[63]_CAS_OUT_DOUT_A[63])
+                                                      0.183     2.484 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_14/CAS_OUT_DOUT_A[63]
+                         net (fo=1, routed)           0.001     2.485    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_15_Cas_DoutA_7[63]
+    URAM288_X1Y43        URAM288 (Prop_URAM_288K_INST_URAM288_CAS_IN_DOUT_A[63]_DOUT_A[63])
+                                                      0.193     2.678 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_15/DOUT_A[63]
+                         net (fo=1, routed)           1.098     3.776    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_15_n_358
+    SLICE_X39Y164        LUT5 (Prop_E5LUT_SLICEM_I0_O)
+                                                      0.113     3.889 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_6/O
+                         net (fo=1, routed)           0.745     4.634    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_6_n_0
+    SLICE_X40Y101        LUT5 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.035     4.669 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_5/O
+                         net (fo=1, routed)           0.088     4.757    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_5_n_0
+    SLICE_X40Y101        LUT5 (Prop_F6LUT_SLICEL_I4_O)
+                                                      0.089     4.846 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_4/O
+                         net (fo=1, routed)           0.594     5.440    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_4_n_0
+    SLICE_X57Y77         LUT5 (Prop_H6LUT_SLICEM_I4_O)
+                                                      0.039     5.479 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_3/O
+                         net (fo=1, routed)           0.807     6.286    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_3_n_0
+    SLICE_X96Y67         LUT5 (Prop_C6LUT_SLICEL_I4_O)
+                                                      0.088     6.374 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_2/O
+                         net (fo=1, routed)           0.194     6.568    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_2_n_0
+    SLICE_X96Y60         LUT5 (Prop_B6LUT_SLICEL_I4_O)
+                                                      0.051     6.619 r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe[0][63]_i_1/O
+                         net (fo=1, routed)           0.049     6.668    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.doutb_reg[63]
+    SLICE_X96Y60         FDRE                                         r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][63]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk150 rise edge)     6.667     6.667 r  
+                                                      0.000     6.667 r  clk150 (IN)
+                         net (fo=156902, unset)       0.020     6.687    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/clka
+    SLICE_X96Y60         FDRE                                         r  sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][63]/C
+                         clock pessimism              0.000     6.687    
+                         clock uncertainty           -0.035     6.652    
+    SLICE_X96Y60         FDRE (Setup_BFF_SLICEL_C_D)
+                                                      0.025     6.677    sfo/two_pass_transport/shared_raw.hub/raw_store/memory/u_frame_memory/xpm_memory_base_inst/gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][63]
+  -------------------------------------------------------------------
+                         required time                          6.677    
+                         arrival time                          -6.668    
+  -------------------------------------------------------------------
+                         slack                                  0.009    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.022ns  (arrival time - required time)
+  Source:                 sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.i_data_in/gen_reg.d_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[3].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[6][10]_srl7/D
+                            (rising edge-triggered cell SRL16E clocked by clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             clk150
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk150 rise@0.000ns - clk150 rise@0.000ns)
+  Data Path Delay:        0.094ns  (logic 0.040ns (42.553%)  route 0.054ns (57.447%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.026ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.039ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk150 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk150 (IN)
+                         net (fo=156902, unset)       0.013     0.013    sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.i_data_in/aclk
+    SLICE_X18Y201        FDRE                                         r  sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.i_data_in/gen_reg.d_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y201        FDRE (Prop_GFF2_SLICEL_C_Q)
+                                                      0.040     0.053 r  sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.i_data_in/gen_reg.d_reg_reg[10]/Q
+                         net (fo=2, routed)           0.054     0.107    sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[3].i_data_casc_dly/D[10]
+    SLICE_X17Y201        SRL16E                                       r  sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[3].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[6][10]_srl7/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk150 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk150 (IN)
+                         net (fo=156902, unset)       0.039     0.039    sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[3].i_data_casc_dly/aclk
+    SLICE_X17Y201        SRL16E                                       r  sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[3].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[6][10]_srl7/CLK
+                         clock pessimism              0.000     0.039    
+    SLICE_X17Y201        SRL16E (Hold_C5LUT_SLICEM_CLK_D)
+                                                      0.046     0.085    sfo/two_pass_transport/second_resampling/engine/core/fir47_interpolator/q_core/U0/i_synth/g_polyphase_interpolation_sym_ssr.i_polyphase_interpolation_sym_ssr/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[3].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[6][10]_srl7
+  -------------------------------------------------------------------
+                         required time                         -0.085    
+                         arrival time                           0.107    
+  -------------------------------------------------------------------
+                         slack                                  0.022    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk150
+Waveform(ns):       { 0.000 3.333 }
+Period(ns):         6.667
+Sources:            { clk150 }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     URAM288/CLK  n/a            2.000         6.667       4.667      URAM288_X1Y72  cfo/coarse_banks[0].memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_0/CLK
+Low Pulse Width   Slow    URAM288/CLK  n/a            0.700         3.333       2.633      URAM288_X1Y72  cfo/coarse_banks[0].memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_0/CLK
+High Pulse Width  Slow    URAM288/CLK  n/a            0.700         3.333       2.633      URAM288_X1Y72  cfo/coarse_banks[0].memory/u_frame_memory/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_uram_0/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk500
+  To Clock:  clk500
+
+Setup :          381  Failing Endpoints,  Worst Slack       -0.199ns,  Total Violation      -26.125ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.020ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        0.431ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.199ns  (required time - arrival time)
+  Source:                 cfo/windows/poison_sync/syncstages_ff_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            cfo/windows/packed_count_reg[1]/CE
+                            (rising edge-triggered cell FDRE clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk500
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.000ns  (clk500 rise@2.000ns - clk500 rise@0.000ns)
+  Data Path Delay:        2.097ns  (logic 0.346ns (16.500%)  route 1.751ns (83.500%))
+  Logic Levels:           4  (LUT3=1 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.020 - 2.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk500 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk500 (IN)
+                         net (fo=27270, unset)        0.028     0.028    cfo/windows/poison_sync/dest_clk
+    SLICE_X158Y100       FDRE                                         r  cfo/windows/poison_sync/syncstages_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X158Y100       FDRE (Prop_DFF2_SLICEL_C_Q)
+                                                      0.081     0.109 f  cfo/windows/poison_sync/syncstages_ff_reg[3]/Q
+                         net (fo=12, routed)          0.687     0.796    cfo/windows/poison500
+    SLICE_X142Y84        LUT3 (Prop_F6LUT_SLICEM_I0_O)
+                                                      0.051     0.847 f  cfo/windows/packed_count[1]_i_1/O
+                         net (fo=11, routed)          0.102     0.949    cfo/windows/fast_stop
+    SLICE_X142Y85        LUT6 (Prop_E6LUT_SLICEM_I5_O)
+                                                      0.091     1.040 f  cfo/windows/window_credits_i_3/O
+                         net (fo=3, routed)           0.094     1.134    cfo/windows/window_credits_i_3_n_0
+    SLICE_X142Y86        LUT6 (Prop_D6LUT_SLICEM_I5_O)
+                                                      0.088     1.222 r  cfo/windows/window_credits_i_2_replica/O
+                         net (fo=1, routed)           0.262     1.484    cfo/windows/p_30_in_repN
+    SLICE_X144Y85        LUT4 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.035     1.519 r  cfo/windows/packed_count[1]_i_2_rewire/O
+                         net (fo=2, routed)           0.606     2.125    cfo/windows/packed_count[1]_i_2_n_0
+    SLICE_X153Y116       FDRE                                         r  cfo/windows/packed_count_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk500 rise edge)     2.000     2.000 r  
+                                                      0.000     2.000 r  clk500 (IN)
+                         net (fo=27270, unset)        0.020     2.020    cfo/windows/clk500
+    SLICE_X153Y116       FDRE                                         r  cfo/windows/packed_count_reg[1]/C
+                         clock pessimism              0.000     2.020    
+                         clock uncertainty           -0.035     1.985    
+    SLICE_X153Y116       FDRE (Setup_AFF2_SLICEL_C_CE)
+                                                     -0.059     1.926    cfo/windows/packed_count_reg[1]
+  -------------------------------------------------------------------
+                         required time                          1.926    
+                         arrival time                          -2.125    
+  -------------------------------------------------------------------
+                         slack                                 -0.199    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.020ns  (arrival time - required time)
+  Source:                 sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/bypass_muxes.din_im_mux_gen[13].reg/C
+                            (rising edge-triggered cell FDRE clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/FB_1.BF_1/no_twos_cmp.REG_lower_im/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_srl16e1/D
+                            (rising edge-triggered cell SRL16E clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk500
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk500 rise@0.000ns - clk500 rise@0.000ns)
+  Data Path Delay:        0.091ns  (logic 0.039ns (42.857%)  route 0.052ns (57.143%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.026ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.039ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk500 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk500 (IN)
+                         net (fo=27270, unset)        0.013     0.013    sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/aclk
+    SLICE_X208Y15        FDRE                                         r  sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/bypass_muxes.din_im_mux_gen[13].reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X208Y15        FDRE (Prop_DFF_SLICEM_C_Q)
+                                                      0.039     0.052 r  sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/bypass_muxes.din_im_mux_gen[13].reg/Q
+                         net (fo=2, routed)           0.052     0.104    sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/FB_1.BF_1/no_twos_cmp.REG_lower_im/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[7].i_srl16e1_0[13]
+    SLICE_X208Y15        SRL16E                                       r  sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/FB_1.BF_1/no_twos_cmp.REG_lower_im/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_srl16e1/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk500 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk500 (IN)
+                         net (fo=27270, unset)        0.039     0.039    sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/FB_1.BF_1/no_twos_cmp.REG_lower_im/aclk
+    SLICE_X208Y15        SRL16E                                       r  sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/FB_1.BF_1/no_twos_cmp.REG_lower_im/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_srl16e1/CLK
+                         clock pessimism              0.000     0.039    
+    SLICE_X208Y15        SRL16E (Hold_B5LUT_SLICEM_CLK_D)
+                                                      0.045     0.084    sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/FB_1.BF_1/no_twos_cmp.REG_lower_im/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_srl16e1
+  -------------------------------------------------------------------
+                         required time                         -0.084    
+                         arrival time                           0.104    
+  -------------------------------------------------------------------
+                         slack                                  0.020    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk500
+Waveform(ns):       { 0.000 1.000 }
+Period(ns):         2.000
+Sources:            { clk500 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.569         2.000       0.431      RAMB36_X10Y14  cfo/observation_front/fft_core/bank0_reg_bram_0/CLKARDCLK
+Low Pulse Width   Slow    RAMB36E2/CLKARDCLK  n/a            0.542         1.000       0.458      RAMB36_X10Y4   cfo/observation_front/coefficient_page0_data_reg_0_0/CLKARDCLK
+High Pulse Width  Slow    RAMB36E2/CLKARDCLK  n/a            0.542         1.000       0.458      RAMB36_X10Y4   cfo/observation_front/coefficient_page0_data_reg_0_0/CLKARDCLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk150
+  To Clock:  clk125
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.297ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.297ns  (required time - arrival time)
+  Source:                 sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                            (rising edge-triggered cell FDRE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk125
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (MaxDelay Path 6.667ns)
+  Data Path Delay:        1.395ns  (logic 0.076ns (5.448%)  route 1.319ns (94.552%))
+  Logic Levels:           0  
+  Timing Exception:       MaxDelay Path 6.667ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X118Y108                                    0.000     0.000 r  sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
+    SLICE_X118Y108       FDRE (Prop_FFF_SLICEM_C_Q)
+                                                      0.076     0.076 r  sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           1.319     1.395    sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[6]
+    SLICE_X116Y108       FDRE                                         r  sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    6.667     6.667    
+    SLICE_X116Y108       FDRE (Setup_CFF2_SLICEL_C_D)
+                                                      0.025     6.692    sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
+  -------------------------------------------------------------------
+                         required time                          6.692    
+                         arrival time                          -1.395    
+  -------------------------------------------------------------------
+                         slack                                  5.297    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk500
+  To Clock:  clk125
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.721ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.056ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.721ns  (required time - arrival time)
+  Source:                 sfo/residual_estimator/aux_service/xfft_protocol_error_500_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            sfo/residual_estimator/aux_service/errors_meta_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk125
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.000ns  (clk125 rise@8.000ns - clk500 rise@6.000ns)
+  Data Path Delay:        1.260ns  (logic 0.079ns (6.270%)  route 1.181ns (93.730%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 8.020 - 8.000 ) 
+    Source Clock Delay      (SCD):    0.029ns = ( 6.029 - 6.000 ) 
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk500 rise edge)     6.000     6.000 r  
+                                                      0.000     6.000 r  clk500 (IN)
+                         net (fo=27270, unset)        0.029     6.029    sfo/residual_estimator/aux_service/clk_500
+    SLICE_X204Y37        FDRE                                         r  sfo/residual_estimator/aux_service/xfft_protocol_error_500_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X204Y37        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.079     6.108 r  sfo/residual_estimator/aux_service/xfft_protocol_error_500_reg/Q
+                         net (fo=2, routed)           1.181     7.289    sfo/residual_estimator/aux_service/p_1_in[1]
+    SLICE_X151Y28        FDRE                                         r  sfo/residual_estimator/aux_service/errors_meta_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk125 rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  clk125 (IN)
+                         net (fo=95401, unset)        0.020     8.020    sfo/residual_estimator/aux_service/clk_125
+    SLICE_X151Y28        FDRE                                         r  sfo/residual_estimator/aux_service/errors_meta_reg[1]/C
+                         clock pessimism              0.000     8.020    
+                         clock uncertainty           -0.035     7.985    
+    SLICE_X151Y28        FDRE (Setup_HFF2_SLICEL_C_D)
+                                                      0.025     8.010    sfo/residual_estimator/aux_service/errors_meta_reg[1]
+  -------------------------------------------------------------------
+                         required time                          8.010    
+                         arrival time                          -7.289    
+  -------------------------------------------------------------------
+                         slack                                  0.721    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.056ns  (arrival time - required time)
+  Source:                 sfo/residual_estimator/front_stage/main/service/xfft_overflow_500_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            sfo/residual_estimator/front_stage/main/service/errors_meta_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             clk125
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk125 rise@0.000ns - clk500 rise@0.000ns)
+  Data Path Delay:        0.143ns  (logic 0.038ns (26.573%)  route 0.105ns (73.427%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.005ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk500 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk500 (IN)
+                         net (fo=27270, unset)        0.013     0.013    sfo/residual_estimator/front_stage/main/service/clk_500
+    SLICE_X121Y94        FDRE                                         r  sfo/residual_estimator/front_stage/main/service/xfft_overflow_500_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X121Y94        FDRE (Prop_CFF_SLICEM_C_Q)
+                                                      0.038     0.051 r  sfo/residual_estimator/front_stage/main/service/xfft_overflow_500_reg/Q
+                         net (fo=2, routed)           0.105     0.156    sfo/residual_estimator/front_stage/main/service/p_1_in[0]
+    SLICE_X120Y93        FDRE                                         r  sfo/residual_estimator/front_stage/main/service/errors_meta_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk125 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk125 (IN)
+                         net (fo=95401, unset)        0.018     0.018    sfo/residual_estimator/front_stage/main/service/clk_125
+    SLICE_X120Y93        FDRE                                         r  sfo/residual_estimator/front_stage/main/service/errors_meta_reg[0]/C
+                         clock pessimism              0.000     0.018    
+                         clock uncertainty            0.035     0.053    
+    SLICE_X120Y93        FDRE (Hold_CFF2_SLICEL_C_D)
+                                                      0.047     0.100    sfo/residual_estimator/front_stage/main/service/errors_meta_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.100    
+                         arrival time                           0.156    
+  -------------------------------------------------------------------
+                         slack                                  0.056    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk125
+  To Clock:  clk150
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.775ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.775ns  (required time - arrival time)
+  Source:                 sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+                            (rising edge-triggered cell FDRE clocked by clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             clk150
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (MaxDelay Path 8.000ns)
+  Data Path Delay:        1.250ns  (logic 0.080ns (6.400%)  route 1.170ns (93.600%))
+  Logic Levels:           0  
+  Timing Exception:       MaxDelay Path 8.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X114Y110                                    0.000     0.000 r  sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]/C
+    SLICE_X114Y110       FDRE (Prop_AFF2_SLICEM_C_Q)
+                                                      0.080     0.080 r  sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]/Q
+                         net (fo=1, routed)           1.170     1.250    sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[7]
+    SLICE_X114Y110       FDRE                                         r  sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    8.000     8.000    
+    SLICE_X114Y110       FDRE (Setup_HFF2_SLICEM_C_D)
+                                                      0.025     8.025    sfo/two_pass_transport/progressive_cdc.progress/record_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]
+  -------------------------------------------------------------------
+                         required time                          8.025    
+                         arrival time                          -1.250    
+  -------------------------------------------------------------------
+                         slack                                  6.775    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk500
+  To Clock:  clk150
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.302ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.302ns  (required time - arrival time)
+  Source:                 cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                            (rising edge-triggered cell FDRE clocked by clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             clk150
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.000ns  (MaxDelay Path 2.000ns)
+  Data Path Delay:        0.723ns  (logic 0.079ns (10.927%)  route 0.644ns (89.073%))
+  Logic Levels:           0  
+  Timing Exception:       MaxDelay Path 2.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X127Y33                                     0.000     0.000 r  cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+    SLICE_X127Y33        FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     0.079 r  cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.644     0.723    cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
+    SLICE_X126Y33        FDRE                                         r  cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    2.000     2.000    
+    SLICE_X126Y33        FDRE (Setup_HFF2_SLICEM_C_D)
+                                                      0.025     2.025    cfo/estimator/observation_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+  -------------------------------------------------------------------
+                         required time                          2.025    
+                         arrival time                          -0.723    
+  -------------------------------------------------------------------
+                         slack                                  1.302    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk125
+  To Clock:  clk500
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.782ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.782ns  (required time - arrival time)
+  Source:                 sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                            (rising edge-triggered cell FDRE clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk500
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (MaxDelay Path 8.000ns)
+  Data Path Delay:        1.243ns  (logic 0.078ns (6.275%)  route 1.165ns (93.725%))
+  Logic Levels:           0  
+  Timing Exception:       MaxDelay Path 8.000ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X118Y94                                     0.000     0.000 r  sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
+    SLICE_X118Y94        FDRE (Prop_CFF_SLICEM_C_Q)
+                                                      0.078     0.078 r  sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           1.165     1.243    sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[0]
+    SLICE_X118Y94        FDRE                                         r  sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    8.000     8.000    
+    SLICE_X118Y94        FDRE (Setup_HFF2_SLICEM_C_D)
+                                                      0.025     8.025    sfo/residual_estimator/front_stage/main/service/u_egress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+  -------------------------------------------------------------------
+                         required time                          8.025    
+                         arrival time                          -1.243    
+  -------------------------------------------------------------------
+                         slack                                  6.782    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk150
+  To Clock:  clk500
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.162ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.162ns  (required time - arrival time)
+  Source:                 cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                            (rising edge-triggered cell FDRE clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             clk500
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.667ns  (MaxDelay Path 6.667ns)
+  Data Path Delay:        0.530ns  (logic 0.080ns (15.094%)  route 0.450ns (84.906%))
+  Logic Levels:           0  
+  Timing Exception:       MaxDelay Path 6.667ns -datapath_only
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X174Y158                                    0.000     0.000 r  cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+    SLICE_X174Y158       FDRE (Prop_HFF2_SLICEL_C_Q)
+                                                      0.080     0.080 r  cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.450     0.530    cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
+    SLICE_X174Y158       FDRE                                         r  cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                    6.667     6.667    
+    SLICE_X174Y158       FDRE (Setup_CFF2_SLICEL_C_D)
+                                                      0.025     6.692    cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+  -------------------------------------------------------------------
+                         required time                          6.692    
+                         arrival time                          -0.530    
+  -------------------------------------------------------------------
+                         slack                                  6.162    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  clk125
+  To Clock:  clk125
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.958ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.176ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.958ns  (required time - arrival time)
+  Source:                 sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/C
+                            (rising edge-triggered cell FDPE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            sfo/two_pass_transport/reset_125/reset_active_reg_replica_7/PRE
+                            (recovery check against rising-edge clock clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            8.000ns  (clk125 rise@8.000ns - clk125 rise@0.000ns)
+  Data Path Delay:        2.931ns  (logic 0.079ns (2.695%)  route 2.852ns (97.305%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.010ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 8.020 - 8.000 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk125 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk125 (IN)
+                         net (fo=95401, unset)        0.030     0.030    sfo/two_pass_transport/reset_125/sync_reset/dest_clk
+    SLICE_X91Y74         FDPE                                         r  sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X91Y74         FDPE (Prop_GFF2_SLICEM_C_Q)
+                                                      0.079     0.109 f  sfo/two_pass_transport/reset_125/sync_reset/arststages_ff_reg[3]/Q
+                         net (fo=16, routed)          2.852     2.961    sfo/two_pass_transport/reset_125/synced
+    SLICE_X110Y132       FDPE                                         f  sfo/two_pass_transport/reset_125/reset_active_reg_replica_7/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk125 rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  clk125 (IN)
+                         net (fo=95401, unset)        0.020     8.020    sfo/two_pass_transport/reset_125/clk
+    SLICE_X110Y132       FDPE                                         r  sfo/two_pass_transport/reset_125/reset_active_reg_replica_7/C
+                         clock pessimism              0.000     8.020    
+                         clock uncertainty           -0.035     7.985    
+    SLICE_X110Y132       FDPE (Recov_EFF_SLICEL_C_PRE)
+                                                     -0.066     7.919    sfo/two_pass_transport/reset_125/reset_active_reg_replica_7
+  -------------------------------------------------------------------
+                         required time                          7.919    
+                         arrival time                          -2.961    
+  -------------------------------------------------------------------
+                         slack                                  4.958    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.176ns  (arrival time - required time)
+  Source:                 reset_a/sync_reset/arststages_ff_reg[3]/C
+                            (rising edge-triggered cell FDPE clocked by clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            reset_a/reset_active_reg/PRE
+                            (removal check against rising-edge clock clk125  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk125 rise@0.000ns - clk125 rise@0.000ns)
+  Data Path Delay:        0.162ns  (logic 0.039ns (24.074%)  route 0.123ns (75.926%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk125 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk125 (IN)
+                         net (fo=95401, unset)        0.013     0.013    reset_a/sync_reset/dest_clk
+    SLICE_X121Y209       FDPE                                         r  reset_a/sync_reset/arststages_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X121Y209       FDPE (Prop_CFF2_SLICEM_C_Q)
+                                                      0.039     0.052 f  reset_a/sync_reset/arststages_ff_reg[3]/Q
+                         net (fo=14, routed)          0.123     0.175    reset_a/synced
+    SLICE_X121Y210       FDPE                                         f  reset_a/reset_active_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk125 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk125 (IN)
+                         net (fo=95401, unset)        0.019     0.019    reset_a/clk
+    SLICE_X121Y210       FDPE                                         r  reset_a/reset_active_reg/C
+                         clock pessimism              0.000     0.019    
+    SLICE_X121Y210       FDPE (Remov_AFF_SLICEM_C_PRE)
+                                                     -0.020    -0.001    reset_a/reset_active_reg
+  -------------------------------------------------------------------
+                         required time                          0.001    
+                         arrival time                           0.175    
+  -------------------------------------------------------------------
+                         slack                                  0.176    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  clk150
+  To Clock:  clk150
+
+Setup :            0  Failing Endpoints,  Worst Slack        3.129ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.152ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             3.129ns  (required time - arrival time)
+  Source:                 sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/C
+                            (rising edge-triggered cell FDPE clocked by clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            sfo/two_pass_transport/reset_150/reset_active_reg_replica_1/PRE
+                            (recovery check against rising-edge clock clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            6.667ns  (clk150 rise@6.667ns - clk150 rise@0.000ns)
+  Data Path Delay:        3.426ns  (logic 0.080ns (2.335%)  route 3.346ns (97.665%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 6.687 - 6.667 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Inter-SLR Compensation: 0.003ns  (DCD * PF)
+    Destination Clock Delay (DCD):    0.020ns
+    Prorating Factor         (PF):    0.150
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk150 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk150 (IN)
+                         net (fo=156902, unset)       0.028     0.028    sfo/two_pass_transport/reset_150/sync_reset/dest_clk
+    SLICE_X110Y207       FDPE                                         r  sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y207       FDPE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.080     0.108 f  sfo/two_pass_transport/reset_150/sync_reset/arststages_ff_reg[3]/Q
+                         net (fo=38, routed)          3.346     3.454    sfo/two_pass_transport/reset_150/synced
+    SLR Crossing[0->2]   
+    SLICE_X110Y480       FDPE                                         f  sfo/two_pass_transport/reset_150/reset_active_reg_replica_1/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk150 rise edge)     6.667     6.667 r  
+                                                      0.000     6.667 r  clk150 (IN)
+                         net (fo=156902, unset)       0.020     6.687    sfo/two_pass_transport/reset_150/clk
+    SLICE_X110Y480       FDPE                                         r  sfo/two_pass_transport/reset_150/reset_active_reg_replica_1/C
+                         clock pessimism              0.000     6.687    
+                         inter-SLR compensation      -0.003     6.684    
+                         clock uncertainty           -0.035     6.649    
+    SLICE_X110Y480       FDPE (Recov_EFF_SLICEL_C_PRE)
+                                                     -0.066     6.583    sfo/two_pass_transport/reset_150/reset_active_reg_replica_1
+  -------------------------------------------------------------------
+                         required time                          6.583    
+                         arrival time                          -3.454    
+  -------------------------------------------------------------------
+                         slack                                  3.129    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.152ns  (arrival time - required time)
+  Source:                 reset_b/sync_reset/arststages_ff_reg[3]/C
+                            (rising edge-triggered cell FDPE clocked by clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Destination:            reset_b/hold_count_reg[0]/CLR
+                            (removal check against rising-edge clock clk150  {rise@0.000ns fall@3.333ns period=6.667ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk150 rise@0.000ns - clk150 rise@0.000ns)
+  Data Path Delay:        0.139ns  (logic 0.040ns (28.777%)  route 0.099ns (71.223%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.007ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.012ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk150 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk150 (IN)
+                         net (fo=156902, unset)       0.012     0.012    reset_b/sync_reset/dest_clk
+    SLICE_X123Y217       FDPE                                         r  reset_b/sync_reset/arststages_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X123Y217       FDPE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.040     0.052 f  reset_b/sync_reset/arststages_ff_reg[3]/Q
+                         net (fo=8, routed)           0.099     0.151    reset_b/synced
+    SLICE_X123Y216       FDCE                                         f  reset_b/hold_count_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk150 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk150 (IN)
+                         net (fo=156902, unset)       0.019     0.019    reset_b/clk
+    SLICE_X123Y216       FDCE                                         r  reset_b/hold_count_reg[0]/C
+                         clock pessimism              0.000     0.019    
+    SLICE_X123Y216       FDCE (Remov_HFF_SLICEL_C_CLR)
+                                                     -0.020    -0.001    reset_b/hold_count_reg[0]
+  -------------------------------------------------------------------
+                         required time                          0.001    
+                         arrival time                           0.151    
+  -------------------------------------------------------------------
+                         slack                                  0.152    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  clk500
+  To Clock:  clk500
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.162ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.156ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.162ns  (required time - arrival time)
+  Source:                 cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C
+                            (rising edge-triggered cell FDPE clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            cfo/windows/reset_fast/reset_active_reg_replica_1/PRE
+                            (recovery check against rising-edge clock clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            2.000ns  (clk500 rise@2.000ns - clk500 rise@0.000ns)
+  Data Path Delay:        1.728ns  (logic 0.081ns (4.688%)  route 1.647ns (95.312%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 2.020 - 2.000 ) 
+    Source Clock Delay      (SCD):    0.029ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk500 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk500 (IN)
+                         net (fo=27270, unset)        0.029     0.029    cfo/windows/reset_fast/sync_reset/dest_clk
+    SLICE_X132Y76        FDPE                                         r  cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X132Y76        FDPE (Prop_GFF2_SLICEL_C_Q)
+                                                      0.081     0.110 f  cfo/windows/reset_fast/sync_reset/arststages_ff_reg[3]/Q
+                         net (fo=12, routed)          1.647     1.757    cfo/windows/reset_fast/synced
+    SLICE_X165Y130       FDPE                                         f  cfo/windows/reset_fast/reset_active_reg_replica_1/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk500 rise edge)     2.000     2.000 r  
+                                                      0.000     2.000 r  clk500 (IN)
+                         net (fo=27270, unset)        0.020     2.020    cfo/windows/reset_fast/clk
+    SLICE_X165Y130       FDPE                                         r  cfo/windows/reset_fast/reset_active_reg_replica_1/C
+                         clock pessimism              0.000     2.020    
+                         clock uncertainty           -0.035     1.985    
+    SLICE_X165Y130       FDPE (Recov_AFF2_SLICEL_C_PRE)
+                                                     -0.066     1.919    cfo/windows/reset_fast/reset_active_reg_replica_1
+  -------------------------------------------------------------------
+                         required time                          1.919    
+                         arrival time                          -1.757    
+  -------------------------------------------------------------------
+                         slack                                  0.162    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.156ns  (arrival time - required time)
+  Source:                 cfo/windows/window_credits/wr_reset/arststages_ff_reg[3]/C
+                            (rising edge-triggered cell FDPE clocked by clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Destination:            cfo/windows/window_credits/complete_reg/CLR
+                            (removal check against rising-edge clock clk500  {rise@0.000ns fall@1.000ns period=2.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk500 rise@0.000ns - clk500 rise@0.000ns)
+  Data Path Delay:        0.142ns  (logic 0.041ns (28.873%)  route 0.101ns (71.127%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.019ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk500 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk500 (IN)
+                         net (fo=27270, unset)        0.013     0.013    cfo/windows/window_credits/wr_reset/dest_clk
+    SLICE_X139Y84        FDPE                                         r  cfo/windows/window_credits/wr_reset/arststages_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X139Y84        FDPE (Prop_DFF2_SLICEM_C_Q)
+                                                      0.041     0.054 f  cfo/windows/window_credits/wr_reset/arststages_ff_reg[3]/Q
+                         net (fo=4, routed)           0.101     0.155    cfo/windows/window_credits/rw
+    SLICE_X139Y84        FDCE                                         f  cfo/windows/window_credits/complete_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk500 rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  clk500 (IN)
+                         net (fo=27270, unset)        0.019     0.019    cfo/windows/window_credits/wr_clk
+    SLICE_X139Y84        FDCE                                         r  cfo/windows/window_credits/complete_reg/C
+                         clock pessimism              0.000     0.019    
+    SLICE_X139Y84        FDCE (Remov_HFF_SLICEM_C_CLR)
+                                                     -0.020    -0.001    cfo/windows/window_credits/complete_reg
+  -------------------------------------------------------------------
+                         required time                          0.001    
+                         arrival time                           0.155    
+  -------------------------------------------------------------------
+                         slack                                  0.156    
+
+
+
+
+

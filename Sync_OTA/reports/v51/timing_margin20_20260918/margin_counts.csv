@@ -1,0 +1,4 @@
+clock,period_ns,minimum_wns_ns,endpoint_count,worst_slack_ns
+clk125,8.0,1.6,33276,0.153
+clk150,6.666666667,1.333333334,17137,0.009
+clk500,2.0,0.4,3623,-0.199

@@ -1,0 +1,36 @@
+{
+  "scope": "USER_AUTHORIZED_READONLY_ROUTED_CHECKPOINT_ANALYSIS_NO_SIMULATION_NO_SYNTHESIS_NO_IMPLEMENTATION",
+  "created_at": "2026-09-18T14:34:53.828425+02:00",
+  "part": "xcvu11p-flgb2104-2-e",
+  "dcp": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.runs\\impl_1\\sync_ota_top_routed.dcp",
+  "dcp_sha256": "b03ca785813bd2b8652e3ec6a971f502fbbc361c115cb091d711c9c2e23aa7ef",
+  "script_sha256": "e1346ff10bd08dee91f48932ead419be3a159b105c86fa3fbe913e96b78cb899",
+  "tool": "C:/NIFPGA/programs/Vivado2021_1/bin/vivado.bat",
+  "threads": 8,
+  "expected_minutes": [
+    3,
+    15
+  ],
+  "memory_estimate_gib": [
+    8,
+    18
+  ],
+  "observed_free_physical_gib": 10.2,
+  "observed_commit_headroom_gib": 60.3,
+  "resource_note": "Only user GUI Vivado PID12876 observed; no active xsim/xelab/matlab or another batch Vivado. Read-only export explicitly requested in this task; no old grant reused. Physical margin warning only, commit headroom available.",
+  "protection": "Monitor progress and process memory every <=60 seconds; investigate only allocation failure, severe paging or confirmed stall; do not close GUI or other apps. Preserve all evidence and stop only owned process tree if cancellation is requested.",
+  "command": [
+    "C:/NIFPGA/programs/Vivado2021_1/bin/vivado.bat",
+    "-mode",
+    "batch",
+    "-source",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_endpoint_audit_20260918\\export_routed_analysis.tcl",
+    "-log",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_endpoint_audit_20260918\\vivado.log",
+    "-journal",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_endpoint_audit_20260918\\vivado.jou",
+    "-tclargs",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_endpoint_audit_20260918",
+    "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.runs\\impl_1\\sync_ota_top_routed.dcp"
+  ]
+}

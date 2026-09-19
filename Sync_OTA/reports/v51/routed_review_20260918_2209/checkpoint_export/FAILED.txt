@@ -1,0 +1,9 @@
+Unexpected plan-A mapping; inspect coefficient_mapping.txt
+Unexpected plan-A mapping; inspect coefficient_mapping.txt
+    while executing
+"error "Unexpected plan-A mapping; inspect coefficient_mapping.txt""
+    invoked from within
+"if {[llength $roms]!=6 || [llength $commands]!=2 || [llength $rows]!=15} {error "Unexpected plan-A mapping; inspect coefficient_mapping.txt"}"
+    (procedure "main" line 36)
+    invoked from within
+"main $out $dcp"

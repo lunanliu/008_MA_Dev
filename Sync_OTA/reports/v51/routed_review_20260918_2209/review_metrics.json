@@ -1,0 +1,60 @@
+{
+  "reviewed_at": "2026-09-18T22:35:33.990001+02:00",
+  "timing_date": "2026-09-18T22:09:17+02:00",
+  "clocks": {
+    "clk125": {
+      "wns_ns": 0.153,
+      "tns_ns": 0,
+      "failing_endpoints": 0
+    },
+    "clk150": {
+      "wns_ns": 0.009,
+      "tns_ns": 0,
+      "failing_endpoints": 0
+    },
+    "clk500": {
+      "wns_ns": -0.199,
+      "tns_ns": -26.125,
+      "failing_endpoints": 381
+    }
+  },
+  "whs_ns": 0.019,
+  "hold_failing_endpoints": 0,
+  "bus_skew_count": 50,
+  "bus_skew_min_slack_ns": 0.94,
+  "routed_error_nets": 0,
+  "all_failures_same_clock": true,
+  "group_attribution": "one worst path per endpoint; SLACK properties quantized to .001 ns",
+  "groups": [
+    {
+      "name": "CFO窗口取消控制",
+      "endpoints": 280,
+      "tns_quantized_ns": -19.466,
+      "wns_ns": -0.199
+    },
+    {
+      "name": "CFO系数ROM读出",
+      "endpoints": 20,
+      "tns_quantized_ns": -2.056,
+      "wns_ns": -0.169
+    },
+    {
+      "name": "其他CFO控制/寻址/读取",
+      "endpoints": 59,
+      "tns_quantized_ns": -3.549,
+      "wns_ns": -0.151
+    },
+    {
+      "name": "SFO厂商FFT及服务握手",
+      "endpoints": 22,
+      "tns_quantized_ns": -0.919,
+      "wns_ns": -0.064
+    }
+  ],
+  "input_command_failures": 0,
+  "rtl_modified": false,
+  "simulation_started": false,
+  "synthesis_started": false,
+  "implementation_started": false,
+  "read_only_vivado_checkpoint_export": true
+}

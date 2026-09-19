@@ -1,0 +1,321 @@
+`timescale 1ns / 1ps
+// 053 guard-aware finite research transaction: C14 D16 M8 R28, 16 temporal complex lanes.
+module sfo_guarded_farrow_stream #(
+    // Historical parameter name: this is target_count, including requested guard.
+    // In053 E1 target_count=4168; the nominal payload remains4096.
+    parameter integer NOMINAL_SAMPLES = 4096
+) (
+    input  wire                 clk,
+    input  wire                 reset,
+    input  wire                 start,
+    input  wire        [  31:0] cfg_step,
+    input  wire signed [  63:0] cfg_phase0,
+    input  wire        [  31:0] cfg_request_beats,
+    input  wire                 s_valid,
+    output wire                 s_ready,
+    input  wire        [ 511:0] s_data,
+    output wire                 m_valid,
+    input  wire                 m_ready,
+    output wire        [ 511:0] m_data,
+    output wire        [  31:0] m_tag,
+    output wire                 issue_valid,
+    output wire        [  31:0] issue_tag,
+    output reg         [2175:0] issue_window,
+    output wire signed [  63:0] issue_phase0,
+    output reg         [ 511:0] issue_base,
+    output reg         [ 127:0] issue_mu,
+    output reg         [   6:0] credit_used,
+    output reg         [   6:0] fifo_count,
+    output wire        [   6:0] inflight,
+    output reg         [  31:0] write_count,
+    output wire                 done
+);
+  localparam [31:0] REQUEST_BEATS = (NOMINAL_SAMPLES + 32) / 4;
+  reg started;
+  reg [31:0] step, request_beats, issued, returned, popped;
+  reg signed [63:0] phase0;
+  typedef struct packed {
+    logic [95:0] ring_base;
+    logic [127:0] mu;
+    logic [31:0] lo,hi,tag;
+    logic coordinate_valid;
+    logic [511:0] debug_base;
+    logic signed [63:0] debug_phase;
+  } descriptor_t;
+  descriptor_t descriptor_new,descriptor_head,descriptor_tail;
+  reg [1:0] descriptor_count;
+  reg [31:0] generated;
+  reg window_valid;
+  reg [31:0] window_tag;
+  reg signed [63:0] window_phase;
+  reg [2175:0] read_window;
+  wire read_fire;
+  // One setup adder fills the bank; steady state advances all lanes in parallel.
+  reg signed [63:0] lane_phase[0:15];
+  reg signed [63:0] init_phase;
+  reg [3:0] init_lane;
+  reg phase_ready;
+  wire generate_descriptor = started && phase_ready && generated<request_beats && descriptor_count<2;
+  wire signed [63:0] step64 = $signed({32'd0, step});
+  wire signed [63:0] beat_step = step64 <<< 4;
+  wire signed [63:0] init_next = init_phase + step64;
+  reg [31:0] ring[0:63];
+  reg [511:0] data_fifo[0:63];
+  reg [31:0] tag_fifo[0:63];
+  reg [5:0] wr_ptr, rd_ptr;
+  wire core_ready, core_valid;
+  wire [511:0] core_data;
+  wire [31:0] core_tag;
+  wire pending = started && (issued < request_beats);
+  wire pop = m_valid && m_ready;
+  wire push = core_valid && !reset;
+  wire [32:0] next_write = {1'b0, write_count} + 33'd16;
+  wire signed [63:0] written = $signed({32'd0, write_count});
+  wire signed [63:0] oldest = (write_count > 32'd64) ? written - 64'sd64 : 64'sd0;
+  wire signed [63:0] oldest_after_write = (next_write > 33'd64) ? $signed(
+      {31'd0, next_write}
+  ) - 64'sd64 : 64'sd0;
+  reg signed [63:0] min_index, max_index;
+  reg signed [63:0] lane_base;
+  reg [5:0] ring_base;
+  reg [27:0] frac;
+  reg [ 8:0] rounded_mu;
+  reg round_up;
+  integer lane;
+  always @* begin
+    descriptor_new='0;
+    descriptor_new.tag=generated;descriptor_new.debug_phase=phase0;
+    min_index = 64'sh7fffffffffffffff;
+    max_index = -64'sd1;
+    lane_base = 64'sd0;
+    ring_base = 6'd0;
+    frac = 28'd0;
+    rounded_mu = 9'd0;
+    round_up = 1'b0;
+    for (lane = 0; lane < 16; lane = lane + 1) begin
+      lane_base = lane_phase[lane] >>> 28;
+      frac = lane_phase[lane][27:0];
+      round_up = (frac[19:0] > 20'h80000) || ((frac[19:0] == 20'h80000) && frac[20]);
+      rounded_mu = {1'b0, frac[27:20]} + {8'd0, round_up};
+      // Data selection needs only the exact modulo-64 ring index. Keep the
+      // full coordinate below for ownership checks, off the 64:1 data mux.
+      ring_base = lane_phase[lane][33:28] + {5'd0,rounded_mu[8]};
+      if (rounded_mu == 9'd256) begin
+        lane_base  = lane_base + 64'sd1;
+        rounded_mu = 9'd0;
+      end
+      descriptor_new.debug_base[lane*32+:32] = lane_base[31:0];
+      descriptor_new.mu[lane*8+:8] = rounded_mu[7:0];
+      descriptor_new.ring_base[lane*6+:6] = ring_base;
+      if (lane == 0) min_index = lane_base - 64'sd1;
+      if (lane == 15) max_index = lane_base + 64'sd2;
+    end
+    // Positive phase step and monotone RNE make endpoint bounds exact for
+    // every lane/tap. Avoid 64 replicated wide range comparators.
+    descriptor_new.lo=min_index[31:0];descriptor_new.hi=max_index[31:0];
+    descriptor_new.coordinate_valid=min_index>=0 && max_index<=64'shffffffff;
+  end
+  // Descriptor ownership ends only when its ring words are actually sampled.
+  // The phase generator is independent of window availability and downstream ready.
+  always @* begin
+    read_window=2176'd0;
+    read_window[2175:2048]=descriptor_head.mu;
+    for(integer l=0;l<16;l=l+1)begin
+      for(integer t=0;t<4;t=t+1)begin
+        read_window[((l*2)*4+t)*16+:16]=ring[descriptor_head.ring_base[l*6+:6]-6'd1+$unsigned(6'(t))][15:0];
+        read_window[((l*2+1)*4+t)*16+:16]=ring[descriptor_head.ring_base[l*6+:6]-6'd1+$unsigned(6'(t))][31:16];
+      end
+    end
+  end
+  wire head_available=descriptor_count!=0 && descriptor_head.coordinate_valid &&
+      {1'b0,descriptor_head.lo}>=((write_count>64)?({1'b0,write_count}-33'd64):33'd0) &&
+      descriptor_head.hi<write_count;
+  assign s_ready = !reset && started && phase_ready && !next_write[32] &&
+      (!pending || (descriptor_count!=0 && descriptor_head.coordinate_valid &&
+       ((next_write>64)?(next_write-33'd64):33'd0)<={1'b0,descriptor_head.lo}));
+  wire input_fire = s_valid && s_ready;
+  // Reserve response capacity before the extra window pipeline stage.
+  assign read_fire=!reset && pending && head_available && credit_used<64;
+  assign issue_valid=!reset && window_valid;
+  assign issue_tag=window_tag;
+  assign issue_phase0=window_phase;
+  assign m_valid = !reset && (fifo_count != 0);
+  assign m_data = m_valid ? data_fifo[rd_ptr] : 512'd0;
+  assign m_tag = m_valid ? tag_fifo[rd_ptr] : 32'd0;
+  assign inflight = credit_used - fifo_count;
+  assign done = !reset && started && (popped == request_beats);
+  sfo_farrow_parallel #(
+      .C(14),
+      .D(16),
+      .M(8),
+      .LANES(16)
+  ) arithmetic (
+      .clk         (clk),
+      .reset       (reset),
+      .input_valid (issue_valid),
+      .input_tag   (issue_tag),
+      .input_data  (issue_window),
+      .input_ready (core_ready),
+      .output_valid(core_valid),
+      .output_tag  (core_tag),
+      .output_data (core_data),
+      .trace_data  (),
+      .saturation  (),
+      .trace_valid (),
+      .trace_tag   ()
+  );
+  always @(posedge clk)begin
+    issue_window<=read_window;issue_base<=descriptor_head.debug_base;
+    issue_mu<=descriptor_head.mu;window_tag<=descriptor_head.tag;window_phase<=descriptor_head.debug_phase;
+  end
+  integer write_lane, phase_lane;
+  always @(posedge clk) begin
+    if (reset) begin
+      started <= 0;descriptor_count<=0;generated<=0;window_valid<=0;
+      step <= 0;
+      request_beats <= 0;
+      phase0 <= 0;
+      phase_ready <= 0;
+      init_phase <= 0;
+      init_lane <= 0;
+      for (phase_lane = 0; phase_lane < 16; phase_lane = phase_lane + 1)
+      lane_phase[phase_lane] <= 0;
+      issued <= 0;
+      returned <= 0;
+      popped <= 0;
+      write_count <= 0;
+      credit_used <= 0;
+      fifo_count <= 0;
+      wr_ptr <= 0;
+      rd_ptr <= 0;
+    end else begin
+      window_valid<=read_fire;
+      case({generate_descriptor,read_fire})
+        2'b10:descriptor_count<=descriptor_count+1'b1;
+        2'b01:descriptor_count<=descriptor_count-1'b1;
+        default:begin end
+      endcase
+      if(generate_descriptor)begin
+        if(descriptor_count==0 || (descriptor_count==1 && read_fire))descriptor_head<=descriptor_new;
+        else descriptor_tail<=descriptor_new;
+        generated<=generated+1'b1;
+      end
+      if(read_fire && descriptor_count==2)descriptor_head<=descriptor_tail;
+      if (start && !started) begin
+        started <= 1;
+        step <= cfg_step;
+        phase0 <= cfg_phase0;
+        request_beats <= cfg_request_beats;
+        lane_phase[0] <= cfg_phase0;
+        init_phase <= cfg_phase0;
+        init_lane <= 4'd1;
+        phase_ready <= 0;
+      end else if (started && !phase_ready) begin
+        lane_phase[init_lane] <= init_next;
+        init_phase <= init_next;
+        if (init_lane == 4'd15) phase_ready <= 1;
+        else init_lane <= init_lane + 4'd1;
+      end
+      if (input_fire) begin
+        for (write_lane = 0; write_lane < 16; write_lane = write_lane + 1)
+        ring[(write_count[5:0]+write_lane)&63] <= s_data[write_lane*32+:32];
+        write_count <= write_count + 32'd16;
+      end
+      if (read_fire) issued<=issued+32'd1;
+      if (generate_descriptor) begin
+        phase0 <= phase0 + beat_step;
+        for (phase_lane = 0; phase_lane < 16; phase_lane = phase_lane + 1)
+        lane_phase[phase_lane] <= lane_phase[phase_lane] + beat_step;
+      end
+      if (push) begin
+        data_fifo[wr_ptr] <= core_data;
+        tag_fifo[wr_ptr] <= core_tag;
+        wr_ptr <= wr_ptr + 6'd1;
+        returned <= returned + 32'd1;
+      end
+      if (pop) begin
+        rd_ptr <= rd_ptr + 6'd1;
+        popped <= popped + 32'd1;
+      end
+      case ({
+        read_fire, pop
+      })
+        2'b10:   credit_used <= credit_used + 7'd1;
+        2'b01:   credit_used <= credit_used - 7'd1;
+        default: credit_used <= credit_used;
+      endcase
+      case ({
+        push, pop
+      })
+        2'b10:   fifo_count <= fifo_count + 7'd1;
+        2'b01:   fifo_count <= fifo_count - 7'd1;
+        default: fifo_count <= fifo_count;
+      endcase
+    end
+  end
+  // synthesis translate_off
+  initial
+    if (NOMINAL_SAMPLES != 4096 && NOMINAL_SAMPLES != 4168 && NOMINAL_SAMPLES != 5120 &&
+        NOMINAL_SAMPLES != 5192 && NOMINAL_SAMPLES != 1336320 && NOMINAL_SAMPLES != 1336392)
+      $fatal(1, "Unsupported target sample count");
+  integer check_lane;
+  reg stalled;
+  reg [511:0] held_data;
+  reg [31:0] held_tag;
+  always @(posedge clk) begin
+    if (reset) begin
+      stalled   <= 0;
+      held_data <= 0;
+      held_tag  <= 0;
+    end else begin
+      if (start) begin
+        if ($isunknown({cfg_step, cfg_phase0, cfg_request_beats}))
+          $fatal(1, "Unknown start configuration");
+        if (started) $fatal(1, "Only one start is supported between initial resets");
+        if (cfg_request_beats != REQUEST_BEATS)
+          $fatal(1, "Request count must match selected target profile");
+        // T10 production callers validate the full first-pass +/-150 ppm range;
+        // the second-pass descriptor additionally enforces +/-3 ppm and context.
+        // The historical five fixture values were never a synthesized mux/table.
+        if (cfg_step < 32'd268395191 || cfg_step > 32'd268475721)
+          $fatal(1, "R28 step outside the production descriptor range +/-150 ppm");
+        if (cfg_phase0 < 64'sd268435456 || cfg_phase0 > 64'sh0000ffffffffffff)
+          $fatal(1, "Finite initial phase outside reviewed coordinate headroom");
+      end
+      if (!phase_ready && (read_fire || issue_valid || s_ready))
+        $fatal(1, "Handshake before phase initialization completed");
+      if (phase_ready) begin
+        if (step64 <= 0 || lane_phase[0] !== phase0)
+          $fatal(1, "Lookahead origin or positive-step invariant");
+        for (check_lane = 0; check_lane < 16; check_lane = check_lane + 1) begin
+          if ($isunknown(
+                  lane_phase[check_lane]
+              ) || lane_phase[check_lane] < 0 ||
+                  lane_phase[check_lane] > 64'sh7fffffffffffffff - beat_step)
+            $fatal(1, "Lookahead signed64 headroom");
+          if (lane_phase[check_lane] !== phase0 + check_lane * step64)
+            $fatal(1, "Lookahead lane phase identity");
+          if (check_lane > 0 && descriptor_new.debug_base[check_lane*32+:32] < descriptor_new.debug_base[(check_lane-1)*32+:32])
+            $fatal(1, "Rounded lane bases are not monotone");
+        end
+      end
+      if (credit_used > 64 || fifo_count > credit_used || credit_used != (issued - popped) ||
+          fifo_count != (returned - popped) || returned > issued)
+        $fatal(1, "Output reservation accounting violated");
+      if (push && (fifo_count == 64 || core_tag !== returned))
+        $fatal(1, "Unreserved or reordered Farrow return");
+      if (pop && m_tag !== popped) $fatal(1, "Output tag order violated");
+      if (read_fire && (!head_available || descriptor_head.tag!=issued || $isunknown(read_window)))
+        $fatal(1, "Farrow sampled absent, overwritten or reordered samples");
+      if(descriptor_count>2 || generated-issued!=descriptor_count)
+        $fatal(1,"Descriptor ownership accounting");
+      if(issue_valid && !core_ready)$fatal(1,"Farrow arithmetic must have II=1 without input backpressure");
+      if (stalled && (!m_valid || m_data !== held_data || m_tag !== held_tag))
+        $fatal(1, "Output changed while stalled");
+      stalled   <= m_valid && !m_ready;
+      held_data <= m_data;
+      held_tag  <= m_tag;
+    end
+  end
+  // synthesis translate_on
+endmodule
