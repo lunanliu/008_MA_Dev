@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "grant_id": "SYNC_DDR_RUNTIME_CONFIG_V1_20260917T172951Z",
+  "status": "SAME_GRANT_REPAIR_APPROVED",
+  "grant_usable": true,
+  "owner_thread_id": "01a0afdf-cd3a-7e91-afc8-6a947ec3cc71",
+  "manager_thread_id": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "root": "D:/008_MA_Dev/Sync_DDR",
+  "request_id": "SYNC_DDR_RUNTIME_CONFIG_V1_20260917",
+  "frozen_manifest_sha256": "6A6565EBF9735B13D485AD21F7F3B526EDD46D4D450E97A54EFBAD8EF1B7661B",
+  "stages": [
+    "write",
+    "read"
+  ],
+  "admitted_utc": "2026-09-17T17:29:51.2814182Z",
+  "first_start_not_after_utc": "2026-09-17T17:45:00Z",
+  "absolute_deadline_utc": "2026-09-17T17:46:29.0916392Z",
+  "whole_budget_seconds": 900,
+  "budget_rule": "Use the first run_state deadline once, at most 900 seconds from the first launch-budget timestamp and no later than the absolute deadline; never reset on retry",
+  "stage_seconds": {
+    "create": 180,
+    "write": 300,
+    "read": 300
+  },
+  "output": "work/runtime_config_v1",
+  "resources": {
+    "xelab_threads": 16,
+    "vivado_main_processes": 1,
+    "matlab_processes": 0,
+    "general_threads": 8,
+    "physical_memory_is_warning_only": true,
+    "ip_jobs": 0,
+    "expected_peak_gib": 4
+  },
+  "scope": "create_project, required xvhdl/xelab, write/read bounded XSim only, including 1280-bit and 640-bit cases",
+  "forbidden": [
+    "synthesis",
+    "implementation",
+    "NI compile",
+    "board test",
+    "MATLAB",
+    "CLIP XML",
+    "other project writes",
+    "rerun passed stages"
+  ],
+  "repair_rule": "Same sole task versions ordinary execution repairs and retains evidence; changed frozen inputs require manager acknowledgement before native retry, with original deadline retained",
+  "closeout_rule": "Record root exit and three empty owned Job observations, publish execution plus self-review; manager checks closure; no automatic next grant",
+  "revision": 2,
+  "amended_utc": "2026-09-17T17:38:41.926008+00:00",
+  "first_budget_utc": "2026-09-17T17:31:29.0916392Z",
+  "preserve_run_state": "work/runtime_config_v1/run_state.json",
+  "parent_grant_path": "reports/operations/MANAGER_GRANT_V1.json",
+  "repair_changes": [
+    "scripts/create_project.tcl",
+    "scripts/simulate.tcl"
+  ],
+  "preserved_passed_stages": [
+    "create"
+  ],
+  "reason": "Resolve duplicate xelab --mt arguments via documented mt_level=16 and empty more_options; no RTL, TB or acceptance change"
+}

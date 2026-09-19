@@ -1,0 +1,9 @@
+﻿group,endpoints,tns_ns,wns_ns
+clk500:cfo/windows,168,-10.849,-0.199
+clk500:cfo/observation_front/fft_core,139,-10.027,-0.174
+clk500:cfo/observation_front,20,-2.056,-0.169
+clk500:cfo/windows/window_credits,15,-1.397,-0.131
+clk500:sfo/residual_estimator/front_stage,15,-0.768,-0.064
+clk500:cfo/windows/packed_windows,15,-0.651,-0.132
+clk500:sfo/residual_estimator/aux_service,7,-0.151,-0.048
+clk500:cfo/windows/complete_windows,2,-0.091,-0.068

@@ -1,0 +1,9 @@
+{
+  "kind": "STATIC_VENDOR_GUI_ARITHMETIC_ONLY",
+  "time": "2026-09-18T00:56:33.489890+02:00",
+  "runtime_nfft": 11,
+  "script_sha256": "b042cc43aa53834879ea5a67920b236f19446d8766d775e291d987a0946b18ce",
+  "simulation": false,
+  "synthesis": false,
+  "rtl_execution": false
+}

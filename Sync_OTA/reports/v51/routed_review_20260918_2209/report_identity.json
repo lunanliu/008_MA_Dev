@@ -1,0 +1,62 @@
+{
+  "files": [
+    {
+      "path": "Sync_OTA.runs/impl_1/sync_ota_top_timing_summary_routed.rpt",
+      "sha256": "c85f28c8298d12957cd3a44a882b6dfd53b85328fa379fd631ebf97756fb0681",
+      "bytes": 834063,
+      "modified_at": "2026-09-18T22:09:18.052783+02:00"
+    },
+    {
+      "path": "Sync_OTA.runs/impl_1/sync_ota_top_utilization_placed.rpt",
+      "sha256": "ef59c4d2e5b8bb163eb934bca0055d106f2da6627c0998050db7b778390b1745",
+      "bytes": 20134,
+      "modified_at": "2026-09-18T20:07:26.215482+02:00"
+    },
+    {
+      "path": "Sync_OTA.runs/impl_1/sync_ota_top_bus_skew_routed.rpt",
+      "sha256": "31885e239b6e7e2ab2bd9e6f510f6f24493f44a314f1804e611790ab6f890562",
+      "bytes": 623576,
+      "modified_at": "2026-09-18T22:09:54.771971+02:00"
+    },
+    {
+      "path": "Sync_OTA.runs/impl_1/sync_ota_top_methodology_drc_routed.rpt",
+      "sha256": "fccb1581afa471ffdbcf8394d44f8cee001325a6e5222f2d50924caf0addcb0c",
+      "bytes": 170494,
+      "modified_at": "2026-09-18T22:06:44.097629+02:00"
+    },
+    {
+      "path": "Sync_OTA.runs/impl_1/sync_ota_top_drc_routed.rpt",
+      "sha256": "92d2dbaeb79a9e4c98abdd8514cb457b48eb3559f785cf55d54be77243fd766d",
+      "bytes": 232417,
+      "modified_at": "2026-09-18T22:05:25.629122+02:00"
+    },
+    {
+      "path": "Sync_OTA.runs/impl_1/sync_ota_top_route_status.rpt",
+      "sha256": "f3a1fa4c732501762d2c6b1d5fc947725abf6ea4c2b5577920617e3b9f8d7d81",
+      "bytes": 714,
+      "modified_at": "2026-09-18T22:08:58.462767+02:00"
+    },
+    {
+      "path": "Sync_OTA.runs/impl_1/runme.log",
+      "sha256": "d6fb7fe3f777abd61ec282df6d1d43b39466e15aa3ff9b686f7df0d6fa510eed",
+      "bytes": 326442,
+      "modified_at": "2026-09-18T22:09:54.818583+02:00"
+    },
+    {
+      "path": "Sync_OTA.runs/impl_1/sync_ota_top.tcl",
+      "sha256": "8447b431e516d4a8de19b90cd2e053bb6c51e40dcda03c95f5348cbab10f3d93",
+      "bytes": 20700,
+      "modified_at": "2026-09-18T19:00:23.680141+02:00"
+    }
+  ],
+  "new_eda_started": true,
+  "current_129_rtl_match_plan_a_delivery": true,
+  "changed_rtl_vs_delivery": [],
+  "source_identity_limit": "Current file hashes and new synthesis/readmem/instance evidence; GUI run has no frozen full input manifest.",
+  "read_only_checkpoint_analysis_started": true,
+  "eda_scope": "READ_ONLY_SAVED_CHECKPOINT_REPORTING_ONLY",
+  "synthesis_started": false,
+  "implementation_started": false,
+  "simulation_started": false,
+  "checkpoint_export": "checkpoint_export/export_validation.json"
+}

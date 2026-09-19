@@ -1,0 +1,15 @@
+{
+  "deadline_utc": "2026-09-17T19:01:37.9312527Z",
+  "passed": [
+    "create",
+    "capture",
+    "download"
+  ],
+  "attempts": [
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download"
+  ],
+  "first_native_utc": "2026-09-17T18:46:37.9312527Z",
+  "project": "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create\\project\\DDR_Control.xpr"
+}

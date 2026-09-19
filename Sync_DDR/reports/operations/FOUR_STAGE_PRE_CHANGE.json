@@ -1,0 +1,421 @@
+{
+  "created_utc": "2026-09-17T18:34:56.488205+00:00",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "E13FECC49FAD9A0A7476077DE38364E5367B390E16905ACFD4EDE1B598E9ACE6"
+    },
+    {
+      "path": "README_ZH.md",
+      "sha256": "7493861E7DDD940333E2634F6BB142C7FEBCD7DF402158EDA0E4349A0BDA5581"
+    },
+    {
+      "path": "constraints/upload_150mhz.xdc",
+      "sha256": "53E720A13C1E45FF0F2A195A7166A62420DBB7B0CBA189D7913D724C03D4389D"
+    },
+    {
+      "path": "docs/DDR_RUNTIME_CONFIG_DESIGN_ZH.md",
+      "sha256": "86790410F10D0855E478F790240CB0DB120126624A1CFF53F2252BD20E1A2223"
+    },
+    {
+      "path": "docs/MIGRATION_STATUS_ZH.md",
+      "sha256": "34227E045AC1A9106B760C03E026BEE286817705DC15FCF6CC3A2A55E31D866B"
+    },
+    {
+      "path": "docs/PROJECT_SPEC_ZH.md",
+      "sha256": "572BC3D79BCBE3140C47397D9294F1539F4BD3893B055821501C9310BC2721FA"
+    },
+    {
+      "path": "docs/RTL_HARDWARE_DESIGN_STANDARD_ZH.md",
+      "sha256": "7E71567E1BD8CF3430B10BF751825E6BFE3CABB1B4A8036A17FBECBEF9A9ED10"
+    },
+    {
+      "path": "history/DDR_PAUSED_HANDOFF_20260917.json",
+      "sha256": "FC2ABF307C68B3FD9B7C2D82D8FCAAE0831323FF9072228452A7A94DE5B39D78"
+    },
+    {
+      "path": "matlab/analyze_ddr_counters.m",
+      "sha256": "B6B7E483848F7D614384A5B2D895889C221EA3543DFA426F498E3F1AB4CB0D9E"
+    },
+    {
+      "path": "matlab/analyze_ddr_readback.m",
+      "sha256": "57BE3FD22B0A88DC2DE6413453EF0AECC1DBA1E8937F00F456B954316EA1F4E9"
+    },
+    {
+      "path": "matlab/generate_ddr_test.m",
+      "sha256": "2A5C03FACDF7F724CC319025FD9C4AE3B9AFCF1F7C54402798694456D5E03AE8"
+    },
+    {
+      "path": "reports/DDR_CURRENT_PORTS_ZH.md",
+      "sha256": "DC8B62D8733F267EAC4A72F10C0C6D8A7B5F6FC4BD060BEFFA9583B57C79E43A"
+    },
+    {
+      "path": "rtl/ddr_read_ctrl.vhd",
+      "sha256": "1FE6EEEBE61B3137A17316C5662ADC055E323BEAF100086F831DE05EC2842BA1"
+    },
+    {
+      "path": "rtl/ddr_upload_ctrl.vhd",
+      "sha256": "B70495D20F01D3C1CBD96F6614572393EEB929664BAC44D426830491DEF36A2D"
+    },
+    {
+      "path": "scripts/create_project.tcl",
+      "sha256": "B9F805785A02A97AA037ACF5CEFFAF87AAEF10406928757E907517922966E2B5"
+    },
+    {
+      "path": "scripts/DdrJobGuard.cs",
+      "sha256": "F8751748BCDE6BA39D7FF286C9FC07AEA87374FDF56049E9F3AA85E1E655E41A"
+    },
+    {
+      "path": "scripts/run_functional.ps1",
+      "sha256": "9BAC3B336FDD1B798DA024E7005279E9A90B8B5E6FE27DB6C5A0834AFC3E6D67"
+    },
+    {
+      "path": "scripts/simulate.tcl",
+      "sha256": "6307A40B83034AEC1734FD7AFBA083CDCDA1FCB6B1999ED8041E8719683610FC"
+    },
+    {
+      "path": "scripts/threads_pre.tcl",
+      "sha256": "1B9ABD6CC8A8D8F78297FB5E95DAF4A40BEBA931E2A89EE5DDAB3B012A731482"
+    },
+    {
+      "path": "sim/tb_ddr_read_ctrl.vhd",
+      "sha256": "987F77FA82E6ADC1D99E866A54E7F342B11D84ECC3847CEA2FBA4181D25FF7EB"
+    },
+    {
+      "path": "sim/tb_ddr_upload_ctrl.vhd",
+      "sha256": "15575C5389D1BA213320AB0466D35DE077538A692C72D3B6621BB7CFFD273114"
+    },
+    {
+      "path": "reports/migration/COPY_MANIFEST_20260917.json",
+      "sha256": "56B2166424F2431271301D30326F5FEAF4C9A95FADC9EC34116230E41D38DE9B"
+    },
+    {
+      "path": "reports/operations/FROZEN_INPUTS_V1.json",
+      "sha256": "802CAA8E0134A10A1FA64900E457860AD487D570BC7AD82C400EC066E02F5AAB"
+    },
+    {
+      "path": "reports/operations/FROZEN_INPUTS_V2.json",
+      "sha256": "6A6565EBF9735B13D485AD21F7F3B526EDD46D4D450E97A54EFBAD8EF1B7661B"
+    },
+    {
+      "path": "reports/operations/MANAGER_GRANT_V1.json",
+      "sha256": "4A420FE3C0B01D3F0A6EE484B6727A9F322795A6906A4FCC0ADF6D3506774EBE"
+    },
+    {
+      "path": "reports/operations/MANAGER_GRANT_V2.json",
+      "sha256": "806B1298F4F4E9B51DB9E4DFEFA49A92CC5FD9962ACD8582FDD60434AC2EFAC4"
+    },
+    {
+      "path": "reports/operations/PRE_CHANGE_INPUTS_20260917.json",
+      "sha256": "E3B06B3EC5DBB7659F4128E4213C1357023C60A6F4AEBC345A094683BC4F31B8"
+    },
+    {
+      "path": "reports/operations/RESOURCE_REQUEST.json",
+      "sha256": "56C4CB187EEE731C1661F6FBF7007CE4C4C5B9A79C7D9F41847D82B6A6BBEB61"
+    },
+    {
+      "path": "reports/operations/RESOURCE_REQUEST_V1.json",
+      "sha256": "1E62C4A2620FABF3742B7262746F9797E914F5ACC3297E34741A7250001F0493"
+    },
+    {
+      "path": "reports/operations/RESOURCE_REQUEST_V2.json",
+      "sha256": "C65BDBC4BEDD37B4422498A163F6672879D37388B49F342A8BE520600E439A1C"
+    },
+    {
+      "path": "reports/operations/STATIC_INPUT_AUDIT.json",
+      "sha256": "090714354CA3A5D693A9F3CD22B4F2849EE957ED9D600F542C036C8EADD2BFAA"
+    },
+    {
+      "path": "reports/operations/VALIDATION_RESULT_20260917.json",
+      "sha256": "A918E4E949BA0DCC141F553E493969C13C1D5FA58E1C402BBEBDF3F9A19A8311"
+    },
+    {
+      "path": "reports/review/DDR_FULL_FRAME_CAPACITY_REVIEW_20260917_ZH.md",
+      "sha256": "8BE61247020409416E07B616C6214379FDBB5C5B36E1DD11B8C9FEC58C5878D4"
+    },
+    {
+      "path": "reports/review/DDR_RUNTIME_CONFIG_VALIDATION_20260917_ZH.md",
+      "sha256": "6641C2FA83B42CB11C54AEB9A03655F77D0B678974FA81F76A4D17B14F0E5124"
+    },
+    {
+      "path": "reports/review/RUNTIME_CONFIG_RTL.diff",
+      "sha256": "3D381FA3601BD91C3D3CF0CFF98B1C266EBCC04FC146A7B59B0E4CD75A6309C2"
+    },
+    {
+      "path": "reports/review/RUNTIME_CONFIG_SELF_REVIEW_20260917_ZH.md",
+      "sha256": "5DA801608E64DC3E4D9E3D2CA9E6DAD9706BFC7E1FB177418D042DC0354F2E23"
+    },
+    {
+      "path": "reports/review/STATIC_DESIGN_REVIEW_20260917_ZH.md",
+      "sha256": "CEB53F1F504DD2A8EF00CE4CA3CC3AC79F6075F55026159A041BF57424C68708"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/BOARD_TEST_GUIDE_ZH.md",
+      "sha256": "40E9D3769751626BB76C1C9D72F4ADFA9DE62A5E5971283871EFF3598B2CF1AB"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/manifest.json",
+      "sha256": "FEC4D048CBAA1837FAA86EFE6D7885938AFD855B1DAFA44C55EB5B9DE5199ADA"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/README_ZH.md",
+      "sha256": "3B85834771202D101EBA1EDA7301B134A5C7F9B2D4FFB26697FEE9E070A035BA"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/READ_PORTS.md",
+      "sha256": "3E61C67818870F254CD70FAD9CD6F24C9A7983A9022DB9247C3CFD5DC1A4DD59"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/UPLOAD_GUIDE_ZH.md",
+      "sha256": "63EECAC2A0B715D46DFABBC6CAE1BBB79DBC68674425F4BC67E25F5A3382895B"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/VALIDATION.md",
+      "sha256": "DCF98693541AE1F29EC76C0E3E3464F6EE3D99AA039F708BFAAA25C010E0DD5A"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/VALIDATION_JOB.json",
+      "sha256": "9BF953D28BC8AC2D245E9F872C86C3FEAE0190CDB29CA859E8FF6643DA685900"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev01/preflight_validate_only.json",
+      "sha256": "3AE4636FA370F734CF12A670BF11AF0099A7ED48D8A9FF29AFE3133F90AAE1A9"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev01/run_ddr_functional.ps1",
+      "sha256": "8662A85CF62DF9383526924F985E7D8C5A9473CE5EEB70A5DF2C97BB9A3EFFA5"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev02/run_ddr_functional.ps1",
+      "sha256": "160A266448CB75299E594F7A4759DDD5BC0C5F72D664EA1623BA105E4BA61227"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev03/DdrJobGuard.cs",
+      "sha256": "F8751748BCDE6BA39D7FF286C9FC07AEA87374FDF56049E9F3AA85E1E655E41A"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev03/DdrJobGuard_probe_20260917.json",
+      "sha256": "C719423DF25795CCEA095F4749B784E389E50C3EAACD0D80F348650775E62E2F"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev03/EXECUTION_REVIEW.json",
+      "sha256": "C0B70556976EBD7A7259C105550AE760436B6633447EB55B27A67EA044A3F858"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev03/preflight.json",
+      "sha256": "34C50005DF4FEB0398EA16B30D920809EFDA574B125D85A12ADBECB492AE49E1"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev03/run_ddr_functional.ps1",
+      "sha256": "CDD9C3E448D2386A37563FD27836D40A997E27F39A52C2AE99BBD3198E15A773"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev04/create_project_retry.tcl",
+      "sha256": "4DB6D153E5A4DAD5CFF1637B9FBE1587B054551A3771B2BC16CA76705108123E"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev04/DdrJobGuard.cs",
+      "sha256": "F8751748BCDE6BA39D7FF286C9FC07AEA87374FDF56049E9F3AA85E1E655E41A"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev04/EXECUTION_REVIEW.json",
+      "sha256": "14377C012523B68F0821F1A9ACB3E5180248D853285405DBB71E773928F984B6"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev04/preflight.json",
+      "sha256": "A4D38CDBE7436DEBA1EA930D3B842DFAA1884D43212BE54A33EAC2AF4EE36CB9"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev04/run_ddr_functional.ps1",
+      "sha256": "1B5CE08A58F9D2467EF21E7BDAFE6E64D9F9FDD96F0E1D89BAD6C01CB3AB1D14"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev04/simulate_retry.tcl",
+      "sha256": "17FAF146BF8CBADD977726E8FE5F9C69393529EB0C1A420EB1BEA694713D3982"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev05/create_project_retry.tcl",
+      "sha256": "20EFDBEDE07CD945A51328B577D8370D9BC6EA84E2064D82EB4434AE857B3B33"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev05/DdrJobGuard.cs",
+      "sha256": "F8751748BCDE6BA39D7FF286C9FC07AEA87374FDF56049E9F3AA85E1E655E41A"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev05/preflight.json",
+      "sha256": "4792B5CC74DCD48DE1B7FA424ABFF78358A72DBF293DFDDD91562078FF288F4C"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev05/run_ddr_functional.ps1",
+      "sha256": "F59D61797F4CEAADB758F7E9DEEBD13442A92B101AAACBDB045C9CFCFC0EAB10"
+    },
+    {
+      "path": "history/execution/astra_execution_20260917_rev05/simulate_retry.tcl",
+      "sha256": "EB25D7BD21E3C45E5BB61087015DC6D11E09D04373111BB1B9BF65FBF3562CAD"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/constraints/upload_150mhz.xdc",
+      "sha256": "53E720A13C1E45FF0F2A195A7166A62420DBB7B0CBA189D7913D724C03D4389D"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/matlab/analyze_ddr_counters.m",
+      "sha256": "B6B7E483848F7D614384A5B2D895889C221EA3543DFA426F498E3F1AB4CB0D9E"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/matlab/analyze_ddr_readback.m",
+      "sha256": "57BE3FD22B0A88DC2DE6413453EF0AECC1DBA1E8937F00F456B954316EA1F4E9"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/matlab/generate_ddr_test.m",
+      "sha256": "2A5C03FACDF7F724CC319025FD9C4AE3B9AFCF1F7C54402798694456D5E03AE8"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/project/DDR_Control.xpr",
+      "sha256": "29BEA3E1D5D2022B19C3638AA49F8BD9F8F1E112B4CEB6ED657A7A333C6669DB"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/project_retry04/DDR_Control.xpr",
+      "sha256": "740B456ABF966FBAC978DF32FE2BB6B6A1787DF1E7766292BED927C25EB42C1F"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/rtl/ddr_read_ctrl.vhd",
+      "sha256": "D75A88072AE909D4D34E843DD0EA99C82F82379EEAD80CCA55CCEBFBFC32965A"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/rtl/ddr_upload_ctrl.vhd",
+      "sha256": "DC2804BD120FCB3F9D1CCFD9767756E1E510E89980F437AB9E2CB390D2E53BD1"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/scripts/create_project.tcl",
+      "sha256": "3D7835D741F77245E328CC476F620AABE4A6E6473D4B5179A24DC6A9BDA03D48"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/scripts/simulate.tcl",
+      "sha256": "E46E5D4432D9C2FA50DA37922AC34F6909D10A33DFC92F9AFD5747706ADD519C"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/scripts/threads_pre.tcl",
+      "sha256": "1B9ABD6CC8A8D8F78297FB5E95DAF4A40BEBA931E2A89EE5DDAB3B012A731482"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/sim/tb_ddr_read_ctrl.vhd",
+      "sha256": "A7120FFEE8A7308A3764790AAF78E44143939BBB283E68FC69A006980589A853"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/sim/tb_ddr_upload_ctrl.vhd",
+      "sha256": "51418FA2A7CC32E457825C3956852468FFE546DED7EFCB6058E2A2CAE501BEE2"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_01/preflight.json",
+      "sha256": "3AE4636FA370F734CF12A670BF11AF0099A7ED48D8A9FF29AFE3133F90AAE1A9"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_01/summary.json",
+      "sha256": "7CBAFE1407C9974AB7BF466B74A6637F7944D977DA692E19D0D87DD685905DED"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_03/create.jou",
+      "sha256": "978ED6556FA50F4D08ECE7488D3479417D0C52B91494577A33EB6EF6A0536AED"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_03/create.launcher.log",
+      "sha256": "E7555111777273B10869C02948EEDB37419F315176E2E71C40DA9B1FB4F8CA36"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_03/create.log",
+      "sha256": "4B3378524CEECC59EE006017A90C2EAC8C9D7CE0F236BAFB09E52AA09A547464"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_03/create.owned_processes.json",
+      "sha256": "354A4C45513419D868D4E4BCC4887522888F6919F79C0254F098680ED52B3BB0"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_03/memory.jsonl",
+      "sha256": "ECF1C3632974AA91DB9EBF289C42D587A1CE0C82AF87D699B9F6253560F400D9"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_03/preflight.json",
+      "sha256": "34C50005DF4FEB0398EA16B30D920809EFDA574B125D85A12ADBECB492AE49E1"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_03/process_tree.jsonl",
+      "sha256": "3774659665142F696695F4E51CE3AEF976ED84686CAB490B534ED0C21FACC2A1"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_03/summary.json",
+      "sha256": "75BD825199F71C83D8BB0C2188B4E6A5BD125F265D4696C88ABF876256578B89"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_04/create.jou",
+      "sha256": "B82B1EC6859B1255EC37245EB84E4CAC13EB3FD17C75BBBBFC1D3D43D27AEAA4"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_04/create.launcher.log",
+      "sha256": "C6F4FCBEB26447DEC94361821847BF524DAEA2AAEF18E135CDC3C799BA9A0C2C"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_04/create.log",
+      "sha256": "0AEDCE25ACDCE2C125148BDD01BB92928CC46D639CE0055D86EBC700FA23D3AA"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_04/create.owned_processes.json",
+      "sha256": "21D5486491DC701E3465EBBEA530ACC3867E1E6AB76FFF7482B7F727F72EB102"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_04/memory.jsonl",
+      "sha256": "8ED0D50E01E396F814CBFA6C47457ED1A4E6CD2846109247C34BC5ED22DFCF76"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_04/preflight.json",
+      "sha256": "A4D38CDBE7436DEBA1EA930D3B842DFAA1884D43212BE54A33EAC2AF4EE36CB9"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_04/process_tree.jsonl",
+      "sha256": "58234D614E3D0917869ABB0B01A2C3DFE781A6EA2205E3C2575101F8D2334F17"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/validation_native_04/summary.json",
+      "sha256": "8E4779191DB0A700B6D89E2DAFA7735F0BEDEF0B726B28B57E4E6C988ED45178"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/project_retry04/DDR_Control.hw/DDR_Control.lpr",
+      "sha256": "079DB1A8DD0760528DDB9E88CA60488F02A4A2B320B9D2145376FC911BC1EE6F"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/project_retry04/DDR_Control.cache/wt/project.wpc",
+      "sha256": "AFDF2C5B603E9B2C8C7FD0A5ED26B59B225C79E41A5AD03070FBC8F10E549BFB"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/project/DDR_Control.hw/DDR_Control.lpr",
+      "sha256": "079DB1A8DD0760528DDB9E88CA60488F02A4A2B320B9D2145376FC911BC1EE6F"
+    },
+    {
+      "path": "history/DDR_Control_VHDL_20260916_rev02/project/DDR_Control.cache/wt/project.wpc",
+      "sha256": "AFDF2C5B603E9B2C8C7FD0A5ED26B59B225C79E41A5AD03070FBC8F10E549BFB"
+    },
+    {
+      "path": "docs/imported/BOARD_TEST_GUIDE_ZH.md",
+      "sha256": "40E9D3769751626BB76C1C9D72F4ADFA9DE62A5E5971283871EFF3598B2CF1AB"
+    },
+    {
+      "path": "docs/imported/READ_PORTS.md",
+      "sha256": "3E61C67818870F254CD70FAD9CD6F24C9A7983A9022DB9247C3CFD5DC1A4DD59"
+    },
+    {
+      "path": "docs/imported/UPLOAD_GUIDE_ZH.md",
+      "sha256": "63EECAC2A0B715D46DFABBC6CAE1BBB79DBC68674425F4BC67E25F5A3382895B"
+    },
+    {
+      "path": "docs/imported/VALIDATION.md",
+      "sha256": "DCF98693541AE1F29EC76C0E3E3464F6EE3D99AA039F708BFAAA25C010E0DD5A"
+    },
+    {
+      "path": "docs/tutorial/LABVIEW_RUNTIME_CONFIG_AND_SESSION_ZH.md",
+      "sha256": "E93A1D7B8E5C168A04824BF89F47683FC3392664948D731FDD4A62201477DAE3"
+    },
+    {
+      "path": "docs/tutorial/LABVIEW_TARGET_VI_STEP_BY_STEP_ZH.md",
+      "sha256": "96D167D188AA22D5C7B5B04261B407B0642B493B7D928E20DFD65C79E1CF5575"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+--- a/Sync_OTA/rtl/cfo/cfo_divide_rne64.sv
++++ b/Sync_OTA/rtl/cfo/cfo_divide_rne64.sv
+@@ -5,7 +5,7 @@
+  input logic signed [63:0] s_numerator,input logic [31:0] s_denominator,
+  output logic m_valid,input logic m_ready,output logic signed [63:0] m_quotient,output logic m_error
+ );
+- typedef enum logic [1:0] {IDLE,DIVIDE,ROUND,RESULT} state_t;
++ typedef enum logic [2:0] {IDLE,DIVIDE,ROUND_PRE,ROUND,RESULT} state_t;
+  state_t state;logic negative;logic [63:0] numerator,quotient;
+  logic [31:0] denominator;logic [32:0] remainder;logic [5:0] count;
+  wire clear=rst||abort_sync;
+@@ -15,9 +15,9 @@
+  wire [32:0] next_rem=ge?shifted-{1'b0,denominator}:shifted;
+  wire [32:0] doubled=remainder<<1;
+  wire inc=(doubled>{1'b0,denominator})||((doubled=={1'b0,denominator})&&quotient[0]);
+- wire [63:0] rounded=quotient+{{63{1'b0}},inc};
++ logic [63:0] rounded;
+  always_ff @(posedge clk)begin
+-  if(clear)begin state<=IDLE;negative<=0;numerator<=0;quotient<=0;denominator<=0;remainder<=0;count<=0;m_quotient<=0;m_error<=0;end
++  if(clear)begin state<=IDLE;negative<=0;numerator<=0;quotient<=0;denominator<=0;remainder<=0;count<=0;rounded<=0;m_quotient<=0;m_error<=0;end
+   else case(state)
+    IDLE:if(s_valid)begin
+     negative<=s_numerator[63];numerator<=s_numerator[63]?64'd0-s_numerator:s_numerator;
+@@ -26,11 +26,12 @@
+    end
+    DIVIDE:begin
+     numerator<=numerator<<1;quotient<={quotient[62:0],ge};remainder<=next_rem;
+-    if(count==63)state<=ROUND;else count<=count+1'b1;
++    if(count==63)state<=ROUND_PRE;else count<=count+1'b1;
+    end
++   ROUND_PRE:begin rounded<=quotient+{{63{1'b0}},inc};state<=ROUND;end
+    ROUND:begin m_quotient<=negative?64'd0-rounded:rounded;state<=RESULT;end
+    RESULT:if(m_ready)state<=IDLE;
+    default:state<=IDLE;
+   endcase
+  end
+-endmodule+endmodule

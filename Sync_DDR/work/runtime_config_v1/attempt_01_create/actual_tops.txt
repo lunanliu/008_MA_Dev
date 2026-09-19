@@ -1,0 +1,3 @@
+sources_1	ddr_upload_ctrl
+sim_write	tb_ddr_upload_ctrl
+sim_read	tb_ddr_read_ctrl

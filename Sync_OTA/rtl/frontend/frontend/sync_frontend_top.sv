@@ -1,11 +1,14 @@
 `timescale 1ns/1ps
 // Autonomous input: raw IQ plus transport/session controls only.
 module sync_frontend_top #(
+    parameter integer STREAM_BOUNDARIES=0,
     parameter string PS1_MEMORY_INIT_FILE = "fine_ps1_reference_16lane.mem"
 ) (
     input logic clk,
     input logic reset_n,
     input logic session_start, session_abort, stream_gap,
+    // Terminal end of an independent replay segment; not a temporary pause.
+    input wire segment_end,output wire segment_quiescent,
     input logic s_valid,
     output logic s_ready,
     input logic [127:0] s_data,
@@ -17,13 +20,26 @@ module sync_frontend_top #(
     output logic [31:0] candidate_count, rejected_count, capture_drop_count,
     output logic [31:0] duplicate_count, confirmed_count,
     output logic [1:0] snapshot_occupancy, snapshot_peak,
-    output logic [15:0] max_history_age, error_sticky
+    output logic [15:0] max_history_age, error_sticky,
+    // Conservative raw ownership watermark, in accepted SAMPLE coordinates of
+    // retention_epoch. The descriptor converter must retain its own pin until
+    // the frame lease has entered the same ordered FIFO as subsequent floors.
+    output wire retention_valid,
+    output wire [31:0] retention_epoch,
+    output logic [63:0] retention_floor_samples
 );
     import bistatic_stream_pkg::*;
     (* ASYNC_REG="TRUE" *) logic [1:0] reset_release;
     logic rst_n, armed;
     logic [4:0] flush_count;
     logic core_rst_n, sample_fire, boundary;
+    logic end_seen;logic [7:0] end_idle_cycles;
+    always_ff @(posedge clk)begin
+        if(!core_rst_n)begin end_seen<=0;end_idle_cycles<=0;end
+        else if(STREAM_BOUNDARIES&&segment_end)begin end_seen<=1;end_idle_cycles<=0;end
+        else if(sample_fire)begin end_seen<=0;end_idle_cycles<=0;end
+        else if(end_seen&&end_idle_cycles!=255)end_idle_cycles<=end_idle_cycles+1'b1;
+    end
     always_ff @(posedge clk or negedge reset_n) begin
         if (!reset_n) reset_release <= 0;
         else reset_release <= {reset_release[0],1'b1};
@@ -81,7 +97,7 @@ module sync_frontend_top #(
     assign snapshot_wr = history_rsp && copy_active && copy_started;
     assign snapshot_wr_addr = {copy_slot,copy_response_count};
 
-    typedef enum logic [1:0] {IDLE, RESET_ESTIMATORS, REPLAY, WAIT_RESULT} worker_state_t;
+    typedef enum logic [2:0] {IDLE, RESET_ESTIMATORS, REPLAY, WAIT_RESULT, CHECK_COORD} worker_state_t;
     worker_state_t worker_state;
     logic worker_slot;
     logic [4:0] estimator_flush;
@@ -95,12 +111,14 @@ module sync_frontend_top #(
     logic last_confirmed_valid;
     logic [63:0] last_confirmed_position;
     logic choice;
-    logic choice_is_duplicate;
+    logic active_is_duplicate;
+    // Candidate IDs are modulo-2^32 tags, not chronological sequence numbers.
+    // Accepted-sample anchors retain order across a candidate-counter wrap.
     assign choice = bank_ready[0] && bank_ready[1] ?
-        (bank_candidate[1] < bank_candidate[0]) : !bank_ready[0];
-    assign choice_is_duplicate = last_confirmed_valid &&
-        ((bank_anchor[choice] >= last_confirmed_position && bank_anchor[choice]-last_confirmed_position < 4096) ||
-         (bank_anchor[choice] < last_confirmed_position && last_confirmed_position-bank_anchor[choice] < 4096));
+        (bank_anchor[1] < bank_anchor[0]) : !bank_ready[0];
+    assign active_is_duplicate = last_confirmed_valid &&
+        ((active_anchor >= last_confirmed_position && active_anchor-last_confirmed_position < 64'd4096) ||
+         (active_anchor < last_confirmed_position && last_confirmed_position-active_anchor < 64'd4096));
     assign snapshot_rd = core_rst_n && worker_state == REPLAY && replay_request_count < 794;
     sync_beat_ram #(.ADDR_BITS(11)) candidate_snapshots (
         .clk(clk), .rst_n(core_rst_n), .wr_valid(snapshot_wr),
@@ -120,11 +138,11 @@ module sync_frontend_top #(
     logic fine_deadline, fine_protocol, fine_arithmetic, fine_ip;
     logic [1:0] coarse_queued;
     logic signed [31:0] local_position, held_coarse_to, held_cfo;
-    logic [63:0] fine_absolute, coarse_absolute;
+    logic signed [64:0] fine_absolute, coarse_absolute;
+    logic [15:0] confirmed_quality;
+    logic [15:0] confirmed_status;
     assign estimator_rst_n = core_rst_n && worker_state != IDLE && worker_state != RESET_ESTIMATORS;
     assign local_position = $signed({20'd0,replay_response_count,2'b00})-32'sd256;
-    assign fine_absolute = active_anchor + {{32{fine_result.value[31]}},fine_result.value};
-    assign coarse_absolute = active_anchor + {{32{held_coarse_to[31]}},held_coarse_to};
     always_comb begin
         local_metadata = '0;
         local_metadata.lane_valid = 4'hf;
@@ -173,6 +191,7 @@ module sync_frontend_top #(
             active_anchor <= 0; active_candidate <= 0; next_frame_id <= 0;
             last_confirmed_valid <= 0; last_confirmed_position <= 0;
             held_coarse_to <= 0; held_cfo <= 0;
+            fine_absolute<=0;coarse_absolute<=0;confirmed_quality<=0;confirmed_status<=0;
             m_valid <= 0; m_result <= 0; error_sticky <= 0;
             snapshot_peak <= 0; max_history_age <= 0;
         end else begin
@@ -206,6 +225,13 @@ module sync_frontend_top #(
                     if (oldest_age > max_history_age) max_history_age <= oldest_age[15:0];
                 end
             end
+            // The caller has closed this independent segment and will not
+            // append future samples. Reject an incomplete snapshot only after
+            // the input detector pipeline has drained; no artificial samples.
+            if(STREAM_BOUNDARIES&&end_seen&&end_idle_cycles==255&&copy_active&&!copy_started&&
+               accepted_samples<bank_anchor[copy_slot]+64'd2920&&!candidate_valid)begin
+                copy_active<=0;bank_used[copy_slot]<=0;capture_drop_count<=capture_drop_count+1'b1;error_sticky[7]<=1;
+            end
             if (history_rd) begin
                 copy_request_count <= copy_request_count+1'b1;
                 if (accepted_samples-history_position >= 8192 || history_position+4 > accepted_samples) error_sticky[5] <= 1;
@@ -226,36 +252,74 @@ module sync_frontend_top #(
             case (worker_state)
                 IDLE: if (|bank_ready) begin
                     bank_ready[choice] <= 0;
-                    if (choice_is_duplicate) begin
-                        bank_used[choice] <= 0; duplicate_count <= duplicate_count+1'b1;
-                    end else begin
-                        worker_slot <= choice; active_anchor <= bank_anchor[choice];
-                        active_candidate <= bank_candidate[choice];
-                        estimator_flush <= 16; worker_state <= RESET_ESTIMATORS;
-                        replay_request_count <= 0; replay_response_count <= 0;
-                        worker_cycles <= 0; held_coarse_to <= 0; held_cfo <= 0;
-                    end
+                    worker_slot <= choice; active_anchor <= bank_anchor[choice];
+                    active_candidate <= bank_candidate[choice];
+                    estimator_flush <= 16; worker_state <= RESET_ESTIMATORS;
+                    replay_request_count <= 0; replay_response_count <= 0;
+                    worker_cycles <= 0; held_coarse_to <= 0; held_cfo <= 0;
                 end
-                RESET_ESTIMATORS: if (estimator_flush == 0) worker_state <= REPLAY;
-                    else estimator_flush <= estimator_flush-1'b1;
+                RESET_ESTIMATORS: begin
+                    // Sorting ends at active_anchor; duplicate comparison uses the
+                    // first existing reset cycle, while ownership is still pinned.
+                    if(estimator_flush==16 && active_is_duplicate)begin
+                        worker_state<=IDLE;bank_used[worker_slot]<=0;
+                        duplicate_count<=duplicate_count+1'b1;
+                    end else if(estimator_flush==0)worker_state<=REPLAY;
+                    else estimator_flush<=estimator_flush-1'b1;
+                end
                 REPLAY: if (snapshot_rd && replay_request_count == 793) worker_state <= WAIT_RESULT;
                 WAIT_RESULT: begin
                     worker_cycles <= worker_cycles+1'b1;
                     if (fine_valid && fine_ready) begin
                         worker_state <= IDLE; bank_used[worker_slot] <= 0;
                         if (fine_result.status[11] && fine_result.frame_id == active_candidate) begin
-                            m_valid <= 1;
-                            m_result <= {epoch,next_frame_id,active_candidate,coarse_absolute,fine_absolute,held_cfo,fine_result.quality,fine_result.status};
-                            next_frame_id <= next_frame_id+1'b1;
-                            confirmed_count <= confirmed_count+1'b1;
-                            last_confirmed_position <= fine_absolute; last_confirmed_valid <= 1;
+                            // Keep ownership while the signed coordinate is checked.
+                            worker_state<=CHECK_COORD;bank_used[worker_slot]<=1;
+                            fine_absolute <= $signed({1'b0,active_anchor}) + $signed({{33{fine_result.value[31]}},fine_result.value});
+                            coarse_absolute <= $signed({1'b0,active_anchor}) + $signed({{33{held_coarse_to[31]}},held_coarse_to});
+                            confirmed_quality<=fine_result.quality;confirmed_status<=fine_result.status;
                         end else rejected_count <= rejected_count+1'b1;
                     end else if (worker_cycles == 70000 && !fine_valid) begin
                         worker_state <= IDLE; bank_used[worker_slot] <= 0;
                         rejected_count <= rejected_count+1'b1; error_sticky[6] <= 1;
                     end
                 end
+                CHECK_COORD:begin
+                    worker_state<=IDLE;bank_used[worker_slot]<=0;
+                    if(fine_absolute[64] || coarse_absolute[64])begin
+                        rejected_count<=rejected_count+1'b1;error_sticky[5]<=1;
+                    end else begin
+                        m_valid<=1;
+                        m_result<={epoch,next_frame_id,active_candidate,coarse_absolute[63:0],fine_absolute[63:0],held_cfo,confirmed_quality,confirmed_status};
+                        next_frame_id<=next_frame_id+1'b1;confirmed_count<=confirmed_count+1'b1;
+                        last_confirmed_position<=fine_absolute[63:0];last_confirmed_valid<=1;
+                    end
+                end
             endcase
+        end
+    end
+    // Two comparator levels separated by registers. A stale lower bound only
+    // retains extra words; it never grants permission to overwrite a live word.
+    // The 8192-point detector guard covers candidate formation before bank_used.
+    logic [63:0] retention_scan,retention_bank0,retention_bank1,retention_result;
+    logic [63:0] retention_pair0,retention_pair1;
+    wire [63:0] result_nominal={m_result[127:66],2'b00};
+    assign segment_quiescent=STREAM_BOUNDARIES&&core_rst_n&&end_seen&&end_idle_cycles==255&&
+        !copy_active&&bank_used==0&&worker_state==IDLE&&!m_valid&&!candidate_valid&&!history_rsp&&!snapshot_rsp;
+    assign retention_valid=core_rst_n;
+    assign retention_epoch=epoch;
+    always_ff @(posedge clk)begin
+        if(!core_rst_n)begin
+            retention_scan<=0;retention_bank0<=0;retention_bank1<=0;retention_result<=0;
+            retention_pair0<=0;retention_pair1<=0;retention_floor_samples<=0;
+        end else begin
+            retention_scan<=accepted_samples>8192?accepted_samples-64'd8192:64'd0;
+            retention_bank0<=bank_used[0]?(bank_anchor[0]>532?bank_anchor[0]-64'd532:64'd0):64'hffffffffffffffff;
+            retention_bank1<=bank_used[1]?(bank_anchor[1]>532?bank_anchor[1]-64'd532:64'd0):64'hffffffffffffffff;
+            retention_result<=m_valid?(result_nominal>172?result_nominal-64'd172:64'd0):64'hffffffffffffffff;
+            retention_pair0<=retention_scan<retention_bank0?retention_scan:retention_bank0;
+            retention_pair1<=retention_bank1<retention_result?retention_bank1:retention_result;
+            retention_floor_samples<=retention_pair0<retention_pair1?retention_pair0:retention_pair1;
         end
     end
 endmodule

@@ -1,0 +1,53 @@
+{
+  "evidence": "STATIC_REDESIGN_SOURCE_IDENTITY",
+  "changes": [
+    {
+      "path": "rtl/buffer/ota_cfo_window_queue.sv",
+      "before_sha256": "db0040eb0b1396c118aaf92f0ba41a670bf0837621fbcb5e01a751c3f1f17877",
+      "after_sha256": "61f241406ebc58966f6ab9ac399e24bfc008d13067ba72e473fc6e116d41efea"
+    },
+    {
+      "path": "rtl/cfo/cfo_estimator_link_a06.sv",
+      "before_sha256": "b9f455ecaec01e93e35014ac3ebd0722067b089eeb0fc77e7a5a7fe8d762d0a7",
+      "after_sha256": "1ff16f33f04f5dc09974de456b8f1a5a18022be4be793855d483c039193580b8"
+    },
+    {
+      "path": "rtl/cfo/cfo_fft2048_core.sv",
+      "before_sha256": "7e08b542d9d26b3b2f53d28c45f460d75d724ad4dd8eb167af95e5e42a9800ca",
+      "after_sha256": "70e66798c2d308dc11e60f2a1bfd06c818d00f4488ecf00a3b9d7f06e608ef14"
+    },
+    {
+      "path": "rtl/cfo/cfo_fft256_core.sv",
+      "before_sha256": "56a957f34a07ef28041c539d319b24c59fca95d55be16d202c60abeabf501d1d",
+      "after_sha256": "cb9a350113b45a8a955120b8b20c769fc3fb31bf6b645b241f5955dfd3101c51"
+    },
+    {
+      "path": "rtl/cfo/cfo_front2048_window_a07.sv",
+      "before_sha256": "d01226a03f825b477e920dae458a3a665542dd1e8ad5fd9420ec9edb9c710fd3",
+      "after_sha256": "d771394e1dca169e65a2384890724c990eef796fdbc3ca1f87b6d21f08d3806d"
+    },
+    {
+      "path": "rtl/cfo/ota_cfo_chain_onchip.sv",
+      "before_sha256": "8ff834228bd5d4af674b1c1e747fd9d30298c83671a55d5ab0d19183f35dafa1",
+      "after_sha256": "4653c15e7630de72cce4e5aa597a1cfb2eea5471551b477a352efcebd3e59745"
+    },
+    {
+      "path": "rtl/frontend/frontend/sync_frontend_top.sv",
+      "before_sha256": "d883641598dbd8d6c2f5444baebe383bd64d101b0946d564a46094c8a3a708f1",
+      "after_sha256": "9e1efea569c49af6ddb929879bcc29371fed7b8009ed0c44d793c49f35d9f9e8"
+    },
+    {
+      "path": "rtl/sfo/buffering/sfo_intermediate_frame_bank.sv",
+      "before_sha256": "a63cf925530cb5cb8fb5a0257967e5fa9961672cc82af81de5251802dd09a6c4",
+      "after_sha256": "4a53a9c7a372ce3db92eae593392cb59d27437814eb8bb1d1cf1f8d71af2f314"
+    },
+    {
+      "path": "rtl/sfo/resampling/sfo_guarded_farrow_stream.sv",
+      "before_sha256": "7a6893fc14d31efed724dc260b41e398dbc9316660138740fc39391c529e969e",
+      "after_sha256": "b5e2b88e61fa4ba0d37af9c351b94c54ba244d0fb93fd37e467810a5efb900cd"
+    }
+  ],
+  "simulation": "NOT_RUN",
+  "new_synthesis": "NOT_RUN",
+  "new_implementation": "NOT_RUN"
+}

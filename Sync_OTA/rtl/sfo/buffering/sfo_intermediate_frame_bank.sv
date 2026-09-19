@@ -3,6 +3,7 @@
 // A replacement writer stays strictly behind issued sequential reads. RAM responses
 // are already reserved in a separate FIFO before any address can be reclaimed.
 module sfo_intermediate_frame_bank #(
+    parameter integer PROGRESSIVE_READ = 0,
     parameter integer FRAME_BEATS = 334098,
     DEPTH_BEATS = 335872,
     AW = 19,
@@ -27,6 +28,9 @@ module sfo_intermediate_frame_bank #(
     input  logic [                31:0] estimate_frame,
     input  logic [                31:0] estimate_generation,
     input  logic                        estimate_good,
+    output logic                        source_valid,
+    output logic [31:0]                  source_frame,source_generation,
+    output logic [18:0]                  source_written_exclusive,
     output logic                        committed,
     output logic [                31:0] committed_frame,
     output logic [                31:0] committed_generation,
@@ -60,15 +64,21 @@ module sfo_intermediate_frame_bank #(
 );
   logic writing, filled, estimate_seen, reading;
   logic [31:0] write_frame, write_gen, write_next, read_base, read_count;
-  logic [  1:0] rv;
+  logic [  6:0] rv;
+  wire memory_write_commit,memory_read_valid;
+  wire [AW-1:0] memory_commit_address;
+  logic ram_we,ram_re,ram_last,close_pending;
+  logic [AW-1:0] ram_wa,ram_ra;
+  logic [127:0] ram_wdata;
   wire  [127:0] ram_data;
   wire qready, qvalid, qbusy, qerror;
   wire [127:0] qdata;
   wire [31:0] outstanding = issued - consumed;
   wire halted = poison || fault;
   wire seq_active = reading && m_sequential;
-  wire safe_frontier = !seq_active || write_next < issued;
-  wire writer_allowed = writing || (!filled && !committed);
+  wire safe_frontier = PROGRESSIVE_READ || !seq_active || write_next < issued;
+  wire completely_free=!source_valid&&!filled&&!committed&&!reading&&!qvalid&&!qbusy&&rv==0&&!ram_we&&!ram_re&&!memory_write_commit&&!close_pending;
+  wire writer_allowed = !close_pending && (writing || (PROGRESSIVE_READ?completely_free:(!filled && !committed)));
   assign s_ready = !rst && !halted && writer_allowed && safe_frontier;
   wire wf = s_valid && s_ready;
   wire write_ok = s_beat == write_next && s_beat < FRAME_BEATS &&
@@ -92,33 +102,40 @@ module sfo_intermediate_frame_bank #(
   logic [7:0] bad;
   always_comb begin
     bad = 0;
-    if (qerror || (rv[1] && !qready)) bad = 1;
+    if (qerror || (memory_read_valid && !qready)) bad = 1;
     else if (wf && !write_ok) bad = 2;
     else if (pf && (publish_frame != write_frame || publish_generation != write_gen)) bad = 3;
     else if (ef && (!estimate_good || estimate_frame != committed_frame ||
                     estimate_generation != committed_generation))
       bad = 4;
-    else if (cf && (!committed || req_frame != committed_frame || req_generation !=
-                    committed_generation || req_count == 0 || req_base >= FRAME_BEATS ||
-                    {1'b0, req_base} + {1'b0, req_count} > FRAME_BEATS || (
-                    req_sequential ? (!estimate_seen || req_base != 0 || req_count != FRAME_BEATS) :
-                        (req_count != 512 || req_base < 9 || req_base + 512 > FRAME_BEATS - 9))))
-      bad = 5;
+    else if (cf && (req_count==0||req_base>=FRAME_BEATS||
+                    {1'b0,req_base}+{1'b0,req_count}>FRAME_BEATS ||
+       ((req_sequential||!PROGRESSIVE_READ) ?
+        (!committed||req_frame!=committed_frame||req_generation!=committed_generation||
+         (req_sequential?(!estimate_seen||req_base!=0||req_count!=FRAME_BEATS):
+          (req_count!=512||req_base<9||req_base+512>FRAME_BEATS-9))) :
+        (!source_valid||req_frame!=source_frame||req_generation!=source_generation||
+         req_count!=512||req_base<9||{1'b0,req_base}+{1'b0,req_count}>{14'd0,source_written_exclusive}))))
+      bad=5;
     else if (collision) bad = 6;
     else if (outstanding > FIFO_DEPTH || consumed > returned || returned > issued) bad = 7;
   end
   sfo_uram_frame_bank #(
+      .SEGMENTED(1'b1),
       .DEPTH_BEATS(DEPTH_BEATS),
       .ADDR_WIDTH (AW)
   ) memory (
       .clk    (clk),
       .rst    (rst),
-      .wr_en  (wf && write_ok && !collision),
-      .wr_addr(wa),
-      .wr_data(s_data),
-      .rd_en  (issue && !collision),
-      .rd_addr(ra),
-      .rd_data(ram_data)
+      .wr_en  (ram_we),
+      .wr_addr(ram_wa),
+      .wr_data(ram_wdata),
+      .rd_en  (ram_re),
+      .rd_addr(ram_ra),
+      .rd_data(ram_data),
+      .rd_valid(memory_read_valid),
+      .wr_commit(memory_write_commit),
+      .wr_commit_addr(memory_commit_address)
   );
   sfo_sync_fifo #(
       .WIDTH(128),
@@ -126,7 +143,7 @@ module sfo_intermediate_frame_bank #(
   ) responses (
       .clk         (clk),
       .rst         (rst),
-      .s_valid     (rv[1]),
+      .s_valid     (memory_read_valid),
       .s_ready     (qready),
       .s_data      (ram_data),
       .m_valid     (qvalid),
@@ -139,6 +156,7 @@ module sfo_intermediate_frame_bank #(
   );
   always_ff @(posedge clk) begin
     if (rst) begin
+      source_valid<=0;source_frame<=0;source_generation<=0;source_written_exclusive<=0;
       writing <= 0;
       filled <= 0;
       estimate_seen <= 0;
@@ -154,7 +172,8 @@ module sfo_intermediate_frame_bank #(
       m_sequential <= 0;
       read_base <= 0;
       read_count <= 0;
-      rv <= 0;
+      rv <= 0;ram_we<=0;ram_re<=0;ram_last<=0;close_pending<=0;
+      ram_wa<=0;ram_ra<=0;ram_wdata<=0;
       issued <= 0;
       returned <= 0;
       consumed <= 0;
@@ -166,7 +185,12 @@ module sfo_intermediate_frame_bank #(
       read_stalls <= 0;
       outstanding_high_water <= 0;
     end else begin
-      rv <= {rv[0], issue && !collision};
+      // Matched command pipelines preserve read-before-reclaim ordering.
+      ram_we<=wf && write_ok && !collision && bad==0;
+      ram_re<=issue && !collision;
+      // Payload may change on bubbles; command valid alone grants RAM access.
+      ram_wa<=wa;ram_wdata<=s_data;ram_last<=s_last;ram_ra<=ra;
+      rv <= {rv[5:0], issue && !collision};
       read_done <= 0;
       write_done <= 0;
       if (!fault && bad != 0) begin
@@ -176,8 +200,14 @@ module sfo_intermediate_frame_bank #(
       if (s_valid && !s_ready && !halted) write_stalls <= write_stalls + 1;
       if (m_valid && !m_ready) read_stalls <= read_stalls + 1;
       if (outstanding > outstanding_high_water) outstanding_high_water <= outstanding;
-      if (rv[1] && qready) returned <= returned + 1;
+      if (memory_read_valid && qready) returned <= returned + 1;
       if (!halted && bad == 0) begin
+        // The public watermark tracks the physical write edge, not acceptance.
+        if(memory_write_commit)begin
+          source_valid<=1;source_frame<=write_frame;source_generation<=write_gen;
+          source_written_exclusive<=19'(memory_commit_address+1);
+          if(memory_commit_address==FRAME_BEATS-1)begin filled<=1;write_done<=1;close_pending<=0;end
+        end
         if (wf) begin
           if (!writing) begin
             write_frame <= s_frame;
@@ -185,9 +215,8 @@ module sfo_intermediate_frame_bank #(
           end
           if (s_last) begin
             writing <= 0;
-            filled <= 1;
+            close_pending <= 1;
             write_next <= 0;
-            write_done <= 1;
           end else begin
             writing <= 1;
             write_next <= write_next + 1;
@@ -222,6 +251,7 @@ module sfo_intermediate_frame_bank #(
           if (m_last) begin
             reading   <= 0;
             read_done <= 1;
+            if(m_sequential&&PROGRESSIVE_READ)begin source_valid<=0;source_written_exclusive<=0;end
           end
         end
       end
@@ -231,7 +261,7 @@ module sfo_intermediate_frame_bank #(
   initial if (FRAME_BEATS > DEPTH_BEATS || FRAME_BEATS < 530) $fatal(1, "R1 geometry");
   always @(posedge clk)
     if (!rst && !halted) begin
-      if (wf && seq_active && write_next >= issued) $fatal(1, "Overwrite beyond read frontier");
+      if (wf && seq_active && (PROGRESSIVE_READ || write_next >= issued)) $fatal(1, "Overwrite beyond read frontier");
       if (issue && seq_active && read_base != 0) $fatal(1, "Sequential ownership origin");
     end
   // synthesis translate_on

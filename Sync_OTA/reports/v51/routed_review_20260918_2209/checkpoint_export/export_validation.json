@@ -1,0 +1,30 @@
+{
+  "scope": "READ_ONLY_ROUTED_EXPORT",
+  "negative_endpoint_count": 381,
+  "negative_endpoint_completeness": "matches checkpoint and original summary; quantized TNS within tolerance",
+  "mapping": {
+    "ram36": 6,
+    "row_fdre": 15,
+    "command_fdre": 2,
+    "all_local_17_fdre_dont_touch": true,
+    "coefficient_input_negative_endpoints": []
+  },
+  "script_exit_code": 1,
+  "script_failure_stage": "Optional mapping count guard included two CARRY8 cells matching coefficient_row_reg*; no RTL/mapping failure. REF_NAME-filtered counts match 6 RAMB36 + 15 row FDRE + 2 command FDRE.",
+  "reused_completed_outputs": [
+    "timing_summary_checkpoint.rpt",
+    "utilization_hierarchical_routed.rpt",
+    "failing_endpoints.csv",
+    "failing_paths_full.rpt",
+    "coefficient_mapping.txt"
+  ],
+  "not_generated": [
+    "coefficient_enable_paths.rpt",
+    "coefficient_address_paths.rpt"
+  ],
+  "rerun": false,
+  "input_dcp_unchanged": true,
+  "synthesis_started": false,
+  "implementation_started": false,
+  "simulation_started": false
+}

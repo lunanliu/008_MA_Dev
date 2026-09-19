@@ -2,11 +2,13 @@
 // then replay continuously into the main-FFT service, subject only to its ready.
 // All coordinates are COMPLEX SAMPLE indices relative to nominal frame origin 0.
 module sfo_residual_nominal_window_reader4 #(
+    parameter integer PROGRESSIVE_SOURCE=0,
     parameter integer TIMEOUT_CYCLES = 20000
 ) (
     input  logic                clk,
     input  logic                rst,
     input  logic                abort,
+    input logic cfg_window_granted,
     input  logic                cfg_valid,
     output logic                cfg_ready,
     input  logic        [ 31:0] cfg_frame_id,
@@ -59,8 +61,10 @@ module sfo_residual_nominal_window_reader4 #(
     output logic                cancel,
     output logic                busy
 );
-  localparam [2:0] IDLE = 0, REQUEST = 1, CAPTURE = 2, PLAY = 3, FLUSH = 4, DONE = 5, HALT = 6;
+  localparam [2:0] IDLE = 0, REQUEST = 1, CAPTURE = 2, PLAY = 3, FLUSH = 4, DONE = 5, HALT = 6, CHECK_CFG = 7;
   logic [ 2:0] state;
+  logic [7:0] cfg_error_q;
+  logic [20:0] cfg_start_q;
   logic [31:0] age;
   logic [ 4:0] flush_count;
   logic [ 9:0] issued;
@@ -68,7 +72,7 @@ module sfo_residual_nominal_window_reader4 #(
   logic [127:0] raw_data, out_data;
   (* ram_style="block" *) logic [127:0] window_cache[0:511];
   wire [21:0] start_calc = {15'd0, cfg_symbol_slot} * 22'd17920 + 22'd25984;
-  wire timing_active = state == REQUEST || state == CAPTURE || state == PLAY;
+  wire timing_active = state == CHECK_CFG || state == REQUEST || state == CAPTURE || state == PLAY;
   wire timeout_now = timing_active && age >= TIMEOUT_CYCLES - 1;
   wire input_fire = s_valid && s_ready;
   wire output_fire = m_valid && m_ready;
@@ -159,27 +163,29 @@ module sfo_residual_nominal_window_reader4 #(
           raw_valid <= 0;
           out_valid <= 0;
           out_data <= 0;
-          if (!cfg_source_complete || cfg_source_error != 0) begin
-            done_error <= 1;
-            state <= DONE;
+          cfg_start_q<=start_calc[20:0];state<=CHECK_CFG;
+          if (!(cfg_source_complete||(PROGRESSIVE_SOURCE&&cfg_window_granted)) || cfg_source_error != 0) begin
+            cfg_error_q <= 1;
           end else if (cfg_source_frame_id != cfg_frame_id ||
                        cfg_source_generation != cfg_generation) begin
-            done_error <= 2;
-            state <= DONE;
+            cfg_error_q <= 2;
           end else if (cfg_symbol_slot >= 74) begin
-            done_error <= 3;
-            state <= DONE;
+            cfg_error_q <= 3;
           end else if (cfg_nominal_length != 21'd1336320) begin
-            done_error <= 4;
-            state <= DONE;
-          end else if (cfg_available_first > 32'sd0 || cfg_available_last < 32'sd1336319) begin
-            done_error <= 5;
-            state <= DONE;
+            cfg_error_q <= 4;
+          end else if ((PROGRESSIVE_SOURCE&&cfg_window_granted) ?
+                       (cfg_available_first>$signed(start_calc)||$signed({cfg_available_last[31],cfg_available_last})<$signed({1'b0,start_calc})+33'sd2047) :
+                       (cfg_available_first > 32'sd0 || cfg_available_last < 32'sd1336319)) begin
+            cfg_error_q <= 5;
           end else begin
-            done_start_index <= start_calc[20:0];
-            state <= REQUEST;
+            cfg_error_q<=0;
           end
         end
+      end else if(state==CHECK_CFG)begin
+        if(cfg_error_q!=0)begin done_error<=cfg_error_q;state<=DONE;end
+        else if(abort)fail_run(11);
+        else if(timeout_now)fail_run(12);
+        else begin done_start_index<=cfg_start_q;state<=REQUEST;end
       end else if (abort) fail_run(11);
       else if (timeout_now) fail_run(12);
       else

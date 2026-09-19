@@ -1,0 +1,46 @@
+{
+  "operation": "READ_ONLY_VENDOR_IP_METADATA",
+  "no_hdl_execution": true,
+  "no_ip_generation": true,
+  "no_synthesis_or_implementation": true,
+  "time": "2026-09-18T00:54:13.805402+02:00",
+  "tool": "C:/NIFPGA/programs/Vivado2021_1/bin/vivado.bat",
+  "threads": 8,
+  "estimated_memory_gib": 2,
+  "expected_seconds": 90,
+  "output": "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\ip_metadata_01",
+  "inputs": [
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.xpr",
+      "sha256": "8cd75d7ca432185c5c04deae26ddf69f1acbee197b0dced8da08de065ce3bd50"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\tools\\v51\\read_ip_metadata.tcl",
+      "sha256": "7cd3a9a24c06c387eabffc782ef726cdb233ac518dee0d0088b06c624f7f9971"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.srcs\\sources_1\\ip\\t03_xfft_16384_aux\\t03_xfft_16384_aux.xci",
+      "sha256": "6f63f1bea9d2890a98e2e49d948e3a30ac75a7c5518c899b0c50faab46ae1e49"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.srcs\\sources_1\\ip\\t03_xfft_2048_main\\t03_xfft_2048_main.xci",
+      "sha256": "762fdce0e56fd831f7f3d4f8fcb037856407ff9429c8b946b825c3324bbfcaec"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.srcs\\sources_1\\ip\\t07_g3_down15\\t07_g3_down15.xci",
+      "sha256": "72191452e7c3482e22af05c2f1472b07fb67f788c598dabbdff55a764baf201d"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.srcs\\sources_1\\ip\\t07_g3_down47\\t07_g3_down47.xci",
+      "sha256": "a5070390646ee6d102c4f427de7eccdbf1395f820e6636163428a4b816962517"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.srcs\\sources_1\\ip\\t07_g3_up15\\t07_g3_up15.xci",
+      "sha256": "7ad4dbac8e0c96796c4bc6b8de7687e77aef12c8a408e0ed6b924e7d9da759f7"
+    },
+    {
+      "path": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.srcs\\sources_1\\ip\\t07_g3_up47\\t07_g3_up47.xci",
+      "sha256": "3d3f04b8886359e0491152c77afb1b8d649880ac8b2dd6c4037a90525c3157ed"
+    }
+  ]
+}

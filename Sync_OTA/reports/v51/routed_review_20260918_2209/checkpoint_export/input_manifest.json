@@ -1,0 +1,33 @@
+{
+  "scope": "READ_ONLY_SAVED_ROUTED_CHECKPOINT_NO_SYNTH_OPT_PLACE_ROUTE_OR_SIMULATION",
+  "created_at": "2026-09-18T22:23:36.257845+02:00",
+  "dcp": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.runs\\impl_1\\sync_ota_top_routed.dcp",
+  "dcp_sha256": "590915429ee7d5191726fd0f27e77c85a9ddbbcd40d8ffda9baa225bd007c45a",
+  "script_sha256": "b814b44dcd4faa59e56550c49e2fbe5760394723ac5df81f0373b67ee5500b61",
+  "command": [
+    "C:/NIFPGA/programs/Vivado2021_1/bin/vivado.bat",
+    "-mode",
+    "batch",
+    "-source",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_review_20260918_2209\\checkpoint_export\\export_routed_analysis.tcl",
+    "-log",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_review_20260918_2209\\checkpoint_export\\vivado.log",
+    "-journal",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_review_20260918_2209\\checkpoint_export\\vivado.jou",
+    "-tclargs",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_review_20260918_2209\\checkpoint_export",
+    "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.runs\\impl_1\\sync_ota_top_routed.dcp"
+  ],
+  "threads": 8,
+  "expected_minutes": [
+    3,
+    10
+  ],
+  "memory_estimate_gib": [
+    8,
+    18
+  ],
+  "observed_free_physical_gib": 18.93,
+  "observed_free_commit_gib": 73.84,
+  "protection": "Only read_checkpoint reports and object/property queries; preserve input DCP and user GUI. Monitor progress/allocation; no synthesis, optimization, placement, routing or constraints mutation."
+}

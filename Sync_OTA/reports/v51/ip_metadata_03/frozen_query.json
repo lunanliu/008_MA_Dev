@@ -1,0 +1,7 @@
+{
+  "scope": "installed vendor GUI parameter arithmetic only",
+  "simulation": false,
+  "synthesis": false,
+  "estimated_memory_gib": 2,
+  "script_sha256": "0ae4aedf02a4344e37fd53c323a69cdb63b7b0454876998c237b365c62d421ac"
+}

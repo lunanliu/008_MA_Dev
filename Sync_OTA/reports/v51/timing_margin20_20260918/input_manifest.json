@@ -1,0 +1,13 @@
+{
+  "dcp": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.runs\\impl_1\\sync_ota_top_routed.dcp",
+  "sha256": "590915429ee7d5191726fd0f27e77c85a9ddbbcd40d8ffda9baa225bd007c45a",
+  "scope": "read_only_STA; no simulation, synthesis, place or route",
+  "thresholds_ns": {
+    "clk125": 1.6,
+    "clk150": 1.333333334,
+    "clk500": 0.4
+  },
+  "max_paths_per_group": 200000,
+  "prior_gui_vivado_pid": 28960,
+  "created_local": "2026-09-18T22:57:00.385033+02:00"
+}

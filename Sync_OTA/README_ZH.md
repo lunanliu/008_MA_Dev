@@ -1,4 +1,28 @@
+> **2026-09-19：500 MS/s版本封存。** 保持125/150/500 MHz，未实现400 MS/s配置。此前常规时序已通过，20%余量尚未通过；新margin20实现结果待完成。当前身份及证据边界见 [封存说明](docs/v51/ARCHIVE_500MSPS_20260919_ZH.md)。以下旧阶段记录按各自日期解释。
+
+> **2026-09-18最新：20%余量RTL重构已完成静态交付。** 27份活动RTL修改、129份选源一致、顶层绑定0错误；新物理时序尚未验收。125/150/500MHz普通同域目标为+1.600/+1.333333334/+0.400ns，CDC按实际约束20%。[本轮设计、预算及手动实现入口](docs/v51/TIMING_MARGIN20_DESIGN_ZH.md)。以下旧快照仅保留历史身份。
+
+> **2026-09-18 最新：CFO 系数 ROM 方案 A 已应用。** 前一轮17:48 CEST布线报告已收敛至1条500 MHz违例（−0.057 ns）；本次采用零增拍分页及局部读命令寄存，60680项系数零差异，静态绑定0错误。**分页新版尚未综合、实现或仿真，不宣称时序已经通过。** 见[修改、周期、缓存与GUI运行说明](docs/v51/CFO_COEFFICIENT_ROM_PLAN_A_ZH.md)及[前一轮报告复核](reports/v51/routed_review_20260918_1748/REVIEW_ZH.md)。
+
+> 以下保留此前冻结记录。第二轮9份RTL整改及3336端点归因见[历史整改报告](docs/v51/ROUTED_REDESIGN_20260918_ZH.md)；其中“未运行”描述的是该记录发布时状态。
+
 # Sync OTA：完整同步链路开发入口
+
+> 2026-09-18后续更新：用户GUI原生综合在XPM参数类型展开处失败；两个自有封装已作最小兼容修复，尚未重跑原生综合。见[根因、修复与证据](docs/v51/XPM_PARAMETER_COMPATIBILITY_FIX_ZH.md)。下文静态审查与NOT_RUN状态是此前冻结快照，不代表这次原生综合通过。
+
+当前工作分支为 **V5.1_System_Modify**，生产入口 [Sync_OTA.xpr](Sync_OTA.xpr)，top `sync_ota_top`，实际选源 [sources_v51.f](rtl/sources_v51.f)。本轮已接入共享raw环、训练回读、SFO逐窗供数、CFO片内双bank及**最终无背压输出**。最终端口没有ready或中间DDR事务；Target VI接受每个150MHz valid拍。
+
+- [本轮静态交付：架构、周期、缓存、数值与分层资源/时序](docs/v51/STATIC_DELIVERY_ZH.md)
+- [设计选择与备选方案](docs/v51/REFACTOR_DESIGN_ZH.md)
+- [46端口与Target VI合同](docs/v51/INTERFACE_CONTRACT_ZH.md)、[独立VHDL Wrapper](wrapper/sync_ota_wrapper.vhd)
+- [FPGA工程师 agents.md](<FPGA工程师 agents.md>)
+
+129 RTL、3 XPM、45 IP的选源与全工程静态覆盖已完成；实际生产语法与绑定0错误，警告保留。SFO两份和CFO四份算术补丁已获明确批准并应用，输入/IP合同下多帧预算闭合。**未启动仿真/综合/实现；不宣称新版数值、实测持续吞吐或物理时序通过。** 当前证据为reports/v51/full_static_20260918与static_binding_07。 sim_1没有获准的新测试台，旧A06测试台从该源集移出但文件保留。旧DCP/报告均有旧身份。
+
+---
+
+## 历史A07及此前记录（下文不描述当前生产源集/端口）
+
 
 当前工作版本为 A07 静态设计整改版；唯一工程入口 [Sync_OTA.xpr](Sync_OTA.xpr)，真实算法顶层 **sync_ota_top**，Vivado 2021.1，器件 xcvu11p-flgb2104-2-e。保持现有功能目录和 RTL 层级；[统一设计复盘、整改与剩余隐患](docs/SYNC_OTA_REMAINING_20260917_ZH.md)为本轮主入口。**本轮测试暂停，新版尚未编译、仿真或综合，不按旧DCP宣称新版通过。**
 

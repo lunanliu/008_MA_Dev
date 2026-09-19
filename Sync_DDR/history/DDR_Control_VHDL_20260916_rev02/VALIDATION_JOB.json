@@ -1,0 +1,109 @@
+{
+  "job_id": "DDR_VHDL_CTRL_NATIVE_20260916_REV02",
+  "user_scope": "New explicit user request: pure VHDL DDR write/read CLIPs and independent integrity/throughput test scheme",
+  "astra": "01a0a162-c115-7af1-89be-49726f987f84",
+  "luna": "01a0a161-e434-7142-8927-1f5314daafd5",
+  "root": "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02",
+  "manifest_path": "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\manifest.json",
+  "manifest_sha256": "FEC4D048CBAA1837FAA86EFE6D7885938AFD855B1DAFA44C55EB5B9DE5199ADA",
+  "project_path": "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\project\\DDR_Control.xpr",
+  "top": "ddr_upload_ctrl",
+  "sim_tops": [
+    "tb_ddr_upload_ctrl",
+    "tb_ddr_read_ctrl"
+  ],
+  "native_executable": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+  "output_directory": "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_01",
+  "commands": [
+    {
+      "stage": "create",
+      "executable": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+      "arguments": [
+        "-mode",
+        "batch",
+        "-source",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\scripts\\create_project.tcl",
+        "-log",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_01\\create.log",
+        "-journal",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_01\\create.jou"
+      ],
+      "timeout_seconds": 180
+    },
+    {
+      "stage": "write",
+      "executable": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+      "arguments": [
+        "-mode",
+        "batch",
+        "-source",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\scripts\\simulate.tcl",
+        "-log",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_01\\write.log",
+        "-journal",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_01\\write.jou",
+        "-tclargs",
+        "write"
+      ],
+      "timeout_seconds": 300,
+      "pass_marker": "DDR_UPLOAD_CTRL_TEST_PASS"
+    },
+    {
+      "stage": "read",
+      "executable": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+      "arguments": [
+        "-mode",
+        "batch",
+        "-source",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\scripts\\simulate.tcl",
+        "-log",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_01\\read.log",
+        "-journal",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_01\\read.jou",
+        "-tclargs",
+        "read"
+      ],
+      "timeout_seconds": 300,
+      "pass_marker": "DDR_READ_CTRL_TEST_PASS"
+    }
+  ],
+  "allowed_stages": [
+    "create native GUI project",
+    "xvhdl compile",
+    "xelab elaborate",
+    "two short XSim behavioral benches"
+  ],
+  "forbidden_stages": [
+    "synthesis",
+    "implementation",
+    "NI compilation",
+    "board access",
+    "MATLAB",
+    "old algorithm reruns"
+  ],
+  "resources": {
+    "main_jobs": 1,
+    "general_maxThreads": 8,
+    "xelab_threads": 16,
+    "estimated_memory_gib": [
+      2,
+      6
+    ],
+    "minimum_free_gib": 8,
+    "expected_minutes": [
+      3,
+      10
+    ],
+    "whole_timeout_seconds": 900
+  },
+  "acceptance": [
+    "exact manifest and actual exported sources match",
+    "both compile/elaborate succeed",
+    "unique respective PASS marker in original simulator log",
+    "no assertion failure/Fatal/ERROR",
+    "normal stage completion and exact owned process tree closed"
+  ],
+  "fail_policy": "First failure stop affected stage; keep all logs. Do not modify frozen VHDL/TB in place; execution-only repairs use new reviewed files/version. Report precise first native error.",
+  "grant_id": null,
+  "status": "FROZEN_AWAITING_MANAGER_ADMISSION"
+}

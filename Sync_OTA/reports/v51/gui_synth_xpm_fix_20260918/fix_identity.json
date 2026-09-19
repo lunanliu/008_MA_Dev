@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-09-18T02:21:52.287908+02:00",
+  "baseline_commit": "8dfcb7b16b4a772c0482e33a624527503429834f",
+  "user_gui_run": "synth_1",
+  "tool": "Vivado2021.1",
+  "device": "xcvu11p-flgb2104-2-e",
+  "first_error": "Synth8-281 expression must be of a packed type",
+  "first_error_source": "C:\\NIFPGA\\programs\\Vivado2021_1\\data\\ip\\xpm\\xpm_memory\\hdl\\xpm_memory.sv:8496",
+  "vendor_sha256": "e72758e6794b1f7ad00428feeeacc4f90a38b0500583b2ca93ca2eba12ba01bd",
+  "failed_log_sha256": "4f9b616439050fae95c26c7feca6ac947dadbe366e7131627622cb8aa646b3e7",
+  "failure_stage": "RTL_ELABORATION",
+  "independent_downstream_errors": false,
+  "changes": [
+    {
+      "path": "rtl/sfo/buffering/sfo_uram_frame_bank.sv",
+      "before_sha256": "ff79e3eb8351300d43fab143d4a11d7b6df17800345f896f8202300ac8bbec28",
+      "after_sha256": "10ad078ca6034605a123f1cb4723435e84a45b0ad4360726d8af09668af381f1",
+      "change": "Remove explicit SV string type; retain literal value and parameter forwarding."
+    },
+    {
+      "path": "rtl/sfo/buffering/sfo_output_buffer.sv",
+      "before_sha256": "428663e39f26245fbd80f50cdb67864d1bb9882317017835bbe54e77255e7371",
+      "after_sha256": "da2b702ad873d85cd05ffe4dc49b83af6119a548ac9bda48980400c2f3d19ca6",
+      "change": "Remove explicit SV string type; retain literal value and parameter forwarding."
+    }
+  ],
+  "memory_geometry_changed": false,
+  "cycles_changed": false,
+  "latency_changed": false,
+  "numeric_datapath_changed": false,
+  "xpm_vendor_source_modified": false,
+  "new_native_synthesis": "NOT_RUN",
+  "simulation": "NOT_RUN",
+  "root_cause": "Explicit SV string type propagated through output_buffer/frame_bank into untyped XPM selector that compares with integer and packed literals.",
+  "static_binding_errors": 0,
+  "static_binding_diagnostics": 958,
+  "syntax_errors": 0,
+  "syntax_diagnostics": 0,
+  "independent_review": "reports/v51/review/xpm_parameter_compatibility_review.md",
+  "status": "LOCAL_COMPATIBILITY_FIX_APPLIED_NATIVE_RERUN_PENDING",
+  "independent_review_sha256": "9d52a5cd0352ce62b72b03515c61c0817ed3711149229641a3a3703014853ff4",
+  "independent_review_status": "ACTUAL_TWO_FILE_DIFF_REVIEWED",
+  "old_review_preserved_byte_identical_to_HEAD": true
+}

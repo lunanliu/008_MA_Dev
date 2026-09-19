@@ -1,10 +1,11 @@
 // One front-stage window: nominal input -> main FFT -> pilots -> normalized sparse grid.
 // No IFFT instance: the committed packet queue decouples this stage from the back stage.
-module sfo_residual_fft_grid_stage4 (
+module sfo_residual_fft_grid_stage4 #(parameter integer PROGRESSIVE_SOURCE=0) (
     input  logic         clk,
     input  logic         clk500,
     input  logic         rst,
     input  logic         abort,
+    input  logic cfg_window_granted,
     input  logic         cfg_valid,
     output logic         cfg_ready,
     input  logic [228:0] cfg_descriptor,
@@ -30,6 +31,7 @@ module sfo_residual_fft_grid_stage4 (
   logic [  4:0] reset_count;
   logic [ 12:0] age;
   logic [228:0] descriptor;
+  logic saved_grant;
   logic main_armed, grid_armed, main_seen, grid_seen;
   logic [9:0] dtp_count;
   logic [7:0] error_code, error_detail;
@@ -81,13 +83,14 @@ module sfo_residual_fft_grid_stage4 (
   assign m_word = {tag, generation, slot, gbeat, gl, gd};
   assign done_valid = !rst && state == DONE;
   assign done_word = {tag, generation, slot, error_code, error_detail, dtp_count};
-  sfo_residual_fft_window4 main (
+  sfo_residual_fft_window4 #(.PROGRESSIVE_SOURCE(PROGRESSIVE_SOURCE)) main (
       .clk                  (clk),
       .clk500               (clk500),
       .rst                  (child_reset),
       .abort                (1'b0),
       .cfg_valid            (state == SETUP && !main_armed && !stop_data),
       .cfg_ready            (main_cfg_ready),
+      .cfg_window_granted(saved_grant),
       .cfg_frame_id         (descriptor[228:197]),
       .cfg_generation       (descriptor[196:165]),
       .cfg_source_frame_id  (descriptor[164:133]),
@@ -208,7 +211,7 @@ module sfo_residual_fft_grid_stage4 (
       state <= BOOT;
       reset_count <= 0;
       age <= 0;
-      descriptor <= 0;
+      descriptor <= 0;saved_grant<=0;
       main_armed <= 0;
       grid_armed <= 0;
       main_seen <= 0;
@@ -232,7 +235,7 @@ module sfo_residual_fft_grid_stage4 (
         if (done_ready) state <= error_code == 0 ? IDLE : HALT;
       end else if (state == IDLE) begin
         if (cfg_valid && cfg_ready) begin
-          descriptor <= cfg_descriptor;
+          descriptor <= cfg_descriptor;saved_grant<=PROGRESSIVE_SOURCE&&cfg_window_granted;
           main_armed <= 0;
           grid_armed <= 0;
           main_seen <= 0;

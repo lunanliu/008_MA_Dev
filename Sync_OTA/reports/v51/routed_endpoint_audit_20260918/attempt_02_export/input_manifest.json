@@ -1,0 +1,41 @@
+{
+  "scope": "USER_AUTHORIZED_READONLY_ROUTED_CHECKPOINT_ANALYSIS_NO_SIMULATION_NO_SYNTHESIS_NO_IMPLEMENTATION",
+  "created_at": "2026-09-18T14:43:17.397338+02:00",
+  "part": "xcvu11p-flgb2104-2-e",
+  "dcp": "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.runs\\impl_1\\sync_ota_top_routed.dcp",
+  "dcp_sha256": "b03ca785813bd2b8652e3ec6a971f502fbbc361c115cb091d711c9c2e23aa7ef",
+  "script_sha256": "8195ec6dc496d8b01ca51299d6d01ce1ed211d2f6b1ffee67838b172bba76d2b",
+  "tool": "C:/NIFPGA/programs/Vivado2021_1/bin/vivado.bat",
+  "threads": 8,
+  "expected_minutes": [
+    3,
+    15
+  ],
+  "memory_estimate_gib": [
+    8,
+    18
+  ],
+  "observed_free_physical_gib": 10.2,
+  "observed_commit_headroom_gib": 60.3,
+  "resource_note": "Only user GUI Vivado PID12876 observed; no active xsim/xelab/matlab or another batch Vivado. Read-only export explicitly requested in this task; no old grant reused. Physical margin warning only, commit headroom available.",
+  "protection": "Monitor progress and process memory every <=60 seconds; investigate only allocation failure, severe paging or confirmed stall; do not close GUI or other apps. Preserve all evidence and stop only owned process tree if cancellation is requested.",
+  "command": [
+    "C:/NIFPGA/programs/Vivado2021_1/bin/vivado.bat",
+    "-mode",
+    "batch",
+    "-source",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_endpoint_audit_20260918\\attempt_02_export\\export_routed_analysis.tcl",
+    "-log",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_endpoint_audit_20260918\\attempt_02_export\\vivado.log",
+    "-journal",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_endpoint_audit_20260918\\attempt_02_export\\vivado.jou",
+    "-tclargs",
+    "D:\\008_MA_Dev\\Sync_OTA\\reports\\v51\\routed_endpoint_audit_20260918\\attempt_02_export",
+    "D:\\008_MA_Dev\\Sync_OTA\\Sync_OTA.runs\\impl_1\\sync_ota_top_routed.dcp"
+  ],
+  "previous_failure": "Only optional property print used unsupported redirect; original paths=3336 and summary/hierarchical resource stages completed. Preserve attempt1; replace redirect with direct property writes.",
+  "reused_reports": [
+    "../timing_summary_checkpoint.rpt",
+    "../utilization_hierarchical_routed.rpt"
+  ]
+}

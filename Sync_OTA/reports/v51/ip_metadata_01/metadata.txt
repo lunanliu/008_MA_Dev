@@ -1,0 +1,550 @@
+VERSION=2021.1
+IP=t03_xfft_2048_main
+CONFIG.ACLK_INTF.FREQ_HZ=100000000
+CONFIG.ACLK_INTF.INSERT_VIP=0
+CONFIG.ARESETN_INTF.INSERT_VIP=0
+CONFIG.Component_Name=t03_xfft_2048_main
+CONFIG.M_AXIS_DATA.INSERT_VIP=0
+CONFIG.M_AXIS_STATUS.INSERT_VIP=0
+CONFIG.S_AXIS_CONFIG.INSERT_VIP=0
+CONFIG.S_AXIS_DATA.INSERT_VIP=0
+CONFIG.aclken=false
+CONFIG.aresetn=true
+CONFIG.butterfly_type=use_luts
+CONFIG.channels=1
+CONFIG.complex_mult_type=use_mults_resources
+CONFIG.cyclic_prefix_insertion=false
+CONFIG.data_format=fixed_point
+CONFIG.implementation_options=pipelined_streaming_io
+CONFIG.input_width=16
+CONFIG.memory_options_data=block_ram
+CONFIG.memory_options_hybrid=false
+CONFIG.memory_options_phase_factors=block_ram
+CONFIG.memory_options_reorder=block_ram
+CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors=4
+CONFIG.output_ordering=natural_order
+CONFIG.ovflo=true
+CONFIG.phase_factor_width=16
+CONFIG.rounding_modes=convergent_rounding
+CONFIG.run_time_configurable_transform_length=false
+CONFIG.scaling_options=scaled
+CONFIG.target_clock_frequency=500
+CONFIG.target_data_throughput=50
+CONFIG.throttle_scheme=realtime
+CONFIG.transform_length=2048
+CONFIG.xk_index=false
+IP=t03_xfft_16384_aux
+CONFIG.ACLK_INTF.FREQ_HZ=100000000
+CONFIG.ACLK_INTF.INSERT_VIP=0
+CONFIG.ARESETN_INTF.INSERT_VIP=0
+CONFIG.Component_Name=t03_xfft_16384_aux
+CONFIG.M_AXIS_DATA.INSERT_VIP=0
+CONFIG.M_AXIS_STATUS.INSERT_VIP=0
+CONFIG.S_AXIS_CONFIG.INSERT_VIP=0
+CONFIG.S_AXIS_DATA.INSERT_VIP=0
+CONFIG.aclken=false
+CONFIG.aresetn=true
+CONFIG.butterfly_type=use_luts
+CONFIG.channels=1
+CONFIG.complex_mult_type=use_mults_resources
+CONFIG.cyclic_prefix_insertion=false
+CONFIG.data_format=fixed_point
+CONFIG.implementation_options=pipelined_streaming_io
+CONFIG.input_width=16
+CONFIG.memory_options_data=block_ram
+CONFIG.memory_options_hybrid=false
+CONFIG.memory_options_phase_factors=block_ram
+CONFIG.memory_options_reorder=block_ram
+CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors=7
+CONFIG.output_ordering=natural_order
+CONFIG.ovflo=true
+CONFIG.phase_factor_width=16
+CONFIG.rounding_modes=convergent_rounding
+CONFIG.run_time_configurable_transform_length=true
+CONFIG.scaling_options=scaled
+CONFIG.target_clock_frequency=500
+CONFIG.target_data_throughput=50
+CONFIG.throttle_scheme=realtime
+CONFIG.transform_length=16384
+CONFIG.xk_index=false
+IP=t07_g3_up47
+CONFIG.ACLK_INTF.FREQ_HZ=100000000
+CONFIG.ACLK_INTF.INSERT_VIP=0
+CONFIG.ARESETN_INTF.INSERT_VIP=0
+CONFIG.BestPrecision=false
+CONFIG.Blank_Output=false
+CONFIG.Channel_Sequence=Basic
+CONFIG.Clock_Frequency=300.0
+CONFIG.CoefficientSource=Vector
+CONFIG.CoefficientVector=-2,0,5,0,-11,0,23,0,-41,0,70,0,-113,0,178,0,-279,0,450,0,-825,0,2592,4096,2592,0,-825,0,450,0,-279,0,178,0,-113,0,70,0,-41,0,23,0,-11,0,5,0,-2
+CONFIG.Coefficient_Buffer_Type=Automatic
+CONFIG.Coefficient_Fanout=false
+CONFIG.Coefficient_File=no_coe_file_loaded
+CONFIG.Coefficient_Fractional_Bits=0
+CONFIG.Coefficient_Reload=false
+CONFIG.Coefficient_Sets=1
+CONFIG.Coefficient_Sign=Signed
+CONFIG.Coefficient_Structure=Symmetric
+CONFIG.Coefficient_Width=14
+CONFIG.ColumnConfig=12
+CONFIG.Component_Name=t07_g3_up47
+CONFIG.Control_Broadcast_Fanout=false
+CONFIG.Control_Column_Fanout=false
+CONFIG.Control_LUT_Pipeline=false
+CONFIG.Control_Path_Fanout=false
+CONFIG.DATA_Has_TLAST=Not_Required
+CONFIG.DATA_TUSER_Width=1
+CONFIG.Data_Buffer_Type=Automatic
+CONFIG.Data_Fractional_Bits=0
+CONFIG.Data_Path_Broadcast=false
+CONFIG.Data_Path_Fanout=false
+CONFIG.Data_Sign=Signed
+CONFIG.Data_Width=16
+CONFIG.Decimation_Rate=1
+CONFIG.Disable_Half_Band_Centre_Tap=false
+CONFIG.DisplayReloadOrder=false
+CONFIG.Filter_Architecture=Systolic_Multiply_Accumulate
+CONFIG.Filter_Selection=1
+CONFIG.Filter_Type=Interpolation
+CONFIG.GUI_Behaviour=Coregen
+CONFIG.Gen_MIF_Files=false
+CONFIG.Gen_MIF_from_COE=false
+CONFIG.Gen_MIF_from_Spec=false
+CONFIG.HardwareOversamplingRate=1
+CONFIG.Has_ACLKEN=false
+CONFIG.Has_ARESETn=true
+CONFIG.Input_Buffer_Type=Automatic
+CONFIG.Inter_Column_Pipe_Length=4
+CONFIG.Interpolation_Rate=2
+CONFIG.M_AXIS_DATA.INSERT_VIP=0
+CONFIG.M_DATA_Has_TREADY=true
+CONFIG.M_DATA_Has_TUSER=Not_Required
+CONFIG.Multi_Column_Support=Automatic
+CONFIG.No_BRAM_Read_First_Mode=false
+CONFIG.No_SRL_Attributes=false
+CONFIG.Num_Reload_Slots=1
+CONFIG.Number_Channels=1
+CONFIG.Number_Paths=1
+CONFIG.Optimal_Column_Lengths=false
+CONFIG.Optimization_Goal=Area
+CONFIG.Optimization_List=None
+CONFIG.Optimization_Selection=None
+CONFIG.Other=false
+CONFIG.Output_Buffer_Type=Automatic
+CONFIG.Output_Rounding_Mode=Convergent_Rounding_to_Even
+CONFIG.Output_Width=18
+CONFIG.Passband_Max=0.5
+CONFIG.Passband_Min=0.0
+CONFIG.Pattern_List=P4-0,P4-1,P4-2,P4-3,P4-4
+CONFIG.Pre_Adder_Pipeline=false
+CONFIG.Preference_For_Other_Storage=Automatic
+CONFIG.Quantization=Integer_Coefficients
+CONFIG.RateSpecification=Input_Sample_Period
+CONFIG.Rate_Change_Type=Integer
+CONFIG.Reload_File=no_coe_file_loaded
+CONFIG.Reset_Data_Vector=true
+CONFIG.S_AXIS_CONFIG.INSERT_VIP=0
+CONFIG.S_AXIS_DATA.INSERT_VIP=0
+CONFIG.S_AXIS_RELOAD.INSERT_VIP=0
+CONFIG.S_CONFIG_Method=Single
+CONFIG.S_CONFIG_Sync_Mode=On_Vector
+CONFIG.S_DATA_Has_FIFO=true
+CONFIG.S_DATA_Has_TUSER=Not_Required
+CONFIG.SamplePeriod=0.25
+CONFIG.Sample_Frequency=0.001
+CONFIG.Select_Pattern=All
+CONFIG.Stopband_Max=1.0
+CONFIG.Stopband_Min=0.5
+CONFIG.Zero_Pack_Factor=1
+IP=t07_g3_up15
+CONFIG.ACLK_INTF.FREQ_HZ=100000000
+CONFIG.ACLK_INTF.INSERT_VIP=0
+CONFIG.ARESETN_INTF.INSERT_VIP=0
+CONFIG.BestPrecision=false
+CONFIG.Blank_Output=false
+CONFIG.Channel_Sequence=Basic
+CONFIG.Clock_Frequency=300.0
+CONFIG.CoefficientSource=Vector
+CONFIG.CoefficientVector=-20,0,139,0,-555,0,2484,4096,2484,0,-555,0,139,0,-20
+CONFIG.Coefficient_Buffer_Type=Automatic
+CONFIG.Coefficient_Fanout=false
+CONFIG.Coefficient_File=no_coe_file_loaded
+CONFIG.Coefficient_Fractional_Bits=0
+CONFIG.Coefficient_Reload=false
+CONFIG.Coefficient_Sets=1
+CONFIG.Coefficient_Sign=Signed
+CONFIG.Coefficient_Structure=Symmetric
+CONFIG.Coefficient_Width=14
+CONFIG.ColumnConfig=4
+CONFIG.Component_Name=t07_g3_up15
+CONFIG.Control_Broadcast_Fanout=false
+CONFIG.Control_Column_Fanout=false
+CONFIG.Control_LUT_Pipeline=false
+CONFIG.Control_Path_Fanout=false
+CONFIG.DATA_Has_TLAST=Not_Required
+CONFIG.DATA_TUSER_Width=1
+CONFIG.Data_Buffer_Type=Automatic
+CONFIG.Data_Fractional_Bits=0
+CONFIG.Data_Path_Broadcast=false
+CONFIG.Data_Path_Fanout=false
+CONFIG.Data_Sign=Signed
+CONFIG.Data_Width=16
+CONFIG.Decimation_Rate=1
+CONFIG.Disable_Half_Band_Centre_Tap=false
+CONFIG.DisplayReloadOrder=false
+CONFIG.Filter_Architecture=Systolic_Multiply_Accumulate
+CONFIG.Filter_Selection=1
+CONFIG.Filter_Type=Interpolation
+CONFIG.GUI_Behaviour=Coregen
+CONFIG.Gen_MIF_Files=false
+CONFIG.Gen_MIF_from_COE=false
+CONFIG.Gen_MIF_from_Spec=false
+CONFIG.HardwareOversamplingRate=1
+CONFIG.Has_ACLKEN=false
+CONFIG.Has_ARESETn=true
+CONFIG.Input_Buffer_Type=Automatic
+CONFIG.Inter_Column_Pipe_Length=4
+CONFIG.Interpolation_Rate=2
+CONFIG.M_AXIS_DATA.INSERT_VIP=0
+CONFIG.M_DATA_Has_TREADY=true
+CONFIG.M_DATA_Has_TUSER=Not_Required
+CONFIG.Multi_Column_Support=Automatic
+CONFIG.No_BRAM_Read_First_Mode=false
+CONFIG.No_SRL_Attributes=false
+CONFIG.Num_Reload_Slots=1
+CONFIG.Number_Channels=1
+CONFIG.Number_Paths=1
+CONFIG.Optimal_Column_Lengths=false
+CONFIG.Optimization_Goal=Area
+CONFIG.Optimization_List=None
+CONFIG.Optimization_Selection=None
+CONFIG.Other=false
+CONFIG.Output_Buffer_Type=Automatic
+CONFIG.Output_Rounding_Mode=Convergent_Rounding_to_Even
+CONFIG.Output_Width=17
+CONFIG.Passband_Max=0.5
+CONFIG.Passband_Min=0.0
+CONFIG.Pattern_List=P4-0,P4-1,P4-2,P4-3,P4-4
+CONFIG.Pre_Adder_Pipeline=false
+CONFIG.Preference_For_Other_Storage=Automatic
+CONFIG.Quantization=Integer_Coefficients
+CONFIG.RateSpecification=Input_Sample_Period
+CONFIG.Rate_Change_Type=Integer
+CONFIG.Reload_File=no_coe_file_loaded
+CONFIG.Reset_Data_Vector=true
+CONFIG.S_AXIS_CONFIG.INSERT_VIP=0
+CONFIG.S_AXIS_DATA.INSERT_VIP=0
+CONFIG.S_AXIS_RELOAD.INSERT_VIP=0
+CONFIG.S_CONFIG_Method=Single
+CONFIG.S_CONFIG_Sync_Mode=On_Vector
+CONFIG.S_DATA_Has_FIFO=true
+CONFIG.S_DATA_Has_TUSER=Not_Required
+CONFIG.SamplePeriod=0.125
+CONFIG.Sample_Frequency=0.001
+CONFIG.Select_Pattern=All
+CONFIG.Stopband_Max=1.0
+CONFIG.Stopband_Min=0.5
+CONFIG.Zero_Pack_Factor=1
+IP=t07_g3_down15
+CONFIG.ACLK_INTF.FREQ_HZ=100000000
+CONFIG.ACLK_INTF.INSERT_VIP=0
+CONFIG.ARESETN_INTF.INSERT_VIP=0
+CONFIG.BestPrecision=false
+CONFIG.Blank_Output=false
+CONFIG.Channel_Sequence=Basic
+CONFIG.Clock_Frequency=300.0
+CONFIG.CoefficientSource=Vector
+CONFIG.CoefficientVector=-20,0,139,0,-555,0,2484,4096,2484,0,-555,0,139,0,-20
+CONFIG.Coefficient_Buffer_Type=Automatic
+CONFIG.Coefficient_Fanout=false
+CONFIG.Coefficient_File=no_coe_file_loaded
+CONFIG.Coefficient_Fractional_Bits=0
+CONFIG.Coefficient_Reload=false
+CONFIG.Coefficient_Sets=1
+CONFIG.Coefficient_Sign=Signed
+CONFIG.Coefficient_Structure=Symmetric
+CONFIG.Coefficient_Width=14
+CONFIG.ColumnConfig=8
+CONFIG.Component_Name=t07_g3_down15
+CONFIG.Control_Broadcast_Fanout=false
+CONFIG.Control_Column_Fanout=false
+CONFIG.Control_LUT_Pipeline=false
+CONFIG.Control_Path_Fanout=false
+CONFIG.DATA_Has_TLAST=Not_Required
+CONFIG.DATA_TUSER_Width=1
+CONFIG.Data_Buffer_Type=Automatic
+CONFIG.Data_Fractional_Bits=0
+CONFIG.Data_Path_Broadcast=false
+CONFIG.Data_Path_Fanout=false
+CONFIG.Data_Sign=Signed
+CONFIG.Data_Width=16
+CONFIG.Decimation_Rate=2
+CONFIG.Disable_Half_Band_Centre_Tap=false
+CONFIG.DisplayReloadOrder=false
+CONFIG.Filter_Architecture=Systolic_Multiply_Accumulate
+CONFIG.Filter_Selection=1
+CONFIG.Filter_Type=Decimation
+CONFIG.GUI_Behaviour=Coregen
+CONFIG.Gen_MIF_Files=false
+CONFIG.Gen_MIF_from_COE=false
+CONFIG.Gen_MIF_from_Spec=false
+CONFIG.HardwareOversamplingRate=1
+CONFIG.Has_ACLKEN=false
+CONFIG.Has_ARESETn=true
+CONFIG.Input_Buffer_Type=Automatic
+CONFIG.Inter_Column_Pipe_Length=4
+CONFIG.Interpolation_Rate=1
+CONFIG.M_AXIS_DATA.INSERT_VIP=0
+CONFIG.M_DATA_Has_TREADY=true
+CONFIG.M_DATA_Has_TUSER=Not_Required
+CONFIG.Multi_Column_Support=Automatic
+CONFIG.No_BRAM_Read_First_Mode=false
+CONFIG.No_SRL_Attributes=false
+CONFIG.Num_Reload_Slots=1
+CONFIG.Number_Channels=1
+CONFIG.Number_Paths=1
+CONFIG.Optimal_Column_Lengths=false
+CONFIG.Optimization_Goal=Area
+CONFIG.Optimization_List=None
+CONFIG.Optimization_Selection=None
+CONFIG.Other=false
+CONFIG.Output_Buffer_Type=Automatic
+CONFIG.Output_Rounding_Mode=Convergent_Rounding_to_Even
+CONFIG.Output_Width=17
+CONFIG.Passband_Max=0.5
+CONFIG.Passband_Min=0.0
+CONFIG.Pattern_List=P4-0,P4-1,P4-2,P4-3,P4-4
+CONFIG.Pre_Adder_Pipeline=false
+CONFIG.Preference_For_Other_Storage=Automatic
+CONFIG.Quantization=Integer_Coefficients
+CONFIG.RateSpecification=Input_Sample_Period
+CONFIG.Rate_Change_Type=Integer
+CONFIG.Reload_File=no_coe_file_loaded
+CONFIG.Reset_Data_Vector=true
+CONFIG.S_AXIS_CONFIG.INSERT_VIP=0
+CONFIG.S_AXIS_DATA.INSERT_VIP=0
+CONFIG.S_AXIS_RELOAD.INSERT_VIP=0
+CONFIG.S_CONFIG_Method=Single
+CONFIG.S_CONFIG_Sync_Mode=On_Vector
+CONFIG.S_DATA_Has_FIFO=true
+CONFIG.S_DATA_Has_TUSER=Not_Required
+CONFIG.SamplePeriod=0.0625
+CONFIG.Sample_Frequency=0.001
+CONFIG.Select_Pattern=All
+CONFIG.Stopband_Max=1.0
+CONFIG.Stopband_Min=0.5
+CONFIG.Zero_Pack_Factor=1
+IP=t07_g3_down47
+CONFIG.ACLK_INTF.FREQ_HZ=100000000
+CONFIG.ACLK_INTF.INSERT_VIP=0
+CONFIG.ARESETN_INTF.INSERT_VIP=0
+CONFIG.BestPrecision=false
+CONFIG.Blank_Output=false
+CONFIG.Channel_Sequence=Basic
+CONFIG.Clock_Frequency=300.0
+CONFIG.CoefficientSource=Vector
+CONFIG.CoefficientVector=-2,0,5,0,-11,0,23,0,-41,0,70,0,-113,0,178,0,-279,0,450,0,-825,0,2592,4096,2592,0,-825,0,450,0,-279,0,178,0,-113,0,70,0,-41,0,23,0,-11,0,5,0,-2
+CONFIG.Coefficient_Buffer_Type=Automatic
+CONFIG.Coefficient_Fanout=false
+CONFIG.Coefficient_File=no_coe_file_loaded
+CONFIG.Coefficient_Fractional_Bits=0
+CONFIG.Coefficient_Reload=false
+CONFIG.Coefficient_Sets=1
+CONFIG.Coefficient_Sign=Signed
+CONFIG.Coefficient_Structure=Symmetric
+CONFIG.Coefficient_Width=14
+CONFIG.ColumnConfig=24
+CONFIG.Component_Name=t07_g3_down47
+CONFIG.Control_Broadcast_Fanout=false
+CONFIG.Control_Column_Fanout=false
+CONFIG.Control_LUT_Pipeline=false
+CONFIG.Control_Path_Fanout=false
+CONFIG.DATA_Has_TLAST=Not_Required
+CONFIG.DATA_TUSER_Width=1
+CONFIG.Data_Buffer_Type=Automatic
+CONFIG.Data_Fractional_Bits=0
+CONFIG.Data_Path_Broadcast=false
+CONFIG.Data_Path_Fanout=false
+CONFIG.Data_Sign=Signed
+CONFIG.Data_Width=16
+CONFIG.Decimation_Rate=2
+CONFIG.Disable_Half_Band_Centre_Tap=false
+CONFIG.DisplayReloadOrder=false
+CONFIG.Filter_Architecture=Systolic_Multiply_Accumulate
+CONFIG.Filter_Selection=1
+CONFIG.Filter_Type=Decimation
+CONFIG.GUI_Behaviour=Coregen
+CONFIG.Gen_MIF_Files=false
+CONFIG.Gen_MIF_from_COE=false
+CONFIG.Gen_MIF_from_Spec=false
+CONFIG.HardwareOversamplingRate=1
+CONFIG.Has_ACLKEN=false
+CONFIG.Has_ARESETn=true
+CONFIG.Input_Buffer_Type=Automatic
+CONFIG.Inter_Column_Pipe_Length=4
+CONFIG.Interpolation_Rate=1
+CONFIG.M_AXIS_DATA.INSERT_VIP=0
+CONFIG.M_DATA_Has_TREADY=true
+CONFIG.M_DATA_Has_TUSER=Not_Required
+CONFIG.Multi_Column_Support=Automatic
+CONFIG.No_BRAM_Read_First_Mode=false
+CONFIG.No_SRL_Attributes=false
+CONFIG.Num_Reload_Slots=1
+CONFIG.Number_Channels=1
+CONFIG.Number_Paths=1
+CONFIG.Optimal_Column_Lengths=false
+CONFIG.Optimization_Goal=Area
+CONFIG.Optimization_List=None
+CONFIG.Optimization_Selection=None
+CONFIG.Other=false
+CONFIG.Output_Buffer_Type=Automatic
+CONFIG.Output_Rounding_Mode=Convergent_Rounding_to_Even
+CONFIG.Output_Width=17
+CONFIG.Passband_Max=0.5
+CONFIG.Passband_Min=0.0
+CONFIG.Pattern_List=P4-0,P4-1,P4-2,P4-3,P4-4
+CONFIG.Pre_Adder_Pipeline=false
+CONFIG.Preference_For_Other_Storage=Automatic
+CONFIG.Quantization=Integer_Coefficients
+CONFIG.RateSpecification=Input_Sample_Period
+CONFIG.Rate_Change_Type=Integer
+CONFIG.Reload_File=no_coe_file_loaded
+CONFIG.Reset_Data_Vector=true
+CONFIG.S_AXIS_CONFIG.INSERT_VIP=0
+CONFIG.S_AXIS_DATA.INSERT_VIP=0
+CONFIG.S_AXIS_RELOAD.INSERT_VIP=0
+CONFIG.S_CONFIG_Method=Single
+CONFIG.S_CONFIG_Sync_Mode=On_Vector
+CONFIG.S_DATA_Has_FIFO=true
+CONFIG.S_DATA_Has_TUSER=Not_Required
+CONFIG.SamplePeriod=0.125
+CONFIG.Sample_Frequency=0.001
+CONFIG.Select_Pattern=All
+CONFIG.Stopband_Max=1.0
+CONFIG.Stopband_Min=0.5
+CONFIG.Zero_Pack_Factor=1
+READ_VENDOR_CALLBACK=C:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/xfft_v9_1/xgui/xfft_v9_1_helpers.tcl
+SOURCE_STATUS=0 
+READ_VENDOR_CALLBACK=C:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/xfft_v9_1/xgui/xfft_v9_1_utils_timing.tcl
+SOURCE_STATUS=0 
+PROC=::list_timing_procs ARGS=n f
+PROC=::fn_get_nfft_max ARGS=xco_value
+PROC=::sdcrt::setParallelTimingXdc ARGS=
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::debug_print_cell_timing_path_dict ARGS=timingPathCellDict
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::dictionary_value_exists? ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::build_verilog_objects_from_timing_path_dict ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::get_current_proc_call_by_name ARGS=
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::add_clock_management_block_feedback_path ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::debug_print_verilog_object_dict ARGS=verilogObjectDict
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::parse_object_list ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::get_current_proc_name ARGS=
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::write_verilog_testcase ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::write_verilog_testcase_top_level ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::parse_timing_path_objects ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::get_path_dict_by_cell_name ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::get_current_main_proc_name ARGS=
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::write_verilog_testcase_script ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::path_to_verilog_dict ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::path_cell_name_exists? ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::lshift ARGS=varname
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::get_dictionary_by_key_value ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::write_verilog_testcase_xdc ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::timing_report_to_verilog ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::parse_timing_report_paths ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::parse_timing_report_paths_orig ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::lunshift ARGS=varname val nth
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::parse_timing_report ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::write_verilog_instantiation ARGS=args
+PROC=::tclapp::xilinx::designutils::timing_report_to_verilog::add_timing_report_path ARGS=args
+PROC=::xfft_v9_1_utils_timing::flt_pt_get_normalize ARGS=data_width poss_last_bits
+PROC=::xfft_v9_1_utils_timing::cmpy_latency ARGS=c_xdevicefamily cmpy_type a_width b_width p_width round pipe_in pipe_mid pipe_out c_has_sclr single_output
+PROC=::xfft_v9_1_utils_timing::flt_pt_get_normalization_delay ARGS=in_width
+PROC=::xfft_v9_1_utils_timing::calc_dist_mem_mux_latency ARGS=c_xdevicefamily data_mem_depth
+PROC=::xfft_v9_1_utils_timing::get_fp_convert_to_block_fp_delay ARGS=family fixed_width
+PROC=::xfft_v9_1_utils_timing::get_extra_latency_r2 ARGS=c_xdevicefamily c_twiddle_mem_type c_nfft_max c_twiddle_width c_output_width c_cmpy_type c_bfly_type c_has_scaling c_has_rounding c_data_mem_type c_optimize_goal c_use_hybrid_ram
+PROC=::xfft_v9_1_utils_timing::get_butterfly_latency ARGS=c_xdevicefamily fast_bfly data_width
+PROC=::xfft_v9_1_utils_timing::get_extra_latency_r4 ARGS=c_xdevicefamily c_twiddle_mem_type c_nfft_max c_twiddle_width c_output_width c_cmpy_type c_bfly_type c_has_scaling c_has_rounding c_data_mem_type c_optimize_goal c_use_hybrid_ram c_xn_data_offset
+PROC=::xfft_v9_1_utils_timing::r22_allow_hybrid_ram_use ARGS=c_xdevicefamily bram_stages nfft_max has_scaling has_bfp fft_input_width fft_output_width reorder_mem_type has_natural_input has_natural_output optimize_goal
+PROC=::xfft_v9_1_utils_timing::r22_pe_width ARGS=scaling nfft_max input_bits
+PROC=::xfft_v9_1_utils_timing::so_butterfly_latency ARGS=c_xdevicefamily fast_bfy has_input_reg butterfly_width
+PROC=::xfft_v9_1_utils_timing::when_else ARGS=condition if_true if_false
+PROC=::xfft_v9_1_utils_timing::get_extra_latency_so ARGS=c_xdevicefamily c_data_mem_type c_has_rounding c_has_scaling c_nfft_max c_output_width c_twiddle_mem_type c_twiddle_width c_bfly_type c_cmpy_type c_has_nfft c_has_bfp c_optimize_goal c_use_hybrid_ram
+PROC=::xfft_v9_1_utils_timing::calc_hybrid_ram_widths ARGS=c_xdevicefamily ram_width ram_depth
+PROC=::xfft_v9_1_utils_timing::flt_pt_max ARGS=x y
+PROC=::xfft_v9_1_utils_timing::get_min_mem_delay ARGS=c_xdevicefamily data_mem_type data_mem_depth optimize_goal use_hybrid_ram
+PROC=::xfft_v9_1_utils_timing::get_unload_delay ARGS=c_xdevicefamily c_arch c_data_mem_type c_nfft_max c_twiddle_mem_type c_twiddle_width c_optimize_goal c_use_hybrid_ram c_use_flt_pt c_has_natural_output nfft
+PROC=::xfft_v9_1_utils_timing::so_round_latency ARGS=has_rounding
+PROC=::xfft_v9_1_utils_timing::correct_output_width ARGS=c_input_width c_has_scaling c_nfft_max c_use_flt_pt
+PROC=::xfft_v9_1_utils_timing::get_twiddle_latency ARGS=c_xdevicefamily mem_type theta_width twiddle_width single_output
+PROC=::xfft_v9_1_utils_timing::allow_hybrid_ram_use ARGS=c_xdevicefamily mem_type output_width depth
+PROC=::xfft_v9_1_utils_timing::should_use_9k_ram_prim ARGS=rams_w_9k_temp_ary rams_18k_only_temp_ary depth
+PROC=::xfft_v9_1_utils_timing::resolve_hybrid_ram_use ARGS=c_xdevicefamily c_arch c_nfft_max c_data_mem_type c_output_width c_bram_stages c_has_scaling c_has_bfp c_input_width c_reorder_mem_type c_has_natural_input c_has_natural_output c_optimize_goal c_use_hybrid_ram
+PROC=::xfft_v9_1_utils_timing::r22_mem_type ARGS=nfft_max bram_stage natural_input
+PROC=::xfft_v9_1_utils_timing::mult_latency_bc ARGS=c_xdevicefamily cmpy_type a_width b_width p_width round pipe_in pipe_mid pipe_out c_has_sclr
+PROC=::xfft_v9_1_utils_timing::so_bfp_scale_gen_latency ARGS=has_scaling has_rounding
+PROC=::xfft_v9_1_utils_timing::calc_rams ARGS=c_xdevicefamily width depth use_9k_bram
+PROC=::xfft_v9_1_utils_timing::calc_dist_mem_addr_latency ARGS=c_xdevicefamily data_mem_depth
+PROC=::xfft_v9_1_utils_timing::get_fixed_width ARGS=c_arch fp_word_len
+PROC=::xfft_v9_1_utils_timing::get_extra_latency_r22 ARGS=c_xdevicefamily nfft c_nfft_max c_bram_stages c_has_scaling c_input_width c_bfly_type c_cmpy_type c_has_nfft c_twiddle_width c_has_rounding c_has_natural_input
+PROC=::xfft_v9_1_utils_timing::radix4_dragonfly_latency ARGS=c_xdevicefamily c_bfly_type dfly_width
+PROC=::xfft_v9_1_utils_timing::so_scale_latency ARGS=has_scaling
+PROC=::xfft_v9_1_utils_timing::calc_hybrid_ram_delay ARGS=c_xdevicefamily ram_depth opt_goal
+PROC=::xfft_v9_1_utils_timing::check_dpm_aspect_ratio ARGS=c_xdevicefamily width depth
+PROC=::xfft_v9_1_utils_timing::r22_round_delay ARGS=pe_id has_scaling has_rounding
+PROC=::xfft_v9_1_utils_timing::flt_pt_get_n_bits ARGS=x
+PROC=::xfft_v9_1_utils_timing::r22_var_unbiased_round_latency ARGS=
+PROC=::xfft_v9_1_utils_timing::r2_pe_latency ARGS=c_xdevicefamily c_bfly_type btrfly_width cmult_delay c_has_scaler c_has_rounder
+PROC=::xfft_v9_1_utils_timing::get_nfft_min ARGS=arch has_nfft nfft_max
+PROC=::xfft_v9_1_utils_timing::r22_pe_latency ARGS=c_xdevicefamily c_bfly_type c_cmpy_type has_nfft nfft_max tw_bits has_scaling has_rounding has_mux has_natural_input width_of_pe_temp_ary memory_type_temp_ary
+PROC=::xfft_v9_1_utils_timing::supports_ramb36 ARGS=family
+PROC=::xfft_v9_1_utils_timing::has_dsp ARGS=family
+PROC=::xfft_v9_1_utils_timing::get_run_latency ARGS=c_xdevicefamily nfft c_arch c_data_mem_type c_has_rounding c_has_scaling c_nfft_max c_output_width c_twiddle_mem_type c_twiddle_width c_bfly_type c_cmpy_type c_has_nfft c_has_bfp c_bram_stages c_reorder_mem_type c_input_width c_has_natural_input c_has_natural_output c_optimize_goal c_use_hybrid_ram c_use_flt_pt c_xn_data_offset
+PROC=::xfft_v9_1_utils_timing::get_output_order_latency_so ARGS=c_xdevicefamily c_has_natural_input c_has_natural_output c_data_mem_type c_nfft_max c_twiddle_mem_type c_twiddle_width c_optimize_goal c_use_hybrid_ram c_xn_data_offset
+PROC=::xfft_v9_1_utils_timing::flt_pt_fix_to_flt_delay ARGS=a_width version
+PROC=::xfft_v9_1_utils_timing::r22_bf2_delay ARGS=c_xdevicefamily opt_dsp48s pe_id has_nfft nfft_max_even bfly_width has_natural_input
+PROC=::xfft_v9_1_utils_timing::check_use_9k_bram ARGS=c_xdevicefamily width depth
+PROC=::xfft_v9_1_utils_timing::supports_ramb8bwer ARGS=family
+PROC=::xfft_v9_1_utils_timing::get_twiddle_arch ARGS=mem_type theta_width twiddle_width single_output
+PROC=::xfft_v9_1_utils_timing::get_fast_bfy_latency_r22 ARGS=c_nfft_max c_has_nfft c_bfly_type nfft
+PROC=::xfft_v9_1_utils_timing::r22_allow_reorder_hybrid_ram_use ARGS=c_xdevicefamily nfft_max fft_output_width reorder_mem_type has_natural_input has_natural_output optimize_goal has_bfp
+PROC=::xfft_v9_1_utils_timing::flt_pt_get_shift_delay ARGS=stage_dist_width ip_width op_width distance_width
+PROC=::xfft_v9_1_utils_timing::r22_scale_delay ARGS=pe_id has_scaling has_rounding
+PROC=::xfft_v9_1_utils_timing::flt_pt_flt_to_fix_delay ARGS=a_width a_fraction_width result_width result_fraction_width
+PROC=::xfft_v9_1_utils_timing::flt_pt_get_shift_msb_first_bits ARGS=a_width result_width last_bits_to_omit left
+PROC=::xfft_v9_1_utils_timing::r22_right_shift_latency ARGS=shift_distance
+PROC=::xfft_v9_1_utils_timing::flt_pt_get_align_delay ARGS=ip_width op_width
+PROC=::xfft_v9_1_utils_timing::flt_pt_get_zero_det_delay ARGS=stage_dist_width ip_width op_width distance_width
+PROC=::xfft_v9_1_utils_timing::get_fp_convert_to_fp_delay ARGS=family data_width data_frac_width
+PROC=::xfft_v9_1_utils_timing::get_mem_delay ARGS=c_xdevicefamily data_mem_type data_mem_depth sin_cos_delay tw_addr_gen_delay rw_addr_gen_delay mux_delay switch_delay optimize_goal use_hybrid_ram
+PROC=::xfft_v9_1_utils_timing::r22_bf1_delay ARGS=c_xdevicefamily opt_dsp48s pe_id has_nfft nfft_max_even bfly_width has_natural_input
+PROC=::xfft_v9_1_utils_timing::so_pe_latency ARGS=c_xdevicefamily c_data_mem_type c_has_rounding c_has_scaling c_nfft_max c_output_width c_twiddle_mem_type expand_tw_width c_bfly_type c_cmpy_type c_optimize_goal c_use_hybrid_ram
+PROC=::xfft_v9_1_utils_timing::pe_latency_b ARGS=c_xdevicefamily c_bfly_type dfly_width cmult_delay c_has_mults c_has_scaler c_has_rounder
+PROC=::xfft_v9_1_utils_timing::gui_get_transform_latency ARGS=c_xdevicefamily nfft c_nfft_max c_arch c_has_nfft c_input_width c_twiddle_width c_output_width c_has_scaling c_has_bfp c_has_rounding c_has_natural_input c_has_natural_output c_data_mem_type c_twiddle_mem_type c_bram_stages c_reorder_mem_type c_cmpy_type c_bfly_type c_optimize_goal c_use_hybrid_ram c_use_flt_pt c_throttle_scheme
+PROC=::xfft_v9_1_utils_timing::max_i ARGS=a b
+PROC=::xfft_v9_1_utils_timing::so_data_reuse ARGS=nfft
+PROC=::xfft_v9_1_utils_timing::get_output_order_latency_r22 ARGS=c_xdevicefamily c_has_natural_input c_has_natural_output c_output_width c_bram_stages c_reorder_mem_type c_has_nfft c_nfft_max nfft c_optimize_goal c_use_hybrid_ram c_has_scaling c_has_bfp
+PROC=::rt::reset_timing ARGS=args
+PROC=::rt::set_timing_mode ARGS=args
+PROC=::rt::disableScanInTimingArcs ARGS=
+PROC=::rt::check_timing ARGS=args
+PROC=::rt::process_retiming_change ARGS=args
+PROC=::rt::retiming_final ARGS=args
+PROC=::rt::set_timing_derate ARGS=args
+PROC=::rt::report_timing ARGS=args
+PROC=::rt::retiming ARGS=args
+PROC=::rt::timing_merge ARGS=args
+PROC=::rt::report_timing_old ARGS=args
+PROC=::rt::get_timing ARGS=args
+PROC=::rt::config_timing ARGS=args
+PROC=::rt::report_partition_timing ARGS=args
+PROC=::rt::configTiming ARGS=zeroDelay
+PROC=::rt::reportTimingOld ARGS=stopAtGenomes fromPin thruPin toPin rise fall count
+PROC=::rt::retimingDataPath ARGS=args
+PROC=::rt::set_clock_latency ARGS=args
+PROC=::rt::getTiming ARGS=mode rise fall launch_clock bidir type pinObj
+PROC=::rt::get_timing_paths ARGS=args
+PROC=::rt::set_disable_timing ARGS=args
+PROC=::rt::set_ideal_latency ARGS=args
+PROC=::rt::delete_timing ARGS=args
+PROC=::rtdc::getTimingPathAttribute ARGS=quiet objRef attr

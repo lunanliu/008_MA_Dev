@@ -1,0 +1,18 @@
+{
+  "status": "APPLIED_WITH_EXPLICIT_USER_APPROVAL",
+  "changes": [
+    {
+      "production_path": "Sync_OTA\\rtl\\sfo\\residual_estimation\\sfo_residual_ls74.sv",
+      "production_sha256": "c3a1cb3073748c3607534d266a38b6ed7ed6db0cd143ccb387f8c7525f18bc75",
+      "candidate_path": "Sync_OTA\\reports\\v51\\pending_arithmetic\\sfo_residual_ls74.sv",
+      "candidate_sha256": "38b8cacbbab1a23155edd20937f0c661ac041628d097b2fb5c7e0cbc9c59f58e"
+    },
+    {
+      "production_path": "Sync_OTA\\rtl\\sfo\\residual_estimation\\sfo_residual_div_u80_u49_rne.sv",
+      "production_sha256": "d600f457c3c5821a9b7349fe4aebc2370d02909c4e3a8c171cdba630c4f88d7a",
+      "candidate_path": "Sync_OTA\\reports\\v51\\pending_arithmetic\\sfo_residual_div_u80_u49_rne.sv",
+      "candidate_sha256": "936b8af63564cfd242855eeac6ebce17360b6bec06adc65e94d2b67b1047385a"
+    }
+  ],
+  "authorization": "用户明确回复：批准应用这两份补丁；不启动仿真。"
+}

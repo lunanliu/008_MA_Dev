@@ -1,0 +1,56 @@
+{
+  "request_id": "SYNC_DDR_ROUNDTRIP_V1_20260917",
+  "status": "COMPLETED_BEHAVIOR_PASS_RESOURCE_RETURNED",
+  "owner_thread_id": "01a0afdf-cd3a-7e91-afc8-6a947ec3cc71",
+  "manager_thread_id": "01a06e5a-ad5f-7bb3-9fb2-a4eb4560bbb7",
+  "root": "D:\\008_MA_Dev\\Sync_DDR",
+  "manifest": "reports/operations/FROZEN_ROUNDTRIP_V1.json",
+  "manifest_sha256": "0321A20E7FBBA9FE57D787FEFDF30BD9F763E64DB061912C3AAC59B1645DD83D",
+  "executable": "C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat",
+  "entry": "scripts/run_roundtrip.ps1",
+  "output": "work/roundtrip_v1",
+  "scope": "New roundtrip project create, required xvhdl/xelab and ONE short four-controller behavioral roundtrip; no old passed tests rerun",
+  "stages": [
+    "create",
+    "roundtrip"
+  ],
+  "stage_seconds": {
+    "create": 180,
+    "roundtrip": 300
+  },
+  "whole_budget_seconds": 600,
+  "requested_first_start_not_after_utc": "2026-09-17T19:22:21.679621+00:00",
+  "requested_absolute_deadline_utc": "2026-09-17T19:32:21.679621+00:00",
+  "resources": {
+    "vivado_main_processes": 1,
+    "general_threads": 8,
+    "xelab_threads": 16,
+    "expected_peak_gib": 4,
+    "memory_warning_gib": 8,
+    "memory_estimate_is_not_kill_limit": true
+  },
+  "abort_policy": "Fixed whole/stage deadline or explicit error; kill only owned Kernel Job; retain logs and three empty checks.",
+  "retry_policy": "Only failed/unrun stages; fixed budget, changed freeze requires manager acknowledgement",
+  "grant_schema": {
+    "grant_id": "NEW identity",
+    "owner_thread_id": "same as request",
+    "root": "same as request",
+    "frozen_manifest_sha256": "same as request",
+    "stages": [
+      "create",
+      "roundtrip"
+    ],
+    "first_start_not_after_utc": "manager UTC",
+    "absolute_deadline_utc": "manager UTC"
+  },
+  "central_resource_writer": "manager only",
+  "grant_path_requested": "D:\\008_MA_Dev\\Sync_DDR\\reports\\operations\\MANAGER_GRANT_ROUNDTRIP_V1.json",
+  "resource_status": "RETURNED_CLOSED",
+  "resource_closure": {
+    "returned_utc": "2026-09-17T19:19:18.095605+00:00",
+    "returned_local": "2026-09-17T21:19:18.095605+02:00",
+    "manager_receipt": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\sync_ddr\\SYNC_DDR_ROUNDTRIP_V1_RESOURCE_RETURN_20260917.json",
+    "manager_receipt_sha256": "FA08024A6C29096281B73E564883218B16563DE508FBDA0F8B4CFC62D586C073",
+    "grant_usable": false
+  }
+}

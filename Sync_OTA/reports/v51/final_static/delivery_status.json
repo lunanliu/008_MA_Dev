@@ -1,0 +1,81 @@
+{
+  "status": "RTL_INTEGRATED_STATIC_CHECKS_PASS_SERVICE_ENVELOPE_OPEN",
+  "architecture": "SHARED_RAW_PROGRESSIVE_SFO_ONCHIP_DUAL_BANK_CFO_NO_OUTPUT_BACKPRESSURE",
+  "branch": "V5.1_System_Modify",
+  "baseline_commit": "f63bca94558ed0a2bf22a63f25e59da9f1c9c631",
+  "checks": {
+    "source_manifest_xpr": "MATCH",
+    "source_count": 129,
+    "ip_count": 45,
+    "syntax_errors": 0,
+    "syntax_warnings": 22,
+    "static_binding_errors": 0,
+    "static_binding_diagnostics": 963,
+    "wrapper_ports": 46,
+    "wrapper_mapping": true
+  },
+  "final_output": {
+    "clock_mhz": 150,
+    "complex_samples_per_beat": 4,
+    "ready_port": false,
+    "fixed_stages": 2,
+    "backpressure_fifo_words": 0,
+    "downstream_owner": "USER_LABVIEW_TARGET_VI"
+  },
+  "resource_estimates": {
+    "raw_uram": 192,
+    "sfo_banks_uram": 328,
+    "cfo_banks_uram": 328,
+    "major_uram_total": 848,
+    "sfo_output_bram36_expected": 256,
+    "cfo_window_bram36_expected": 16,
+    "new_total_lut": null,
+    "new_total_ff": null,
+    "new_total_dsp": null,
+    "new_total_bram": null
+  },
+  "historical_resources": {
+    "identity": "A05_NOT_V51",
+    "lut": 307097,
+    "ff": 239219,
+    "dsp": 2049,
+    "bram_tile": 302,
+    "uram": 552
+  },
+  "historical_timing_ns": {
+    "identity": "A06R3_PRE_LAYOUT_NOT_V51",
+    "clk125_wns": 2.41,
+    "clk150_wns": -2.358,
+    "clk500_wns": -1.279
+  },
+  "not_run": [
+    "native_vivado_elaboration",
+    "native_vhdl_compile",
+    "new_numerical_comparison",
+    "rtl_simulation",
+    "new_core_synthesis",
+    "implementation",
+    "ni_integration",
+    "board_test",
+    "measured_multiframe_throughput",
+    "measured_memory_high_water"
+  ],
+  "remaining_static_items": [
+    "vendor_exact_fft_data_and_status_service_latency",
+    "full_sfo_fir_farrow_service_envelope",
+    "general_multiframe_bank_lifetime_and_output_ring_peak"
+  ],
+  "simulator_invoked": false,
+  "eda_invoked": false,
+  "committed": false,
+  "pushed": false,
+  "conditional_service_requirements": {
+    "main_fft_full_service_cycles500_max": 10512,
+    "aux_fft_full_service_cycles500_max": 12400,
+    "sfo_last_window_to_result_cycles150_max": 9200,
+    "e1_service_design_target_cycles150": 390400,
+    "sfo_bank_lifetime_cycles150_max": 801792,
+    "raw_full_window_to_safe_retirement_us_max": 469.96,
+    "verified_for_production_ip": false
+  }
+}

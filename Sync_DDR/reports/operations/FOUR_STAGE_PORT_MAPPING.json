@@ -1,0 +1,43 @@
+{
+  "capture": {
+    "load_command": "capture_command",
+    "fifo_output_valid": "result_fifo_output_valid",
+    "fifo_read_enable": "result_fifo_read_enable",
+    "loaded_samples": "captured_samples",
+    "load_state": "capture_state",
+    "load_busy": "capture_busy",
+    "load_done": "capture_done",
+    "load_fault": "capture_fault",
+    "load_generation": "capture_generation",
+    "load_cycles": "capture_cycles"
+  },
+  "download": {
+    "read_command": "download_command",
+    "stream_ready": "dma_ready_now",
+    "stream_offset": "unpack_offset",
+    "sent_samples": "downloaded_samples",
+    "replay_cycles": "download_cycles",
+    "read_state": "download_state",
+    "read_busy": "download_busy",
+    "read_done": "download_done",
+    "read_fault": "download_fault",
+    "read_generation": "download_generation",
+    "stream_valid": "dma_valid",
+    "stream_fire": "dma_fire",
+    "stream_first": "dma_first",
+    "stream_last": "dma_last"
+  },
+  "download_removed": [
+    "checked_samples",
+    "first_error_actual",
+    "first_error_expected",
+    "first_error_index",
+    "mismatch_count",
+    "pattern_check_enable",
+    "pattern_seed",
+    "stream_word0",
+    "stream_word1",
+    "stream_word2",
+    "stream_word3"
+  ]
+}

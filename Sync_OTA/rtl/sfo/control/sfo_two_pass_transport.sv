@@ -3,6 +3,8 @@
 // Short tests drive these same ports with explicitly labelled saved estimate records.
 module sfo_two_pass_transport #(
     parameter integer REQUIRE_CONTEXT_ACK = 0,
+    parameter integer SHARED_RAW_INPUT = 0,
+    parameter integer PROGRESSIVE_SOURCE = SHARED_RAW_INPUT,
     parameter integer NOMINAL_SAMPLES = 1336320,
     RAW_DEPTH = 393216,
     BANK_DEPTH = 335872,
@@ -22,13 +24,21 @@ module sfo_two_pass_transport #(
     input  logic         clk150,
     input  logic         reset_request,
     input  logic         abort125,
+    input wire abort150,
     input  logic         s_valid,
     output logic         s_ready,
     input  logic [127:0] s_data,
+    // V5.1 raw lease/floor and private training RAM service, clk125.
+    input wire raw_event_valid,output wire raw_event_ready,input wire [208:0] raw_event_record,
+    output wire training_cfg_valid,input wire training_cfg_ready,output wire [207:0] training_cfg_record,
+    output wire training_data_valid,input wire training_data_ready,output wire [224:0] training_data_record,
+    input wire training_release_valid,output wire training_release_ready,input wire [63:0] training_release_record,
     // {frame32,generation32,raw_first_word64,to32,q0Q28,ppmQ18,status16}.
     input  logic         context_valid,
     output logic         context_ready,
     input  logic [235:0] context_record,
+    output wire residual_cfg_streaming,
+    output wire residual_progress_valid,input wire residual_progress_ready,output wire [99:0] residual_progress_record,
     output logic         residual_cfg_valid,
     input  logic         residual_cfg_ready,
     output logic [221:0] residual_cfg_record,
@@ -59,9 +69,10 @@ module sfo_two_pass_transport #(
 );
   localparam integer NB = NOMINAL_SAMPLES / 4, WIN = NB + 135, FB = NB + 18;
   wire rst150;
+  wire obfault;
   logic fault_local125, fault150;
   wire from125, from150;
-  wire halted150 = fault150 || from125;
+  wire halted150 = fault150 || from125 || (SHARED_RAW_INPUT&&abort150);
   sfo_domain_reset reset_125 (
       .clk          (clk125),
       .reset_request(reset_request),
@@ -93,7 +104,7 @@ module sfo_two_pass_transport #(
       .dest_out(from150)
   );
   assign fault125 = !reset125 && (fault_local125 || from150);
-  wire [6:0] we, re;
+  wire [7:0] we, re;
   wire rawv, rawready;
   wire [127:0] rawdata;
   wire cv, cr;
@@ -115,6 +126,7 @@ module sfo_two_pass_transport #(
   assign residual_result_ready = !reset125 && !fault125 && res_ready;
   assign residual_cfg_valid = !reset125 && !fault125 && cfg_valid;
   assign residual_data_valid = !reset125 && !fault125 && data_valid;
+  generate if(SHARED_RAW_INPUT==0)begin : legacy_raw_cdc
   sfo_record_cdc_fifo #(
       .WIDTH(128),
       .DEPTH(1024)
@@ -137,6 +149,7 @@ module sfo_two_pass_transport #(
       .wr_error       (we[0]),
       .rd_error       (re[0])
   );
+  end endgenerate
   sfo_record_cdc_fifo #(
       .WIDTH(236),
       .DEPTH(32)
@@ -160,7 +173,7 @@ module sfo_two_pass_transport #(
       .rd_error       (re[1])
   );
   sfo_record_cdc_fifo #(
-      .WIDTH(222),
+      .WIDTH(223),
       .DEPTH(32)
   ) residual_config_cdc (
       .wr_clk         (clk150),
@@ -168,10 +181,10 @@ module sfo_two_pass_transport #(
       .reset_request  (reset_request),
       .s_valid        (cfgv),
       .s_ready        (cfgr),
-      .s_data         (cfgw),
+      .s_data         ({(PROGRESSIVE_SOURCE!=0),cfgw}),
       .m_valid        (cfg_valid),
       .m_ready        (residual_cfg_ready && !reset125 && !fault125),
-      .m_data         (residual_cfg_record),
+      .m_data         ({residual_cfg_streaming,residual_cfg_record}),
       .wr_level       (),
       .rd_level       (),
       .wr_high_water  (),
@@ -289,7 +302,7 @@ module sfo_two_pass_transport #(
 
   always_ff @(posedge clk125)
     if (reset125) fault_local125 <= 0;
-    else if (abort125 || we[0] || we[1] || we[3] || we[5] || re[2] || re[4] || re[6])
+    else if (abort125 || we[0] || we[1] || we[3] || we[5] || re[2] || re[4] || re[6] || re[7])
       fault_local125 <= 1;
   wire raw_req_ready, raw_m_valid, raw_m_ready, raw_last, raw_done, raw_fault;
   wire [  7:0] raw_error;
@@ -316,14 +329,56 @@ module sfo_two_pass_transport #(
   wire [1:0][127:0] bdata;
   wire [1:0][  7:0] berror;
   wire [1:0] bpub, best, breq, bseq, bmr;
+  wire [1:0] source_valid;
+  wire [1:0][31:0] source_frame,source_generation;
+  wire [1:0][18:0] source_water;
+  logic cfg_pending,cfg_sent,progress_pending;
+  logic [221:0] early_cfg;
+  logic [99:0] progress_hold;
+  logic [6:0] next_window_slot;
+  logic [18:0] next_window_end,producer_age;
+  wire progress_ready;
+  wire progress_fire=progress_pending&&progress_ready&&!halted150;
+  wire commit_event=progress_fire&&progress_hold[99:98]==1;
+  generate if(PROGRESSIVE_SOURCE!=0)begin : progressive_cdc
+    sfo_record_cdc_fifo #(.WIDTH(100),.DEPTH(256)) progress(
+      .wr_clk(clk150),.rd_clk(clk125),.reset_request(reset_request),
+      .s_valid(progress_pending&&!halted150&&!rst150),.s_ready(progress_ready),.s_data(progress_hold),
+      .m_valid(residual_progress_valid),.m_ready(residual_progress_ready&&!fault125&&!reset125),.m_data(residual_progress_record),
+      .wr_level(),.rd_level(),.wr_high_water(),.rd_high_water(),.wr_reset_active(),.rd_reset_active(),.wr_error(we[7]),.rd_error(re[7]));
+  end else begin : complete_source_only
+    assign residual_progress_valid=0;assign residual_progress_record=0;assign progress_ready=0;assign we[7]=0;assign re[7]=0;
+  end endgenerate
+  always_ff @(posedge clk150)begin
+    if(rst150)begin cfg_pending<=0;cfg_sent<=0;progress_pending<=0;early_cfg<=0;progress_hold<=0;next_window_slot<=0;next_window_end<=7017;producer_age<=0;end
+    else if(PROGRESSIVE_SOURCE&&!halted150)begin
+      if(cr)begin
+        cfg_pending<=1;cfg_sent<=0;next_window_slot<=0;next_window_end<=7017;producer_age<=0;
+        early_cfg<={ctxframe,ctxgen,ctxframe,ctxgen,1'b0,8'd0,21'(NOMINAL_SAMPLES),32'd0,32'hffffffff};
+      end else if(e1state!=0&&producer_age<400896)producer_age<=producer_age+1'b1;
+      if(cfg_pending&&cfgr)begin cfg_pending<=0;cfg_sent<=1;end
+      if(progress_fire)begin
+        progress_pending<=0;
+        if(progress_hold[99:98]==0)begin next_window_slot<=next_window_slot+1'b1;next_window_end<=next_window_end+19'd4480;end
+      end
+      if(!progress_pending&&cfg_sent&&e1state!=0)begin
+        if(next_window_slot<74&&source_valid[e1bank]&&source_water[e1bank]>=next_window_end)begin
+          progress_pending<=1;progress_hold<={2'b00,e1frame,e1gen,next_window_slot,next_window_end,8'd0};
+        end else if(next_window_slot==74&&e1state==3)begin
+          progress_pending<=1;progress_hold<={2'b01,e1frame,e1gen,7'd74,19'(FB),8'd0};
+        end
+      end
+    end
+  end
+
   wire [1:0][31:0] brf, brg, brbase, brcount;
   wire raw_available = raw_written >= ctxraw + WIN && ctxraw + WIN >= ctxraw &&
       ctxraw >= raw_retired;
   assign e1cv = !rst150 && !halted150 && e1state == 0 && cv && raw_available && bwready[next_bank];
   assign cr   = e1cv && e1cr;
-  wire publish = e1state == 2 && e1done && e1ok && bpubready[e1bank] && cfgr && !halted150;
-  assign cfgv = publish;
-  assign cfgw = {
+  wire publish = e1state == 2 && e1done && e1ok && bpubready[e1bank] && (PROGRESSIVE_SOURCE?cfg_sent:cfgr) && !halted150;
+  assign cfgv = PROGRESSIVE_SOURCE?(cfg_pending&&!halted150&&!rst150):publish;
+  assign cfgw = PROGRESSIVE_SOURCE?early_cfg:{
     e1frame,
     e1gen,
     e1frame,
@@ -335,6 +390,25 @@ module sfo_two_pass_transport #(
     32'(NOMINAL_SAMPLES - 1)
   };
   assign e1mr = !halted150 && bwready[e1bank];
+  generate if(SHARED_RAW_INPUT!=0)begin : shared_raw
+    wire hub_fault125;
+    assign we[0]=hub_fault125;assign re[0]=1'b0;
+    assign raw_done=raw_m_valid&&raw_m_ready&&raw_last;
+    assign raw_i=0;assign raw_r=0;assign raw_c=0;
+    ota_raw_training_hub #(.DEPTH(RAW_DEPTH),.FRAME_WORDS(WIN)) hub(
+      .clk125(clk125),.clk150(clk150),.reset_request(reset_request),.poison125(fault_local125),.poison150(halted150),
+      .s_valid(s_valid&&!reset125&&!fault125),.s_ready(src_ready),.s_data(s_data),
+      .event_valid(raw_event_valid),.event_ready(raw_event_ready),.event_record(raw_event_record),
+      .train_cfg_valid(training_cfg_valid),.train_cfg_ready(training_cfg_ready),.train_cfg_record(training_cfg_record),
+      .train_data_valid(training_data_valid),.train_data_ready(training_data_ready),.train_data_record(training_data_record),
+      .train_release_valid(training_release_valid),.train_release_ready(training_release_ready),.train_release_record(training_release_record),
+      .frame_valid(e1state==1&&!halted150),.frame_ready(raw_req_ready),.frame_first(e1rawbase),.frame_id(e1frame),.frame_generation(e1gen),
+      .m_valid(raw_m_valid),.m_ready(raw_m_ready),.m_data(raw_m_data),.m_frame(raw_frame),.m_generation(raw_gen),.m_beat(raw_beat),.m_last(raw_last),
+      .accepted_words(),.written_words(raw_written),.retired_words(raw_retired),.high_water(raw_high),
+      .fault125(hub_fault125),.fault150(raw_fault),.error150(raw_error));
+  end else begin : legacy_raw_store
+    assign raw_event_ready=1'b0;assign training_cfg_valid=1'b0;assign training_cfg_record=0;
+    assign training_data_valid=1'b0;assign training_data_record=0;assign training_release_ready=1'b0;
   sfo_raw_frame_ring #(
       .DEPTH_BEATS(RAW_DEPTH),
       .AW($clog2(RAW_DEPTH)),
@@ -369,6 +443,7 @@ module sfo_two_pass_transport #(
       .fault               (raw_fault),
       .first_error         (raw_error)
   );
+  end endgenerate
   assign raw_m_ready = e1sr;
   sfo_first_resampler #(
       .REQUIRE_CONTEXT_ACK(REQUIRE_CONTEXT_ACK),
@@ -460,9 +535,10 @@ module sfo_two_pass_transport #(
         1: if (raw_req_ready) e1state <= 2;
         2:
         if (publish) begin
-          e1state   <= 0;
-          next_bank <= !next_bank;
+          e1state<=PROGRESSIVE_SOURCE?3:0;
+          if(!PROGRESSIVE_SOURCE)next_bank<=!next_bank;
         end
+        3:if(commit_event)begin e1state<=0;next_bank<=!next_bank;end
         default: e1state <= 0;
       endcase
   end
@@ -471,9 +547,10 @@ module sfo_two_pass_transport #(
   logic wbank;
   logic [31:0] wf, wg, wstart;
   logic [6:0] wslot;
-  wire match_req0 = bcomm[0] && bframe[0] == reqw[101:70] && bgen[0] == reqw[69:38];
-  wire match_req1 = bcomm[1] && bframe[1] == reqw[101:70] && bgen[1] == reqw[69:38];
-  wire req_geometry = reqw[9:0] == 512 && reqw[11:10] == 0 &&
+  wire match_req0 = PROGRESSIVE_SOURCE?(source_valid[0]&&source_frame[0]==reqw[101:70]&&source_generation[0]==reqw[69:38]):(bcomm[0]&&bframe[0]==reqw[101:70]&&bgen[0]==reqw[69:38]);
+  wire match_req1 = PROGRESSIVE_SOURCE?(source_valid[1]&&source_frame[1]==reqw[101:70]&&source_generation[1]==reqw[69:38]):(bcomm[1]&&bframe[1]==reqw[101:70]&&bgen[1]==reqw[69:38]);
+  wire [31:0] requested_window_start=32'd25984+32'd17920*{25'd0,reqw[37:31]};
+  wire req_geometry = (!PROGRESSIVE_SOURCE||(reqw[37:31]<74&&{11'd0,reqw[30:10]}==requested_window_start))&&reqw[9:0] == 512 && reqw[11:10] == 0 &&
       {1'b0, reqw[30:10]} + 22'd2048 <= NOMINAL_SAMPLES;
   assign reqr = !rst150 && !halted150 && wstate == 0;
   wire wpop = wstate == 2 && bmv[wbank] && !bms[wbank] && datar;
@@ -627,7 +704,7 @@ module sfo_two_pass_transport #(
       assign bmr[g] = !halted150 && ((e2state == 2 && e2bank == g && bms[g]) ? e2sr :
                                      ((wstate == 2 && wbank == g && !bms[g]) ? datar : 1'b0));
       sfo_intermediate_frame_bank #(
-          .FRAME_BEATS(FB),
+          .PROGRESSIVE_READ(PROGRESSIVE_SOURCE),          .FRAME_BEATS(FB),
           .DEPTH_BEATS(BANK_DEPTH),
           .AW($clog2(BANK_DEPTH))
       ) intermediate_bank (
@@ -650,6 +727,7 @@ module sfo_two_pass_transport #(
           .estimate_frame        (resw[159:128]),
           .estimate_generation   (resw[127:96]),
           .estimate_good         (res_good),
+          .source_valid(source_valid[g]),.source_frame(source_frame[g]),.source_generation(source_generation[g]),.source_written_exclusive(source_water[g]),
           .committed             (bcomm[g]),
           .committed_frame       (bframe[g]),
           .committed_generation  (bgen[g]),
@@ -683,11 +761,11 @@ module sfo_two_pass_transport #(
       );
     end
   endgenerate
-  wire obfault;
   wire [7:0] oberror;
   wire [31:0] obocc, obhwm, obohwm;
   wire [63:0] oa, oi, orr, oc;
   sfo_output_buffer #(
+      .MEMORY_PRIMITIVE(SHARED_RAW_INPUT?"block":"ultra"),
       .FRAME_BEATS(NB),
       .DEPTH(OUTPUT_DEPTH)
   ) output_buffer (
@@ -717,7 +795,9 @@ module sfo_two_pass_transport #(
   logic [7:0] bad;
   always_comb begin
     bad = 0;
-    if (re[0] || re[1] || re[3] || re[5] || we[2] || we[4] || we[6]) bad = 1;
+    if(SHARED_RAW_INPUT&&abort150)bad=12;
+    else if (re[0] || re[1] || re[3] || re[5] || we[2] || we[4] || we[6] || we[7]) bad = 1;
+    else if (PROGRESSIVE_SOURCE&&e1state!=0&&producer_age>=400895&&!commit_event) bad=11;
     else if (raw_fault) bad = 2;
     else if (|bfault) bad = 3;
     else if (obfault) bad = 4;

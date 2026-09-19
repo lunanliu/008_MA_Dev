@@ -1,0 +1,14 @@
+stage,clock_MHz,cycles,microseconds,kind
+frame_arrival_min,150,400834,2672.226667,contract lower bound
+initial_training_publish,125,214521,1716.168000,upper bound
+admission_fixed,150,34,0.226667,upper bound
+E1_commit,150,345098,2300.653333,upper bound
+residual_last_window,150,9422,62.813333,derived upper; reserved 9600
+E2_next_configuration,150,360085,2400.566667,upper bound
+E2_bank_free,150,359980,2399.866667,upper bound
+CFO_window,500,15473,30.946000,upper bound unchanged
+CFO_first_E0,150,357628,2384.186667,upper bound unchanged
+CFO_steady_S,150,345987,2306.580000,upper bound unchanged
+CFO_final_max,150,334996,2233.306667,upper bound
+SFO_bank_lifetime,150,714746,4764.973333,upper bound
+CFO_bank_lifetime,150,704681,4697.873333,upper bound

@@ -1,0 +1,10 @@
+sources_1	D:/008_MA_Dev/Sync_DDR/rtl/ddr_upload_ctrl.vhd
+sources_1	D:/008_MA_Dev/Sync_DDR/rtl/ddr_capture_ctrl.vhd
+sources_1	D:/008_MA_Dev/Sync_DDR/rtl/ddr_read_ctrl.vhd
+sources_1	D:/008_MA_Dev/Sync_DDR/rtl/ddr_download_ctrl.vhd
+sim_write	D:/008_MA_Dev/Sync_DDR/sim/tb_ddr_upload_ctrl.vhd
+sim_read	D:/008_MA_Dev/Sync_DDR/sim/tb_ddr_read_ctrl.vhd
+sim_capture	D:/008_MA_Dev/Sync_DDR/sim/tb_ddr_capture_ctrl.vhd
+sim_download	D:/008_MA_Dev/Sync_DDR/sim/tb_ddr_download_ctrl.vhd
+constrs_1	D:/008_MA_Dev/Sync_DDR/constraints/controller_150mhz.xdc
+constrs_read_125	D:/008_MA_Dev/Sync_DDR/constraints/controller_125mhz.xdc

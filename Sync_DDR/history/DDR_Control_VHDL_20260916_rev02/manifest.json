@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "version": "DDR_Control_VHDL_20260916_rev02",
+  "frozen_utc": "2026-09-16T21:03:16.5433621Z",
+  "source_basis": "New pure VHDL control-only implementation of R2.1 NI DDR1280 interface; no algorithm changes",
+  "synthesis_top": "ddr_upload_ctrl",
+  "design_entities": [
+    "ddr_upload_ctrl",
+    "ddr_read_ctrl"
+  ],
+  "simulation_tops": [
+    "tb_ddr_upload_ctrl",
+    "tb_ddr_read_ctrl"
+  ],
+  "device": "xcvu11p-flgb2104-2-e",
+  "vhdl_standard": "VHDL-93",
+  "vivado": "2021.1",
+  "native_status": "NOT_RUN",
+  "files": [
+    {
+      "relative_path": "rtl/ddr_upload_ctrl.vhd",
+      "bytes": 10594,
+      "sha256": "DC2804BD120FCB3F9D1CCFD9767756E1E510E89980F437AB9E2CB390D2E53BD1"
+    },
+    {
+      "relative_path": "rtl/ddr_read_ctrl.vhd",
+      "bytes": 16127,
+      "sha256": "D75A88072AE909D4D34E843DD0EA99C82F82379EEAD80CCA55CCEBFBFC32965A"
+    },
+    {
+      "relative_path": "sim/tb_ddr_upload_ctrl.vhd",
+      "bytes": 11978,
+      "sha256": "51418FA2A7CC32E457825C3956852468FFE546DED7EFCB6058E2A2CAE501BEE2"
+    },
+    {
+      "relative_path": "sim/tb_ddr_read_ctrl.vhd",
+      "bytes": 27467,
+      "sha256": "A7120FFEE8A7308A3764790AAF78E44143939BBB283E68FC69A006980589A853"
+    },
+    {
+      "relative_path": "scripts/create_project.tcl",
+      "bytes": 1514,
+      "sha256": "3D7835D741F77245E328CC476F620AABE4A6E6473D4B5179A24DC6A9BDA03D48"
+    },
+    {
+      "relative_path": "scripts/simulate.tcl",
+      "bytes": 543,
+      "sha256": "E46E5D4432D9C2FA50DA37922AC34F6909D10A33DFC92F9AFD5747706ADD519C"
+    },
+    {
+      "relative_path": "scripts/threads_pre.tcl",
+      "bytes": 60,
+      "sha256": "1B9ABD6CC8A8D8F78297FB5E95DAF4A40BEBA931E2A89EE5DDAB3B012A731482"
+    },
+    {
+      "relative_path": "constraints/upload_150mhz.xdc",
+      "bytes": 152,
+      "sha256": "53E720A13C1E45FF0F2A195A7166A62420DBB7B0CBA189D7913D724C03D4389D"
+    },
+    {
+      "relative_path": "matlab/generate_ddr_test.m",
+      "bytes": 2070,
+      "sha256": "2A5C03FACDF7F724CC319025FD9C4AE3B9AFCF1F7C54402798694456D5E03AE8"
+    },
+    {
+      "relative_path": "matlab/analyze_ddr_readback.m",
+      "bytes": 1612,
+      "sha256": "57BE3FD22B0A88DC2DE6413453EF0AECC1DBA1E8937F00F456B954316EA1F4E9"
+    },
+    {
+      "relative_path": "matlab/analyze_ddr_counters.m",
+      "bytes": 3134,
+      "sha256": "B6B7E483848F7D614384A5B2D895889C221EA3543DFA426F498E3F1AB4CB0D9E"
+    },
+    {
+      "relative_path": "README_ZH.md",
+      "bytes": 2524,
+      "sha256": "3B85834771202D101EBA1EDA7301B134A5C7F9B2D4FFB26697FEE9E070A035BA"
+    },
+    {
+      "relative_path": "UPLOAD_GUIDE_ZH.md",
+      "bytes": 12945,
+      "sha256": "63EECAC2A0B715D46DFABBC6CAE1BBB79DBC68674425F4BC67E25F5A3382895B"
+    },
+    {
+      "relative_path": "READ_PORTS.md",
+      "bytes": 10790,
+      "sha256": "3E61C67818870F254CD70FAD9CD6F24C9A7983A9022DB9247C3CFD5DC1A4DD59"
+    },
+    {
+      "relative_path": "BOARD_TEST_GUIDE_ZH.md",
+      "bytes": 17645,
+      "sha256": "40E9D3769751626BB76C1C9D72F4ADFA9DE62A5E5971283871EFF3598B2CF1AB"
+    },
+    {
+      "relative_path": "VALIDATION.md",
+      "bytes": 1515,
+      "sha256": "DCF98693541AE1F29EC76C0E3E3464F6EE3D99AA039F708BFAAA25C010E0DD5A"
+    }
+  ]
+}

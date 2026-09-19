@@ -152,6 +152,12 @@ module sfo_residual_fft_service4 #(
       .dbiterr      ()
   );
 
+  logic [32:0] prefetch_slot[0:1];
+  logic prefetch_wp,prefetch_rp;
+  logic [1:0] prefetch_count;
+  wire [32:0] prefetch_head=prefetch_slot[prefetch_rp];
+  wire fft_input_valid=!reset500 && fft_transaction_active && prefetch_count!=0;
+  wire fft_input_take=fft_input_valid && xfft_input_ready;
   always_ff @(posedge clk_500) begin
     if (reset500) begin
       configured <= 1'b0;
@@ -162,12 +168,25 @@ module sfo_residual_fft_service4 #(
       if (!fft_transaction_active && configured && !in_fifo_rd_busy && !out_fifo_wr_busy &&
           (in_fifo_rd_count >= PREFILL_SAMPLES))
         fft_transaction_active <= 1'b1;
-      else if (in_fifo_rd_en && in_fifo_dout[32]) fft_transaction_active <= 1'b0;
+      else if (fft_input_take && prefetch_head[32]) fft_transaction_active <= 1'b0;
     end
   end
 
-  assign in_fifo_rd_en = !reset500 && !in_fifo_rd_busy && fft_transaction_active &&
-      !in_fifo_empty && in_fifo_data_valid && xfft_input_ready;
+  assign in_fifo_rd_en=!reset500 && !in_fifo_rd_busy && prefetch_count<2 &&
+      !in_fifo_empty && in_fifo_data_valid;
+  always_ff @(posedge clk_500)begin
+    if(in_fifo_rd_en)prefetch_slot[prefetch_wp]<=in_fifo_dout;
+    if(reset500)begin prefetch_wp<=0;prefetch_rp<=0;prefetch_count<=0;end
+    else begin
+      if(in_fifo_rd_en)prefetch_wp<=!prefetch_wp;
+      if(fft_input_take)prefetch_rp<=!prefetch_rp;
+      case({in_fifo_rd_en,fft_input_take})
+        2'b10:prefetch_count<=prefetch_count+1'b1;
+        2'b01:prefetch_count<=prefetch_count-1'b1;
+        default:begin end
+      endcase
+    end
+  end
 
   t03_xfft_2048_main u_xfft (
       .aclk(clk_500),
@@ -175,11 +194,10 @@ module sfo_residual_fft_service4 #(
       .s_axis_config_tdata(FORWARD_SCALE_CONFIG),
       .s_axis_config_tvalid(!reset500 && !configured),
       .s_axis_config_tready(xfft_config_ready),
-      .s_axis_data_tdata(in_fifo_dout[31:0]),
-      .s_axis_data_tvalid(!reset500 && !in_fifo_rd_busy && fft_transaction_active &&
-                          !in_fifo_empty && in_fifo_data_valid),
+      .s_axis_data_tdata(prefetch_head[31:0]),
+      .s_axis_data_tvalid(fft_input_valid),
       .s_axis_data_tready(xfft_input_ready),
-      .s_axis_data_tlast(in_fifo_dout[32]),
+      .s_axis_data_tlast(prefetch_head[32]),
       .m_axis_data_tdata(xfft_output_data),
       .m_axis_data_tuser(xfft_output_user),
       .m_axis_status_tdata(xfft_status_data),
@@ -193,7 +211,14 @@ module sfo_residual_fft_service4 #(
       .event_data_in_channel_halt(event_data_in_channel_halt)
   );
 
-  assign out_fifo_din = {xfft_output_last, xfft_output_data};
+  logic [32:0] output_command_data;
+  logic output_command_valid;
+  always_ff @(posedge clk_500)begin
+    output_command_data<={xfft_output_last,xfft_output_data};
+    if(reset500)output_command_valid<=0;else output_command_valid<=xfft_output_valid;
+  end
+  // Realtime XFFT has no output ready. Full/busy at actual commit is an error.
+  assign out_fifo_din=output_command_data;
 
   xpm_fifo_async #(
       .FIFO_MEMORY_TYPE("block"),
@@ -217,7 +242,7 @@ module sfo_residual_fft_service4 #(
       .sleep        (1'b0),
       .rst          (reset500),
       .wr_clk       (clk_500),
-      .wr_en        (!reset500 && xfft_output_valid && !out_fifo_full && !out_fifo_wr_busy),
+      .wr_en        (!reset500 && output_command_valid && !out_fifo_full && !out_fifo_wr_busy),
       .din          (out_fifo_din),
       .full         (out_fifo_full),
       .prog_full    (),
@@ -258,7 +283,7 @@ module sfo_residual_fft_service4 #(
       xfft_protocol_error_500 <= 1'b0;
       xfft_overflow_500 <= 1'b0;
     end else begin
-      if (out_fifo_overflow || (xfft_output_valid && (out_fifo_full || out_fifo_wr_busy)))
+      if (out_fifo_overflow || (output_command_valid && (out_fifo_full || out_fifo_wr_busy)))
         egress_overflow_500 <= 1'b1;
       if (in_fifo_underflow) ingress_underflow_500 <= 1'b1;
       if (event_tlast_unexpected || event_tlast_missing || event_data_in_channel_halt)

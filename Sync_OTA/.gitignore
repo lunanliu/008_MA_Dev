@@ -8,3 +8,6 @@
 /Sync_OTA.sim/
 *.jou
 *.log
+
+# Local task heartbeat state is not a design artifact.
+/reports/operations/thread_reports/*/report_clock.json

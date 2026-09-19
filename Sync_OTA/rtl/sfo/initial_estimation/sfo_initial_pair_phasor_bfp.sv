@@ -89,7 +89,19 @@ module sfo_initial_pair_phasor_bfp (
   endfunction
   logic signed [33:0] wide_re, wide_im;
   logic [32:0] magnitude_re, magnitude_im, maximum_magnitude;
-  integer bit_index, highest_bit;
+  logic [5:0] highest_bit;
+  function automatic [5:0] msb33(input logic [32:0] value);
+    logic [31:0] part;logic [5:0] n;
+    begin
+      part=value[31:0];n=0;
+      if(|part[31:16])begin n=n+6'd16;part=part>>16;end
+      if(|part[15:8])begin n=n+6'd8;part=part>>8;end
+      if(|part[7:4])begin n=n+6'd4;part=part>>4;end
+      if(|part[3:2])begin n=n+6'd2;part=part>>2;end
+      if(part[1])n=n+6'd1;
+      msb33=value[32]?6'd32:n;
+    end
+  endfunction
   always_comb begin
     wide_re = $signed(cmpy_data[33:0]);
     wide_im = $signed(cmpy_data[73:40]);
@@ -100,11 +112,10 @@ module sfo_initial_pair_phasor_bfp (
     fifo_input.phasor_im = wide_im[32:0];
     magnitude_re = magnitude33(fifo_input.phasor_re);
     magnitude_im = magnitude33(fifo_input.phasor_im);
-    maximum_magnitude = (magnitude_re >= magnitude_im) ? magnitude_re : magnitude_im;
+    // Only zero and highest-bit are consumed: MSB(a|b)=max(MSB(a),MSB(b)).
+    maximum_magnitude = magnitude_re | magnitude_im;
     fifo_input.zero_phasor = (maximum_magnitude == 0);
-    highest_bit = 0;
-    for (bit_index = 0; bit_index < 33; bit_index = bit_index + 1)
-    if (maximum_magnitude[bit_index]) highest_bit = bit_index;
+    highest_bit = msb33(maximum_magnitude);
     if (fifo_input.zero_phasor || fifo_input.range_error) begin
       // Preserve the frozen algorithm trace (zero BFP). A future vendor
       // adapter may insert its private safe dummy and force phase code 0.

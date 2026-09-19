@@ -1,0 +1,44 @@
+{
+  "stage": "download",
+  "status": "PASS",
+  "directory": "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download",
+  "grant_id": "SYNC_DDR_FOUR_STAGE_V1_20260917T184529Z",
+  "manifest_sha256": "BF0F47EE82245915D79E240B7E3C196CD34F32FD7A6D69521869578609144801",
+  "started_utc": "2026-09-17T18:48:11.8276802Z",
+  "exit_code": 0,
+  "root_pid": 31160,
+  "cleanup": {
+    "closed": true,
+    "checks": [
+      {
+        "utc": "2026-09-17T18:48:40.1683129Z",
+        "ids": []
+      },
+      {
+        "utc": "2026-09-17T18:48:40.6768384Z",
+        "ids": []
+      },
+      {
+        "utc": "2026-09-17T18:48:41.1862843Z",
+        "ids": []
+      }
+    ]
+  },
+  "error": null,
+  "logs": [
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\compile.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\compile.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\elaborate.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\elaborate.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\simulate.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\simulate.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\tb_ddr_download_ctrl_vhdl.prj",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\tb_ddr_download_ctrl.tcl",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\webtalk_8092.backup.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\webtalk.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\xvhdl.log"
+  ],
+  "finished_utc": "2026-09-17T18:48:41.2646649Z",
+  "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /s /c \"\"C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat\" \"-mode\" \"batch\" \"-source\" \"D:\\008_MA_Dev\\Sync_DDR\\scripts\\simulate_reverse.tcl\" \"-log\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\vivado.log\" \"-journal\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\vivado.jou\" \"-tclargs\" \"download\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create\\project\\DDR_Control.xpr\" > \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\launcher.log\" 2>&1\"",
+  "deadline_utc": "2026-09-17T19:01:37.9312527Z"
+}

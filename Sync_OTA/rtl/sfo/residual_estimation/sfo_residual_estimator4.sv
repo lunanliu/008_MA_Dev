@@ -1,11 +1,13 @@
 // Dedicated main FFT + dedicated IFFT, with at most two windows in flight.
 // Numerical operators and official FFT service wrappers are unchanged from CONN031.
 // New integration prototype; standalone behavior does not imply timing or T09 PASS.
-module sfo_residual_estimator4 (
+module sfo_residual_estimator4 #(parameter integer PROGRESSIVE_SOURCE=0) (
     input  logic         clk,
     input  logic         clk500,
     input  logic         rst,
     input  logic         abort,
+    input wire cfg_streaming,
+    input wire source_progress_valid,output wire source_progress_ready,input wire [99:0] source_progress_record,
     input  logic         cfg_valid,
     output logic         cfg_ready,
     input  logic [221:0] cfg_descriptor,
@@ -26,11 +28,13 @@ module sfo_residual_estimator4 (
     output logic         cancel,
     output logic         busy
 );
-  localparam [2:0] BOOT = 0, IDLE = 1, ARM = 2, RUN = 3, FLUSH = 4, DONE = 5, HALT = 6;
+  localparam [2:0] BOOT = 0, IDLE = 1, ARM = 2, RUN = 3, FLUSH = 4, DONE = 5, HALT = 6, WAIT_COMMIT=7;
   logic [2:0] state;
   logic [4:0] reset_count;
   logic [18:0] frame_age;
   logic [221:0] descriptor;
+  logic streaming_mode,commit_seen;
+  logic [18:0] expected_window_end;
   wire [31:0] tag = descriptor[221:190], generation = descriptor[189:158];
   wire active = state == ARM || state == RUN;
   wire child_reset = rst || state == BOOT || state == FLUSH || state == HALT;
@@ -71,6 +75,20 @@ module sfo_residual_estimator4 (
   logic [5:0] aerrors;
   logic backend_ready;
   wire front_start = fcfgv && fcfgr;
+  wire progress_owner=source_progress_record[97:66]==tag&&source_progress_record[65:34]==generation;
+  wire window_good=progress_owner&&source_progress_record[99:98]==0&&source_progress_record[33:27]==front_issued&&
+    front_issued<74&&source_progress_record[26:8]==expected_window_end&&source_progress_record[7:0]==0;
+  wire commit_good=progress_owner&&source_progress_record[99:98]==1&&source_progress_record[33:27]==74&&
+    front_issued==74&&source_progress_record[26:8]==334098&&source_progress_record[7:0]==0&&!commit_seen;
+  wire progress_active=streaming_mode&&!commit_seen&&(state==RUN||state==WAIT_COMMIT);
+  wire progress_bad=progress_active&&source_progress_valid&&!(window_good||commit_good);
+  wire commit_fire=source_progress_valid&&source_progress_ready&&commit_good;
+  assign source_progress_ready=!rst&&!abort&&progress_active&&(commit_good||(window_good&&front_start));
+  wire pure_producer_wait=streaming_mode&&state==RUN&&front_issued<74&&!source_progress_valid&&
+    !front_inflight&&!aux_inflight&&qreserved==0&&front_issued==point_count&&fcfgr&&bwr&&qar;
+  wire [31:0] available_window_last={11'd0,expected_window_end,2'b00}-32'd37;
+  wire [221:0] window_descriptor=streaming_mode?{descriptor[221:64],-32'sd36,available_window_last}:descriptor;
+
   wire front_finish = fdv && fdr;
   wire aux_start = bwv && bwr;
   wire qfire = qv && qr;
@@ -102,7 +120,7 @@ module sfo_residual_estimator4 (
   assign point_valid = !child_reset && pe;
   assign point_record = {ptag, generation, pslot, pbin, pdelta, pdelay, pquality, pvalid};
   assign fcfgv = state == RUN && !abort && !front_inflight && front_issued < 74 &&
-      inflight_windows < 2 && qar;
+      inflight_windows < 2 && qar && (!streaming_mode||(source_progress_valid&&window_good));
   assign qav = fcfgv && fcfgr;
   assign qcv = state == RUN && !abort && front_inflight && fdv && !front_bad;
   assign fdr = state == RUN && !abort && (front_bad || qcr);
@@ -115,14 +133,15 @@ module sfo_residual_estimator4 (
   wire dv = ov && aux_inflight && state == RUN && !abort;
   wire dr = orr;
   wire [208:0] dw = {tag, generation, aux_slot, aux_output_count[8:0], ol, od};
-  sfo_residual_fft_grid_stage4 front_stage (
+  sfo_residual_fft_grid_stage4 #(.PROGRESSIVE_SOURCE(PROGRESSIVE_SOURCE)) front_stage (
       .clk              (clk),
       .clk500           (clk500),
       .rst              (child_reset),
       .abort            (1'b0),
       .cfg_valid        (fcfgv),
       .cfg_ready        (fcfgr),
-      .cfg_descriptor   ({descriptor, front_issued}),
+      .cfg_descriptor   ({window_descriptor, front_issued}),
+      .cfg_window_granted(streaming_mode),
       .req_valid        (freqv),
       .req_ready        (req_ready && !cancel),
       .req_word         (req_word),
@@ -181,10 +200,11 @@ module sfo_residual_estimator4 (
       .xfft_overflow      (aerrors[5]),
       .status_valid       (astatus)
   );
-  sfo_residual_delay_backend4 backend (
+  sfo_residual_delay_backend4 #(.ALLOW_SOURCE_WAIT(PROGRESSIVE_SOURCE)) backend (
       .clk                (clk),
       .rst                (child_reset),
       .abort              (1'b0),
+      .source_wait(pure_producer_wait),
       .frame_valid        (bfv),
       .frame_ready        (bfr),
       .frame_tag          (tag),
@@ -241,7 +261,7 @@ module sfo_residual_estimator4 (
       state <= BOOT;
       reset_count <= 0;
       frame_age <= 0;
-      descriptor <= 0;
+      descriptor <= 0;streaming_mode<=0;commit_seen<=0;expected_window_end<=7017;
       front_issued <= 0;
       front_committed <= 0;
       aux_started <= 0;
@@ -267,7 +287,8 @@ module sfo_residual_estimator4 (
       window_done_record <= 0;
     end else begin
       window_done_valid <= 0;
-      if (active) frame_age <= frame_age + 1;
+      if (active&&!pure_producer_wait) frame_age <= frame_age + 1;
+      if(commit_fire)commit_seen<=1;
       if (aux_inflight) aux_age <= aux_age + 1;
       if (state == BOOT) begin
         if (reset_count == 31) state <= IDLE;
@@ -284,6 +305,7 @@ module sfo_residual_estimator4 (
       end else if (state == IDLE) begin
         if (cfg_valid && cfg_ready) begin
           descriptor <= cfg_descriptor;
+          streaming_mode<=PROGRESSIVE_SOURCE&&cfg_streaming;commit_seen<=0;expected_window_end<=7017;
           frame_age <= 0;
           front_issued <= 0;
           front_committed <= 0;
@@ -306,15 +328,21 @@ module sfo_residual_estimator4 (
           aux_point_seen <= 0;
           aux_done_emitted <= 0;
           state <= ARM;
-          if (!cfg_descriptor[93] || cfg_descriptor[92:85] != 0) fail_frame(1, 1, 0);
+          if ((!cfg_descriptor[93]&&!(PROGRESSIVE_SOURCE&&cfg_streaming)) || cfg_descriptor[92:85] != 0) fail_frame(1, 1, 0);
           else if (cfg_descriptor[221:190] != cfg_descriptor[157:126] ||
                    cfg_descriptor[189:158] != cfg_descriptor[125:94])
             fail_frame(1, 2, 0);
           else if (cfg_descriptor[84:64] != 21'd1336320) fail_frame(1, 3, 0);
-          else if ($signed(cfg_descriptor[63:32]) > 0 || $signed(cfg_descriptor[31:0]) < 1336319)
+          else if (!(PROGRESSIVE_SOURCE&&cfg_streaming)&&($signed(cfg_descriptor[63:32]) > 0 || $signed(cfg_descriptor[31:0]) < 1336319))
             fail_frame(1, 4, 0);
         end
       end else if (abort) fail_frame(5, 0, 0);
+      else if (progress_bad) fail_frame(1, 8'h41, 0);
+      else if (state==WAIT_COMMIT)begin
+        if(qerror)fail_frame(3,8'h20,32'h20000000);
+        else if(|aerrors)fail_frame(2,8'h30,{8'h30,8'd0,8'd0,aerrors,2'd0});
+        else if(commit_seen||commit_fire)state<=DONE;
+      end
       else if (frame_age >= 332999) fail_frame(7, 0, 0);
       else if (front_bad) fail_frame(2, fdone[25:18], {fdone[25:18], fdone[17:10], fsource, 8'd0});
       else if (qerror || inflight_windows > 2) fail_frame(3, 8'h20, 32'h20000000);
@@ -335,7 +363,7 @@ module sfo_residual_estimator4 (
       else begin
         if (state == ARM && bfr) state <= RUN;
         if (front_start) begin
-          front_issued   <= front_issued + 1;
+          front_issued   <= front_issued + 1;expected_window_end<=expected_window_end+19'd4480;
           front_inflight <= 1;
         end
         if (front_finish) begin
@@ -377,7 +405,7 @@ module sfo_residual_estimator4 (
             step <= bresult[37:6];
             quality <= bresult[5:1];
             estimate_valid <= bresult[0];
-            state <= DONE;
+            state <= streaming_mode&&!commit_seen&&!commit_fire?WAIT_COMMIT:DONE;
           end
         end
       end

@@ -1,0 +1,9 @@
+{
+  "origin": "Native XSim, not board data",
+  "actual_csv": "simulated_host_received_u32.csv",
+  "native_source": "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_02_roundtrip\\native_logs\\host_received_u32.csv",
+  "sha256": "FEC8B6B5054368F51E59041E6FEC1730B6F897695F067F832D63D78A7CDF0DA2",
+  "count": 604,
+  "mismatches": 0,
+  "marker": "DDR_ROUNDTRIP_TEST_PASS"
+}

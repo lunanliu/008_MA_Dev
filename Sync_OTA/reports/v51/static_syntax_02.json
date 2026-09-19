@@ -1,0 +1,57 @@
+{
+  "tool": "pyslang 11.0.0",
+  "kind": "STATIC_SYNTAX_ONLY_NOT_ELABORATION_OR_SIMULATION",
+  "files": [
+    {
+      "file": "rtl\\control\\ota_sfo_context_join.sv",
+      "diagnostic_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\control\\ota_raw_lease_scheduler.sv",
+      "diagnostic_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\control\\ota_training_dispatch.sv",
+      "diagnostic_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\buffer\\ota_shared_raw_store.sv",
+      "diagnostic_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\buffer\\ota_raw_training_hub.sv",
+      "diagnostic_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\control\\sync_sfo_top.sv",
+      "diagnostic_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\control\\sfo_two_pass_transport.sv",
+      "diagnostic_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\frontend\\sync_frontend_top.sv",
+      "diagnostic_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\cfo\\ota_cfo_chain_a07.sv",
+      "diagnostic_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\control\\sync_ota_top_a07.sv",
+      "diagnostic_count": 0,
+      "diagnostics": ""
+    }
+  ],
+  "diagnostic_count": 0
+}

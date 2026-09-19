@@ -1,0 +1,727 @@
+{
+  "evidence": "SAVED_ROUTED_CHECKPOINT_ALL_NEGATIVE_ENDPOINTS_ONE_WORST_PATH_PER_ENDPOINT",
+  "count": 381,
+  "tns_ns": -25.99,
+  "clock_groups": [
+    {
+      "group": "clk500",
+      "endpoints": 381,
+      "tns_ns": -25.99,
+      "wns_ns": -0.199
+    }
+  ],
+  "clock_summary": {
+    "clk125": {
+      "wns_ns": 0.153,
+      "tns_ns": 0.0,
+      "endpoints": 0
+    },
+    "clk150": {
+      "wns_ns": 0.009,
+      "tns_ns": 0.0,
+      "endpoints": 0
+    },
+    "clk500": {
+      "wns_ns": -0.199,
+      "tns_ns": -26.125,
+      "endpoints": 381
+    }
+  },
+  "slack_precision_ns": 0.001,
+  "tns_precision_note": "Module TNS sums quantized SLACK properties, not the internal full-precision sum. Counts match exactly; original summary remains authoritative for total TNS. No proportional correction is applied.",
+  "all_failures_same_clock": true,
+  "completeness_mismatches": [],
+  "by_module_depth3": [
+    {
+      "group": "clk500:cfo/windows",
+      "endpoints": 168,
+      "tns_ns": -10.849,
+      "wns_ns": -0.199
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core",
+      "endpoints": 139,
+      "tns_ns": -10.027,
+      "wns_ns": -0.174
+    },
+    {
+      "group": "clk500:cfo/observation_front",
+      "endpoints": 20,
+      "tns_ns": -2.056,
+      "wns_ns": -0.169
+    },
+    {
+      "group": "clk500:cfo/windows/window_credits",
+      "endpoints": 15,
+      "tns_ns": -1.397,
+      "wns_ns": -0.131
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/front_stage",
+      "endpoints": 15,
+      "tns_ns": -0.768,
+      "wns_ns": -0.064
+    },
+    {
+      "group": "clk500:cfo/windows/packed_windows",
+      "endpoints": 15,
+      "tns_ns": -0.651,
+      "wns_ns": -0.132
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/aux_service",
+      "endpoints": 7,
+      "tns_ns": -0.151,
+      "wns_ns": -0.048
+    },
+    {
+      "group": "clk500:cfo/windows/complete_windows",
+      "endpoints": 2,
+      "tns_ns": -0.091,
+      "wns_ns": -0.068
+    }
+  ],
+  "by_module_depth4": [
+    {
+      "group": "clk500:cfo/windows",
+      "endpoints": 168,
+      "tns_ns": -10.849,
+      "wns_ns": -0.199
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core",
+      "endpoints": 139,
+      "tns_ns": -10.027,
+      "wns_ns": -0.174
+    },
+    {
+      "group": "clk500:cfo/observation_front",
+      "endpoints": 20,
+      "tns_ns": -2.056,
+      "wns_ns": -0.169
+    },
+    {
+      "group": "clk500:cfo/windows/window_credits/fifo",
+      "endpoints": 15,
+      "tns_ns": -1.397,
+      "wns_ns": -0.131
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/front_stage/main",
+      "endpoints": 15,
+      "tns_ns": -0.768,
+      "wns_ns": -0.064
+    },
+    {
+      "group": "clk500:cfo/windows/packed_windows/fifo",
+      "endpoints": 15,
+      "tns_ns": -0.651,
+      "wns_ns": -0.132
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/aux_service/u_ingress_fifo",
+      "endpoints": 4,
+      "tns_ns": -0.134,
+      "wns_ns": -0.048
+    },
+    {
+      "group": "clk500:cfo/windows/complete_windows/fifo",
+      "endpoints": 2,
+      "tns_ns": -0.091,
+      "wns_ns": -0.068
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/aux_service/u_xfft",
+      "endpoints": 3,
+      "tns_ns": -0.017,
+      "wns_ns": -0.011
+    }
+  ],
+  "by_source_destination": [
+    {
+      "group": "clk500:cfo/windows/poison_sync -> cfo/windows",
+      "endpoints": 163,
+      "tns_ns": -10.738,
+      "wns_ns": -0.199
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync -> cfo/observation_front/fft_core",
+      "endpoints": 87,
+      "tns_ns": -6.68,
+      "wns_ns": -0.174
+    },
+    {
+      "group": "clk500:cfo/observation_front -> cfo/observation_front",
+      "endpoints": 20,
+      "tns_ns": -2.056,
+      "wns_ns": -0.169
+    },
+    {
+      "group": "clk500:cfo/windows -> cfo/observation_front/fft_core",
+      "endpoints": 18,
+      "tns_ns": -1.745,
+      "wns_ns": -0.138
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core -> cfo/observation_front/fft_core",
+      "endpoints": 34,
+      "tns_ns": -1.602,
+      "wns_ns": -0.151
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync -> cfo/windows/window_credits",
+      "endpoints": 15,
+      "tns_ns": -1.397,
+      "wns_ns": -0.131
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/front_stage -> sfo/residual_estimator/front_stage",
+      "endpoints": 15,
+      "tns_ns": -0.768,
+      "wns_ns": -0.064
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync -> cfo/windows/packed_windows",
+      "endpoints": 15,
+      "tns_ns": -0.651,
+      "wns_ns": -0.132
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/aux_service -> sfo/residual_estimator/aux_service",
+      "endpoints": 7,
+      "tns_ns": -0.151,
+      "wns_ns": -0.048
+    },
+    {
+      "group": "clk500:cfo/windows/packed_windows -> cfo/windows",
+      "endpoints": 5,
+      "tns_ns": -0.111,
+      "wns_ns": -0.065
+    },
+    {
+      "group": "clk500:cfo/windows -> cfo/windows/complete_windows",
+      "endpoints": 2,
+      "tns_ns": -0.091,
+      "wns_ns": -0.068
+    }
+  ],
+  "by_register_family": [
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/output_record_reg[]/CE",
+      "endpoints": 81,
+      "tns_ns": -7.529,
+      "wns_ns": -0.178
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_head_reg[]/CE",
+      "endpoints": 76,
+      "tns_ns": -2.913,
+      "wns_ns": -0.075
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_0/DINADIN[]",
+      "endpoints": 18,
+      "tns_ns": -1.479,
+      "wns_ns": -0.172
+    },
+    {
+      "group": "clk500:cfo/windows/output_record_reg[]/C -> cfo/observation_front/fft_core/input_index_reg[]/CE",
+      "endpoints": 11,
+      "tns_ns": -1.317,
+      "wns_ns": -0.134
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/m_generation_reg[]/CE",
+      "endpoints": 14,
+      "tns_ns": -1.158,
+      "wns_ns": -0.085
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_1/DINADIN[]",
+      "endpoints": 13,
+      "tns_ns": -1.039,
+      "wns_ns": -0.174
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/m_saturations_reg[]/CE",
+      "endpoints": 15,
+      "tns_ns": -0.909,
+      "wns_ns": -0.097
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_1/ADDRARDADDR[]",
+      "endpoints": 8,
+      "tns_ns": -0.695,
+      "wns_ns": -0.148
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_0/ADDRARDADDR[]",
+      "endpoints": 7,
+      "tns_ns": -0.667,
+      "wns_ns": -0.148
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/offset_in_group_reg[]/C -> cfo/observation_front/fft_core/tw_index_reg_rep/ADDRARDADDR[]",
+      "endpoints": 7,
+      "tns_ns": -0.498,
+      "wns_ns": -0.117
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[]/CE",
+      "endpoints": 5,
+      "tns_ns": -0.496,
+      "wns_ns": -0.131
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/wrpp2_inst/count_value_i_reg[]/CE",
+      "endpoints": 5,
+      "tns_ns": -0.464,
+      "wns_ns": -0.11
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/window_credits/fifo/gnuram_async_fifo.xpm_fifo_base_inst/wrp_inst/count_value_i_reg[]/CE",
+      "endpoints": 5,
+      "tns_ns": -0.437,
+      "wns_ns": -0.131
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/next_output_reg[]/C -> cfo/observation_front/fft_core/bank0_reg_bram_1/ADDRBWRADDR[]",
+      "endpoints": 7,
+      "tns_ns": -0.323,
+      "wns_ns": -0.084
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/axi_wrapper/sclr_int_reg/C -> sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[1].delay_reset_pe/count_addsub_reg[].addsub_reg/R",
+      "endpoints": 5,
+      "tns_ns": -0.314,
+      "wns_ns": -0.063
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/axi_wrapper/sclr_int_reg/C -> sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/DOUT_CNT_CTRL_0/cnt/cnt_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[]/R",
+      "endpoints": 4,
+      "tns_ns": -0.252,
+      "wns_ns": -0.063
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank0_reg_bram_1/ADDRARDADDR[]",
+      "endpoints": 3,
+      "tns_ns": -0.249,
+      "wns_ns": -0.122
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_count_reg[]/CE",
+      "endpoints": 1,
+      "tns_ns": -0.199,
+      "wns_ns": -0.199
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank0_reg_bram_0/ADDRARDADDR[]",
+      "endpoints": 2,
+      "tns_ns": -0.184,
+      "wns_ns": -0.103
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/pr4_reg_i_5_psdsp_1/D",
+      "endpoints": 1,
+      "tns_ns": -0.169,
+      "wns_ns": -0.169
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/rr3_reg_i_5_psdsp/D",
+      "endpoints": 1,
+      "tns_ns": -0.165,
+      "wns_ns": -0.165
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/rr3_reg_i_5_psdsp_1/D",
+      "endpoints": 1,
+      "tns_ns": -0.164,
+      "wns_ns": -0.164
+    },
+    {
+      "group": "clk500:cfo/windows/output_record_reg[]/C -> cfo/observation_front/fft_core/state_reg[]/CE",
+      "endpoints": 3,
+      "tns_ns": -0.153,
+      "wns_ns": -0.051
+    },
+    {
+      "group": "clk500:cfo/windows/output_record_reg[]/C -> cfo/observation_front/fft_core/m_error_reg[]/CE",
+      "endpoints": 2,
+      "tns_ns": -0.152,
+      "wns_ns": -0.138
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/input_index_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_1/ADDRARDADDR[]",
+      "endpoints": 1,
+      "tns_ns": -0.151,
+      "wns_ns": -0.151
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/rr3_reg_i_4_psdsp/D",
+      "endpoints": 1,
+      "tns_ns": -0.143,
+      "wns_ns": -0.143
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/stage_index_reg[]/C -> cfo/observation_front/fft_core/next_output_reg[]/CE",
+      "endpoints": 5,
+      "tns_ns": -0.139,
+      "wns_ns": -0.048
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/load_enable_reg/C -> sfo/residual_estimator/aux_service/u_ingress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/count_value_i_reg[]/D",
+      "endpoints": 4,
+      "tns_ns": -0.134,
+      "wns_ns": -0.048
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/pr4_reg_i_3_psdsp/D",
+      "endpoints": 1,
+      "tns_ns": -0.133,
+      "wns_ns": -0.133
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_7/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.132,
+      "wns_ns": -0.132
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/pr4_reg_i_2_psdsp_1/D",
+      "endpoints": 1,
+      "tns_ns": -0.129,
+      "wns_ns": -0.129
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/pr4_reg_i_3_psdsp_1/D",
+      "endpoints": 1,
+      "tns_ns": -0.125,
+      "wns_ns": -0.125
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_4/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.121,
+      "wns_ns": -0.121
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/pr4_reg_i_4_psdsp_1/D",
+      "endpoints": 1,
+      "tns_ns": -0.118,
+      "wns_ns": -0.118
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/rr3_reg_i_1_psdsp/D",
+      "endpoints": 1,
+      "tns_ns": -0.117,
+      "wns_ns": -0.117
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/pr4_reg_i_2_psdsp/D",
+      "endpoints": 1,
+      "tns_ns": -0.116,
+      "wns_ns": -0.116
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/rr3_reg_i_1_psdsp_1/D",
+      "endpoints": 1,
+      "tns_ns": -0.115,
+      "wns_ns": -0.115
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_0/DINPADINP[]",
+      "endpoints": 2,
+      "tns_ns": -0.114,
+      "wns_ns": -0.099
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/next_output_reg[]/C -> cfo/observation_front/fft_core/bank0_reg_bram_1/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.11,
+      "wns_ns": -0.11
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_5/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.109,
+      "wns_ns": -0.109
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/axi_wrapper/sclr_int_reg/C -> sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.fixed_pt_size_muxed_addresses.read_addr_fixed_nfft_delay/need_sclr_lut.depth1_shift_ram.FF_gen[].reg/D",
+      "endpoints": 2,
+      "tns_ns": -0.104,
+      "wns_ns": -0.064
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/next_output_reg[]/C -> cfo/observation_front/fft_core/bank0_reg_bram_0/ADDRBWRADDR[]",
+      "endpoints": 4,
+      "tns_ns": -0.102,
+      "wns_ns": -0.042
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/rr3_reg_i_2_psdsp_1/D",
+      "endpoints": 1,
+      "tns_ns": -0.099,
+      "wns_ns": -0.099
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/rr3_reg_i_2_psdsp/D",
+      "endpoints": 1,
+      "tns_ns": -0.098,
+      "wns_ns": -0.098
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/input_index_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_0/ADDRARDADDR[]",
+      "endpoints": 1,
+      "tns_ns": -0.097,
+      "wns_ns": -0.097
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_head_reg[]/D",
+      "endpoints": 5,
+      "tns_ns": -0.097,
+      "wns_ns": -0.026
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/rr3_reg_i_4_psdsp_1/D",
+      "endpoints": 1,
+      "tns_ns": -0.092,
+      "wns_ns": -0.092
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/state_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_0/DINADIN[]",
+      "endpoints": 2,
+      "tns_ns": -0.074,
+      "wns_ns": -0.042
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/pr4_reg_i_5_psdsp/D",
+      "endpoints": 1,
+      "tns_ns": -0.072,
+      "wns_ns": -0.072
+    },
+    {
+      "group": "clk500:cfo/windows/header_active_reg/C -> cfo/windows/complete_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/ENARDEN",
+      "endpoints": 1,
+      "tns_ns": -0.068,
+      "wns_ns": -0.068
+    },
+    {
+      "group": "clk500:cfo/windows/output_record_reg[]/C -> cfo/observation_front/fft_core/state_reg[]/D",
+      "endpoints": 1,
+      "tns_ns": -0.068,
+      "wns_ns": -0.068
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_0/ENARDEN",
+      "endpoints": 1,
+      "tns_ns": -0.067,
+      "wns_ns": -0.067
+    },
+    {
+      "group": "clk500:cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_7/CLKBWRCLK -> cfo/windows/packed_tail_reg[]/D",
+      "endpoints": 1,
+      "tns_ns": -0.065,
+      "wns_ns": -0.065
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_8/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.064,
+      "wns_ns": -0.064
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/pr4_reg_i_1_psdsp/D",
+      "endpoints": 1,
+      "tns_ns": -0.063,
+      "wns_ns": -0.063
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[]/D",
+      "endpoints": 5,
+      "tns_ns": -0.062,
+      "wns_ns": -0.028
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank0_reg_bram_1/ENARDEN",
+      "endpoints": 1,
+      "tns_ns": -0.06,
+      "wns_ns": -0.06
+    },
+    {
+      "group": "clk500:cfo/windows/output_record_reg[]/C -> cfo/observation_front/fft_core/state_reg[]_replica/CE",
+      "endpoints": 1,
+      "tns_ns": -0.055,
+      "wns_ns": -0.055
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/pr4_reg_i_1_psdsp_1/D",
+      "endpoints": 1,
+      "tns_ns": -0.054,
+      "wns_ns": -0.054
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_9/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.049,
+      "wns_ns": -0.049
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_real_time.full_reg/C -> sfo/residual_estimator/front_stage/main/service/u_ingress_fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_wide.mem_reg_bram_1/ENARDEN",
+      "endpoints": 1,
+      "tns_ns": -0.043,
+      "wns_ns": -0.043
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_1/ENARDEN",
+      "endpoints": 1,
+      "tns_ns": -0.04,
+      "wns_ns": -0.04
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/next_output_reg[]/C -> cfo/observation_front/fft_core/bank0_reg_bram_0/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.04,
+      "wns_ns": -0.04
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_6/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.037,
+      "wns_ns": -0.037
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_14/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.036,
+      "wns_ns": -0.036
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/rr3_reg_i_3_psdsp_1/D",
+      "endpoints": 1,
+      "tns_ns": -0.034,
+      "wns_ns": -0.034
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/rr3_reg_i_3_psdsp/D",
+      "endpoints": 1,
+      "tns_ns": -0.033,
+      "wns_ns": -0.033
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.TW/MUX0/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[].latency1.reg/C -> sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.TW/twiddle_generator/tw1.twgen1/sin_addr_2s_comp/use_output_reg.D_OUT_reg[]/D",
+      "endpoints": 1,
+      "tns_ns": -0.027,
+      "wns_ns": -0.027
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/axi_wrapper/sclr_int_reg/C -> sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[0].delay_reset_pe/tc_reg/S",
+      "endpoints": 1,
+      "tns_ns": -0.025,
+      "wns_ns": -0.025
+    },
+    {
+      "group": "clk500:cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_7/CLKBWRCLK -> cfo/windows/packed_head_reg[]/D",
+      "endpoints": 3,
+      "tns_ns": -0.024,
+      "wns_ns": -0.014
+    },
+    {
+      "group": "clk500:cfo/windows/header_active_reg/C -> cfo/windows/complete_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/REGCEAREGCE",
+      "endpoints": 1,
+      "tns_ns": -0.023,
+      "wns_ns": -0.023
+    },
+    {
+      "group": "clk500:cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_14/CLKBWRCLK -> cfo/windows/packed_head_reg[]/D",
+      "endpoints": 1,
+      "tns_ns": -0.022,
+      "wns_ns": -0.022
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.022,
+      "wns_ns": -0.022
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/state_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_1/DINADIN[]",
+      "endpoints": 1,
+      "tns_ns": -0.019,
+      "wns_ns": -0.019
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/bank0_reg_bram_0/DINADIN[]",
+      "endpoints": 1,
+      "tns_ns": -0.017,
+      "wns_ns": -0.017
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/state_reg[]/C -> cfo/observation_front/fft_core/bank0_reg_bram_1/ADDRARDADDR[]",
+      "endpoints": 1,
+      "tns_ns": -0.017,
+      "wns_ns": -0.017
+    },
+    {
+      "group": "clk500:cfo/observation_front/coefficient_page0_data_reg_0_1/CLKARDCLK -> cfo/observation_front/pr4_reg_i_4_psdsp/D",
+      "endpoints": 1,
+      "tns_ns": -0.017,
+      "wns_ns": -0.017
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/state_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_0/DINPADINP[]",
+      "endpoints": 1,
+      "tns_ns": -0.013,
+      "wns_ns": -0.013
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.no_cp.muxed_reorder_write_addr_del_reg[]/C -> sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/blk_ram.use_bram_only.mem/depth_14.main_ram_loop[].use_RAMB18.ram_2k_loop[].SDP_RAMB18_9x2048/WEA[]",
+      "endpoints": 2,
+      "tns_ns": -0.013,
+      "wns_ns": -0.011
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/offset_in_group_reg[]/C -> cfo/observation_front/fft_core/bank1_reg_bram_1/ADDRBWRADDR[]",
+      "endpoints": 1,
+      "tns_ns": -0.011,
+      "wns_ns": -0.011
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_7/REGCEB",
+      "endpoints": 1,
+      "tns_ns": -0.01,
+      "wns_ns": -0.01
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/windows/packed_windows/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_10/ENBWREN",
+      "endpoints": 1,
+      "tns_ns": -0.009,
+      "wns_ns": -0.009
+    },
+    {
+      "group": "clk500:cfo/observation_front/fft_core/offset_in_group_reg[]/C -> cfo/observation_front/fft_core/bank0_reg_bram_0/ADDRBWRADDR[]",
+      "endpoints": 1,
+      "tns_ns": -0.008,
+      "wns_ns": -0.008
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_addr_gen.bf2_addr_gen/cnt/cnt_addsub/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut6.i_lut6_addsub/i_q.i_simple.qreg/i_no_async_controls.output_reg[]/C -> sfo/residual_estimator/aux_service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/FB_1.BF_1/MEM/blk_ram.use_bram_only.mem/depth_13_s6_depth_12.main_ram_loop[].use_RAMB18.ram_2k_loop[].SDP_RAMB18_9x2048/ADDRBWRADDR[]",
+      "endpoints": 1,
+      "tns_ns": -0.004,
+      "wns_ns": -0.004
+    },
+    {
+      "group": "clk500:sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/axi_wrapper/sclr_int_reg/C -> sfo/residual_estimator/front_stage/main/service/u_xfft/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[1].delay_reset_pe/tc_reg/S",
+      "endpoints": 1,
+      "tns_ns": -0.003,
+      "wns_ns": -0.003
+    },
+    {
+      "group": "clk500:cfo/windows/poison_sync/syncstages_ff_reg[]/C -> cfo/observation_front/fft_core/m_frame_reg[]/CE",
+      "endpoints": 1,
+      "tns_ns": -0.002,
+      "wns_ns": -0.002
+    }
+  ],
+  "limits": "Groups attribute TNS to destination hierarchy, not to a proven causal module. Completeness requires exact endpoint counts and TNS consistency within per-path precision; totals are not asserted bit-for-bit equal."
+}

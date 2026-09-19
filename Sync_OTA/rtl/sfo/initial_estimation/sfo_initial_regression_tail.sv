@@ -49,7 +49,7 @@ module sfo_initial_regression_tail (
     P_PACK,
     P_SEND,
     P_WAIT,
-    HOLD_RESULT
+    HOLD_RESULT, ROUND_PRE, ROUND_ADD
   } state_t;
   state_t state;
   logic [29:0] s0;
@@ -153,7 +153,7 @@ module sfo_initial_regression_tail (
       headroom_shift = h > 0 ? h : 0;
     end
   endfunction
-  function automatic logic [118:0] rne118(input logic [117:0] value, input logic [5:0] shift);
+  function automatic logic [118:0] rne118_pre(input logic [117:0] value, input logic [5:0] shift);
     logic [117:0] q, r, half_value, mask;
     logic inc;
     begin
@@ -166,18 +166,14 @@ module sfo_initial_regression_tail (
       end
       r = value & mask;
       inc = (shift != 0) && ((r > half_value) || (r == half_value && q[0]));
-      rne118 = {1'b0, q} + {{118{1'b0}}, inc};
+      rne118_pre = {q, inc};
     end
   endfunction
-  logic [118:0] qn_round, qd_round, sn_round, sd_round, pn_round, pd_round;
-  always_comb begin
-    qn_round = rne118({40'd0, debug_d}, debug_hq);
-    qd_round = rne118({40'd0, p02}, debug_hq);
-    sn_round = rne118(n_magnitude, debug_hs);
-    sd_round = rne118({40'd0, debug_d}, debug_hs);
-    pn_round = rne118({32'd0, ppm_magnitude}, debug_hppm);
-    pd_round = rne118({69'd0, $unsigned(ppm_denominator)}, debug_hppm);
-  end
+  logic round_is_ppm;
+  logic [118:0] round_pre[0:3],round_value[0:3];
+  wire [118:0] qn_round=round_value[0],qd_round=round_value[1];
+  wire [118:0] sn_round=round_value[2],sd_round=round_value[3];
+  wire [118:0] pn_round=round_value[0],pd_round=round_value[1];
   assign s_ready = !rst && state == IDLE;
   assign m_valid = !rst && state == HOLD_RESULT;
   assign div_req_valid = !rst && (state == Q_SEND || state == S_SEND || state == P_SEND);
@@ -195,7 +191,7 @@ module sfo_initial_regression_tail (
   integer hquality;
   always_ff @(posedge clk) begin
     if (rst) begin
-      state <= IDLE;
+      state <= IDLE;round_is_ppm<=0;
       wait_count <= 0;
       s0 <= 0;
       s1 <= 0;
@@ -263,7 +259,24 @@ module sfo_initial_regression_tail (
           hquality = bitlength118({40'd0, p02}) - 46;
           debug_hq <= hquality > 0 ? hquality : 0;
           debug_hs <= headroom_shift(n_magnitude, {40'd0, debug_d});
-          state <= RATIO_PACK;
+          round_is_ppm<=0;state<=ROUND_PRE;
+        end
+        ROUND_PRE:begin
+          if(round_is_ppm)begin
+            round_pre[0]<=rne118_pre({32'd0,ppm_magnitude},debug_hppm);
+            round_pre[1]<=rne118_pre({69'd0,$unsigned(ppm_denominator)},debug_hppm);
+          end else begin
+            round_pre[0]<=rne118_pre({40'd0,debug_d},debug_hq);
+            round_pre[1]<=rne118_pre({40'd0,p02},debug_hq);
+            round_pre[2]<=rne118_pre(n_magnitude,debug_hs);
+            round_pre[3]<=rne118_pre({40'd0,debug_d},debug_hs);
+          end
+          state<=ROUND_ADD;
+        end
+        ROUND_ADD:begin
+          for(integer j=0;j<4;j=j+1)
+            round_value[j]<={1'b0,round_pre[j][118:1]}+{{118{1'b0}},round_pre[j][0]};
+          state<=round_is_ppm?P_PACK:RATIO_PACK;
         end
         RATIO_PACK: begin
           if (|qn_round[118:47] || |qd_round[118:47] || |sn_round[118:63] || |sd_round[118:47])
@@ -323,7 +336,7 @@ module sfo_initial_regression_tail (
             debug_hppm <= headroom_shift(
                 {32'd0, ppm_magnitude}, {69'd0, $unsigned(ppm_denominator)}
             );
-            state <= P_PACK;
+            round_is_ppm<=1;state<=ROUND_PRE;
           end
         end
         P_PACK: begin

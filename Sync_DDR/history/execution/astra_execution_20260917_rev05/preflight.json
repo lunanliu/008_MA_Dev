@@ -1,0 +1,158 @@
+{
+  "job": "DDR_VHDL_CTRL_NATIVE_20260916_REV02",
+  "powershell": "7.6.5",
+  "script": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\ddr_control\\astra_execution_20260917_rev05\\run_ddr_functional.ps1",
+  "script_sha256": "F59D61797F4CEAADB758F7E9DEEBD13442A92B101AAACBDB045C9CFCFC0EAB10",
+  "manifest_sha256": "FEC4D048CBAA1837FAA86EFE6D7885938AFD855B1DAFA44C55EB5B9DE5199ADA",
+  "identities": [
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\rtl\\ddr_upload_ctrl.vhd",
+      "bytes": 10594,
+      "sha256": "DC2804BD120FCB3F9D1CCFD9767756E1E510E89980F437AB9E2CB390D2E53BD1"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\rtl\\ddr_read_ctrl.vhd",
+      "bytes": 16127,
+      "sha256": "D75A88072AE909D4D34E843DD0EA99C82F82379EEAD80CCA55CCEBFBFC32965A"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\sim\\tb_ddr_upload_ctrl.vhd",
+      "bytes": 11978,
+      "sha256": "51418FA2A7CC32E457825C3956852468FFE546DED7EFCB6058E2A2CAE501BEE2"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\sim\\tb_ddr_read_ctrl.vhd",
+      "bytes": 27467,
+      "sha256": "A7120FFEE8A7308A3764790AAF78E44143939BBB283E68FC69A006980589A853"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\scripts\\create_project.tcl",
+      "bytes": 1514,
+      "sha256": "3D7835D741F77245E328CC476F620AABE4A6E6473D4B5179A24DC6A9BDA03D48"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\scripts\\simulate.tcl",
+      "bytes": 543,
+      "sha256": "E46E5D4432D9C2FA50DA37922AC34F6909D10A33DFC92F9AFD5747706ADD519C"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\scripts\\threads_pre.tcl",
+      "bytes": 60,
+      "sha256": "1B9ABD6CC8A8D8F78297FB5E95DAF4A40BEBA931E2A89EE5DDAB3B012A731482"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\constraints\\upload_150mhz.xdc",
+      "bytes": 152,
+      "sha256": "53E720A13C1E45FF0F2A195A7166A62420DBB7B0CBA189D7913D724C03D4389D"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\matlab\\generate_ddr_test.m",
+      "bytes": 2070,
+      "sha256": "2A5C03FACDF7F724CC319025FD9C4AE3B9AFCF1F7C54402798694456D5E03AE8"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\matlab\\analyze_ddr_readback.m",
+      "bytes": 1612,
+      "sha256": "57BE3FD22B0A88DC2DE6413453EF0AECC1DBA1E8937F00F456B954316EA1F4E9"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\matlab\\analyze_ddr_counters.m",
+      "bytes": 3134,
+      "sha256": "B6B7E483848F7D614384A5B2D895889C221EA3543DFA426F498E3F1AB4CB0D9E"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\readme_zh.md",
+      "bytes": 2524,
+      "sha256": "3B85834771202D101EBA1EDA7301B134A5C7F9B2D4FFB26697FEE9E070A035BA"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\upload_guide_zh.md",
+      "bytes": 12945,
+      "sha256": "63EECAC2A0B715D46DFABBC6CAE1BBB79DBC68674425F4BC67E25F5A3382895B"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\read_ports.md",
+      "bytes": 10790,
+      "sha256": "3E61C67818870F254CD70FAD9CD6F24C9A7983A9022DB9247C3CFD5DC1A4DD59"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\board_test_guide_zh.md",
+      "bytes": 17645,
+      "sha256": "40E9D3769751626BB76C1C9D72F4ADFA9DE62A5E5971283871EFF3598B2CF1AB"
+    },
+    {
+      "path": "d:\\007 dev\\ota_rtl_0829\\output\\ddr_control_vhdl_20260916_rev02\\validation.md",
+      "bytes": 1515,
+      "sha256": "DCF98693541AE1F29EC76C0E3E3464F6EE3D99AA039F708BFAAA25C010E0DD5A"
+    }
+  ],
+  "working_directory": "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02",
+  "stages": [
+    {
+      "name": "create",
+      "arguments": [
+        "-mode",
+        "batch",
+        "-source",
+        "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\ddr_control\\astra_execution_20260917_rev05\\create_project_retry.tcl",
+        "-log",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_05\\create.log",
+        "-journal",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_05\\create.jou"
+      ],
+      "timeout": 180,
+      "marker": "DDR_CONTROL_PROJECT_CREATED"
+    },
+    {
+      "name": "write",
+      "arguments": [
+        "-mode",
+        "batch",
+        "-source",
+        "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\ddr_control\\astra_execution_20260917_rev05\\simulate_retry.tcl",
+        "-log",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_05\\write.log",
+        "-journal",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_05\\write.jou",
+        "-tclargs",
+        "write"
+      ],
+      "timeout": 300,
+      "marker": "DDR_UPLOAD_CTRL_TEST_PASS"
+    },
+    {
+      "name": "read",
+      "arguments": [
+        "-mode",
+        "batch",
+        "-source",
+        "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\ddr_control\\astra_execution_20260917_rev05\\simulate_retry.tcl",
+        "-log",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_05\\read.log",
+        "-journal",
+        "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_05\\read.jou",
+        "-tclargs",
+        "read"
+      ],
+      "timeout": 300,
+      "marker": "DDR_READ_CTRL_TEST_PASS"
+    }
+  ],
+  "scope": "create and behavioral simulations only",
+  "original_native_deadline_utc": "2026-09-17T14:52:47.6387679Z",
+  "actual_project": "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\project_retry05\\DDR_Control.xpr",
+  "execution_tcl": [
+    {
+      "Path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\ddr_control\\astra_execution_20260917_rev05\\create_project_retry.tcl",
+      "Hash": "20EFDBEDE07CD945A51328B577D8370D9BC6EA84E2064D82EB4434AE857B3B33"
+    },
+    {
+      "Path": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\ddr_control\\astra_execution_20260917_rev05\\simulate_retry.tcl",
+      "Hash": "EB25D7BD21E3C45E5BB61087015DC6D11E09D04373111BB1B9BF65FBF3562CAD"
+    }
+  ],
+  "helper_sha256": "F8751748BCDE6BA39D7FF286C9FC07AEA87374FDF56049E9F3AA85E1E655E41A",
+  "actual_output": "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_05",
+  "original_job_output": "D:\\007 Dev\\OTA_RTL_0829\\output\\DDR_Control_VHDL_20260916_rev02\\validation_native_01",
+  "empty_job_create_query_close": "PASS_NO_PROCESS_STARTED"
+}

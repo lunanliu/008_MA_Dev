@@ -1,0 +1,38 @@
+{
+  "stage": "write",
+  "status": "FAIL",
+  "directory": "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_02_write",
+  "grant_id": "SYNC_DDR_RUNTIME_CONFIG_V1_20260917T172951Z",
+  "manifest_sha256": "802CAA8E0134A10A1FA64900E457860AD487D570BC7AD82C400EC066E02F5AAB",
+  "started_utc": "2026-09-17T17:32:27.6606866Z",
+  "exit_code": 1,
+  "root_pid": 32280,
+  "cleanup": {
+    "checks": [
+      {
+        "utc": "2026-09-17T17:32:47.8854984Z",
+        "ids": []
+      },
+      {
+        "utc": "2026-09-17T17:32:48.3927453Z",
+        "ids": []
+      },
+      {
+        "utc": "2026-09-17T17:32:48.9062912Z",
+        "ids": []
+      }
+    ],
+    "closed": true
+  },
+  "error": "Native exit 1",
+  "logs": [
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_02_write\\native_logs\\compile.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_02_write\\native_logs\\compile.log",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_02_write\\native_logs\\elaborate.bat",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_02_write\\native_logs\\tb_ddr_upload_ctrl_vhdl.prj",
+    "D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_02_write\\native_logs\\xvhdl.log"
+  ],
+  "finished_utc": "2026-09-17T17:32:48.9470815Z",
+  "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /s /c \"\"C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat\" \"-mode\" \"batch\" \"-source\" \"D:\\008_MA_Dev\\Sync_DDR\\scripts\\simulate.tcl\" \"-log\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_02_write\\vivado.log\" \"-journal\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_02_write\\vivado.jou\" \"-tclargs\" \"write\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_01_create\\project\\DDR_Control.xpr\" > \"D:\\008_MA_Dev\\Sync_DDR\\work\\runtime_config_v1\\attempt_02_write\\launcher.log\" 2>&1\"",
+  "deadline_utc": "2026-09-17T17:46:29.0916392Z"
+}

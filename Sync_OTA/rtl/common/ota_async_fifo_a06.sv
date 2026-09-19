@@ -3,7 +3,7 @@
 // Both clocks must run. Local async-assert/sync-release reset tails mask
 // transfers immediately; raw requests never bypass these domain boundaries.
 module ota_async_fifo #(
- parameter integer WIDTH=128,DEPTH=32,CW=$clog2(DEPTH)+1
+ parameter integer WIDTH=128,DEPTH=32,CW=$clog2(DEPTH)+1,CASCADE_HEIGHT=0
 )(
  input wire wr_clk,rd_clk,reset_request,
  input wire s_valid,output wire s_ready,input wire [WIDTH-1:0] s_data,
@@ -44,7 +44,7 @@ module ota_async_fifo #(
   .FIFO_WRITE_DEPTH(DEPTH),.WRITE_DATA_WIDTH(WIDTH),.READ_DATA_WIDTH(WIDTH),
   .WR_DATA_COUNT_WIDTH(CW),.RD_DATA_COUNT_WIDTH(CW),.PROG_FULL_THRESH(DEPTH-8),.PROG_EMPTY_THRESH(8),
   .FULL_RESET_VALUE(0),.USE_ADV_FEATURES("1707"),.READ_MODE("fwft"),.FIFO_READ_LATENCY(0),
-  .DOUT_RESET_VALUE("0"),.CDC_SYNC_STAGES(2)
+  .DOUT_RESET_VALUE("0"),.CDC_SYNC_STAGES(2),.CASCADE_HEIGHT(CASCADE_HEIGHT)
  ) fifo(
   .sleep(1'b0),.rst(fifo_reset),.wr_clk(wr_clk),.wr_en(s_valid&&s_ready),.din(s_data),
   .full(full),.prog_full(),.wr_data_count(wr_count),.overflow(overflow),.wr_rst_busy(wb),.almost_full(),.wr_ack(),

@@ -1,0 +1,1128 @@
+
+*** Running vivado
+    with args -log sync_ota_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sync_ota_top.tcl
+
+
+WARNING: Default location for XILINX_VIVADO_HLS not found: 
+WARNING: Default location for XILINX_HLS not found: 
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source sync_ota_top.tcl -notrace
+source D:/008_MA_Dev/Sync_OTA/tools/vivado/run_threads.tcl
+OTA_THREADS pid=29000 general=8 synth=8
+Command: synth_design -top sync_ota_top -part xcvu11p-flgb2104-2-e -flatten_hierarchy none -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcvu11p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcvu11p'
+INFO: [Common 17-1540] The version limit for your license is '2022.12' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Device 21-403] Loading part xcvu11p-flgb2104-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 8 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19132
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1770.906 ; gain = 265.773
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sync_ota_top' [D:/008_MA_Dev/Sync_OTA/rtl/control/sync_ota_top_v51.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'sfo_domain_reset' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/control/sfo_domain_reset.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter RST_ACTIVE_HIGH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (1#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'sfo_domain_reset' (2#1) [D:/008_MA_Dev/Sync_OTA/rtl/sfo/control/sfo_domain_reset.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (3#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6157] synthesizing module 'ota_stream_ingress' [D:/008_MA_Dev/Sync_OTA/rtl/control/ota_stream_ingress.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'sfo_sync_fifo' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/buffering/sfo_sync_fifo.sv:3]
+	Parameter WIDTH bound to: 32'b00000000000000000000000010000010 
+	Parameter DEPTH bound to: 32'b00000000000000000000000010000000 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 128 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 130 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 120 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 130 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (4#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (5#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (6#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (7#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (7#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (7#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (7#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (8#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync' (9#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-6155] done synthesizing module 'sfo_sync_fifo' (10#1) [D:/008_MA_Dev/Sync_OTA/rtl/sfo/buffering/sfo_sync_fifo.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'ota_stream_ingress' (11#1) [D:/008_MA_Dev/Sync_OTA/rtl/control/ota_stream_ingress.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'sync_frontend_top' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/frontend/sync_frontend_top.sv:3]
+	Parameter STREAM_BOUNDARIES bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sync_continuous_detector' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/frontend/sync_continuous_detector.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'sync_beat_ram' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/sync_beat_ram.sv:3]
+	Parameter ADDR_BITS bound to: 32'sb00000000000000000000000000001000 
+	Parameter READ_LATENCY bound to: 32'sb00000000000000000000000000000001 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+	Parameter MEMORY_SIZE bound to: 32768 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 8 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 8 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (11#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram' (12#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'sync_beat_ram' (13#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/sync_beat_ram.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'coarse_corr_energy_4lane' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/coarse_corr_energy_4lane.sv:3]
+INFO: [Synth 8-6157] synthesizing module 't04_cmpy_17x16' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_cmpy_17x16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't04_cmpy_17x16' (14#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_cmpy_17x16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'coarse_corr_energy_4lane' (15#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/coarse_corr_energy_4lane.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'sync_rolling_metric' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/sync_rolling_metric.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'sync_beat_ram__parameterized0' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/sync_beat_ram.sv:3]
+	Parameter ADDR_BITS bound to: 32'sb00000000000000000000000000001000 
+	Parameter DATA_BITS bound to: 32'sb00000000000000000000000001101000 
+	Parameter READ_LATENCY bound to: 32'sb00000000000000000000000000000001 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized0' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+	Parameter MEMORY_SIZE bound to: 26624 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 104 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 104 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 8 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 104 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 8 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (15#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized0' (15#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'sync_beat_ram__parameterized0' (15#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/sync_beat_ram.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'sync_rolling_metric' (16#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/sync_rolling_metric.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'coarse_metric_threshold' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/coarse_metric_threshold.sv:3]
+INFO: [Synth 8-6157] synthesizing module 't04_square_s43' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_square_s43_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't04_square_s43' (17#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_square_s43_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 't04_square_u42' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_square_u42_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't04_square_u42' (18#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_square_u42_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'coarse_metric_threshold' (19#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/coarse_metric_threshold.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'sync_continuous_detector' (20#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/frontend/sync_continuous_detector.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'sync_beat_ram__parameterized1' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/sync_beat_ram.sv:3]
+	Parameter ADDR_BITS bound to: 32'sb00000000000000000000000000001011 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized1' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+	Parameter MEMORY_SIZE bound to: 262144 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 11 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 11 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized2' (20#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized1' (20#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'sync_beat_ram__parameterized1' (20#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/sync_beat_ram.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'to_coarse_estimator' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/to_coarse_estimator.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'coarse_lag1024_beat_ring' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/coarse_lag1024_beat_ring.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'coarse_lag1024_beat_ring' (21#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/coarse_lag1024_beat_ring.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'coarse_rolling_sc_accumulator' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/coarse_rolling_sc_accumulator.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'coarse_rolling_sc_accumulator' (22#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/coarse_rolling_sc_accumulator.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'coarse_plateau_selector' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/coarse_plateau_selector.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'coarse_plateau_selector' (23#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/coarse_plateau_selector.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'coarse_safe_phase_replay' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/coarse_safe_phase_replay.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized2' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+	Parameter MEMORY_SIZE bound to: 32896 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized3' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized3' (23#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized2' (23#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'coarse_safe_phase_replay' (24#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/coarse_safe_phase_replay.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'cfo_coarse_estimator' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/carrier/cfo_coarse_estimator.sv:3]
+INFO: [Synth 8-6157] synthesizing module 't04_cordic_translate_48' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_cordic_translate_48_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't04_cordic_translate_48' (25#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_cordic_translate_48_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 't04_phase_scale_s48_x_1953125' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_phase_scale_s48_x_1953125_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't04_phase_scale_s48_x_1953125' (26#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_phase_scale_s48_x_1953125_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 't04_div_u63_u47' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_div_u63_u47_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't04_div_u63_u47' (27#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t04_div_u63_u47_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cfo_coarse_estimator' (28#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/carrier/cfo_coarse_estimator.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'coarse_result_pair_fifo' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/coarse_result_pair_fifo.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'coarse_result_pair_fifo' (29#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/coarse_result_pair_fifo.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'to_coarse_estimator' (30#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/to_coarse_estimator.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'to_fine_estimator' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/to_fine_estimator.sv:6]
+	Parameter PS1_MEMORY_INIT_FILE bound to: fine_ps1_reference_16lane.mem - type: string 
+INFO: [Synth 8-6157] synthesizing module 'to_fine_core' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/to_fine_core.sv:3]
+	Parameter PS1_MEMORY_INIT_FILE bound to: fine_ps1_reference_16lane.mem - type: string 
+	Parameter DEADLINE_CYCLES bound to: 32'b00000000000000001111111000000000 
+INFO: [Synth 8-6157] synthesizing module 'sync_coarse_pair_join' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/frontend/sync_coarse_pair_join.sv:3]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/008_MA_Dev/Sync_OTA/rtl/frontend/frontend/sync_coarse_pair_join.sv:91]
+INFO: [Synth 8-6155] done synthesizing module 'sync_coarse_pair_join' (31#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/frontend/sync_coarse_pair_join.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_local_capture_buffer' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/fine_local_capture_buffer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized3' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+	Parameter MEMORY_SIZE bound to: 88576 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 10 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 10 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized4' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized4' (31#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized3' (31#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'fine_local_capture_buffer' (32#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/fine_local_capture_buffer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'cfo_phase_increment' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/carrier/cfo_phase_increment.sv:3]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/008_MA_Dev/Sync_OTA/rtl/frontend/carrier/cfo_phase_increment.sv:87]
+INFO: [Synth 8-226] default block is never used [D:/008_MA_Dev/Sync_OTA/rtl/frontend/carrier/cfo_phase_increment.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'cfo_phase_increment' (33#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/carrier/cfo_phase_increment.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_cfo_scale_vendor_adapter' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_vendor_multiplier_adapters.sv:66]
+INFO: [Synth 8-6157] synthesizing module 't05_mult_cfo_s19_const40_full59' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_mult_cfo_s19_const40_full59_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't05_mult_cfo_s19_const40_full59' (34#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_mult_cfo_s19_const40_full59_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fine_cfo_scale_vendor_adapter' (35#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_vendor_multiplier_adapters.sv:66]
+INFO: [Synth 8-6157] synthesizing module 'fine_local_window_reader' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_local_window_reader.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fine_local_window_reader' (36#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_local_window_reader.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'cfo_preamble_rotator' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/carrier/cfo_preamble_rotator.sv:3]
+INFO: [Synth 8-6157] synthesizing module 't05_dds_pinc32_sincos18' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_dds_pinc32_sincos18_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't05_dds_pinc32_sincos18' (37#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_dds_pinc32_sincos18_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 't05_cmpy_rotate_18x18' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_cmpy_rotate_18x18_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't05_cmpy_rotate_18x18' (38#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_cmpy_rotate_18x18_stub.v:6]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/008_MA_Dev/Sync_OTA/rtl/frontend/carrier/cfo_preamble_rotator.sv:242]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/008_MA_Dev/Sync_OTA/rtl/frontend/carrier/cfo_preamble_rotator.sv:264]
+INFO: [Synth 8-6155] done synthesizing module 'cfo_preamble_rotator' (39#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/carrier/cfo_preamble_rotator.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_square18_vendor_adapter' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_vendor_multiplier_adapters.sv:8]
+INFO: [Synth 8-6157] synthesizing module 't05_mult_s18x18_full36' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_mult_s18x18_full36_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't05_mult_s18x18_full36' (40#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_mult_s18x18_full36_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fine_square18_vendor_adapter' (41#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_vendor_multiplier_adapters.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'fine_energy_prefix_buffer' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/fine_energy_prefix_buffer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized4' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+	Parameter MEMORY_SIZE bound to: 106030 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 46 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 46 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 12 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 46 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 12 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized5' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized5' (41#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized4' (41#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'fine_energy_prefix_buffer' (42#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/fine_energy_prefix_buffer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_partitioned_corr_engine' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_partitioned_corr_engine.sv:3]
+	Parameter PS1_MEMORY_INIT_FILE bound to: fine_ps1_reference_16lane.mem - type: string 
+INFO: [Synth 8-6157] synthesizing module 'fine_corrected_local_buffer' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/fine_corrected_local_buffer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized5' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+	Parameter MEMORY_SIZE bound to: 82944 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 576 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 576 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 8 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 576 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 8 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized6' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized6' (42#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized5' (42#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'fine_corrected_local_buffer' (43#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/buffering/fine_corrected_local_buffer.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_ps1_reference_rom' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_ps1_reference_rom.sv:3]
+	Parameter MEMORY_INIT_FILE bound to: fine_ps1_reference_16lane.mem - type: string 
+	Parameter READ_LATENCY bound to: 32'b00000000000000000000000000000010 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sprom' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8760]
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: fine_ps1_reference_16lane.mem - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 512 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 7 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 2 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized7' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-3876] $readmem data file 'fine_ps1_reference_16lane.mem' is read successfully [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:1127]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized7' (43#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sprom' (44#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8760]
+INFO: [Synth 8-6155] done synthesizing module 'fine_ps1_reference_rom' (45#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_ps1_reference_rom.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_corr_scheduler' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_scheduler.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fine_corr_scheduler' (46#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_scheduler.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_corr_cmpy_array' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:3]
+INFO: [Synth 8-6157] synthesizing module 't05_cmpy_corr_18x16' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_cmpy_corr_18x16_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't05_cmpy_corr_18x16' (47#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_cmpy_corr_18x16_stub.v:6]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:135]
+INFO: [Synth 8-6155] done synthesizing module 'fine_corr_cmpy_array' (48#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_cmpy_array.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_corr_accumulator' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_accumulator.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fine_corr_accumulator' (49#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_accumulator.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_corr_metric_controller' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_metric_controller.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fine_corr_metric_controller' (50#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_corr_metric_controller.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_square48_vendor_adapter' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_vendor_multiplier_adapters.sv:37]
+INFO: [Synth 8-6157] synthesizing module 't05_mult_s48x48_full96' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_mult_s48x48_full96_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't05_mult_s48x48_full96' (51#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_mult_s48x48_full96_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fine_square48_vendor_adapter' (52#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_vendor_multiplier_adapters.sv:37]
+INFO: [Synth 8-6157] synthesizing module 'fine_peak_selector' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_peak_selector.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fine_peak_selector' (53#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_peak_selector.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fine_partitioned_corr_engine' (54#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_partitioned_corr_engine.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_quality_controller' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_quality_controller.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fine_quality_controller' (55#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_quality_controller.sv:3]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/to_fine_core.sv:611]
+INFO: [Synth 8-6155] done synthesizing module 'to_fine_core' (56#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/to_fine_core.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'fine_quality_denominator_vendor_adapter' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_quality_vendor_adapters.sv:6]
+INFO: [Synth 8-6157] synthesizing module 't05_mult_quality_u46x36_full82' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_mult_quality_u46x36_full82_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't05_mult_quality_u46x36_full82' (57#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_mult_quality_u46x36_full82_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fine_quality_denominator_vendor_adapter' (58#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_quality_vendor_adapters.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'fine_quality_divider_vendor_adapter' [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_quality_vendor_adapters.sv:61]
+INFO: [Synth 8-6157] synthesizing module 't05_div_quality_s64_s64_f15' [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_div_quality_s64_s64_f15_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 't05_div_quality_s64_s64_f15' (59#1) [D:/008_MA_Dev/Sync_OTA/Sync_OTA.runs/synth_1/.Xil/Vivado-29000-ROG-Lunan/realtime/t05_div_quality_s64_s64_f15_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fine_quality_divider_vendor_adapter' (60#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/fine_quality_vendor_adapters.sv:61]
+INFO: [Synth 8-6155] done synthesizing module 'to_fine_estimator' (61#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/timing/to_fine_estimator.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'sync_frontend_top' (62#1) [D:/008_MA_Dev/Sync_OTA/rtl/frontend/frontend/sync_frontend_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'sync_sfo_top' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/control/sync_sfo_top.sv:5]
+	Parameter REQUIRE_CONTEXT_ACK bound to: 1 - type: integer 
+	Parameter SHARED_RAW_INPUT bound to: 1 - type: integer 
+	Parameter PROCESSING_LIMIT_CYCLES bound to: 400896 - type: integer 
+	Parameter OUTPUT_CLOCK_MHZ bound to: 150 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ota_training_dispatch' [D:/008_MA_Dev/Sync_OTA/rtl/control/ota_training_dispatch.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'ota_training_dispatch' (63#1) [D:/008_MA_Dev/Sync_OTA/rtl/control/ota_training_dispatch.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'sfo_sync_fifo__parameterized0' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/buffering/sfo_sync_fifo.sv:3]
+	Parameter WIDTH bound to: 32'b00000000000000000000000010111100 
+	Parameter DEPTH bound to: 32'b00000000000000000000000000100000 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized0' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 188 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 188 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized8' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized8' (63#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (63#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4' (63#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (63#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (63#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized0' (63#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-6155] done synthesizing module 'sfo_sync_fifo__parameterized0' (63#1) [D:/008_MA_Dev/Sync_OTA/rtl/sfo/buffering/sfo_sync_fifo.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'sfo_sync_fifo__parameterized1' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/buffering/sfo_sync_fifo.sv:3]
+	Parameter WIDTH bound to: 32'b00000000000000000000000001100000 
+	Parameter DEPTH bound to: 32'b00000000000000000000000000100000 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized1' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 96 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 96 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized1' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized9' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized9' (63#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized1' (63#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized1' (63#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-6155] done synthesizing module 'sfo_sync_fifo__parameterized1' (63#1) [D:/008_MA_Dev/Sync_OTA/rtl/sfo/buffering/sfo_sync_fifo.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'sfo_initial_estimator' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/initial_estimation/sfo_initial_estimator.sv:4]
+	Parameter MAX_CYCLES bound to: 65024 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sfo_initial_estimation_service' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/initial_estimation/sfo_initial_estimation_service.sv:4]
+	Parameter MAX_CYCLES bound to: 65024 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sfo_initial_frame_context_join' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/initial_estimation/sfo_initial_frame_context_join.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'sfo_initial_frame_context_join' (64#1) [D:/008_MA_Dev/Sync_OTA/rtl/sfo/initial_estimation/sfo_initial_frame_context_join.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'sfo_initial_raw_to_fft_frontend' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/initial_estimation/sfo_initial_raw_to_fft_frontend.sv:4]
+	Parameter MAX_CYCLES bound to: 65024 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sfo_initial_raw_reader_local_capture' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/initial_estimation/sfo_initial_raw_reader_local_capture.sv:4]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter FIRST_SAMPLE bound to: 5272 - type: integer 
+	Parameter LAST_SAMPLE bound to: 25959 - type: integer 
+	Parameter ADDR_WIDTH bound to: 32'b00000000000000000000000000001101 
+	Parameter MEMORY_SIZE bound to: 662016 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 13 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 13 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized10' (64#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized6' (64#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'sfo_training_capture_buffer' (65#1) [D:/008_MA_Dev/Sync_OTA/rtl/sfo/buffering/sfo_training_capture_buffer.sv:3]
+	Parameter DEPTH_BEATS bound to: 5172 - type: integer 
+	Parameter ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: distributed - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 398 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 8 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 398 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized11' (65#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst__parameterized0' (65#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized6' (65#1) [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/008_MA_Dev/Sync_OTA/rtl/sfo/initial_estimation/sfo_cfo_phase_increment.sv:79]
+INFO: [Synth 8-226] default block is never used [D:/008_MA_Dev/Sync_OTA/rtl/sfo/initial_estimation/sfo_cfo_phase_increment.sv:79]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 332 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 332 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 160 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 160 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter MAX_CYCLES bound to: 65024 - type: integer 
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 512 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 312 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 507 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 156 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+Info : Asymmetric Ram write pattern identified
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 202 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 202 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 96 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 96 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 96 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 292 - type: integer 
+	Parameter DEPTH bound to: 128 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 128 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 292 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 120 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 292 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter MEMORY_SIZE bound to: 593920 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: common_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 145 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 145 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 12 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 145 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 12 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 2 - type: integer 
+	Parameter WRITE_MODE_B bound to: read_first - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter WIDTH bound to: 80 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 80 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 80 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 79 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 79 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 79 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 208 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 208 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 208 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT bound to: 32'sb00000000000000000000000000000001 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 64 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 132 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 7 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 56 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 33 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 32 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+Info : Asymmetric Ram write pattern identified
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+WARNING: [Synth 8-7071] port 'm_axis_data_tuser' of module 't03_xfft_2048_main' is unconnected for instance 'u_xfft' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/fft_service/sfo_initial_fft_service.sv:162]
+WARNING: [Synth 8-7071] port 'm_axis_status_tdata' of module 't03_xfft_2048_main' is unconnected for instance 'u_xfft' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/fft_service/sfo_initial_fft_service.sv:162]
+WARNING: [Synth 8-7071] port 'm_axis_status_tvalid' of module 't03_xfft_2048_main' is unconnected for instance 'u_xfft' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/fft_service/sfo_initial_fft_service.sv:162]
+WARNING: [Synth 8-7023] instance 'u_xfft' of module 't03_xfft_2048_main' has 20 connections declared, but only 17 given [D:/008_MA_Dev/Sync_OTA/rtl/sfo/fft_service/sfo_initial_fft_service.sv:162]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 256 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 33 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 224 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 132 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 7 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 5 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+Info : Asymmetric Ram read pattern identified
+Info : Asymmetric Ram read pattern identified
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-226] default block is never used [D:/008_MA_Dev/Sync_OTA/rtl/sfo/fft_service/sfo_initial_fft_arbiter.sv:104]
+	Parameter PROGRESSIVE_SOURCE bound to: 1 - type: integer 
+	Parameter PROGRESSIVE_SOURCE bound to: 1 - type: integer 
+	Parameter PROGRESSIVE_SOURCE bound to: 1 - type: integer 
+	Parameter PROGRESSIVE_SOURCE bound to: 1 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 4096 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 33 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 13 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 4032 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 132 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 5 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+Info : Asymmetric Ram read pattern identified
+Info : Asymmetric Ram read pattern identified
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter PHASE_ROM_FILE bound to: residual_pilot_phase.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'residual_pilot_phase.mem' is read successfully [D:/008_MA_Dev/Sync_OTA/rtl/sfo/residual_estimation/sfo_residual_pilot_select_phase4.sv:26]
+INFO: [Synth 8-226] default block is never used [D:/008_MA_Dev/Sync_OTA/rtl/sfo/residual_estimation/sfo_residual_pilot_rotate2.sv:35]
+INFO: [Synth 8-226] default block is never used [D:/008_MA_Dev/Sync_OTA/rtl/sfo/residual_estimation/sfo_residual_pilot_rotate2.sv:35]
+	Parameter ALLOW_SOURCE_WAIT bound to: 1 - type: integer 
+	Parameter ALLOW_SOURCE_WAIT bound to: 1 - type: integer 
+	Parameter REQUIRE_CONTEXT_ACK bound to: 1 - type: integer 
+	Parameter SHARED_RAW_INPUT bound to: 1 - type: integer 
+	Parameter PROCESSING_LIMIT_CYCLES bound to: 400896 - type: integer 
+	Parameter OUTPUT_CLOCK_MHZ bound to: 150 - type: integer 
+	Parameter WIDTH bound to: 100 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 1 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 256 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 100 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 248 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 100 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter DEPTH bound to: 393216 - type: integer 
+	Parameter FRAME_WORDS bound to: 334215 - type: integer 
+	Parameter WIDTH bound to: 128 - type: integer 
+	Parameter DEPTH bound to: 1024 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 1024 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 1016 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 209 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 209 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 209 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 208 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 208 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 208 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 225 - type: integer 
+	Parameter DEPTH bound to: 1024 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 1024 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 225 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 1016 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 225 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 64 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 32'b00000000000000000000000010000000 
+	Parameter DEPTH bound to: 32'b00000000000000000000000000100000 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 32'b00000000000000000000000011010000 
+	Parameter DEPTH bound to: 32'b00000000000000000000000000100000 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 208 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 208 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter WIDTH bound to: 32'b00000000000000000000000001000000 
+	Parameter DEPTH bound to: 32'b00000000000000000000000000100000 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter SIM_ASSERT_CHK bound to: 1 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 32 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 24 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1707 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 8 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+	Parameter DEPTH bound to: 393216 - type: integer 
+	Parameter FRAME_WORDS bound to: 334215 - type: integer 
+	Parameter TRAIN_WORDS bound to: 5172 - type: integer 
+	Parameter DEPTH_BEATS bound to: 393216 - type: integer 
+	Parameter ADDR_WIDTH bound to: 19 - type: integer 
+ERROR: [Synth 8-281] expression must be of a packed type [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8496]
+ERROR: [Synth 8-6156] failed synthesizing module 'xpm_memory_sdpram__parameterized9' [C:/NIFPGA/programs/Vivado2021_1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+ERROR: [Synth 8-6156] failed synthesizing module 'sfo_uram_frame_bank' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/buffering/sfo_uram_frame_bank.sv:3]
+ERROR: [Synth 8-6156] failed synthesizing module 'ota_shared_raw_store' [D:/008_MA_Dev/Sync_OTA/rtl/buffer/ota_shared_raw_store.sv:6]
+ERROR: [Synth 8-6156] failed synthesizing module 'ota_raw_training_hub' [D:/008_MA_Dev/Sync_OTA/rtl/buffer/ota_raw_training_hub.sv:5]
+ERROR: [Synth 8-6156] failed synthesizing module 'sfo_two_pass_transport' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/control/sfo_two_pass_transport.sv:4]
+ERROR: [Synth 8-6156] failed synthesizing module 'sync_sfo_top' [D:/008_MA_Dev/Sync_OTA/rtl/sfo/control/sync_sfo_top.sv:5]
+ERROR: [Synth 8-6156] failed synthesizing module 'sync_ota_top' [D:/008_MA_Dev/Sync_OTA/rtl/control/sync_ota_top_v51.sv:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2306.242 ; gain = 801.109
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+297 Infos, 36 Warnings, 0 Critical Warnings and 9 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 18 02:16:46 2026...

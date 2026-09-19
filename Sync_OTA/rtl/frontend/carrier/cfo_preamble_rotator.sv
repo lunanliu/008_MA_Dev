@@ -100,33 +100,21 @@ module cfo_preamble_rotator #(
 
   function automatic [18:0] rne_shift17_saturate18(
       input logic signed [36:0] value);
-    logic sign_value;
-    logic signed [37:0] extended_value;
-    logic [37:0] magnitude;
-    logic [20:0] quotient;
+    logic signed [19:0] quotient;
     logic [16:0] remainder;
-    logic increment;
-    logic [21:0] rounded_magnitude;
-    logic overflow;
+    logic increment, overflow;
+    logic signed [20:0] rounded;
     logic signed [17:0] result;
     begin
-      sign_value = value[36];
-      extended_value = {value[36],value};
-      magnitude = sign_value ? $unsigned(-extended_value) :
-          $unsigned(extended_value);
-      quotient = magnitude >> 17;
-      remainder = magnitude[16:0];
+      // Floor quotient and nonnegative remainder give exact signed ties-to-even.
+      quotient = $signed(value[36:17]);
+      remainder = value[16:0];
       increment = (remainder > 17'h10000) ||
           ((remainder == 17'h10000) && quotient[0]);
-      rounded_magnitude = {1'b0,quotient} + increment;
-      overflow = (!sign_value && rounded_magnitude > 22'd131071) ||
-          (sign_value && rounded_magnitude > 22'd131072);
-      if (overflow)
-        result = sign_value ? -18'sd131072 : 18'sd131071;
-      else if (sign_value)
-        result = -$signed(rounded_magnitude[17:0]);
-      else
-        result = $signed(rounded_magnitude[17:0]);
+      rounded = $signed({quotient[19],quotient}) + $signed({20'd0,increment});
+      overflow = (rounded > 21'sd131071) || (rounded < -21'sd131072);
+      if (overflow) result = rounded[20] ? -18'sd131072 : 18'sd131071;
+      else result = rounded[17:0];
       return {overflow,result};
     end
   endfunction

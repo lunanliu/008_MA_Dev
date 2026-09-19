@@ -1,0 +1,152 @@
+--- a/Sync_OTA/rtl/cfo/cfo_phase74_core_v2.sv
++++ b/Sync_OTA/rtl/cfo/cfo_phase74_core_v2.sv
+@@ -18,7 +18,7 @@
+  output logic signed [39:0] pred_audit_value,output logic signed [55:0] pred_audit_residual,
+  output logic center_audit_valid,output logic [6:0] center_audit_index,output logic signed [63:0] center_audit_value
+ );
+- typedef enum logic [3:0] {ACCEPT_Z,CORDIC,STORE_PHASE,FREQ_START,FREQ_WAIT,PRED_LOAD,PRED_START,PRED_WAIT,CENTER_LOAD,CENTER_EVAL,RESULT} state_t;
++ typedef enum logic [4:0] {ACCEPT_Z,CORDIC_SHIFT,CORDIC,STORE_OFFSET,STORE_PHASE,STORE_DOT,STORE_ACCUM,FREQ_START,FREQ_MULT,FREQ_REQ,FREQ_WAIT,PRED_LOAD,PRED_START,PRED_WAIT,PRED_STORE,CENTER_LOAD,CENTER_PAIR,CENTER_SUM,CENTER_ABS,CENTER_EVAL,RESULT} state_t;
+  state_t state;
+  (* rom_style="distributed" *) logic signed [31:0] atan_rom[0:23];
+  initial $readmemh(ATAN_FILE,atan_rom);
+@@ -37,7 +37,15 @@
+  assign s_ready=!clear && state==ACCEPT_Z;
+  assign m_valid=!clear && state==RESULT;
+  wire signed [39:0] sx={{2{s_i[37]}},s_i},sy={{2{s_q[37]}},s_q};
+- wire signed [39:0] shifted_x=x>>>iteration,shifted_y=y>>>iteration;
++ logic signed [39:0] shifted_x,shifted_y,held_unwrapped,held_prediction;
++ logic signed [48:0] held_dot;
++ logic signed [55:0] held_residual;
++ logic signed [63:0] center_left,center_right,center_value;
++ logic [63:0] center_magnitude;
++ logic signed [71:0] frequency_acc,frequency_shift;
++ logic [15:0] frequency_factor;logic [4:0] frequency_remaining;
++ logic signed [63:0] frequency_numerator;
++ wire signed [71:0] frequency_sum=frequency_acc+(frequency_factor[0]?frequency_shift:72'sd0);
+  wire signed [40:0] x_wide=y[39]?($signed({x[39],x})-$signed({shifted_y[39],shifted_y})):($signed({x[39],x})+$signed({shifted_y[39],shifted_y}));
+  wire signed [40:0] y_wide=y[39]?($signed({y[39],y})+$signed({shifted_x[39],shifted_x})):($signed({y[39],y})-$signed({shifted_x[39],shifted_x}));
+  wire x_clip=x_wide>41'sd549755813887 || x_wide< -41'sd549755813888;
+@@ -47,27 +55,24 @@
+  wire signed [31:0] angle_next=y[39]?angle-atan_rom[iteration]:angle+atan_rom[iteration];
+  wire signed [32:0] difference=$signed({angle[31],angle})-$signed({previous_angle[31],previous_angle});
+  wire signed [39:0] offset_next=observation==0 ? 40'sd0:(difference>33'sd1073741824 ? unwrap_offset-40'sd2147483648:(difference< -33'sd1073741824 ? unwrap_offset+40'sd2147483648:unwrap_offset));
+- wire signed [39:0] unwrapped_next=$signed({{8{angle[31]}},angle})+offset_next;
++ wire signed [39:0] unwrapped_next=$signed({{8{angle[31]}},angle})+unwrap_offset;
+  wire signed [8:0] weight=($signed({2'b0,observation})<<<1)-9'sd73;
+- wire signed [48:0] dot_term=unwrapped_next*weight;
+- wire signed [55:0] dot_next=dot_sum+$signed({{7{dot_term[48]}},dot_term});
++ wire signed [48:0] dot_term=held_unwrapped*weight;
++ wire signed [55:0] dot_next=dot_sum+$signed({{7{held_dot[48]}},held_dot});
+  wire dot_bad=dot_sum>=56'sd562949953421312 || dot_sum<= -56'sd562949953421312;
+- wire signed [71:0] frequency_product=dot_sum*16'sd15625;
+  wire signed [63:0] pred_extended={{24{pred_product[39]}},pred_product};
+  wire signed [63:0] pred_numerator=(pred_extended<<<19)-(pred_extended<<<16);
+- wire divide_input_valid=!clear && ((state==FREQ_START && !dot_bad)||state==PRED_START);
++ wire divide_input_valid=!clear && ((state==FREQ_REQ)||state==PRED_START);
+  wire divide_input_ready,divide_valid,divide_error;
+- wire signed [63:0] divide_numerator=state==FREQ_START?frequency_product[63:0]:pred_numerator;
+- wire [31:0] divide_denominator=state==FREQ_START?32'd1239089152:32'd390625;
++ wire signed [63:0] divide_numerator=state==FREQ_REQ?frequency_numerator:pred_numerator;
++ wire [31:0] divide_denominator=state==FREQ_REQ?32'd1239089152:32'd390625;
+  wire signed [63:0] divide_quotient;
+  cfo_divide_rne64 divider(.clk(clk),.rst(rst),.abort_sync(abort_sync),.s_valid(divide_input_valid),.s_ready(divide_input_ready),.s_numerator(divide_numerator),.s_denominator(divide_denominator),.m_valid(divide_valid),.m_ready(1'b1),.m_quotient(divide_quotient),.m_error(divide_error));
+  wire signed [63:0] residual_next=$signed({{24{unwrapped_read[39]}},unwrapped_read})-divide_quotient;
+  wire signed [63:0] res_extended={{8{residual_read[55]}},residual_read};
+- wire signed [63:0] centered=(res_extended<<<6)+(res_extended<<<3)+(res_extended<<<1)-$signed({{8{residual_sum[55]}},residual_sum});
+- wire [63:0] centered_abs=centered[63]?64'd0-centered:centered;
+- wire [63:0] maximum_next=centered_abs>max_centered?centered_abs:max_centered;
+- // floor(74*2^31/20), exactly equivalent to MATLAB's integer inequality.
+- wire linear_next=maximum_next<=64'd7945689497 && saturations==0 && any_nonzero;
++ wire [63:0] maximum_next=center_magnitude>max_centered?center_magnitude:max_centered;
++ // Compare both inputs in parallel instead of max-select followed by compare.
++ wire linear_next=center_magnitude<=64'd7945689497 && max_centered<=64'd7945689497 && saturations==0 && any_nonzero;
+  task automatic fail_result(input logic [3:0] code);
+   begin
+    m_error<=code;m_nonzero<=0;m_phase_linear<=0;m_frequency_q16<=0;
+@@ -78,6 +83,9 @@
+   if(clear)begin
+    state<=ACCEPT_Z;observation<=0;work_index<=0;iteration<=0;x<=0;y<=0;angle<=0;previous_angle<=0;unwrap_offset<=0;
+    phase_code<=0;dot_sum<=0;residual_sum<=0;unwrapped_read<=0;pred_product<=0;residual_read<=0;max_centered<=0;saturations<=0;any_nonzero<=0;
++   shifted_x<=0;shifted_y<=0;held_unwrapped<=0;held_prediction<=0;held_dot<=0;held_residual<=0;
++   center_left<=0;center_right<=0;center_value<=0;center_magnitude<=0;
++   frequency_acc<=0;frequency_shift<=0;frequency_factor<=0;frequency_remaining<=0;frequency_numerator<=0;
+    m_frame<=0;m_generation<=0;m_nonzero<=0;m_phase_linear<=0;m_error<=0;m_frequency_q16<=0;m_weighted_sum<=0;m_max_centered<=0;m_cordic_saturations<=0;
+    phase_audit_valid<=0;phase_audit_index<=0;phase_audit_angle<=0;phase_audit_unwrapped<=0;
+    pred_audit_valid<=0;pred_audit_index<=0;pred_audit_value<=0;pred_audit_residual<=0;
+@@ -97,20 +105,36 @@
+       any_nonzero<=(observation==0)?(s_i!=0 || s_q!=0):(any_nonzero || s_i!=0 || s_q!=0);
+       x<=sx[39]?-sx:sx;y<=sx[39]?-sy:sy;
+       angle<=sx[39]?(sy[39]?-32'sd1073741824:32'sd1073741824):32'sd0;
+-      iteration<=0;state<=CORDIC;
++      iteration<=0;state<=CORDIC_SHIFT;
+      end
+     end
++    CORDIC_SHIFT:begin shifted_x<=x>>>iteration;shifted_y<=y>>>iteration;state<=CORDIC;end
+     CORDIC:begin
+      x<=x_next;y<=y_next;angle<=angle_next;saturations<=saturations+{{11{1'b0}},x_clip}+{{11{1'b0}},y_clip};
+-     if(iteration==23)state<=STORE_PHASE;else iteration<=iteration+1'b1;
++     if(iteration==23)state<=STORE_OFFSET;else begin iteration<=iteration+1'b1;state<=CORDIC_SHIFT;end
+     end
++    STORE_OFFSET:begin unwrap_offset<=offset_next;previous_angle<=angle;state<=STORE_PHASE;end
+     STORE_PHASE:begin
+-     unwrapped_ram[observation]<=unwrapped_next;dot_sum<=dot_next;previous_angle<=angle;unwrap_offset<=offset_next;
++     unwrapped_ram[observation]<=unwrapped_next;held_unwrapped<=unwrapped_next;
+      phase_audit_valid<=1;phase_audit_index<=observation;phase_audit_angle<=angle;phase_audit_unwrapped<=unwrapped_next;
++     state<=STORE_DOT;
++    end
++    STORE_DOT:begin held_dot<=dot_term;state<=STORE_ACCUM;end
++    STORE_ACCUM:begin
++     dot_sum<=dot_next;
+      if(observation==73)state<=FREQ_START;
+      else begin observation<=observation+1'b1;state<=ACCEPT_Z;end
+     end
+-    FREQ_START:if(dot_bad)fail_result(4'd4);else if(divide_input_ready)state<=FREQ_WAIT;
++    FREQ_START:if(dot_bad)fail_result(4'd4);else begin
++     frequency_acc<=0;frequency_shift<={{16{dot_sum[55]}},dot_sum};
++     frequency_factor<=16'd15625;frequency_remaining<=16;state<=FREQ_MULT;
++    end
++    FREQ_MULT:begin
++     frequency_acc<=frequency_sum;frequency_shift<=frequency_shift<<<1;
++     frequency_factor<=frequency_factor>>1;frequency_remaining<=frequency_remaining-1'b1;
++     if(frequency_remaining==1)begin frequency_numerator<=frequency_sum[63:0];state<=FREQ_REQ;end
++    end
++    FREQ_REQ:if(divide_input_ready)state<=FREQ_WAIT;
+     FREQ_WAIT:if(divide_valid)begin
+      if(divide_error || divide_quotient>64'sd2147483647 || divide_quotient< -64'sd2147483647)fail_result(4'd4);
+      else begin
+@@ -125,15 +149,24 @@
+     PRED_WAIT:if(divide_valid)begin
+      if(divide_error || divide_quotient>64'sd549755813887 || divide_quotient< -64'sd549755813888 || residual_next>64'sd36028797018963967 || residual_next< -64'sd36028797018963968)fail_result(4'd4);
+      else begin
+-      residual_ram[work_index]<=residual_next[55:0];residual_sum<=residual_sum+$signed(residual_next[55:0]);
+-      pred_audit_valid<=1;pred_audit_index<=work_index;pred_audit_value<=divide_quotient[39:0];pred_audit_residual<=residual_next[55:0];
+-      if(work_index==73)begin work_index<=0;max_centered<=0;state<=CENTER_LOAD;end
+-      else begin work_index<=work_index+1'b1;state<=PRED_LOAD;end
++      held_residual<=residual_next[55:0];held_prediction<=divide_quotient[39:0];state<=PRED_STORE;
+      end
+     end
+-    CENTER_LOAD:begin residual_read<=residual_ram[work_index];state<=CENTER_EVAL;end
++    PRED_STORE:begin
++     residual_ram[work_index]<=held_residual;residual_sum<=residual_sum+held_residual;
++     pred_audit_valid<=1;pred_audit_index<=work_index;pred_audit_value<=held_prediction;pred_audit_residual<=held_residual;
++     if(work_index==73)begin work_index<=0;max_centered<=0;state<=CENTER_LOAD;end
++     else begin work_index<=work_index+1'b1;state<=PRED_LOAD;end
++    end
++    CENTER_LOAD:begin residual_read<=residual_ram[work_index];state<=CENTER_PAIR;end
++    CENTER_PAIR:begin
++     center_left<=(res_extended<<<6)+(res_extended<<<3);
++     center_right<=(res_extended<<<1)-$signed({{8{residual_sum[55]}},residual_sum});state<=CENTER_SUM;
++    end
++    CENTER_SUM:begin center_value<=center_left+center_right;state<=CENTER_ABS;end
++    CENTER_ABS:begin center_magnitude<=center_value[63]?64'd0-center_value:center_value;state<=CENTER_EVAL;end
+     CENTER_EVAL:begin
+-     max_centered<=maximum_next;center_audit_valid<=1;center_audit_index<=work_index;center_audit_value<=centered;
++     max_centered<=maximum_next;center_audit_valid<=1;center_audit_index<=work_index;center_audit_value<=center_value;
+      if(work_index==73)begin
+       m_max_centered<=maximum_next;m_phase_linear<=linear_next;m_nonzero<=any_nonzero;m_cordic_saturations<=saturations;state<=RESULT;
+      end else begin work_index<=work_index+1'b1;state<=CENTER_LOAD;end
+@@ -143,4 +176,4 @@
+    endcase
+   end
+  end
+-endmodule+endmodule

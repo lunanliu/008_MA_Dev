@@ -1,0 +1,37 @@
+VERSION=2021.1
+UTILITY_SOURCE=C:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/xbip_utils_v3_0/common_tcl/common.tcl STATUS=0 RESULT=
+UTILITY_SOURCE=C:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/xbip_utils_v3_0/common_tcl/iptypes.tcl STATUS=0 RESULT=
+UTILITY_SOURCE=C:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/xbip_utils_v3_0/common_tcl/vip.tcl STATUS=1 RESULT=invalid command name "get_project_property"
+UTILITY_SOURCE=C:/NIFPGA/programs/Vivado2021_1/data/ip/xilinx/xbip_utils_v3_0/xgui/xbip_utils_v3_0.tcl STATUS=0 RESULT=
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48e1 ARGS=family
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48e2 ARGS=family
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48a ARGS=family
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48e ARGS=family
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48a1 ARGS=family
+UTILITY_PROC=::xbip_utils_v3_0::supports_dsp48 ARGS=family
+IP=t03_xfft_2048_main RUNTIME_NFFT=11
+gui_get_transform_latency INPUTS=virtexuplus 11 11 3 0 16 16 16 1 0 1 1 1 1 1 4 1 1 0 0 0 0 0
+gui_get_transform_latency STATUS=1 RESULT=invalid command name "supports_dsp48"
+get_extra_latency_r22 INPUTS=virtexuplus 11 11 4 1 16 0 1 0 16 1 1
+get_extra_latency_r22 STATUS=1 RESULT=invalid command name "supports_dsp48"
+get_output_order_latency_r22 INPUTS=virtexuplus 1 1 16 4 1 0 11 11 0 0 1 0
+get_output_order_latency_r22 STATUS=1 RESULT=invalid command name "supports_dsp48"
+get_unload_delay INPUTS=virtexuplus 3 1 11 1 16 0 0 0 1 11
+get_unload_delay STATUS=0 RESULT=0
+get_run_latency MISSING=c_xn_data_offset
+IP=t03_xfft_16384_aux RUNTIME_NFFT=11
+gui_get_transform_latency INPUTS=virtexuplus 11 14 3 1 16 16 16 1 0 1 1 1 1 1 7 1 1 0 0 0 0 0
+gui_get_transform_latency STATUS=1 RESULT=invalid command name "supports_dsp48"
+get_extra_latency_r22 INPUTS=virtexuplus 11 14 7 1 16 0 1 1 16 1 1
+get_extra_latency_r22 STATUS=1 RESULT=invalid command name "supports_dsp48"
+get_output_order_latency_r22 INPUTS=virtexuplus 1 1 16 7 1 1 14 11 0 0 1 0
+get_output_order_latency_r22 STATUS=1 RESULT=invalid command name "supports_dsp48"
+get_unload_delay INPUTS=virtexuplus 3 1 14 1 16 0 0 0 1 11
+get_unload_delay STATUS=0 RESULT=0
+get_run_latency MISSING=c_xn_data_offset
+FIR_SOURCE=fir_compiler_v7_2_global.tcl STATUS=0 RESULT=
+FIR_SOURCE=fir_compiler_v7_2_defn.tcl STATUS=1 RESULT=unknown namespace in import pattern "::::fir_compiler_v7_2_utils::*"
+FIR_SOURCE=fir_compiler_v7_2_utils.tcl STATUS=0 RESULT=P48-0_:_4_channels_:_4_x_1/4fs P48-1_:_8_channels_:_8_x_1/8fs P48-2_:_8_channels_:_4_x_1/6fs_4_x_1/12fs P48-3_:_8_channels_:_4_x_3/16fs_4_x_1/16fs P48-4_:_12_channels_:_4_x_1/6fs_8_x_1/24fs P48-5_:_12_channels_:_4_x_1/8fs_8_x_1/16fs P48-6_:_12_channels_:_12_x_1/12fs P48-7_:_16_channels_:_4_x_1/8fs_12_x_1/24fs P48-8_:_16_channels_:_8_x_1/12fs_8_x_1/24fs P48-9_:_16_channels_:_16_x_1/16fs P48-10_:_20_channels_:_4_x_1/6fs_16_x_1/48fs P48-11_:_20_channels_:_4_x_1/8fs_8_x_1/24fs_8_x_1/48fs P48-12_:_20_channels_:_8_x_1/12fs_4_x_1/24fs_8_x_1/48fs P48-13_:_20_channels_:_4_x_1/12fs_16_x_1/24fs P48-14_:_24_channels_:_8_x_1/12fs_16_x_1/48fs P48-15_:_24_channels_:_12_x_1/16fs_12_x_1/48fs P48-16_:_24_channels_:_4_x_1/12fs_12_x_1/24fs_8_x_1/48fs P48-17_:_24_channels_:_24_x_1/24fs P48-18_:_28_channels_:_4_x_1/8fs_24_x_1/48fs P48-19_:_28_channels_:_4_x_1/12fs_8_x_1/24fs_16_x_1/48fs P48-20_:_28_channels_:_20_x_1/24fs_8_x_1/48fs P48-21_:_32_channels_:_4_x_1/12fs_4_x_1/24fs_24_x_1/48fs P48-22_:_32_channels_:_8_x_1/16fs_24_x_1/48fs P48-23_:_32_channels_:_16_x_1/24fs_16_x_1/48fs P48-24_:_36_channels_:_12_x_1/24fs_24_x_1/48fs P48-25_:_40_channels_:_8_x_1/24fs_32_x_1/48fs P48-26_:_48_channels_:_48_x_1/48fs
+FIR_SOURCE=fir_compiler_v7_2_shared.tcl STATUS=1 RESULT=invalid command name "source_subcore_ipfile"
+FIR_PROC=::fir_compiler_v7_2_utils::init_coeProp ARGS=pcoeProp
+FIR_PROC=::fir_compiler_v7_2_utils::init_coeVector ARGS=pcoeVector

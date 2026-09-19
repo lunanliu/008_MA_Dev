@@ -1,0 +1,782 @@
+{
+  "tool": "pyslang 11.0.0",
+  "kind": "STATIC_SYNTAX_ONLY_NOT_ELABORATION_OR_SIMULATION",
+  "files": [
+    {
+      "file": "rtl\\frontend\\common\\bistatic_stream_pkg.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\buffering\\coarse_lag1024_beat_ring.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\buffering\\coarse_result_pair_fifo.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\buffering\\fine_corrected_local_buffer.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\buffering\\fine_energy_prefix_buffer.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\buffering\\fine_local_capture_buffer.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\carrier\\cfo_coarse_estimator.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\carrier\\cfo_phase_increment.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\carrier\\cfo_preamble_rotator.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\frontend\\sync_coarse_pair_join.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\coarse_corr_energy_4lane.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\coarse_metric_threshold.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\coarse_plateau_selector.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\coarse_rolling_sc_accumulator.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\coarse_safe_phase_replay.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_corr_accumulator.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_corr_cmpy_array.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_corr_metric_controller.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_corr_scheduler.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_local_window_reader.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_partitioned_corr_engine.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_peak_selector.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_ps1_reference_rom.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_quality_controller.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_quality_vendor_adapters.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\fine_vendor_multiplier_adapters.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\to_coarse_estimator.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\to_coarse_ports.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\to_fine_core.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\to_fine_estimator.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\buffering\\sync_beat_ram.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\timing\\sync_rolling_metric.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\frontend\\sync_continuous_detector.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\frontend\\frontend\\sync_frontend_top.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\common\\sfo_stream_pkg.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\resampling\\sfo_farrow_arithmetic.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\resampling\\sfo_fir_down15.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\resampling\\sfo_fir_down47.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\resampling\\sfo_guarded_farrow_stream.sv",
+      "diagnostic_count": 2,
+      "error_count": 0,
+      "diagnostics": "Sync_OTA\\rtl\\sfo\\resampling\\sfo_guarded_farrow_stream.sv:183:7: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n      issued <= 0;\n      ^\nSync_OTA\\rtl\\sfo\\resampling\\sfo_guarded_farrow_stream.sv:222:9: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n        write_count <= write_count + 32'd16;\n        ^\n"
+    },
+    {
+      "file": "rtl\\sfo\\resampling\\sfo_fir_up15.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\resampling\\sfo_fir_up47.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\fft_service\\sfo_initial_fft_service.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\buffering\\sfo_uram_frame_bank.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\buffering\\sfo_training_capture_buffer.sv",
+      "diagnostic_count": 1,
+      "error_count": 0,
+      "diagnostics": "Sync_OTA\\rtl\\sfo\\buffering\\sfo_training_capture_buffer.sv:130:7: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n      if (capture_release && !capture_active) begin\n      ^\n"
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_cfo_phase_increment.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\common\\sfo_vendor_multiplier_adapters.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_cfo_derotate_s16_4lane.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_dds_phase_4lane.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_derotate_wide_4lane.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_fft_pair_extractor.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_fft_pair_extractor_fifo.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_fft_pair_extractor_memory.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_fft_swls_backend.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_five_sum_accumulator.sv",
+      "diagnostic_count": 1,
+      "error_count": 0,
+      "diagnostics": "Sync_OTA\\rtl\\sfo\\initial_estimation\\sfo_initial_five_sum_accumulator.sv:131:7: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n      for (stage = 1; stage < MULT_LATENCY; stage = stage + 1) begin\n      ^\n"
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_frame_context_join.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_estimation_service.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_estimator.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\fft_service\\sfo_initial_fft_arbiter.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_observation_engine.sv",
+      "diagnostic_count": 2,
+      "error_count": 0,
+      "diagnostics": "Sync_OTA\\rtl\\sfo\\initial_estimation\\sfo_initial_observation_engine.sv:206:7: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n      aligned_valid <= {aligned_valid[ALIGN_LAT-2:0], product_valid[WEIGHT_LAT-1]};\n      ^\nSync_OTA\\rtl\\sfo\\initial_estimation\\sfo_initial_observation_engine.sv:210:7: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n      if (pair_protocol || input_overflow || input_underflow || output_overflow || output_underflow\n      ^\n"
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_observation_engine_2lane.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_observation_engine_fifo.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_observation_store.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_observation_store_bank.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_pair_max_tracker_2lane.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_pair_phasor_bfp.sv",
+      "diagnostic_count": 1,
+      "error_count": 0,
+      "diagnostics": "Sync_OTA\\rtl\\sfo\\initial_estimation\\sfo_initial_pair_phasor_bfp.sv:108:5: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n    if (fifo_input.zero_phasor || fifo_input.range_error) begin\n    ^\n"
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_ps3_ps10_job_sequencer.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_raw_reader_4lane.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_raw_reader_local_capture.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_raw_to_fft_frontend.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_regression_tail.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_shared_gain_s16_4lane.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_shared_gain_s16_lane.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_swls_weighted_backend.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_unsigned_divider_service.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_unsigned_divider_service_fifo.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\initial_estimation\\sfo_initial_weight_pack.sv",
+      "diagnostic_count": 1,
+      "error_count": 0,
+      "diagnostics": "Sync_OTA\\rtl\\sfo\\initial_estimation\\sfo_initial_weight_pack.sv:68:7: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n      common_shift97 = (length > 45) ? length - 45 : 0;\n      ^\n"
+    },
+    {
+      "file": "rtl\\sfo\\resampling\\sfo_guarded_resampling_core.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\resampling\\sfo_nominal_pack4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\buffering\\sfo_sync_fifo.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\first_resampling\\sfo_first_pass_descriptor.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\first_resampling\\sfo_first_resampler.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\first_resampling\\sfo_first_frame_scheduler.sv",
+      "diagnostic_count": 3,
+      "error_count": 0,
+      "diagnostics": "Sync_OTA\\rtl\\sfo\\first_resampling\\sfo_first_frame_scheduler.sv:104:5: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n    fault_code = 8'd0;\n    ^\nSync_OTA\\rtl\\sfo\\first_resampling\\sfo_first_frame_scheduler.sv:116:11: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n          if (fault_code == 0 && s_valid && s_ready &&\n          ^\nSync_OTA\\rtl\\sfo\\first_resampling\\sfo_first_frame_scheduler.sv:199:9: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]\n        if (m_valid && m_ready) accepted_packed_beats <= accepted_packed_beats + 1'b1;\n        ^\n"
+    },
+    {
+      "file": "rtl\\sfo\\fft_service\\sfo_residual_ifft_service4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_div_u80_u49_rne.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_delay_backend4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_fft_grid_stage4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_grid_packet_queue2.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\fft_service\\sfo_residual_fft_service4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\fft_service\\sfo_residual_fft_window4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_nominal_window_reader4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_peak_interpolate.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_peak_triplet4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_pilot_front2.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_pilot_grid4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_pilot_rotate2.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_pilot_select_phase4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_power4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_estimator4.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\residual_estimation\\sfo_residual_ls74.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\buffering\\sfo_record_cdc_fifo.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\control\\sfo_domain_reset.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\buffering\\sfo_output_buffer.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\buffering\\sfo_intermediate_frame_bank.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\buffering\\sfo_raw_frame_ring.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\second_resampling\\sfo_second_pass_descriptor.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\second_resampling\\sfo_second_resampler.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\control\\sync_sfo_top.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\sfo\\control\\sfo_two_pass_transport.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\cfo\\cfo_rotate4.sv",
+      "diagnostic_count": 1,
+      "error_count": 0,
+      "diagnostics": "Sync_OTA\\rtl\\cfo\\cfo_rotate4.sv:91:10: warning: no newline at end of file [-Wnewline-eof]\nendmodule\n         ^\n"
+    },
+    {
+      "file": "rtl\\cfo\\cfo_coordinate_control.sv",
+      "diagnostic_count": 1,
+      "error_count": 0,
+      "diagnostics": "Sync_OTA\\rtl\\cfo\\cfo_coordinate_control.sv:140:10: warning: no newline at end of file [-Wnewline-eof]\nendmodule\n         ^\n"
+    },
+    {
+      "file": "rtl\\cfo\\cfo_front2048_window_a07.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\cfo\\cfo_fft2048_core.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\cfo\\cfo_estimator_link_a06.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\cfo\\cfo_estimate74_backend_a07.sv",
+      "diagnostic_count": 1,
+      "error_count": 0,
+      "diagnostics": "Sync_OTA\\rtl\\cfo\\cfo_estimate74_backend_a07.sv:86:10: warning: no newline at end of file [-Wnewline-eof]\nendmodule\n         ^\n"
+    },
+    {
+      "file": "rtl\\cfo\\cfo_fft74_quality_v2.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\cfo\\cfo_divide_rne64wide.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\cfo\\cfo_fft256_core.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\cfo\\cfo_phase74_core_v2.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\cfo\\cfo_divide_rne64.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\common\\ota_async_fifo_a06.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\control\\ota_sfo_context_join.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\buffer\\ota_shared_raw_store.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\control\\ota_raw_lease_scheduler.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\control\\ota_training_dispatch.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\buffer\\ota_raw_training_hub.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\buffer\\ota_cfo_window_queue.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\cfo\\ota_cfo_chain_onchip.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\control\\ota_stream_ingress.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    },
+    {
+      "file": "rtl\\control\\sync_ota_top_v51.sv",
+      "diagnostic_count": 0,
+      "error_count": 0,
+      "diagnostics": ""
+    }
+  ],
+  "diagnostic_count": 14,
+  "error_count": 0
+}

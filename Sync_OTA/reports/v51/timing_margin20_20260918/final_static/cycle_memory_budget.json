@@ -1,0 +1,565 @@
+{
+  "evidence": "CLOSED_FORM_STATIC_DESIGN_CONTRACT_NOT_MEASUREMENT",
+  "production_cfo_pipeline_candidates_applied": true,
+  "timing_margin20_revision_applied": true,
+  "timing_margin20_physical_qualification": "NOT_RUN",
+  "initial_training_bound_cycles125": 214521,
+  "coefficient_rom_paging_applied": true,
+  "coefficient_rom_added_cycles500": 0,
+  "routed_redesign_applied": true,
+  "owned_farrow_pipeline_cycles150": 5,
+  "nominal_frame_samples": 1336320,
+  "nominal_frame_beats": 334080,
+  "nominal_frame_clock_budget": {
+    "125": 334080,
+    "150": 400896,
+    "500": 1336320
+  },
+  "arrival_contract": {
+    "minimum_confirmed_frame_distance_words": 334029,
+    "minimum_period_cycles150": 400834,
+    "assumptions": [
+      "one successful confirmation per physical frame",
+      "physical SFO within +/-150 ppm",
+      "no additional unbounded interframe TO drift",
+      "healthy clocks and bounded internal IP service",
+      "continuous 125 MHz four-sample ingress; external final backpressure is zero"
+    ]
+  },
+  "vendor_contract": {
+    "fir_input_and_output_ii": 1,
+    "fir_latency_sum": 72,
+    "extra_four_input_fifos_budget": 64,
+    "main_fft_gui_latency500": 6287,
+    "aux_fft_gui_latency500": 6306,
+    "main_fft_service_budget500": 10452,
+    "aux_fft_service_budget500": 10471,
+    "main_fft_required_upper500": 10480,
+    "aux_fft_required_upper500": 12376,
+    "first_epoch_configuration": "must complete before the first real FFT data acceptance",
+    "qualification": "installed metadata + published vendor interface contract; not native model execution"
+  },
+  "raw": {
+    "capacity_words": 393216,
+    "resampler_reads": 334215,
+    "one_training_reads": 5172,
+    "maximum_competing_training_jobs": 2,
+    "cfg_fixed_cycles150": 34,
+    "input_adapter_slots": 2,
+    "segmented_read_response_cycles150": 7,
+    "joint_condition_cfg_plus_fir_max": 59691,
+    "joint_condition_actual": 116,
+    "conservative_live_words_bound": 343571,
+    "measured_peak": null
+  },
+  "sfo": {
+    "e1_commit_cycles150": 345098,
+    "e2_next_cfg_cycles150": 360085,
+    "e2_bank_free_cycles150": 359980,
+    "e2_previous_job_wait_bound": 0,
+    "residual_tail_budget_cycles150": 9600,
+    "residual_tail_derived_upper_cycles150": 9422,
+    "latest_bank_lifetime_cycles150": 714746,
+    "two_frame_budget_cycles150": 801668,
+    "two_bank_margin_cycles150": 86922,
+    "output_ring_words": 65536,
+    "output_reserved_response_words": 64,
+    "output_ring_measured_peak": null,
+    "source_internal_holes_bound": 150
+  },
+  "cfo": {
+    "fft_window_cycles500": 15473,
+    "all_windows_cycles500": 1145002,
+    "fft_core_cycles500": 15463,
+    "fft_plus_observation_front_cycles500": 15472,
+    "packed_prefetch_start_allowance500": 1,
+    "window_upper_cycles150": 4642,
+    "backend_mailbox_allowance150": 1,
+    "coarse_write_commit_allowance150": 2,
+    "phase_tail_cycles150": 5687,
+    "quality_tail_cycles150": 7051,
+    "backend_with_control_B": 7092,
+    "first_frame_E0": 357628,
+    "steady_server_S": 345987,
+    "coordinate_call_cycles150": 440,
+    "final_min_cycles150": 334520,
+    "final_max_cycles150": 334996,
+    "bank_feedback_induction_margin": 174,
+    "final_nonqueue_margin": 1388,
+    "bank_lifetime_cycles150": 704681,
+    "output_no_consumption_gap_cycles150": 25547,
+    "window_capacity": 8,
+    "window_reserved_upper_bound": 7,
+    "window_measured_peak": null
+  },
+  "major_memory_estimates": {
+    "raw_uram": 192,
+    "sfo_uram": 328,
+    "cfo_uram": 328,
+    "uram_total": 848,
+    "device_uram": 960,
+    "margin20_incremental_FF_conservative_planning_allowance": 80000,
+    "margin20_DSP_increment": 0,
+    "sfo_ring_bram36_expected": 256,
+    "cfo_window_bram36_expected": 16,
+    "qualification": "architectural geometry only, not synthesis or NI platform availability",
+    "margin20_observation_BRAM36_planning_allowance": 5
+  },
+  "output": {
+    "clock_mhz": 150,
+    "samples_per_beat": 4,
+    "peak_samples_per_second": 600000000,
+    "nominal_average_samples_per_second": 500000000,
+    "downstream_backpressure_supported": false,
+    "fixed_pipeline_stages": 2,
+    "stall_absorption_fifo_words": 0
+  },
+  "windows": [
+    {
+      "window": 0,
+      "start_sample": 25984,
+      "sfo_bank_first_word": 6505,
+      "sfo_bank_ready_exclusive": 7017
+    },
+    {
+      "window": 1,
+      "start_sample": 43904,
+      "sfo_bank_first_word": 10985,
+      "sfo_bank_ready_exclusive": 11497
+    },
+    {
+      "window": 2,
+      "start_sample": 61824,
+      "sfo_bank_first_word": 15465,
+      "sfo_bank_ready_exclusive": 15977
+    },
+    {
+      "window": 3,
+      "start_sample": 79744,
+      "sfo_bank_first_word": 19945,
+      "sfo_bank_ready_exclusive": 20457
+    },
+    {
+      "window": 4,
+      "start_sample": 97664,
+      "sfo_bank_first_word": 24425,
+      "sfo_bank_ready_exclusive": 24937
+    },
+    {
+      "window": 5,
+      "start_sample": 115584,
+      "sfo_bank_first_word": 28905,
+      "sfo_bank_ready_exclusive": 29417
+    },
+    {
+      "window": 6,
+      "start_sample": 133504,
+      "sfo_bank_first_word": 33385,
+      "sfo_bank_ready_exclusive": 33897
+    },
+    {
+      "window": 7,
+      "start_sample": 151424,
+      "sfo_bank_first_word": 37865,
+      "sfo_bank_ready_exclusive": 38377
+    },
+    {
+      "window": 8,
+      "start_sample": 169344,
+      "sfo_bank_first_word": 42345,
+      "sfo_bank_ready_exclusive": 42857
+    },
+    {
+      "window": 9,
+      "start_sample": 187264,
+      "sfo_bank_first_word": 46825,
+      "sfo_bank_ready_exclusive": 47337
+    },
+    {
+      "window": 10,
+      "start_sample": 205184,
+      "sfo_bank_first_word": 51305,
+      "sfo_bank_ready_exclusive": 51817
+    },
+    {
+      "window": 11,
+      "start_sample": 223104,
+      "sfo_bank_first_word": 55785,
+      "sfo_bank_ready_exclusive": 56297
+    },
+    {
+      "window": 12,
+      "start_sample": 241024,
+      "sfo_bank_first_word": 60265,
+      "sfo_bank_ready_exclusive": 60777
+    },
+    {
+      "window": 13,
+      "start_sample": 258944,
+      "sfo_bank_first_word": 64745,
+      "sfo_bank_ready_exclusive": 65257
+    },
+    {
+      "window": 14,
+      "start_sample": 276864,
+      "sfo_bank_first_word": 69225,
+      "sfo_bank_ready_exclusive": 69737
+    },
+    {
+      "window": 15,
+      "start_sample": 294784,
+      "sfo_bank_first_word": 73705,
+      "sfo_bank_ready_exclusive": 74217
+    },
+    {
+      "window": 16,
+      "start_sample": 312704,
+      "sfo_bank_first_word": 78185,
+      "sfo_bank_ready_exclusive": 78697
+    },
+    {
+      "window": 17,
+      "start_sample": 330624,
+      "sfo_bank_first_word": 82665,
+      "sfo_bank_ready_exclusive": 83177
+    },
+    {
+      "window": 18,
+      "start_sample": 348544,
+      "sfo_bank_first_word": 87145,
+      "sfo_bank_ready_exclusive": 87657
+    },
+    {
+      "window": 19,
+      "start_sample": 366464,
+      "sfo_bank_first_word": 91625,
+      "sfo_bank_ready_exclusive": 92137
+    },
+    {
+      "window": 20,
+      "start_sample": 384384,
+      "sfo_bank_first_word": 96105,
+      "sfo_bank_ready_exclusive": 96617
+    },
+    {
+      "window": 21,
+      "start_sample": 402304,
+      "sfo_bank_first_word": 100585,
+      "sfo_bank_ready_exclusive": 101097
+    },
+    {
+      "window": 22,
+      "start_sample": 420224,
+      "sfo_bank_first_word": 105065,
+      "sfo_bank_ready_exclusive": 105577
+    },
+    {
+      "window": 23,
+      "start_sample": 438144,
+      "sfo_bank_first_word": 109545,
+      "sfo_bank_ready_exclusive": 110057
+    },
+    {
+      "window": 24,
+      "start_sample": 456064,
+      "sfo_bank_first_word": 114025,
+      "sfo_bank_ready_exclusive": 114537
+    },
+    {
+      "window": 25,
+      "start_sample": 473984,
+      "sfo_bank_first_word": 118505,
+      "sfo_bank_ready_exclusive": 119017
+    },
+    {
+      "window": 26,
+      "start_sample": 491904,
+      "sfo_bank_first_word": 122985,
+      "sfo_bank_ready_exclusive": 123497
+    },
+    {
+      "window": 27,
+      "start_sample": 509824,
+      "sfo_bank_first_word": 127465,
+      "sfo_bank_ready_exclusive": 127977
+    },
+    {
+      "window": 28,
+      "start_sample": 527744,
+      "sfo_bank_first_word": 131945,
+      "sfo_bank_ready_exclusive": 132457
+    },
+    {
+      "window": 29,
+      "start_sample": 545664,
+      "sfo_bank_first_word": 136425,
+      "sfo_bank_ready_exclusive": 136937
+    },
+    {
+      "window": 30,
+      "start_sample": 563584,
+      "sfo_bank_first_word": 140905,
+      "sfo_bank_ready_exclusive": 141417
+    },
+    {
+      "window": 31,
+      "start_sample": 581504,
+      "sfo_bank_first_word": 145385,
+      "sfo_bank_ready_exclusive": 145897
+    },
+    {
+      "window": 32,
+      "start_sample": 599424,
+      "sfo_bank_first_word": 149865,
+      "sfo_bank_ready_exclusive": 150377
+    },
+    {
+      "window": 33,
+      "start_sample": 617344,
+      "sfo_bank_first_word": 154345,
+      "sfo_bank_ready_exclusive": 154857
+    },
+    {
+      "window": 34,
+      "start_sample": 635264,
+      "sfo_bank_first_word": 158825,
+      "sfo_bank_ready_exclusive": 159337
+    },
+    {
+      "window": 35,
+      "start_sample": 653184,
+      "sfo_bank_first_word": 163305,
+      "sfo_bank_ready_exclusive": 163817
+    },
+    {
+      "window": 36,
+      "start_sample": 671104,
+      "sfo_bank_first_word": 167785,
+      "sfo_bank_ready_exclusive": 168297
+    },
+    {
+      "window": 37,
+      "start_sample": 689024,
+      "sfo_bank_first_word": 172265,
+      "sfo_bank_ready_exclusive": 172777
+    },
+    {
+      "window": 38,
+      "start_sample": 706944,
+      "sfo_bank_first_word": 176745,
+      "sfo_bank_ready_exclusive": 177257
+    },
+    {
+      "window": 39,
+      "start_sample": 724864,
+      "sfo_bank_first_word": 181225,
+      "sfo_bank_ready_exclusive": 181737
+    },
+    {
+      "window": 40,
+      "start_sample": 742784,
+      "sfo_bank_first_word": 185705,
+      "sfo_bank_ready_exclusive": 186217
+    },
+    {
+      "window": 41,
+      "start_sample": 760704,
+      "sfo_bank_first_word": 190185,
+      "sfo_bank_ready_exclusive": 190697
+    },
+    {
+      "window": 42,
+      "start_sample": 778624,
+      "sfo_bank_first_word": 194665,
+      "sfo_bank_ready_exclusive": 195177
+    },
+    {
+      "window": 43,
+      "start_sample": 796544,
+      "sfo_bank_first_word": 199145,
+      "sfo_bank_ready_exclusive": 199657
+    },
+    {
+      "window": 44,
+      "start_sample": 814464,
+      "sfo_bank_first_word": 203625,
+      "sfo_bank_ready_exclusive": 204137
+    },
+    {
+      "window": 45,
+      "start_sample": 832384,
+      "sfo_bank_first_word": 208105,
+      "sfo_bank_ready_exclusive": 208617
+    },
+    {
+      "window": 46,
+      "start_sample": 850304,
+      "sfo_bank_first_word": 212585,
+      "sfo_bank_ready_exclusive": 213097
+    },
+    {
+      "window": 47,
+      "start_sample": 868224,
+      "sfo_bank_first_word": 217065,
+      "sfo_bank_ready_exclusive": 217577
+    },
+    {
+      "window": 48,
+      "start_sample": 886144,
+      "sfo_bank_first_word": 221545,
+      "sfo_bank_ready_exclusive": 222057
+    },
+    {
+      "window": 49,
+      "start_sample": 904064,
+      "sfo_bank_first_word": 226025,
+      "sfo_bank_ready_exclusive": 226537
+    },
+    {
+      "window": 50,
+      "start_sample": 921984,
+      "sfo_bank_first_word": 230505,
+      "sfo_bank_ready_exclusive": 231017
+    },
+    {
+      "window": 51,
+      "start_sample": 939904,
+      "sfo_bank_first_word": 234985,
+      "sfo_bank_ready_exclusive": 235497
+    },
+    {
+      "window": 52,
+      "start_sample": 957824,
+      "sfo_bank_first_word": 239465,
+      "sfo_bank_ready_exclusive": 239977
+    },
+    {
+      "window": 53,
+      "start_sample": 975744,
+      "sfo_bank_first_word": 243945,
+      "sfo_bank_ready_exclusive": 244457
+    },
+    {
+      "window": 54,
+      "start_sample": 993664,
+      "sfo_bank_first_word": 248425,
+      "sfo_bank_ready_exclusive": 248937
+    },
+    {
+      "window": 55,
+      "start_sample": 1011584,
+      "sfo_bank_first_word": 252905,
+      "sfo_bank_ready_exclusive": 253417
+    },
+    {
+      "window": 56,
+      "start_sample": 1029504,
+      "sfo_bank_first_word": 257385,
+      "sfo_bank_ready_exclusive": 257897
+    },
+    {
+      "window": 57,
+      "start_sample": 1047424,
+      "sfo_bank_first_word": 261865,
+      "sfo_bank_ready_exclusive": 262377
+    },
+    {
+      "window": 58,
+      "start_sample": 1065344,
+      "sfo_bank_first_word": 266345,
+      "sfo_bank_ready_exclusive": 266857
+    },
+    {
+      "window": 59,
+      "start_sample": 1083264,
+      "sfo_bank_first_word": 270825,
+      "sfo_bank_ready_exclusive": 271337
+    },
+    {
+      "window": 60,
+      "start_sample": 1101184,
+      "sfo_bank_first_word": 275305,
+      "sfo_bank_ready_exclusive": 275817
+    },
+    {
+      "window": 61,
+      "start_sample": 1119104,
+      "sfo_bank_first_word": 279785,
+      "sfo_bank_ready_exclusive": 280297
+    },
+    {
+      "window": 62,
+      "start_sample": 1137024,
+      "sfo_bank_first_word": 284265,
+      "sfo_bank_ready_exclusive": 284777
+    },
+    {
+      "window": 63,
+      "start_sample": 1154944,
+      "sfo_bank_first_word": 288745,
+      "sfo_bank_ready_exclusive": 289257
+    },
+    {
+      "window": 64,
+      "start_sample": 1172864,
+      "sfo_bank_first_word": 293225,
+      "sfo_bank_ready_exclusive": 293737
+    },
+    {
+      "window": 65,
+      "start_sample": 1190784,
+      "sfo_bank_first_word": 297705,
+      "sfo_bank_ready_exclusive": 298217
+    },
+    {
+      "window": 66,
+      "start_sample": 1208704,
+      "sfo_bank_first_word": 302185,
+      "sfo_bank_ready_exclusive": 302697
+    },
+    {
+      "window": 67,
+      "start_sample": 1226624,
+      "sfo_bank_first_word": 306665,
+      "sfo_bank_ready_exclusive": 307177
+    },
+    {
+      "window": 68,
+      "start_sample": 1244544,
+      "sfo_bank_first_word": 311145,
+      "sfo_bank_ready_exclusive": 311657
+    },
+    {
+      "window": 69,
+      "start_sample": 1262464,
+      "sfo_bank_first_word": 315625,
+      "sfo_bank_ready_exclusive": 316137
+    },
+    {
+      "window": 70,
+      "start_sample": 1280384,
+      "sfo_bank_first_word": 320105,
+      "sfo_bank_ready_exclusive": 320617
+    },
+    {
+      "window": 71,
+      "start_sample": 1298304,
+      "sfo_bank_first_word": 324585,
+      "sfo_bank_ready_exclusive": 325097
+    },
+    {
+      "window": 72,
+      "start_sample": 1316224,
+      "sfo_bank_first_word": 329065,
+      "sfo_bank_ready_exclusive": 329577
+    },
+    {
+      "window": 73,
+      "start_sample": 1334144,
+      "sfo_bank_first_word": 333545,
+      "sfo_bank_ready_exclusive": 334057
+    }
+  ],
+  "numerical_comparison": "NOT_RUN",
+  "new_synthesis_and_timing": "NOT_RUN"
+}

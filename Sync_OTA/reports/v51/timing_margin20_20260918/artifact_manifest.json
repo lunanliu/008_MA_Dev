@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-09-18T23:56:45.955354+02:00",
+  "status": "STATIC_DELIVERY_COMPLETE_PHYSICAL_MARGIN_NOT_QUALIFIED",
+  "files": [
+    {
+      "path": "Sync_OTA.xpr",
+      "sha256": "430f3a0701e42347cc903ec4d37d5098d9d14d514ca5c6682eacd442ce78f78b"
+    },
+    {
+      "path": "FPGA工程师 agents.md",
+      "sha256": "e56c0d4e946d27673df60003a07339fadf9818d16c780038981f8c993e192739"
+    },
+    {
+      "path": "tools/v51/static_design_audit.py",
+      "sha256": "625d13c83c7c6d5c1c211921c1c2d62982e8665f8d44fd1bb255cc6aa3deb0f1"
+    },
+    {
+      "path": "tools/v51/timing_margin20_common.tcl",
+      "sha256": "fcecf5daa613ce42384fb623cb96acbef7e1b83d085824c2de69b6b4d34beb46"
+    },
+    {
+      "path": "tools/v51/configure_timing_margin20.tcl",
+      "sha256": "4dc08045a6116074d01e887118741bcb019582658884bd23e9591b1668d104c6"
+    },
+    {
+      "path": "tools/v51/pre_impl_margin20.tcl",
+      "sha256": "f31e209d3a3f7b4038d0d69435609d6e330e9baf5314ee4ac939d9e962a3dd23"
+    },
+    {
+      "path": "tools/v51/pre_physopt_margin20.tcl",
+      "sha256": "aa9f07a54e380c1557e407ef571bd80370c826dd793707ec68055eab343634a8"
+    },
+    {
+      "path": "tools/v51/post_route_margin20.tcl",
+      "sha256": "d1ae88ea432e901a2f40e4be8cb053e4ffe191dbdcd57ec96a8e1e8e6de3f911"
+    },
+    {
+      "path": "tools/v51/optimize_fft_controls_after_place.tcl",
+      "sha256": "799eb93e9c49433bd18f16b32a508b952512314bc5c4aec0b993e16e4af2672f"
+    },
+    {
+      "path": "docs/v51/TIMING_MARGIN20_DESIGN_ZH.md",
+      "sha256": "aa4981a344da755e58dc0c3f2fa55f81c063b40be54f51254fc9a96b95d8ac49"
+    },
+    {
+      "path": "reports/v51/timing_margin20_20260918/START_HERE_ZH.md",
+      "sha256": "5ba729c99e2d67a6fe7810f9897ebd929594ea8e22df19dc90a774889466db12"
+    }
+  ],
+  "native_configuration_execution": "NOT_RUN",
+  "new_simulation_synthesis_implementation": "NOT_RUN"
+}

@@ -1,0 +1,214 @@
+{
+  "status": "FUNCTIONAL_ROLE_TESTS_PASS",
+  "created_utc": "2026-09-17T18:52:42.709136+00:00",
+  "grant_id": "SYNC_DDR_FOUR_STAGE_V1_20260917T184529Z",
+  "frozen_manifest_sha256": "BF0F47EE82245915D79E240B7E3C196CD34F32FD7A6D69521869578609144801",
+  "freeze_inputs_and_tools_match": true,
+  "budget_started_utc": "2026-09-17T18:46:37.9312527Z",
+  "fixed_deadline_utc": "2026-09-17T19:01:37.9312527Z",
+  "first_native_root_identity": {
+    "Pid": 5864,
+    "CreationTimeUtc": "2026-09-17T18:46:37.9786848Z"
+  },
+  "project": "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create\\project\\DDR_Control.xpr",
+  "stages": [
+    {
+      "stage": "create",
+      "status": "PASS",
+      "directory": "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create",
+      "grant_id": "SYNC_DDR_FOUR_STAGE_V1_20260917T184529Z",
+      "manifest_sha256": "BF0F47EE82245915D79E240B7E3C196CD34F32FD7A6D69521869578609144801",
+      "started_utc": "2026-09-17T18:46:37.9401360Z",
+      "exit_code": 0,
+      "root_pid": 5864,
+      "cleanup": {
+        "checks": [
+          {
+            "ids": [],
+            "utc": "2026-09-17T18:46:57.5385375Z"
+          },
+          {
+            "ids": [],
+            "utc": "2026-09-17T18:46:58.0428711Z"
+          },
+          {
+            "ids": [],
+            "utc": "2026-09-17T18:46:58.5541229Z"
+          }
+        ],
+        "closed": true
+      },
+      "error": null,
+      "logs": [],
+      "finished_utc": "2026-09-17T18:46:58.5893886Z",
+      "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /s /c \"\"C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat\" \"-mode\" \"batch\" \"-source\" \"D:\\008_MA_Dev\\Sync_DDR\\scripts\\create_four_stage_project.tcl\" \"-log\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create\\vivado.log\" \"-journal\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create\\vivado.jou\" \"-tclargs\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create\" > \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create\\launcher.log\" 2>&1\"",
+      "deadline_utc": "2026-09-17T19:01:37.9312527Z",
+      "root_identity": {
+        "Pid": 5864,
+        "CreationTimeUtc": "2026-09-17T18:46:37.9786848Z"
+      },
+      "distinct_warnings": [
+        "WARNING: Default location for XILINX_HLS not found: ",
+        "WARNING: Default location for XILINX_VIVADO_HLS not found: ",
+        "WARNING: [Runs 36-537] File D:/008_MA_Dev/Sync_DDR/scripts/threads_pre.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) synth_1. This file will not be handled as part of the project for archive and other project based functionality."
+      ],
+      "error_diagnostics": [],
+      "started_local": "2026-09-17T20:46:37.940136+02:00",
+      "finished_local": "2026-09-17T20:46:58.589388+02:00"
+    },
+    {
+      "stage": "capture",
+      "status": "PASS",
+      "directory": "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture",
+      "grant_id": "SYNC_DDR_FOUR_STAGE_V1_20260917T184529Z",
+      "manifest_sha256": "BF0F47EE82245915D79E240B7E3C196CD34F32FD7A6D69521869578609144801",
+      "started_utc": "2026-09-17T18:47:20.2749207Z",
+      "exit_code": 0,
+      "root_pid": 8456,
+      "cleanup": {
+        "closed": true,
+        "checks": [
+          {
+            "ids": [],
+            "utc": "2026-09-17T18:47:47.5620318Z"
+          },
+          {
+            "ids": [],
+            "utc": "2026-09-17T18:47:48.0702875Z"
+          },
+          {
+            "ids": [],
+            "utc": "2026-09-17T18:47:48.5818825Z"
+          }
+        ]
+      },
+      "error": null,
+      "logs": [
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\compile.bat",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\compile.log",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\elaborate.bat",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\elaborate.log",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\simulate.bat",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\simulate.log",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\tb_ddr_capture_ctrl_vhdl.prj",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\tb_ddr_capture_ctrl.tcl",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\webtalk_15916.backup.log",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\webtalk.log",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\native_logs\\xvhdl.log"
+      ],
+      "finished_utc": "2026-09-17T18:47:48.6644655Z",
+      "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /s /c \"\"C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat\" \"-mode\" \"batch\" \"-source\" \"D:\\008_MA_Dev\\Sync_DDR\\scripts\\simulate_reverse.tcl\" \"-log\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\vivado.log\" \"-journal\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\vivado.jou\" \"-tclargs\" \"capture\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create\\project\\DDR_Control.xpr\" > \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_02_capture\\launcher.log\" 2>&1\"",
+      "deadline_utc": "2026-09-17T19:01:37.9312527Z",
+      "root_identity": {
+        "Pid": 8456,
+        "CreationTimeUtc": "2026-09-17T18:47:20.3190941Z"
+      },
+      "distinct_warnings": [
+        "WARNING: Default location for XILINX_HLS not found: ",
+        "WARNING: Default location for XILINX_VIVADO_HLS not found: ",
+        "WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/008_MA_Dev/Sync_DDR/work/four_stage_v1/attempt_01_create/project/DDR_Control.gen/sources_1'."
+      ],
+      "error_diagnostics": [],
+      "pass_marker": "DDR_CAPTURE_CTRL_TEST_PASS",
+      "pass_marker_count": 1,
+      "native_simulate_sha256": "C4EB2D047D9EC931A09FA364EFB59B2DE36ECDE24D72F49986E5DAFC2B55401D",
+      "xelab_commands": [
+        "Running: C:/NIFPGA/programs/Vivado2021_1/bin/unwrapped/win64.o/xelab.exe -wto 5fb2d32ab3a94f3fa7f431bba8706f84 --incr --debug typical --relax --mt 16 -L xil_defaultlib -L secureip --snapshot tb_ddr_capture_ctrl_behav xil_defaultlib.tb_ddr_capture_ctrl -log elaborate.log "
+      ],
+      "started_local": "2026-09-17T20:47:20.274920+02:00",
+      "finished_local": "2026-09-17T20:47:48.664465+02:00"
+    },
+    {
+      "stage": "download",
+      "status": "PASS",
+      "directory": "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download",
+      "grant_id": "SYNC_DDR_FOUR_STAGE_V1_20260917T184529Z",
+      "manifest_sha256": "BF0F47EE82245915D79E240B7E3C196CD34F32FD7A6D69521869578609144801",
+      "started_utc": "2026-09-17T18:48:11.8276802Z",
+      "exit_code": 0,
+      "root_pid": 31160,
+      "cleanup": {
+        "closed": true,
+        "checks": [
+          {
+            "utc": "2026-09-17T18:48:40.1683129Z",
+            "ids": []
+          },
+          {
+            "utc": "2026-09-17T18:48:40.6768384Z",
+            "ids": []
+          },
+          {
+            "utc": "2026-09-17T18:48:41.1862843Z",
+            "ids": []
+          }
+        ]
+      },
+      "error": null,
+      "logs": [
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\compile.bat",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\compile.log",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\elaborate.bat",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\elaborate.log",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\simulate.bat",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\simulate.log",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\tb_ddr_download_ctrl_vhdl.prj",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\tb_ddr_download_ctrl.tcl",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\webtalk_8092.backup.log",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\webtalk.log",
+        "D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\native_logs\\xvhdl.log"
+      ],
+      "finished_utc": "2026-09-17T18:48:41.2646649Z",
+      "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /s /c \"\"C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat\" \"-mode\" \"batch\" \"-source\" \"D:\\008_MA_Dev\\Sync_DDR\\scripts\\simulate_reverse.tcl\" \"-log\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\vivado.log\" \"-journal\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\vivado.jou\" \"-tclargs\" \"download\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_01_create\\project\\DDR_Control.xpr\" > \"D:\\008_MA_Dev\\Sync_DDR\\work\\four_stage_v1\\attempt_03_download\\launcher.log\" 2>&1\"",
+      "deadline_utc": "2026-09-17T19:01:37.9312527Z",
+      "root_identity": {
+        "Pid": 31160,
+        "CreationTimeUtc": "2026-09-17T18:48:11.8671088Z"
+      },
+      "distinct_warnings": [
+        "WARNING: Default location for XILINX_HLS not found: ",
+        "WARNING: Default location for XILINX_VIVADO_HLS not found: ",
+        "WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/008_MA_Dev/Sync_DDR/work/four_stage_v1/attempt_01_create/project/DDR_Control.gen/sources_1'."
+      ],
+      "error_diagnostics": [],
+      "pass_marker": "DDR_DOWNLOAD_CTRL_TEST_PASS",
+      "pass_marker_count": 1,
+      "native_simulate_sha256": "59693331D663F70B00AA232754EA90777E80601D2DE813B91D79698237BC233F",
+      "xelab_commands": [
+        "Running: C:/NIFPGA/programs/Vivado2021_1/bin/unwrapped/win64.o/xelab.exe -wto 5fb2d32ab3a94f3fa7f431bba8706f84 --incr --debug typical --relax --mt 16 -L xil_defaultlib -L secureip --snapshot tb_ddr_download_ctrl_behav xil_defaultlib.tb_ddr_download_ctrl -log elaborate.log "
+      ],
+      "started_local": "2026-09-17T20:48:11.827680+02:00",
+      "finished_local": "2026-09-17T20:48:41.264664+02:00"
+    }
+  ],
+  "existing_files_changed": [
+    "README_ZH.md",
+    "docs/PROJECT_SPEC_ZH.md"
+  ],
+  "original_two_rtl_and_two_tb_unchanged": true,
+  "history_imported_matlab_unchanged": true,
+  "old_passed_stages_rerun": false,
+  "behavior_measurements": {
+    "capture": {
+      "n": 4000,
+      "data_cycles": 1100,
+      "clock_nominal_mhz": 150,
+      "ideal_samples_per_sec": 545454545.4545454
+    },
+    "download": {
+      "n": 4000,
+      "replay_cycles": 1000,
+      "clock_nominal_mhz": 150,
+      "ideal_samples_per_sec": 600000000.0
+    }
+  },
+  "physical_timing": "NOT_RUN",
+  "sustained_ddr_pcie": "NOT_VERIFIED",
+  "ni_compile_board": "NOT_RUN",
+  "resource_status": "CLOSED_BY_MANAGER",
+  "resource_closed_utc": "2026-09-17T18:51:39.146387+00:00",
+  "resource_closed_local": "2026-09-17T20:51:39.146387+02:00",
+  "central_owner_after_close": "NONE",
+  "old_grants_reusable": false,
+  "resource_return_receipt": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\sync_ddr\\SYNC_DDR_FOUR_STAGE_V1_RESOURCE_RETURN_20260917.json"
+}

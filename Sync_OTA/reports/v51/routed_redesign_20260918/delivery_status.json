@@ -1,0 +1,18 @@
+{
+  "completed_at": "2026-09-18T15:15:57.448547+02:00",
+  "status": "DESIGN_AND_STATIC_REVIEW_COMPLETE_PHYSICAL_CLOSURE_PENDING",
+  "changed_rtl": 9,
+  "selected_sources": 129,
+  "ip_count": 45,
+  "static_binding_errors": 0,
+  "simulation": "NOT_RUN",
+  "new_synthesis": "NOT_RUN",
+  "new_implementation": "NOT_RUN",
+  "numerical_comparison": "NOT_RUN",
+  "remaining_physical_scope": [
+    "vendor FFT internal control/data placement",
+    "packed FIFO address routing",
+    "raw/output bank control routing",
+    "new full-core timing and RAM mapping confirmation"
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "created_utc": "2026-09-17T19:33:32.084620+00:00",
+  "zip_path": "D:\\008_MA_Dev\\Sync_DDR\\delivery\\Sync_DDR_LabVIEW_Roundtrip_604_20260917.zip",
+  "sha256": "3D50F3A1CAF7E12102970908E0BE09D67C02697D8AAED193EFAEF71D067377A4",
+  "bytes": 108995,
+  "file_count": 33,
+  "production_vhdl_count": 4,
+  "zip_integrity": "PASS",
+  "all_21_frozen_inputs_and_5_tools_match": true,
+  "preexisting_files_modified": [
+    "README_ZH.md",
+    "docs/PROJECT_SPEC_ZH.md"
+  ],
+  "protected_history_and_original_rtl_unchanged": true,
+  "behavior_result": "604_POINTS_ZERO_MISMATCH_PASS",
+  "resource_status": "RETURNED_CLOSED",
+  "resource_closure": {
+    "returned_utc": "2026-09-17T19:19:18.095605+00:00",
+    "returned_local": "2026-09-17T21:19:18.095605+02:00",
+    "manager_receipt": "D:\\007 Dev\\OTA_RTL_0829\\reports\\operations\\sync_ddr\\SYNC_DDR_ROUNDTRIP_V1_RESOURCE_RETURN_20260917.json",
+    "manager_receipt_sha256": "FA08024A6C29096281B73E564883218B16563DE508FBDA0F8B4CFC62D586C073",
+    "grant_usable": false
+  },
+  "guide": "D:\\008_MA_Dev\\Sync_DDR\\docs\\tutorial\\LABVIEW_ZERO_TO_ROUNDTRIP_ZH.html",
+  "limitations": [
+    "Native behavioral models; Sync bypassed",
+    "Remote NI version and write visibility must be aligned",
+    "Not NI compile, board, timing or throughput acceptance"
+  ],
+  "files": [
+    {
+      "path": "START_HERE_ZH.md",
+      "bytes": 3056,
+      "sha256": "0FE593CF01BB64803043C4E853C42BDA23BE4D550A2F19478F7A889CA00AADC9"
+    },
+    {
+      "path": "rtl/ddr_upload_ctrl.vhd",
+      "bytes": 12586,
+      "sha256": "B70495D20F01D3C1CBD96F6614572393EEB929664BAC44D426830491DEF36A2D"
+    },
+    {
+      "path": "rtl/ddr_read_ctrl.vhd",
+      "bytes": 18662,
+      "sha256": "1FE6EEEBE61B3137A17316C5662ADC055E323BEAF100086F831DE05EC2842BA1"
+    },
+    {
+      "path": "rtl/ddr_capture_ctrl.vhd",
+      "bytes": 4761,
+      "sha256": "E0DE90E702BA992B94AE0615D92EDDE2CC6072A5ABBDF46610D41CF3F9E2F5E5"
+    },
+    {
+      "path": "rtl/ddr_download_ctrl.vhd",
+      "bytes": 6871,
+      "sha256": "7BB762D042920F437DE7E4521CA0DB2B816FB786E43CCDB121F5A4A7BCE3F1B2"
+    },
+    {
+      "path": "docs/DDR_RUNTIME_CONFIG_DESIGN_ZH.md",
+      "bytes": 3742,
+      "sha256": "86790410F10D0855E478F790240CB0DB120126624A1CFF53F2252BD20E1A2223"
+    },
+    {
+      "path": "docs/DDR_FOUR_STAGE_DESIGN_ZH.md",
+      "bytes": 6425,
+      "sha256": "AD5FDD50A71E0E2DC0E20B51CA84B4CBDB65D4EB695C9B3CD588523D573904DD"
+    },
+    {
+      "path": "docs/DDR_ROUNDTRIP_DESIGN_ZH.md",
+      "bytes": 2633,
+      "sha256": "7C98819A419F76541BB668F811CAE745879847F5B8CCD7304AFDB5F6AD342A65"
+    },
+    {
+      "path": "docs/tutorial/LABVIEW_ZERO_TO_ROUNDTRIP_ZH.md",
+      "bytes": 30657,
+      "sha256": "D4C8EA511293A8530E9EA5932A3C268E7C68FCAF507BD35F262C707C3AF741CF"
+    },
+    {
+      "path": "docs/tutorial/LABVIEW_ZERO_TO_ROUNDTRIP_ZH.html",
+      "bytes": 40620,
+      "sha256": "3D74DF8C8D93D4EC200F060404969EC9625CF2616504DFD7AA2BFBCD70D15507"
+    },
+    {
+      "path": "docs/tutorial/assets/four_stage_roundtrip.svg",
+      "bytes": 2668,
+      "sha256": "33443CF3F093FE18D0E21960F3AD76AB8761A68E6A24D37B3A72A59AD2A0ECE1"
+    },
+    {
+      "path": "docs/tutorial/LABVIEW_FOUR_STAGE_WIRING_ZH.md",
+      "bytes": 18872,
+      "sha256": "555383C2B19A7319355C8D84DF97FBE2D8781E1A4FAA3BB47B119C7D650C8819"
+    },
+    {
+      "path": "docs/tutorial/LABVIEW_RUNTIME_CONFIG_AND_SESSION_ZH.md",
+      "bytes": 9047,
+      "sha256": "E93A1D7B8E5C168A04824BF89F47683FC3392664948D731FDD4A62201477DAE3"
+    },
+    {
+      "path": "docs/tutorial/LABVIEW_TARGET_VI_STEP_BY_STEP_ZH.md",
+      "bytes": 39400,
+      "sha256": "96D167D188AA22D5C7B5B04261B407B0642B493B7D928E20DFD65C79E1CF5575"
+    },
+    {
+      "path": "reports/DDR_CURRENT_PORTS_ZH.md",
+      "bytes": 3842,
+      "sha256": "DC8B62D8733F267EAC4A72F10C0C6D8A7B5F6FC4BD060BEFFA9583B57C79E43A"
+    },
+    {
+      "path": "reports/review/DDR_ROUNDTRIP_VALIDATION_ZH.md",
+      "bytes": 5132,
+      "sha256": "AB244F522B96E2B780FB87C129779D2C06D94601EAF4D4D689CF28637BEB3DA3"
+    },
+    {
+      "path": "reports/review/FOUR_STAGE_VALIDATION_20260917_ZH.md",
+      "bytes": 4960,
+      "sha256": "93BD1D64706EF637F201FB30133FE8FAC80BF8EF0289E539E13B7F2D86BB6B1E"
+    },
+    {
+      "path": "reports/review/DDR_RUNTIME_CONFIG_VALIDATION_20260917_ZH.md",
+      "bytes": 5795,
+      "sha256": "6641C2FA83B42CB11C54AEB9A03655F77D0B678974FA81F76A4D17B14F0E5124"
+    },
+    {
+      "path": "reports/operations/ROUNDTRIP_VALIDATION_RESULT_20260917.json",
+      "bytes": 7044,
+      "sha256": "DAA1BCD79E7E03D5647242C8F162753796D5D0845BBB30E43D88E99F0A2F381D"
+    },
+    {
+      "path": "reports/operations/FROZEN_ROUNDTRIP_V1.json",
+      "bytes": 6335,
+      "sha256": "0321A20E7FBBA9FE57D787FEFDF30BD9F763E64DB061912C3AAC59B1645DD83D"
+    },
+    {
+      "path": "scripts/compare_roundtrip.py",
+      "bytes": 2189,
+      "sha256": "5EFD7458C99B2CCFD70288B90F0C10FD6F1B516CE465FB5ED85F967B26189044"
+    },
+    {
+      "path": "examples/roundtrip_604/expected_hex.txt",
+      "bytes": 6040,
+      "sha256": "020E40A3B1EAD1B309F0A16303E43FC7F6152A44A61FA978AF01319FC8B92082"
+    },
+    {
+      "path": "examples/roundtrip_604/expected_u32.csv",
+      "bytes": 6644,
+      "sha256": "FEC8B6B5054368F51E59041E6FEC1730B6F897695F067F832D63D78A7CDF0DA2"
+    },
+    {
+      "path": "examples/roundtrip_604/input_iq_i16.csv",
+      "bytes": 5930,
+      "sha256": "8431555AA57E0D1A76D6476BD304CD0E922FEA688ECEC01DA912367CBF58C639"
+    },
+    {
+      "path": "examples/roundtrip_604/input_u32.csv",
+      "bytes": 6644,
+      "sha256": "FEC8B6B5054368F51E59041E6FEC1730B6F897695F067F832D63D78A7CDF0DA2"
+    },
+    {
+      "path": "examples/roundtrip_604/input_u32_le.bin",
+      "bytes": 2416,
+      "sha256": "F1B4C294FA11143E24585B384F39674F66528AD235467254ABF0FB0E63771A8E"
+    },
+    {
+      "path": "examples/roundtrip_604/metadata.json",
+      "bytes": 630,
+      "sha256": "C1F37E6E1A5923EEADE2B197BE5DD24D4570886356BF8A5E163621B62BE3CB82"
+    },
+    {
+      "path": "examples/roundtrip_604/simulated_host_received_u32.csv",
+      "bytes": 6644,
+      "sha256": "FEC8B6B5054368F51E59041E6FEC1730B6F897695F067F832D63D78A7CDF0DA2"
+    },
+    {
+      "path": "examples/roundtrip_604/SIMULATION_EVIDENCE.json",
+      "bytes": 383,
+      "sha256": "D90448C7522CB88931EEBB6327F30276F68D33BE0C179D6E44615A039350E9EC"
+    },
+    {
+      "path": "reports/native/compile.log",
+      "bytes": 869,
+      "sha256": "03247FAD99B9C736133EEE39C5C4B263E07782D6801A36FA76C30378B8A8C2C1"
+    },
+    {
+      "path": "reports/native/elaborate.log",
+      "bytes": 1184,
+      "sha256": "CA46C57D16DF0A4F13ECA3BDEC89F67A0837F96ACE418609C1ED26279C423DBE"
+    },
+    {
+      "path": "reports/native/simulate.log",
+      "bytes": 560,
+      "sha256": "24F16976E1D5EC30AA4658A435A6B319F6A4C83952028985C317706F5E7364AF"
+    }
+  ]
+}

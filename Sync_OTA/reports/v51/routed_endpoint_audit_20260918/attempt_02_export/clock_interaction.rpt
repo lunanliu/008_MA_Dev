@@ -1,0 +1,31 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date              : Fri Sep 18 14:48:57 2026
+| Host              : ROG-Lunan running 64-bit major release  (build 9200)
+| Command           : report_clock_interaction -file D:/008_MA_Dev/Sync_OTA/reports/v51/routed_endpoint_audit_20260918/attempt_02_export/clock_interaction.rpt
+| Design            : sync_ota_top
+| Device            : xcvu11p-flgb2104
+| Speed File        : -2  PRODUCTION 1.27 02-28-2020
+| Temperature Grade : E
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                            WNS                            TNS Failing  TNS Total    WNS Path         Clock-Pair           Inter-Clock                  
+From Clock    To Clock      Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints                  
+------------  ------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  ---------------------------  
+clk125        clk125        rise - rise     0.05     0.00            0       303421             8.00  Clean                Timed                        
+clk125        clk150        rise - rise     7.44     0.00            0          113             8.00  Ignored              Max Delay Datapath Only      
+clk125        clk500        rise - rise     7.00     0.00            0           74             8.00  Ignored              Max Delay Datapath Only      
+clk150        clk125        rise - rise     6.15     0.00            0          113             6.67  Ignored              Max Delay Datapath Only      
+clk150        clk150        rise - rise    -0.77  -196.68         1486       765110             6.67  Clean                Partial False Path           
+clk150        clk500        rise - rise     6.12     0.00            0           44             6.67  Ignored              Max Delay Datapath Only      
+clk500        clk125        rise - rise     0.96     0.00            0           64             2.00  No Common Clock      Partial False Path (unsafe)  
+clk500        clk150        rise - rise     1.49     0.00            0          203             2.00  Ignored              Max Delay Datapath Only      
+clk500        clk500        rise - rise    -0.73  -450.70         1850        51698             2.00  Clean                Partial False Path           
+
+

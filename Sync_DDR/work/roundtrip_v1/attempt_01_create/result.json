@@ -1,0 +1,32 @@
+{
+  "stage": "create",
+  "status": "PASS",
+  "directory": "D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_01_create",
+  "grant_id": "SYNC_DDR_ROUNDTRIP_V1_20260917T191413Z",
+  "manifest_sha256": "0321A20E7FBBA9FE57D787FEFDF30BD9F763E64DB061912C3AAC59B1645DD83D",
+  "started_utc": "2026-09-17T19:15:38.3750446Z",
+  "exit_code": 0,
+  "root_pid": 28236,
+  "cleanup": {
+    "closed": true,
+    "checks": [
+      {
+        "ids": [],
+        "utc": "2026-09-17T19:16:00.0305171Z"
+      },
+      {
+        "ids": [],
+        "utc": "2026-09-17T19:16:00.5352815Z"
+      },
+      {
+        "ids": [],
+        "utc": "2026-09-17T19:16:01.0464646Z"
+      }
+    ]
+  },
+  "error": null,
+  "logs": [],
+  "finished_utc": "2026-09-17T19:16:01.0829445Z",
+  "command_line": "\"C:\\WINDOWS\\System32\\cmd.exe\" /d /s /c \"\"C:\\NIFPGA\\programs\\Vivado2021_1\\bin\\vivado.bat\" \"-mode\" \"batch\" \"-source\" \"D:\\008_MA_Dev\\Sync_DDR\\scripts\\create_roundtrip_project.tcl\" \"-log\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_01_create\\vivado.log\" \"-journal\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_01_create\\vivado.jou\" \"-tclargs\" \"D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_01_create\" > \"D:\\008_MA_Dev\\Sync_DDR\\work\\roundtrip_v1\\attempt_01_create\\launcher.log\" 2>&1\"",
+  "deadline_utc": "2026-09-17T19:25:38.3635811Z"
+}

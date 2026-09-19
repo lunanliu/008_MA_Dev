@@ -1,0 +1,9 @@
+# 独立静态审查记录
+
+2026-09-18 CEST。只读子Agent，未修改RTL、未运行仿真或原生EDA。最终代码身份见同目录change_manifest.json；最终EOF及6bit循环索引显式转换由主Agent静态检查，未改变审查电路语义。
+
+frontend_static_review覆盖frontend34/raw-ingress5/shared-CDC3/top1，并独立复核7个改动文件：FFT2048、FFT256、sync_frontend_top、ota_cfo_window_queue、cfo_estimator_link_a06、cfo_front2048_window_a07、ota_cfo_chain_onchip。未发现must-fix。重点检查valid/tag逐级对齐、错误输出状态、双bank地址双射、输出背压稳定、mailbox末包、统一epoch复位、prefetch信用归还和SEALED物理提交。
+
+sfo_static_review覆盖initial_training35和sfo39，独立复核sfo_guarded_farrow_stream、sfo_intermediate_frame_bank，未发现must-fix。检查descriptor head/tail同时入出、generated-issued=count、实际ring读取才退休、64输出信用含新window、rv3与READ_LATENCY2对齐、legacy读前沿、PROG所有权与close_pending。独立重算E0=357628/S=345987/G140/Bout25529/raw343562/7-of-8/SFOlife714706/CFOlife704667/feedback174。
+
+保留意见：厂商FFT内部552端点需要物理布局/同拍控制复制，窗口FIFO41地址端点有纯长连线，修改不等于这些路径已关闭。没有功能仿真、数值比较、native新综合、route或上板证据。
